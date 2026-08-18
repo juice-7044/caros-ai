@@ -30,6 +30,7 @@ const columns = [
     title: "Company",
     links: [
       { name: "About", href: "/about" },
+      { name: "FAQ", href: "/faq" },
       { name: "Careers", href: "/about" },
     ],
   },
