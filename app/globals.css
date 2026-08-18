@@ -1,0 +1,240 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Base = paper (light) */
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+
+  --muted: #f4f4f5;
+  --muted-foreground: #6b7280;
+
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #c9a227;
+
+  /* Ink = near-black dark sections */
+  --ink: #0a0a0a;
+  --ink-foreground: #f5f5f4;
+  --ink-muted: #a1a1aa;
+  --ink-border: #26262a;
+
+  /* Gold accent */
+  --gold: #c9a227;
+  --gold-foreground: #0a0a0a;
+
+  /* Signals */
+  --danger: #c2410c;
+
+  --radius: 0.5rem;
+}
+
+@theme inline {
+  --font-sans: var(--font-archivo), 'Archivo', system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif), 'Instrument Serif', Georgia, serif;
+  --font-mono: var(--font-jetbrains-mono), 'JetBrains Mono', ui-monospace, monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-ink: var(--ink);
+  --color-ink-foreground: var(--ink-foreground);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-border: var(--ink-border);
+
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+
+  --color-danger: var(--danger);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  /* Eyebrow label */
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 600;
+    font-size: 0.75rem;
+  }
+
+  /* Gold gradient text to echo the metallic logo */
+  .text-gold-gradient {
+    background: linear-gradient(180deg, #e7cf7a 0%, #c9a227 55%, #a9821a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    /* background-clip:text paints the gradient only inside each line fragment's
+       box. When a gold phrase WRAPS across lines (e.g. "Everything Else Serves
+       It."), the default box-decoration-break: slice paints the whole run as one
+       sliced box, so descenders on non-final lines (the "g"/"y" in "Everything")
+       and italic overhangs get clipped at the line boundary — and padding only
+       reaches the run's very start/end, never the middle lines. box-decoration-break:
+       clone gives EVERY wrapped line fragment its own padded paint box, so each
+       line's descenders and italic edges get gradient fill. The per-side padding
+       (extra at the bottom for deep italic descenders, sides for glyph overhang)
+       plus matching negative margin keeps inline layout unchanged. */
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    line-height: 1.15 !important;
+    padding: 0.05em 0.16em 0.18em !important;
+    margin: 0 -0.16em -0.12em !important;
+  }
+
+  /* Give gradient headings enough leading that a wrapped line's descenders don't
+     collide with the next line's ascenders. Applied ONLY to headings that contain
+     gradient text; every other heading keeps its original tight display leading. */
+  :is(h1, h2, h3, h4):has(.text-gold-gradient) {
+    line-height: 1.15 !important;
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .radial-glow {
+    background: radial-gradient(60% 60% at 50% 40%, rgba(201, 162, 39, 0.18) 0%, rgba(201, 162, 39, 0) 70%);
+  }
+
+  /* Editorial display helper: heavy sans, tight tracking (template headline language) */
+  .font-display {
+    font-family: var(--font-sans);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  /* Hero light gradient background (template) */
+  .hero-gradient {
+    background:
+      radial-gradient(60% 50% at 78% 30%, rgba(201, 162, 39, 0.1) 0%, rgba(201, 162, 39, 0) 60%),
+      linear-gradient(180deg, #ffffff 0%, #fafaf7 55%, #f4f4f2 100%);
+  }
+
+  /* Rotating word char entrance */
+  .animate-char-in {
+    opacity: 0;
+    filter: blur(8px);
+    animation: charIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  @keyframes charIn {
+    to {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+
+  /* Marquee for stats row */
+  .marquee {
+    animation: marquee 32s linear infinite;
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Logo strip scroll for industries */
+  .marquee-slow {
+    animation: marquee 40s linear infinite;
+  }
+
+  /* Progress bar for active step */
+  @keyframes progress {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  /* Code line + char reveal (money journey / terminal) */
+  .code-line-reveal {
+    opacity: 0;
+    transform: translateX(-8px);
+    animation: lineReveal 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  @keyframes lineReveal {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Premium gold glow pulse for emphasized words (missed calls / missed jobs) */
+  .word-glow {
+    position: relative;
+    color: var(--gold);
+    font-style: italic;
+    font-family: var(--font-serif);
+    animation: wordGlow 3.2s ease-in-out infinite;
+  }
+  @keyframes wordGlow {
+    0%,
+    100% {
+      text-shadow: 0 0 0 rgba(201, 162, 39, 0);
+      opacity: 0.92;
+    }
+    50% {
+      text-shadow: 0 0 22px rgba(201, 162, 39, 0.55);
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-char-in,
+    .marquee,
+    .marquee-slow,
+    .word-glow,
+    .code-line-reveal {
+      animation: none;
+    }
+    .animate-char-in {
+      opacity: 1;
+      filter: none;
+    }
+  }
+}
