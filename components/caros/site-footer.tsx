@@ -24,12 +24,14 @@ const columns = [
       { name: "Pricing", href: "/pricing" },
       { name: "Industries", href: "/industries" },
       { name: "How It Works", href: "/how-it-works" },
+      { name: "Compare", href: "/compare" },
     ],
   },
   {
     title: "Company",
     links: [
       { name: "About", href: "/about" },
+      { name: "FAQ", href: "/faq" },
       { name: "Careers", href: "/about" },
     ],
   },
