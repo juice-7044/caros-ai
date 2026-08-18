@@ -24,6 +24,7 @@ const columns = [
       { name: "Pricing", href: "/pricing" },
       { name: "Industries", href: "/industries" },
       { name: "How It Works", href: "/how-it-works" },
+      { name: "Compare", href: "/compare" },
     ],
   },
   {
