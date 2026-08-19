@@ -63,6 +63,10 @@ export const metadata: Metadata = {
   category: "business software",
   verification: {
     google: "WnrwYXGpNMHxkukHn7M7HmszR0rQmpBr25XJfOATsAc",
+    other: {
+      "trustpilot-one-time-domain-verification-id":
+        "1a3e91f3-74db-43bf-b5f9-af754fc60527",
+    },
   },
   alternates: {
     canonical: "/",
