@@ -1,10 +1,11 @@
 "use client"
 
-import { Suspense, useEffect, useMemo, useState } from "react"
+import { Suspense, useEffect, useState } from "react"
 import { useSearchParams } from "next/navigation"
 import { Check, ChevronRight, Copy, Mail, Phone, ShieldCheck } from "lucide-react"
 
-const DEFAULT_AMOUNT = 2500
+const IMPLEMENTATION_FEE = 2500
+const MONTHLY_SUBSCRIPTION = 997
 
 const timeline = [
   ["01", "Payment confirmed", "Your CAROS Revenue System setup is secured."],
@@ -12,11 +13,6 @@ const timeline = [
   ["03", "You meet your onboarding lead", "We connect the dots and map the fastest path to revenue."],
   ["04", "Your system goes live", "Your operating system starts turning attention into booked revenue."],
 ]
-
-function getAmount(value: string | null) {
-  const parsed = Number.parseFloat(value ?? "")
-  return Number.isFinite(parsed) && parsed > 0 ? parsed : DEFAULT_AMOUNT
-}
 
 function purchaseEvent(value: number) {
   return {
@@ -35,10 +31,9 @@ function ThankYouContent() {
   const [copied, setCopied] = useState(false)
   const name = params.get("name")?.trim() || "there"
   const plan = params.get("plan")?.trim() || "CAROS Revenue System"
-  const billing = params.get("billing")?.trim() || "Monthly"
   const kickoff = params.get("kickoff")?.trim() || "Your onboarding lead will reach out shortly"
   const referral = params.get("referral")?.trim()
-  const amount = useMemo(() => getAmount(params.get("amount")), [params])
+  const amount = IMPLEMENTATION_FEE + MONTHLY_SUBSCRIPTION
 
   useEffect(() => {
     const key = "caros-purchase-tracked"
@@ -122,9 +117,20 @@ function ThankYouContent() {
             <Check className="h-6 w-6 shrink-0 text-gold" />
           </div>
           <dl className="grid gap-5 pt-6 text-sm sm:grid-cols-3">
-            <div><dt className="text-ink-muted">Investment</dt><dd className="mt-1 font-semibold">${amount.toLocaleString("en-US")} USD</dd></div>
-            <div><dt className="text-ink-muted">Billing</dt><dd className="mt-1 font-semibold">{billing}</dd></div>
-            <div><dt className="text-ink-muted">Status</dt><dd className="mt-1 font-semibold text-gold">Confirmed</dd></div>
+            <div>
+              <dt className="text-ink-muted">Implementation fee</dt>
+              <dd className="mt-1 font-semibold">${IMPLEMENTATION_FEE.toLocaleString("en-US")} USD</dd>
+              <p className="mt-1 text-xs text-ink-muted">One-time</p>
+            </div>
+            <div>
+              <dt className="text-ink-muted">Monthly subscription</dt>
+              <dd className="mt-1 font-semibold">${MONTHLY_SUBSCRIPTION.toLocaleString("en-US")} USD</dd>
+              <p className="mt-1 text-xs text-ink-muted">Billed monthly</p>
+            </div>
+            <div>
+              <dt className="text-ink-muted">Status</dt>
+              <dd className="mt-1 font-semibold text-gold">Confirmed</dd>
+            </div>
           </dl>
         </section>
 
