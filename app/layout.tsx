@@ -3,9 +3,7 @@ import type { Metadata } from "next"
 import { Archivo, Instrument_Serif, JetBrains_Mono } from "next/font/google"
 import Script from "next/script"
 import { Analytics } from "@vercel/analytics/next"
-import { SiteNav } from "@/components/caros/site-nav"
-import { SiteFooter } from "@/components/caros/site-footer"
-import { ChatWidget } from "@/components/caros/chat-widget"
+import { RouteChrome } from "@/components/caros/route-chrome"
 import "./globals.css"
 
 const archivo = Archivo({
@@ -213,11 +211,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             gtag('config', 'G-MT8HLMZL04');
           `}
         </Script>
-        <SiteNav />
-        <main className="min-h-screen overflow-x-hidden">{children}</main>
-        <SiteFooter />
-        {/* LeadConnector chat widget — hidden on pages that already have a form */}
-        <ChatWidget />
+        <RouteChrome>{children}</RouteChrome>
         <Analytics />
         {/* CAROS external tracking */}
         <Script
