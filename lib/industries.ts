@@ -3022,6 +3022,238 @@ const travelAgents = make(
 )
 
 /* ==========================================================================
+   WELLNESS SPAS
+   ========================================================================== */
+
+const wellnessSpas = make(
+  {
+    trade: "Wellness Spas", slug: "wellness-spas", customers: "guests", customer: "guest",
+    job: "appointment", jobs: "appointments", estimate: "consultation", estimates: "consultations",
+    tech: "provider", techs: "providers", site: "spa", callWord: "inquiry", bookLabel: "booked appointments",
+  },
+  {
+    heroEyebrow: "Industry Solution — Wellness Spas",
+    heroTitle: "Your next guest is already looking for a reason to",
+    heroTitleSerif: "come back.",
+    heroSub: "Wellness spa growth is not just about filling treatment rooms. CAROS helps you answer every inquiry, turn first visits into treatment plans, and keep members engaged between appointments.",
+    trustRow: ["Day Spas", "Medical Spas", "Memberships", "Skin & Body", "Recovery"],
+    metaTitle: "CAROS for Wellness Spas | Turn First Visits Into Repeat Revenue",
+    metaDescription: "CAROS helps wellness spas respond faster, fill appointments, grow memberships, and reactivate guests who have gone quiet.",
+    keywords: ["wellness spa software", "spa appointment follow up", "med spa lead management", "spa membership retention", "spa marketing roi"],
+    problemTitle: "A full treatment room still does not guarantee",
+    problemTitleSerif: "healthy revenue.",
+    problemIntro: "Spas lose revenue in the space between an inquiry, a first appointment, a recommended plan, and the next visit. CAROS keeps that guest journey moving with timely, personal follow-up.",
+    mattersWhen: [
+      { label: "New inquiries", detail: "matter when a guest receives a helpful response before they compare another spa." },
+      { label: "Treatment plans", detail: "matter when recommendations become scheduled next steps, not forgotten conversations." },
+      { label: "Memberships", detail: "matter when guests understand the value and keep using them." },
+      { label: "Past guests", detail: "matter when they are invited back at the right moment." },
+    ],
+    problemClose: { text: "CAROS connects the guest journey around", gold: "repeatable wellness revenue." },
+    leaksIntro: "The most expensive leaks are usually quiet: an inquiry that waits, a package that is never followed up, or a guest who simply forgets to return.",
+    leaks: ["Web inquiries wait until the front desk has a gap.", "Consultation recommendations are not converted into booked treatments.", "Membership prospects leave without a timely follow-up.", "No-show guests are not rebooked with a personal touch.", "Past guests receive no seasonal or milestone outreach.", "Package balances and renewal moments are easy to miss.", "Referral opportunities are not attributed to the right guest or provider."],
+    leaksClose: "A handful of missed rebookings each week can quietly outweigh the cost of every new campaign you run.",
+    journeyIntro: "CAROS makes the path from curiosity to recurring wellness visible and consistent.",
+    journey: ["Inquiry", "Consultation", "First Treatment", "Plan Recommendation", "Membership", "Rebooking", "Referral"],
+    journeyEndLabel: "Returning Guests & Membership Revenue",
+    signatureEyebrow: "Guest Retention Revenue",
+    signatureTitle: "The best spa marketing is the guest who",
+    signatureTitleSerif: "comes back.",
+    signatureBody: ["A first visit is an opportunity, not the finish line. The right follow-up helps a guest understand what comes next and makes returning feel natural.", "CAROS keeps rebooking, membership, package, and referral moments from depending on memory alone while your team stays focused on care."],
+    signatureListLabel: "Where CAROS keeps spa revenue moving",
+    signatureUseCases: ["Inquiry response", "Consultation follow-up", "Treatment-plan reminders", "Membership nurture", "No-show recovery", "Package renewal prompts", "Birthday and milestone campaigns", "Review requests", "Referral attribution", "Dormant-guest reactivation"],
+    metrics: [{ value: "84", label: "New Inquiries" }, { value: "61", label: "Appointments" }, { value: "38", label: "Plans Started" }, { value: "24", label: "Memberships" }, { value: "$42,600", label: "Booked Revenue" }, { value: "4.8x", label: "Marketing ROI", highlight: true }],
+    questions: ["Which campaigns create first visits?", "How many consultations never become treatment plans?", "Which guests are due for a rebooking?", "What is our membership conversion rate?", "Where are no-shows being lost?", "Which providers generate repeat visits?"],
+    recoveredText: "Guests who would have drifted away — rebooked, renewed, and referred with a consistent experience.",
+    experienceTitle: "Technology that protects the",
+    experienceTitleSerif: "human touch.",
+    faq: [
+      { q: "Is CAROS a spa booking system?", a: "CAROS works alongside your booking and payment tools. It focuses on the revenue layer around them: inquiries, follow-up, rebooking, memberships, and the guest relationships that create repeat visits." },
+      { q: "Can it work with memberships and packages?", a: "Yes. CAROS can organize renewal, usage, and follow-up moments so guests receive relevant outreach without your team maintaining another manual list." },
+      { q: "Will messages feel automated?", a: "Messages are configured around your brand voice and guest experience. CAROS handles consistency and timing while your team can step into any conversation." },
+      { q: "What does a Wellness Spa Revenue Audit review?", a: "We review response speed, consultation conversion, rebooking, membership follow-up, no-show recovery, and past-guest reactivation to show where revenue is being left behind." },
+    ],
+    ctaHeadline: "See where your wellness spa revenue is leaking.",
+    ctaSub: "A CAROS Revenue Audit shows you where inquiries, treatment plans, and returning guests are slipping away — and what to do next.",
+    acquisitionItems: ["Website & inquiry capture", "Google & social lead capture", "Referral logging", "Campaign source attribution"],
+  },
+)
+
+/* ==========================================================================
+   MEDICAL PRACTICES
+   ========================================================================== */
+
+const medicalPractices = make(
+  {
+    trade: "Medical Practices", slug: "medical-practices", customers: "patients", customer: "patient",
+    job: "appointment", jobs: "appointments", estimate: "consultation", estimates: "consultations",
+    tech: "care team member", techs: "care team members", site: "practice", callWord: "patient inquiry", bookLabel: "booked visits",
+  },
+  {
+    heroEyebrow: "Industry Solution — Medical Practices",
+    heroTitle: "Better patient access starts with a practice that",
+    heroTitleSerif: "responds consistently.",
+    heroSub: "Medical practices lose growth when calls go unanswered, referrals stall, and patients cannot find a clear next step. CAROS helps your team turn demand into scheduled care while protecting a professional patient experience.",
+    trustRow: ["Primary Care", "Specialty Care", "Dental", "Wellness Medicine", "Multi-Location"],
+    metaTitle: "CAROS for Medical Practices | Improve Patient Access & Follow-Up",
+    metaDescription: "CAROS helps medical practices respond to inquiries, convert referrals, reduce appointment leakage, and improve patient reactivation.",
+    keywords: ["medical practice growth system", "patient appointment follow up", "healthcare lead management", "medical practice marketing roi", "patient reactivation"],
+    problemTitle: "More demand does not help if patients cannot find",
+    problemTitleSerif: "the next step.",
+    problemIntro: "Practice growth is shaped by access: how quickly a prospective patient gets an answer, how reliably a referral is followed, and whether an open appointment becomes a completed visit.",
+    mattersWhen: [
+      { label: "Patient calls", detail: "matter when the caller reaches a helpful next step instead of another voicemail." },
+      { label: "Referrals", detail: "matter when they are tracked from receipt to scheduled appointment." },
+      { label: "Recall outreach", detail: "matters when patients return for the care they already need." },
+      { label: "Reviews", detail: "matter when satisfied patients are invited to share the experience." },
+    ],
+    problemClose: { text: "CAROS helps your practice turn access into", gold: "measurable patient growth." },
+    leaksIntro: "The revenue leaks in a practice are often operational, not clinical: the missed callback, the referral without an owner, and the patient who never receives a reminder.",
+    leaks: ["New-patient calls reach voicemail during busy clinic hours.", "Referral records sit without a scheduling follow-up.", "Online forms do not receive a timely response.", "Patients postpone care and are never invited back.", "Recall lists depend on manual work and inconsistent ownership.", "No-shows are not recovered into new appointments.", "Marketing reports show leads but not completed visits."],
+    leaksClose: "When access feels uncertain, patients choose the practice that makes the next step easiest.",
+    journeyIntro: "CAROS makes the patient-access journey visible without replacing clinical systems or clinical judgment.",
+    journey: ["Inquiry", "Eligibility", "Referral", "Appointment", "Visit", "Recall", "Review"],
+    journeyEndLabel: "Completed Visits & Patient Continuity",
+    signatureEyebrow: "Patient Access Revenue",
+    signatureTitle: "The care patients complete is the care your practice",
+    signatureTitleSerif: "can grow around.",
+    signatureBody: ["A patient who cannot reach the practice may never become a patient. A patient who leaves without a clear follow-up path may not return.", "CAROS coordinates the communication and accountability around access so your staff can spend more time on patients in front of them."],
+    signatureListLabel: "Where CAROS keeps practice growth moving",
+    signatureUseCases: ["New-patient response", "Referral follow-up", "Appointment reminders", "No-show recovery", "Recall campaigns", "Care-plan next steps", "Review requests", "Location routing", "Source attribution", "Dormant-patient reactivation"],
+    metrics: [{ value: "112", label: "New Inquiries" }, { value: "78", label: "Visits Scheduled" }, { value: "54", label: "Referrals Tracked" }, { value: "39", label: "Recalls Completed" }, { value: "$86,400", label: "Booked Care" }, { value: "5.2x", label: "Marketing ROI", highlight: true }],
+    questions: ["How fast are new patients receiving a response?", "Which referral sources create completed visits?", "How many no-shows are recovered?", "Which providers or locations need more demand?", "How many recall opportunities are outstanding?", "Where does the patient journey stall?"],
+    recoveredText: "Patient inquiries, referrals, recalls, and appointments that would have stalled — assigned, followed up, and completed.",
+    experienceTitle: "Technology that makes access feel",
+    experienceTitleSerif: "human.",
+    faq: [
+      { q: "Does CAROS replace our EHR or practice management system?", a: "No. CAROS works around the systems you already use, organizing the communication, follow-up, attribution, and access workflows that those systems may not manage end to end." },
+      { q: "Can CAROS handle sensitive patient information?", a: "Implementation should be configured around your compliance requirements and approved systems. CAROS is designed to support operational communication, not to replace clinical documentation or medical advice." },
+      { q: "Can it help with referrals and recalls?", a: "Yes. CAROS can give each referral or recall opportunity an owner, a next step, and a follow-up rhythm so fewer patients disappear between intent and appointment." },
+      { q: "What does a Medical Practice Revenue Audit review?", a: "We review access speed, referral handling, appointment conversion, no-show recovery, recall workflows, and source attribution to identify where practice growth is being lost." },
+    ],
+    ctaHeadline: "See where your practice growth is leaking.",
+    ctaSub: "A CAROS Revenue Audit shows you where patient inquiries, referrals, and recalls are slipping away — without disrupting clinical care.",
+    acquisitionItems: ["Website & patient inquiry capture", "Referral source tracking", "Google & campaign attribution", "Location and provider routing"],
+  },
+)
+
+/* ==========================================================================
+   FINANCIAL SERVICES
+   ========================================================================== */
+
+const financialServices = make(
+  {
+    trade: "Financial Services", slug: "financial-services", customers: "prospects", customer: "prospect",
+    job: "conversation", jobs: "conversations", estimate: "proposal", estimates: "proposals",
+    tech: "advisor", techs: "advisors", site: "practice", callWord: "inquiry", bookLabel: "qualified engagements",
+  },
+  {
+    heroEyebrow: "Industry Solution — Financial Services",
+    heroTitle: "Trust compounds when every prospect receives a",
+    heroTitleSerif: "clear next step.",
+    heroSub: "Financial services firms often generate strong interest but lose momentum between inquiry, discovery, proposal, and decision. CAROS keeps the client journey organized, timely, and personal.",
+    trustRow: ["Wealth Management", "Financial Planning", "Lending", "Tax Advisory", "Insurance & Risk"],
+    metaTitle: "CAROS for Financial Services | Turn Inquiries Into Client Relationships",
+    metaDescription: "CAROS helps financial services firms respond faster, nurture prospects, track proposals, and grow client relationships with consistent follow-up.",
+    keywords: ["financial advisor lead follow up", "financial services crm", "wealth management lead management", "advisor marketing roi", "financial planning client acquisition"],
+    problemTitle: "Your prospects are making a decision about",
+    problemTitleSerif: "trust before price.",
+    problemIntro: "Financial decisions take time, but a slow or unclear follow-up experience creates doubt. CAROS helps firms stay present between first inquiry and signed engagement without turning relationship-building into a spreadsheet exercise.",
+    mattersWhen: [
+      { label: "First response", detail: "matters when a prospect feels understood instead of routed into a generic sequence." },
+      { label: "Discovery", detail: "matters when it leads to a clear recommendation and next step." },
+      { label: "Proposals", detail: "matter when the right follow-up answers uncertainty before momentum fades." },
+      { label: "Referrals", detail: "matter when they are acknowledged and tracked with care." },
+    ],
+    problemClose: { text: "CAROS turns scattered prospect activity into", gold: "visible relationship momentum." },
+    leaksIntro: "In financial services, the revenue leak is rarely a single missed click. It is the accumulation of unanswered questions and undefined next steps.",
+    leaks: ["A high-intent inquiry waits for the advisor to become available.", "Discovery notes do not create an accountable follow-up plan.", "A proposal is sent without a structured decision path.", "Prospects receive inconsistent nurture across advisors.", "Referrals are acknowledged late or not attributed.", "Existing clients are not prompted around planning milestones.", "Marketing activity is reported without tying it to engaged relationships."],
+    leaksClose: "When the experience feels uncertain, prospects delay — and delayed decisions are easy for another firm to inherit.",
+    journeyIntro: "CAROS gives the relationship journey a dependable operating rhythm while leaving advice and judgment with your advisors.",
+    journey: ["Inquiry", "Qualification", "Discovery", "Recommendation", "Proposal", "Engagement", "Referral"],
+    journeyEndLabel: "Engaged Clients & Lifetime Value",
+    signatureEyebrow: "Relationship Growth Revenue",
+    signatureTitle: "The next client is often already in your",
+    signatureTitleSerif: "network.",
+    signatureBody: ["Trust is built in the details: remembering the referral, following up after a proposal, and reaching out before a planning need becomes urgent.", "CAROS creates the prompts, ownership, and visibility that help advisors protect those details at scale."],
+    signatureListLabel: "Where CAROS keeps advisory growth moving",
+    signatureUseCases: ["Inquiry acknowledgment", "Discovery follow-up", "Proposal nurture", "Referral attribution", "Client milestone outreach", "Annual review reminders", "Dormant-prospect reactivation", "Event follow-up", "Source attribution", "Advisor workload visibility"],
+    metrics: [{ value: "73", label: "New Prospects" }, { value: "46", label: "Discoveries Held" }, { value: "31", label: "Proposals Active" }, { value: "18", label: "Engagements Won" }, { value: "$1.4M", label: "Assets Influenced" }, { value: "6.1x", label: "Marketing ROI", highlight: true }],
+    questions: ["Which sources create qualified prospects?", "How quickly does each inquiry receive a personal response?", "Which proposals are waiting on a next step?", "Where do prospects lose confidence?", "Which clients are due for a planning conversation?", "How much growth comes from referrals?"],
+    recoveredText: "Prospects and referrals that would have cooled off — acknowledged, nurtured, and moved into the right advisor conversation.",
+    experienceTitle: "Technology that reinforces",
+    experienceTitleSerif: "earned trust.",
+    faq: [
+      { q: "Is CAROS a financial planning or portfolio system?", a: "No. CAROS is the revenue operating layer around your advisory process. It helps manage inquiry response, follow-up, proposal momentum, referrals, and client reactivation while your existing systems handle financial work." },
+      { q: "Will outreach be compliant and advisor-approved?", a: "Your team defines the approved messaging, workflows, and review points. CAROS can automate timing and task ownership, but firms remain responsible for compliance, supervision, and the advice they provide." },
+      { q: "Can it work across multiple advisors?", a: "Yes. CAROS can route inquiries, referrals, and follow-up based on advisor, service line, location, or source so every prospect has clear ownership." },
+      { q: "What does a Financial Services Revenue Audit review?", a: "We review inquiry response, discovery conversion, proposal follow-up, referral handling, advisor ownership, and source attribution to reveal where relationship momentum is being lost." },
+    ],
+    ctaHeadline: "See where your relationship revenue is leaking.",
+    ctaSub: "A CAROS Revenue Audit shows you where prospects, referrals, and proposals are losing momentum — and how to build a more consistent client journey.",
+    acquisitionItems: ["Website & inquiry capture", "Referral source logging", "Campaign and event attribution", "Advisor and service-line routing"],
+  },
+)
+
+/* ==========================================================================
+   INSURANCE BROKERAGE
+   ========================================================================== */
+
+const insuranceBrokerage = make(
+  {
+    trade: "Insurance Brokerage", slug: "insurance-brokerage", customers: "policyholders", customer: "policyholder",
+    job: "conversation", jobs: "conversations", estimate: "quote", estimates: "quotes",
+    tech: "producer", techs: "producers", site: "office", callWord: "coverage inquiry", bookLabel: "bound policies",
+  },
+  {
+    heroEyebrow: "Industry Solution — Insurance Brokerage",
+    heroTitle: "The quote is only the beginning of a relationship",
+    heroTitleSerif: "worth renewing.",
+    heroSub: "Insurance brokerages grow when producers have time to advise and every inquiry, quote, renewal, and referral receives consistent follow-up. CAROS helps make that revenue journey visible.",
+    trustRow: ["Personal Lines", "Commercial", "Benefits", "Life & Health", "Independent Agencies"],
+    metaTitle: "CAROS for Insurance Brokerages | Capture Quotes & Renewal Revenue",
+    metaDescription: "CAROS helps insurance brokerages respond to coverage inquiries, follow up on quotes, protect renewals, and grow referral revenue.",
+    keywords: ["insurance brokerage lead management", "insurance quote follow up", "agency renewal retention", "insurance producer crm", "insurance marketing roi"],
+    problemTitle: "A competitive quote does not win without",
+    problemTitleSerif: "consistent follow-through.",
+    problemIntro: "Insurance revenue is shaped by timing and trust: responding to a coverage question, explaining the quote, following up before expiration, and staying present after the policy binds.",
+    mattersWhen: [
+      { label: "Coverage inquiries", detail: "matter when a prospect receives clarity before requesting another quote." },
+      { label: "Quotes", detail: "matter when the producer has a defined path from proposal to decision." },
+      { label: "Renewals", detail: "matter when the relationship starts well before the expiration date." },
+      { label: "Referrals", detail: "matter when a satisfied policyholder is invited at the right moment." },
+    ],
+    problemClose: { text: "CAROS helps brokerages protect the full value of", gold: "every policy relationship." },
+    leaksIntro: "Brokerage leaks happen in the handoffs: a lead between marketing and a producer, a quote between email and decision, or a renewal between service and sales.",
+    leaks: ["Coverage inquiries wait while producers are with clients.", "Quote follow-up depends on individual memory.", "Commercial submissions lose momentum during back-and-forth requests.", "Renewal conversations begin too late to protect the relationship.", "Cross-sell opportunities are buried in policy records.", "Referral sources are not tracked from introduction to bound policy.", "Marketing reports show inquiries but not retained commission."],
+    leaksClose: "A policy not renewed is not just a lost transaction — it is a relationship and future referral path that may be gone for years.",
+    journeyIntro: "CAROS gives each opportunity a visible next step from first coverage question through renewal and referral.",
+    journey: ["Inquiry", "Needs Review", "Quote", "Decision", "Bind", "Renewal", "Referral"],
+    journeyEndLabel: "Retained Policies & Commission Revenue",
+    signatureEyebrow: "Renewal & Retention Revenue",
+    signatureTitle: "The most valuable policy is the one that",
+    signatureTitleSerif: "stays with you.",
+    signatureBody: ["New business is visible. Renewal revenue is often protected quietly, through early conversations, helpful reviews, and timely reminders.", "CAROS keeps producers and service teams aligned around the moments that preserve trust, uncover needs, and create introductions."],
+    signatureListLabel: "Where CAROS keeps brokerage revenue moving",
+    signatureUseCases: ["Coverage inquiry response", "Quote follow-up", "Submission status reminders", "Renewal campaigns", "Policy review prompts", "Cross-sell opportunities", "Referral attribution", "Lapsed-policy reactivation", "Review requests", "Producer workload visibility"],
+    metrics: [{ value: "96", label: "Coverage Inquiries" }, { value: "64", label: "Quotes Delivered" }, { value: "41", label: "Policies Bound" }, { value: "33", label: "Renewals Protected" }, { value: "$214,000", label: "Commission Revenue" }, { value: "5.7x", label: "Marketing ROI", highlight: true }],
+    questions: ["Which sources create bound policies?", "How quickly are coverage inquiries routed?", "Which quotes are waiting on follow-up?", "Which renewals need attention this month?", "Where are cross-sell opportunities being missed?", "How much retained revenue comes from referrals?"],
+    recoveredText: "Quotes, renewals, and referrals that would have gone quiet — assigned, followed up, and protected before the relationship expires.",
+    experienceTitle: "Technology that helps producers",
+    experienceTitleSerif: "stay present.",
+    faq: [
+      { q: "Is CAROS an agency management system?", a: "No. CAROS adds a revenue-operations layer around the systems your brokerage already uses. It helps with inquiry response, quote follow-up, renewal outreach, referrals, and attribution." },
+      { q: "Can it support personal and commercial lines?", a: "Yes. Workflows can be shaped around the different timing, routing, and follow-up needs of personal, commercial, benefits, life, and health opportunities." },
+      { q: "Can CAROS help protect renewals?", a: "Yes. It can organize early renewal reminders, policy review prompts, and service-to-producer handoffs so renewal conversations do not begin at the last possible moment." },
+      { q: "What does an Insurance Brokerage Revenue Audit review?", a: "We review inquiry response, quote follow-up, producer ownership, renewal timing, referral attribution, and retained commission visibility to show where brokerage revenue is leaking." },
+    ],
+    ctaHeadline: "See where your brokerage revenue is leaking.",
+    ctaSub: "A CAROS Revenue Audit shows you where coverage inquiries, quotes, renewals, and referrals are slipping away — and what it would take to protect them.",
+    acquisitionItems: ["Website & coverage inquiry capture", "Referral source logging", "Campaign attribution", "Producer and line-of-business routing"],
+  },
+)
+
+/* ==========================================================================
    Registry
    ========================================================================== */
 
@@ -3044,6 +3276,10 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
   "party-event-rentals": partyRentals,
   "real-estate": realEstate,
   "travel-agents": travelAgents,
+  "wellness-spas": wellnessSpas,
+  "medical-practices": medicalPractices,
+  "financial-services": financialServices,
+  "insurance-brokerage": insuranceBrokerage,
 }
 
 export const INDUSTRY_SLUGS = Object.keys(INDUSTRY_CONTENT)
