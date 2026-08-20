@@ -16,7 +16,7 @@ import { Roi } from "@/components/caros/home/roi"
 import { Industries } from "@/components/caros/home/industries"
 import { FoundersSection } from "@/components/caros/home/founders-section"
 import { CtaBand } from "@/components/caros/cta-band"
-import { TrustpilotWidget } from "@/components/caros/trustpilot-widget"
+import { TrustpilotWidgetLoader } from "@/components/TrustpilotWidgetLoader"
 
 export default function HomePage() {
   return (
@@ -56,7 +56,7 @@ export default function HomePage() {
       <section className="border-t border-border/60 bg-background px-6 py-10 sm:px-8">
         <div className="mx-auto max-w-6xl">
           {/* TrustBox widget - Review Collector */}
-          <TrustpilotWidget />
+          <TrustpilotWidgetLoader />
           {/* End TrustBox widget */}
         </div>
       </section>
