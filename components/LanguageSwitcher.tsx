@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import { useParams } from "next/navigation"
 import { ChevronDown } from "lucide-react"
-import { Link, usePathname } from "@/i18n/routing"
+import { Link, usePathname } from "@/i18n/navigation"
 import { cn } from "@/lib/utils"
 
 const locales = [
@@ -87,7 +87,10 @@ export function LanguageSwitcher({ mobile = false }: { mobile?: boolean }) {
               scroll={false}
               role="option"
               aria-selected={currentLocale === locale.code}
-              onClick={() => setOpen(false)}
+              onClick={() => {
+                console.log("[LanguageSwitcher] Clicked:", locale.code, "Current path:", pathname)
+                setOpen(false)
+              }}
               className={cn(
                 "flex items-center gap-2 rounded px-3 py-2 text-sm text-foreground/70 hover:bg-foreground/5 hover:text-foreground",
                 currentLocale === locale.code && "font-semibold text-gold",

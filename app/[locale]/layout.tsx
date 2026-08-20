@@ -17,7 +17,7 @@ export default async function LocaleLayout({
     notFound()
   }
 
-  console.log("Layout rendering for locale:", locale)
+  console.log("[Layout] Rendering for locale:", locale)
   const messages = (await import(`../../messages/${locale}.json`)).default
 
   return (
