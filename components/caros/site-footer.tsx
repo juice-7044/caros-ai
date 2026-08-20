@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl"
 import { Link } from "@/i18n/routing"
 import { Linkedin, Facebook, ArrowUpRight, MapPin, Phone } from "lucide-react"
 import {
@@ -18,7 +19,7 @@ const SOCIAL_LINKS = [
 
 const columns = [
   {
-    title: "Product",
+    titleKey: "product",
     links: [
       { name: "What's Included", href: "/whats-included" },
       { name: "Pricing", href: "/pricing" },
@@ -28,7 +29,7 @@ const columns = [
     ],
   },
   {
-    title: "Company",
+    titleKey: "company",
     links: [
       { name: "About", href: "/about" },
       { name: "FAQ", href: "/faq" },
@@ -36,7 +37,7 @@ const columns = [
     ],
   },
   {
-    title: "Resources",
+    titleKey: "resources",
     links: [
       { name: "Free Business Insights", href: INSIGHTS_URL, external: true },
       { name: "Marketing ROI", href: "/marketing-roi" },
@@ -44,7 +45,7 @@ const columns = [
     ],
   },
   {
-    title: "Legal",
+    titleKey: "legal",
     links: [
       { name: "Privacy", href: "/privacy" },
       { name: "Terms", href: "/terms" },
@@ -53,6 +54,8 @@ const columns = [
 ]
 
 export function SiteFooter() {
+  const t = useTranslations("footer")
+
   return (
     <footer className="relative border-t border-foreground/10 bg-background">
       <div className="mx-auto max-w-[1400px] px-6 py-20 lg:px-12">
@@ -60,7 +63,7 @@ export function SiteFooter() {
           <div className="max-w-xs">
             <Logo className="h-14" />
             <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
-              Turn more leads into booked revenue. Built for local service businesses.
+              {t("tagline")}
             </p>
             <Link
               href={AUDIT_HREF}
@@ -87,8 +90,8 @@ export function SiteFooter() {
           </div>
 
           {columns.map((col) => (
-            <div key={col.title}>
-              <h3 className="eyebrow text-muted-foreground">{col.title}</h3>
+            <div key={col.titleKey}>
+              <h3 className="eyebrow text-muted-foreground">{t(col.titleKey)}</h3>
               <ul className="mt-5 space-y-3">
                 {col.links.map((link) => {
                   const linkClass =

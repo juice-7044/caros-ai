@@ -1,16 +1,40 @@
 {
   "nav": {
+    "home": "Inicio",
+    "howItWorks": "How It Works",
+    "included": "Qué incluye",
+    "marketingRoi": "ROI de marketing",
     "industries": "Industries",
     "pricing": "Pricing",
-    "howItWorks": "How It Works",
     "about": "About",
+    "insights": "Información empresarial",
+    "diagnostic": "Auditoría empresarial gratuita",
+    "viewAllIndustries": "Ver todas las industrias",
+    "toggleMenu": "Alternar menú",
+    "businessInsights": "Información empresarial",
+    "freeAudit": "Auditoría empresarial gratuita",
     "getStarted": "Get Started",
     "menu": "Menu"
   },
   "footer": {
-    "tagline": "Revenue infrastructure for the next stage of growth.",
+    "product": "Producto",
+    "company": "Empresa",
+    "resources": "Recursos",
+    "legal": "Legal",
+    "included": "Qué incluye",
+    "pricing": "Precios",
+    "howItWorks": "Cómo funciona",
+    "compare": "Comparar",
+    "about": "Acerca de",
+    "faq": "Preguntas frecuentes",
+    "careers": "Carreras",
+    "freeInsights": "Información empresarial gratuita",
+    "marketingRoi": "ROI de marketing",
     "privacy": "Privacy",
     "terms": "Terms",
+    "tagline": "Revenue infrastructure for the next stage of growth.",
+    "headquarters": "Sede central",
+    "rights": "Todos los derechos reservados.",
     "contact": "Contact"
   },
   "language": {
@@ -22,7 +46,37 @@
       "title": "Los ingresos primero.",
       "titleAccent": "Todo lo demás está al servicio de ellos.",
       "description": "CAROS conecta las personas, sistemas, actividad de clientes y marketing de tu negocio en un solo resultado: más ingresos medibles.",
-      "categoryLabels": ["Adquisición de clientes", "Operaciones de ingresos", "Éxito del cliente", "Inteligencia empresarial", "Integraciones"]
+      "categoryLabels": [
+        "Adquisición de clientes",
+        "Operaciones de ingresos",
+        "Éxito del cliente",
+        "Inteligencia empresarial",
+        "Integraciones"
+      ]
+    }
+  },
+  "common": {
+    "language": "Idioma"
+  },
+  "pages": {
+    "pricing": {
+      "eyebrow": "Precios",
+      "title": "Una tarifa fija para todo tu",
+      "serifTitle": "sistema operativo de ingresos.",
+      "subtitle": "Sin participación en los ingresos. Sin proyectos de un año. Sin software desconectado. Un sistema, un precio.",
+      "questions": "Preguntas respondidas",
+      "questionsTitle": "Lo que preguntan los propietarios antes de empezar.",
+      "cta": "Comienza con una auditoría de ingresos, no con un contrato."
+    },
+    "about": {
+      "eyebrow": "Acerca de CAROS",
+      "title": "Creamos la claridad de ingresos que",
+      "serifTitle": "las grandes empresas dan por sentada.",
+      "subtitle": "CAROS ofrece a los propietarios locales el mismo control sobre sus ingresos que las empresas pagan fortunas por obtener.",
+      "story": "Nuestra historia",
+      "storyTitle": "Todo comenzó con una pregunta sencilla y frustrante.",
+      "beliefs": "Lo que creemos",
+      "leadership": "Liderazgo"
     }
   }
 }

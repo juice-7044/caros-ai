@@ -1,16 +1,40 @@
 {
   "nav": {
+    "home": "Accueil",
+    "howItWorks": "How It Works",
+    "included": "Ce qui est inclus",
+    "marketingRoi": "ROI marketing",
     "industries": "Industries",
     "pricing": "Pricing",
-    "howItWorks": "How It Works",
     "about": "About",
+    "insights": "Conseils business",
+    "diagnostic": "Audit business gratuit",
+    "viewAllIndustries": "Voir tous les secteurs",
+    "toggleMenu": "Ouvrir le menu",
+    "businessInsights": "Conseils business",
+    "freeAudit": "Audit business gratuit",
     "getStarted": "Get Started",
     "menu": "Menu"
   },
   "footer": {
-    "tagline": "Revenue infrastructure for the next stage of growth.",
+    "product": "Produit",
+    "company": "Entreprise",
+    "resources": "Ressources",
+    "legal": "Juridique",
+    "included": "Ce qui est inclus",
+    "pricing": "Tarifs",
+    "howItWorks": "Comment ça marche",
+    "compare": "Comparer",
+    "about": "À propos",
+    "faq": "FAQ",
+    "careers": "Carrières",
+    "freeInsights": "Conseils business gratuits",
+    "marketingRoi": "ROI marketing",
     "privacy": "Privacy",
     "terms": "Terms",
+    "tagline": "Revenue infrastructure for the next stage of growth.",
+    "headquarters": "Siège",
+    "rights": "Tous droits réservés.",
     "contact": "Contact"
   },
   "language": {
@@ -22,7 +46,37 @@
       "title": "Les revenus d'abord.",
       "titleAccent": "Tout le reste les sert.",
       "description": "CAROS relie les équipes, les systèmes, l'activité client et le marketing autour d'un seul objectif : des revenus mesurables.",
-      "categoryLabels": ["Acquisition client", "Opérations de revenus", "Réussite client", "Intelligence business", "Intégrations"]
+      "categoryLabels": [
+        "Acquisition client",
+        "Opérations de revenus",
+        "Réussite client",
+        "Intelligence business",
+        "Intégrations"
+      ]
+    }
+  },
+  "common": {
+    "language": "Langue"
+  },
+  "pages": {
+    "pricing": {
+      "eyebrow": "Tarifs",
+      "title": "Un tarif unique pour votre",
+      "serifTitle": "système d'exploitation des revenus.",
+      "subtitle": "Aucune part sur les revenus. Aucun projet interminable. Un système, un prix.",
+      "questions": "Questions et réponses",
+      "questionsTitle": "Ce que les dirigeants demandent avant de commencer.",
+      "cta": "Commencez par un audit des revenus, pas par un contrat."
+    },
+    "about": {
+      "eyebrow": "À propos de CAROS",
+      "title": "Nous avons créé la clarté des revenus que",
+      "serifTitle": "les grandes entreprises tiennent pour acquise.",
+      "subtitle": "CAROS donne aux entreprises locales le même contrôle sur leurs revenus que les grands groupes.",
+      "story": "Notre histoire",
+      "storyTitle": "Tout a commencé par une question simple et frustrante.",
+      "beliefs": "Nos convictions",
+      "leadership": "Direction"
     }
   }
 }

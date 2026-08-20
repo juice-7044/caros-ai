@@ -1,16 +1,40 @@
 {
   "nav": {
+    "home": "Home",
+    "howItWorks": "How It Works",
+    "included": "What's Included",
+    "marketingRoi": "Marketing ROI",
     "industries": "Industries",
     "pricing": "Pricing",
-    "howItWorks": "How It Works",
     "about": "About",
+    "insights": "Business Insights",
+    "diagnostic": "Free Business Audit",
+    "viewAllIndustries": "View all industries",
+    "toggleMenu": "Toggle menu",
+    "businessInsights": "Business Insights",
+    "freeAudit": "Free Business Audit",
     "getStarted": "Get Started",
     "menu": "Menu"
   },
   "footer": {
-    "tagline": "Revenue infrastructure for the next stage of growth.",
+    "product": "Product",
+    "company": "Company",
+    "resources": "Resources",
+    "legal": "Legal",
+    "included": "What's Included",
+    "pricing": "Pricing",
+    "howItWorks": "How It Works",
+    "compare": "Compare",
+    "about": "About",
+    "faq": "FAQ",
+    "careers": "Careers",
+    "freeInsights": "Free Business Insights",
+    "marketingRoi": "Marketing ROI",
     "privacy": "Privacy",
     "terms": "Terms",
+    "tagline": "Revenue infrastructure for the next stage of growth.",
+    "headquarters": "Headquarters",
+    "rights": "All rights reserved.",
     "contact": "Contact"
   },
   "language": {
@@ -22,7 +46,39 @@
       "title": "Revenue First.",
       "titleAccent": "Everything Else Serves It.",
       "description": "CAROS connects the people, systems, customer activity, and marketing behind your business to one outcome: more measurable revenue.",
-      "categoryLabels": ["Customer Acquisition", "Revenue Operations", "Customer Success", "Business Intelligence", "Integrations"]
+      "categoryLabels": [
+        "Customer Acquisition",
+        "Revenue Operations",
+        "Customer Success",
+        "Business Intelligence",
+        "Integrations"
+      ]
+    }
+  },
+  "common": {
+    "language": "Language"
+  },
+  "pages": {
+    "pricing": {
+      "eyebrow": "Pricing",
+      "title": "One flat rate for your entire",
+      "serifTitle": "revenue operating system.",
+      "subtitle": "No revenue share. No year-long build. No pile of disconnected software to wire together yourself. Just one system, one price.",
+      "questions": "Questions, Answered",
+      "questionsTitle": "What owners ask before they start.",
+      "cta": "Start with a Revenue Audit — not a contract."
+    },
+    "about": {
+      "eyebrow": "About CAROS",
+      "title": "We built the revenue clarity",
+      "serifTitle": "big companies take for granted.",
+      "subtitle": "CAROS gives local owners the same command over their revenue that enterprises pay fortunes for — without the complexity, the consultants, or the revenue share.",
+      "story": "Our Story",
+      "storyTitle": "It started with a simple, frustrating question.",
+      "beliefs": "What We Believe",
+      "beliefsTitle": "Three beliefs that shaped everything.",
+      "leadership": "Leadership",
+      "leadershipTitle": "The people behind the system."
     }
   }
 }

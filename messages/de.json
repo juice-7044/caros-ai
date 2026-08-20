@@ -1,20 +1,84 @@
 {
   "nav": {
+    "home": "Home",
+    "howItWorks": "How It Works",
+    "included": "What's Included",
+    "marketingRoi": "Marketing ROI",
     "industries": "Industries",
     "pricing": "Pricing",
-    "howItWorks": "How It Works",
     "about": "About",
+    "insights": "Business Insights",
+    "diagnostic": "Free Business Audit",
+    "viewAllIndustries": "Alle Branchen ansehen",
+    "toggleMenu": "Menü umschalten",
+    "businessInsights": "Geschäftseinblicke",
+    "freeAudit": "Kostenloses Geschäftsaudit",
     "getStarted": "Get Started",
     "menu": "Menu"
   },
   "footer": {
-    "tagline": "Revenue infrastructure for the next stage of growth.",
+    "product": "Produkt",
+    "company": "Unternehmen",
+    "resources": "Ressourcen",
+    "legal": "Rechtliches",
+    "included": "Enthalten",
+    "pricing": "Preise",
+    "howItWorks": "So funktioniert es",
+    "compare": "Vergleichen",
+    "about": "Über uns",
+    "faq": "FAQ",
+    "careers": "Karriere",
+    "freeInsights": "Kostenlose Geschäftseinblicke",
+    "marketingRoi": "Marketing-ROI",
     "privacy": "Privacy",
     "terms": "Terms",
+    "tagline": "Revenue infrastructure for the next stage of growth.",
+    "headquarters": "Hauptsitz",
+    "rights": "Alle Rechte vorbehalten.",
     "contact": "Contact"
   },
   "language": {
     "label": "Language"
   },
-  "HomePage": {"hero": {"eyebrow": "System für Kundenakquise und Umsatz", "title": "Umsatz zuerst.", "titleAccent": "Alles andere dient diesem Ziel.", "description": "CAROS verbindet Menschen, Systeme, Kundenaktivitäten und Marketing mit einem Ergebnis: mehr messbaren Umsatz.", "categoryLabels": ["Kundenakquise", "Umsatzprozesse", "Kundenerfolg", "Business Intelligence", "Integrationen"]}}
+  "HomePage": {
+    "hero": {
+      "eyebrow": "System für Kundenakquise und Umsatz",
+      "title": "Umsatz zuerst.",
+      "titleAccent": "Alles andere dient diesem Ziel.",
+      "description": "CAROS verbindet Menschen, Systeme, Kundenaktivitäten und Marketing mit einem Ergebnis: mehr messbaren Umsatz.",
+      "categoryLabels": [
+        "Kundenakquise",
+        "Umsatzprozesse",
+        "Kundenerfolg",
+        "Business Intelligence",
+        "Integrationen"
+      ]
+    }
+  },
+  "common": {
+    "language": "Sprache"
+  },
+  "pages": {
+    "pricing": {
+      "eyebrow": "Pricing",
+      "title": "One flat rate for your entire",
+      "serifTitle": "revenue operating system.",
+      "subtitle": "No revenue share. No year-long build. No pile of disconnected software to wire together yourself. Just one system, one price.",
+      "questions": "Questions, Answered",
+      "questionsTitle": "What owners ask before they start.",
+      "cta": "Start with a Revenue Audit — not a contract."
+    },
+    "about": {
+      "eyebrow": "About CAROS",
+      "title": "We built the revenue clarity",
+      "serifTitle": "big companies take for granted.",
+      "subtitle": "CAROS gives local owners the same command over their revenue that enterprises pay fortunes for — without the complexity, the consultants, or the revenue share.",
+      "story": "Our Story",
+      "storyTitle": "It started with a simple, frustrating question.",
+      "beliefs": "What We Believe",
+      "beliefsTitle": "Three beliefs that shaped everything.",
+      "leadership": "Leadership",
+      "leadershipTitle": "The people behind the system."
+    }
+  }
 }

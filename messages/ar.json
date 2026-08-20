@@ -1,16 +1,40 @@
 {
   "nav": {
+    "home": "الرئيسية",
+    "howItWorks": "How It Works",
+    "included": "ما يتضمنه",
+    "marketingRoi": "عائد الاستثمار التسويقي",
     "industries": "Industries",
     "pricing": "Pricing",
-    "howItWorks": "How It Works",
     "about": "About",
+    "insights": "رؤى الأعمال",
+    "diagnostic": "تدقيق أعمال مجاني",
+    "viewAllIndustries": "عرض كل القطاعات",
+    "toggleMenu": "تبديل القائمة",
+    "businessInsights": "رؤى الأعمال",
+    "freeAudit": "تدقيق أعمال مجاني",
     "getStarted": "Get Started",
     "menu": "Menu"
   },
   "footer": {
-    "tagline": "Revenue infrastructure for the next stage of growth.",
+    "product": "المنتج",
+    "company": "الشركة",
+    "resources": "الموارد",
+    "legal": "قانوني",
+    "included": "ما يتضمنه النظام",
+    "pricing": "الأسعار",
+    "howItWorks": "كيف يعمل",
+    "compare": "مقارنة",
+    "about": "عن CAROS",
+    "faq": "الأسئلة الشائعة",
+    "careers": "الوظائف",
+    "freeInsights": "رؤى أعمال مجانية",
+    "marketingRoi": "عائد الاستثمار التسويقي",
     "privacy": "Privacy",
     "terms": "Terms",
+    "tagline": "Revenue infrastructure for the next stage of growth.",
+    "headquarters": "المقر الرئيسي",
+    "rights": "جميع الحقوق محفوظة.",
     "contact": "Contact"
   },
   "language": {
@@ -22,7 +46,37 @@
       "title": "الإيرادات أولاً.",
       "titleAccent": "وكل شيء آخر يخدمها.",
       "description": "يربط CAROS الأشخاص والأنظمة ونشاط العملاء والتسويق حول نتيجة واحدة: إيرادات أكثر قابلية للقياس.",
-      "categoryLabels": ["اكتساب العملاء", "عمليات الإيرادات", "نجاح العملاء", "ذكاء الأعمال", "التكاملات"]
+      "categoryLabels": [
+        "اكتساب العملاء",
+        "عمليات الإيرادات",
+        "نجاح العملاء",
+        "ذكاء الأعمال",
+        "التكاملات"
+      ]
+    }
+  },
+  "common": {
+    "language": "اللغة"
+  },
+  "pages": {
+    "pricing": {
+      "eyebrow": "الأسعار",
+      "title": "سعر ثابت لنظام",
+      "serifTitle": "تشغيل الإيرادات بالكامل.",
+      "subtitle": "لا نسبة من الإيرادات ولا برامج منفصلة. نظام واحد، سعر واحد.",
+      "questions": "إجابات عن الأسئلة",
+      "questionsTitle": "ما يسأل عنه أصحاب الأعمال قبل البدء.",
+      "cta": "ابدأ بتدقيق الإيرادات، وليس بعقد."
+    },
+    "about": {
+      "eyebrow": "عن CAROS",
+      "title": "بنينا وضوح الإيرادات الذي",
+      "serifTitle": "تعتبره الشركات الكبرى أمراً بديهياً.",
+      "subtitle": "يمنح CAROS أصحاب الأعمال المحليين السيطرة نفسها على الإيرادات التي تدفع الشركات الكبرى ثروات للحصول عليها.",
+      "story": "قصتنا",
+      "storyTitle": "بدأ الأمر بسؤال بسيط ومزعج.",
+      "beliefs": "ما نؤمن به",
+      "leadership": "القيادة"
     }
   }
 }

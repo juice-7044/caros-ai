@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import {useTranslations} from "next-intl"
 import { PageHero, Eyebrow } from "@/components/caros/ui-bits"
 import { PricingCard } from "@/components/caros/pricing-card"
 import { Reveal } from "@/components/caros/reveal"
@@ -30,13 +31,15 @@ const faqs = [
 ]
 
 export default function PricingPage() {
+  const t = useTranslations("pages.pricing")
+
   return (
     <>
       <PageHero
-        eyebrow="Pricing"
-        title="One flat rate for your entire"
-        serifTitle="revenue operating system."
-        subtitle="No revenue share. No year-long build. No pile of disconnected software to wire together yourself. Just one system, one price."
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        serifTitle={t("serifTitle")}
+        subtitle={t("subtitle")}
       />
 
       <section className="bg-background py-24 lg:py-32">
@@ -48,9 +51,9 @@ export default function PricingPage() {
       <section className="bg-muted/40 py-24 lg:py-32">
         <div className="mx-auto max-w-[900px] px-6 lg:px-12">
           <Reveal>
-            <Eyebrow>Questions, Answered</Eyebrow>
+            <Eyebrow>{t("questions")}</Eyebrow>
             <h2 className="mt-6 text-balance text-[clamp(2rem,4vw,3rem)] font-extrabold leading-[1.02] tracking-tight">
-              What owners ask before they start.
+              {t("questionsTitle")}
             </h2>
           </Reveal>
           <div className="mt-14 divide-y divide-border border-y border-border">
@@ -64,7 +67,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <CtaBand headline="Start with a Revenue Audit — not a contract." />
+      <CtaBand headline={t("cta")} />
     </>
   )
 }
