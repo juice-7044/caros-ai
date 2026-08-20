@@ -135,10 +135,10 @@ function ThankYouContent() {
         </section>
 
         <section className="mt-10 grid gap-4 sm:grid-cols-2">
-          <a href="mailto:inquiries@getcarosai.com" className="group rounded-xl border border-ink-border p-5 transition-colors hover:border-gold/60">
+          <a href="mailto:info@getcarosai.com" className="group rounded-xl border border-ink-border p-5 transition-colors hover:border-gold/60">
             <Mail className="h-5 w-5 text-gold" />
             <p className="mt-4 text-sm font-semibold">Questions before kickoff?</p>
-            <p className="mt-1 text-sm text-ink-muted">inquiries@getcarosai.com</p>
+            <p className="mt-1 text-sm text-ink-muted">info@getcarosai.com</p>
           </a>
           <a href="tel:+1-800-000-0000" className="group rounded-xl border border-ink-border p-5 transition-colors hover:border-gold/60">
             <Phone className="h-5 w-5 text-gold" />
