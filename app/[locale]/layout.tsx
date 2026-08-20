@@ -1,5 +1,4 @@
 import {NextIntlClientProvider} from "next-intl"
-import {getMessages} from "next-intl/server"
 import {notFound} from "next/navigation"
 import {routing} from "@/i18n/routing"
 import {RouteChrome} from "@/components/caros/route-chrome"
@@ -18,7 +17,7 @@ export default async function LocaleLayout({
     notFound()
   }
 
-  const messages = await getMessages()
+  const messages = (await import(`../../messages/${locale}.json`)).default
 
   return (
     <NextIntlClientProvider messages={messages}>
