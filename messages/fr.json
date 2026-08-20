@@ -1,0 +1,19 @@
+{
+  "nav": {
+    "industries": "Industries",
+    "pricing": "Pricing",
+    "howItWorks": "How It Works",
+    "about": "About",
+    "getStarted": "Get Started",
+    "menu": "Menu"
+  },
+  "footer": {
+    "tagline": "Revenue infrastructure for the next stage of growth.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "contact": "Contact"
+  },
+  "language": {
+    "label": "Language"
+  }
+}
