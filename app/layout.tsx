@@ -195,7 +195,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </Script>
         <Script
           src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
         <script
           type="application/ld+json"

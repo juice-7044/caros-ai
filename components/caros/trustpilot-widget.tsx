@@ -34,5 +34,12 @@ export function TrustpilotWidget() {
     window.Trustpilot?.loadFromElement?.(widget, true)
   }, [])
 
-  return <div ref={widgetRef} className="trustpilot-widget" aria-label="Trustpilot review collector" />
+  return (
+    <div
+      ref={widgetRef}
+      className="trustpilot-widget"
+      aria-label="Trustpilot review collector"
+      suppressHydrationWarning
+    />
+  )
 }
