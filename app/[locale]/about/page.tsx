@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import {useTranslations} from "next-intl"
 import Image from "next/image"
 import { PageHero, Eyebrow } from "@/components/caros/ui-bits"
 import { Founders } from "@/components/caros/founders"
@@ -27,22 +28,24 @@ const beliefs = [
 ]
 
 export default function AboutPage() {
+  const t = useTranslations("pages.about")
+
   return (
     <>
       <PageHero
-        eyebrow="About CAROS"
-        title="We built the revenue clarity"
-        serifTitle="big companies take for granted."
-        subtitle="CAROS gives local owners the same command over their revenue that enterprises pay fortunes for — without the complexity, the consultants, or the revenue share."
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        serifTitle={t("serifTitle")}
+        subtitle={t("subtitle")}
       />
 
       <section className="bg-background py-24 lg:py-32">
         <div className="mx-auto max-w-[1100px] px-6 lg:px-12">
           <div className="grid gap-16 lg:grid-cols-[1fr_1fr] lg:items-center">
             <Reveal>
-              <Eyebrow>Our Story</Eyebrow>
+              <Eyebrow>{t("story")}</Eyebrow>
               <h2 className="mt-6 text-balance text-[clamp(2rem,4vw,3rem)] font-extrabold leading-[1.05] tracking-tight">
-                It started with a simple, frustrating question.
+                {t("storyTitle")}
               </h2>
               <div className="mt-6 space-y-5 text-lg leading-relaxed text-muted-foreground">
                 <p>
@@ -73,7 +76,7 @@ export default function AboutPage() {
       <section className="bg-muted/40 py-24 lg:py-32">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
           <Reveal>
-            <Eyebrow>What We Believe</Eyebrow>
+            <Eyebrow>{t("beliefs")}</Eyebrow>
             <h2 className="mt-6 max-w-3xl text-balance text-[clamp(2rem,4vw,3.25rem)] font-extrabold leading-[1.02] tracking-tight">
               Three beliefs that shaped everything.
             </h2>
@@ -92,7 +95,7 @@ export default function AboutPage() {
       <section className="bg-background py-24 lg:py-32">
         <div className="mx-auto max-w-[1100px] px-6 lg:px-12">
           <Reveal>
-            <Eyebrow>Leadership</Eyebrow>
+            <Eyebrow>{t("leadership")}</Eyebrow>
             <h2 className="mt-6 max-w-3xl text-balance text-[clamp(2rem,4vw,3.25rem)] font-extrabold leading-[1.02] tracking-tight">
               The people behind the system.
             </h2>

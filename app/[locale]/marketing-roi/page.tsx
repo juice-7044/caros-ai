@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { useTranslations } from "next-intl"
 import { PageHero, Eyebrow } from "@/components/caros/ui-bits"
 import { AttributionTable } from "@/components/caros/attribution-table"
 import { RoiCalculator } from "@/components/caros/roi-calculator"
@@ -30,13 +31,15 @@ const problems = [
 ]
 
 export default function MarketingRoiPage() {
+  const t = useTranslations("pages.marketing")
+
   return (
     <>
       <PageHero
-        eyebrow="Marketing ROI"
-        title={`"Half my marketing works.`}
-        serifTitle={`I just don't know which half."`}
-        subtitle="CAROS ends the guessing. Every lead is tied to its source and followed all the way to booked revenue — so you know exactly what to spend more on, and what to cut."
+        eyebrow={t("eyebrow")}
+        title={`"${t("title")}`}
+        serifTitle={`${t("serifTitle")}"`}
+        subtitle={t("subtitle")}
       />
 
       <section className="bg-background py-24 lg:py-32">
@@ -56,7 +59,7 @@ export default function MarketingRoiPage() {
       <section className="bg-muted/40 py-24 lg:py-32">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
           <Reveal>
-            <Eyebrow>Attribution, In Plain English</Eyebrow>
+            <Eyebrow>{t("attribution")}</Eyebrow>
             <h2 className="mt-6 max-w-3xl text-balance text-[clamp(2rem,4vw,3.25rem)] font-extrabold leading-[1.02] tracking-tight">
               Know where your revenue comes from. Know what every marketing dollar produced.
             </h2>

@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { useTranslations } from "next-intl"
 import { Link, usePathname } from "@/i18n/routing"
 import { LanguageSwitcher } from "@/components/LanguageSwitcher"
 import { Menu, X, ChevronDown } from "lucide-react"
@@ -14,6 +15,16 @@ export function SiteNav() {
   const [open, setOpen] = useState(false)
   const [industriesOpen, setIndustriesOpen] = useState(false)
   const pathname = usePathname()
+  const t = useTranslations("nav")
+  const navLabels: Record<string, string> = {
+    "/": t("home"),
+    "/how-it-works": t("howItWorks"),
+    "/whats-included": t("included"),
+    "/marketing-roi": t("marketingRoi"),
+    "/industries": t("industries"),
+    "/pricing": t("pricing"),
+    "/about": t("about"),
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -73,7 +84,7 @@ export function SiteNav() {
                         active && "text-foreground",
                       )}
                     >
-                      {link.name}
+                      {navLabels[link.href] ?? link.name}
                       <ChevronDown
                         className={cn(
                           "h-3.5 w-3.5 transition-transform duration-300",
@@ -110,7 +121,7 @@ export function SiteNav() {
                           href="/industries"
                           className="mt-1 flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-semibold text-gold transition-colors duration-200 hover:bg-gold/10"
                         >
-                          View all industries
+                          {t("viewAllIndustries")}
                         </Link>
                       </div>
                     </div>
@@ -170,7 +181,7 @@ export function SiteNav() {
           <button
             onClick={() => setOpen((v) => !v)}
             className="p-2 text-foreground lg:hidden"
-            aria-label="Toggle menu"
+            aria-label={t("toggleMenu")}
             aria-expanded={open}
           >
             {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}

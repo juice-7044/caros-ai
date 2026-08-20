@@ -1,6 +1,7 @@
 "use client"
 
 import { useMemo, useState } from "react"
+import { useTranslations } from "next-intl"
 import { AuditButton } from "./ui-bits"
 import { AUDIT_URL } from "@/lib/site"
 import { cn } from "@/lib/utils"
@@ -49,6 +50,7 @@ function Field({
 }
 
 export function RoiCalculator({ className }: { className?: string }) {
+  const t = useTranslations("calculator")
   const [jobValue, setJobValue] = useState(3200)
   const [missedCalls, setMissedCalls] = useState(24)
   const [closeRate, setCloseRate] = useState(35)
@@ -70,14 +72,14 @@ export function RoiCalculator({ className }: { className?: string }) {
       )}
     >
       <div className="space-y-6">
-        <Field label="Average Job Value" prefix="$" value={jobValue} onChange={setJobValue} min={0} step={100} />
-        <Field label="Missed Calls / Month" value={missedCalls} onChange={setMissedCalls} min={0} step={1} />
-        <Field label="Close Rate" suffix="%" value={closeRate} onChange={setCloseRate} min={0} step={1} />
+        <Field label={t("averageJobValue")} prefix="$" value={jobValue} onChange={setJobValue} min={0} step={100} />
+        <Field label={t("missedCalls")} value={missedCalls} onChange={setMissedCalls} min={0} step={1} />
+        <Field label={t("closeRate")} suffix="%" value={closeRate} onChange={setCloseRate} min={0} step={1} />
       </div>
 
       <div className="flex flex-col justify-between gap-8 rounded-xl bg-ink-foreground/[0.03] p-6 lg:p-8">
         <div>
-          <p className="eyebrow text-ink-muted">Estimated revenue currently at risk</p>
+          <p className="eyebrow text-ink-muted">{t("atRisk")}</p>
           <p className="mt-3 text-[clamp(2.5rem,6vw,4rem)] font-extrabold leading-none text-gold-gradient">
             {currency(atRisk)}
             <span className="text-2xl text-ink-muted">/mo</span>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { useTranslations } from "next-intl"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { PageHero, Eyebrow } from "@/components/caros/ui-bits"
@@ -28,13 +29,15 @@ const fits = [
 ]
 
 export default function IndustriesPage() {
+  const t = useTranslations("pages.industries")
+
   return (
     <>
       <PageHero
-        eyebrow="Industries"
-        title="Built for the businesses where"
-        serifTitle="a missed call is a missed job."
-        subtitle="CAROS was designed for home-service and local businesses — the ones that live and die by the phone, the follow-up, and the reputation they earn on every job."
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        serifTitle={t("serifTitle")}
+        subtitle={t("subtitle")}
       />
 
       <section className="bg-background py-24 lg:py-32">

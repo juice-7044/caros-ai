@@ -1,16 +1,40 @@
 {
   "nav": {
+    "home": "Home",
     "industries": "Industries",
+    "viewAllIndustries": "View all industries",
     "pricing": "Pricing",
     "howItWorks": "How It Works",
+    "included": "What's Included",
+    "marketingRoi": "Marketing ROI",
     "about": "About",
+    "insights": "Business Insights",
+    "diagnostic": "Free Business Audit",
     "getStarted": "Get Started",
-    "menu": "Menu"
+    "menu": "Menu",
+    "toggleMenu": "Toggle menu",
+    "businessInsights": "Business Insights",
+    "freeAudit": "Free Business Audit"
   },
   "footer": {
-    "tagline": "Revenue infrastructure for the next stage of growth.",
+    "product": "Product",
+    "company": "Company",
+    "resources": "Resources",
+    "legal": "Legal",
+    "included": "What's Included",
+    "pricing": "Pricing",
+    "howItWorks": "How It Works",
+    "compare": "Compare",
+    "about": "About",
+    "faq": "FAQ",
+    "careers": "Careers",
+    "freeInsights": "Free Business Insights",
+    "marketingRoi": "Marketing ROI",
     "privacy": "Privacy",
     "terms": "Terms",
+    "tagline": "Revenue infrastructure for the next stage of growth.",
+    "headquarters": "Headquarters",
+    "rights": "All rights reserved.",
     "contact": "Contact"
   },
   "language": {
@@ -22,7 +46,90 @@
       "title": "Los ingresos primero.",
       "titleAccent": "Todo lo demás está al servicio de ellos.",
       "description": "CAROS conecta las personas, sistemas, actividad de clientes y marketing de tu negocio en un solo resultado: más ingresos medibles.",
-      "categoryLabels": ["Adquisición de clientes", "Operaciones de ingresos", "Éxito del cliente", "Inteligencia empresarial", "Integraciones"]
+      "categoryLabels": [
+        "Adquisición de clientes",
+        "Operaciones de ingresos",
+        "Éxito del cliente",
+        "Inteligencia empresarial",
+        "Integraciones"
+      ]
     }
+  },
+  "pages": {
+    "pricing": {
+      "eyebrow": "Pricing",
+      "title": "One flat rate for your entire",
+      "serifTitle": "revenue operating system.",
+      "subtitle": "No revenue share. No year-long build. No pile of disconnected software to wire together yourself. Just one system, one price.",
+      "questions": "Questions, Answered",
+      "questionsTitle": "What owners ask before they start.",
+      "cta": "Start with a Revenue Audit — not a contract."
+    },
+    "about": {
+      "eyebrow": "About CAROS",
+      "title": "We built the revenue clarity",
+      "serifTitle": "big companies take for granted.",
+      "subtitle": "CAROS gives local owners the same command over their revenue that enterprises pay fortunes for — without the complexity, the consultants, or the revenue share.",
+      "story": "Our Story",
+      "storyTitle": "It started with a simple, frustrating question.",
+      "beliefs": "What We Believe",
+      "beliefsTitle": "Three beliefs that shaped everything.",
+      "leadership": "Leadership",
+      "leadershipTitle": "The people behind the system."
+    },
+    "marketing": {
+      "eyebrow": "Marketing ROI",
+      "title": "Half my marketing works.",
+      "serifTitle": "I just do not know which half.",
+      "subtitle": "CAROS ends the guessing. Every lead is tied to its source and followed to booked revenue.",
+      "attribution": "Attribution, In Plain English",
+      "attributionTitle": "Know where your revenue comes from.",
+      "calculator": "Revenue At Risk Calculator",
+      "calculatorTitle": "How much is leaking out right now?",
+      "cta": "See your real numbers in a Revenue Audit."
+    },
+    "how": {
+      "eyebrow": "How It Works",
+      "title": "One system, built around",
+      "serifTitle": "how you already work.",
+      "subtitle": "CAROS is a revenue operating system we design, build, and run around your business.",
+      "questions": "The Four Questions",
+      "questionsTitle": "Every business owner asks the same four questions.",
+      "process": "The Process",
+      "processTitle": "From first call to fully running — in four moves.",
+      "pillars": "The Five Pillars",
+      "pillarsTitle": "Five connected systems working as one."
+    },
+    "industries": {
+      "eyebrow": "Industries",
+      "title": "Built for the businesses where",
+      "serifTitle": "a missed call is a missed job.",
+      "subtitle": "CAROS was designed for home-service and local businesses — the ones that live by the phone, follow-up, and reputation.",
+      "who": "Who It Is For",
+      "whoTitle": "If you run one of these, revenue is leaking somewhere right now.",
+      "fits": "Why It Fits",
+      "fitsTitle": "Three things these businesses have in common.",
+      "cta": "See what CAROS looks like for your trade."
+    },
+    "faq": {
+      "eyebrow": "Works With Your Existing Ecosystem",
+      "title": "Already have software?",
+      "serifTitle": "Good.",
+      "subtitle": "CAROS works with the technology and channels already running your business."
+    },
+    "compare": {
+      "eyebrow": "Compare CAROS",
+      "title": "Revenue technology should do more than respond.",
+      "titleAccent": "Know what deserves attention next."
+    },
+    "diagnostic": {
+      "breakEven": "The Break-Even Math"
+    }
+  },
+  "calculator": {
+    "averageJobValue": "Average Job Value",
+    "missedCalls": "Missed Calls / Month",
+    "closeRate": "Close Rate",
+    "atRisk": "Estimated revenue currently at risk"
   }
 }

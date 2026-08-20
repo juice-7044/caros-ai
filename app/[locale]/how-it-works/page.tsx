@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { useTranslations } from "next-intl"
 import { PageHero, Eyebrow } from "@/components/caros/ui-bits"
 import { HowItWorksSteps } from "@/components/caros/how-it-works-steps"
 import { PillarsGrid } from "@/components/caros/pillars-grid"
@@ -31,13 +32,15 @@ const flow = [
 ]
 
 export default function HowItWorksPage() {
+  const t = useTranslations("pages.how")
+
   return (
     <>
       <PageHero
-        eyebrow="How It Works"
-        title="One system, built around"
-        serifTitle="how you already work."
-        subtitle="CAROS isn't software you have to learn. It's a revenue operating system we design, build, and run around your business — so revenue stops leaking and you can trace what happens from marketing spend to booked revenue."
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        serifTitle={t("serifTitle")}
+        subtitle={t("subtitle")}
       />
 
       <section className="bg-background py-24 lg:py-32">

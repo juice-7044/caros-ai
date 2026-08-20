@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { useTranslations } from "next-intl"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { INSIGHTS_URL } from "@/lib/site"
@@ -22,6 +23,8 @@ export const metadata: Metadata = {
 }
 
 export default function DiagnosticPage() {
+  const t = useTranslations("pages.diagnostic")
+
   return (
     <>
       <DiagnosticHero />
@@ -32,7 +35,7 @@ export default function DiagnosticPage() {
       <section className="bg-background py-28 lg:py-40">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
           <Reveal className="max-w-3xl">
-            <Eyebrow>The Break-Even Math</Eyebrow>
+            <Eyebrow>{t("breakEven")}</Eyebrow>
             <h2 className="mt-6 text-balance text-[clamp(2rem,4.5vw,3.5rem)] font-display leading-[1] tracking-tight">
               You don&apos;t need to transform your business{" "}
               <span className="font-serif font-normal italic text-gold-gradient">for CAROS to pay for itself.</span>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { useTranslations } from "next-intl"
 import { Check, X, ArrowDown } from "lucide-react"
 import { Eyebrow, AuditButton } from "@/components/caros/ui-bits"
 import { Reveal } from "@/components/caros/reveal"
@@ -21,6 +22,8 @@ const FLOW_STEPS = [
 ]
 
 export default function ComparePage() {
+  const t = useTranslations("pages.compare")
+
   return (
     <>
       {/* Hero */}
@@ -42,12 +45,10 @@ export default function ComparePage() {
           ))}
         </div>
         <div className="relative z-10 mx-auto max-w-[1200px] px-6 pb-24 pt-40 lg:px-12 lg:pb-32 lg:pt-48">
-          <Eyebrow>Compare CAROS</Eyebrow>
+          <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h1 className="mt-6 max-w-4xl text-balance text-[clamp(2.5rem,5.5vw,4.75rem)] font-display leading-[0.98] tracking-tight">
-            Revenue technology should do more than respond. It should{" "}
-            <span className="font-serif font-normal italic text-gold-gradient">
-              know what deserves attention next.
-            </span>
+            {t("title")} {" "}
+            <span className="font-serif font-normal italic text-gold-gradient">{t("titleAccent")}</span>
           </h1>
           <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground lg:text-xl">
             There are excellent platforms helping home-service businesses answer calls, respond to leads and automate

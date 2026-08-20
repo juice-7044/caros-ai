@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { useTranslations } from "next-intl"
 import { Plus } from "lucide-react"
 import { PageHero, AuditButton, Eyebrow } from "@/components/caros/ui-bits"
 import { Reveal } from "@/components/caros/reveal"
@@ -59,13 +60,15 @@ const faqs: { q: string; a: React.ReactNode; highlight?: string }[] = [
 ]
 
 export default function FaqPage() {
+  const t = useTranslations("pages.faq")
+
   return (
     <>
       <PageHero
-        eyebrow="Works With Your Existing Ecosystem"
-        title="Already have software?"
-        serifTitle="Good."
-        subtitle="CAROS is designed to work with the technology and channels already running your business. The goal is not to make you start over. It is to help you see, protect, and create more revenue across the entire operation."
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        serifTitle={t("serifTitle")}
+        subtitle={t("subtitle")}
       />
 
       <section className="border-t border-border bg-background">
