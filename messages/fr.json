@@ -14,6 +14,15 @@
     "contact": "Contact"
   },
   "language": {
-    "label": "Language"
+    "label": "Langue"
+  },
+  "HomePage": {
+    "hero": {
+      "eyebrow": "Système d'acquisition client et de revenus",
+      "title": "Les revenus d'abord.",
+      "titleAccent": "Tout le reste les sert.",
+      "description": "CAROS relie les équipes, les systèmes, l'activité client et le marketing autour d'un seul objectif : des revenus mesurables.",
+      "categoryLabels": ["Acquisition client", "Opérations de revenus", "Réussite client", "Intelligence business", "Intégrations"]
+    }
   }
 }

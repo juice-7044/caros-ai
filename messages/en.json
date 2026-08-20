@@ -15,5 +15,14 @@
   },
   "language": {
     "label": "Language"
+  },
+  "HomePage": {
+    "hero": {
+      "eyebrow": "Customer Acquisition & Revenue Operating System",
+      "title": "Revenue First.",
+      "titleAccent": "Everything Else Serves It.",
+      "description": "CAROS connects the people, systems, customer activity, and marketing behind your business to one outcome: more measurable revenue.",
+      "categoryLabels": ["Customer Acquisition", "Revenue Operations", "Customer Success", "Business Intelligence", "Integrations"]
+    }
   }
 }

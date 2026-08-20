@@ -15,5 +15,6 @@
   },
   "language": {
     "label": "Language"
-  }
+  },
+  "HomePage": {"hero": {"eyebrow": "System für Kundenakquise und Umsatz", "title": "Umsatz zuerst.", "titleAccent": "Alles andere dient diesem Ziel.", "description": "CAROS verbindet Menschen, Systeme, Kundenaktivitäten und Marketing mit einem Ergebnis: mehr messbaren Umsatz.", "categoryLabels": ["Kundenakquise", "Umsatzprozesse", "Kundenerfolg", "Business Intelligence", "Integrationen"]}}
 }

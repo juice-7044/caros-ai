@@ -15,5 +15,6 @@
   },
   "language": {
     "label": "Language"
-  }
+  },
+  "HomePage": {"hero": {"eyebrow": "System pozyskiwania klientów i przychodów", "title": "Przychód przede wszystkim.", "titleAccent": "Wszystko inne mu służy.", "description": "CAROS łączy ludzi, systemy, aktywność klientów i marketing wokół jednego wyniku: większych, mierzalnych przychodów.", "categoryLabels": ["Pozyskiwanie klientów", "Operacje przychodowe", "Sukces klienta", "Business intelligence", "Integracje"]}}
 }

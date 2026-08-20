@@ -15,5 +15,6 @@
   },
   "language": {
     "label": "Language"
-  }
+  },
+  "HomePage": {"hero": {"eyebrow": "Sistema di acquisizione clienti e ricavi", "title": "Prima i ricavi.", "titleAccent": "Tutto il resto li serve.", "description": "CAROS collega persone, sistemi, attività dei clienti e marketing a un unico risultato: più ricavi misurabili.", "categoryLabels": ["Acquisizione clienti", "Operazioni sui ricavi", "Successo del cliente", "Business intelligence", "Integrazioni"]}}
 }

@@ -14,6 +14,15 @@
     "contact": "Contact"
   },
   "language": {
-    "label": "Language"
+    "label": "Idioma"
+  },
+  "HomePage": {
+    "hero": {
+      "eyebrow": "Sistema operativo de adquisición de clientes e ingresos",
+      "title": "Los ingresos primero.",
+      "titleAccent": "Todo lo demás está al servicio de ellos.",
+      "description": "CAROS conecta las personas, sistemas, actividad de clientes y marketing de tu negocio en un solo resultado: más ingresos medibles.",
+      "categoryLabels": ["Adquisición de clientes", "Operaciones de ingresos", "Éxito del cliente", "Inteligencia empresarial", "Integraciones"]
+    }
   }
 }
