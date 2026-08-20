@@ -76,6 +76,28 @@
   }
 }
 
+@layer components {
+  .industry-theme-shell { isolation: isolate; }
+  .industry-hero .industry-texture { opacity: 0.42; }
+  .industry-hero.theme-clinical .industry-texture {
+    background-image: linear-gradient(90deg, transparent 0 49%, rgba(201, 162, 39, 0.08) 50%, transparent 51%), linear-gradient(0deg, transparent 0 49%, rgba(201, 162, 39, 0.08) 50%, transparent 51%);
+    background-size: 28px 28px;
+  }
+  .industry-hero.theme-competitive .industry-texture {
+    background-image: repeating-linear-gradient(135deg, transparent 0 18px, rgba(194, 65, 12, 0.11) 19px 20px, transparent 21px 38px);
+  }
+  .industry-hero.theme-luxury .industry-texture {
+    background-image: radial-gradient(circle at 18% 22%, rgba(201, 162, 39, 0.14) 0 1px, transparent 1.5px), radial-gradient(circle at 74% 68%, rgba(201, 162, 39, 0.1) 0 1px, transparent 1.5px);
+    background-size: 34px 34px, 46px 46px;
+  }
+  .industry-hero.theme-discreet .industry-texture {
+    background-image: linear-gradient(115deg, transparent 0 48%, rgba(201, 162, 39, 0.09) 49%, transparent 50%);
+    background-size: 72px 72px;
+  }
+  .industry-story-card { transition: transform 220ms ease, border-color 220ms ease; }
+  .industry-story-card:hover { transform: translateY(-2px); border-color: rgba(201, 162, 39, 0.55); }
+}
+
 @layer utilities {
   .font-serif {
     font-family: var(--font-serif);

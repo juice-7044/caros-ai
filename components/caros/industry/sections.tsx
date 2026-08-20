@@ -21,14 +21,15 @@ export function ProblemSection({ industry }: { industry: IndustryContent }) {
             </p>
           </div>
 
-          <div className="flex flex-col justify-center gap-px overflow-hidden rounded-2xl border border-border bg-border">
-            {industry.mattersWhen.map((m) => (
-              <div key={m.label} className="bg-card p-6">
-                <p className="text-lg leading-relaxed">
-                  <span className="font-semibold text-foreground">{m.label}</span>{" "}
-                  <span className="text-muted-foreground">{m.detail}</span>
+          <div className="industry-story-grid flex flex-col justify-center gap-3">
+            {industry.mattersWhen.map((m, index) => (
+              <article key={m.label} className="industry-story-card rounded-2xl border border-border bg-card p-6">
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                  Case file {String(index + 1).padStart(2, "0")}
                 </p>
-              </div>
+                <h3 className="mt-3 text-lg font-semibold text-foreground">{m.label}</h3>
+                <p className="mt-3 leading-relaxed text-muted-foreground">{m.detail}</p>
+              </article>
             ))}
           </div>
         </div>

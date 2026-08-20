@@ -16,6 +16,7 @@ export type Metric = { value: string; label: string; highlight?: boolean }
 export type Capability = { title: string; body: string }
 export type Pillar = { label: string; question: string; items: string[] }
 export type QA = { q: string; a: string }
+export type IndustryVisualTheme = "clinical" | "competitive" | "luxury" | "discreet"
 
 export interface IndustryContent {
   slug: string
@@ -25,6 +26,7 @@ export interface IndustryContent {
   heroTitle: string
   heroTitleSerif: string
   heroSub: string
+  visualTheme?: IndustryVisualTheme
   trustRow: string[]
   // SEO
   metaTitle: string
@@ -3033,9 +3035,10 @@ const wellnessSpas = make(
   },
   {
     heroEyebrow: "Industry Solution — Wellness Spas",
-    heroTitle: "Empty Treatment Rooms Don't Relax Anyone.",
-    heroTitleSerif: "Least of All Your Revenue.",
-    heroSub: "CAROS fills your booking calendar, recovers cancellations, sells retail, and keeps members coming back — so your spa operates at full capacity.",
+    heroTitle: "The Guest Experience Begins Before They",
+    heroTitleSerif: "Enter the Spa.",
+    heroSub: "CAROS gives every guest a seamless, considered path from discovery to rebooking — protecting the calm, elevated experience that makes your spa worth returning to.",
+    visualTheme: "luxury",
     trustRow: ["Day Spas", "Medical Spas", "Memberships", "Skin & Body", "Recovery"],
     metaTitle: "CAROS for Spas & Wellness | Booking Recovery & Membership Retention",
     metaDescription: "Fill empty treatment rooms, recover cancellations, and retain members with CAROS revenue automation for spas.",
@@ -3044,10 +3047,10 @@ const wellnessSpas = make(
     problemTitleSerif: "healthy revenue.",
     problemIntro: "Spas lose revenue in the space between an inquiry, a first appointment, a recommended plan, and the next visit. CAROS keeps that guest journey moving with timely, personal follow-up.",
     mattersWhen: [
-      { label: "The 2 PM Cancellation That Stays Empty", detail: "A facial cancels at 11 AM. A waitlist that offers the exact slot can protect the room before it is too late." },
-      { label: "Your Retail Shelf Is Full", detail: "Personalized post-visit product recommendations can turn a $120 facial into a $180 visit." },
-      { label: "Membership Churn Is Silent and Expensive", detail: "Flag a member at 30 days, send a win-back offer, and alert the front desk before month three becomes a cancellation." },
-      { label: "Gift Cards Are Marketing You Already Paid For", detail: "Track redemptions, welcome recipients, and turn a prepaid introduction into a regular membership." },
+      { label: "11:00 — The Two O'Clock Ritual", detail: "A guest cancels a signature facial with just enough notice to save the appointment. CAROS offers the opening to a matched waitlist guest without making the experience feel transactional." },
+      { label: "After the Treatment — The Quiet Upsell", detail: "A guest leaves glowing after a $120 service. A thoughtful product note and care ritual turns the result into a $180 visit without a hard sell at checkout." },
+      { label: "Day 30 — The Member Who Went Quiet", detail: "A member has not booked since joining. CAROS surfaces the relationship before it becomes churn and invites them back with a recommendation that feels personal." },
+      { label: "The Gift Card That Became a Ritual", detail: "A first-time guest redeems a gift card on a Saturday. A warm welcome and perfectly timed rebooking invitation turns a prepaid visit into a new routine." },
     ],
     problemClose: { text: "CAROS connects the guest journey around", gold: "repeatable wellness revenue." },
     leaksIntro: "The most expensive leaks are usually quiet: an inquiry that waits, a package that is never followed up, or a guest who simply forgets to return.",
@@ -3091,9 +3094,10 @@ const medicalPractices = make(
   },
   {
     heroEyebrow: "Industry Solution — Medical Practices",
-    heroTitle: "Your Front Desk Is Drowning. Your Patients Are",
-    heroTitleSerif: "Going Elsewhere.",
-    heroSub: "CAROS captures every patient call, fills schedule gaps, and follows up on no-shows — so your practice stops losing revenue to voicemail.",
+    heroTitle: "A Missed Call Is a Missed Patient. A Missed Patient Is",
+    heroTitleSerif: "Lost Care.",
+    heroSub: "When your front desk is triaging a full waiting room, CAROS answers the next patient, collects the clinical context your team needs, and moves the visit toward a safe, scheduled next step.",
+    visualTheme: "clinical",
     trustRow: ["Primary Care", "Specialty Care", "Dental", "Wellness Medicine", "Multi-Location"],
     metaTitle: "CAROS for Medical Practices | Patient Acquisition & Retention",
     metaDescription: "Stop losing patients to voicemail. CAROS captures calls, reduces no-shows, and automates follow-up for medical and dental practices.",
@@ -3102,10 +3106,10 @@ const medicalPractices = make(
     problemTitleSerif: "the next step.",
     problemIntro: "Practice growth is shaped by access: how quickly a prospective patient gets an answer, how reliably a referral is followed, and whether an open appointment becomes a completed visit.",
     mattersWhen: [
-      { label: "The 11 AM Voicemail from the 9 AM Patient", detail: "A patient calls at 8:45 AM with a toothache. Your front desk is with another patient. By 11:15, they have already booked with the practice down the street." },
-      { label: "No-Shows Cost You $250 Per Chair", detail: "An empty hygiene chair is $250 in profit walking out the door. Confirmations, pre-visit reminders, and same-day nudges keep the schedule productive." },
-      { label: "New Patient Intake While You Sleep", detail: "After-hours inquiries can be answered, pre-qualified, and booked before your staff arrives in the morning." },
-      { label: "Reviews That Build Your Reputation", detail: "Invite happy patients to review at the right moment and route detractors to a private conversation instead of a public problem." },
+      { label: "08:45 — Chest Pain, One Ring", detail: "A patient calls before clinic opens. The nurse is rooming someone else, the call rolls to voicemail, and the patient searches for the next practice with same-day availability. CAROS captures the request, records the urgency for staff review, and protects the callback." },
+      { label: "12:10 — The Empty Exam Room", detail: "A no-show leaves a provider and room idle through lunch. CAROS had already sent the reminder sequence and flags the gap for a same-day fill instead of letting capacity disappear." },
+      { label: "18:40 — Intake After Hours", detail: "A parent submits symptoms and insurance details after the office closes. CAROS confirms receipt, sets expectations, and queues the right follow-up for the morning team." },
+      { label: "Friday — The Referral Without an Owner", detail: "A specialist referral lands in a shared inbox with no clear handoff. CAROS assigns the next step, tracks scheduling, and keeps the patient from becoming a lost fax." },
     ],
     problemClose: { text: "CAROS helps your practice turn access into", gold: "measurable patient growth." },
     leaksIntro: "The revenue leaks in a practice are often operational, not clinical: the missed callback, the referral without an owner, and the patient who never receives a reminder.",
@@ -3149,9 +3153,10 @@ const financialServices = make(
   },
   {
     heroEyebrow: "Industry Solution — Financial Services",
-    heroTitle: "One Qualified Prospect Is Worth $50,000 in AUM.",
-    heroTitleSerif: "Don't Let Them Go to Voicemail.",
-    heroSub: "CAROS qualifies every inquiry, collects documents before your first meeting, and ensures no high-net-worth prospect falls through the cracks.",
+    heroTitle: "The Most Valuable Client in the Room Should Never Feel",
+    heroTitleSerif: "Rushed.",
+    heroSub: "CAROS quietly prepares the right information, protects every follow-up, and gives your advisory team more room to deliver the kind of attention high-value relationships expect.",
+    visualTheme: "discreet",
     trustRow: ["Wealth Management", "Financial Planning", "Lending", "Tax Advisory", "Insurance & Risk"],
     metaTitle: "CAROS for Financial Advisors | Prospect Qualification & Onboarding",
     metaDescription: "Qualify high-net-worth prospects instantly, collect documents faster, and never miss a discovery call with CAROS.",
@@ -3160,10 +3165,10 @@ const financialServices = make(
     problemTitleSerif: "trust before price.",
     problemIntro: "Financial decisions take time, but a slow or unclear follow-up experience creates doubt. CAROS helps firms stay present between first inquiry and signed engagement without turning relationship-building into a spreadsheet exercise.",
     mattersWhen: [
-      { label: "The 'Just Looking' Inquiry That Was Actually $2M in Assets", detail: "Respond instantly, qualify assets and intent, and book the discovery call while interest is hot." },
-      { label: "Document Collection That Drags On for Weeks", detail: "Automated requests and reminders make a 12-document onboarding feel organized instead of endless." },
-      { label: "Appointment No-Shows from High-Intent Prospects", detail: "Confirmation sequences, calendar holds, and personal pre-meeting touches protect valuable discovery calls." },
-      { label: "Your Best Clients Know Your Best Prospects", detail: "Identify referral moments after positive reviews and milestone achievements, then make the ask elegantly." },
+      { label: "The Quiet $2M Inquiry", detail: "A senior executive submits a discreet inquiry from a personal device. CAROS acknowledges it without noise, gathers only the right context, and routes a considered response to the right advisor." },
+      { label: "The Meeting That Feels Prepared", detail: "Before the discovery call, requested documents arrive in a private, orderly sequence. The advisor enters with context instead of asking the client to repeat their story." },
+      { label: "The Calendar Hold That Protects Trust", detail: "A high-intent prospect cannot make the first time offered. CAROS preserves the relationship with a quiet sequence rather than letting a premium conversation dissolve." },
+      { label: "The Introduction Made Carefully", detail: "A client mentions a colleague during a milestone review. CAROS helps the advisor follow up with the right degree of discretion, preserving the intimacy of the referral." },
     ],
     problemClose: { text: "CAROS turns scattered prospect activity into", gold: "visible relationship momentum." },
     leaksIntro: "In financial services, the revenue leak is rarely a single missed click. It is the accumulation of unanswered questions and undefined next steps.",
@@ -3207,9 +3212,10 @@ const insuranceBrokerage = make(
   },
   {
     heroEyebrow: "Industry Solution — Insurance Brokerage",
-    heroTitle: "Insurance Leads Go Cold in 5 Minutes.",
-    heroTitleSerif: "Yours Shouldn't.",
-    heroSub: "CAROS answers every quote request, follows up on every proposal, and nurtures every renewal — so no prospect slips to a competitor while you're comparing deductibles.",
+    heroTitle: "Every Quote Has a Winner. Make Sure It",
+    heroTitleSerif: "Isn't the Other Broker.",
+    heroSub: "CAROS responds before the comparison shopping starts, keeps every proposal in motion, and gives your producers the sharpest follow-up advantage in the market.",
+    visualTheme: "competitive",
     trustRow: ["Personal Lines", "Commercial", "Benefits", "Life & Health", "Independent Agencies"],
     metaTitle: "CAROS for Insurance Brokers | Quote Follow-Up & Renewals",
     metaDescription: "Insurance leads go cold fast. CAROS answers instantly, follows up on quotes, and protects your renewal book.",
@@ -3218,10 +3224,10 @@ const insuranceBrokerage = make(
     problemTitleSerif: "consistent follow-through.",
     problemIntro: "Insurance revenue is shaped by timing and trust: responding to a coverage question, explaining the quote, following up before expiration, and staying present after the policy binds.",
     mattersWhen: [
-      { label: "The Quote Request That Died in Your Inbox", detail: "A prospect asks about umbrella coverage at 7:42 PM. The broker who answers at 7:44 PM wins the conversation." },
-      { label: "Renewals Shouldn't Be a Surprise", detail: "A renewal conversation triggered 60 days out protects the relationship before a client starts shopping." },
-      { label: "Cross-Sell Opportunities Hiding in Plain Sight", detail: "A new boat, baby, or business creates a coverage gap. CAROS flags the moment for the right producer." },
-      { label: "Referrals Are Your Best Lead Source", detail: "Referred leads are 4x more likely to close. Track the advocate and treat the introduction with urgency." },
+      { label: "19:42 — The Umbrella Quote", detail: "A homeowner requests umbrella coverage after dinner. Your producer sees it the next morning; a competitor responds in four minutes with a clear comparison and owns the conversation." },
+      { label: "Day 60 — The Renewal Race", detail: "A commercial account hits the renewal window while your team is buried in endorsements. CAROS starts the review before the incumbent becomes an invitation to shop." },
+      { label: "The Coverage Gap Your Competitor Found", detail: "A new vehicle and growing business create two cross-sell moments. Without a prompt, another broker discovers them first during a routine review." },
+      { label: "The Referral That Deserved a Sprint", detail: "A top policyholder introduces a colleague by text. CAROS routes the referral instantly, credits the source, and keeps the first response worthy of the introduction." },
     ],
     problemClose: { text: "CAROS helps brokerages protect the full value of", gold: "every policy relationship." },
     leaksIntro: "Brokerage leaks happen in the handoffs: a lead between marketing and a producer, a quote between email and decision, or a renewal between service and sales.",

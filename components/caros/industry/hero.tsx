@@ -10,8 +10,8 @@ export function IndustryHero({ industry }: { industry: IndustryContent }) {
   useEffect(() => setVisible(true), [])
 
   return (
-    <section className="hero-gradient relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 bg-grid opacity-[0.35]" aria-hidden="true" />
+    <section className={`industry-hero hero-gradient relative overflow-hidden theme-${industry.visualTheme ?? "default"}`}>
+      <div className="industry-texture pointer-events-none absolute inset-0" aria-hidden="true" />
       <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 pb-20 pt-28 lg:px-12 lg:pb-28 lg:pt-36">
         <div
           className={`transition-all duration-700 ${visible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}

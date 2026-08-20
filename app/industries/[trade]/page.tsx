@@ -92,7 +92,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ trade
   }
 
   return (
-    <>
+    <div data-industry-theme={industry.visualTheme ?? "default"} className="industry-theme-shell">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
@@ -109,6 +109,6 @@ export default async function IndustryPage({ params }: { params: Promise<{ trade
       <ScalingSection industry={industry} />
       <FaqSection industry={industry} />
       <CtaBand headline={industry.ctaHeadline} sub={industry.ctaSub} />
-    </>
+    </div>
   )
 }
