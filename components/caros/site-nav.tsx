@@ -261,6 +261,10 @@ export function SiteNav() {
           >
             {DIAGNOSTIC_LABEL}
           </Link>
+          <div className="mt-4 border-t border-foreground/10 pt-5">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">Language</p>
+            <LanguageSwitcher mobile />
+          </div>
         </div>
         <a
           href={INSIGHTS_URL}
