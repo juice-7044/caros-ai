@@ -16,6 +16,7 @@ import { Roi } from "@/components/caros/home/roi"
 import { Industries } from "@/components/caros/home/industries"
 import { FoundersSection } from "@/components/caros/home/founders-section"
 import { CtaBand } from "@/components/caros/cta-band"
+import { TrustpilotWidget } from "@/components/caros/trustpilot-widget"
 
 export default function HomePage() {
   return (
@@ -55,23 +56,7 @@ export default function HomePage() {
       <section className="border-t border-border/60 bg-background px-6 py-10 sm:px-8">
         <div className="mx-auto max-w-6xl">
           {/* TrustBox widget - Review Collector */}
-          <div
-            className="trustpilot-widget"
-            data-locale="en-US"
-            data-template-id="56278e9abfbbba0bdcd568bc"
-            data-businessunit-id="6a85bb452d3cdad756440fa7"
-            data-style-height="52px"
-            data-style-width="100%"
-            data-token="54408afc-3dd2-45ae-b5b8-3ab8115cde87"
-          >
-            <a
-              href="https://www.trustpilot.com/review/getcaros.com"
-              target="_blank"
-              rel="noopener"
-            >
-              Trustpilot
-            </a>
-          </div>
+          <TrustpilotWidget />
           {/* End TrustBox widget */}
         </div>
       </section>
