@@ -136,7 +136,7 @@ export function SiteNav() {
                     href={link.href}
                     className="group relative text-sm text-foreground/70 transition-colors duration-300 hover:text-foreground"
                   >
-                    {link.name}
+                    {navLabels[link.href] ?? link.name}
                     <span className="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full" />
                   </a>
                 )
@@ -151,7 +151,7 @@ export function SiteNav() {
                     active && "text-foreground",
                   )}
                 >
-                  {link.name}
+                  {navLabels[link.href] ?? link.name}
                   <span
                     className={cn(
                       "absolute -bottom-1 left-0 h-px bg-gold transition-all duration-300",
@@ -213,7 +213,7 @@ export function SiteNav() {
                     onClick={() => setOpen(false)}
                     className="font-display text-4xl text-foreground transition-colors hover:text-gold"
                   >
-                    {link.name}
+                    {navLabels[link.href] ?? link.name}
                   </Link>
                   <div className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2">
                     {INDUSTRY_NAV.map((ind) => (
@@ -242,7 +242,7 @@ export function SiteNav() {
                   )}
                   style={{ transitionDelay: open ? `${i * 60}ms` : "0ms" }}
                 >
-                  {link.name}
+                  {navLabels[link.href] ?? link.name}
                 </a>
               )
             }

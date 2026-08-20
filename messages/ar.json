@@ -63,7 +63,25 @@
       "subtitle": "لا نسبة من الإيرادات ولا برامج منفصلة. نظام واحد، سعر واحد.",
       "questions": "إجابات عن الأسئلة",
       "questionsTitle": "ما يسأل عنه أصحاب الأعمال قبل البدء.",
-      "cta": "ابدأ بتدقيق الإيرادات، وليس بعقد."
+      "cta": "ابدأ بتدقيق الإيرادات، وليس بعقد.",
+      "faq": {
+        "implementation": {
+          "q": "Why a one-time implementation fee?",
+          "a": "Because CAROS is built around your business, not handed to you as a blank login. The implementation covers strategy, configuration, workflows, integrations, automation, reporting, testing, and launch."
+        },
+        "revenueShare": {
+          "q": "Do you take a percentage of my revenue?",
+          "a": "Never. Your growth is yours. You pay one flat monthly rate, not a cut of every job CAROS helps you book."
+        },
+        "payback": {
+          "q": "How fast does it pay for itself?",
+          "a": "For most owners, recovering a single missed job a month more than covers the cost."
+        },
+        "existingTools": {
+          "q": "What if I already use some tools?",
+          "a": "We integrate what is worth keeping and replace what is holding you back."
+        }
+      }
     },
     "about": {
       "eyebrow": "عن CAROS",
