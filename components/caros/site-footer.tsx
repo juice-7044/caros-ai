@@ -1,4 +1,4 @@
-import Link from "next/link"
+import { Link } from "@/i18n/routing"
 import { Linkedin, Facebook, ArrowUpRight, MapPin, Phone } from "lucide-react"
 import {
   AUDIT_HREF,

@@ -3,7 +3,6 @@ import type { Metadata } from "next"
 import { Archivo, Instrument_Serif, JetBrains_Mono } from "next/font/google"
 import Script from "next/script"
 import { Analytics } from "@vercel/analytics/next"
-import { RouteChrome } from "@/components/caros/route-chrome"
 import "./globals.css"
 
 const archivo = Archivo({
@@ -211,7 +210,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             gtag('config', 'G-MT8HLMZL04');
           `}
         </Script>
-        <RouteChrome>{children}</RouteChrome>
+        {children}
         <Analytics />
         {/* CAROS external tracking */}
         <Script

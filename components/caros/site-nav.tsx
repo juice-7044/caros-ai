@@ -1,8 +1,8 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { Link, usePathname, useRouter } from "@/i18n/routing"
+import { useLocale } from "next-intl"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { NAV_LINKS, INSIGHTS_URL, INSIGHTS_LABEL, DIAGNOSTIC_HREF, DIAGNOSTIC_LABEL } from "@/lib/site"
@@ -14,6 +14,15 @@ export function SiteNav() {
   const [open, setOpen] = useState(false)
   const [industriesOpen, setIndustriesOpen] = useState(false)
   const pathname = usePathname()
+  const router = useRouter()
+  const locale = useLocale()
+
+  const locales = [
+    ["en", "English"], ["es", "Español"], ["fr", "Français"], ["ja", "日本語"],
+    ["zh", "简体中文"], ["de", "Deutsch"], ["pl", "Polski"], ["ru", "Русский"],
+    ["sq", "Shqip"], ["it", "Italiano"], ["ar", "العربية"], ["hi", "हिन्दी"],
+    ["pt-BR", "Português (BR)"], ["pt-PT", "Português (PT)"],
+  ] as const
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -152,7 +161,16 @@ export function SiteNav() {
             })}
           </div>
 
-          <div className="hidden items-center gap-6 lg:flex">
+          <div className="hidden items-center gap-4 lg:flex">
+            <label className="sr-only" htmlFor="language-select">Language</label>
+            <select
+              id="language-select"
+              value={locale}
+              onChange={(event) => router.replace(pathname, {locale: event.target.value as typeof locale})}
+              className="bg-transparent text-xs text-foreground/70 outline-none"
+            >
+              {locales.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
+            </select>
             <a
               href={INSIGHTS_URL}
               target="_blank"
