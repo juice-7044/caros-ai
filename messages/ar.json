@@ -1,20 +1,20 @@
 {
   "nav": {
     "home": "الرئيسية",
-    "howItWorks": "How It Works",
+    "industries": "القطاعات",
+    "viewAllIndustries": "عرض كل القطاعات",
+    "pricing": "الأسعار",
+    "howItWorks": "كيف يعمل",
     "included": "ما يتضمنه",
     "marketingRoi": "عائد الاستثمار التسويقي",
-    "industries": "Industries",
-    "pricing": "Pricing",
-    "about": "About",
+    "about": "عن CAROS",
     "insights": "رؤى الأعمال",
     "diagnostic": "تدقيق أعمال مجاني",
-    "viewAllIndustries": "عرض كل القطاعات",
+    "getStarted": "ابدأ الآن",
+    "menu": "القائمة",
     "toggleMenu": "تبديل القائمة",
     "businessInsights": "رؤى الأعمال",
-    "freeAudit": "تدقيق أعمال مجاني",
-    "getStarted": "Get Started",
-    "menu": "Menu"
+    "freeAudit": "تدقيق أعمال مجاني"
   },
   "footer": {
     "product": "المنتج",
@@ -30,12 +30,12 @@
     "careers": "الوظائف",
     "freeInsights": "رؤى أعمال مجانية",
     "marketingRoi": "عائد الاستثمار التسويقي",
-    "privacy": "Privacy",
-    "terms": "Terms",
-    "tagline": "Revenue infrastructure for the next stage of growth.",
+    "privacy": "الخصوصية",
+    "terms": "الشروط",
+    "tagline": "حوّل المزيد من العملاء المحتملين إلى إيرادات محجوزة. مصمم للشركات المحلية.",
     "headquarters": "المقر الرئيسي",
     "rights": "جميع الحقوق محفوظة.",
-    "contact": "Contact"
+    "contact": "اتصل بنا"
   },
   "language": {
     "label": "اللغة"
@@ -55,9 +55,6 @@
       ]
     }
   },
-  "common": {
-    "language": "اللغة"
-  },
   "pages": {
     "pricing": {
       "eyebrow": "الأسعار",
@@ -76,7 +73,63 @@
       "story": "قصتنا",
       "storyTitle": "بدأ الأمر بسؤال بسيط ومزعج.",
       "beliefs": "ما نؤمن به",
-      "leadership": "القيادة"
+      "beliefsTitle": "ثلاث قناعات شكّلت كل شيء.",
+      "leadership": "القيادة",
+      "leadershipTitle": "الأشخاص الذين يقفون وراء النظام."
+    },
+    "marketing": {
+      "eyebrow": "Marketing ROI",
+      "title": "Half my marketing works.",
+      "serifTitle": "I just do not know which half.",
+      "subtitle": "CAROS ends the guessing. Every lead is tied to its source and followed to booked revenue.",
+      "attribution": "Attribution, In Plain English",
+      "attributionTitle": "Know where your revenue comes from.",
+      "calculator": "Revenue At Risk Calculator",
+      "calculatorTitle": "How much is leaking out right now?",
+      "cta": "See your real numbers in a Revenue Audit."
+    },
+    "how": {
+      "eyebrow": "How It Works",
+      "title": "One system, built around",
+      "serifTitle": "how you already work.",
+      "subtitle": "CAROS is a revenue operating system we design, build, and run around your business.",
+      "questions": "The Four Questions",
+      "questionsTitle": "Every business owner asks the same four questions.",
+      "process": "The Process",
+      "processTitle": "From first call to fully running — in four moves.",
+      "pillars": "The Five Pillars",
+      "pillarsTitle": "Five connected systems working as one."
+    },
+    "industries": {
+      "eyebrow": "Industries",
+      "title": "Built for the businesses where",
+      "serifTitle": "a missed call is a missed job.",
+      "subtitle": "CAROS was designed for home-service and local businesses — the ones that live by the phone, follow-up, and reputation.",
+      "who": "Who It Is For",
+      "whoTitle": "If you run one of these, revenue is leaking somewhere right now.",
+      "fits": "Why It Fits",
+      "fitsTitle": "Three things these businesses have in common.",
+      "cta": "See what CAROS looks like for your trade."
+    },
+    "faq": {
+      "eyebrow": "Works With Your Existing Ecosystem",
+      "title": "Already have software?",
+      "serifTitle": "Good.",
+      "subtitle": "CAROS works with the technology and channels already running your business."
+    },
+    "compare": {
+      "eyebrow": "Compare CAROS",
+      "title": "Revenue technology should do more than respond.",
+      "titleAccent": "Know what deserves attention next."
+    },
+    "diagnostic": {
+      "breakEven": "The Break-Even Math"
     }
+  },
+  "calculator": {
+    "averageJobValue": "Average Job Value",
+    "missedCalls": "Missed Calls / Month",
+    "closeRate": "Close Rate",
+    "atRisk": "Estimated revenue currently at risk"
   }
 }
