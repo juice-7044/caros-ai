@@ -26,6 +26,9 @@ export function LanguageSwitcher() {
   const currentLocale = params.locale ?? "en"
   const currentPathname = pathname || "/"
 
+  console.log("Current pathname:", pathname)
+  console.log("Current locale from params:", currentLocale)
+
   return (
     <nav className="flex max-w-full flex-wrap items-center gap-x-3 gap-y-1" aria-label="Language selection">
       {locales.map((locale) => (
@@ -33,8 +36,9 @@ export function LanguageSwitcher() {
           key={locale.code}
           href={currentPathname}
           locale={locale.code}
+          scroll={false}
           aria-current={currentLocale === locale.code ? "page" : undefined}
-          className={currentLocale === locale.code ? "font-semibold text-foreground" : "text-foreground/60 transition-colors hover:text-foreground"}
+          className={currentLocale === locale.code ? "language-switcher-active font-semibold text-[#F5A623]" : "text-foreground/60 transition-colors hover:text-foreground"}
         >
           {locale.label}
         </Link>
