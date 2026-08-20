@@ -17,10 +17,11 @@ export default async function LocaleLayout({
     notFound()
   }
 
+  console.log("Layout rendering for locale:", locale)
   const messages = (await import(`../../messages/${locale}.json`)).default
 
   return (
-    <NextIntlClientProvider messages={messages}>
+    <NextIntlClientProvider locale={locale} messages={messages}>
       <div dir={RTL_LOCALES.has(locale) ? "rtl" : "ltr"} lang={locale} data-locale={locale}>
         <RouteChrome>{children}</RouteChrome>
       </div>
