@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { useTranslations } from "next-intl"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { AUDIT_HREF, AUDIT_LABEL, INSIGHTS_URL, INSIGHTS_LABEL, PRODUCT_TAGLINE } from "@/lib/site"
@@ -14,6 +15,7 @@ const stats = [
 ]
 
 export function Hero() {
+  const t = useTranslations("HomePage.hero")
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -54,7 +56,7 @@ export function Hero() {
         >
           <span className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground sm:text-sm">
             <span className="h-px w-8 bg-gold/60" />
-            Customer Acquisition &amp; Revenue Operating System
+            {t("eyebrow")}
           </span>
         </div>
 
@@ -64,8 +66,8 @@ export function Hero() {
             visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
-          Revenue First.{" "}
-          <span className="font-serif font-normal italic text-gold-gradient">Everything Else Serves It.</span>
+          {t("title")} {" "}
+          <span className="font-serif font-normal italic text-gold-gradient">{t("titleAccent")}</span>
         </h1>
 
         {/* Core brand tagline */}
@@ -92,10 +94,7 @@ export function Hero() {
             }`}
           >
             <p className="max-w-xl text-lg leading-relaxed text-muted-foreground lg:text-xl">
-              CAROS connects the people, systems, customer activity, and marketing behind your business to one outcome:
-              more measurable revenue. Capture opportunities. Answer every lead. Book and close more jobs. Recover
-              revenue sitting in old leads and estimates. Retain customers. Reactivate past customers. Understand
-              exactly what is driving revenue across your business.
+              {t("description")}
             </p>
           </div>
 

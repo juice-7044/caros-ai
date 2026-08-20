@@ -15,5 +15,6 @@
   },
   "language": {
     "label": "Language"
-  }
+  },
+  "HomePage": {"hero": {"eyebrow": "顧客獲得と収益のオペレーティングシステム", "title": "収益を最優先に。", "titleAccent": "すべてはそのために。", "description": "CAROSは、人・システム・顧客活動・マーケティングを、測定可能な収益という一つの成果につなぎます。", "categoryLabels": ["顧客獲得", "収益オペレーション", "顧客成功", "ビジネスインテリジェンス", "連携"]}}
 }

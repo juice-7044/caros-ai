@@ -15,5 +15,6 @@
   },
   "language": {
     "label": "Language"
-  }
+  },
+  "HomePage": {"hero": {"eyebrow": "Sistemi i blerjes së klientëve dhe të ardhurave", "title": "Të ardhurat të parat.", "titleAccent": "Gjithçka tjetër u shërben atyre.", "description": "CAROS lidh njerëzit, sistemet, aktivitetin e klientëve dhe marketingun rreth një rezultati: më shumë të ardhura të matshme.", "categoryLabels": ["Blerja e klientëve", "Operacionet e të ardhurave", "Suksesi i klientit", "Inteligjenca e biznesit", "Integrimet"]}}
 }

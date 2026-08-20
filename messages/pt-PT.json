@@ -15,5 +15,6 @@
   },
   "language": {
     "label": "Language"
-  }
+  },
+  "HomePage": {"hero": {"eyebrow": "Sistema de aquisição de clientes e receitas", "title": "Receita em primeiro lugar.", "titleAccent": "Tudo o resto serve esse objetivo.", "description": "CAROS liga pessoas, sistemas, atividade dos clientes e marketing a um único resultado: mais receita mensurável.", "categoryLabels": ["Aquisição de clientes", "Operações de receita", "Sucesso do cliente", "Inteligência empresarial", "Integrações"]}}
 }

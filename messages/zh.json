@@ -15,5 +15,6 @@
   },
   "language": {
     "label": "Language"
-  }
+  },
+  "HomePage": {"hero": {"eyebrow": "客户获取与收入运营系统", "title": "收入优先。", "titleAccent": "其他一切都服务于此。", "description": "CAROS将人员、系统、客户活动和营销连接到一个结果：更多可衡量的收入。", "categoryLabels": ["客户获取", "收入运营", "客户成功", "商业智能", "集成"]}}
 }
