@@ -19,7 +19,7 @@ const TRUSTPILOT_ATTRIBUTES = {
   "data-token": "54408afc-3dd2-45ae-b5b8-3ab8115cde87",
 } as const
 
-export function TrustpilotWidget() {
+export default function TrustpilotWidget() {
   const widgetRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -30,16 +30,11 @@ export function TrustpilotWidget() {
       widget.setAttribute(name, value)
     })
 
-    widget.innerHTML = `<a href="https://www.trustpilot.com/review/getcaros.com" target="_blank" rel="noopener">Trustpilot</a>`
+    widget.innerHTML =
+      '<a href="https://www.trustpilot.com/review/getcaros.com" target="_blank" rel="noopener">Trustpilot</a>'
+
     window.Trustpilot?.loadFromElement?.(widget, true)
   }, [])
 
-  return (
-    <div
-      ref={widgetRef}
-      className="trustpilot-widget"
-      aria-label="Trustpilot review collector"
-      suppressHydrationWarning
-    />
-  )
+  return <div ref={widgetRef} className="trustpilot-widget" aria-label="Trustpilot review collector" />
 }
