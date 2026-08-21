@@ -1,31 +1,19 @@
 import { Reveal } from "@/components/caros/reveal"
+import { useTranslations } from "next-intl"
 import { Eyebrow } from "@/components/caros/ui-bits"
 
-const spend = [
-  { label: "Google Ads", value: "$3,000" },
-  { label: "SEO", value: "$2,000" },
-  { label: "Facebook", value: "$1,000" },
-  { label: "Angi", value: "$750" },
-  { label: "Sponsorship", value: "$750" },
-]
-
-const questions = [
-  "How many became appointments?",
-  "How many estimates closed?",
-  "How much revenue did each source generate?",
-  "Which customers came back?",
-  "How many leads called and never got an answer?",
-  "How much revenue disappeared because nobody followed up?",
-]
-
 export function Leaks() {
+  const t = useTranslations("HomePage.leaks")
+  const spend = t.raw("spend") as { label: string; value: string }[]
+  const questions = t.raw("questions") as string[]
+
   return (
     <section className="bg-background py-28 lg:py-40">
       <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
         <Reveal>
-          <Eyebrow tone="danger">The Revenue Leaks</Eyebrow>
+          <Eyebrow tone="danger">{t("eyebrow")}</Eyebrow>
           <h2 className="mt-6 max-w-3xl text-balance text-[clamp(2.25rem,5vw,4rem)] font-extrabold leading-[0.98] tracking-tight">
-            You might be losing money in places{" "}
+            {t("headline")} {" "}
             <span className="font-serif font-normal italic text-danger">you can&apos;t see.</span>
           </h2>
         </Reveal>

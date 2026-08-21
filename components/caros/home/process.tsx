@@ -1,8 +1,11 @@
 import { Reveal } from "@/components/caros/reveal"
+import { useTranslations } from "next-intl"
 import { Eyebrow } from "@/components/caros/ui-bits"
 import { HowItWorksSteps } from "@/components/caros/how-it-works-steps"
 
 export function Process() {
+  const t = useTranslations("HomePage.process")
+
   return (
     <section className="bg-background py-28 lg:py-40">
       <div className="mx-auto max-w-[1200px] px-6 lg:px-12">

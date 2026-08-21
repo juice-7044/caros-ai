@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl"
 import { Reveal } from "./reveal"
 import { PILLARS } from "@/lib/site"
 import { cn } from "@/lib/utils"
@@ -10,6 +11,7 @@ export function PillarsGrid({
   showItems?: boolean
 }) {
   const dark = variant === "dark"
+  const t = useTranslations("pillars")
   return (
     <div className="grid gap-px overflow-hidden rounded-2xl border md:grid-cols-2 lg:grid-cols-3"
       style={{ borderColor: dark ? "var(--ink-border)" : "var(--border)" }}
@@ -33,7 +35,7 @@ export function PillarsGrid({
               dark ? "text-ink-foreground" : "text-foreground",
             )}
           >
-            {pillar.label}
+            {t(`${pillar.id}.label`)}
           </h3>
           <p
             className={cn(
@@ -41,14 +43,14 @@ export function PillarsGrid({
               dark ? "text-ink-foreground/90" : "text-foreground/80",
             )}
           >
-            &ldquo;{pillar.question}&rdquo;
+            &ldquo;{t(`${pillar.id}.question`)}&rdquo;
           </p>
           <p className={cn("mt-4 text-sm leading-relaxed", dark ? "text-ink-muted" : "text-muted-foreground")}>
-            {pillar.blurb}
+            {t(`${pillar.id}.blurb`)}
           </p>
           {showItems ? (
             <ul className="mt-6 space-y-2">
-              {pillar.items.map((item) => (
+              {(t.raw(`${pillar.id}.items`) as string[]).map((item) => (
                 <li
                   key={item}
                   className={cn(

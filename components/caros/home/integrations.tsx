@@ -1,19 +1,12 @@
 import { ArrowRight } from "lucide-react"
+import { useTranslations } from "next-intl"
 import { Reveal } from "@/components/caros/reveal"
 import { Eyebrow } from "@/components/caros/ui-bits"
 
-const existingTools = [
-  "Website",
-  "Phone",
-  "CRM",
-  "Calendar",
-  "Scheduling",
-  "Advertising",
-  "Customer Communication",
-  "Other compatible systems",
-]
-
 export function Integrations() {
+  const t = useTranslations("HomePage.integrations")
+  const existingTools = t.raw("existingTools") as string[]
+
   return (
     <section className="bg-background py-28 lg:py-40">
       <div className="mx-auto max-w-[1200px] px-6 lg:px-12">

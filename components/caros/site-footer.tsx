@@ -21,34 +21,34 @@ const columns = [
   {
     titleKey: "product",
     links: [
-      { name: "What's Included", href: "/whats-included" },
-      { name: "Pricing", href: "/pricing" },
-      { name: "Industries", href: "/industries" },
-      { name: "How It Works", href: "/how-it-works" },
-      { name: "Compare", href: "/compare" },
+      { key: "included", href: "/whats-included" },
+      { key: "pricing", href: "/pricing" },
+      { key: "industries", href: "/industries" },
+      { key: "howItWorks", href: "/how-it-works" },
+      { key: "compare", href: "/compare" },
     ],
   },
   {
     titleKey: "company",
     links: [
-      { name: "About", href: "/about" },
-      { name: "FAQ", href: "/faq" },
-      { name: "Careers", href: "/about" },
+      { key: "about", href: "/about" },
+      { key: "faq", href: "/faq" },
+      { key: "careers", href: "/about" },
     ],
   },
   {
     titleKey: "resources",
     links: [
-      { name: "Free Business Insights", href: INSIGHTS_URL, external: true },
-      { name: "Marketing ROI", href: "/marketing-roi" },
-      { name: "Free Business Audit", href: AUDIT_URL, external: true },
+      { key: "freeInsights", href: INSIGHTS_URL, external: true },
+      { key: "marketingRoi", href: "/marketing-roi" },
+      { key: "freeAudit", href: AUDIT_URL, external: true },
     ],
   },
   {
     titleKey: "legal",
     links: [
-      { name: "Privacy", href: "/privacy" },
-      { name: "Terms", href: "/terms" },
+      { key: "privacy", href: "/privacy" },
+      { key: "terms", href: "/terms" },
     ],
   },
 ]
@@ -98,12 +98,12 @@ export function SiteFooter() {
                     "group inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
                   const linkInner = (
                     <>
-                      {link.name}
+                      {t(link.key)}
                       <ArrowUpRight className="h-3 w-3 -translate-x-1 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100" />
                     </>
                   )
                   return (
-                    <li key={link.name}>
+                    <li key={link.key}>
                       {"external" in link && link.external ? (
                         <a href={link.href} target="_blank" rel="noopener noreferrer" className={linkClass}>
                           {linkInner}

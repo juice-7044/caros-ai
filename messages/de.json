@@ -53,6 +53,164 @@
         "Business Intelligence",
         "Integrationen"
       ]
+    },
+    "leaks": {
+      "eyebrow": "The Revenue Leaks",
+      "spend": [
+        {
+          "label": "Google Ads",
+          "value": "$3,000"
+        },
+        {
+          "label": "SEO",
+          "value": "$2,000"
+        },
+        {
+          "label": "Facebook",
+          "value": "$1,000"
+        },
+        {
+          "label": "Angi",
+          "value": "$750"
+        },
+        {
+          "label": "Sponsorship",
+          "value": "$750"
+        }
+      ],
+      "questions": [
+        "How many became appointments?",
+        "How many estimates closed?",
+        "How much revenue did each source generate?",
+        "Which customers came back?",
+        "How many leads called and never got an answer?",
+        "How much revenue disappeared because nobody followed up?"
+      ],
+      "headline": "You might be losing money in places you can't see."
+    },
+    "moreLeads": {
+      "eyebrow": "The Real Problem",
+      "gaps": [
+        "Calls go unanswered",
+        "Leads wait too long for a response",
+        "Estimates never get followed up",
+        "Past customers disappear into a database",
+        "Marketing produces jobs nobody can properly attribute",
+        "Customers who could buy again are never contacted"
+      ],
+      "headline": "More Leads Aren't Always the Answer."
+    },
+    "retention": {
+      "columns": [
+        {
+          "title": "You paid for the lead. Don't lose it because you got busy.",
+          "items": [
+            "Estimate follow-up",
+            "Missed-call text back",
+            "Appointment reminders",
+            "Lead nurturing",
+            "Reactivation campaigns"
+          ]
+        },
+        {
+          "title": "Your cheapest customer may be one you've already paid to acquire.",
+          "items": [
+            "Review requests",
+            "Referral campaigns",
+            "Repeat-service reminders",
+            "Dormant customer win-back",
+            "Membership fulfillment"
+          ]
+        }
+      ]
+    },
+    "humanAnswering": {
+      "checklist": [
+        "Live human answering",
+        "Answered under your brand",
+        "Lead info captured into CAROS",
+        "Booking workflows",
+        "SMS follow-up",
+        "After-hours options"
+      ],
+      "closing": "Automation where it makes sense. Humans where they matter.",
+      "headline": "Your customers called a business. Let them talk to a person."
+    },
+    "integrations": {
+      "existingTools": [
+        "Website",
+        "Phone",
+        "CRM",
+        "Calendar",
+        "Scheduling",
+        "Advertising",
+        "Customer Communication",
+        "Other compatible systems"
+      ]
+    },
+    "lifecycle": {
+      "primaryPath": [
+        "Lead",
+        "Estimate",
+        "Job",
+        "Review",
+        "Repeat Service",
+        "Referral"
+      ],
+      "secondaryPath": [
+        "Closed Lost / Abandoned Estimate",
+        "Nurture",
+        "Reactivation"
+      ]
+    },
+    "moneyJourney": {
+      "flow": [
+        {
+          "label": "Lead",
+          "detail": "google_ads / [your-industry]"
+        },
+        {
+          "label": "CAROS Responds",
+          "detail": "human operator + auto-SMS < 60s"
+        },
+        {
+          "label": "Conversation",
+          "detail": "qualified, need + address captured"
+        },
+        {
+          "label": "Appointment",
+          "detail": "booked Tue 9:00a"
+        },
+        {
+          "label": "Estimate Follow-Up",
+          "detail": "3 nudges, e-sign sent"
+        },
+        {
+          "label": "Job Closes",
+          "detail": "$4,200 approved"
+        },
+        {
+          "label": "Customer Nurtured",
+          "detail": "post-job check-in sequence"
+        },
+        {
+          "label": "Review Requested",
+          "detail": "5★ Google review"
+        },
+        {
+          "label": "Customer Reactivated",
+          "detail": "gutter add-on, 4 mo later"
+        },
+        {
+          "label": "Revenue Attributed",
+          "detail": "→ google_ads / [your-industry]"
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "From Audit To Operating System",
+      "headline": "We build it. We connect it. We help run it. You run your business.",
+      "badge": "One meeting. Your core CAROS system live within days, not weeks."
     }
   },
   "pages": {
@@ -149,5 +307,79 @@
     "missedCalls": "Missed Calls / Month",
     "closeRate": "Close Rate",
     "atRisk": "Estimated revenue currently at risk"
+  },
+  "common": {
+    "cta": {
+      "headline": "Let's find out where your revenue is leaking.",
+      "sub": "Find out where you're losing revenue — and what it would take to keep it.",
+      "button": "Generate My Free Business Audit"
+    }
+  },
+  "pillars": {
+    "acquisition": {
+      "label": "Customer Acquisition",
+      "question": "Where are my customers coming from?",
+      "blurb": "Capture leads from the places your customers already find you.",
+      "items": [
+        "Google & Facebook lead capture",
+        "Website forms & web chat",
+        "SMS & missed-call text back",
+        "QR codes on signage & trucks",
+        "Social & referral capture",
+        "Tracking codes on every source"
+      ]
+    },
+    "operations": {
+      "label": "Revenue Operations",
+      "question": "What happens after they find me?",
+      "blurb": "Turn inquiries into appointments, estimates, follow-up, and booked work.",
+      "items": [
+        "CRM & opportunity pipeline",
+        "Human answering under your brand",
+        "Appointment booking workflows",
+        "Estimate follow-up & nudging",
+        "Automated lead nurturing",
+        "Digital signatures & invoicing"
+      ]
+    },
+    "success": {
+      "label": "Customer Success",
+      "question": "What happens after I finish the job?",
+      "blurb": "Stay connected after the job, generate reviews, reactivate customers, and create repeat business.",
+      "items": [
+        "Review requests & responses",
+        "Referral campaigns per job",
+        "Repeat-service reminders",
+        "Dormant customer reactivation",
+        "Membership fulfillment",
+        "Win-back offers"
+      ]
+    },
+    "intelligence": {
+      "label": "Business Intelligence",
+      "question": "Is any of this actually making me money?",
+      "blurb": "See what generates leads, bookings, customers, and revenue.",
+      "items": [
+        "Lead-source attribution",
+        "Booked-revenue reporting",
+        "Marketing ROI by campaign",
+        "Pipeline reporting",
+        "Weekly performance reports",
+        "Monthly business briefing"
+      ]
+    },
+    "platform": {
+      "label": "Platform & Integrations",
+      "question": "How do I keep track of all of this?",
+      "blurb": "Connect the tools you already use into one operating system.",
+      "items": [
+        "Phone, email & SMS",
+        "Calendars & scheduling",
+        "Website & advertising sources",
+        "Payments & card-on-file",
+        "Routing & FSM integrations",
+        "And more, connected for you"
+      ]
+    }
   }
 }
