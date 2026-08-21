@@ -269,12 +269,9 @@
     },
     "revenueFirst": {
       "eyebrow": "Receita em primeiro lugar",
-      "headline": "A CAROS começa pela receita.",
+      "titlePrefix": "A CAROS começa pela",
+      "titleAccent": "receita.",
       "description": "A CAROS não começa pelos leads. Começamos pela receita e conectamos tudo o que a gera.",
-      "lifecycleLabel": "O ciclo de vida da receita",
-      "endToEnd": "Do início ao fim",
-      "revenue": "Receita",
-      "footer": "A CAROS acompanha e melhora todo o ciclo de vida da receita, do primeiro real investido em marketing ao cliente que volta.",
       "mattersWhen": [
         {
           "label": "Leads",
@@ -293,6 +290,10 @@
           "detail": "importa quando os clientes ficam, retornam e indicam."
         }
       ],
+      "lifecycleStatement": "A CAROS conecta todo o ciclo de vida do cliente em torno de",
+      "lifecycleAccent": "receita mensurável.",
+      "lifecycleLabel": "O ciclo de vida da receita",
+      "endToEnd": "Do início ao fim",
       "lifecycle": [
         "Marketing",
         "Leads",
@@ -302,7 +303,9 @@
         "Serviços",
         "Clientes",
         "Negócios recorrentes"
-      ]
+      ],
+      "revenue": "Receita",
+      "supportingText": "A CAROS acompanha e melhora todo o ciclo de vida da receita, do primeiro real investido em marketing ao cliente que volta."
     },
     "pivot": {
       "closing": "Sometimes your marketing isn't broken. What happens after the lead arrives is.",

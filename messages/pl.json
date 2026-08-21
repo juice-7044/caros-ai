@@ -269,12 +269,9 @@
     },
     "revenueFirst": {
       "eyebrow": "Najpierw przychód",
-      "headline": "CAROS zaczyna od przychodu.",
+      "titlePrefix": "CAROS zaczyna od",
+      "titleAccent": "przychodu.",
       "description": "CAROS nie zaczyna od leadów. Zaczynamy od przychodu i łączymy wszystko, co go tworzy.",
-      "lifecycleLabel": "Cykl życia przychodu",
-      "endToEnd": "Od początku do końca",
-      "revenue": "Przychód",
-      "footer": "CAROS śledzi i ulepsza cały cykl życia przychodu – od pierwszej złotówki na marketing po klienta, który wraca.",
       "mattersWhen": [
         {
           "label": "Leady",
@@ -293,6 +290,10 @@
           "detail": "ma znaczenie, gdy klienci zostają, wracają i polecają."
         }
       ],
+      "lifecycleStatement": "CAROS łączy cały cykl życia klienta wokół",
+      "lifecycleAccent": "mierzalnego przychodu.",
+      "lifecycleLabel": "Cykl życia przychodu",
+      "endToEnd": "Od początku do końca",
       "lifecycle": [
         "Marketing",
         "Leady",
@@ -302,7 +303,9 @@
         "Zlecenia",
         "Klienci",
         "Powracający biznes"
-      ]
+      ],
+      "revenue": "Przychód",
+      "supportingText": "CAROS śledzi i ulepsza cały cykl życia przychodu – od pierwszej złotówki na marketing po klienta, który wraca."
     },
     "pivot": {
       "closing": "Sometimes your marketing isn't broken. What happens after the lead arrives is.",

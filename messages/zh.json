@@ -269,12 +269,9 @@
     },
     "revenueFirst": {
       "eyebrow": "收入优先",
-      "headline": "CAROS 从收入开始。",
+      "titlePrefix": "CAROS 从",
+      "titleAccent": "收入开始。",
       "description": "CAROS 不从潜在客户开始，而是从收入开始，再连接创造收入的一切。",
-      "lifecycleLabel": "收入生命周期",
-      "endToEnd": "端到端",
-      "revenue": "收入",
-      "footer": "CAROS 跟踪并改善完整的收入生命周期，从第一笔营销投入到再次回购的客户。",
       "mattersWhen": [
         {
           "label": "潜在客户",
@@ -293,6 +290,10 @@
           "detail": "客户留存、回归并推荐时才真正重要。"
         }
       ],
+      "lifecycleStatement": "CAROS 将整个客户生命周期围绕",
+      "lifecycleAccent": "可衡量的收入进行连接。",
+      "lifecycleLabel": "收入生命周期",
+      "endToEnd": "端到端",
       "lifecycle": [
         "营销",
         "潜在客户",
@@ -302,7 +303,9 @@
         "工作",
         "客户",
         "复购业务"
-      ]
+      ],
+      "revenue": "收入",
+      "supportingText": "CAROS 跟踪并改善完整的收入生命周期，从第一笔营销投入到再次回购的客户。"
     },
     "pivot": {
       "closing": "Sometimes your marketing isn't broken. What happens after the lead arrives is.",

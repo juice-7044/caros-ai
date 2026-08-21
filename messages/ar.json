@@ -269,12 +269,9 @@
     },
     "revenueFirst": {
       "eyebrow": "الإيرادات أولاً",
-      "headline": "تبدأ CAROS بالإيرادات.",
+      "titlePrefix": "تبدأ CAROS بـ",
+      "titleAccent": "الإيرادات.",
       "description": "لا تبدأ CAROS بالعملاء المحتملين. نبدأ بالإيرادات ونربط كل ما يحققها.",
-      "lifecycleLabel": "دورة حياة الإيرادات",
-      "endToEnd": "من البداية إلى النهاية",
-      "revenue": "الإيرادات",
-      "footer": "تتتبع CAROS دورة حياة الإيرادات كاملة وتحسنها، من أول إنفاق تسويقي إلى العميل الذي يعود مجدداً.",
       "mattersWhen": [
         {
           "label": "العملاء المحتملون",
@@ -293,6 +290,10 @@
           "detail": "تظهر أهميتها عندما يبقى العملاء ويعودون ويوصون بك."
         }
       ],
+      "lifecycleStatement": "تربط CAROS دورة حياة العميل بأكملها حول",
+      "lifecycleAccent": "إيرادات قابلة للقياس.",
+      "lifecycleLabel": "دورة حياة الإيرادات",
+      "endToEnd": "من البداية إلى النهاية",
       "lifecycle": [
         "التسويق",
         "العملاء المحتملون",
@@ -302,7 +303,9 @@
         "الوظائف",
         "العملاء",
         "الأعمال المتكررة"
-      ]
+      ],
+      "revenue": "الإيرادات",
+      "supportingText": "تتتبع CAROS دورة حياة الإيرادات كاملة وتحسنها، من أول إنفاق تسويقي إلى العميل الذي يعود مجدداً."
     },
     "pivot": {
       "closing": "Sometimes your marketing isn't broken. What happens after the lead arrives is.",

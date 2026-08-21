@@ -269,12 +269,9 @@
     },
     "revenueFirst": {
       "eyebrow": "Prima i ricavi",
-      "headline": "CAROS parte dai ricavi.",
+      "titlePrefix": "CAROS parte dai",
+      "titleAccent": "ricavi.",
       "description": "CAROS non parte dai lead. Partiamo dai ricavi e colleghiamo tutto ciò che li genera.",
-      "lifecycleLabel": "Il ciclo di vita dei ricavi",
-      "endToEnd": "Dall’inizio alla fine",
-      "revenue": "Ricavi",
-      "footer": "CAROS monitora e migliora l’intero ciclo di vita dei ricavi, dal primo euro investito nel marketing al cliente che torna.",
       "mattersWhen": [
         {
           "label": "Lead",
@@ -293,6 +290,10 @@
           "detail": "conta quando i clienti restano, tornano e consigliano."
         }
       ],
+      "lifecycleStatement": "CAROS collega l’intero ciclo di vita del cliente attorno a",
+      "lifecycleAccent": "ricavi misurabili.",
+      "lifecycleLabel": "Il ciclo di vita dei ricavi",
+      "endToEnd": "Dall’inizio alla fine",
       "lifecycle": [
         "Marketing",
         "Lead",
@@ -302,7 +303,9 @@
         "Lavori",
         "Clienti",
         "Attività ricorrente"
-      ]
+      ],
+      "revenue": "Ricavi",
+      "supportingText": "CAROS monitora e migliora l’intero ciclo di vita dei ricavi, dal primo euro investito nel marketing al cliente che torna."
     },
     "pivot": {
       "closing": "Sometimes your marketing isn't broken. What happens after the lead arrives is.",

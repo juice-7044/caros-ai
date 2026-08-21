@@ -269,12 +269,9 @@
     },
     "revenueFirst": {
       "eyebrow": "収益を最優先",
-      "headline": "CAROSは収益から始まります。",
+      "titlePrefix": "CAROSは",
+      "titleAccent": "収益から始まります。",
       "description": "CAROSはリードから始めません。収益から始め、それを生み出すすべてをつなぎます。",
-      "lifecycleLabel": "収益のライフサイクル",
-      "endToEnd": "最初から最後まで",
-      "revenue": "収益",
-      "footer": "CAROSは、最初のマーケティング費用から再来店する顧客まで、収益の全体を追跡し改善します。",
       "mattersWhen": [
         {
           "label": "リード",
@@ -293,6 +290,10 @@
           "detail": "顧客が継続し、戻り、紹介して初めて価値があります。"
         }
       ],
+      "lifecycleStatement": "CAROSは顧客ライフサイクル全体を測定可能な",
+      "lifecycleAccent": "収益を中心につなぎます。",
+      "lifecycleLabel": "収益のライフサイクル",
+      "endToEnd": "最初から最後まで",
       "lifecycle": [
         "マーケティング",
         "リード",
@@ -302,7 +303,9 @@
         "仕事",
         "顧客",
         "リピートビジネス"
-      ]
+      ],
+      "revenue": "収益",
+      "supportingText": "CAROSは、最初のマーケティング費用から再来店する顧客まで、収益の全体を追跡し改善します。"
     },
     "pivot": {
       "closing": "Sometimes your marketing isn't broken. What happens after the lead arrives is.",

@@ -268,31 +268,32 @@
       "existingTools": "Already have tools you like? Keep them. CAROS can work with compatible tools in your existing ecosystem and strengthen what is already working."
     },
     "revenueFirst": {
-      "eyebrow": "Les revenus d’abord",
-      "headline": "CAROS commence par les revenus.",
-      "description": "CAROS ne commence pas par les prospects. Nous commençons par les revenus et relions tout ce qui les crée.",
-      "lifecycleLabel": "Le cycle de vie des revenus",
-      "endToEnd": "De bout en bout",
-      "revenue": "Revenus",
-      "footer": "CAROS suit et améliore tout le cycle de vie des revenus, du premier euro investi en marketing au client qui revient.",
+      "eyebrow": "Les revenus d'abord",
+      "titlePrefix": "CAROS commence par",
+      "titleAccent": "les revenus.",
+      "description": "CAROS ne commence pas par les prospects. Nous commençons par les revenus, puis nous relions tout ce qui les crée.",
       "mattersWhen": [
         {
-          "label": "Prospects",
-          "detail": "comptent lorsqu’ils deviennent clients."
+          "label": "Les prospects",
+          "detail": "comptent lorsqu'ils deviennent des clients."
         },
         {
-          "label": "Marketing",
-          "detail": "compte lorsqu’il génère des revenus."
+          "label": "Le marketing",
+          "detail": "compte lorsqu'il génère des revenus."
         },
         {
-          "label": "Suivi",
-          "detail": "compte lorsque les opportunités ne passent plus entre les mailles du filet."
+          "label": "Le suivi",
+          "detail": "compte lorsque les opportunités cessent de nous échapper."
         },
         {
-          "label": "Service client",
+          "label": "Le service client",
           "detail": "compte lorsque les clients restent, reviennent et recommandent."
         }
       ],
+      "lifecycleStatement": "CAROS relie tout le parcours client autour de",
+      "lifecycleAccent": "revenus mesurables.",
+      "lifecycleLabel": "Le cycle de vie des revenus",
+      "endToEnd": "De bout en bout",
       "lifecycle": [
         "Marketing",
         "Prospects",
@@ -301,8 +302,10 @@
         "Devis",
         "Interventions",
         "Clients",
-        "Activité récurrente"
-      ]
+        "Clients récurrents"
+      ],
+      "revenue": "Revenus",
+      "supportingText": "CAROS suit et améliore tout le cycle de vie des revenus, du premier euro investi en marketing au client qui revient."
     },
     "pivot": {
       "closing": "Sometimes your marketing isn't broken. What happens after the lead arrives is.",

@@ -5,8 +5,13 @@ import { Eyebrow } from "@/components/caros/ui-bits"
 
 export function RevenueFirst() {
   const t = useTranslations("HomePage.revenueFirst")
-  const mattersWhen = t.raw("mattersWhen") as { label: string; detail: string }[]
-  const lifecycle = t.raw("lifecycle") as string[]
+
+  const mattersWhen = Array.from({ length: 4 }, (_, index) => ({
+    label: t(`mattersWhen.${index}.label`),
+    detail: t(`mattersWhen.${index}.detail`),
+  }))
+
+  const lifecycle = Array.from({ length: 8 }, (_, index) => t(`lifecycle.${index}`))
 
   return (
     <section className="bg-background py-28 lg:py-40">
@@ -14,11 +19,10 @@ export function RevenueFirst() {
         <Reveal className="max-w-3xl">
           <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2 className="mt-6 text-balance text-[clamp(2.25rem,5vw,4rem)] font-display leading-[0.98] tracking-tight">
-            {t("headline")}
+            {t("titlePrefix")} {" "}
+            <span className="font-serif font-normal italic text-gold-gradient">{t("titleAccent")}</span>
           </h2>
-          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            {t("description")}
-          </p>
+          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">{t("description")}</p>
         </Reveal>
 
         <Reveal delay={80} className="mt-12">
@@ -36,20 +40,16 @@ export function RevenueFirst() {
 
         <Reveal delay={120}>
           <p className="mt-10 max-w-3xl text-balance text-2xl font-semibold leading-snug lg:text-3xl">
-            CAROS connects the entire customer lifecycle around{" "}
-            <span className="text-gold">measurable revenue.</span>
+            {t("lifecycleStatement")} <span className="text-gold">{t("lifecycleAccent")}</span>
           </p>
         </Reveal>
 
-        {/* Revenue lifecycle visual */}
         <Reveal
           delay={160}
           className="mt-14 overflow-hidden rounded-2xl border border-ink-border bg-ink text-ink-foreground"
         >
           <div className="flex items-center justify-between border-b border-ink-border px-6 py-4">
-            <span className="font-mono text-xs uppercase tracking-[0.14em] text-ink-muted">
-              {t("lifecycleLabel")}
-            </span>
+            <span className="font-mono text-xs uppercase tracking-[0.14em] text-ink-muted">{t("lifecycleLabel")}</span>
             <span className="flex items-center gap-2 font-mono text-xs text-ink-muted">
               <span className="h-2 w-2 rounded-full bg-gold" />
               {t("endToEnd")}
@@ -70,7 +70,6 @@ export function RevenueFirst() {
               ))}
             </div>
 
-            {/* REVENUE bar */}
             <div className="mt-8 flex items-center justify-center rounded-xl border border-gold/40 bg-gold/15 py-6">
               <span className="font-display text-2xl uppercase tracking-[0.2em] text-gold lg:text-3xl">{t("revenue")}</span>
             </div>
@@ -78,11 +77,11 @@ export function RevenueFirst() {
         </Reveal>
 
         <Reveal delay={200}>
-          <p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-            {t("footer")}
-          </p>
+          <p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground">{t("supportingText")}</p>
         </Reveal>
       </div>
     </section>
   )
 }
+
+

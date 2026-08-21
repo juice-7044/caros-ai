@@ -269,12 +269,9 @@
     },
     "revenueFirst": {
       "eyebrow": "Të ardhurat në radhë të parë",
-      "headline": "CAROS fillon me të ardhurat.",
+      "titlePrefix": "CAROS fillon me",
+      "titleAccent": "të ardhurat.",
       "description": "CAROS nuk fillon me klientët potencialë. Ne fillojmë me të ardhurat dhe lidhim gjithçka që i krijon.",
-      "lifecycleLabel": "Cikli i jetës së të ardhurave",
-      "endToEnd": "Nga fillimi në fund",
-      "revenue": "Të ardhura",
-      "footer": "CAROS ndjek dhe përmirëson të gjithë ciklin e të ardhurave, nga euroja e parë e marketingut te klienti që kthehet përsëri.",
       "mattersWhen": [
         {
           "label": "Klientët potencialë",
@@ -293,6 +290,10 @@
           "detail": "ka rëndësi kur klientët qëndrojnë, kthehen dhe rekomandojnë."
         }
       ],
+      "lifecycleStatement": "CAROS lidh të gjithë ciklin e jetës së klientit rreth",
+      "lifecycleAccent": "të ardhurave të matshme.",
+      "lifecycleLabel": "Cikli i jetës së të ardhurave",
+      "endToEnd": "Nga fillimi në fund",
       "lifecycle": [
         "Marketingu",
         "Klientët potencialë",
@@ -302,7 +303,9 @@
         "Punë",
         "Klientë",
         "Biznes i përsëritur"
-      ]
+      ],
+      "revenue": "Të ardhura",
+      "supportingText": "CAROS ndjek dhe përmirëson të gjithë ciklin e të ardhurave, nga euroja e parë e marketingut te klienti që kthehet përsëri."
     },
     "pivot": {
       "closing": "Sometimes your marketing isn't broken. What happens after the lead arrives is.",

@@ -269,12 +269,9 @@
     },
     "revenueFirst": {
       "eyebrow": "Umsatz zuerst",
-      "headline": "CAROS beginnt mit Umsatz.",
+      "titlePrefix": "CAROS beginnt mit",
+      "titleAccent": "Umsatz.",
       "description": "CAROS beginnt nicht mit Leads. Wir beginnen mit Umsatz und verbinden alles, was ihn erzeugt.",
-      "lifecycleLabel": "Der Umsatzlebenszyklus",
-      "endToEnd": "Von Anfang bis Ende",
-      "revenue": "Umsatz",
-      "footer": "CAROS verfolgt und verbessert den gesamten Umsatzlebenszyklus – vom ersten Marketing-Euro bis zum Kunden, der wiederkommt.",
       "mattersWhen": [
         {
           "label": "Leads",
@@ -293,6 +290,10 @@
           "detail": "wird wichtig, wenn Kunden bleiben, zurückkehren und weiterempfehlen."
         }
       ],
+      "lifecycleStatement": "CAROS verbindet den gesamten Kundenlebenszyklus rund um",
+      "lifecycleAccent": "messbaren Umsatz.",
+      "lifecycleLabel": "Der Umsatzlebenszyklus",
+      "endToEnd": "Von Anfang bis Ende",
       "lifecycle": [
         "Marketing",
         "Leads",
@@ -302,7 +303,9 @@
         "Aufträge",
         "Kunden",
         "Wiederkehrendes Geschäft"
-      ]
+      ],
+      "revenue": "Umsatz",
+      "supportingText": "CAROS verfolgt und verbessert den gesamten Umsatzlebenszyklus – vom ersten Marketing-Euro bis zum Kunden, der wiederkommt."
     },
     "pivot": {
       "closing": "Sometimes your marketing isn't broken. What happens after the lead arrives is.",
