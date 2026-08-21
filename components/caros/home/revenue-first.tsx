@@ -12,13 +12,12 @@ export function RevenueFirst() {
     <section className="bg-background py-28 lg:py-40">
       <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
         <Reveal className="max-w-3xl">
-          <Eyebrow>Revenue First</Eyebrow>
+          <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2 className="mt-6 text-balance text-[clamp(2.25rem,5vw,4rem)] font-display leading-[0.98] tracking-tight">
-            CAROS Starts With{" "}
-            <span className="font-serif font-normal italic text-gold-gradient">Revenue.</span>
+            {t("headline")}
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            CAROS doesn&apos;t start with leads. We start with revenue, then connect everything that creates it.
+            {t("description")}
           </p>
         </Reveal>
 
@@ -49,11 +48,11 @@ export function RevenueFirst() {
         >
           <div className="flex items-center justify-between border-b border-ink-border px-6 py-4">
             <span className="font-mono text-xs uppercase tracking-[0.14em] text-ink-muted">
-              The Revenue Lifecycle
+              {t("lifecycleLabel")}
             </span>
             <span className="flex items-center gap-2 font-mono text-xs text-ink-muted">
               <span className="h-2 w-2 rounded-full bg-gold" />
-              End to end
+              {t("endToEnd")}
             </span>
           </div>
 
@@ -73,15 +72,14 @@ export function RevenueFirst() {
 
             {/* REVENUE bar */}
             <div className="mt-8 flex items-center justify-center rounded-xl border border-gold/40 bg-gold/15 py-6">
-              <span className="font-display text-2xl uppercase tracking-[0.2em] text-gold lg:text-3xl">Revenue</span>
+              <span className="font-display text-2xl uppercase tracking-[0.2em] text-gold lg:text-3xl">{t("revenue")}</span>
             </div>
           </div>
         </Reveal>
 
         <Reveal delay={200}>
           <p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-            CAROS tracks and improves the entire revenue lifecycle, from the first marketing dollar to the customer who
-            comes back again.
+            {t("footer")}
           </p>
         </Reveal>
       </div>

@@ -44,6 +44,41 @@
   },
   "HomePage": {
     "hero": {
+      "insightsCta": "Free Business Insights",
+      "auditCta": "Generate My Free Business Audit",
+      "auditNote": "See where revenue exists, leaks, and could be captured.",
+      "notReady": "Not ready to book?",
+      "freeAuditCta": "Take 2-Minutes to Generate a Free Business Audit",
+      "exampleNote": "Illustrative CAROS dashboard · Example data for demonstration purposes",
+      "categories": [
+        "Customer Acquisition",
+        "Revenue Operations",
+        "Customer Success",
+        "Business Intelligence",
+        "Integrations"
+      ],
+      "stats": [
+        {
+          "value": "47",
+          "label": "leads captured",
+          "tag": "PER MONTH"
+        },
+        {
+          "value": "22",
+          "label": "jobs booked",
+          "tag": "PER MONTH"
+        },
+        {
+          "value": "5.3x",
+          "label": "marketing ROI",
+          "tag": "TRACKED"
+        },
+        {
+          "value": "$38k",
+          "label": "revenue attributed",
+          "tag": "PER MONTH"
+        }
+      ],
       "eyebrow": "Sistema de aquisição de clientes e receitas",
       "title": "Receita em primeiro lugar.",
       "titleAccent": "Tudo o resto serve esse objetivo.",
@@ -157,6 +192,16 @@
       ]
     },
     "lifecycle": {
+      "eyebrow": "The Full Revenue Lifecycle",
+      "headline": "Turn your marketing spend into customers. Turn your customer database into an asset.",
+      "subheadline": "Every lead stays in play. Every customer stays connected.",
+      "description": "CAROS keeps closed-lost opportunities, old estimates, past customers and dormant accounts working inside your revenue system. Automated follow-up, reactivation, service reminders, memberships, reviews and referral campaigns create new opportunities from relationships you've already paid to acquire.",
+      "dashboardLabel": "Illustrative CAROS Dashboard · Customer Lifecycle",
+      "exampleFlow": "Example flow",
+      "primaryLabel": "Primary path",
+      "recoveryLabel": "Recovery path",
+      "closing": "Your database shouldn't become a digital graveyard.",
+      "exampleNote": "Example data shown for demonstration purposes.",
       "primaryPath": [
         "Lead",
         "Estimate",
@@ -218,10 +263,18 @@
     "process": {
       "eyebrow": "From Audit To Operating System",
       "headline": "We build it. We connect it. We help run it. You run your business.",
-      "badge": "One meeting. Your core CAROS system live within days, not weeks."
+      "badge": "One meeting. Your core CAROS system live within days, not weeks.",
+      "setup": "We handle the setup, configuration and core workflows. More complex integrations, migrations and number porting may require additional time.",
+      "existingTools": "Already have tools you like? Keep them. CAROS can work with compatible tools in your existing ecosystem and strengthen what is already working."
     },
     "revenueFirst": {
       "eyebrow": "Revenue First",
+      "headline": "CAROS Starts With Revenue.",
+      "description": "CAROS doesn't start with leads. We start with revenue, then connect everything that creates it.",
+      "lifecycleLabel": "The Revenue Lifecycle",
+      "endToEnd": "End to end",
+      "revenue": "Revenue",
+      "footer": "CAROS tracks and improves the entire revenue lifecycle, from the first marketing dollar to the customer who comes back again.",
       "mattersWhen": [
         {
           "label": "Leads",
@@ -252,6 +305,7 @@
       ]
     },
     "pivot": {
+      "closing": "Sometimes your marketing isn't broken. What happens after the lead arrives is.",
       "cards": [
         {
           "flow": [
@@ -287,6 +341,9 @@
       "cta": "Find Your Leaks"
     },
     "attribution": {
+      "headline": "Stop asking, “How many leads did I get?” Start asking, “What did those leads make me?”",
+      "question": "Where would you put your next $1,000?",
+      "description": "Marketing metrics tell you what happened before the lead. Revenue intelligence tells you what happened after it.",
       "eyebrow": "Stop Guessing. Start Deciding."
     },
     "enterCaros": {

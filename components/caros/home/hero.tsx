@@ -7,15 +7,10 @@ import Link from "next/link"
 import { AUDIT_HREF, AUDIT_LABEL, INSIGHTS_URL, INSIGHTS_LABEL, PRODUCT_TAGLINE } from "@/lib/site"
 import { AnimatedGlobe } from "@/components/caros/animated-globe"
 
-const stats = [
-  { value: "47", label: "leads captured", tag: "PER MONTH" },
-  { value: "22", label: "jobs booked", tag: "PER MONTH" },
-  { value: "5.3x", label: "marketing ROI", tag: "TRACKED" },
-  { value: "$38k", label: "revenue attributed", tag: "PER MONTH" },
-]
-
 export function Hero() {
   const t = useTranslations("HomePage.hero")
+  const stats = t.raw("stats") as { value: string; label: string; tag: string }[]
+  const categories = t.raw("categories") as string[]
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -110,29 +105,29 @@ export function Hero() {
                 rel="noopener noreferrer"
                 className="group inline-flex h-14 items-center gap-2 rounded-full bg-gold px-8 text-base font-semibold text-gold-foreground transition-all duration-300 hover:bg-gold/90"
               >
-                {INSIGHTS_LABEL}
+                {t("insightsCta")}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
               <Link
                 href={AUDIT_HREF}
                 className="group inline-flex h-14 items-center gap-2 rounded-full border border-foreground/20 px-8 text-base font-medium text-foreground transition-all duration-300 hover:bg-foreground/5"
               >
-                {AUDIT_LABEL}
+                {t("auditCta")}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
             <p className="text-sm text-muted-foreground lg:text-right">
-              See where revenue exists, leaks, and could be captured.
+              {t("auditNote")}
             </p>
             <p className="text-sm text-muted-foreground lg:text-right">
-              Not ready to book?{" "}
+              {t("notReady")} 
               <a
                 href="https://free-revenue-audit.getcarosai.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-1 font-semibold text-gold underline-offset-4 hover:underline"
               >
-                Take 2-Minutes to Generate a Free Business Audit
+                {t("freeAuditCta")}
                 <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
               </a>
             </p>
@@ -147,13 +142,7 @@ export function Hero() {
         }`}
       >
         <div className="mx-auto flex w-full max-w-[1400px] flex-wrap items-center gap-x-3 gap-y-2 px-6 py-5 font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground lg:px-12">
-          {[
-            "Customer Acquisition",
-            "Revenue Operations",
-            "Customer Success",
-            "Business Intelligence",
-            "Integrations",
-          ].map((item, i, arr) => (
+          {categories.map((item, i, arr) => (
             <span key={item} className="flex items-center gap-x-3">
               {item}
               {i < arr.length - 1 ? <span className="text-gold/60">·</span> : null}
@@ -170,7 +159,7 @@ export function Hero() {
       >
         <div className="px-6 pt-4 lg:px-16">
           <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground/70">
-            Illustrative CAROS dashboard · Example data for demonstration purposes
+            {t("exampleNote")}
           </span>
         </div>
         <div className="flex gap-16 overflow-hidden whitespace-nowrap py-6">

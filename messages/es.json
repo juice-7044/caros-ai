@@ -44,6 +44,41 @@
   },
   "HomePage": {
     "hero": {
+      "insightsCta": "Información empresarial gratuita",
+      "auditCta": "Generar mi auditoría empresarial gratuita",
+      "auditNote": "Descubre dónde existen, se fugan y podrían capturarse tus ingresos.",
+      "notReady": "¿Aún no quieres reservar?",
+      "freeAuditCta": "Tarda 2 minutos en generar una auditoría empresarial gratuita",
+      "exampleNote": "Panel ilustrativo de CAROS · Datos de ejemplo con fines demostrativos",
+      "categories": [
+        "Adquisición de clientes",
+        "Operaciones de ingresos",
+        "Éxito del cliente",
+        "Inteligencia empresarial",
+        "Integraciones"
+      ],
+      "stats": [
+        {
+          "value": "47",
+          "label": "clientes potenciales captados",
+          "tag": "AL MES"
+        },
+        {
+          "value": "22",
+          "label": "trabajos reservados",
+          "tag": "AL MES"
+        },
+        {
+          "value": "5,3x",
+          "label": "ROI de marketing",
+          "tag": "SEGUIMIENTO"
+        },
+        {
+          "value": "38.000 €",
+          "label": "ingresos atribuidos",
+          "tag": "AL MES"
+        }
+      ],
       "eyebrow": "Sistema operativo de adquisición de clientes e ingresos",
       "title": "Los ingresos primero.",
       "titleAccent": "Todo lo demás está al servicio de ellos.",
@@ -157,18 +192,28 @@
       ]
     },
     "lifecycle": {
+      "eyebrow": "El ciclo completo de ingresos",
+      "headline": "Convierte tu inversión en marketing en clientes. Convierte tu base de clientes en un activo.",
+      "subheadline": "Cada cliente potencial sigue activo. Cada cliente permanece conectado.",
+      "description": "CAROS mantiene activas las oportunidades perdidas, los presupuestos antiguos, los clientes anteriores y las cuentas inactivas dentro de tu sistema de ingresos. El seguimiento automatizado, la reactivación, los recordatorios de servicio, las membresías, las reseñas y las campañas de recomendación crean nuevas oportunidades a partir de relaciones que ya has pagado por adquirir.",
+      "dashboardLabel": "Panel ilustrativo de CAROS · Ciclo de vida del cliente",
+      "exampleFlow": "Flujo de ejemplo",
+      "primaryLabel": "Ruta principal",
+      "recoveryLabel": "Ruta de recuperación",
+      "closing": "Tu base de datos no debería convertirse en un cementerio digital.",
+      "exampleNote": "Datos de ejemplo mostrados con fines demostrativos.",
       "primaryPath": [
-        "Lead",
-        "Estimate",
-        "Job",
-        "Review",
-        "Repeat Service",
-        "Referral"
+        "Cliente potencial",
+        "Presupuesto",
+        "Trabajo",
+        "Reseña",
+        "Servicio recurrente",
+        "Recomendación"
       ],
       "secondaryPath": [
-        "Closed Lost / Abandoned Estimate",
-        "Nurture",
-        "Reactivation"
+        "Presupuesto perdido / abandonado",
+        "Nutrición",
+        "Reactivación"
       ]
     },
     "moneyJourney": {
@@ -216,12 +261,20 @@
       ]
     },
     "process": {
-      "eyebrow": "From Audit To Operating System",
-      "headline": "We build it. We connect it. We help run it. You run your business.",
-      "badge": "One meeting. Your core CAROS system live within days, not weeks."
+      "eyebrow": "De la auditoría al sistema operativo",
+      "headline": "Lo construimos. Lo conectamos. Te ayudamos a ejecutarlo. Tú diriges tu negocio.",
+      "badge": "Una reunión. Tu sistema CAROS principal activo en días, no semanas.",
+      "setup": "Nos encargamos de la configuración y los flujos de trabajo principales. Las integraciones, migraciones y portabilidades más complejas pueden requerir tiempo adicional.",
+      "existingTools": "¿Ya tienes herramientas que te gustan? Conserválas. CAROS puede trabajar con herramientas compatibles de tu ecosistema actual y reforzar lo que ya funciona."
     },
     "revenueFirst": {
       "eyebrow": "Ingresos primero",
+      "headline": "CAROS empieza con los ingresos.",
+      "description": "CAROS no empieza con clientes potenciales. Empieza con ingresos y conecta todo lo que los genera.",
+      "lifecycleLabel": "El ciclo de vida de los ingresos",
+      "endToEnd": "De principio a fin",
+      "revenue": "Ingresos",
+      "footer": "CAROS sigue y mejora todo el ciclo de ingresos, desde el primer euro de marketing hasta el cliente que vuelve.",
       "mattersWhen": [
         {
           "label": "Clientes potenciales",
@@ -252,6 +305,7 @@
       ]
     },
     "pivot": {
+      "closing": "A veces tu marketing no está roto. Lo que ocurre después de que llega el cliente potencial sí lo está.",
       "cards": [
         {
           "flow": [
@@ -287,6 +341,9 @@
       "cta": "Encuentra tus fugas"
     },
     "attribution": {
+      "headline": "Deja de preguntar: «¿Cuántos clientes potenciales recibí?» Empieza a preguntar: «¿Qué ingresos generaron?»",
+      "question": "¿Dónde invertirías tus próximos 1.000 €?",
+      "description": "Las métricas de marketing muestran lo que ocurrió antes del cliente potencial. La inteligencia de ingresos muestra lo que ocurrió después.",
       "eyebrow": "Deja de adivinar. Empieza a decidir."
     },
     "enterCaros": {

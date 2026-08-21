@@ -48,8 +48,7 @@ export function Pivot() {
 
         <Reveal delay={100}>
           <p className="mt-16 max-w-3xl text-balance text-2xl font-bold leading-tight tracking-tight lg:text-3xl">
-            Sometimes your marketing isn&apos;t broken. What happens{" "}
-            <span className="text-gold">after the lead arrives</span> is.
+            {t("closing")}
           </p>
           <Link
             href={DIAGNOSTIC_HREF}
