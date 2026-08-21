@@ -53,6 +53,25 @@
         "Business Intelligence",
         "Integrations"
       ]
+    },
+    "revenueFirst": {
+      "eyebrow": "Revenue First",
+      "titlePrefix": "CAROS Starts With",
+      "titleAccent": "Revenue.",
+      "description": "CAROS does not start with leads. We start with revenue, then connect everything that creates it.",
+      "mattersWhen": [
+        { "label": "Leads", "detail": "matter when they become customers." },
+        { "label": "Marketing", "detail": "matters when it produces revenue." },
+        { "label": "Follow-up", "detail": "matters when opportunities stop slipping away." },
+        { "label": "Customer service", "detail": "matters when customers stay, return, and refer." }
+      ],
+      "lifecycleStatement": "CAROS connects the entire customer lifecycle around",
+      "lifecycleAccent": "measurable revenue.",
+      "lifecycleLabel": "The Revenue Lifecycle",
+      "endToEnd": "End to end",
+      "lifecycle": ["Marketing", "Leads", "Calls", "Bookings", "Estimates", "Jobs", "Customers", "Repeat Business"],
+      "revenue": "Revenue",
+      "supportingText": "CAROS tracks and improves the entire revenue lifecycle, from the first marketing dollar to the customer who comes back again."
     }
   },
   "pages": {
