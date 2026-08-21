@@ -53,6 +53,25 @@
         "Inteligencia empresarial",
         "Integraciones"
       ]
+    },
+    "revenueFirst": {
+      "eyebrow": "Los ingresos primero",
+      "titlePrefix": "CAROS comienza con",
+      "titleAccent": "los ingresos.",
+      "description": "CAROS no comienza con clientes potenciales. Comenzamos con los ingresos y conectamos todo lo que los genera.",
+      "mattersWhen": [
+        { "label": "Los clientes potenciales", "detail": "importan cuando se convierten en clientes." },
+        { "label": "El marketing", "detail": "importa cuando genera ingresos." },
+        { "label": "El seguimiento", "detail": "importa cuando evita que las oportunidades se pierdan." },
+        { "label": "El servicio al cliente", "detail": "importa cuando los clientes se quedan, regresan y recomiendan." }
+      ],
+      "lifecycleStatement": "CAROS conecta todo el ciclo de vida del cliente en torno a",
+      "lifecycleAccent": "ingresos medibles.",
+      "lifecycleLabel": "El ciclo de vida de los ingresos",
+      "endToEnd": "De principio a fin",
+      "lifecycle": ["Marketing", "Clientes potenciales", "Llamadas", "Reservas", "Presupuestos", "Trabajos", "Clientes", "Clientes recurrentes"],
+      "revenue": "Ingresos",
+      "supportingText": "CAROS sigue y mejora todo el ciclo de vida de los ingresos, desde el primer dólar de marketing hasta el cliente que vuelve."
     }
   },
   "pages": {

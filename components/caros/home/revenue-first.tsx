@@ -1,38 +1,28 @@
 import { ArrowRight } from "lucide-react"
+import { useTranslations } from "next-intl"
 import { Reveal } from "@/components/caros/reveal"
 import { Eyebrow } from "@/components/caros/ui-bits"
 
-const mattersWhen = [
-  { label: "Leads", detail: "matter when they become customers." },
-  { label: "Marketing", detail: "matters when it produces revenue." },
-  { label: "Follow-up", detail: "matters when opportunities stop slipping away." },
-  { label: "Customer service", detail: "matters when customers stay, return, and refer." },
-]
-
-const lifecycle = [
-  "Marketing",
-  "Leads",
-  "Calls",
-  "Bookings",
-  "Estimates",
-  "Jobs",
-  "Customers",
-  "Repeat Business",
-]
-
 export function RevenueFirst() {
+  const t = useTranslations("HomePage.revenueFirst")
+
+  const mattersWhen = Array.from({ length: 4 }, (_, index) => ({
+    label: t(`mattersWhen.${index}.label`),
+    detail: t(`mattersWhen.${index}.detail`),
+  }))
+
+  const lifecycle = Array.from({ length: 8 }, (_, index) => t(`lifecycle.${index}`))
+
   return (
     <section className="bg-background py-28 lg:py-40">
       <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
         <Reveal className="max-w-3xl">
-          <Eyebrow>Revenue First</Eyebrow>
+          <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2 className="mt-6 text-balance text-[clamp(2.25rem,5vw,4rem)] font-display leading-[0.98] tracking-tight">
-            CAROS Starts With{" "}
-            <span className="font-serif font-normal italic text-gold-gradient">Revenue.</span>
+            {t("titlePrefix")} {" "}
+            <span className="font-serif font-normal italic text-gold-gradient">{t("titleAccent")}</span>
           </h2>
-          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            CAROS doesn&apos;t start with leads. We start with revenue, then connect everything that creates it.
-          </p>
+          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">{t("description")}</p>
         </Reveal>
 
         <Reveal delay={80} className="mt-12">
@@ -50,23 +40,19 @@ export function RevenueFirst() {
 
         <Reveal delay={120}>
           <p className="mt-10 max-w-3xl text-balance text-2xl font-semibold leading-snug lg:text-3xl">
-            CAROS connects the entire customer lifecycle around{" "}
-            <span className="text-gold">measurable revenue.</span>
+            {t("lifecycleStatement")} <span className="text-gold">{t("lifecycleAccent")}</span>
           </p>
         </Reveal>
 
-        {/* Revenue lifecycle visual */}
         <Reveal
           delay={160}
           className="mt-14 overflow-hidden rounded-2xl border border-ink-border bg-ink text-ink-foreground"
         >
           <div className="flex items-center justify-between border-b border-ink-border px-6 py-4">
-            <span className="font-mono text-xs uppercase tracking-[0.14em] text-ink-muted">
-              The Revenue Lifecycle
-            </span>
+            <span className="font-mono text-xs uppercase tracking-[0.14em] text-ink-muted">{t("lifecycleLabel")}</span>
             <span className="flex items-center gap-2 font-mono text-xs text-ink-muted">
               <span className="h-2 w-2 rounded-full bg-gold" />
-              End to end
+              {t("endToEnd")}
             </span>
           </div>
 
@@ -84,20 +70,18 @@ export function RevenueFirst() {
               ))}
             </div>
 
-            {/* REVENUE bar */}
             <div className="mt-8 flex items-center justify-center rounded-xl border border-gold/40 bg-gold/15 py-6">
-              <span className="font-display text-2xl uppercase tracking-[0.2em] text-gold lg:text-3xl">Revenue</span>
+              <span className="font-display text-2xl uppercase tracking-[0.2em] text-gold lg:text-3xl">{t("revenue")}</span>
             </div>
           </div>
         </Reveal>
 
         <Reveal delay={200}>
-          <p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-            CAROS tracks and improves the entire revenue lifecycle, from the first marketing dollar to the customer who
-            comes back again.
-          </p>
+          <p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground">{t("supportingText")}</p>
         </Reveal>
       </div>
     </section>
   )
 }
+
+
