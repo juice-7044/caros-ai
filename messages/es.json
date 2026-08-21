@@ -35,7 +35,9 @@
     "tagline": "Convierte más clientes potenciales en ingresos reservados. Creado para empresas de servicios locales.",
     "headquarters": "Sede central",
     "rights": "Todos los derechos reservados.",
-    "contact": "Contact"
+    "contact": "Contact",
+    "industries": "Industrias",
+    "freeAudit": "Auditoría empresarial gratuita"
   },
   "language": {
     "label": "Idioma"
@@ -137,6 +139,12 @@
       "headline": "Tus clientes llamaron a un negocio. Permíteles hablar con una persona."
     },
     "integrations": {
+      "eyebrow": "Integraciones",
+      "headline": "No necesitas otra herramienta desconectada.",
+      "existingToolsLabel": "Tus herramientas actuales",
+      "revenueSystem": "Sistema operativo de ingresos",
+      "oneView": "Una vista de ingresos",
+      "compatible": "Funciona con herramientas compatibles de tu ecosistema actual.",
       "existingTools": [
         "Website",
         "Phone",
@@ -211,6 +219,90 @@
       "eyebrow": "From Audit To Operating System",
       "headline": "We build it. We connect it. We help run it. You run your business.",
       "badge": "One meeting. Your core CAROS system live within days, not weeks."
+    },
+    "revenueFirst": {
+      "eyebrow": "Ingresos primero",
+      "mattersWhen": [
+        {
+          "label": "Clientes potenciales",
+          "detail": "importan cuando se convierten en clientes."
+        },
+        {
+          "label": "Marketing",
+          "detail": "importa cuando genera ingresos."
+        },
+        {
+          "label": "Seguimiento",
+          "detail": "importa cuando las oportunidades dejan de escaparse."
+        },
+        {
+          "label": "Atención al cliente",
+          "detail": "importa cuando los clientes permanecen, regresan y recomiendan."
+        }
+      ],
+      "lifecycle": [
+        "Marketing",
+        "Clientes potenciales",
+        "Llamadas",
+        "Reservas",
+        "Presupuestos",
+        "Trabajos",
+        "Clientes",
+        "Negocio recurrente"
+      ]
+    },
+    "pivot": {
+      "cards": [
+        {
+          "flow": [
+            "Anuncio de Google",
+            "cliente de $42",
+            "llamada telefónica",
+            "llamada perdida"
+          ],
+          "note": "Pagaste por eso."
+        },
+        {
+          "flow": [
+            "Facebook",
+            "cliente potencial",
+            "respuesta 3 horas después",
+            "contrató a un competidor"
+          ],
+          "note": "También pagaste por eso."
+        },
+        {
+          "flow": [
+            "SEO",
+            "cliente potencial",
+            "presupuesto enviado",
+            "sin seguimiento",
+            "perdido"
+          ],
+          "note": "Aun así pagaste."
+        }
+      ],
+      "eyebrow": "El verdadero problema",
+      "headline": "Conseguir el cliente potencial es solo la mitad del problema.",
+      "cta": "Encuentra tus fugas"
+    },
+    "attribution": {
+      "eyebrow": "Deja de adivinar. Empieza a decidir."
+    },
+    "enterCaros": {
+      "eyebrow": "El sistema operativo",
+      "headline": "Un sistema operativo de ingresos. Las cinco partes de tu negocio trabajando juntas.",
+      "description": "Desde el primer euro de marketing hasta la próxima compra, CAROS conecta todo el recorrido de ingresos."
+    },
+    "roi": {
+      "eyebrow": "Haz las cuentas"
+    },
+    "industries": {
+      "eyebrow": "Para quién es",
+      "headline": "Creado para empresas de servicios locales."
+    },
+    "pricingPreview": {
+      "eyebrow": "Un precio. Un sistema."
     }
   },
   "pages": {

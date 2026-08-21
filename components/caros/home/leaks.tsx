@@ -13,8 +13,7 @@ export function Leaks() {
         <Reveal>
           <Eyebrow tone="danger">{t("eyebrow")}</Eyebrow>
           <h2 className="mt-6 max-w-3xl text-balance text-[clamp(2.25rem,5vw,4rem)] font-extrabold leading-[0.98] tracking-tight">
-            {t("headline")} {" "}
-            <span className="font-serif font-normal italic text-danger">you can&apos;t see.</span>
+            {t("headline")}
           </h2>
         </Reveal>
 

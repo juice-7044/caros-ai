@@ -1,26 +1,13 @@
 import { ArrowRight } from "lucide-react"
+import { useTranslations } from "next-intl"
 import { Reveal } from "@/components/caros/reveal"
 import { Eyebrow } from "@/components/caros/ui-bits"
 
-const mattersWhen = [
-  { label: "Leads", detail: "matter when they become customers." },
-  { label: "Marketing", detail: "matters when it produces revenue." },
-  { label: "Follow-up", detail: "matters when opportunities stop slipping away." },
-  { label: "Customer service", detail: "matters when customers stay, return, and refer." },
-]
-
-const lifecycle = [
-  "Marketing",
-  "Leads",
-  "Calls",
-  "Bookings",
-  "Estimates",
-  "Jobs",
-  "Customers",
-  "Repeat Business",
-]
-
 export function RevenueFirst() {
+  const t = useTranslations("HomePage.revenueFirst")
+  const mattersWhen = t.raw("mattersWhen") as { label: string; detail: string }[]
+  const lifecycle = t.raw("lifecycle") as string[]
+
   return (
     <section className="bg-background py-28 lg:py-40">
       <div className="mx-auto max-w-[1200px] px-6 lg:px-12">

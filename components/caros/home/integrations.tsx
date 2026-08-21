@@ -11,10 +11,9 @@ export function Integrations() {
     <section className="bg-background py-28 lg:py-40">
       <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
         <Reveal className="max-w-3xl">
-          <Eyebrow>Integrations</Eyebrow>
+          <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2 className="mt-6 text-balance text-[clamp(2.25rem,5vw,4rem)] font-display leading-[0.98] tracking-tight">
-            You Don&apos;t Need Another{" "}
-            <span className="font-serif font-normal italic text-gold-gradient">Disconnected Tool.</span>
+            {t("headline")}
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
             Your business may already run on software you know and like. CAROS is designed to connect with and enhance
@@ -32,7 +31,7 @@ export function Integrations() {
             {/* Existing tools */}
             <div className="rounded-2xl border border-border bg-card p-6 lg:p-8">
               <p className="mb-4 font-mono text-xs uppercase tracking-[0.14em] text-muted-foreground">
-                Your Existing Tools
+                {t("existingToolsLabel")}
               </p>
               <ul className="flex flex-wrap gap-2">
                 {existingTools.map((tool) => (
@@ -52,7 +51,7 @@ export function Integrations() {
             <div className="flex flex-col items-center justify-center rounded-2xl border border-gold/40 bg-gold/10 p-8 text-center">
               <span className="font-display text-2xl tracking-tight text-foreground lg:text-3xl">CAROS</span>
               <span className="mt-2 font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground">
-                Revenue Operating System
+                {t("revenueSystem")}
               </span>
             </div>
 
@@ -60,7 +59,7 @@ export function Integrations() {
 
             {/* One revenue view */}
             <div className="flex flex-col items-center justify-center rounded-2xl border border-ink-border bg-ink p-8 text-center text-ink-foreground">
-              <span className="font-display text-2xl tracking-tight lg:text-3xl">One Revenue View</span>
+              <span className="font-display text-2xl tracking-tight lg:text-3xl">{t("oneView")}</span>
               <span className="mt-2 font-mono text-[11px] uppercase tracking-[0.14em] text-ink-muted">
                 Everything in one place
               </span>
@@ -70,7 +69,7 @@ export function Integrations() {
 
         <Reveal delay={160}>
           <p className="mt-10 font-mono text-xs uppercase tracking-[0.14em] text-muted-foreground/70">
-            Works with compatible tools in your existing stack.
+            {t("compatible") }
           </p>
         </Reveal>
       </div>

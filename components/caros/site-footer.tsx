@@ -69,7 +69,7 @@ export function SiteFooter() {
               href={AUDIT_HREF}
               className="mt-8 inline-flex h-11 items-center rounded-full border border-gold px-5 text-sm font-semibold text-gold transition-all duration-300 hover:bg-gold hover:text-gold-foreground"
             >
-              {AUDIT_LABEL}
+              {t("freeAudit")}
             </Link>
 
             <address className="mt-8 space-y-3 not-italic">

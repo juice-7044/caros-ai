@@ -35,7 +35,9 @@
     "tagline": "Revenue infrastructure for the next stage of growth.",
     "headquarters": "Headquarters",
     "rights": "All rights reserved.",
-    "contact": "Contact"
+    "contact": "Contact",
+    "industries": "Industries",
+    "freeAudit": "Free Business Audit"
   },
   "language": {
     "label": "Language"
@@ -137,6 +139,12 @@
       "headline": "Your customers called a business. Let them talk to a person."
     },
     "integrations": {
+      "eyebrow": "Integrations",
+      "headline": "You Don't Need Another Disconnected Tool.",
+      "existingToolsLabel": "Your Existing Tools",
+      "revenueSystem": "Revenue Operating System",
+      "oneView": "One Revenue View",
+      "compatible": "Works with compatible tools in your existing stack.",
       "existingTools": [
         "Website",
         "Phone",
@@ -211,6 +219,90 @@
       "eyebrow": "From Audit To Operating System",
       "headline": "We build it. We connect it. We help run it. You run your business.",
       "badge": "One meeting. Your core CAROS system live within days, not weeks."
+    },
+    "revenueFirst": {
+      "eyebrow": "Revenue First",
+      "mattersWhen": [
+        {
+          "label": "Leads",
+          "detail": "matter when they become customers."
+        },
+        {
+          "label": "Marketing",
+          "detail": "matters when it produces revenue."
+        },
+        {
+          "label": "Follow-up",
+          "detail": "matters when opportunities stop slipping away."
+        },
+        {
+          "label": "Customer service",
+          "detail": "matters when customers stay, return, and refer."
+        }
+      ],
+      "lifecycle": [
+        "Marketing",
+        "Leads",
+        "Calls",
+        "Bookings",
+        "Estimates",
+        "Jobs",
+        "Customers",
+        "Repeat Business"
+      ]
+    },
+    "pivot": {
+      "cards": [
+        {
+          "flow": [
+            "Google Ad",
+            "$42 lead",
+            "Phone call",
+            "Missed call"
+          ],
+          "note": "You paid for that."
+        },
+        {
+          "flow": [
+            "Facebook",
+            "Lead",
+            "Responded 3 hours later",
+            "Hired a competitor"
+          ],
+          "note": "You paid for that too."
+        },
+        {
+          "flow": [
+            "SEO",
+            "Lead",
+            "Estimate sent",
+            "No follow-up",
+            "Lost"
+          ],
+          "note": "Still paid for it."
+        }
+      ],
+      "eyebrow": "The Real Problem",
+      "headline": "Getting the lead is only half the problem.",
+      "cta": "Find Your Leaks"
+    },
+    "attribution": {
+      "eyebrow": "Stop Guessing. Start Deciding."
+    },
+    "enterCaros": {
+      "eyebrow": "The Operating System",
+      "headline": "One Revenue Operating System. Five parts of your business working together.",
+      "description": "From the first marketing dollar to the next customer purchase, CAROS connects the entire revenue journey."
+    },
+    "roi": {
+      "eyebrow": "Do The Math"
+    },
+    "industries": {
+      "eyebrow": "Who It's For",
+      "headline": "Built for local service businesses."
+    },
+    "pricingPreview": {
+      "eyebrow": "One Price. One System."
     }
   },
   "pages": {
