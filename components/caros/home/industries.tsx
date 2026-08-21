@@ -1,9 +1,10 @@
+import { useTranslations } from "next-intl"
 import { Reveal } from "@/components/caros/reveal"
 import { Eyebrow } from "@/components/caros/ui-bits"
 import { INDUSTRIES } from "@/lib/site"
 
 export function Industries() {
-  // Duplicate the list so the marquee loops seamlessly.
+  const t = useTranslations("HomePage.industries")
   const rowA = [...INDUSTRIES, ...INDUSTRIES]
   const rowB = [...INDUSTRIES.slice().reverse(), ...INDUSTRIES.slice().reverse()]
 
@@ -11,10 +12,9 @@ export function Industries() {
     <section className="relative overflow-hidden bg-background py-28 lg:py-40">
       <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
         <Reveal className="max-w-3xl">
-          <Eyebrow>Who It&apos;s For</Eyebrow>
+          <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2 className="mt-6 text-balance text-[clamp(2.25rem,5vw,4rem)] font-display leading-[0.98] tracking-tight">
-            Built for{" "}
-            <span className="font-serif font-normal italic text-gold-gradient">local service businesses.</span>
+            {t("headline")}
           </h2>
         </Reveal>
       </div>

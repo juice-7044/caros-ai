@@ -1,24 +1,14 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import { useTranslations } from "next-intl"
 import { Reveal } from "@/components/caros/reveal"
 import { Eyebrow } from "@/components/caros/ui-bits"
 // Reveal is used for the left column; the terminal manages its own reveal.
 
-const flow = [
-  { label: "Lead", detail: "google_ads / [your-industry]" },
-  { label: "CAROS Responds", detail: "human operator + auto-SMS < 60s" },
-  { label: "Conversation", detail: "qualified, need + address captured" },
-  { label: "Appointment", detail: "booked Tue 9:00a" },
-  { label: "Estimate Follow-Up", detail: "3 nudges, e-sign sent" },
-  { label: "Job Closes", detail: "$4,200 approved" },
-  { label: "Customer Nurtured", detail: "post-job check-in sequence" },
-  { label: "Review Requested", detail: "5★ Google review" },
-  { label: "Customer Reactivated", detail: "gutter add-on, 4 mo later" },
-  { label: "Revenue Attributed", detail: "→ google_ads / [your-industry]" },
-]
-
 export function MoneyJourney() {
+  const t = useTranslations("HomePage.moneyJourney")
+  const flow = t.raw("flow") as { label: string; detail: string }[]
   const [visibleCount, setVisibleCount] = useState(0)
   const ref = useRef<HTMLDivElement>(null)
   const started = useRef(false)

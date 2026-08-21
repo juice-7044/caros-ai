@@ -1,29 +1,10 @@
 import { Reveal } from "@/components/caros/reveal"
-
-const columns = [
-  {
-    title: "You paid for the lead. Don't lose it because you got busy.",
-    items: [
-      "Estimate follow-up",
-      "Missed-call text back",
-      "Appointment reminders",
-      "Lead nurturing",
-      "Reactivation campaigns",
-    ],
-  },
-  {
-    title: "Your cheapest customer may be one you've already paid to acquire.",
-    items: [
-      "Review requests",
-      "Referral campaigns",
-      "Repeat-service reminders",
-      "Dormant customer win-back",
-      "Membership fulfillment",
-    ],
-  },
-]
+import { useTranslations } from "next-intl"
 
 export function Retention() {
+  const t = useTranslations("HomePage.retention")
+  const columns = t.raw("columns") as { title: string; items: string[] }[]
+
   return (
     <section className="bg-background py-28 lg:py-40">
       <div className="mx-auto max-w-[1200px] px-6 lg:px-12">

@@ -1,31 +1,19 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
+import { useTranslations } from "next-intl"
 import { Reveal } from "@/components/caros/reveal"
 import { DIAGNOSTIC_HREF } from "@/lib/site"
 
-const cards = [
-  {
-    flow: ["Google Ad", "$42 lead", "Phone call", "Missed call"],
-    note: "You paid for that.",
-  },
-  {
-    flow: ["Facebook", "Lead", "Responded 3 hours later", "Hired a competitor"],
-    note: "You paid for that too.",
-  },
-  {
-    flow: ["SEO", "Lead", "Estimate sent", "No follow-up", "Lost"],
-    note: "Still paid for it.",
-  },
-]
-
 export function Pivot() {
+  const t = useTranslations("HomePage.pivot")
+  const cards = t.raw("cards") as { flow: string[]; note: string }[]
+
   return (
     <section className="bg-background py-28 lg:py-40">
       <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
         <Reveal>
           <h2 className="max-w-3xl text-balance text-[clamp(2.25rem,5vw,4rem)] font-extrabold leading-[0.98] tracking-tight">
-            Getting the lead is only{" "}
-            <span className="font-serif font-normal italic">half the problem.</span>
+            {t("headline")}
           </h2>
         </Reveal>
 
@@ -60,14 +48,13 @@ export function Pivot() {
 
         <Reveal delay={100}>
           <p className="mt-16 max-w-3xl text-balance text-2xl font-bold leading-tight tracking-tight lg:text-3xl">
-            Sometimes your marketing isn&apos;t broken. What happens{" "}
-            <span className="text-gold">after the lead arrives</span> is.
+            {t("closing")}
           </p>
           <Link
             href={DIAGNOSTIC_HREF}
             className="group mt-8 inline-flex items-center gap-2 text-lg font-semibold text-gold underline-offset-4 hover:underline"
           >
-            Find Your Leaks
+            {t("cta")}
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </Reveal>

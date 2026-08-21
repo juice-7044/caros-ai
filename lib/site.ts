@@ -1,11 +1,11 @@
 export const NAV_LINKS = [
-  { name: "Home", href: "https://getcaros.com", external: true },
-  { name: "How It Works", href: "/how-it-works" },
-  { name: "What's Included", href: "/whats-included" },
-  { name: "Marketing ROI", href: "/marketing-roi" },
-  { name: "Industries", href: "/industries" },
-  { name: "Pricing", href: "/pricing" },
-  { name: "About", href: "/about" },
+  { labelKey: "home", href: "https://getcaros.com", external: true },
+  { labelKey: "howItWorks", href: "/how-it-works" },
+  { labelKey: "included", href: "/whats-included" },
+  { labelKey: "marketingRoi", href: "/marketing-roi" },
+  { labelKey: "industries", href: "/industries" },
+  { labelKey: "pricing", href: "/pricing" },
+  { labelKey: "about", href: "/about" },
 ]
 
 export const AUDIT_HREF = "/revenue-audit"

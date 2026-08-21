@@ -1,27 +1,21 @@
 import { ArrowRight, X } from "lucide-react"
+import { useTranslations } from "next-intl"
 import { Reveal } from "@/components/caros/reveal"
 import { Eyebrow } from "@/components/caros/ui-bits"
 import { INSIGHTS_URL } from "@/lib/site"
 
-const gaps = [
-  "Calls go unanswered",
-  "Leads wait too long for a response",
-  "Estimates never get followed up",
-  "Past customers disappear into a database",
-  "Marketing produces jobs nobody can properly attribute",
-  "Customers who could buy again are never contacted",
-]
-
 export function MoreLeads() {
+  const t = useTranslations("HomePage.moreLeads")
+  const gaps = t.raw("gaps") as string[]
+
   return (
     <section className="relative overflow-hidden bg-ink py-28 text-ink-foreground lg:py-40">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
       <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
         <Reveal className="max-w-3xl">
-          <Eyebrow>The Real Problem</Eyebrow>
+          <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2 className="mt-6 text-balance text-[clamp(2.25rem,5vw,4rem)] font-display leading-[0.98] tracking-tight">
-            More Leads Aren&apos;t{" "}
-            <span className="font-serif font-normal italic text-gold-gradient">Always the Answer.</span>
+            {t("headline")}
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-ink-muted">
             A business can generate plenty of leads and still lose revenue.

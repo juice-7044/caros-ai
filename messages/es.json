@@ -35,13 +35,50 @@
     "tagline": "Convierte más clientes potenciales en ingresos reservados. Creado para empresas de servicios locales.",
     "headquarters": "Sede central",
     "rights": "Todos los derechos reservados.",
-    "contact": "Contact"
+    "contact": "Contact",
+    "industries": "Industrias",
+    "freeAudit": "Auditoría empresarial gratuita"
   },
   "language": {
     "label": "Idioma"
   },
   "HomePage": {
     "hero": {
+      "insightsCta": "Información empresarial gratuita",
+      "auditCta": "Generar mi auditoría empresarial gratuita",
+      "auditNote": "Descubre dónde existen, se fugan y podrían capturarse tus ingresos.",
+      "notReady": "¿Aún no quieres reservar?",
+      "freeAuditCta": "Tarda 2 minutos en generar una auditoría empresarial gratuita",
+      "exampleNote": "Panel ilustrativo de CAROS · Datos de ejemplo con fines demostrativos",
+      "categories": [
+        "Adquisición de clientes",
+        "Operaciones de ingresos",
+        "Éxito del cliente",
+        "Inteligencia empresarial",
+        "Integraciones"
+      ],
+      "stats": [
+        {
+          "value": "47",
+          "label": "clientes potenciales captados",
+          "tag": "AL MES"
+        },
+        {
+          "value": "22",
+          "label": "trabajos reservados",
+          "tag": "AL MES"
+        },
+        {
+          "value": "5,3x",
+          "label": "ROI de marketing",
+          "tag": "SEGUIMIENTO"
+        },
+        {
+          "value": "38.000 €",
+          "label": "ingresos atribuidos",
+          "tag": "AL MES"
+        }
+      ],
       "eyebrow": "Sistema operativo de adquisición de clientes e ingresos",
       "title": "Los ingresos primero.",
       "titleAccent": "Todo lo demás está al servicio de ellos.",
@@ -54,24 +91,278 @@
         "Integraciones"
       ]
     },
+    "leaks": {
+      "eyebrow": "Las fugas de ingresos",
+      "spend": [
+        {
+          "label": "Google Ads",
+          "value": "$3,000"
+        },
+        {
+          "label": "SEO",
+          "value": "$2,000"
+        },
+        {
+          "label": "Facebook",
+          "value": "$1,000"
+        },
+        {
+          "label": "Angi",
+          "value": "$750"
+        },
+        {
+          "label": "Sponsorship",
+          "value": "$750"
+        }
+      ],
+      "questions": [
+        "¿Cuántos se convirtieron en citas?",
+        "¿Cuántos presupuestos se cerraron?",
+        "¿Cuántos ingresos generó cada fuente?",
+        "¿Qué clientes regresaron?",
+        "¿Cuántos clientes llamaron y nunca recibieron respuesta?",
+        "¿Cuántos ingresos desaparecieron porque nadie hizo seguimiento?"
+      ],
+      "headline": "Puedes estar perdiendo dinero en lugares que no puedes ver."
+    },
+    "moreLeads": {
+      "eyebrow": "El verdadero problema",
+      "gaps": [
+        "Las llamadas quedan sin respuesta",
+        "Los clientes potenciales esperan demasiado",
+        "Nunca se hace seguimiento de los presupuestos",
+        "Los clientes anteriores desaparecen en una base de datos",
+        "El marketing genera trabajos que nadie puede atribuir correctamente",
+        "Nunca se contacta a los clientes que podrían volver a comprar"
+      ],
+      "headline": "Más clientes potenciales no siempre son la respuesta."
+    },
+    "retention": {
+      "columns": [
+        {
+          "title": "You paid for the lead. Don't lose it because you got busy.",
+          "items": [
+            "Estimate follow-up",
+            "Missed-call text back",
+            "Appointment reminders",
+            "Lead nurturing",
+            "Reactivation campaigns"
+          ]
+        },
+        {
+          "title": "Your cheapest customer may be one you've already paid to acquire.",
+          "items": [
+            "Review requests",
+            "Referral campaigns",
+            "Repeat-service reminders",
+            "Dormant customer win-back",
+            "Membership fulfillment"
+          ]
+        }
+      ]
+    },
+    "humanAnswering": {
+      "checklist": [
+        "Live human answering",
+        "Answered under your brand",
+        "Lead info captured into CAROS",
+        "Booking workflows",
+        "SMS follow-up",
+        "After-hours options"
+      ],
+      "closing": "Automatización cuando tiene sentido. Personas cuando importan.",
+      "headline": "Tus clientes llamaron a un negocio. Permíteles hablar con una persona."
+    },
+    "integrations": {
+      "eyebrow": "Integraciones",
+      "headline": "No necesitas otra herramienta desconectada.",
+      "existingToolsLabel": "Tus herramientas actuales",
+      "revenueSystem": "Sistema operativo de ingresos",
+      "oneView": "Una vista de ingresos",
+      "compatible": "Funciona con herramientas compatibles de tu ecosistema actual.",
+      "existingTools": [
+        "Website",
+        "Phone",
+        "CRM",
+        "Calendar",
+        "Scheduling",
+        "Advertising",
+        "Customer Communication",
+        "Other compatible systems"
+      ]
+    },
+    "lifecycle": {
+      "eyebrow": "El ciclo completo de ingresos",
+      "headline": "Convierte tu inversión en marketing en clientes. Convierte tu base de clientes en un activo.",
+      "subheadline": "Cada cliente potencial sigue activo. Cada cliente permanece conectado.",
+      "description": "CAROS mantiene activas las oportunidades perdidas, los presupuestos antiguos, los clientes anteriores y las cuentas inactivas dentro de tu sistema de ingresos. El seguimiento automatizado, la reactivación, los recordatorios de servicio, las membresías, las reseñas y las campañas de recomendación crean nuevas oportunidades a partir de relaciones que ya has pagado por adquirir.",
+      "dashboardLabel": "Panel ilustrativo de CAROS · Ciclo de vida del cliente",
+      "exampleFlow": "Flujo de ejemplo",
+      "primaryLabel": "Ruta principal",
+      "recoveryLabel": "Ruta de recuperación",
+      "closing": "Tu base de datos no debería convertirse en un cementerio digital.",
+      "exampleNote": "Datos de ejemplo mostrados con fines demostrativos.",
+      "primaryPath": [
+        "Cliente potencial",
+        "Presupuesto",
+        "Trabajo",
+        "Reseña",
+        "Servicio recurrente",
+        "Recomendación"
+      ],
+      "secondaryPath": [
+        "Presupuesto perdido / abandonado",
+        "Nutrición",
+        "Reactivación"
+      ]
+    },
+    "moneyJourney": {
+      "flow": [
+        {
+          "label": "Lead",
+          "detail": "google_ads / [your-industry]"
+        },
+        {
+          "label": "CAROS Responds",
+          "detail": "human operator + auto-SMS < 60s"
+        },
+        {
+          "label": "Conversation",
+          "detail": "qualified, need + address captured"
+        },
+        {
+          "label": "Appointment",
+          "detail": "booked Tue 9:00a"
+        },
+        {
+          "label": "Estimate Follow-Up",
+          "detail": "3 nudges, e-sign sent"
+        },
+        {
+          "label": "Job Closes",
+          "detail": "$4,200 approved"
+        },
+        {
+          "label": "Customer Nurtured",
+          "detail": "post-job check-in sequence"
+        },
+        {
+          "label": "Review Requested",
+          "detail": "5★ Google review"
+        },
+        {
+          "label": "Customer Reactivated",
+          "detail": "gutter add-on, 4 mo later"
+        },
+        {
+          "label": "Revenue Attributed",
+          "detail": "→ google_ads / [your-industry]"
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "De la auditoría al sistema operativo",
+      "headline": "Lo construimos. Lo conectamos. Te ayudamos a ejecutarlo. Tú diriges tu negocio.",
+      "badge": "Una reunión. Tu sistema CAROS principal activo en días, no semanas.",
+      "setup": "Nos encargamos de la configuración y los flujos de trabajo principales. Las integraciones, migraciones y portabilidades más complejas pueden requerir tiempo adicional.",
+      "existingTools": "¿Ya tienes herramientas que te gustan? Conserválas. CAROS puede trabajar con herramientas compatibles de tu ecosistema actual y reforzar lo que ya funciona."
+    },
     "revenueFirst": {
       "eyebrow": "Los ingresos primero",
       "titlePrefix": "CAROS comienza con",
       "titleAccent": "los ingresos.",
       "description": "CAROS no comienza con clientes potenciales. Comenzamos con los ingresos y conectamos todo lo que los genera.",
       "mattersWhen": [
-        { "label": "Los clientes potenciales", "detail": "importan cuando se convierten en clientes." },
-        { "label": "El marketing", "detail": "importa cuando genera ingresos." },
-        { "label": "El seguimiento", "detail": "importa cuando evita que las oportunidades se pierdan." },
-        { "label": "El servicio al cliente", "detail": "importa cuando los clientes se quedan, regresan y recomiendan." }
+        {
+          "label": "Los clientes potenciales",
+          "detail": "importan cuando se convierten en clientes."
+        },
+        {
+          "label": "El marketing",
+          "detail": "importa cuando genera ingresos."
+        },
+        {
+          "label": "El seguimiento",
+          "detail": "importa cuando evita que las oportunidades se pierdan."
+        },
+        {
+          "label": "El servicio al cliente",
+          "detail": "importa cuando los clientes se quedan, regresan y recomiendan."
+        }
       ],
       "lifecycleStatement": "CAROS conecta todo el ciclo de vida del cliente en torno a",
       "lifecycleAccent": "ingresos medibles.",
       "lifecycleLabel": "El ciclo de vida de los ingresos",
       "endToEnd": "De principio a fin",
-      "lifecycle": ["Marketing", "Clientes potenciales", "Llamadas", "Reservas", "Presupuestos", "Trabajos", "Clientes", "Clientes recurrentes"],
+      "lifecycle": [
+        "Marketing",
+        "Clientes potenciales",
+        "Llamadas",
+        "Reservas",
+        "Presupuestos",
+        "Trabajos",
+        "Clientes",
+        "Clientes recurrentes"
+      ],
       "revenue": "Ingresos",
       "supportingText": "CAROS sigue y mejora todo el ciclo de vida de los ingresos, desde el primer dólar de marketing hasta el cliente que vuelve."
+    },
+    "pivot": {
+      "closing": "A veces tu marketing no está roto. Lo que ocurre después de que llega el cliente potencial sí lo está.",
+      "cards": [
+        {
+          "flow": [
+            "Anuncio de Google",
+            "cliente de $42",
+            "llamada telefónica",
+            "llamada perdida"
+          ],
+          "note": "Pagaste por eso."
+        },
+        {
+          "flow": [
+            "Facebook",
+            "cliente potencial",
+            "respuesta 3 horas después",
+            "contrató a un competidor"
+          ],
+          "note": "También pagaste por eso."
+        },
+        {
+          "flow": [
+            "SEO",
+            "cliente potencial",
+            "presupuesto enviado",
+            "sin seguimiento",
+            "perdido"
+          ],
+          "note": "Aun así pagaste."
+        }
+      ],
+      "eyebrow": "El verdadero problema",
+      "headline": "Conseguir el cliente potencial es solo la mitad del problema.",
+      "cta": "Encuentra tus fugas"
+    },
+    "attribution": {
+      "headline": "Deja de preguntar: «¿Cuántos clientes potenciales recibí?» Empieza a preguntar: «¿Qué ingresos generaron?»",
+      "question": "¿Dónde invertirías tus próximos 1.000 €?",
+      "description": "Las métricas de marketing muestran lo que ocurrió antes del cliente potencial. La inteligencia de ingresos muestra lo que ocurrió después.",
+      "eyebrow": "Deja de adivinar. Empieza a decidir."
+    },
+    "enterCaros": {
+      "eyebrow": "El sistema operativo",
+      "headline": "Un sistema operativo de ingresos. Las cinco partes de tu negocio trabajando juntas.",
+      "description": "Desde el primer euro de marketing hasta la próxima compra, CAROS conecta todo el recorrido de ingresos."
+    },
+    "roi": {
+      "eyebrow": "Haz las cuentas"
+    },
+    "industries": {
+      "eyebrow": "Para quién es",
+      "headline": "Creado para empresas de servicios locales."
+    },
+    "pricingPreview": {
+      "eyebrow": "Un precio. Un sistema."
     }
   },
   "pages": {
@@ -168,5 +459,79 @@
     "missedCalls": "Missed Calls / Month",
     "closeRate": "Close Rate",
     "atRisk": "Estimated revenue currently at risk"
+  },
+  "common": {
+    "cta": {
+      "headline": "Let's find out where your revenue is leaking.",
+      "sub": "Find out where you're losing revenue — and what it would take to keep it.",
+      "button": "Generate My Free Business Audit"
+    }
+  },
+  "pillars": {
+    "acquisition": {
+      "label": "Customer Acquisition",
+      "question": "Where are my customers coming from?",
+      "blurb": "Capture leads from the places your customers already find you.",
+      "items": [
+        "Google & Facebook lead capture",
+        "Website forms & web chat",
+        "SMS & missed-call text back",
+        "QR codes on signage & trucks",
+        "Social & referral capture",
+        "Tracking codes on every source"
+      ]
+    },
+    "operations": {
+      "label": "Revenue Operations",
+      "question": "What happens after they find me?",
+      "blurb": "Turn inquiries into appointments, estimates, follow-up, and booked work.",
+      "items": [
+        "CRM & opportunity pipeline",
+        "Human answering under your brand",
+        "Appointment booking workflows",
+        "Estimate follow-up & nudging",
+        "Automated lead nurturing",
+        "Digital signatures & invoicing"
+      ]
+    },
+    "success": {
+      "label": "Customer Success",
+      "question": "What happens after I finish the job?",
+      "blurb": "Stay connected after the job, generate reviews, reactivate customers, and create repeat business.",
+      "items": [
+        "Review requests & responses",
+        "Referral campaigns per job",
+        "Repeat-service reminders",
+        "Dormant customer reactivation",
+        "Membership fulfillment",
+        "Win-back offers"
+      ]
+    },
+    "intelligence": {
+      "label": "Business Intelligence",
+      "question": "Is any of this actually making me money?",
+      "blurb": "See what generates leads, bookings, customers, and revenue.",
+      "items": [
+        "Lead-source attribution",
+        "Booked-revenue reporting",
+        "Marketing ROI by campaign",
+        "Pipeline reporting",
+        "Weekly performance reports",
+        "Monthly business briefing"
+      ]
+    },
+    "platform": {
+      "label": "Platform & Integrations",
+      "question": "How do I keep track of all of this?",
+      "blurb": "Connect the tools you already use into one operating system.",
+      "items": [
+        "Phone, email & SMS",
+        "Calendars & scheduling",
+        "Website & advertising sources",
+        "Payments & card-on-file",
+        "Routing & FSM integrations",
+        "And more, connected for you"
+      ]
+    }
   }
 }
