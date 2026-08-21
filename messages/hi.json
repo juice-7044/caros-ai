@@ -268,40 +268,40 @@
       "existingTools": "Already have tools you like? Keep them. CAROS can work with compatible tools in your existing ecosystem and strengthen what is already working."
     },
     "revenueFirst": {
-      "eyebrow": "Revenue First",
-      "headline": "CAROS Starts With Revenue.",
-      "description": "CAROS doesn't start with leads. We start with revenue, then connect everything that creates it.",
-      "lifecycleLabel": "The Revenue Lifecycle",
-      "endToEnd": "End to end",
-      "revenue": "Revenue",
-      "footer": "CAROS tracks and improves the entire revenue lifecycle, from the first marketing dollar to the customer who comes back again.",
+      "eyebrow": "राजस्व सबसे पहले",
+      "headline": "CAROS की शुरुआत राजस्व से होती है।",
+      "description": "CAROS की शुरुआत लीड से नहीं होती। हम राजस्व से शुरुआत करके उसे बनाने वाली हर चीज़ को जोड़ते हैं।",
+      "lifecycleLabel": "राजस्व का पूरा जीवनचक्र",
+      "endToEnd": "शुरू से अंत तक",
+      "revenue": "राजस्व",
+      "footer": "CAROS पहले मार्केटिंग खर्च से लेकर वापस आने वाले ग्राहक तक पूरे राजस्व जीवनचक्र को ट्रैक और बेहतर करता है।",
       "mattersWhen": [
         {
-          "label": "Leads",
-          "detail": "matter when they become customers."
+          "label": "लीड",
+          "detail": "ग्राहक बनने पर महत्वपूर्ण होते हैं।"
         },
         {
-          "label": "Marketing",
-          "detail": "matters when it produces revenue."
+          "label": "मार्केटिंग",
+          "detail": "राजस्व पैदा करने पर महत्वपूर्ण होती है।"
         },
         {
-          "label": "Follow-up",
-          "detail": "matters when opportunities stop slipping away."
+          "label": "फॉलो-अप",
+          "detail": "अवसरों को बचाए रखने पर महत्वपूर्ण होता है।"
         },
         {
-          "label": "Customer service",
-          "detail": "matters when customers stay, return, and refer."
+          "label": "ग्राहक सेवा",
+          "detail": "ग्राहकों के बने रहने, लौटने और रेफर करने पर महत्वपूर्ण होती है।"
         }
       ],
       "lifecycle": [
-        "Marketing",
-        "Leads",
-        "Calls",
-        "Bookings",
-        "Estimates",
-        "Jobs",
-        "Customers",
-        "Repeat Business"
+        "मार्केटिंग",
+        "लीड",
+        "कॉल",
+        "बुकिंग",
+        "अनुमान",
+        "काम",
+        "ग्राहक",
+        "दोहराया व्यवसाय"
       ]
     },
     "pivot": {

@@ -268,40 +268,40 @@
       "existingTools": "Already have tools you like? Keep them. CAROS can work with compatible tools in your existing ecosystem and strengthen what is already working."
     },
     "revenueFirst": {
-      "eyebrow": "Revenue First",
-      "headline": "CAROS Starts With Revenue.",
-      "description": "CAROS doesn't start with leads. We start with revenue, then connect everything that creates it.",
-      "lifecycleLabel": "The Revenue Lifecycle",
-      "endToEnd": "End to end",
-      "revenue": "Revenue",
-      "footer": "CAROS tracks and improves the entire revenue lifecycle, from the first marketing dollar to the customer who comes back again.",
+      "eyebrow": "Les revenus d’abord",
+      "headline": "CAROS commence par les revenus.",
+      "description": "CAROS ne commence pas par les prospects. Nous commençons par les revenus et relions tout ce qui les crée.",
+      "lifecycleLabel": "Le cycle de vie des revenus",
+      "endToEnd": "De bout en bout",
+      "revenue": "Revenus",
+      "footer": "CAROS suit et améliore tout le cycle de vie des revenus, du premier euro investi en marketing au client qui revient.",
       "mattersWhen": [
         {
-          "label": "Leads",
-          "detail": "matter when they become customers."
+          "label": "Prospects",
+          "detail": "comptent lorsqu’ils deviennent clients."
         },
         {
           "label": "Marketing",
-          "detail": "matters when it produces revenue."
+          "detail": "compte lorsqu’il génère des revenus."
         },
         {
-          "label": "Follow-up",
-          "detail": "matters when opportunities stop slipping away."
+          "label": "Suivi",
+          "detail": "compte lorsque les opportunités ne passent plus entre les mailles du filet."
         },
         {
-          "label": "Customer service",
-          "detail": "matters when customers stay, return, and refer."
+          "label": "Service client",
+          "detail": "compte lorsque les clients restent, reviennent et recommandent."
         }
       ],
       "lifecycle": [
         "Marketing",
-        "Leads",
-        "Calls",
-        "Bookings",
-        "Estimates",
-        "Jobs",
-        "Customers",
-        "Repeat Business"
+        "Prospects",
+        "Appels",
+        "Réservations",
+        "Devis",
+        "Interventions",
+        "Clients",
+        "Activité récurrente"
       ]
     },
     "pivot": {

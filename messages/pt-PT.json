@@ -268,40 +268,40 @@
       "existingTools": "Already have tools you like? Keep them. CAROS can work with compatible tools in your existing ecosystem and strengthen what is already working."
     },
     "revenueFirst": {
-      "eyebrow": "Revenue First",
-      "headline": "CAROS Starts With Revenue.",
-      "description": "CAROS doesn't start with leads. We start with revenue, then connect everything that creates it.",
-      "lifecycleLabel": "The Revenue Lifecycle",
-      "endToEnd": "End to end",
-      "revenue": "Revenue",
-      "footer": "CAROS tracks and improves the entire revenue lifecycle, from the first marketing dollar to the customer who comes back again.",
+      "eyebrow": "Receita em primeiro lugar",
+      "headline": "A CAROS começa pela receita.",
+      "description": "A CAROS não começa pelos leads. Começamos pela receita e ligamos tudo o que a gera.",
+      "lifecycleLabel": "O ciclo de vida da receita",
+      "endToEnd": "Do início ao fim",
+      "revenue": "Receita",
+      "footer": "A CAROS acompanha e melhora todo o ciclo de vida da receita, do primeiro euro investido em marketing ao cliente que regressa.",
       "mattersWhen": [
         {
           "label": "Leads",
-          "detail": "matter when they become customers."
+          "detail": "são importantes quando se tornam clientes."
         },
         {
           "label": "Marketing",
-          "detail": "matters when it produces revenue."
+          "detail": "é importante quando gera receita."
         },
         {
           "label": "Follow-up",
-          "detail": "matters when opportunities stop slipping away."
+          "detail": "é importante quando as oportunidades deixam de escapar."
         },
         {
-          "label": "Customer service",
-          "detail": "matters when customers stay, return, and refer."
+          "label": "Apoio ao cliente",
+          "detail": "é importante quando os clientes ficam, regressam e recomendam."
         }
       ],
       "lifecycle": [
         "Marketing",
         "Leads",
-        "Calls",
-        "Bookings",
-        "Estimates",
-        "Jobs",
-        "Customers",
-        "Repeat Business"
+        "Chamadas",
+        "Marcações",
+        "Orçamentos",
+        "Trabalhos",
+        "Clientes",
+        "Negócio recorrente"
       ]
     },
     "pivot": {

@@ -268,40 +268,40 @@
       "existingTools": "Already have tools you like? Keep them. CAROS can work with compatible tools in your existing ecosystem and strengthen what is already working."
     },
     "revenueFirst": {
-      "eyebrow": "Revenue First",
-      "headline": "CAROS Starts With Revenue.",
-      "description": "CAROS doesn't start with leads. We start with revenue, then connect everything that creates it.",
-      "lifecycleLabel": "The Revenue Lifecycle",
-      "endToEnd": "End to end",
-      "revenue": "Revenue",
-      "footer": "CAROS tracks and improves the entire revenue lifecycle, from the first marketing dollar to the customer who comes back again.",
+      "eyebrow": "Сначала выручка",
+      "headline": "CAROS начинается с выручки.",
+      "description": "CAROS начинается не с лидов. Мы начинаем с выручки и связываем всё, что её создаёт.",
+      "lifecycleLabel": "Жизненный цикл выручки",
+      "endToEnd": "От начала до конца",
+      "revenue": "Выручка",
+      "footer": "CAROS отслеживает и улучшает весь жизненный цикл выручки — от первого маркетингового рубля до клиента, который возвращается.",
       "mattersWhen": [
         {
-          "label": "Leads",
-          "detail": "matter when they become customers."
+          "label": "Лиды",
+          "detail": "важны, когда становятся клиентами."
         },
         {
-          "label": "Marketing",
-          "detail": "matters when it produces revenue."
+          "label": "Маркетинг",
+          "detail": "важен, когда приносит выручку."
         },
         {
-          "label": "Follow-up",
-          "detail": "matters when opportunities stop slipping away."
+          "label": "Повторный контакт",
+          "detail": "важен, когда возможности перестают теряться."
         },
         {
-          "label": "Customer service",
-          "detail": "matters when customers stay, return, and refer."
+          "label": "Поддержка клиентов",
+          "detail": "важна, когда клиенты остаются, возвращаются и рекомендуют."
         }
       ],
       "lifecycle": [
-        "Marketing",
-        "Leads",
-        "Calls",
-        "Bookings",
-        "Estimates",
-        "Jobs",
-        "Customers",
-        "Repeat Business"
+        "Маркетинг",
+        "Лиды",
+        "Звонки",
+        "Бронирования",
+        "Сметы",
+        "Заказы",
+        "Клиенты",
+        "Повторный бизнес"
       ]
     },
     "pivot": {

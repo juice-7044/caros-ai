@@ -268,40 +268,40 @@
       "existingTools": "Already have tools you like? Keep them. CAROS can work with compatible tools in your existing ecosystem and strengthen what is already working."
     },
     "revenueFirst": {
-      "eyebrow": "Revenue First",
-      "headline": "CAROS Starts With Revenue.",
-      "description": "CAROS doesn't start with leads. We start with revenue, then connect everything that creates it.",
-      "lifecycleLabel": "The Revenue Lifecycle",
-      "endToEnd": "End to end",
-      "revenue": "Revenue",
-      "footer": "CAROS tracks and improves the entire revenue lifecycle, from the first marketing dollar to the customer who comes back again.",
+      "eyebrow": "收入优先",
+      "headline": "CAROS 从收入开始。",
+      "description": "CAROS 不从潜在客户开始，而是从收入开始，再连接创造收入的一切。",
+      "lifecycleLabel": "收入生命周期",
+      "endToEnd": "端到端",
+      "revenue": "收入",
+      "footer": "CAROS 跟踪并改善完整的收入生命周期，从第一笔营销投入到再次回购的客户。",
       "mattersWhen": [
         {
-          "label": "Leads",
-          "detail": "matter when they become customers."
+          "label": "潜在客户",
+          "detail": "转化为客户时才真正重要。"
         },
         {
-          "label": "Marketing",
-          "detail": "matters when it produces revenue."
+          "label": "营销",
+          "detail": "产生收入时才真正重要。"
         },
         {
-          "label": "Follow-up",
-          "detail": "matters when opportunities stop slipping away."
+          "label": "跟进",
+          "detail": "不再让机会流失时才真正重要。"
         },
         {
-          "label": "Customer service",
-          "detail": "matters when customers stay, return, and refer."
+          "label": "客户服务",
+          "detail": "客户留存、回归并推荐时才真正重要。"
         }
       ],
       "lifecycle": [
-        "Marketing",
-        "Leads",
-        "Calls",
-        "Bookings",
-        "Estimates",
-        "Jobs",
-        "Customers",
-        "Repeat Business"
+        "营销",
+        "潜在客户",
+        "电话",
+        "预约",
+        "报价",
+        "工作",
+        "客户",
+        "复购业务"
       ]
     },
     "pivot": {

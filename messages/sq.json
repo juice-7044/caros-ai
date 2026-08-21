@@ -268,40 +268,40 @@
       "existingTools": "Already have tools you like? Keep them. CAROS can work with compatible tools in your existing ecosystem and strengthen what is already working."
     },
     "revenueFirst": {
-      "eyebrow": "Revenue First",
-      "headline": "CAROS Starts With Revenue.",
-      "description": "CAROS doesn't start with leads. We start with revenue, then connect everything that creates it.",
-      "lifecycleLabel": "The Revenue Lifecycle",
-      "endToEnd": "End to end",
-      "revenue": "Revenue",
-      "footer": "CAROS tracks and improves the entire revenue lifecycle, from the first marketing dollar to the customer who comes back again.",
+      "eyebrow": "Të ardhurat në radhë të parë",
+      "headline": "CAROS fillon me të ardhurat.",
+      "description": "CAROS nuk fillon me klientët potencialë. Ne fillojmë me të ardhurat dhe lidhim gjithçka që i krijon.",
+      "lifecycleLabel": "Cikli i jetës së të ardhurave",
+      "endToEnd": "Nga fillimi në fund",
+      "revenue": "Të ardhura",
+      "footer": "CAROS ndjek dhe përmirëson të gjithë ciklin e të ardhurave, nga euroja e parë e marketingut te klienti që kthehet përsëri.",
       "mattersWhen": [
         {
-          "label": "Leads",
-          "detail": "matter when they become customers."
+          "label": "Klientët potencialë",
+          "detail": "kanë rëndësi kur bëhen klientë."
         },
         {
-          "label": "Marketing",
-          "detail": "matters when it produces revenue."
+          "label": "Marketingu",
+          "detail": "ka rëndësi kur sjell të ardhura."
         },
         {
-          "label": "Follow-up",
-          "detail": "matters when opportunities stop slipping away."
+          "label": "Ndjekja",
+          "detail": "ka rëndësi kur mundësitë nuk humbasin më."
         },
         {
-          "label": "Customer service",
-          "detail": "matters when customers stay, return, and refer."
+          "label": "Shërbimi ndaj klientit",
+          "detail": "ka rëndësi kur klientët qëndrojnë, kthehen dhe rekomandojnë."
         }
       ],
       "lifecycle": [
-        "Marketing",
-        "Leads",
-        "Calls",
-        "Bookings",
-        "Estimates",
-        "Jobs",
-        "Customers",
-        "Repeat Business"
+        "Marketingu",
+        "Klientët potencialë",
+        "Telefonata",
+        "Rezervime",
+        "Oferta",
+        "Punë",
+        "Klientë",
+        "Biznes i përsëritur"
       ]
     },
     "pivot": {

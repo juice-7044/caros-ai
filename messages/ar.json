@@ -268,40 +268,40 @@
       "existingTools": "Already have tools you like? Keep them. CAROS can work with compatible tools in your existing ecosystem and strengthen what is already working."
     },
     "revenueFirst": {
-      "eyebrow": "Revenue First",
-      "headline": "CAROS Starts With Revenue.",
-      "description": "CAROS doesn't start with leads. We start with revenue, then connect everything that creates it.",
-      "lifecycleLabel": "The Revenue Lifecycle",
-      "endToEnd": "End to end",
-      "revenue": "Revenue",
-      "footer": "CAROS tracks and improves the entire revenue lifecycle, from the first marketing dollar to the customer who comes back again.",
+      "eyebrow": "الإيرادات أولاً",
+      "headline": "تبدأ CAROS بالإيرادات.",
+      "description": "لا تبدأ CAROS بالعملاء المحتملين. نبدأ بالإيرادات ونربط كل ما يحققها.",
+      "lifecycleLabel": "دورة حياة الإيرادات",
+      "endToEnd": "من البداية إلى النهاية",
+      "revenue": "الإيرادات",
+      "footer": "تتتبع CAROS دورة حياة الإيرادات كاملة وتحسنها، من أول إنفاق تسويقي إلى العميل الذي يعود مجدداً.",
       "mattersWhen": [
         {
-          "label": "Leads",
-          "detail": "matter when they become customers."
+          "label": "العملاء المحتملون",
+          "detail": "تظهر أهميتهم عندما يصبحون عملاء."
         },
         {
-          "label": "Marketing",
-          "detail": "matters when it produces revenue."
+          "label": "التسويق",
+          "detail": "تظهر أهميته عندما يحقق الإيرادات."
         },
         {
-          "label": "Follow-up",
-          "detail": "matters when opportunities stop slipping away."
+          "label": "المتابعة",
+          "detail": "تظهر أهميتها عندما لا تضيع الفرص."
         },
         {
-          "label": "Customer service",
-          "detail": "matters when customers stay, return, and refer."
+          "label": "خدمة العملاء",
+          "detail": "تظهر أهميتها عندما يبقى العملاء ويعودون ويوصون بك."
         }
       ],
       "lifecycle": [
-        "Marketing",
-        "Leads",
-        "Calls",
-        "Bookings",
-        "Estimates",
-        "Jobs",
-        "Customers",
-        "Repeat Business"
+        "التسويق",
+        "العملاء المحتملون",
+        "المكالمات",
+        "الحجوزات",
+        "التقديرات",
+        "الوظائف",
+        "العملاء",
+        "الأعمال المتكررة"
       ]
     },
     "pivot": {

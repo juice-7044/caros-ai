@@ -268,40 +268,40 @@
       "existingTools": "Already have tools you like? Keep them. CAROS can work with compatible tools in your existing ecosystem and strengthen what is already working."
     },
     "revenueFirst": {
-      "eyebrow": "Revenue First",
-      "headline": "CAROS Starts With Revenue.",
-      "description": "CAROS doesn't start with leads. We start with revenue, then connect everything that creates it.",
-      "lifecycleLabel": "The Revenue Lifecycle",
-      "endToEnd": "End to end",
-      "revenue": "Revenue",
-      "footer": "CAROS tracks and improves the entire revenue lifecycle, from the first marketing dollar to the customer who comes back again.",
+      "eyebrow": "収益を最優先",
+      "headline": "CAROSは収益から始まります。",
+      "description": "CAROSはリードから始めません。収益から始め、それを生み出すすべてをつなぎます。",
+      "lifecycleLabel": "収益のライフサイクル",
+      "endToEnd": "最初から最後まで",
+      "revenue": "収益",
+      "footer": "CAROSは、最初のマーケティング費用から再来店する顧客まで、収益の全体を追跡し改善します。",
       "mattersWhen": [
         {
-          "label": "Leads",
-          "detail": "matter when they become customers."
+          "label": "リード",
+          "detail": "顧客になって初めて価値が生まれます。"
         },
         {
-          "label": "Marketing",
-          "detail": "matters when it produces revenue."
+          "label": "マーケティング",
+          "detail": "収益を生み出して初めて意味があります。"
         },
         {
-          "label": "Follow-up",
-          "detail": "matters when opportunities stop slipping away."
+          "label": "フォローアップ",
+          "detail": "機会を逃さなくなって初めて効果があります。"
         },
         {
-          "label": "Customer service",
-          "detail": "matters when customers stay, return, and refer."
+          "label": "顧客サービス",
+          "detail": "顧客が継続し、戻り、紹介して初めて価値があります。"
         }
       ],
       "lifecycle": [
-        "Marketing",
-        "Leads",
-        "Calls",
-        "Bookings",
-        "Estimates",
-        "Jobs",
-        "Customers",
-        "Repeat Business"
+        "マーケティング",
+        "リード",
+        "電話",
+        "予約",
+        "見積もり",
+        "仕事",
+        "顧客",
+        "リピートビジネス"
       ]
     },
     "pivot": {
