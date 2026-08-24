@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import type { CSSProperties } from "react"
 import type { LucideIcon } from "lucide-react"
 import {
   ArrowRight,
@@ -81,47 +80,34 @@ function StackTiles() {
 }
 
 const networkDetails = [
-  ["Marketing", "Creates and captures demand.", "Lead capture • campaigns • social • forms • attribution"],
-  ["Human Answering", "Makes sure opportunity gets a response.", "Live calls • qualification • routing • after-hours"],
-  ["CRM", "Keeps the customer journey visible.", "Contacts • conversations • pipeline • history"],
-  ["Automation", "Moves work forward without waiting.", "Follow-up • nurture • reminders • workflows"],
-  ["Retention", "Turns customers into repeat revenue and referrals.", "Reviews • reactivation • referrals • repeat business"],
-  ["Revenue Attribution", "Shows what is actually producing revenue.", "Sources • conversion • pipeline value • revenue visibility"],
+  ["Marketing", "Creates and captures demand.", ["Lead capture", "Campaigns", "Social scheduling", "Forms", "Attribution"]],
+  ["Human Answering", "Makes sure opportunity gets a response.", ["Live call answering", "Lead qualification", "Message capture", "Routing", "After-hours coverage"]],
+  ["CRM", "Keeps the customer journey visible.", ["Contacts", "Conversations", "Opportunities", "Pipeline", "Customer history"]],
+  ["Automation", "Moves work forward without waiting.", ["Follow-up", "Reminders", "Nurture", "Workflows", "Notifications"]],
+  ["Retention", "Turns customers into repeat revenue and referrals.", ["Reviews", "Reactivation", "Referrals", "Repeat business", "Customer communication"]],
+  ["Revenue Attribution", "Shows what is actually producing revenue.", ["Lead sources", "Pipeline value", "Conversion", "Revenue reporting", "Performance visibility"]],
 ] as const
 
 function ConnectionDiagram() {
-  const [active, setActive] = useState<string | null>(null)
-  const [term, setTerm] = useState("Capture")
+  const [active, setActive] = useState<number | null>(null)
+  const [entered, setEntered] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)
-  const [assembled, setAssembled] = useState(false)
-  useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => { if (entry.isIntersecting) { setAssembled(true); observer.disconnect() } }, { threshold: 0.18 })
-    if (sectionRef.current) observer.observe(sectionRef.current)
-    return () => observer.disconnect()
-  }, [])
-  useEffect(() => {
-    const terms = ["Capture", "Connect", "Convert", "Retain", "Attribute"]
-    let index = 0
-    const timer = window.setInterval(() => { index = (index + 1) % terms.length; setTerm(terms[index]) }, 2200)
-    return () => window.clearInterval(timer)
-  }, [])
-
-  const nodePositions = [[50, 12], [13, 31], [87, 31], [18, 70], [82, 70], [50, 86]] as const
-  const primaryPaths = nodePositions.map(([x, y]) => `M ${x} ${y} Q 50 48 50 50`)
-  const secondaryPaths = ["M 19 31 Q 16 51 23 67", "M 25 67 Q 50 78 75 67", "M 81 67 Q 84 51 81 31", "M 87 31 Q 69 13 52 12", "M 50 86 Q 33 66 19 31", "M 50 86 Q 73 65 87 31"]
-  const selected = networkDetails.find(([name]) => name === active)
-
-  return <div ref={sectionRef} className={`relative mx-auto min-h-[720px] max-w-6xl overflow-hidden py-10 lg:min-h-[88vh] ${assembled ? "is-assembled" : ""}`}>
-    <style>{`@keyframes caros-dash { to { stroke-dashoffset: -80; } } @keyframes caros-particle { 0% { opacity: 0; offset-distance: 0%; } 15% { opacity: .9; } 85% { opacity: .9; } 100% { opacity: 0; offset-distance: 100%; } } @keyframes caros-pulse { 0%, 100% { opacity: .35; } 50% { opacity: 1; } } .caros-network-path { stroke-dasharray: 3 12; animation: caros-dash 7s linear infinite; } .caros-network-particle { offset-path: path(var(--particle-path)); animation: caros-particle 5s ease-in-out infinite; } .caros-network-node { opacity: 0; transform: scale(.82); transition: opacity .7s ease, transform .7s ease, color .25s ease, border-color .25s ease; } .is-assembled .caros-network-node { opacity: 1; transform: scale(1); } .caros-network-node:nth-child(2) { transition-delay: .2s } .caros-network-node:nth-child(3) { transition-delay: .4s } .caros-network-node:nth-child(4) { transition-delay: .6s } .caros-network-node:nth-child(5) { transition-delay: .8s } .caros-network-node:nth-child(6) { transition-delay: 1s } .caros-network-node:nth-child(7) { transition-delay: 1.2s } @media (prefers-reduced-motion: reduce) { .caros-network-path, .caros-network-particle { animation: none !important; } .caros-network-node { opacity: 1; transform: none; transition: none; } }`}</style>
-    <svg className="pointer-events-none absolute inset-0 size-full" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-      {secondaryPaths.map((path, index) => <path key={path} d={path} pathLength="1" className="caros-network-path" fill="none" stroke="hsl(var(--gold) / .22)" strokeWidth=".18" />)}
-      {primaryPaths.map((path, index) => <g key={path}><path d={path} className={`caros-network-path ${active && active !== networkDetails[index][0] ? "opacity-20" : ""}`} fill="none" stroke="hsl(var(--gold) / .62)" strokeWidth=".34" /><circle r=".65" fill="hsl(var(--gold))" className="caros-network-particle" style={{ "--particle-path": `"${path}"`, animationDelay: `${index * .75}s` } as CSSProperties} /></g>)}
-      <path d="M 50 58 Q 50 70 50 83" className="caros-network-path" fill="none" stroke="hsl(var(--gold) / .85)" strokeWidth=".45" />
-    </svg>
-    {networkDetails.map(([name, sentence], index) => { const [x, y] = nodePositions[index]; const Icon = categories[index][0]; return <button key={name} type="button" onMouseEnter={() => setActive(name)} onMouseLeave={() => setActive(null)} onFocus={() => setActive(name)} onBlur={() => setActive(null)} onClick={() => setActive(active === name ? null : name)} className={`caros-network-node absolute w-[42%] -translate-x-1/2 -translate-y-1/2 border border-ink-foreground/25 bg-ink/90 p-3 text-left text-ink-foreground shadow-[0_0_24px_hsl(var(--gold)/.05)] sm:w-44 sm:p-4 ${active && active !== name ? "opacity-45" : "hover:border-gold"}`} style={{ left: `${x}%`, top: `${y}%` }}><Icon className="size-4 text-gold" aria-hidden="true" /><span className="mt-2 block text-xs font-bold sm:text-sm">{name}</span><span className="mt-1 block text-[10px] leading-relaxed text-ink-foreground/55 sm:text-xs">{categories[index][2].join(" • ")}</span>{active === name && <span className="mt-3 block border-t border-gold/30 pt-2 text-[10px] leading-relaxed text-gold sm:text-xs">{sentence}</span>}</button> })}
-    <div className="caros-network-node absolute left-1/2 top-1/2 flex size-36 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center border-2 border-gold bg-ink text-center shadow-[0_0_0_10px_hsl(var(--gold)/.08),0_0_45px_hsl(var(--gold)/.14)] sm:size-44"><Network className="size-7 text-gold" aria-hidden="true" /><span className="mt-2 text-lg font-extrabold tracking-tight">CAROS</span><span className="mt-1 text-[9px] uppercase tracking-[.16em] text-ink-foreground/55">Revenue Operating System</span><span className="mt-3 font-mono text-[9px] text-gold">{term}</span></div>
-    <div className="caros-network-node absolute left-1/2 top-[96%] flex -translate-x-1/2 -translate-y-full flex-col items-center text-center"><div className="border border-gold bg-gold px-8 py-3 font-mono text-sm font-bold tracking-[.2em] text-ink shadow-[0_0_24px_hsl(var(--gold)/.15)]">REVENUE</div><span className="mt-2 text-[10px] uppercase tracking-[.16em] text-ink-foreground/60">Captured. Converted. Retained.</span></div>
-    {selected && <p className="absolute bottom-0 left-1/2 max-w-xs -translate-x-1/2 text-center text-xs text-gold sm:hidden">{selected[1]}</p>}
+  useEffect(() => { const observer = new IntersectionObserver(([entry]) => { if (entry.isIntersecting) { setEntered(true); observer.disconnect() } }, { threshold: 0.18 }); if (sectionRef.current) observer.observe(sectionRef.current); return () => observer.disconnect() }, [])
+  const strand = "M -10 72 C 12 20 24 20 42 72 S 72 124 90 72 S 120 20 142 72"
+  const rungLabels = ["Lead → Conversation", "Conversation → Opportunity", "Opportunity → Customer", "Customer → Review", "Review → Referral", "Referral → Lead"]
+  return <div ref={sectionRef} className={`relative min-h-[760px] w-full overflow-visible py-8 lg:min-h-[100vh] ${entered ? "dna-entered" : ""}`}>
+    <style>{`@keyframes dna-flow { to { stroke-dashoffset: -160; } } @keyframes dna-drift { 0%,100% { transform: translate3d(-1%,1%,0) rotate(-2deg); } 50% { transform: translate3d(1%,-1%,0) rotate(2deg); } } @keyframes dna-particle { from { offset-distance: 0%; opacity: 0; } 12% { opacity: .9; } 86% { opacity: .9; } to { offset-distance: 100%; opacity: 0; } } .dna-strand { stroke-dasharray: 2 13; animation: dna-flow 8s linear infinite; } .dna-stage { animation: dna-drift 12s ease-in-out infinite; transform-origin: 50% 50%; } .dna-particle { offset-path: path('${strand}'); animation: dna-particle 6s linear infinite; } .dna-node { transition: opacity .6s ease, transform .3s ease, border-color .3s ease, box-shadow .3s ease; opacity: 0; } .dna-entered .dna-node { opacity: 1; } .dna-node:hover, .dna-node:focus-visible { transform: scale(1.08); border-color: hsl(var(--gold)); box-shadow: 0 0 24px hsl(var(--gold) / .28); } @media (prefers-reduced-motion: reduce) { .dna-strand, .dna-stage, .dna-particle { animation: none !important; } .dna-node { opacity: 1; transition: none; } } @media (max-width: 639px) { .dna-stage { transform: rotate(72deg) scale(1.3); animation-duration: 15s; } }`}</style>
+    <div className="dna-stage absolute inset-0">
+      <svg className="absolute inset-0 size-full" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        {[10, 22, 34, 46, 58, 70, 82, 94].map((x, i) => <line key={x} x1={x} y1={50 - 22 * Math.sin(x / 12)} x2={x} y2={50 + 22 * Math.sin(x / 12)} stroke="hsl(var(--gold) / .3)" strokeWidth=".22" className="dna-strand" style={{ animationDelay: `${i * -.5}s` }} />)}
+        <path d={strand} fill="none" stroke="hsl(var(--gold) / .9)" strokeWidth=".55" className="dna-strand" /><path d="M -10 28 C 12 80 24 80 42 28 S 72 -24 90 28 S 120 80 142 28" fill="none" stroke="hsl(var(--ink-foreground) / .55)" strokeWidth=".42" className="dna-strand" />
+        {[0,1,2,3,4,5,6].map(i => <circle key={i} r=".8" fill="hsl(var(--gold))" className="dna-particle" style={{ animationDelay: `${i * -.9}s` }} />)}
+      </svg>
+      <div className="absolute left-[12%] top-[18%] font-mono text-[9px] uppercase tracking-[.2em] text-gold/70">Revenue activity</div><div className="absolute right-[10%] bottom-[18%] font-mono text-[9px] uppercase tracking-[.2em] text-ink-foreground/50">Revenue intelligence</div>
+      {networkDetails.map(([name, sentence, items], index) => <button key={name} type="button" aria-expanded={active === index} onMouseEnter={() => setActive(index)} onMouseLeave={() => setActive(null)} onFocus={() => setActive(index)} onBlur={() => setActive(null)} onClick={() => setActive(active === index ? null : index)} className={`dna-node absolute z-10 w-[min(210px,42vw)] border border-ink-foreground/30 bg-ink/90 p-3 text-left text-ink-foreground ${active !== null && active !== index ? "opacity-40" : ""}`} style={{ left: `${[15,30,47,62,75,85][index]}%`, top: `${[30,60,25,70,38,58][index]}%`, transitionDelay: `${400 + index * 130}ms` }}><span className="flex items-center gap-2 text-xs font-bold sm:text-sm"><span className="text-gold">{index + 1}</span>{name}</span>{active === index && <span className="mt-3 block border-t border-gold/30 pt-3 text-[11px] leading-relaxed text-ink-foreground/70"><strong className="block text-gold">{sentence}</strong><span className="mt-2 block">{items.join(" • ")}</span></span>}</button>)}
+      <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 text-center"><span className="font-serif text-2xl italic text-gold">CAROS</span><span className="mt-1 block font-mono text-[8px] uppercase tracking-[.18em] text-ink-foreground/55">Revenue Operating System</span></div>
+      <div className="absolute bottom-4 left-1/2 z-10 -translate-x-1/2 text-center font-mono text-[10px] uppercase tracking-[.18em] text-gold/70">Lead → Conversation → Opportunity → Customer → Review → Referral → Lead</div>
+    </div>
   </div>
 }
 
@@ -138,7 +124,7 @@ export function WhyCarosPage() {
 
     <section className="bg-background px-6 py-24 lg:px-12 lg:py-32"><div className="mx-auto max-w-[1200px]"><Reveal><Eyebrow>THE REVENUE WORK</Eyebrow><h2 className="mt-6 max-w-4xl text-balance text-[clamp(2.2rem,5vw,4.75rem)] font-extrabold leading-[.98] tracking-tight">Six categories of work.<br /><span className="font-serif font-normal italic text-gold">One connected system.</span></h2></Reveal><div className="mt-14 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">{categories.map(([Icon, name, items]) => <Reveal key={name} className="bg-background p-7 lg:p-9"><Icon className="size-6 text-gold" aria-hidden="true" /><h3 className="mt-7 text-xl font-bold">{name}</h3><ul className="mt-5 flex flex-col gap-2 text-sm capitalize leading-relaxed text-muted-foreground">{items.map(item => <li key={item}>{item}</li>)}</ul></Reveal>)}</div></div></section>
 
-    <section className="bg-ink px-6 py-24 text-ink-foreground lg:px-12 lg:py-32"><div className="mx-auto max-w-[1200px]"><Reveal><Eyebrow>THE OPERATING SYSTEM</Eyebrow><h2 className="mt-6 max-w-3xl text-balance text-[clamp(2.2rem,5vw,4.75rem)] font-extrabold leading-[.98] tracking-tight">Not another tool.<br /><span className="font-serif font-normal italic text-gold">The connective tissue.</span></h2><p className="mt-8 max-w-2xl text-lg leading-relaxed text-ink-foreground/70">CAROS sits across the revenue lifecycle, connecting the systems, people, conversations, workflows, and data that already drive your business.</p></Reveal><div className="mt-14"><ConnectionDiagram /></div></div></section>
+    <section className="bg-ink px-6 py-24 text-ink-foreground lg:px-12 lg:py-32"><div className="mx-auto max-w-[1200px]"><Reveal><Eyebrow>THE OPERATING SYSTEM</Eyebrow><h2 className="mt-6 max-w-3xl text-balance text-[clamp(2.2rem,5vw,4.75rem)] font-extrabold leading-[.98] tracking-tight">Not another tool.<br /><span className="font-serif font-normal italic text-gold">The connective tissue.</span></h2><p className="mt-8 max-w-2xl text-lg leading-relaxed text-ink-foreground/70">Revenue is the DNA of a business. CAROS connects the systems, people, conversations, workflows, and data that keep it moving.</p></Reveal><div className="mt-14"><ConnectionDiagram /></div></div></section>
 
     <section className="bg-background px-6 py-24 lg:px-12 lg:py-32"><div className="mx-auto max-w-[1200px]"><Reveal><Eyebrow>NOT EVERYTHING HAS A LOGIN</Eyebrow><h2 className="mt-6 max-w-4xl text-balance text-[clamp(2.2rem,5vw,4.75rem)] font-extrabold leading-[.98] tracking-tight">Some of your most expensive systems<br /><span className="font-serif font-normal italic text-gold">are people doing things manually.</span></h2><p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground">If someone on your team is returning missed calls, copying information into spreadsheets, requesting reviews, sending reminders, checking multiple systems, following up with old leads, or building reports by hand, you are already paying for the process.</p></Reveal><div className="mt-14 grid gap-px overflow-hidden bg-border md:grid-cols-2 lg:grid-cols-4">{manualFlows.map(([title, items]) => <div key={title} className="bg-background p-7"><h3 className="font-mono text-xs font-bold uppercase tracking-[.18em] text-gold">{title}</h3><ul className="mt-6 flex flex-col gap-3 text-sm text-muted-foreground">{items.map(item => <li key={item} className="flex items-center gap-2"><ArrowRight className="size-3 text-gold" aria-hidden="true" />{item}</li>)}</ul></div>)}</div><p className="mx-auto mt-12 max-w-3xl text-center text-lg font-semibold leading-relaxed">CAROS automates, coordinates, or supports the work so your people can spend more time on the work that actually requires people.</p></div></section>
 
