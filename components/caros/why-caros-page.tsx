@@ -90,16 +90,24 @@ const networkDetails = [
 
 const planetColors = ["#e6b422", "#d98a3d", "#c9922f", "#e0a838", "#b8791f", "#f0c453"] as const
 
-const HELIX_SPINS = 2.5
+const HELIX_SPINS = 1.75
 const HELIX_AMP = 44
 const HELIX_RUNGS = 24
-const nodeDurations = [40, 64, 48, 72, 56, 44]
+const nodeDurations = [72, 130, 92, 140, 110, 78]
 const nodeOffsets = [0, 0.17, 0.34, 0.5, 0.67, 0.84]
+// Smooth cubic-Bezier spline through the sine, using analytic tangents so the
+// strand flows like a soft ribbon — rounded peaks, no straight segments.
+const HELIX_K = (HELIX_SPINS * Math.PI * 2) / 100
+const helixY = (x: number, phase: number, strand: number) => 50 + HELIX_AMP * Math.sin(HELIX_K * x + phase + strand)
+const helixDY = (x: number, phase: number, strand: number) => HELIX_AMP * HELIX_K * Math.cos(HELIX_K * x + phase + strand)
 const buildHelixPath = (phase: number, strand: number) => {
-  let d = ""
-  for (let x = 0; x <= 100; x += 2) {
-    const y = 50 + HELIX_AMP * Math.sin((x / 100) * HELIX_SPINS * Math.PI * 2 + phase + strand)
-    d += `${x === 0 ? "M" : "L"}${x.toFixed(2)} ${y.toFixed(2)} `
+  const step = 12.5
+  let d = `M0 ${helixY(0, phase, strand).toFixed(2)} `
+  for (let x = 0; x < 100; x += step) {
+    const x1 = x + step
+    const c1x = x + step / 3, c1y = helixY(x, phase, strand) + (step / 3) * helixDY(x, phase, strand)
+    const c2x = x1 - step / 3, c2y = helixY(x1, phase, strand) - (step / 3) * helixDY(x1, phase, strand)
+    d += `C${c1x.toFixed(2)} ${c1y.toFixed(2)} ${c2x.toFixed(2)} ${c2y.toFixed(2)} ${x1.toFixed(2)} ${helixY(x1, phase, strand).toFixed(2)} `
   }
   return d
 }
@@ -165,11 +173,11 @@ function ConnectionDiagram() {
     const frame = (now: number) => {
       const dt = Math.min((now - last) / 1000, 0.05); last = now
       const boost = now < boostUntil.current ? 1.6 : 1
-      wavePhase += dt * 0.25 * boost
+      wavePhase += dt * 0.14 * boost
       nodePhase += dt * boost
       if (pathARef.current) pathARef.current.setAttribute("d", buildHelixPath(wavePhase, 0))
       if (pathBRef.current) pathBRef.current.setAttribute("d", buildHelixPath(wavePhase, Math.PI))
-      const hl = ((nodePhase * 4) % 100)
+      const hl = ((nodePhase * 2) % 100)
       rungRefs.current.forEach((line, k) => {
         if (!line) return
         const x = (k / (HELIX_RUNGS - 1)) * 100
