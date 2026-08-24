@@ -9,18 +9,6 @@ import { cn } from "@/lib/utils"
 const locales = [
   { code: "en", label: "English", short: "EN", flag: "🇺🇸" },
   { code: "es", label: "Español", short: "ES", flag: "🇪🇸" },
-  { code: "fr", label: "Français", short: "FR", flag: "🇫🇷" },
-  { code: "ja", label: "日本語", short: "JA", flag: "🇯🇵" },
-  { code: "zh", label: "中文", short: "ZH", flag: "🇨🇳" },
-  { code: "de", label: "Deutsch", short: "DE", flag: "🇩🇪" },
-  { code: "pl", label: "Polski", short: "PL", flag: "🇵🇱" },
-  { code: "ru", label: "Русский", short: "RU", flag: "🇷🇺" },
-  { code: "sq", label: "Shqip", short: "SQ", flag: "🇦🇱" },
-  { code: "it", label: "Italiano", short: "IT", flag: "🇮🇹" },
-  { code: "ar", label: "العربية", short: "AR", flag: "🇸🇦" },
-  { code: "hi", label: "हिन्दी", short: "HI", flag: "🇮🇳" },
-  { code: "pt-BR", label: "Português (BR)", short: "PT-BR", flag: "🇧🇷" },
-  { code: "pt-PT", label: "Português (PT)", short: "PT-PT", flag: "🇵🇹" },
 ] as const
 
 type LocaleCode = (typeof locales)[number]["code"]
