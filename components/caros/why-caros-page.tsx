@@ -91,10 +91,10 @@ const networkDetails = [
 const planetColors = ["#e6b422", "#d98a3d", "#c9922f", "#e0a838", "#b8791f", "#f0c453"] as const
 
 const HELIX_SPINS = 2.5
-const HELIX_AMP = 22
+const HELIX_AMP = 44
 const HELIX_RUNGS = 24
-const nodeDurations = [9, 15, 11, 17, 13, 10]
-const nodeOffsets = [0, 0.34, 0.62, 0.16, 0.82, 0.48]
+const nodeDurations = [40, 64, 48, 72, 56, 44]
+const nodeOffsets = [0, 0.17, 0.34, 0.5, 0.67, 0.84]
 const buildHelixPath = (phase: number, strand: number) => {
   let d = ""
   for (let x = 0; x <= 100; x += 2) {
@@ -165,18 +165,18 @@ function ConnectionDiagram() {
     const frame = (now: number) => {
       const dt = Math.min((now - last) / 1000, 0.05); last = now
       const boost = now < boostUntil.current ? 1.6 : 1
-      wavePhase += dt * 0.55 * boost
+      wavePhase += dt * 0.25 * boost
       nodePhase += dt * boost
       if (pathARef.current) pathARef.current.setAttribute("d", buildHelixPath(wavePhase, 0))
       if (pathBRef.current) pathBRef.current.setAttribute("d", buildHelixPath(wavePhase, Math.PI))
-      const hl = ((nodePhase * 14) % 100)
+      const hl = ((nodePhase * 4) % 100)
       rungRefs.current.forEach((line, k) => {
         if (!line) return
         const x = (k / (HELIX_RUNGS - 1)) * 100
         const s = HELIX_AMP * Math.sin((x / 100) * HELIX_SPINS * Math.PI * 2 + wavePhase)
         line.setAttribute("x1", String(x)); line.setAttribute("x2", String(x))
         line.setAttribute("y1", String(50 + s)); line.setAttribute("y2", String(50 - s))
-        const near = Math.abs(x - hl); line.setAttribute("opacity", String(0.08 + Math.max(0, 1 - near / 14) * 0.5))
+        const near = Math.abs(x - hl); line.setAttribute("opacity", String(0.06 + Math.max(0, 1 - near / 14) * 0.22))
       })
       networkDetails.forEach((_, i) => {
         const node = nodeRefs.current[i]; if (!node) return
@@ -186,7 +186,7 @@ function ConnectionDiagram() {
         const full = (x / 100) * HELIX_SPINS * Math.PI * 2 + wavePhase + strandPhase[i]
         const y = 50 + HELIX_AMP * Math.sin(full)
         const depth = Math.cos(full)
-        const edge = Math.max(0, Math.min(1, (x - 0) / 8)) * Math.max(0, Math.min(1, (100 - x) / 8))
+        const edge = Math.max(0, Math.min(1, (x - 0) / 12)) * Math.max(0, Math.min(1, (100 - x) / 12))
         const scale = 0.8 + (depth + 1) / 2 * 0.35
         const op = (0.5 + (depth + 1) / 2 * 0.5) * edge * (activeRef.current !== null ? 0.45 : 1)
         node.style.left = `${x}%`; node.style.top = `${y}%`
@@ -218,7 +218,7 @@ function ConnectionDiagram() {
       }
     `}</style>
 
-    <div className="relative mx-auto hidden h-[72vh] min-h-[540px] w-full max-w-[1200px] overflow-hidden sm:block" onClick={(e) => { if (e.target === e.currentTarget) closeAll() }}>
+    <div className="relative mx-auto hidden h-[86vh] min-h-[680px] w-full max-w-[1200px] overflow-hidden sm:block" onClick={(e) => { if (e.target === e.currentTarget) closeAll() }}>
       {/* drifting molecular dust */}
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
         {Array.from({ length: 80 }).map((_, i) => {
@@ -237,10 +237,10 @@ function ConnectionDiagram() {
               <stop offset="0%" stopColor="#B8860B" /><stop offset="50%" stopColor="#D4AF37" /><stop offset="100%" stopColor="#F4D03F" />
             </linearGradient>
           </defs>
-          <g style={{ filter: "drop-shadow(0 0 4px rgba(212,175,55,.65))" }}>
-            {Array.from({ length: HELIX_RUNGS }).map((_, k) => <line key={k} ref={(el) => { rungRefs.current[k] = el }} stroke="rgba(212,175,55,.5)" strokeWidth="1.4" vectorEffect="non-scaling-stroke" opacity="0.1" />)}
-            <path ref={pathBRef} d={buildHelixPath(0, Math.PI)} fill="none" stroke="rgba(184,134,11,.7)" strokeWidth="3" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
-            <path ref={pathARef} d={buildHelixPath(0, 0)} fill="none" stroke="url(#helixGrad)" strokeWidth="4" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
+          <g>
+            {Array.from({ length: HELIX_RUNGS }).map((_, k) => <line key={k} ref={(el) => { rungRefs.current[k] = el }} stroke="rgba(212,175,55,.2)" strokeWidth="1" strokeDasharray="4 4" vectorEffect="non-scaling-stroke" opacity="0.05" />)}
+            <path ref={pathBRef} d={buildHelixPath(0, Math.PI)} fill="none" stroke="rgba(184,134,11,.4)" strokeWidth="1.5" strokeLinecap="round" vectorEffect="non-scaling-stroke" style={{ filter: "drop-shadow(0 0 2px rgba(212,175,55,.4))" }} />
+            <path ref={pathARef} d={buildHelixPath(0, 0)} fill="none" stroke="url(#helixGrad)" strokeWidth="1.75" strokeLinecap="round" vectorEffect="non-scaling-stroke" style={{ filter: "drop-shadow(0 0 3px rgba(212,175,55,.5))" }} />
           </g>
         </svg>
 
@@ -274,11 +274,11 @@ function ConnectionDiagram() {
             >
               <span
                 className="flex items-center justify-center rounded-full transition-shadow duration-300"
-                style={{ width: 50 + i * 4, height: 50 + i * 4, background: `radial-gradient(circle at 34% 30%, ${planetColors[i]}, #B8860B 120%)`, boxShadow: isActive ? "0 0 34px 6px rgba(255,240,200,.85)" : `0 0 22px ${planetColors[i]}aa` }}
+                style={{ width: 100 + i * 8, height: 100 + i * 8, background: `radial-gradient(circle at 34% 30%, ${planetColors[i]}, #B8860B 120%)`, boxShadow: isActive ? "0 0 60px 14px rgba(255,240,200,.85)" : `0 0 44px 4px ${planetColors[i]}aa` }}
               >
-                <Icon className="size-6 text-ink" aria-hidden="true" />
+                <Icon className="size-11 text-ink" aria-hidden="true" />
               </span>
-              <span className="whitespace-nowrap rounded bg-ink/60 px-2 py-0.5 text-sm font-semibold text-ink-foreground backdrop-blur-sm">{name}</span>
+              <span className="whitespace-nowrap rounded bg-ink/60 px-3 py-1 text-lg font-semibold text-ink-foreground backdrop-blur-sm">{name}</span>
             </button>
           </div>
         })}
