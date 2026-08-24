@@ -93,7 +93,7 @@ const planetColors = ["#e6b422", "#d98a3d", "#c9922f", "#e0a838", "#b8791f", "#f
 const HELIX_SPINS = 1.75
 const HELIX_AMP = 44
 const HELIX_RUNGS = 24
-const nodeDurations = [72, 130, 92, 140, 110, 78]
+const nodeDurations = [150, 260, 185, 280, 220, 160]
 const nodeOffsets = [0, 0.17, 0.34, 0.5, 0.67, 0.84]
 // Smooth cubic-Bezier spline through the sine, using analytic tangents so the
 // strand flows like a soft ribbon — rounded peaks, no straight segments.
@@ -173,7 +173,7 @@ function ConnectionDiagram() {
     const frame = (now: number) => {
       const dt = Math.min((now - last) / 1000, 0.05); last = now
       const boost = now < boostUntil.current ? 1.6 : 1
-      wavePhase += dt * 0.14 * boost
+      wavePhase += dt * 0.07 * boost
       nodePhase += dt * boost
       if (pathARef.current) pathARef.current.setAttribute("d", buildHelixPath(wavePhase, 0))
       if (pathBRef.current) pathBRef.current.setAttribute("d", buildHelixPath(wavePhase, Math.PI))
