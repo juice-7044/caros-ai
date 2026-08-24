@@ -1,10 +1,9 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
+import type { CSSProperties } from "react"
 import type { LucideIcon } from "lucide-react"
-import Link from "next/link"
 import {
-  ArrowDown,
   ArrowRight,
   BarChart3,
   Bot,
@@ -81,10 +80,49 @@ function StackTiles() {
   </div>
 }
 
+const networkDetails = [
+  ["Marketing", "Creates and captures demand.", "Lead capture • campaigns • social • forms • attribution"],
+  ["Human Answering", "Makes sure opportunity gets a response.", "Live calls • qualification • routing • after-hours"],
+  ["CRM", "Keeps the customer journey visible.", "Contacts • conversations • pipeline • history"],
+  ["Automation", "Moves work forward without waiting.", "Follow-up • nurture • reminders • workflows"],
+  ["Retention", "Turns customers into repeat revenue and referrals.", "Reviews • reactivation • referrals • repeat business"],
+  ["Revenue Attribution", "Shows what is actually producing revenue.", "Sources • conversion • pipeline value • revenue visibility"],
+] as const
+
 function ConnectionDiagram() {
-  return <div className="relative mx-auto max-w-5xl py-4"><div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-    {categories.map(([Icon, name], i) => <div key={name} className="flex items-center gap-3 border border-ink-foreground/15 bg-ink px-4 py-4 text-sm text-ink-foreground"><Icon className="size-5 shrink-0 text-gold" aria-hidden="true" /><span>{name}</span><ArrowDown className="ml-auto size-4 text-gold lg:hidden" aria-hidden="true" /></div>)}
-  </div><div className="my-8 flex flex-col items-center gap-3"><div className="hidden h-8 w-px bg-gold/60 lg:block" /><div className="flex size-32 flex-col items-center justify-center border-2 border-gold bg-ink text-center shadow-[0_0_0_8px_hsl(var(--gold)/.08)]"><Network className="size-7 text-gold" aria-hidden="true" /><span className="mt-2 font-bold">CAROS</span></div><ArrowDown className="size-5 text-gold" aria-hidden="true" /><div className="border border-gold bg-gold px-12 py-4 font-mono text-sm font-bold tracking-[.2em] text-ink">REVENUE</div></div></div>
+  const [active, setActive] = useState<string | null>(null)
+  const [term, setTerm] = useState("Capture")
+  const sectionRef = useRef<HTMLDivElement>(null)
+  const [assembled, setAssembled] = useState(false)
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => { if (entry.isIntersecting) { setAssembled(true); observer.disconnect() } }, { threshold: 0.18 })
+    if (sectionRef.current) observer.observe(sectionRef.current)
+    return () => observer.disconnect()
+  }, [])
+  useEffect(() => {
+    const terms = ["Capture", "Connect", "Convert", "Retain", "Attribute"]
+    let index = 0
+    const timer = window.setInterval(() => { index = (index + 1) % terms.length; setTerm(terms[index]) }, 2200)
+    return () => window.clearInterval(timer)
+  }, [])
+
+  const nodePositions = [[50, 12], [13, 31], [87, 31], [18, 70], [82, 70], [50, 86]] as const
+  const primaryPaths = nodePositions.map(([x, y]) => `M ${x} ${y} Q 50 48 50 50`)
+  const secondaryPaths = ["M 19 31 Q 16 51 23 67", "M 25 67 Q 50 78 75 67", "M 81 67 Q 84 51 81 31", "M 87 31 Q 69 13 52 12", "M 50 86 Q 33 66 19 31", "M 50 86 Q 73 65 87 31"]
+  const selected = networkDetails.find(([name]) => name === active)
+
+  return <div ref={sectionRef} className={`relative mx-auto min-h-[720px] max-w-6xl overflow-hidden py-10 lg:min-h-[88vh] ${assembled ? "is-assembled" : ""}`}>
+    <style>{`@keyframes caros-dash { to { stroke-dashoffset: -80; } } @keyframes caros-particle { 0% { opacity: 0; offset-distance: 0%; } 15% { opacity: .9; } 85% { opacity: .9; } 100% { opacity: 0; offset-distance: 100%; } } @keyframes caros-pulse { 0%, 100% { opacity: .35; } 50% { opacity: 1; } } .caros-network-path { stroke-dasharray: 3 12; animation: caros-dash 7s linear infinite; } .caros-network-particle { offset-path: path(var(--particle-path)); animation: caros-particle 5s ease-in-out infinite; } .caros-network-node { opacity: 0; transform: scale(.82); transition: opacity .7s ease, transform .7s ease, color .25s ease, border-color .25s ease; } .is-assembled .caros-network-node { opacity: 1; transform: scale(1); } .caros-network-node:nth-child(2) { transition-delay: .2s } .caros-network-node:nth-child(3) { transition-delay: .4s } .caros-network-node:nth-child(4) { transition-delay: .6s } .caros-network-node:nth-child(5) { transition-delay: .8s } .caros-network-node:nth-child(6) { transition-delay: 1s } .caros-network-node:nth-child(7) { transition-delay: 1.2s } @media (prefers-reduced-motion: reduce) { .caros-network-path, .caros-network-particle { animation: none !important; } .caros-network-node { opacity: 1; transform: none; transition: none; } }`}</style>
+    <svg className="pointer-events-none absolute inset-0 size-full" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+      {secondaryPaths.map((path, index) => <path key={path} d={path} pathLength="1" className="caros-network-path" fill="none" stroke="hsl(var(--gold) / .22)" strokeWidth=".18" />)}
+      {primaryPaths.map((path, index) => <g key={path}><path d={path} className={`caros-network-path ${active && active !== networkDetails[index][0] ? "opacity-20" : ""}`} fill="none" stroke="hsl(var(--gold) / .62)" strokeWidth=".34" /><circle r=".65" fill="hsl(var(--gold))" className="caros-network-particle" style={{ "--particle-path": `"${path}"`, animationDelay: `${index * .75}s` } as CSSProperties} /></g>)}
+      <path d="M 50 58 Q 50 70 50 83" className="caros-network-path" fill="none" stroke="hsl(var(--gold) / .85)" strokeWidth=".45" />
+    </svg>
+    {networkDetails.map(([name, sentence], index) => { const [x, y] = nodePositions[index]; const Icon = categories[index][0]; return <button key={name} type="button" onMouseEnter={() => setActive(name)} onMouseLeave={() => setActive(null)} onFocus={() => setActive(name)} onBlur={() => setActive(null)} onClick={() => setActive(active === name ? null : name)} className={`caros-network-node absolute w-[42%] -translate-x-1/2 -translate-y-1/2 border border-ink-foreground/25 bg-ink/90 p-3 text-left text-ink-foreground shadow-[0_0_24px_hsl(var(--gold)/.05)] sm:w-44 sm:p-4 ${active && active !== name ? "opacity-45" : "hover:border-gold"}`} style={{ left: `${x}%`, top: `${y}%` }}><Icon className="size-4 text-gold" aria-hidden="true" /><span className="mt-2 block text-xs font-bold sm:text-sm">{name}</span><span className="mt-1 block text-[10px] leading-relaxed text-ink-foreground/55 sm:text-xs">{categories[index][2].join(" • ")}</span>{active === name && <span className="mt-3 block border-t border-gold/30 pt-2 text-[10px] leading-relaxed text-gold sm:text-xs">{sentence}</span>}</button> })}
+    <div className="caros-network-node absolute left-1/2 top-1/2 flex size-36 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center border-2 border-gold bg-ink text-center shadow-[0_0_0_10px_hsl(var(--gold)/.08),0_0_45px_hsl(var(--gold)/.14)] sm:size-44"><Network className="size-7 text-gold" aria-hidden="true" /><span className="mt-2 text-lg font-extrabold tracking-tight">CAROS</span><span className="mt-1 text-[9px] uppercase tracking-[.16em] text-ink-foreground/55">Revenue Operating System</span><span className="mt-3 font-mono text-[9px] text-gold">{term}</span></div>
+    <div className="caros-network-node absolute left-1/2 top-[96%] flex -translate-x-1/2 -translate-y-full flex-col items-center text-center"><div className="border border-gold bg-gold px-8 py-3 font-mono text-sm font-bold tracking-[.2em] text-ink shadow-[0_0_24px_hsl(var(--gold)/.15)]">REVENUE</div><span className="mt-2 text-[10px] uppercase tracking-[.16em] text-ink-foreground/60">Captured. Converted. Retained.</span></div>
+    {selected && <p className="absolute bottom-0 left-1/2 max-w-xs -translate-x-1/2 text-center text-xs text-gold sm:hidden">{selected[1]}</p>}
+  </div>
 }
 
 export function WhyCarosPage() {
@@ -108,7 +146,7 @@ export function WhyCarosPage() {
 
     <section className="bg-background px-6 py-24 lg:px-12 lg:py-32"><div className="mx-auto max-w-[1000px] text-center"><Reveal><Eyebrow>THE COMPOUNDING EFFECT</Eyebrow><h2 className="mt-6 text-balance text-[clamp(2.2rem,5vw,4.75rem)] font-extrabold leading-[.98] tracking-tight">The system gets stronger<br /><span className="font-serif font-normal italic text-gold">every time it runs.</span></h2><div className="mx-auto mt-14 flex max-w-3xl flex-wrap items-center justify-center gap-3">{["Attention", "Trust", "Revenue", "Retention", "Referrals"].map((item, i, all) => <span key={item} className="flex items-center gap-3"><span className="border border-border px-4 py-3 text-sm font-semibold">{item}</span>{i < all.length - 1 && <ArrowRight className="size-4 text-gold" aria-hidden="true" />}</span>)}</div><p className="mx-auto mt-10 max-w-2xl text-lg leading-relaxed text-muted-foreground">Every interaction creates information the next interaction can use. More context improves follow-up. Better follow-up improves conversion. Better experiences create retention and referrals.</p><p className="mt-6 font-semibold">Every step makes the next one easier.</p></Reveal></div></section>
 
-    <section className="bg-ink px-6 py-24 text-ink-foreground lg:px-12 lg:py-32"><div className="mx-auto max-w-[900px]"><Reveal><Eyebrow>READY WHEN YOU ARE</Eyebrow><h2 className="mt-6 max-w-3xl text-balance text-[clamp(2.4rem,6vw,5.5rem)] font-extrabold leading-[.95] tracking-tight">Stop managing<br /><span className="font-serif font-normal italic text-gold">pieces.</span> Start running revenue.</h2><p className="mt-8 max-w-xl text-lg leading-relaxed text-ink-foreground/70">See where revenue is leaking, where your systems are disconnected, and what CAROS can help consolidate.</p><div className="mt-10 flex flex-wrap gap-4"><AuditButton /><Link href="/contact" className="inline-flex items-center gap-2 border border-ink-foreground/30 px-5 py-3 text-sm font-semibold transition-colors hover:border-gold hover:text-gold">Talk to CAROS <ArrowRight className="size-4" aria-hidden="true" /></Link></div></Reveal></div></section>
+    <section className="bg-ink px-6 py-24 text-ink-foreground lg:px-12 lg:py-32"><div className="mx-auto max-w-[900px]"><Reveal><Eyebrow>READY WHEN YOU ARE</Eyebrow><h2 className="mt-6 max-w-3xl text-balance text-[clamp(2.4rem,6vw,5.5rem)] font-extrabold leading-[.95] tracking-tight">Stop managing<br /><span className="font-serif font-normal italic text-gold">pieces.</span> Start running revenue.</h2><p className="mt-8 max-w-xl text-lg leading-relaxed text-ink-foreground/70">See where revenue is leaking, where your systems are disconnected, and what CAROS can help consolidate.</p><div className="mt-10"><AuditButton /></div></Reveal></div></section>
   </main>
 }
 
