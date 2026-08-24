@@ -14,7 +14,6 @@ import { Process } from "@/components/caros/home/process"
 import { PricingPreview } from "@/components/caros/home/pricing-preview"
 import { Roi } from "@/components/caros/home/roi"
 import { Industries } from "@/components/caros/home/industries"
-import { FoundersSection } from "@/components/caros/home/founders-section"
 import { CtaBand } from "@/components/caros/cta-band"
 import { TrustpilotWidgetLoader } from "@/components/TrustpilotWidgetLoader"
 
@@ -50,7 +49,6 @@ export default function HomePage() {
       <Roi />
       {/* Section 10 — Industries (scrolling) */}
       <Industries />
-      <FoundersSection />
       {/* Section 11 — Final CTA */}
       <CtaBand />
       <section className="border-t border-border/60 bg-background px-6 py-10 sm:px-8">
