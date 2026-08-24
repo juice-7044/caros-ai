@@ -91,9 +91,9 @@ const networkDetails = [
 const planetColors = ["#e6b422", "#d98a3d", "#c9922f", "#e0a838", "#b8791f", "#f0c453"] as const
 
 const HELIX_SPINS = 2.5
-const HELIX_AMP = 22
+const HELIX_AMP = 44
 const HELIX_RUNGS = 24
-const nodeDurations = [20, 32, 24, 36, 28, 22]
+const nodeDurations = [40, 64, 48, 72, 56, 44]
 const nodeOffsets = [0, 0.17, 0.34, 0.5, 0.67, 0.84]
 const buildHelixPath = (phase: number, strand: number) => {
   let d = ""
@@ -165,11 +165,11 @@ function ConnectionDiagram() {
     const frame = (now: number) => {
       const dt = Math.min((now - last) / 1000, 0.05); last = now
       const boost = now < boostUntil.current ? 1.6 : 1
-      wavePhase += dt * 0.275 * boost
+      wavePhase += dt * 0.25 * boost
       nodePhase += dt * boost
       if (pathARef.current) pathARef.current.setAttribute("d", buildHelixPath(wavePhase, 0))
       if (pathBRef.current) pathBRef.current.setAttribute("d", buildHelixPath(wavePhase, Math.PI))
-      const hl = ((nodePhase * 7) % 100)
+      const hl = ((nodePhase * 4) % 100)
       rungRefs.current.forEach((line, k) => {
         if (!line) return
         const x = (k / (HELIX_RUNGS - 1)) * 100
@@ -218,7 +218,7 @@ function ConnectionDiagram() {
       }
     `}</style>
 
-    <div className="relative mx-auto hidden h-[72vh] min-h-[540px] w-full max-w-[1200px] overflow-hidden sm:block" onClick={(e) => { if (e.target === e.currentTarget) closeAll() }}>
+    <div className="relative mx-auto hidden h-[86vh] min-h-[680px] w-full max-w-[1200px] overflow-hidden sm:block" onClick={(e) => { if (e.target === e.currentTarget) closeAll() }}>
       {/* drifting molecular dust */}
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
         {Array.from({ length: 80 }).map((_, i) => {
