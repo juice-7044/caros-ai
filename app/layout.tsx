@@ -137,7 +137,7 @@ const structuredData = {
       audience: {
         "@type": "BusinessAudience",
         audienceType:
-          "Local service businesses — roofing, HVAC, plumbing, electrical, cleaning, landscaping, and more",
+          "Service businesses — roofing, HVAC, plumbing, electrical, cleaning, landscaping, and more",
       },
       featureList: [
         "Customer Acquisition — lead capture from ads, forms, chat, SMS, and missed-call text back",

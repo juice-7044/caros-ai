@@ -10,7 +10,7 @@ import { CtaBand } from "@/components/caros/cta-band"
 export const metadata: Metadata = {
   title: "Industries",
   description:
-    "CAROS is built for home-service and local businesses — roofing, HVAC, plumbing, electrical, cleaning, landscaping and more — where a missed call is a missed job.",
+    "CAROS is built for home-service businesses — roofing, HVAC, plumbing, electrical, cleaning, landscaping and more — where a missed call is a missed job.",
 }
 
 const fits = [

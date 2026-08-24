@@ -7,7 +7,7 @@ export const FOUNDERS = [
     role: "Founder",
     photo: "/founder-carly.png",
     objectPosition: "30% 40%",
-    bio: "Carly spent her career at the intersection of go-to-market strategy and revenue operations — scaling how companies acquire customers and turn spend into measurable revenue. She founded CAROS after watching hard-working local owners pour money into marketing with no way to see what came back, and leads it with one rule: sophisticated technology, delivered as an extremely simple experience.",
+    bio: "Carly spent her career at the intersection of go-to-market strategy and revenue operations — scaling how companies acquire customers and turn spend into measurable revenue. She founded CAROS after watching hard-working business owners pour money into marketing with no way to see what came back, and leads it with one rule: sophisticated technology, delivered as an extremely simple experience.",
   },
   {
     name: "Ann Lemond-Hume",

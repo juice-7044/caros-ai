@@ -18,8 +18,8 @@ export function FoundersSection() {
 
         <Reveal delay={100}>
           <p className="mt-12 max-w-3xl border-l-2 border-gold pl-6 text-lg text-muted-foreground">
-            Local businesses deserve to know where their customers come from, where opportunities are being lost, and
-            where every dollar comes from.
+            Businesses deserve to know where their customers come from, where opportunities are being lost, and where
+            every dollar comes from.
           </p>
         </Reveal>
       </div>
