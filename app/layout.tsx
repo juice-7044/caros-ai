@@ -27,7 +27,7 @@ const jetbrainsMono = JetBrains_Mono({
 const SITE_URL = "https://getcaros.com"
 
 const SITE_DESCRIPTION =
-  "CAROS is the Customer Acquisition & Revenue Operating System for local service businesses. Capture every lead, book more jobs with human answering, retain customers, and connect your marketing spend to the calls, jobs, and revenue it actually produces."
+  "CAROS is the Customer Acquisition & Revenue Operating System for service businesses. Capture every lead, book more jobs with human answering, retain customers, and connect your marketing spend to the calls, jobs, and revenue it actually produces."
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -137,7 +137,7 @@ const structuredData = {
       audience: {
         "@type": "BusinessAudience",
         audienceType:
-          "Local service businesses — roofing, HVAC, plumbing, electrical, cleaning, landscaping, and more",
+          "Service businesses — roofing, HVAC, plumbing, electrical, cleaning, landscaping, and more",
       },
       featureList: [
         "Customer Acquisition — lead capture from ads, forms, chat, SMS, and missed-call text back",
@@ -182,6 +182,24 @@ export default function RootLayout({
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
+        <Script id="caros-affiliate-manager" strategy="beforeInteractive">
+          {`(function() {
+  var t = document.createElement("script");
+  t.type = "text/javascript";
+  t.async = true;
+  t.src = "https://links.getcaros.com/js/am.js";
+  t.onload = t.onreadystatechange = function() {
+    var state = this.readyState;
+    if (!state || state === "complete" || state === "loaded") {
+      try {
+        affiliateManager.init("ZdY2U5V9iKnh7Y7IUj1e", "https://backend.leadconnectorhq.com", ".getcaros.com");
+      } catch (_) {}
+    }
+  };
+  var first = document.getElementsByTagName("script")[0];
+  first.parentNode.insertBefore(t, first);
+})();`}
+        </Script>
         <Script
           id="google-tag-manager"
           strategy="beforeInteractive"

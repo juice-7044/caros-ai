@@ -20,7 +20,7 @@ const problems = [
   },
   {
     stat: "62%",
-    label: "of local businesses",
+    label: "of businesses",
     body: "can't name their best-performing lead source with confidence.",
   },
   {

@@ -3,6 +3,7 @@ export const NAV_LINKS = [
   { labelKey: "howItWorks", href: "/how-it-works" },
   { labelKey: "included", href: "/whats-included" },
   { labelKey: "marketingRoi", href: "/marketing-roi" },
+  { labelKey: "whyCaros", href: "/why-caros" },
   { labelKey: "industries", href: "/industries" },
   { labelKey: "pricing", href: "/pricing" },
   { labelKey: "about", href: "/about" },
@@ -56,6 +57,15 @@ export const INDUSTRIES = [
   "Flooring",
   "General Contracting",
   "Pool Services",
+  "Medical Practices",
+  "Wellness Spas",
+  "Insurance Brokerage",
+  "Law Firms",
+  "Financial Services",
+  "Party & Event Rentals",
+  "Travel Agents",
+  "Real Estate",
+  "Events & Retreats",
 ]
 
 export const PILLARS = [

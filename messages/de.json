@@ -14,7 +14,8 @@
     "menu": "Menu",
     "toggleMenu": "Toggle menu",
     "businessInsights": "Business Insights",
-    "freeAudit": "Free Business Audit"
+    "freeAudit": "Free Business Audit",
+    "whyCaros": "Warum CAROS"
   },
   "footer": {
     "product": "Product",
@@ -359,7 +360,7 @@
     },
     "industries": {
       "eyebrow": "Who It's For",
-      "headline": "Built for local service businesses."
+      "headline": "Entwickelt für Dienstleistungsunternehmen."
     },
     "pricingPreview": {
       "eyebrow": "One Price. One System."
@@ -397,7 +398,7 @@
       "eyebrow": "About CAROS",
       "title": "We built the revenue clarity",
       "serifTitle": "big companies take for granted.",
-      "subtitle": "CAROS gives local owners the same command over their revenue that enterprises pay fortunes for — without the complexity, the consultants, or the revenue share.",
+      "subtitle": "CAROS gives business owners the same command over their revenue that enterprises pay fortunes for — without the complexity, the consultants, or the revenue share.",
       "story": "Our Story",
       "storyTitle": "It started with a simple, frustrating question.",
       "beliefs": "What We Believe",
@@ -432,7 +433,7 @@
       "eyebrow": "Industries",
       "title": "Built for the businesses where",
       "serifTitle": "a missed call is a missed job.",
-      "subtitle": "CAROS was designed for home-service and local businesses — the ones that live by the phone, follow-up, and reputation.",
+      "subtitle": "CAROS was designed for home-service and businesses — the ones that live by the phone, follow-up, and reputation.",
       "who": "Who It Is For",
       "whoTitle": "If you run one of these, revenue is leaking somewhere right now.",
       "fits": "Why It Fits",
