@@ -90,93 +90,215 @@ const networkDetails = [
 
 const planetColors = ["#e6b422", "#d98a3d", "#c9922f", "#e0a838", "#b8791f", "#f0c453"] as const
 
+const HELIX_SPINS = 2.5
+const HELIX_AMP = 22
+const HELIX_RUNGS = 24
+const nodeDurations = [9, 15, 11, 17, 13, 10]
+const nodeOffsets = [0, 0.34, 0.62, 0.16, 0.82, 0.48]
+const buildHelixPath = (phase: number, strand: number) => {
+  let d = ""
+  for (let x = 0; x <= 100; x += 2) {
+    const y = 50 + HELIX_AMP * Math.sin((x / 100) * HELIX_SPINS * Math.PI * 2 + phase + strand)
+    d += `${x === 0 ? "M" : "L"}${x.toFixed(2)} ${y.toFixed(2)} `
+  }
+  return d
+}
+
 function ConnectionDiagram() {
   const [active, setActive] = useState<number | null>(null)
+  const [locked, setLocked] = useState(false)
+  const [card, setCard] = useState<{ x: number; y: number } | null>(null)
   const [entered, setEntered] = useState(false)
+  const [reduced, setReduced] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)
-  const paused = active !== null
+  const nodeRefs = useRef<(HTMLDivElement | null)[]>([])
+  const rungRefs = useRef<(SVGLineElement | null)[]>([])
+  const pathARef = useRef<SVGPathElement | null>(null)
+  const pathBRef = useRef<SVGPathElement | null>(null)
+  const posRef = useRef(networkDetails.map(() => ({ x: 50, y: 50 })))
+  const activeRef = useRef<number | null>(null)
+  const boostUntil = useRef(0)
+  const strandPhase = networkDetails.map((_, i) => (i % 2) * Math.PI)
 
+  useEffect(() => { activeRef.current = active }, [active])
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)")
+    const apply = () => setReduced(mq.matches)
+    apply(); mq.addEventListener("change", apply)
+    return () => mq.removeEventListener("change", apply)
+  }, [])
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => { if (entry.isIntersecting) { setEntered(true); observer.disconnect() } }, { threshold: 0.15 })
     if (sectionRef.current) observer.observe(sectionRef.current)
     return () => observer.disconnect()
   }, [])
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setActive(null) }
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") { setLocked(false); setActive(null); setCard(null) } }
     window.addEventListener("keydown", onKey)
     return () => window.removeEventListener("keydown", onKey)
   }, [])
 
-  // Orbit radius as a percentage of the stage's half-size, plus per-planet orbital period.
-  const orbits = networkDetails.map((_, i) => ({ radius: 18 + i * 5.4, duration: 12 + i * 3.5, start: (i * 360) / networkDetails.length }))
+  const activate = (i: number) => { setActive(i); setCard({ ...posRef.current[i] }) }
 
-  return <div ref={sectionRef} className={`relative w-full ${entered ? "solar-entered" : ""}`} onClick={(e) => { if (e.target === e.currentTarget) setActive(null) }}>
+  // Static placement for reduced-motion / entrance frame.
+  useEffect(() => {
+    if (!reduced) return
+    const xs = [8, 24, 40, 60, 76, 92]
+    networkDetails.forEach((_, i) => {
+      const node = nodeRefs.current[i]; if (!node) return
+      const x = xs[i]
+      const full = (x / 100) * HELIX_SPINS * Math.PI * 2 + strandPhase[i]
+      const y = 50 + HELIX_AMP * Math.sin(full)
+      const depth = Math.cos(full)
+      node.style.left = `${x}%`; node.style.top = `${y}%`
+      node.style.transform = `translate(-50%,-50%) scale(${(0.85 + (depth + 1) / 2 * 0.3).toFixed(3)})`
+      node.style.opacity = String(0.6 + (depth + 1) / 2 * 0.4); node.style.zIndex = String(Math.round((depth + 1) * 40))
+      posRef.current[i] = { x, y }
+    })
+    if (pathARef.current) pathARef.current.setAttribute("d", buildHelixPath(0, 0))
+    if (pathBRef.current) pathBRef.current.setAttribute("d", buildHelixPath(0, Math.PI))
+  }, [reduced])
+
+  useEffect(() => {
+    if (!entered || reduced) return
+    let raf = 0, last = performance.now(), wavePhase = 0, nodePhase = 0
+    const frame = (now: number) => {
+      const dt = Math.min((now - last) / 1000, 0.05); last = now
+      const boost = now < boostUntil.current ? 1.6 : 1
+      wavePhase += dt * 0.55 * boost
+      nodePhase += dt * boost
+      if (pathARef.current) pathARef.current.setAttribute("d", buildHelixPath(wavePhase, 0))
+      if (pathBRef.current) pathBRef.current.setAttribute("d", buildHelixPath(wavePhase, Math.PI))
+      const hl = ((nodePhase * 14) % 100)
+      rungRefs.current.forEach((line, k) => {
+        if (!line) return
+        const x = (k / (HELIX_RUNGS - 1)) * 100
+        const s = HELIX_AMP * Math.sin((x / 100) * HELIX_SPINS * Math.PI * 2 + wavePhase)
+        line.setAttribute("x1", String(x)); line.setAttribute("x2", String(x))
+        line.setAttribute("y1", String(50 + s)); line.setAttribute("y2", String(50 - s))
+        const near = Math.abs(x - hl); line.setAttribute("opacity", String(0.08 + Math.max(0, 1 - near / 14) * 0.5))
+      })
+      networkDetails.forEach((_, i) => {
+        const node = nodeRefs.current[i]; if (!node) return
+        if (activeRef.current === i) { node.style.transform = "translate(-50%,-50%) scale(1.32)"; node.style.opacity = "1"; node.style.zIndex = "60"; return }
+        const p = ((nodePhase / nodeDurations[i]) + nodeOffsets[i]) % 1
+        const x = p * 112 - 6
+        const full = (x / 100) * HELIX_SPINS * Math.PI * 2 + wavePhase + strandPhase[i]
+        const y = 50 + HELIX_AMP * Math.sin(full)
+        const depth = Math.cos(full)
+        const edge = Math.max(0, Math.min(1, (x - 0) / 8)) * Math.max(0, Math.min(1, (100 - x) / 8))
+        const scale = 0.8 + (depth + 1) / 2 * 0.35
+        const op = (0.5 + (depth + 1) / 2 * 0.5) * edge * (activeRef.current !== null ? 0.45 : 1)
+        node.style.left = `${x}%`; node.style.top = `${y}%`
+        node.style.transform = `translate(-50%,-50%) scale(${scale.toFixed(3)})`
+        node.style.opacity = op.toFixed(3); node.style.zIndex = String(Math.round((depth + 1) * 40))
+        posRef.current[i] = { x, y }
+      })
+      raf = requestAnimationFrame(frame)
+    }
+    raf = requestAnimationFrame(frame)
+    return () => cancelAnimationFrame(raf)
+  }, [entered, reduced])
+
+  const closeAll = () => { setLocked(false); setActive(null); setCard(null) }
+
+  return <div ref={sectionRef} className="relative w-full">
     <style>{`
-      @keyframes solar-orbit { to { transform: rotate(360deg); } }
-      @keyframes solar-counter { to { transform: rotate(-360deg); } }
-      @keyframes solar-pulse { 0%,100% { transform: scale(1); box-shadow: 0 0 60px 12px hsl(var(--gold) / .35), 0 0 120px 40px hsl(var(--gold) / .12); } 50% { transform: scale(1.06); box-shadow: 0 0 80px 20px hsl(var(--gold) / .5), 0 0 150px 60px hsl(var(--gold) / .18); } }
-      @keyframes solar-twinkle { 0%,100% { opacity: .2; } 50% { opacity: .9; } }
-      @keyframes solar-flow { to { stroke-dashoffset: -40; } }
-      .solar-ring, .solar-orbit-track { opacity: 0; transition: opacity 1s ease; }
-      .solar-entered .solar-ring, .solar-entered .solar-orbit-track { opacity: 1; }
-      .solar-orbit-track { animation: solar-orbit linear infinite; }
-      .solar-planet-spin { animation: solar-counter linear infinite; }
-      .solar-planet { opacity: 0; transform: scale(0); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.8,.2,1); }
-      .solar-entered .solar-planet { opacity: 1; transform: scale(1); }
-      .solar-sun { animation: solar-pulse 2.5s ease-in-out infinite; }
-      .solar-flow-line { stroke-dasharray: 2 6; animation: solar-flow 1.25s linear infinite; }
-      .solar-star { animation: solar-twinkle var(--tw,4s) ease-in-out infinite; }
-      .solar-paused .solar-orbit-track, .solar-paused .solar-planet-spin, .solar-paused .solar-sun { animation-play-state: paused; }
+      @keyframes helix-core { 0%,100% { transform: translate(-50%,-50%) scale(1); } 50% { transform: translate(-50%,-50%) scale(1.09); } }
+      @keyframes helix-sonar { 0% { transform: translate(-50%,-50%) scale(1); opacity: .5; } 100% { transform: translate(-50%,-50%) scale(3.4); opacity: 0; } }
+      @keyframes helix-dust { 0%,100% { transform: translate(0,0); opacity: .1; } 50% { transform: translate(var(--dx), var(--dy)); opacity: .55; } }
+      @keyframes helix-drift { 0%,100% { transform: translateX(-16px); } 50% { transform: translateX(16px); } }
+      .helix-core { animation: helix-core 3s ease-in-out infinite; }
+      .helix-sonar { animation: helix-sonar 3.4s ease-out infinite; }
+      .helix-dust { animation: helix-dust var(--dur,9s) ease-in-out infinite; }
+      .helix-stage-inner { animation: helix-drift 10s ease-in-out infinite; }
+      .helix-node { opacity: 0; will-change: transform, opacity; }
       @media (prefers-reduced-motion: reduce) {
-        .solar-orbit-track, .solar-planet-spin, .solar-sun, .solar-star, .solar-flow-line { animation: none !important; }
-        .solar-planet { opacity: 1; transform: scale(1); }
+        .helix-core, .helix-sonar, .helix-dust, .helix-stage-inner { animation: none !important; }
       }
     `}</style>
 
-    <div className={`relative mx-auto hidden aspect-square w-full max-w-[760px] sm:block ${paused ? "solar-paused" : ""}`}>
-      {/* Starfield */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        {Array.from({ length: 40 }).map((_, i) => { const seed = (i * 977) % 100; const seed2 = (i * 613) % 100; return <span key={i} className="solar-star absolute rounded-full bg-ink-foreground" style={{ left: `${seed}%`, top: `${seed2}%`, width: i % 5 === 0 ? 2.5 : 1.5, height: i % 5 === 0 ? 2.5 : 1.5, ["--tw" as string]: `${3 + (i % 4)}s`, animationDelay: `${i * 0.2}s` }} aria-hidden="true" /> })}
+    <div className="relative mx-auto hidden h-[72vh] min-h-[540px] w-full max-w-[1200px] overflow-hidden sm:block" onClick={(e) => { if (e.target === e.currentTarget) closeAll() }}>
+      {/* drifting molecular dust */}
+      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+        {Array.from({ length: 80 }).map((_, i) => {
+          const x = (i * 71) % 100, y = (i * 47 + 13) % 100
+          const dx = `${((i % 7) - 3) * 6}px`, dy = `${((i % 5) - 2) * 8}px`
+          const gold = i % 3 === 0
+          return <span key={i} className="helix-dust absolute rounded-full" style={{ left: `${x}%`, top: `${y}%`, width: gold ? 2 : 1.4, height: gold ? 2 : 1.4, background: gold ? "rgba(212,175,55,.7)" : "rgba(255,255,255,.5)", ["--dx" as string]: dx, ["--dy" as string]: dy, ["--dur" as string]: `${7 + (i % 6)}s`, animationDelay: `${(i % 10) * 0.4}s` }} />
+        })}
       </div>
 
-      {/* Orbit rings */}
-      {orbits.map((o, i) => <div key={`ring-${i}`} className={`solar-ring absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border ${active === i ? "border-gold/60" : "border-ink-foreground/12"}`} style={{ width: `${o.radius * 2}%`, height: `${o.radius * 2}%`, transitionDelay: `${i * 90}ms` }} aria-hidden="true" />)}
+      <div className={`absolute inset-0 ${reduced ? "" : "helix-stage-inner"}`}>
+        {/* helix strands + rungs */}
+        <svg className="absolute inset-0 size-full" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="helixGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stopColor="#B8860B" /><stop offset="50%" stopColor="#D4AF37" /><stop offset="100%" stopColor="#F4D03F" />
+            </linearGradient>
+          </defs>
+          <g style={{ filter: "drop-shadow(0 0 4px rgba(212,175,55,.65))" }}>
+            {Array.from({ length: HELIX_RUNGS }).map((_, k) => <line key={k} ref={(el) => { rungRefs.current[k] = el }} stroke="rgba(212,175,55,.5)" strokeWidth="1.4" vectorEffect="non-scaling-stroke" opacity="0.1" />)}
+            <path ref={pathBRef} d={buildHelixPath(0, Math.PI)} fill="none" stroke="rgba(184,134,11,.7)" strokeWidth="3" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
+            <path ref={pathARef} d={buildHelixPath(0, 0)} fill="none" stroke="url(#helixGrad)" strokeWidth="4" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
+          </g>
+        </svg>
 
-      {/* Data-flow lines from sun to active planet */}
-      {active !== null && <svg className="pointer-events-none absolute inset-0 size-full" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r={orbits[active].radius} fill="none" stroke="hsl(var(--gold) / .5)" strokeWidth=".4" className="solar-flow-line" /></svg>}
+        {/* CAROS nucleus */}
+        <div className="absolute left-1/2 top-1/2 z-30 -translate-x-1/2 -translate-y-1/2" aria-hidden="true">
+          {[0, 1, 2].map((r) => <span key={r} className="helix-sonar absolute left-1/2 top-1/2 size-[140px] rounded-full border border-gold/40" style={{ animationDelay: `${r * 1.1}s` }} />)}
+        </div>
+        <div
+          className="helix-core absolute left-1/2 top-1/2 z-30 flex size-[140px] flex-col items-center justify-center rounded-full text-center"
+          style={{ background: "radial-gradient(circle at 38% 32%, #F4D03F, #D4AF37 45%, #B8860B 100%)", boxShadow: "0 0 50px 10px rgba(212,175,55,.55), 0 0 120px 30px rgba(212,175,55,.2)" }}
+          onMouseEnter={() => { boostUntil.current = performance.now() + 2000 }}
+        >
+          <span className="font-serif text-3xl font-bold italic text-white" style={{ textShadow: "0 1px 8px rgba(0,0,0,.45)" }}>CAROS</span>
+          <span className="mt-1 px-3 font-mono text-[9px] uppercase leading-tight tracking-[.18em] text-white/85">Revenue Operating System</span>
+        </div>
 
-      {/* Orbiting planets */}
-      {orbits.map((o, i) => {
-        const [name] = networkDetails[i]
-        const Icon = categories[i][0]
-        const dim = active !== null && active !== i
-        const startDelay = -(o.start / 360) * o.duration
-        return <div key={`orbit-${i}`} className="solar-orbit-track absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" style={{ width: `${o.radius * 2}%`, height: `${o.radius * 2}%`, animationDuration: `${o.duration}s`, animationDelay: `${startDelay}s` }}>
-          <div className="solar-planet absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2" style={{ transitionDelay: `${300 + i * 120}ms` }}>
-            <div className="solar-planet-spin" style={{ animationDuration: `${o.duration}s`, animationDelay: `${startDelay}s` }}>
-              <button type="button" aria-label={`${name} — ${categories[i][1]}`} aria-expanded={active === i} onMouseEnter={() => setActive(i)} onFocus={() => setActive(i)} onClick={() => setActive(active === i ? null : i)} className={`group relative flex flex-col items-center gap-1.5 outline-none transition-opacity ${dim ? "opacity-40" : "opacity-100"}`}>
-                <span className="flex items-center justify-center rounded-full transition-transform group-hover:scale-110 group-focus-visible:scale-110" style={{ width: 56 + i * 6, height: 56 + i * 6, background: `radial-gradient(circle at 32% 28%, ${planetColors[i]}, hsl(var(--ink)) 130%)`, boxShadow: `0 0 30px ${planetColors[i]}aa, inset -6px -6px 14px rgba(0,0,0,.55)` }}><Icon className="size-7 text-ink" aria-hidden="true" /></span>
-                <span className="whitespace-nowrap rounded bg-ink/70 px-2 py-0.5 text-xs font-semibold text-ink-foreground backdrop-blur-sm">{name}</span>
-              </button>
-            </div>
+        {/* traveling nodes */}
+        {networkDetails.map(([name], i) => {
+          const Icon = categories[i][0]
+          const isActive = active === i
+          return <div key={i} ref={(el) => { nodeRefs.current[i] = el }} className="helix-node absolute left-1/2 top-1/2">
+            <button
+              type="button"
+              aria-label={`${name} — ${categories[i][1]}`}
+              aria-expanded={isActive}
+              onMouseEnter={() => { if (!locked) activate(i) }}
+              onMouseLeave={() => { if (!locked) { setActive(null); setCard(null) } }}
+              onFocus={() => activate(i)}
+              onClick={() => { if (locked && active === i) closeAll(); else { setLocked(true); activate(i) } }}
+              className="group relative flex flex-col items-center gap-1.5 outline-none"
+            >
+              <span
+                className="flex items-center justify-center rounded-full transition-shadow duration-300"
+                style={{ width: 50 + i * 4, height: 50 + i * 4, background: `radial-gradient(circle at 34% 30%, ${planetColors[i]}, #B8860B 120%)`, boxShadow: isActive ? "0 0 34px 6px rgba(255,240,200,.85)" : `0 0 22px ${planetColors[i]}aa` }}
+              >
+                <Icon className="size-6 text-ink" aria-hidden="true" />
+              </span>
+              <span className="whitespace-nowrap rounded bg-ink/60 px-2 py-0.5 text-sm font-semibold text-ink-foreground backdrop-blur-sm">{name}</span>
+            </button>
           </div>
-        </div>
-      })}
+        })}
 
-      {/* Sun / CAROS core */}
-      <div className="absolute left-1/2 top-1/2 flex size-[22%] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full">
-        <div className="solar-sun flex size-full flex-col items-center justify-center rounded-full bg-gold text-center text-ink">
-          <span className="font-serif text-lg font-bold italic leading-none sm:text-2xl">CAROS</span>
-          <span className="mt-1 px-2 font-mono text-[7px] uppercase leading-tight tracking-[.14em] text-ink/80 sm:text-[8px]">Revenue Operating System</span>
-        </div>
+        {/* glassmorphism detail card */}
+        {active !== null && card && <div
+          className="absolute z-[70] w-[280px] border border-gold/50 bg-ink/70 p-5 text-left text-ink-foreground shadow-[0_0_50px_rgba(212,175,55,.2)] backdrop-blur-xl"
+          style={{ top: `${Math.min(Math.max(card.y, 20), 74)}%`, transform: "translateY(-50%)", ...(card.x < 50 ? { left: `calc(${card.x}% + 60px)` } : { right: `calc(${100 - card.x}% + 60px)` }) }}
+        >
+          <p className="text-sm font-bold text-gold">{networkDetails[active][0]}</p>
+          <p className="mt-2 text-sm leading-relaxed text-ink-foreground/85">{networkDetails[active][1]}</p>
+          <ul className="mt-3 space-y-1 border-t border-ink-foreground/15 pt-3 text-xs leading-relaxed text-ink-foreground/65">
+            {networkDetails[active][2].slice(0, 4).map((it) => <li key={it} className="flex items-center gap-2"><span className="size-1 rounded-full bg-gold" aria-hidden="true" />{it}</li>)}
+          </ul>
+        </div>}
       </div>
 
-      {/* Active planet detail card */}
-      {active !== null && <div className="absolute bottom-0 left-1/2 z-20 w-[min(320px,80%)] -translate-x-1/2 border border-gold/40 bg-ink/95 p-5 text-left text-ink-foreground shadow-[0_0_40px_hsl(var(--gold)/.15)] backdrop-blur">
-        <span className="flex items-center gap-2 text-sm font-bold text-gold">{networkDetails[active][0]}</span>
-        <p className="mt-2 text-sm leading-relaxed text-ink-foreground/85">{networkDetails[active][1]}</p>
-        <p className="mt-3 border-t border-ink-foreground/15 pt-3 text-xs leading-relaxed text-ink-foreground/60">{networkDetails[active][2].join(" • ")}</p>
-      </div>}
+      {/* edge fade masks */}
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-40 w-[12%] bg-gradient-to-r from-ink to-transparent" aria-hidden="true" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-40 w-[12%] bg-gradient-to-l from-ink to-transparent" aria-hidden="true" />
     </div>
 
     {/* Mobile: planetary stack */}
