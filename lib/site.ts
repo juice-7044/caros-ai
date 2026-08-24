@@ -56,6 +56,15 @@ export const INDUSTRIES = [
   "Flooring",
   "General Contracting",
   "Pool Services",
+  "Medical Practices",
+  "Wellness Spas",
+  "Insurance Brokerage",
+  "Law Firms",
+  "Financial Services",
+  "Party & Event Rentals",
+  "Travel Agents",
+  "Real Estate",
+  "Events & Retreats",
 ]
 
 export const PILLARS = [

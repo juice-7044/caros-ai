@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import {useTranslations} from "next-intl"
 import Image from "next/image"
 import { PageHero, Eyebrow } from "@/components/caros/ui-bits"
-import { Founders } from "@/components/caros/founders"
 import { Reveal } from "@/components/caros/reveal"
 import { CtaBand } from "@/components/caros/cta-band"
 
@@ -88,20 +87,6 @@ export default function AboutPage() {
                 <p className="mt-4 leading-relaxed text-muted-foreground">{b.body}</p>
               </Reveal>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-background py-24 lg:py-32">
-        <div className="mx-auto max-w-[1100px] px-6 lg:px-12">
-          <Reveal>
-            <Eyebrow>{t("leadership")}</Eyebrow>
-            <h2 className="mt-6 max-w-3xl text-balance text-[clamp(2rem,4vw,3.25rem)] font-extrabold leading-[1.02] tracking-tight">
-              The people behind the system.
-            </h2>
-          </Reveal>
-          <div className="mt-16">
-            <Founders variant="light" />
           </div>
         </div>
       </section>
