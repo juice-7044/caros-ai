@@ -108,7 +108,7 @@ function ConnectionDiagram() {
   }, [])
 
   // Orbit radius as a percentage of the stage's half-size, plus per-planet orbital period.
-  const orbits = networkDetails.map((_, i) => ({ radius: 20 + i * 6, duration: 24 + i * 7, start: (i * 360) / networkDetails.length }))
+  const orbits = networkDetails.map((_, i) => ({ radius: 18 + i * 5.4, duration: 12 + i * 3.5, start: (i * 360) / networkDetails.length }))
 
   return <div ref={sectionRef} className={`relative w-full ${entered ? "solar-entered" : ""}`} onClick={(e) => { if (e.target === e.currentTarget) setActive(null) }}>
     <style>{`
@@ -123,8 +123,8 @@ function ConnectionDiagram() {
       .solar-planet-spin { animation: solar-counter linear infinite; }
       .solar-planet { opacity: 0; transform: scale(0); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.8,.2,1); }
       .solar-entered .solar-planet { opacity: 1; transform: scale(1); }
-      .solar-sun { animation: solar-pulse 5s ease-in-out infinite; }
-      .solar-flow-line { stroke-dasharray: 2 6; animation: solar-flow 2.5s linear infinite; }
+      .solar-sun { animation: solar-pulse 2.5s ease-in-out infinite; }
+      .solar-flow-line { stroke-dasharray: 2 6; animation: solar-flow 1.25s linear infinite; }
       .solar-star { animation: solar-twinkle var(--tw,4s) ease-in-out infinite; }
       .solar-paused .solar-orbit-track, .solar-paused .solar-planet-spin, .solar-paused .solar-sun { animation-play-state: paused; }
       @media (prefers-reduced-motion: reduce) {
@@ -155,8 +155,8 @@ function ConnectionDiagram() {
           <div className="solar-planet absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2" style={{ transitionDelay: `${300 + i * 120}ms` }}>
             <div className="solar-planet-spin" style={{ animationDuration: `${o.duration}s`, animationDelay: `${startDelay}s` }}>
               <button type="button" aria-label={`${name} — ${categories[i][1]}`} aria-expanded={active === i} onMouseEnter={() => setActive(i)} onFocus={() => setActive(i)} onClick={() => setActive(active === i ? null : i)} className={`group relative flex flex-col items-center gap-1.5 outline-none transition-opacity ${dim ? "opacity-40" : "opacity-100"}`}>
-                <span className="flex items-center justify-center rounded-full transition-transform group-hover:scale-110 group-focus-visible:scale-110" style={{ width: 28 + i * 3, height: 28 + i * 3, background: `radial-gradient(circle at 32% 28%, ${planetColors[i]}, hsl(var(--ink)) 130%)`, boxShadow: `0 0 16px ${planetColors[i]}88, inset -3px -3px 8px rgba(0,0,0,.55)` }}><Icon className="size-3.5 text-ink" aria-hidden="true" /></span>
-                <span className="whitespace-nowrap rounded bg-ink/70 px-1.5 text-[10px] font-semibold text-ink-foreground backdrop-blur-sm">{name}</span>
+                <span className="flex items-center justify-center rounded-full transition-transform group-hover:scale-110 group-focus-visible:scale-110" style={{ width: 56 + i * 6, height: 56 + i * 6, background: `radial-gradient(circle at 32% 28%, ${planetColors[i]}, hsl(var(--ink)) 130%)`, boxShadow: `0 0 30px ${planetColors[i]}aa, inset -6px -6px 14px rgba(0,0,0,.55)` }}><Icon className="size-7 text-ink" aria-hidden="true" /></span>
+                <span className="whitespace-nowrap rounded bg-ink/70 px-2 py-0.5 text-xs font-semibold text-ink-foreground backdrop-blur-sm">{name}</span>
               </button>
             </div>
           </div>
