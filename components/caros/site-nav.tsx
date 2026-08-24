@@ -21,6 +21,7 @@ export function SiteNav() {
     "/how-it-works": t("howItWorks"),
     "/whats-included": t("included"),
     "/marketing-roi": t("marketingRoi"),
+    "/why-caros": "Why CAROS",
     "/industries": t("industries"),
     "/pricing": t("pricing"),
     "/about": t("about"),

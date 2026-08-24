@@ -3,6 +3,7 @@ export const NAV_LINKS = [
   { labelKey: "howItWorks", href: "/how-it-works" },
   { labelKey: "included", href: "/whats-included" },
   { labelKey: "marketingRoi", href: "/marketing-roi" },
+  { labelKey: "whyCaros", href: "/why-caros" },
   { labelKey: "industries", href: "/industries" },
   { labelKey: "pricing", href: "/pricing" },
   { labelKey: "about", href: "/about" },
