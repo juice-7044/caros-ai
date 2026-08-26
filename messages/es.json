@@ -45,11 +45,12 @@
   },
   "HomePage": {
     "hero": {
-      "insightsCta": "Información empresarial gratuita",
-      "auditCta": "Generar mi auditoría empresarial gratuita",
+      "insightsCta": "Explorar recursos gratuitos",
+      "auditCta": "Obtener un diagnóstico gratuito",
+      "demoCta": "Reservar una demo",
       "auditNote": "Descubre dónde existen, se fugan y podrían capturarse tus ingresos.",
       "notReady": "¿Aún no quieres reservar?",
-      "freeAuditCta": "Tarda 2 minutos en generar una auditoría empresarial gratuita",
+      "freeAuditCta": "Explorar recursos gratuitos",
       "exampleNote": "Panel ilustrativo de CAROS · Datos de ejemplo con fines demostrativos",
       "categories": [
         "Adquisición de clientes",

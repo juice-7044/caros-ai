@@ -66,6 +66,7 @@ export const INDUSTRIES = [
   "Travel Agents",
   "Real Estate",
   "Events & Retreats",
+  "Coaching & Professional Services",
 ]
 
 export const PILLARS = [

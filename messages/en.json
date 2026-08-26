@@ -45,11 +45,12 @@
   },
   "HomePage": {
     "hero": {
-      "insightsCta": "Free Business Insights",
-      "auditCta": "Generate My Free Business Audit",
+      "insightsCta": "Explore Free Resources",
+      "auditCta": "Get a Free Diagnostic",
+      "demoCta": "Book a Demo",
       "auditNote": "See where revenue exists, leaks, and could be captured.",
       "notReady": "Not ready to book?",
-      "freeAuditCta": "Take 2-Minutes to Generate a Free Business Audit",
+      "freeAuditCta": "Explore Free Resources",
       "exampleNote": "Illustrative CAROS dashboard · Example data for demonstration purposes",
       "categories": [
         "Customer Acquisition",
