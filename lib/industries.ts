@@ -292,6 +292,35 @@ function make(t: Tokens, b: Bespoke): IndustryContent {
   }
 }
 
+const coachingProfessionalServices = make(
+  { trade: "Coaching & Professional Services", label: "Coaching & Professional Services", slug: "coaching-professional-services", customers: "prospects", customer: "prospect", job: "engagement", jobs: "engagements", estimate: "proposal", estimates: "proposals", tech: "advisor", techs: "advisors", site: "practice", callWord: "inquiry", bookLabel: "signed engagements" },
+  {
+    heroEyebrow: "Industry Solution — Coaching & Professional Services",
+    heroTitle: "Turn More Expertise Into Predictable",
+    heroTitleSerif: "Revenue.",
+    heroSub: "CAROS helps coaches, consultants, agencies, and professional-service businesses capture opportunities, follow up consistently, understand which marketing is producing revenue, and build a more visible, repeatable path from lead to client.",
+    trustRow: ["Coaches", "Consultants", "Agencies", "Fractional Leaders", "Advisory Firms"],
+    metaTitle: "CAROS for Coaching & Professional Services | Turn Expertise Into Revenue",
+    metaDescription: "CAROS helps coaches, consultants, agencies, and professional-service businesses capture opportunities, follow up consistently, and connect marketing to client revenue.",
+    keywords: ["coach lead follow up", "consultant marketing ROI", "agency pipeline", "professional services revenue"],
+    problemTitle: "Your expertise may not be the problem.", problemTitleSerif: "Your revenue process might be.",
+    problemIntro: "Expertise-driven businesses lose momentum between the inquiry, discovery call, proposal, and signed engagement. When the process depends on memory, valuable opportunities quietly disappear.",
+    mattersWhen: ["Leads arrive from multiple channels with no single view of revenue.", "Discovery calls are booked but prospects fail to show.", "Proposals go out without systematic follow-up.", "Long sales cycles and untracked referrals hide the best opportunities.", "Existing clients are not consistently nurtured for renewals, upsells, or referrals."].map((detail) => ({ label: detail.split(" ").slice(0, 3).join(" "), detail })),
+    problemClose: { text: "CAROS makes the path from expertise to client", gold: "visible and repeatable." },
+    leaksIntro: "Revenue leaks through unanswered inquiries, slow response, no-shows, forgotten proposals, leads without a next action, weak renewals, untracked referrals, and unclear marketing ROI.",
+    leaks: ["Unanswered inquiries", "Slow lead response", "Discovery-call no-shows", "Inconsistent proposal follow-up", "Forgotten previous prospects", "Weak renewal processes", "Untracked referrals", "Poor marketing ROI visibility"],
+    leaksClose: "A full calendar today does not guarantee a healthy pipeline tomorrow.",
+    journeyIntro: "See the entire path from attention to revenue — and where the next opportunity is waiting.",
+    journey: ["Marketing Spend", "Lead", "Discovery Call", "Proposal", "Client", "Revenue", "Renewal / Upsell / Referral"], journeyEndLabel: "Client Revenue & Expansion",
+    signatureEyebrow: "Marketing Attribution & Client Growth", signatureTitle: "Stop asking which channel generated the most leads.", signatureTitleSerif: "Ask which created the most valuable clients.",
+    signatureBody: ["Clicks, form fills, downloads, and booked calls only tell part of the story. CAROS connects marketing activity to conversations, proposals, clients, and revenue.", "With one visible process, you can see which offers, campaigns, channels, and referral sources create the clients worth keeping."], signatureListLabel: "Where CAROS keeps professional-services revenue moving", signatureUseCases: ["Multi-channel lead capture", "Discovery call reminders", "Proposal follow-up", "Referral tracking", "Client renewal nurture", "Upsell and reactivation campaigns", "Marketing attribution"],
+    metrics: [{ value: "100%", label: "of opportunities visible", highlight: true }, { value: "1", label: "path from lead to client" }, { value: "24/7", label: "follow-up coverage" }], questions: ["Which channel creates our best clients?", "Where are proposals stalling?", "Who needs a next action?", "Which clients are ready for renewal or referral?"], recoveredText: "Every recovered opportunity gives your expertise another chance to become revenue.",
+    experienceTitle: "Deliver a client experience that feels as thoughtful as your expertise.", experienceTitleSerif: "From first contact to renewal.",
+    faq: [{ q: "Who is this for?", a: "CAROS is built for coaches, consultants, agencies, fractional leaders, and other expertise-driven professional-service businesses." }, { q: "Does CAROS replace our CRM?", a: "CAROS can organize and strengthen the revenue process around the tools your team already uses." }],
+    ctaHeadline: "Find out where revenue may be slipping through your pipeline.", ctaSub: "A CAROS Revenue Audit shows you where opportunities stall and what it would take to build a more predictable path from lead to client.", acquisitionItems: ["Website, social, and referral capture", "Discovery-call conversion", "Offer and campaign attribution", "Lead-source reporting"],
+  },
+)
+
 /* ==========================================================================
    ROOFING
    ========================================================================== */
@@ -3264,6 +3293,7 @@ const insuranceBrokerage = make(
    ========================================================================== */
 
 export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
+  "coaching-professional-services": coachingProfessionalServices,
   "home-services": homeServices,
   roofing,
   hvac,

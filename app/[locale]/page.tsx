@@ -11,7 +11,6 @@ import { Retention } from "@/components/caros/home/retention"
 import { Lifecycle } from "@/components/caros/home/lifecycle"
 import { View360 } from "@/components/caros/home/view-360"
 import { Process } from "@/components/caros/home/process"
-import { PricingPreview } from "@/components/caros/home/pricing-preview"
 import { Roi } from "@/components/caros/home/roi"
 import { Industries } from "@/components/caros/home/industries"
 import { CtaBand } from "@/components/caros/cta-band"
@@ -43,9 +42,7 @@ export default function HomePage() {
       <View360 />
       {/* Section 7 — How it works */}
       <Process />
-      {/* Section 8 — Pricing */}
-      <PricingPreview />
-      {/* Section 9 — ROI calculator */}
+      {/* Section 8 — ROI calculator */}
       <Roi />
       {/* Section 10 — Industries (scrolling) */}
       <Industries />

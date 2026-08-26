@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { useTranslations } from "next-intl"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
-import { AUDIT_HREF, AUDIT_LABEL, INSIGHTS_URL, INSIGHTS_LABEL, PRODUCT_TAGLINE } from "@/lib/site"
+import { AUDIT_URL, PRODUCT_TAGLINE } from "@/lib/site"
 import { AnimatedGlobe } from "@/components/caros/animated-globe"
 
 export function Hero() {
@@ -100,19 +100,21 @@ export function Hero() {
           >
             <div className="flex flex-col items-start gap-4 sm:flex-row lg:items-end lg:justify-end">
               <a
-                href={INSIGHTS_URL}
+                href={AUDIT_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex h-14 items-center gap-2 rounded-full bg-gold px-8 text-base font-semibold text-gold-foreground transition-all duration-300 hover:bg-gold/90"
               >
-                {t("insightsCta")}
+                {t("auditCta")}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
               <Link
-                href={AUDIT_HREF}
+                href="https://getcaros.com/revenue-audit"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex h-14 items-center gap-2 rounded-full border border-foreground/20 px-8 text-base font-medium text-foreground transition-all duration-300 hover:bg-foreground/5"
               >
-                {t("auditCta")}
+                {t("demoCta")}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
@@ -122,7 +124,7 @@ export function Hero() {
             <p className="text-sm text-muted-foreground lg:text-right">
               {t("notReady")} 
               <a
-                href="https://free-revenue-audit.getcarosai.com"
+                href="/resources"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-1 font-semibold text-gold underline-offset-4 hover:underline"
