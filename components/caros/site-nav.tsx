@@ -6,8 +6,7 @@ import { Link, usePathname } from "@/i18n/routing"
 import { LanguageSwitcher } from "@/components/LanguageSwitcher"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { NAV_LINKS,   INSIGHTS_URL,
- DIAGNOSTIC_HREF, DIAGNOSTIC_LABEL } from "@/lib/site"
+import { NAV_LINKS, INSIGHTS_URL, DIAGNOSTIC_HREF, DIAGNOSTIC_LABEL } from "@/lib/site"
 import { INDUSTRY_NAV } from "@/lib/industries"
 import { Logo } from "./logo"
 
