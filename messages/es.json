@@ -10,8 +10,8 @@
     "about": "Acerca de",
     "insights": "Información empresarial",
     "diagnostic": "Auditoría empresarial gratuita",
-    "getStarted": "Get Started",
-    "menu": "Menu",
+    "getStarted": "Comenzar",
+    "menu": "Menú",
     "toggleMenu": "Alternar menú",
     "businessInsights": "Información empresarial",
     "freeAudit": "Auditoría empresarial gratuita",
@@ -20,7 +20,7 @@
   "footer": {
     "product": "Producto",
     "company": "Empresa",
-    "resources": "Recursos",
+    "resources": "RECURSOS GRATUITOS",
     "legal": "Legal",
     "included": "Qué incluye",
     "pricing": "Precios",
@@ -29,6 +29,7 @@
     "about": "Acerca de",
     "faq": "Preguntas frecuentes",
     "careers": "Carreras",
+    "freeResources": "Recursos Gratuitos",
     "freeInsights": "Información empresarial gratuita",
     "marketingRoi": "ROI de marketing",
     "privacy": "Privacidad",
@@ -36,7 +37,7 @@
     "tagline": "Convierte más clientes potenciales en ingresos reservados. Creado para empresas de servicios.",
     "headquarters": "Sede central",
     "rights": "Todos los derechos reservados.",
-    "contact": "Contact",
+    "contact": "Contacto",
     "industries": "Industrias",
     "freeAudit": "Auditoría empresarial gratuita"
   },
@@ -456,17 +457,23 @@
       "breakEven": "The Break-Even Math"
     }
   },
-  "calculator": {
-    "averageJobValue": "Average Job Value",
-    "missedCalls": "Missed Calls / Month",
-    "closeRate": "Close Rate",
-    "atRisk": "Estimated revenue currently at risk"
+"calculator": {
+ "averageJobValue": "Valor promedio del trabajo",
+ "missedCalls": "Llamadas perdidas / mes",
+ "closeRate": "Tasa de cierre",
+ "atRisk": "Ingresos estimados actualmente en riesgo",
+ "atRiskDescription": "Según tus llamadas perdidas y tu tasa de cierre: ingresos que se pierden antes de que alguien haga seguimiento.",
+ "payback": "CAROS se paga al ayudar a recuperar solo",
+ "job": "trabajo",
+ "jobs": "trabajos",
+ "perMonth": "al mes",
+ "auditButton": "Ver tu auditoría de ingresos"
   },
   "common": {
     "cta": {
-      "headline": "Let's find out where your revenue is leaking.",
-      "sub": "Find out where you're losing revenue — and what it would take to keep it.",
-      "button": "Generate My Free Business Audit"
+"headline": "Descubramos por dónde se están fugando tus ingresos.",
+  "sub": "Descubre dónde estás perdiendo ingresos y qué puedes hacer para conservarlos.",
+  "button": "Generar mi auditoría empresarial gratuita"
     }
   },
   "pillars": {
@@ -535,5 +542,22 @@
         "And more, connected for you"
       ]
     }
+  },
+  "ResourcesPage": {
+    "hero": { "eyebrow": "RECURSOS GRATUITOS", "title": "Herramientas para ver dónde funcionan tus ingresos y dónde no.", "serifTitle": "", "subtitle": "Explora los recursos gratuitos de CAROS para comprender tu proceso de ingresos, medir tu inversión en marketing, descubrir oportunidades perdidas y tomar decisiones de crecimiento mejor informadas." },
+    "section": { "eyebrow": "Aprende, mide, crece", "title": "Respuestas útiles para las preguntas de ingresos que importan." },
+    "comingSoon": "Próximamente",
+    "cards": {
+      "insights": { "title": "Información", "body": "Perspectivas prácticas sobre operaciones de ingresos, gestión de clientes potenciales, automatización, atribución de marketing, seguimiento de clientes y los sistemas que los conectan.", "cta": "Explorar información" },
+      "marketingRoi": { "title": "ROI de marketing", "body": "Descubre cómo tu inversión en marketing se conecta con clientes potenciales, oportunidades, clientes e ingresos para entender mejor qué hacen tus recursos de marketing.", "cta": "Explorar ROI de marketing" },
+      "audit": { "title": "Auditoría empresarial gratuita", "body": "Obtén una imagen más clara de dónde pueden perderse ingresos en la gestión de clientes potenciales, el seguimiento, el marketing, el recorrido del cliente y el proceso de ingresos.", "cta": "Obtener mi auditoría empresarial gratuita" },
+      "coming": { "title": "Próximamente habrá más recursos gratuitos", "body": "Estamos creando más herramientas, guías y recursos para ayudar a las empresas de servicios a comprender y mejorar sus operaciones de ingresos." }
+    }
+  },
+  "HowItWorksSteps": {
+    "audit": { "tag": "Auditoría", "title": "Auditamos tu proceso de ingresos.", "body": "¿De dónde llegan tus clientes potenciales? ¿Quién responde el teléfono? ¿Dónde se pierden oportunidades sin que nadie lo note?" },
+    "build": { "tag": "Construcción", "title": "Construimos tu CAROS.", "body": "Flujos telefónicos, CRM, automatizaciones, pipeline e informes, configurados según tu forma real de trabajar." },
+    "launch": { "tag": "Lanzamiento", "title": "CAROS se convierte en parte de tu día a día.", "body": "Funciona junto a tu forma actual de trabajar. Tus clientes no tienen que aprender nada nuevo." },
+    "optimize": { "tag": "Optimización", "title": "Los informes semanales muestran qué funciona y qué se está perdiendo.", "body": "Ajustamos continuamente el sistema para que el próximo dólar de marketing se destine donde mejor funciona." }
   }
 }
