@@ -13,17 +13,17 @@ const standardFeatures = ["Revenue operating system", "Marketing attribution", "
 const medicalFeatures = ["HIPAA-enabled HighLevel environment", "Business Associate Agreement (BAA) support", "Encryption for protected health information", "Access controls and user permissions", "Audit logging", "Multi-factor authentication enforcement", "HIPAA-enabled CRM and communication workflows", "Medical-specific revenue operations and automation", "Marketing attribution and revenue intelligence configured with healthcare data-handling requirements in mind"]
 const financeFeatures = ["CAROS Revenue Operating System", "Marketing attribution", "Revenue intelligence and reporting", "Lead and opportunity management", "Client communication workflows", "Automated follow-up", "Pipeline management", "Communications capture and archiving infrastructure", "Global Relay or Smarsh integration, based on client requirements", "Configuration for supported communication channels established during implementation", "CAROS-managed compliance technology infrastructure as applicable to the selected configuration"]
 
-function FeatureList({ items }: { items: string[] }) {
-  return <ul className="flex flex-col gap-3 text-sm leading-relaxed text-ink-foreground/85">{items.map((item) => <li key={item} className="flex items-start gap-3"><Check className="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true" /><span>{item}</span></li>)}</ul>
+function FeatureList({ items, featured = false }: { items: string[]; featured?: boolean }) {
+  return <ul className={`flex flex-col gap-3 text-sm leading-relaxed ${featured ? "text-ink-foreground" : "text-foreground"}`}>{items.map((item) => <li key={item} className="flex items-start gap-3"><Check className="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true" /><span>{item}</span></li>)}</ul>
 }
 
 function PriceCard({ kicker, title, implementation, monthly, description, features, featured = false }: { kicker: string; title: string; implementation: string; monthly: string; description: string; features: string[]; featured?: boolean }) {
   return <article className={`flex min-h-full flex-col rounded-2xl border p-7 ${featured ? "border-gold bg-ink text-ink-foreground shadow-[0_0_50px_hsl(var(--gold)/.14)]" : "border-border bg-card"}`}>
-    <span className={`text-sm font-bold uppercase tracking-[0.14em] ${featured ? "text-gold" : "text-muted-foreground"}`}>{kicker}</span>
+    <span className={`text-sm font-semibold uppercase tracking-[0.16em] ${featured ? "text-gold" : "text-foreground"}`}>{kicker}</span>
     <h3 className={`mt-3 text-2xl font-extrabold ${featured ? "text-ink-foreground" : "text-foreground"}`}>{title}</h3>
-    <p className={`mt-4 text-sm ${featured ? "text-ink-muted" : "text-muted-foreground"}`}>{description}</p>
-    <div className="mt-8 flex flex-col gap-2 border-y border-current/15 py-5"><span className="text-sm uppercase tracking-[0.12em] text-muted-foreground">Implementation</span><strong className={`text-3xl ${featured ? "text-gold" : "text-foreground"}`}>{implementation}</strong><span className="text-sm uppercase tracking-[0.12em] text-muted-foreground">Monthly service</span><strong className={`text-3xl ${featured ? "text-foreground" : "text-foreground"}`}>{monthly}</strong></div>
-    <div className="mt-7"><FeatureList items={features} /></div>
+    <p className={`mt-4 text-sm leading-relaxed ${featured ? "text-ink-foreground" : "text-foreground"}`}>{description}</p>
+    <div className={`mt-8 flex flex-col gap-2 border-y py-5 ${featured ? "border-ink-border" : "border-border"}`}><span className={`text-sm font-semibold uppercase tracking-[0.14em] ${featured ? "text-ink-foreground" : "text-muted-foreground"}`}>Implementation</span><strong className={`text-3xl ${featured ? "text-gold" : "text-foreground"}`}>{implementation}</strong><span className={`text-sm font-semibold uppercase tracking-[0.14em] ${featured ? "text-ink-foreground" : "text-muted-foreground"}`}>Monthly service</span><strong className={`text-3xl ${featured ? "text-ink-foreground" : "text-foreground"}`}>{monthly}</strong></div>
+    <div className="mt-7"><FeatureList items={features} featured={featured} /></div>
     <a href="https://getcaros.com/revenue-audit" target="_blank" rel="noopener noreferrer" className={`mt-8 inline-flex h-12 items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold ${featured ? "bg-gold text-gold-foreground hover:bg-gold/90" : "border border-gold text-gold hover:bg-gold/10"}`}>Book a Demo <ArrowUpRight className="size-4" aria-hidden="true" /></a>
   </article>
 }
