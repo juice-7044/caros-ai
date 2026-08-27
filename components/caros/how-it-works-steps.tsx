@@ -1,29 +1,14 @@
+import { useTranslations } from "next-intl"
 import { Reveal } from "./reveal"
 
-const steps = [
-  {
-    tag: "Audit",
-    title: "We audit your revenue process.",
-    body: "Where do leads come from? Who answers the phone? Where are opportunities quietly getting lost?",
-  },
-  {
-    tag: "Build",
-    title: "We build your CAROS.",
-    body: "Phone workflows, CRM, automations, pipeline, and reporting — configured around how you actually work.",
-  },
-  {
-    tag: "Launch",
-    title: "CAROS becomes part of your day-to-day.",
-    body: "It runs alongside how you already work. Nothing new for your customers to learn.",
-  },
-  {
-    tag: "Optimize",
-    title: "Weekly reporting identifies what's working and what's leaking.",
-    body: "We keep tightening the system so the next marketing dollar goes where it performs best.",
-  },
-]
-
 export function HowItWorksSteps({ variant = "light" }: { variant?: "light" | "dark" }) {
+  const t = useTranslations("HowItWorksSteps")
+  const steps = [
+    { tag: t("audit.tag"), title: t("audit.title"), body: t("audit.body") },
+    { tag: t("build.tag"), title: t("build.title"), body: t("build.body") },
+    { tag: t("launch.tag"), title: t("launch.title"), body: t("launch.body") },
+    { tag: t("optimize.tag"), title: t("optimize.title"), body: t("optimize.body") },
+  ]
   const dark = variant === "dark"
   return (
     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">

@@ -6,7 +6,7 @@ import { Link, usePathname } from "@/i18n/routing"
 import { LanguageSwitcher } from "@/components/LanguageSwitcher"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { NAV_LINKS, INSIGHTS_URL, INSIGHTS_LABEL, DIAGNOSTIC_HREF, DIAGNOSTIC_LABEL } from "@/lib/site"
+import { NAV_LINKS, INSIGHTS_URL, DIAGNOSTIC_HREF, DIAGNOSTIC_LABEL } from "@/lib/site"
 import { INDUSTRY_NAV } from "@/lib/industries"
 import { Logo } from "./logo"
 
@@ -21,7 +21,7 @@ export function SiteNav() {
     "/how-it-works": t("howItWorks"),
     "/whats-included": t("included"),
     "/marketing-roi": t("marketingRoi"),
-    "/why-caros": "Why CAROS",
+    "/why-caros": t("whyCaros"),
     "/industries": t("industries"),
     "/pricing": t("pricing"),
     "/about": t("about"),
@@ -175,7 +175,7 @@ export function SiteNav() {
                 scrolled ? "h-9 px-4 text-xs" : "h-11 px-5 text-sm",
               )}
             >
-              {INSIGHTS_LABEL}
+              {t("businessInsights")}
             </a>
           </div>
 
@@ -285,7 +285,7 @@ export function SiteNav() {
           onClick={() => setOpen(false)}
           className="inline-flex h-14 items-center justify-center rounded-full bg-gold text-base font-semibold text-gold-foreground"
         >
-          {INSIGHTS_LABEL}
+          {t("businessInsights")}
         </a>
       </div>
     </header>

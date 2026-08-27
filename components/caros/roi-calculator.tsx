@@ -85,19 +85,19 @@ export function RoiCalculator({ className }: { className?: string }) {
             <span className="text-2xl text-ink-muted">/mo</span>
           </p>
           <p className="mt-4 text-sm leading-relaxed text-ink-muted">
-            Based on your missed calls and close rate — revenue walking out the door before anyone follows up.
+            {t("atRiskDescription")}
           </p>
         </div>
 
         <div className="border-t border-ink-border pt-6">
           <p className="text-lg leading-relaxed text-ink-foreground">
-            CAROS pays for itself by helping recover just{" "}
+            {t("payback")} {" "}
             <span className="font-bold text-gold">
-              {jobsToCover} {jobsToCover === 1 ? "job" : "jobs"}
+              {jobsToCover} {jobsToCover === 1 ? t("job") : t("jobs")}
             </span>{" "}
-            per month.
+            {t("perMonth")}.
           </p>
-          <AuditButton className="mt-6 w-full" label="See Your Revenue Audit" href={AUDIT_URL} external />
+          <AuditButton className="mt-6 w-full" label={t("auditButton")} href={AUDIT_URL} external />
         </div>
       </div>
     </div>

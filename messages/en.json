@@ -20,7 +20,7 @@
   "footer": {
     "product": "Product",
     "company": "Company",
-    "resources": "Resources",
+    "resources": "FREE Resources",
     "legal": "Legal",
     "included": "What's Included",
     "pricing": "Pricing",
@@ -29,6 +29,7 @@
     "about": "About",
     "faq": "FAQ",
     "careers": "Careers",
+    "freeResources": "Free Resources",
     "freeInsights": "Free Business Insights",
     "marketingRoi": "Marketing ROI",
     "privacy": "Privacy",
@@ -460,7 +461,13 @@
     "averageJobValue": "Average Job Value",
     "missedCalls": "Missed Calls / Month",
     "closeRate": "Close Rate",
-    "atRisk": "Estimated revenue currently at risk"
+    "atRisk": "Estimated revenue currently at risk",
+  "atRiskDescription": "Based on your missed calls and close rate — revenue walking out the door before anyone follows up.",
+  "payback": "CAROS pays for itself by helping recover just",
+  "job": "job",
+  "jobs": "jobs",
+  "perMonth": "per month",
+  "auditButton": "See Your Revenue Audit"
   },
   "common": {
     "cta": {
@@ -535,5 +542,22 @@
         "And more, connected for you"
       ]
     }
+  },
+  "ResourcesPage": {
+    "hero": { "eyebrow": "FREE RESOURCES", "title": "Tools to help you see where your revenue is working — and where it isn't.", "serifTitle": "", "subtitle": "Explore free CAROS resources designed to help you understand your revenue process, measure your marketing investment, uncover missed opportunities, and make better-informed growth decisions." },
+    "section": { "eyebrow": "Learn, measure, grow", "title": "Useful answers for the revenue questions that matter." },
+    "comingSoon": "Coming Soon",
+    "cards": {
+      "insights": { "title": "Insights", "body": "Practical perspectives on revenue operations, lead management, automation, marketing attribution, customer follow-up, and the systems that connect them.", "cta": "Explore Insights" },
+      "marketingRoi": { "title": "Marketing ROI", "body": "See how your marketing investment connects to leads, opportunities, customers, and revenue so you can better understand what your marketing dollars are doing.", "cta": "Explore Marketing ROI" },
+      "audit": { "title": "Free Business Audit", "body": "Get a clearer picture of where revenue may be leaking across your lead handling, follow-up, marketing, customer journey, and revenue process.", "cta": "Get My Free Business Audit" },
+      "coming": { "title": "More Free Resources Are Coming", "body": "We're building additional tools, guides, and resources to help service businesses better understand and improve their revenue operations." }
+    }
+  },
+  "HowItWorksSteps": {
+    "audit": { "tag": "Audit", "title": "We audit your revenue process.", "body": "Where do leads come from? Who answers the phone? Where are opportunities quietly getting lost?" },
+    "build": { "tag": "Build", "title": "We build your CAROS.", "body": "Phone workflows, CRM, automations, pipeline, and reporting — configured around how you actually work." },
+    "launch": { "tag": "Launch", "title": "CAROS becomes part of your day-to-day.", "body": "It runs alongside how you already work. Nothing new for your customers to learn." },
+    "optimize": { "tag": "Optimize", "title": "Weekly reporting identifies what's working and what's leaking.", "body": "We keep tightening the system so the next marketing dollar goes where it performs best." }
   }
 }

@@ -39,6 +39,7 @@ const columns = [
   {
     titleKey: "resources",
     links: [
+      { key: "freeResources", href: "/resources" },
       { key: "freeInsights", href: INSIGHTS_URL, external: true },
       { key: "marketingRoi", href: "/marketing-roi" },
       { key: "freeAudit", href: AUDIT_URL, external: true },
