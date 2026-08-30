@@ -21,6 +21,9 @@
     "product": "Producto",
     "company": "Empresa",
     "resources": "RECURSOS GRATUITOS",
+    "freeTools": "Herramientas gratuitas",
+    "revenueLeakageCalculator": "Calculadora de fugas de ingresos",
+    "workflowCostTool": "Herramienta de costos de flujo de trabajo",
     "legal": "Legal",
     "included": "Qué incluye",
     "pricing": "Precios",
@@ -551,7 +554,9 @@
       "insights": { "title": "Información", "body": "Perspectivas prácticas sobre operaciones de ingresos, gestión de clientes potenciales, automatización, atribución de marketing, seguimiento de clientes y los sistemas que los conectan.", "cta": "Explorar información" },
       "marketingRoi": { "title": "ROI de marketing", "body": "Descubre cómo tu inversión en marketing se conecta con clientes potenciales, oportunidades, clientes e ingresos para entender mejor qué hacen tus recursos de marketing.", "cta": "Explorar ROI de marketing" },
       "audit": { "title": "Auditoría empresarial gratuita", "body": "Obtén una imagen más clara de dónde pueden perderse ingresos en la gestión de clientes potenciales, el seguimiento, el marketing, el recorrido del cliente y el proceso de ingresos.", "cta": "Obtener mi auditoría empresarial gratuita" },
-      "coming": { "title": "Próximamente habrá más recursos gratuitos", "body": "Estamos creando más herramientas, guías y recursos para ayudar a las empresas de servicios a comprender y mejorar sus operaciones de ingresos." }
+      "coming": { "title": "Próximamente habrá más recursos gratuitos", "body": "Estamos creando más herramientas, guías y recursos para ayudar a las empresas de servicios a comprender y mejorar sus operaciones de ingresos." },
+      "revenueLeakage": { "title": "Calculadora de fugas de ingresos", "body": "Cuantifica los ingresos mensuales en riesgo por llamadas perdidas, seguimiento lento, clientes potenciales perdidos y atribución deficiente.", "cta": "Usar calculadora" },
+      "workflowCost": { "title": "Herramienta de costos de flujo de trabajo", "body": "Calcula el costo oculto de los procesos manuales y las tareas administrativas repetitivas en nómina, contratistas y gestión.", "cta": "Calcular costo" }
     }
   },
   "HowItWorksSteps": {

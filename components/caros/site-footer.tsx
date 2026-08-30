@@ -46,6 +46,13 @@ const columns = [
     ],
   },
   {
+    titleKey: "freeTools",
+    links: [
+      { key: "revenueLeakageCalculator", href: "https://revenue-leakage-calculator.getcaros.com", external: true },
+      { key: "workflowCostTool", href: "https://tools-workflow-cost.getcaros.com", external: true },
+    ],
+  },
+  {
     titleKey: "legal",
     links: [
       { key: "privacy", href: "/privacy" },
