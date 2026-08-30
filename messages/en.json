@@ -21,6 +21,9 @@
     "product": "Product",
     "company": "Company",
     "resources": "FREE Resources",
+    "freeTools": "Free Tools",
+    "revenueLeakageCalculator": "Revenue Leakage Calculator",
+    "workflowCostTool": "Workflow Cost Tool",
     "legal": "Legal",
     "included": "What's Included",
     "pricing": "Pricing",
@@ -551,7 +554,9 @@
       "insights": { "title": "Insights", "body": "Practical perspectives on revenue operations, lead management, automation, marketing attribution, customer follow-up, and the systems that connect them.", "cta": "Explore Insights" },
       "marketingRoi": { "title": "Marketing ROI", "body": "See how your marketing investment connects to leads, opportunities, customers, and revenue so you can better understand what your marketing dollars are doing.", "cta": "Explore Marketing ROI" },
       "audit": { "title": "Free Business Audit", "body": "Get a clearer picture of where revenue may be leaking across your lead handling, follow-up, marketing, customer journey, and revenue process.", "cta": "Get My Free Business Audit" },
-      "coming": { "title": "More Free Resources Are Coming", "body": "We're building additional tools, guides, and resources to help service businesses better understand and improve their revenue operations." }
+      "coming": { "title": "More Free Resources Are Coming", "body": "We're building additional tools, guides, and resources to help service businesses better understand and improve their revenue operations." },
+      "revenueLeakage": { "title": "Revenue Leakage Calculator", "body": "Quantify monthly revenue at risk from missed calls, slow follow-up, lost leads, and poor attribution.", "cta": "Use Calculator" },
+      "workflowCost": { "title": "Workflow Cost Tool", "body": "Calculate the hidden cost of manual workflows and administrative busywork across payroll, contractor hours, and management time.", "cta": "Calculate Workflow Cost" }
     }
   },
   "HowItWorksSteps": {

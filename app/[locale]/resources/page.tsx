@@ -17,6 +17,8 @@ export default async function ResourcesPage() {
     { title: t("cards.insights.title"), body: t("cards.insights.body"), cta: t("cards.insights.cta"), href: "https://free-revenue-insights.getcarosai.com", icon: BookOpen, external: true },
     { title: t("cards.marketingRoi.title"), body: t("cards.marketingRoi.body"), cta: t("cards.marketingRoi.cta"), href: "/marketing-roi", icon: Calculator },
     { title: t("cards.audit.title"), body: t("cards.audit.body"), cta: t("cards.audit.cta"), href: AUDIT_URL, icon: Gauge, external: true, gold: true },
+    { title: t("cards.revenueLeakage.title"), body: t("cards.revenueLeakage.body"), cta: t("cards.revenueLeakage.cta"), href: "https://revenue-leakage-calculator.getcaros.com", icon: Calculator, external: true },
+    { title: t("cards.workflowCost.title"), body: t("cards.workflowCost.body"), cta: t("cards.workflowCost.cta"), href: "https://tools-workflow-cost.getcaros.com", icon: Gauge, external: true },
     { title: t("cards.coming.title"), body: t("cards.coming.body"), cta: t("comingSoon"), href: "#", icon: Sparkles, soon: true },
   ]
   return (
