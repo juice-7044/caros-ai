@@ -16,7 +16,7 @@
     "businessInsights": "Business Insights",
     "freeAudit": "Free Business Audit",
     "whyCaros": "Why CAROS",
-    "affiliates": "Affiliate Program"
+    "affiliates": "Affiliates"
   },
   "footer": {
     "product": "Product",
@@ -43,7 +43,8 @@
     "rights": "All rights reserved.",
     "contact": "Contact",
     "industries": "Industries",
-    "freeAudit": "Free Business Audit"
+    "freeAudit": "Free Business Audit",
+    "affiliates": "Affiliates"
   },
   "language": {
     "label": "Language"
