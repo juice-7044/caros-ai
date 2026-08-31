@@ -15,7 +15,8 @@
     "toggleMenu": "Toggle menu",
     "businessInsights": "Business Insights",
     "freeAudit": "Free Business Audit",
-    "whyCaros": "Why CAROS"
+    "whyCaros": "Why CAROS",
+    "affiliates": "Affiliates"
   },
   "footer": {
     "product": "Product",
@@ -42,7 +43,8 @@
     "rights": "All rights reserved.",
     "contact": "Contact",
     "industries": "Industries",
-    "freeAudit": "Free Business Audit"
+    "freeAudit": "Free Business Audit",
+    "affiliates": "Affiliates"
   },
   "language": {
     "label": "Language"
@@ -564,5 +566,13 @@
     "build": { "tag": "Build", "title": "We build your CAROS.", "body": "Phone workflows, CRM, automations, pipeline, and reporting — configured around how you actually work." },
     "launch": { "tag": "Launch", "title": "CAROS becomes part of your day-to-day.", "body": "It runs alongside how you already work. Nothing new for your customers to learn." },
     "optimize": { "tag": "Optimize", "title": "Weekly reporting identifies what's working and what's leaking.", "body": "We keep tightening the system so the next marketing dollar goes where it performs best." }
+  },
+  "AffiliatesPage": {
+    "meta": { "title": "CAROS Affiliate Program", "description": "Partner with CAROS to help service businesses build stronger revenue systems." },
+    "hero": { "eyebrow": "PARTNER WITH CAROS", "title": "Help businesses stop losing revenue.", "serifTitle": "Together.", "subtitle": "We partner with people who understand the pressure of running a service business and want to help build systems that create measurable growth." },
+    "intro": { "eyebrow": "THE RIGHT FIT", "title": "Bring the relationship. We bring the system.", "body": "If you advise, serve, or work alongside service businesses, CAROS can give your clients a clearer path from marketing investment to booked revenue." },
+    "benefits": { "one": "Give clients a practical revenue operating system instead of another disconnected tool.", "two": "Create a stronger follow-through experience across leads, calls, pipeline, and retention.", "three": "Build a partnership grounded in transparency, responsible implementation, and measurable outcomes." },
+    "proof": { "partnership": "Built around partnership", "trust": "Responsible by design", "next": "Focused on the next opportunity" },
+    "form": { "name": "Full name", "email": "Work email", "phone": "Phone number", "company": "Company or organization", "website": "Website", "audience": "Who do you serve?", "fit": "Why do you think CAROS is a good fit?", "referral": "Tell us about a potential referral (optional)", "consent": "I agree to be contacted about the CAROS affiliate program and understand that submitting this form does not guarantee acceptance.", "submit": "Submit application", "submitting": "Submitting…", "success": "Thanks — your application has been received. We’ll be in touch soon.", "error": "Something went wrong. Please review your information and try again." }
   }
 }
