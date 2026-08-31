@@ -15,7 +15,8 @@
     "toggleMenu": "Alternar menú",
     "businessInsights": "Información empresarial",
     "freeAudit": "Auditoría empresarial gratuita",
-    "whyCaros": "Por qué CAROS"
+    "whyCaros": "Por qué CAROS",
+    "affiliates": "Programa de afiliados"
   },
   "footer": {
     "product": "Producto",
@@ -564,5 +565,13 @@
     "build": { "tag": "Construcción", "title": "Construimos tu CAROS.", "body": "Flujos telefónicos, CRM, automatizaciones, pipeline e informes, configurados según tu forma real de trabajar." },
     "launch": { "tag": "Lanzamiento", "title": "CAROS se convierte en parte de tu día a día.", "body": "Funciona junto a tu forma actual de trabajar. Tus clientes no tienen que aprender nada nuevo." },
     "optimize": { "tag": "Optimización", "title": "Los informes semanales muestran qué funciona y qué se está perdiendo.", "body": "Ajustamos continuamente el sistema para que el próximo dólar de marketing se destine donde mejor funciona." }
+  },
+  "AffiliatesPage": {
+    "meta": { "title": "Programa de afiliados de CAROS", "description": "Asóciate con CAROS para ayudar a las empresas de servicios a construir sistemas de ingresos más sólidos." },
+    "hero": { "eyebrow": "ASÓCIATE CON CAROS", "title": "Ayuda a las empresas a dejar de perder ingresos.", "serifTitle": "Juntos.", "subtitle": "Nos asociamos con personas que entienden la presión de dirigir una empresa de servicios y quieren ayudar a crear sistemas que generen crecimiento medible." },
+    "intro": { "eyebrow": "LA COLABORACIÓN ADECUADA", "title": "Tú aportas la relación. Nosotros aportamos el sistema.", "body": "Si asesoras, prestas servicios o trabajas junto a empresas de servicios, CAROS puede ofrecer a tus clientes un camino más claro desde la inversión en marketing hasta los ingresos generados." },
+    "benefits": { "one": "Ofrece a tus clientes un sistema operativo práctico de ingresos en lugar de otra herramienta desconectada.", "two": "Crea una experiencia de seguimiento más sólida entre clientes potenciales, llamadas, pipeline y retención.", "three": "Construye una colaboración basada en transparencia, implementación responsable y resultados medibles." },
+    "proof": { "partnership": "Diseñado para colaborar", "trust": "Responsable por diseño", "next": "Enfocado en la próxima oportunidad" },
+    "form": { "name": "Nombre completo", "email": "Correo de trabajo", "phone": "Número de teléfono", "company": "Empresa u organización", "website": "Sitio web", "audience": "¿A quién prestas servicios?", "fit": "¿Por qué crees que CAROS encaja bien?", "referral": "Cuéntanos sobre una posible recomendación (opcional)", "consent": "Acepto que me contacten sobre el programa de afiliados de CAROS y entiendo que enviar este formulario no garantiza la aceptación.", "submit": "Enviar solicitud", "submitting": "Enviando…", "success": "Gracias: recibimos tu solicitud. Nos pondremos en contacto pronto.", "error": "Algo salió mal. Revisa tus datos e inténtalo de nuevo." }
   }
 }

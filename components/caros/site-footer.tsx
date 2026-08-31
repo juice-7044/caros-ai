@@ -33,6 +33,7 @@ const columns = [
     links: [
       { key: "about", href: "/about" },
       { key: "faq", href: "/faq" },
+      { key: "affiliates", href: "/affiliates" },
       { key: "careers", href: "/about" },
     ],
   },

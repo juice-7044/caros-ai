@@ -41,7 +41,7 @@ export const COMPANY_PHONE = "+1 631-458-3332"
 export const COMPANY_PHONE_HREF = "tel:+16314583332"
 
 // Pages that contain a lead form — the floating chat widget is suppressed here
-export const FORM_PATHS = ["/revenue-audit"]
+export const FORM_PATHS = ["/revenue-audit", "/affiliates"]
 
 export const INDUSTRIES = [
   "Roofing",
