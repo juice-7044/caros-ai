@@ -25,6 +25,7 @@
     "freeTools": "Free Tools",
     "revenueLeakageCalculator": "Revenue Leakage Calculator",
     "workflowCostTool": "Workflow Cost Tool",
+    "revenueReadinessTool": "Revenue Readiness Assessment",
     "legal": "Legal",
     "included": "What's Included",
     "pricing": "Pricing",
@@ -558,8 +559,9 @@
       "audit": { "title": "Free Business Audit", "body": "Get a clearer picture of where revenue may be leaking across your lead handling, follow-up, marketing, customer journey, and revenue process.", "cta": "Get My Free Business Audit" },
       "coming": { "title": "More Free Resources Are Coming", "body": "We're building additional tools, guides, and resources to help service businesses better understand and improve their revenue operations." },
       "revenueLeakage": { "title": "Revenue Leakage Calculator", "body": "Quantify monthly revenue at risk from missed calls, slow follow-up, lost leads, and poor attribution.", "cta": "Use Calculator" },
-      "workflowCost": { "title": "Workflow Cost Tool", "body": "Calculate the hidden cost of manual workflows and administrative busywork across payroll, contractor hours, and management time.", "cta": "Calculate Workflow Cost" }
-    }
+  "workflowCost": { "title": "Workflow Cost Tool", "body": "Calculate the hidden cost of manual workflows and administrative busywork across payroll, contractor hours, and management time.", "cta": "Calculate Workflow Cost" },
+  "revenueReadiness": { "title": "Revenue Readiness Assessment", "body": "See how prepared your business is to capture, convert, and grow revenue across your customer acquisition process.", "cta": "Take the Assessment" }
+  }
   },
   "HowItWorksSteps": {
     "audit": { "tag": "Audit", "title": "We audit your revenue process.", "body": "Where do leads come from? Who answers the phone? Where are opportunities quietly getting lost?" },

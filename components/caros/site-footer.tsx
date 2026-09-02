@@ -51,6 +51,7 @@ const columns = [
     links: [
       { key: "revenueLeakageCalculator", href: "https://revenue-leakage-calculator.getcaros.com", external: true },
       { key: "workflowCostTool", href: "https://tools-workflow-cost.getcaros.com", external: true },
+      { key: "revenueReadinessTool", href: "https://revenue-readiness.getcaros.com", external: true },
     ],
   },
   {
