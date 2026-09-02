@@ -35,6 +35,8 @@ const columns = [
       { key: "faq", href: "/faq" },
       { key: "affiliates", href: "/affiliates" },
       { key: "careers", href: "/about" },
+      { key: "privacy", href: "/privacy" },
+      { key: "terms", href: "/terms" },
     ],
   },
   {
@@ -47,13 +49,6 @@ const columns = [
       { key: "revenueLeakageCalculator", href: "https://revenue-leakage-calculator.getcaros.com", external: true },
       { key: "workflowCostTool", href: "https://tools-workflow-cost.getcaros.com", external: true },
       { key: "revenueReadinessTool", href: "https://revenue-readiness.getcaros.com", external: true },
-    ],
-  },
-  {
-    titleKey: "legal",
-    links: [
-      { key: "privacy", href: "/privacy" },
-      { key: "terms", href: "/terms" },
     ],
   },
 ]
