@@ -1,9 +1,8 @@
 import { useTranslations } from "next-intl"
 import { Link } from "@/i18n/routing"
-import { Linkedin, Facebook, ArrowUpRight, MapPin, Phone } from "lucide-react"
+import { Linkedin, Facebook, Instagram, ArrowUpRight, MapPin, Phone } from "lucide-react"
 import {
   AUDIT_HREF,
-  AUDIT_LABEL,
   INSIGHTS_URL,
   AUDIT_URL,
   COMPANY_ADDRESS,
@@ -15,6 +14,7 @@ import { Logo } from "./logo"
 const SOCIAL_LINKS = [
   { Icon: Facebook, href: "https://www.facebook.com/carosaillc", label: "CAROS on Facebook" },
   { Icon: Linkedin, href: "https://www.linkedin.com/company/carosai", label: "CAROS on LinkedIn" },
+  { Icon: Instagram, href: "https://www.instagram.com/carosai", label: "CAROS on Instagram" },
 ]
 
 const columns = [
@@ -35,6 +35,8 @@ const columns = [
       { key: "faq", href: "/faq" },
       { key: "affiliates", href: "/affiliates" },
       { key: "careers", href: "/about" },
+      { key: "privacy", href: "/privacy" },
+      { key: "terms", href: "/terms" },
     ],
   },
   {
@@ -44,21 +46,9 @@ const columns = [
       { key: "freeInsights", href: INSIGHTS_URL, external: true },
       { key: "marketingRoi", href: "/marketing-roi" },
       { key: "freeAudit", href: AUDIT_URL, external: true },
-    ],
-  },
-  {
-    titleKey: "freeTools",
-    links: [
       { key: "revenueLeakageCalculator", href: "https://revenue-leakage-calculator.getcaros.com", external: true },
       { key: "workflowCostTool", href: "https://tools-workflow-cost.getcaros.com", external: true },
       { key: "revenueReadinessTool", href: "https://revenue-readiness.getcaros.com", external: true },
-    ],
-  },
-  {
-    titleKey: "legal",
-    links: [
-      { key: "privacy", href: "/privacy" },
-      { key: "terms", href: "/terms" },
     ],
   },
 ]
@@ -69,7 +59,7 @@ export function SiteFooter() {
   return (
     <footer className="relative border-t border-foreground/10 bg-background">
       <div className="mx-auto max-w-[1400px] px-6 py-20 lg:px-12">
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_repeat(4,1fr)]">
+        <div className="grid gap-12 lg:grid-cols-[1.4fr_repeat(3,1fr)]">
           <div className="max-w-xs">
             <Logo className="h-14" />
             <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
