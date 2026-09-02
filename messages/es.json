@@ -14,6 +14,7 @@
     "menu": "Menú",
     "toggleMenu": "Alternar menú",
     "businessInsights": "Información empresarial",
+    "demo": "Demo",
     "freeAudit": "Auditoría empresarial gratuita",
     "whyCaros": "Por qué CAROS",
     "affiliates": "Programa de afiliados"
@@ -53,8 +54,8 @@
   "HomePage": {
     "hero": {
       "insightsCta": "Explorar recursos gratuitos",
-      "auditCta": "Obtener un diagnóstico gratuito",
-      "demoCta": "Reservar una demo",
+      "auditCta": "Reservar una demo",
+      "demoCta": "Habla con CAROS",
       "auditNote": "Descubre dónde existen, se fugan y podrían capturarse tus ingresos.",
       "notReady": "¿Aún no quieres reservar?",
       "freeAuditCta": "Explorar recursos gratuitos",

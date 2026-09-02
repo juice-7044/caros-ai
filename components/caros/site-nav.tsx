@@ -167,7 +167,7 @@ export function SiteNav() {
           <div className="hidden items-center gap-4 lg:flex">
             <LanguageSwitcher />
             <a
-              href={INSIGHTS_URL}
+              href="https://demo.getcaros.com/"
               target="_blank"
               rel="noopener noreferrer"
               className={cn(
@@ -175,7 +175,7 @@ export function SiteNav() {
                 scrolled ? "h-9 px-4 text-xs" : "h-11 px-5 text-sm",
               )}
             >
-              {t("businessInsights")}
+              {t("demo")}
             </a>
           </div>
 
@@ -285,7 +285,7 @@ export function SiteNav() {
           onClick={() => setOpen(false)}
           className="inline-flex h-14 items-center justify-center rounded-full bg-gold text-base font-semibold text-gold-foreground"
         >
-          {t("businessInsights")}
+          {t("demo")}
         </a>
       </div>
     </header>

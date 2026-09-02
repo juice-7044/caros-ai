@@ -100,7 +100,7 @@ export function Hero() {
           >
             <div className="flex flex-col items-start gap-4 sm:flex-row lg:items-end lg:justify-end">
               <a
-                href={AUDIT_URL}
+                href="https://demo.getcaros.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex h-14 items-center gap-2 rounded-full bg-gold px-8 text-base font-semibold text-gold-foreground transition-all duration-300 hover:bg-gold/90"
@@ -109,7 +109,7 @@ export function Hero() {
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
               <Link
-                href="https://getcaros.com/revenue-audit"
+                href={AUDIT_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex h-14 items-center gap-2 rounded-full border border-foreground/20 px-8 text-base font-medium text-foreground transition-all duration-300 hover:bg-foreground/5"
@@ -122,7 +122,7 @@ export function Hero() {
               {t("auditNote")}
             </p>
             <p className="text-sm text-muted-foreground lg:text-right">
-              {t("notReady")} 
+              {t("notReady")}{" "}
               <a
                 href="/resources"
                 target="_blank"
