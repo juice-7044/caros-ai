@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { useTranslations } from "next-intl"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
-import { AUDIT_URL, PRODUCT_TAGLINE } from "@/lib/site"
+import { PRODUCT_TAGLINE } from "@/lib/site"
 import { AnimatedGlobe } from "@/components/caros/animated-globe"
 
 export function Hero() {
@@ -105,11 +105,11 @@ export function Hero() {
                 rel="noopener noreferrer"
                 className="group inline-flex h-14 items-center gap-2 rounded-full bg-gold px-8 text-base font-semibold text-gold-foreground transition-all duration-300 hover:bg-gold/90"
               >
-                {t("auditCta")}
+                Wanna see CAROS in action?
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
               <Link
-                href={AUDIT_URL}
+                href="https://getcaros.com/en/revenue-audit"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex h-14 items-center gap-2 rounded-full border border-foreground/20 px-8 text-base font-medium text-foreground transition-all duration-300 hover:bg-foreground/5"
