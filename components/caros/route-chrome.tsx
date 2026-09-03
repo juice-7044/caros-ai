@@ -1,7 +1,7 @@
 "use client"
 
 import type { ReactNode } from "react"
-import { usePathname } from "next/navigation"
+import { usePathname } from "@/i18n/routing"
 import { SiteNav } from "@/components/caros/site-nav"
 import { SiteFooter } from "@/components/caros/site-footer"
 import { ChatWidget } from "@/components/caros/chat-widget"

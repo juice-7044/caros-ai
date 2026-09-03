@@ -1,7 +1,7 @@
 "use client"
 
 import Script from "next/script"
-import { usePathname } from "next/navigation"
+import { usePathname } from "@/i18n/routing"
 import { FORM_PATHS } from "@/lib/site"
 
 /**
