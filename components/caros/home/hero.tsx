@@ -105,7 +105,7 @@ export function Hero() {
                 rel="noopener noreferrer"
                 className="group inline-flex h-14 items-center gap-2 rounded-full bg-gold px-8 text-base font-semibold text-gold-foreground transition-all duration-300 hover:bg-gold/90"
               >
-                Wanna see CAROS in action?
+                Want to see CAROS in action?
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
               <Link
