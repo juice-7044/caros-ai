@@ -236,6 +236,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           data-tracking-id="tk_12d930143d64417686edf3bdbf78f595"
           strategy="afterInteractive"
         />
+        {/* UTM Forwarder Script */}
+        <Script id="utm-forwarder" strategy="afterInteractive">
+          {`(function() {
+  function forwardUTMs() {
+    var search = window.location.search;
+    if (!search) return;
+    var links = document.querySelectorAll("a");
+    links.forEach(function(link) {
+      var href = link.getAttribute("href");
+      if (href && !href.startsWith("#") && !href.startsWith("javascript:") && !href.startsWith("tel:") && !href.startsWith("mailto:")) {
+        var separator = href.indexOf("?") !== -1 ? "&" : "?";
+        if (href.indexOf("utm_") === -1) {
+          link.setAttribute("href", href + separator + search.substring(1));
+        }
+      }
+    });
+  }
+  forwardUTMs();
+  window.addEventListener("DOMContentLoaded", forwardUTMs);
+  document.addEventListener("click", forwardUTMs);
+})();`}
+        </Script>
       </body>
     </html>
   )
