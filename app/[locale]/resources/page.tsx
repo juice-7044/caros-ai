@@ -22,6 +22,9 @@ export default async function ResourcesPage() {
     { title: t("cards.revenueReadiness.title"), body: t("cards.revenueReadiness.body"), cta: t("cards.revenueReadiness.cta"), href: "https://revenue-readiness.getcaros.com", icon: Gauge, external: true },
     { title: t("cards.techCost.title"), body: t("cards.techCost.body"), cta: t("cards.techCost.cta"), href: "https://tech-cost-calculator.getcaros.com", icon: Calculator, external: true },
     { title: t("cards.speedToLead.title"), body: t("cards.speedToLead.body"), cta: t("cards.speedToLead.cta"), href: "https://speed-to-lead.getcaros.com", icon: Gauge, external: true },
+    { title: t("cards.customerValueRetention.title"), body: t("cards.customerValueRetention.body"), cta: t("cards.customerValueRetention.cta"), href: "https://c-v-retention.getcaros.com", icon: Calculator, external: true },
+    { title: t("cards.growthLever.title"), body: t("cards.growthLever.body"), cta: t("cards.growthLever.cta"), href: "https://growth-lever.getcaros.com", icon: Gauge, external: true },
+    { title: t("cards.googleLsa.title"), body: t("cards.googleLsa.body"), cta: t("cards.googleLsa.cta"), href: "https://google-lsa-cost-roi.getcaros.com", icon: Calculator, external: true },
     { title: t("cards.coming.title"), body: t("cards.coming.body"), cta: t("comingSoon"), href: "#", icon: Sparkles, soon: true },
   ]
   return (
