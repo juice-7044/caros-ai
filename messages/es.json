@@ -8,6 +8,7 @@
     "included": "Qué incluye",
     "marketingRoi": "ROI de marketing",
     "about": "Acerca de",
+    "freeResources": "Recursos gratuitos",
     "insights": "Información empresarial",
     "diagnostic": "Auditoría empresarial gratuita",
     "getStarted": "Comenzar",
@@ -561,7 +562,9 @@
       "coming": { "title": "Próximamente habrá más recursos gratuitos", "body": "Estamos creando más herramientas, guías y recursos para ayudar a las empresas de servicios a comprender y mejorar sus operaciones de ingresos." },
       "revenueLeakage": { "title": "Calculadora de fugas de ingresos", "body": "Cuantifica los ingresos mensuales en riesgo por llamadas perdidas, seguimiento lento, clientes potenciales perdidos y atribución deficiente.", "cta": "Usar calculadora" },
   "workflowCost": { "title": "Herramienta de costos de flujo de trabajo", "body": "Calcula el costo oculto de los procesos manuales y las tareas administrativas repetitivas en nómina, contratistas y gestión.", "cta": "Calcular costo" },
-  "revenueReadiness": { "title": "Evaluación de preparación de ingresos", "body": "Descubre qué tan preparada está tu empresa para captar, convertir y aumentar sus ingresos en todo el proceso de adquisición de clientes.", "cta": "Hacer la evaluación" }
+  "revenueReadiness": { "title": "Evaluación de preparación de ingresos", "body": "Descubre qué tan preparada está tu empresa para captar, convertir y aumentar sus ingresos en todo el proceso de adquisición de clientes.", "cta": "Hacer la evaluación" },
+  "techCost": { "title": "Calculadora de costos tecnológicos", "body": "Descubre cuánto puede costarle realmente a tu empresa una tecnología desconectada y dónde la consolidación podría generar ahorros.", "cta": "Usar calculadora" },
+  "speedToLead": { "title": "Calculadora de velocidad de respuesta", "body": "Descubre cómo el tiempo de respuesta puede afectar la conversión de clientes potenciales y estima la oportunidad de ingresos de un seguimiento más rápido.", "cta": "Usar calculadora" }
   }
   },
   "HowItWorksSteps": {

@@ -8,6 +8,7 @@
     "included": "What's Included",
     "marketingRoi": "Marketing ROI",
     "about": "About",
+    "freeResources": "Free Resources",
     "insights": "Business Insights",
     "diagnostic": "Free Business Audit",
     "getStarted": "Get Started",
@@ -561,7 +562,9 @@
       "coming": { "title": "More Free Resources Are Coming", "body": "We're building additional tools, guides, and resources to help service businesses better understand and improve their revenue operations." },
       "revenueLeakage": { "title": "Revenue Leakage Calculator", "body": "Quantify monthly revenue at risk from missed calls, slow follow-up, lost leads, and poor attribution.", "cta": "Use Calculator" },
   "workflowCost": { "title": "Workflow Cost Tool", "body": "Calculate the hidden cost of manual workflows and administrative busywork across payroll, contractor hours, and management time.", "cta": "Calculate Workflow Cost" },
-  "revenueReadiness": { "title": "Revenue Readiness Assessment", "body": "See how prepared your business is to capture, convert, and grow revenue across your customer acquisition process.", "cta": "Take the Assessment" }
+  "revenueReadiness": { "title": "Revenue Readiness Assessment", "body": "See how prepared your business is to capture, convert, and grow revenue across your customer acquisition process.", "cta": "Take the Assessment" },
+  "techCost": { "title": "Tech Cost Calculator", "body": "See what disconnected technology may really be costing your business and where consolidation could create savings.", "cta": "Use Calculator" },
+  "speedToLead": { "title": "Speed-to-Lead Calculator", "body": "See how response time can affect lead conversion and estimate the revenue opportunity tied to faster follow-up.", "cta": "Use Calculator" }
   }
   },
   "HowItWorksSteps": {

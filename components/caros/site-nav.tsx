@@ -25,6 +25,7 @@ export function SiteNav() {
     "/industries": t("industries"),
     "/pricing": t("pricing"),
     "/about": t("about"),
+    "/resources": t("freeResources"),
   }
 
   useEffect(() => {
