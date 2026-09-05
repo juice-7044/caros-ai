@@ -564,7 +564,10 @@
   "workflowCost": { "title": "Herramienta de costos de flujo de trabajo", "body": "Calcula el costo oculto de los procesos manuales y las tareas administrativas repetitivas en nómina, contratistas y gestión.", "cta": "Calcular costo" },
   "revenueReadiness": { "title": "Evaluación de preparación de ingresos", "body": "Descubre qué tan preparada está tu empresa para captar, convertir y aumentar sus ingresos en todo el proceso de adquisición de clientes.", "cta": "Hacer la evaluación" },
   "techCost": { "title": "Calculadora de costos tecnológicos", "body": "Descubre cuánto puede costarle realmente a tu empresa una tecnología desconectada y dónde la consolidación podría generar ahorros.", "cta": "Usar calculadora" },
-  "speedToLead": { "title": "Calculadora de velocidad de respuesta", "body": "Descubre cómo el tiempo de respuesta puede afectar la conversión de clientes potenciales y estima la oportunidad de ingresos de un seguimiento más rápido.", "cta": "Usar calculadora" }
+  "speedToLead": { "title": "Calculadora de velocidad de respuesta", "body": "Descubre cómo el tiempo de respuesta puede afectar la conversión de clientes potenciales y estima la oportunidad de ingresos de un seguimiento más rápido.", "cta": "Usar calculadora" },
+  "customerValueRetention": { "title": "Calculadora de valor y retención de clientes", "body": "Descubre cómo la retención de clientes y las compras recurrentes afectan el valor del cliente a largo plazo y qué podría significar mejorar la retención para tus ingresos.", "cta": "Usar calculadora" },
+  "growthLever": { "title": "Calculadora de palancas de crecimiento", "body": "Descubre qué palanca de ingresos podría tener el mayor impacto en tu crecimiento, desde generar más oportunidades hasta mejorar la conversión y el valor del cliente.", "cta": "Usar calculadora" },
+  "googleLsa": { "title": "Calculadora de costos y ROI de Google LSA", "body": "Estima el costo y el posible retorno de los anuncios de Servicios Locales de Google según tus clientes potenciales, tasa de cierre, valor del trabajo y gasto publicitario.", "cta": "Usar calculadora" }
   }
   },
   "HowItWorksSteps": {
