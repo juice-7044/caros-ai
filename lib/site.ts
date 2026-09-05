@@ -7,6 +7,7 @@ export const NAV_LINKS = [
   { labelKey: "industries", href: "/industries" },
   { labelKey: "pricing", href: "/pricing" },
   { labelKey: "about", href: "/about" },
+  { labelKey: "freeResources", href: "/resources" },
 ]
 
 export const AUDIT_HREF = "/revenue-audit"

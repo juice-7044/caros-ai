@@ -71,6 +71,32 @@ const outcomes = [
 export default function RevenueAuditPage() {
   return (
     <>
+      {/* Booking hero */}
+      <section id="book" className="relative scroll-mt-24 overflow-hidden bg-ink text-ink-foreground">
+        <div className="pointer-events-none absolute inset-0 radial-glow opacity-70" />
+        <div className="relative mx-auto max-w-[1200px] px-6 pb-28 pt-32 lg:px-12 lg:pb-36 lg:pt-40">
+          <div className="grid gap-16 lg:grid-cols-[1fr_1.15fr] lg:items-start">
+            <Reveal>
+              <Sunburst className="w-14 text-gold" />
+              <h1 className="mt-8 text-balance text-[clamp(2.25rem,4.5vw,3.5rem)] font-extrabold leading-[0.98] tracking-tight">
+                You&apos;ve seen what the data says.{" "}
+                <span className="font-serif font-normal italic text-gold-gradient">
+                  Let&apos;s talk about what it means.
+                </span>
+              </h1>
+              <p className="mt-8 max-w-md text-pretty text-lg leading-relaxed text-ink-muted">
+                Bring your Revenue Audit and your knowledge of the business. We&apos;ll bring the questions, context, and
+                revenue lens.
+              </p>
+            </Reveal>
+
+            <Reveal delay={120}>
+              <AuditForm />
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
       {/* Hero */}
       <section className="relative overflow-hidden bg-ink text-ink-foreground">
         <div className="pointer-events-none absolute inset-0 radial-glow opacity-70" />
@@ -228,31 +254,7 @@ export default function RevenueAuditPage() {
         </div>
       </section>
 
-      {/* Final CTA + booking form */}
-      <section id="book" className="relative scroll-mt-24 overflow-hidden bg-ink text-ink-foreground">
-        <div className="pointer-events-none absolute inset-0 radial-glow opacity-70" />
-        <div className="relative mx-auto max-w-[1200px] px-6 pb-28 pt-24 lg:px-12 lg:pb-36 lg:pt-32">
-          <div className="grid gap-16 lg:grid-cols-[1fr_1.15fr] lg:items-start">
-            <Reveal>
-              <Sunburst className="w-14 text-gold" />
-              <h2 className="mt-8 text-balance text-[clamp(2.25rem,4.5vw,3.5rem)] font-extrabold leading-[0.98] tracking-tight">
-                You&apos;ve seen what the data says.{" "}
-                <span className="font-serif font-normal italic text-gold-gradient">
-                  Let&apos;s talk about what it means.
-                </span>
-              </h2>
-              <p className="mt-8 max-w-md text-pretty text-lg leading-relaxed text-ink-muted">
-                Bring your Revenue Audit and your knowledge of the business. We&apos;ll bring the questions, context, and
-                revenue lens.
-              </p>
-            </Reveal>
 
-            <Reveal delay={120}>
-              <AuditForm />
-            </Reveal>
-          </div>
-        </div>
-      </section>
     </>
   )
 }
