@@ -1,4 +1,4 @@
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { ArrowRight } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { Reveal } from "@/components/caros/reveal"
@@ -16,8 +16,8 @@ export function Roi() {
         <Reveal className="max-w-3xl">
           <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2 className="mt-6 text-balance text-[clamp(2rem,4.5vw,3.5rem)] font-extrabold leading-[1] tracking-tight">
-            CAROS doesn&apos;t need to transform your entire business{" "}
-            <span className="font-serif font-normal italic text-gold-gradient">to pay for itself.</span>
+            {t("headlinePrefix")} {" "}
+            <span className="font-serif font-normal italic text-gold-gradient">{t("headlineAccent")}</span>
           </h2>
         </Reveal>
 
@@ -27,15 +27,13 @@ export function Roi() {
 
         <Reveal delay={120}>
           <p className="mt-12 max-w-3xl text-pretty text-lg leading-relaxed text-ink-muted">
-            If your average job is $12,000, the question isn&apos;t &ldquo;Do I want to spend $997?&rdquo;
-            It&apos;s <span className="font-semibold text-ink-foreground">&ldquo;How many $12,000 jobs am I currently
-            losing?&rdquo;</span>
+            {t("body")}
           </p>
           <Link
             href={DIAGNOSTIC_HREF}
             className="group mt-8 inline-flex items-center gap-2 text-lg font-semibold text-gold underline-offset-4 hover:underline"
           >
-            Calculate Your Exact Loss
+            {t("calculateLoss")}
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </Reveal>
