@@ -57,6 +57,7 @@
       "insightsCta": "Explore Free Resources",
       "auditCta": "Book a Demo",
       "demoCta": "Talk to CAROS",
+      "actionCta": "Want to see CAROS in action?",
       "auditNote": "See where revenue exists, leaks, and could be captured.",
       "notReady": "Not ready to book?",
       "freeAuditCta": "Explore Free Resources",
@@ -366,7 +367,11 @@
       "description": "From the first marketing dollar to the next customer purchase, CAROS connects the entire revenue journey."
     },
     "roi": {
-      "eyebrow": "Do The Math"
+      "eyebrow": "Do The Math",
+      "headlinePrefix": "CAROS doesn't need to transform your entire business",
+      "headlineAccent": "to pay for itself.",
+      "body": "If your average job is $12,000, the question isn't \"Do I want to spend $997?\" It's \"How many $12,000 jobs am I currently losing?\"",
+      "calculateLoss": "Calculate Your Exact Loss"
     },
     "industries": {
       "eyebrow": "Who It's For",

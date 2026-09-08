@@ -76,7 +76,6 @@ export function LanguageSwitcher({ mobile = false }: { mobile?: boolean }) {
               role="option"
               aria-selected={currentLocale === locale.code}
               onClick={() => {
-                console.log("[LanguageSwitcher] Clicked:", locale.code, "Current path:", pathname)
                 setOpen(false)
               }}
               className={cn(

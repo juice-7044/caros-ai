@@ -57,6 +57,7 @@
       "insightsCta": "Explorar recursos gratuitos",
       "auditCta": "Reservar una demo",
       "demoCta": "Habla con CAROS",
+      "actionCta": "¿Quieres ver CAROS en acción?",
       "auditNote": "Descubre dónde existen, se fugan y podrían capturarse tus ingresos.",
       "notReady": "¿Aún no quieres reservar?",
       "freeAuditCta": "Explorar recursos gratuitos",
@@ -151,7 +152,7 @@
     "retention": {
       "columns": [
         {
-          "title": "You paid for the lead. Don't lose it because you got busy.",
+          "title": "Pagaste por ese cliente potencial. No lo pierdas porque estabas ocupado.",
           "items": [
             "Estimate follow-up",
             "Missed-call text back",
@@ -161,7 +162,7 @@
           ]
         },
         {
-          "title": "Your cheapest customer may be one you've already paid to acquire.",
+          "title": "Tu cliente más rentable puede ser uno que ya pagaste por adquirir.",
           "items": [
             "Review requests",
             "Referral campaigns",
@@ -266,7 +267,7 @@
           "detail": "gutter add-on, 4 mo later"
         },
         {
-          "label": "Revenue Attributed",
+          "label": "Ingresos atribuidos",
           "detail": "→ google_ads / [your-industry]"
         }
       ]
@@ -366,7 +367,11 @@
       "description": "Desde el primer euro de marketing hasta la próxima compra, CAROS conecta todo el recorrido de ingresos."
     },
     "roi": {
-      "eyebrow": "Haz las cuentas"
+      "eyebrow": "Haz las cuentas",
+      "headlinePrefix": "CAROS no necesita transformar todo tu negocio",
+      "headlineAccent": "para amortizarse.",
+      "body": "Si tu trabajo promedio vale 12.000 €, la pregunta no es «¿Quiero gastar 997 €?», sino «¿Cuántos trabajos de 12.000 € estoy perdiendo ahora mismo?». ",
+      "calculateLoss": "Calcula tu pérdida exacta"
     },
     "industries": {
       "eyebrow": "Para quién es",
@@ -422,33 +427,33 @@
       "serifTitle": "Simplemente no sé cuál mitad.",
       "subtitle": "CAROS elimina las conjeturas. Cada cliente potencial se vincula con su origen y se sigue hasta los ingresos reservados.",
       "attribution": "Atribución en palabras sencillas",
-      "attributionTitle": "Know where your revenue comes from.",
-      "calculator": "Revenue At Risk Calculator",
-      "calculatorTitle": "How much is leaking out right now?",
-      "cta": "See your real numbers in a Revenue Audit."
+      "attributionTitle": "Conoce de dónde vienen tus ingresos.",
+      "calculator": "Calculadora de ingresos en riesgo",
+      "calculatorTitle": "¿Cuánto se está perdiendo ahora mismo?",
+      "cta": "Consulta tus cifras reales en una auditoría de ingresos."
     },
     "how": {
       "eyebrow": "Cómo funciona",
       "title": "Un sistema creado alrededor de",
       "serifTitle": "la forma en que ya trabajas.",
       "subtitle": "CAROS es un sistema operativo de ingresos que diseñamos, construimos y ejecutamos alrededor de tu negocio.",
-      "questions": "The Four Questions",
-      "questionsTitle": "Every business owner asks the same four questions.",
-      "process": "The Process",
-      "processTitle": "From first call to fully running — in four moves.",
-      "pillars": "The Five Pillars",
-      "pillarsTitle": "Five connected systems working as one."
+      "questions": "Las cuatro preguntas",
+      "questionsTitle": "Todos los propietarios de negocios se hacen las mismas cuatro preguntas.",
+      "process": "El proceso",
+      "processTitle": "Desde la primera llamada hasta la puesta en marcha, en cuatro pasos.",
+      "pillars": "Los cinco pilares",
+      "pillarsTitle": "Cinco sistemas conectados que trabajan como uno solo."
     },
     "industries": {
       "eyebrow": "Industrias",
       "title": "Creado para negocios donde",
       "serifTitle": "una llamada perdida es un trabajo perdido.",
       "subtitle": "CAROS fue diseñado para servicios domésticos y negocios.",
-      "who": "Who It Is For",
-      "whoTitle": "If you run one of these, revenue is leaking somewhere right now.",
-      "fits": "Why It Fits",
-      "fitsTitle": "Three things these businesses have in common.",
-      "cta": "See what CAROS looks like for your trade."
+      "who": "Para quién es",
+      "whoTitle": "Si diriges uno de estos negocios, ahora mismo se están perdiendo ingresos en algún punto.",
+      "fits": "Por qué encaja",
+      "fitsTitle": "Tres cosas que estos negocios tienen en común.",
+      "cta": "Descubre cómo se ve CAROS en tu sector."
     },
     "faq": {
       "eyebrow": "Funciona con tu ecosistema actual",
@@ -462,7 +467,7 @@
       "titleAccent": "Debe saber qué merece atención."
     },
     "diagnostic": {
-      "breakEven": "The Break-Even Math"
+      "breakEven": "Las cuentas del punto de equilibrio"
     }
   },
 "calculator": {
@@ -486,69 +491,34 @@
   },
   "pillars": {
     "acquisition": {
-      "label": "Customer Acquisition",
-      "question": "Where are my customers coming from?",
-      "blurb": "Capture leads from the places your customers already find you.",
-      "items": [
-        "Google & Facebook lead capture",
-        "Website forms & web chat",
-        "SMS & missed-call text back",
-        "QR codes on signage & trucks",
-        "Social & referral capture",
-        "Tracking codes on every source"
-      ]
+      "label": "Adquisición de clientes",
+      "question": "¿De dónde vienen mis clientes?",
+      "blurb": "Captura clientes potenciales desde los lugares donde ya te encuentran.",
+      "items": ["Captación de clientes potenciales en Google y Facebook", "Formularios web y chat", "SMS y respuesta automática a llamadas perdidas", "Códigos QR en rótulos y vehículos", "Captación social y por recomendaciones", "Códigos de seguimiento en cada fuente"]
     },
     "operations": {
-      "label": "Revenue Operations",
-      "question": "What happens after they find me?",
-      "blurb": "Turn inquiries into appointments, estimates, follow-up, and booked work.",
-      "items": [
-        "CRM & opportunity pipeline",
-        "Human answering under your brand",
-        "Appointment booking workflows",
-        "Estimate follow-up & nudging",
-        "Automated lead nurturing",
-        "Digital signatures & invoicing"
-      ]
+      "label": "Operaciones de ingresos",
+      "question": "¿Qué ocurre después de que me encuentran?",
+      "blurb": "Convierte consultas en citas, presupuestos, seguimientos y trabajos reservados.",
+      "items": ["CRM y pipeline de oportunidades", "Atención humana bajo tu marca", "Flujos de reserva de citas", "Seguimiento y recordatorios de presupuestos", "Nutrición automatizada de clientes potenciales", "Firmas digitales y facturación"]
     },
     "success": {
-      "label": "Customer Success",
-      "question": "What happens after I finish the job?",
-      "blurb": "Stay connected after the job, generate reviews, reactivate customers, and create repeat business.",
-      "items": [
-        "Review requests & responses",
-        "Referral campaigns per job",
-        "Repeat-service reminders",
-        "Dormant customer reactivation",
-        "Membership fulfillment",
-        "Win-back offers"
-      ]
+      "label": "Éxito del cliente",
+      "question": "¿Qué ocurre después de terminar el trabajo?",
+      "blurb": "Mantén la conexión, genera reseñas, reactiva clientes y crea negocio recurrente.",
+      "items": ["Solicitudes y respuestas a reseñas", "Campañas de recomendación por trabajo", "Recordatorios de servicios recurrentes", "Reactivación de clientes inactivos", "Gestión de membresías", "Ofertas para recuperar clientes"]
     },
     "intelligence": {
-      "label": "Business Intelligence",
-      "question": "Is any of this actually making me money?",
-      "blurb": "See what generates leads, bookings, customers, and revenue.",
-      "items": [
-        "Lead-source attribution",
-        "Booked-revenue reporting",
-        "Marketing ROI by campaign",
-        "Pipeline reporting",
-        "Weekly performance reports",
-        "Monthly business briefing"
-      ]
+      "label": "Inteligencia empresarial",
+      "question": "¿Todo esto realmente me está haciendo ganar dinero?",
+      "blurb": "Descubre qué genera clientes potenciales, reservas, clientes e ingresos.",
+      "items": ["Atribución por fuente de clientes potenciales", "Informes de ingresos reservados", "ROI de marketing por campaña", "Informes del pipeline", "Informes semanales de rendimiento", "Resumen empresarial mensual"]
     },
     "platform": {
-      "label": "Platform & Integrations",
-      "question": "How do I keep track of all of this?",
-      "blurb": "Connect the tools you already use into one operating system.",
-      "items": [
-        "Phone, email & SMS",
-        "Calendars & scheduling",
-        "Website & advertising sources",
-        "Payments & card-on-file",
-        "Routing & FSM integrations",
-        "And more, connected for you"
-      ]
+      "label": "Plataforma e integraciones",
+      "question": "¿Cómo hago seguimiento de todo esto?",
+      "blurb": "Conecta las herramientas que ya utilizas en un solo sistema operativo.",
+      "items": ["Teléfono, correo y SMS", "Calendarios y programación", "Sitio web y fuentes publicitarias", "Pagos y tarjetas guardadas", "Integraciones de routing y FSM", "Y mucho más, conectado por ti"]
     }
   },
   "ResourcesPage": {
@@ -578,11 +548,11 @@
   },
   "AffiliatesPage": {
     "meta": { "title": "Programa de afiliados de CAROS", "description": "Asóciate con CAROS para ayudar a las empresas de servicios a construir sistemas de ingresos más sólidos." },
-    "hero": { "eyebrow": "CAROS AFFILIATE PROGRAM", "title": "Partner With CAROS.", "serifTitle": "", "body": "Know business owners who could benefit from a stronger revenue operation? Apply to become a CAROS Affiliate and earn by introducing qualified businesses to a system designed to help them capture opportunities, convert more leads, understand their marketing performance, and grow revenue.", "cta": "Apply to Become an Affiliate", "micro": "Applications are reviewed by the CAROS team within 1–2 business days.", "visual": { "network": "Your Network", "owner": "Business Owner", "caros": "CAROS", "revenue": "Revenue", "connector": "An affiliate makes the connection. CAROS takes it from there." } },
-    "process": { "eyebrow": "HOW IT WORKS", "title": "Build Relationships. Make Introductions. Let CAROS Take It From There.", "body": "CAROS affiliates introduce qualified business owners who may benefit from CAROS. Once the introduction is made, the CAROS team handles the consultation, qualification, onboarding, and ongoing client relationship. The affiliate's role is to create the connection, not become a CAROS salesperson or provide CAROS services.", "steps": { "apply": { "title": "Apply", "body": "Tell us about yourself, your network, and how you plan to introduce CAROS." }, "approved": { "title": "Get Approved", "body": "Our team reviews your application and determines whether the partnership is a good fit." }, "refer": { "title": "Start Referring", "body": "Approved affiliates receive their referral resources and tracking information so qualified introductions can be properly attributed." } } },
-    "fit": { "eyebrow": "THE RIGHT FIT", "title": "Is the CAROS Affiliate Program a Fit for You?", "body": "The program may be a strong fit if you have trusted relationships with business owners and regularly make professional introductions or recommendations.", "items": { "consultants": "Business consultants", "marketers": "Marketing professionals", "agencies": "Agency owners", "b2b": "B2B service providers", "coaches": "Coaches and advisors", "leaders": "Community and professional-network leaders", "creators": "Content creators with relevant business audiences", "clients": "Current CAROS clients and supporters", "homeServices": "Professionals with strong relationships in the home-services industry" }, "final": "You don't need a massive audience. A trusted relationship with the right business owner can be more valuable than thousands of followers." },
-    "form": { "eyebrow": "APPLY NOW", "title": "Tell us about yourself.", "firstName": "First Name", "lastName": "Last Name", "email": "Email Address", "phone": "Phone Number", "company": "Business or Company Name", "website": "Website, LinkedIn, or Social Profile", "websiteHelp": "Enter your business website, LinkedIn profile, or the social platform where you're most active. This helps us understand your professional presence.", "promo": "How do you plan to promote or refer CAROS?", "choose": "Select an option", "audience": "Tell us about your audience or professional network.", "audiencePlaceholder": "Who do you typically serve or influence? For example: small business owners, marketing agencies, service entrepreneurs, SaaS founders, home-service business owners, etc.", "motivation": "Why do you want to become a CAROS affiliate?", "motivationPlaceholder": "Tell us what draws you to the CAROS Affiliate Program and why you think you'd be a strong referral partner.", "estimate": "How many referrals do you estimate you could generate in the next 90 days?", "source": "How did you hear about the CAROS Affiliate Program?", "referredBy": "Who referred you?", "consent": "I agree that CAROS may contact me regarding my affiliate application and the CAROS Affiliate Program. I understand that submitting this application does not guarantee approval or enrollment.", "submit": "Submit My Application", "submitting": "Submitting Application...", "error": "We couldn't submit your application just yet. Your information is still here. Please try again in a moment." },
-    "sections": { "contact": "Contact Information", "professional": "Professional Context", "audience": "Your Audience", "experience": "Your Experience With CAROS", "why": "Why CAROS?", "referral": "Referral Potential", "found": "How You Found Us" },
-    "success": { "title": "Application Received. Thank You.", "body": "We've received your affiliate application. Our team will review it within 1–2 business days. If we think you're a strong fit, someone from CAROS will contact you using the information you provided.", "second": "In the meantime, learn more about how CAROS helps independent businesses understand and improve the journey from marketing investment to revenue.", "button": "Explore CAROS" }
+    "hero": { "eyebrow": "PROGRAMA DE AFILIADOS DE CAROS", "title": "Asóciate con CAROS.", "serifTitle": "", "body": "¿Conoces propietarios de negocios que podrían beneficiarse de una operación de ingresos más sólida? Solicita ser afiliado de CAROS y gana ingresos presentando empresas cualificadas a un sistema diseñado para captar oportunidades, convertir más clientes potenciales, comprender su rendimiento de marketing y aumentar sus ingresos.", "cta": "Solicitar ser afiliado", "micro": "El equipo de CAROS revisa las solicitudes en un plazo de 1–2 días laborables.", "visual": { "network": "Tu red", "owner": "Propietario del negocio", "caros": "CAROS", "revenue": "Ingresos", "connector": "El afiliado crea la conexión. CAROS se encarga del resto." } },
+    "process": { "eyebrow": "CÓMO FUNCIONA", "title": "Construye relaciones. Haz presentaciones. Deja que CAROS se encargue del resto.", "body": "Los afiliados de CAROS presentan propietarios de negocios cualificados que podrían beneficiarse de CAROS. Una vez realizada la presentación, el equipo de CAROS gestiona la consulta, la cualificación, la incorporación y la relación continua con el cliente. El papel del afiliado es crear la conexión, no convertirse en vendedor ni prestar servicios de CAROS.", "steps": { "apply": { "title": "Solicita", "body": "Cuéntanos sobre ti, tu red y cómo piensas presentar CAROS." }, "approved": { "title": "Obtén aprobación", "body": "Nuestro equipo revisa tu solicitud y determina si la colaboración encaja." }, "refer": { "title": "Empieza a recomendar", "body": "Los afiliados aprobados reciben recursos de recomendación e información de seguimiento para atribuir correctamente las presentaciones cualificadas." } } },
+    "fit": { "eyebrow": "LA COLABORACIÓN ADECUADA", "title": "¿Es adecuado para ti el programa de afiliados de CAROS?", "body": "El programa puede encajar muy bien si tienes relaciones de confianza con propietarios de negocios y realizas presentaciones o recomendaciones profesionales con frecuencia.", "items": { "consultants": "Consultores empresariales", "marketers": "Profesionales de marketing", "agencies": "Propietarios de agencias", "b2b": "Proveedores de servicios B2B", "coaches": "Coaches y asesores", "leaders": "Líderes de comunidades y redes profesionales", "creators": "Creadores de contenido con audiencias empresariales relevantes", "clients": "Clientes y colaboradores actuales de CAROS", "homeServices": "Profesionales con relaciones sólidas en el sector de servicios para el hogar" }, "final": "No necesitas una audiencia masiva. Una relación de confianza con el propietario adecuado puede valer más que miles de seguidores." },
+    "form": { "eyebrow": "SOLICITA AHORA", "title": "Cuéntanos sobre ti.", "firstName": "Nombre", "lastName": "Apellidos", "email": "Dirección de correo", "phone": "Número de teléfono", "company": "Empresa o negocio", "website": "Sitio web, LinkedIn o perfil social", "websiteHelp": "Introduce el sitio web de tu negocio, tu perfil de LinkedIn o la plataforma social donde tienes más actividad. Esto nos ayuda a entender tu presencia profesional.", "promo": "¿Cómo piensas promocionar o recomendar CAROS?", "choose": "Selecciona una opción", "audience": "Cuéntanos sobre tu audiencia o red profesional.", "audiencePlaceholder": "¿A quién sueles atender o influir? Por ejemplo: propietarios de pequeñas empresas, agencias de marketing, emprendedores de servicios, fundadores de SaaS, propietarios de negocios de servicios para el hogar, etc.", "motivation": "¿Por qué quieres ser afiliado de CAROS?", "motivationPlaceholder": "Cuéntanos qué te atrae del programa de afiliados de CAROS y por qué crees que serías un buen colaborador de recomendaciones.", "estimate": "¿Cuántas recomendaciones crees que podrías generar en los próximos 90 días?", "source": "¿Cómo conociste el programa de afiliados de CAROS?", "referredBy": "¿Quién te recomendó?", "consent": "Acepto que CAROS pueda contactarme sobre mi solicitud y el programa de afiliados de CAROS. Entiendo que enviar esta solicitud no garantiza la aprobación ni la inscripción.", "submit": "Enviar mi solicitud", "submitting": "Enviando solicitud...", "error": "Aún no hemos podido enviar tu solicitud. Tu información sigue aquí. Inténtalo de nuevo dentro de un momento." },
+    "sections": { "contact": "Información de contacto", "professional": "Contexto profesional", "audience": "Tu audiencia", "experience": "Tu experiencia con CAROS", "why": "¿Por qué CAROS?", "referral": "Potencial de recomendaciones", "found": "Cómo nos conociste" },
+    "success": { "title": "Solicitud recibida. Gracias.", "body": "Hemos recibido tu solicitud de afiliación. Nuestro equipo la revisará en un plazo de 1–2 días laborables. Si creemos que encajas bien, alguien de CAROS se pondrá en contacto contigo usando la información que proporcionaste.", "second": "Mientras tanto, descubre cómo CAROS ayuda a las empresas independientes a comprender y mejorar el recorrido desde la inversión en marketing hasta los ingresos.", "button": "Explorar CAROS" }
   }
 }
