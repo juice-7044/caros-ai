@@ -5,8 +5,19 @@ import {routing} from "@/i18n/routing"
 const intlMiddleware = createMiddleware(routing)
 
 export default function middleware(request: NextRequest) {
-  console.log("Middleware running for:", request.nextUrl.pathname)
-  return intlMiddleware(request)
+  const response = intlMiddleware(request)
+  const localeCookie = response.cookies.get("NEXT_LOCALE")
+
+  if (localeCookie) {
+    response.cookies.set("NEXT_LOCALE", localeCookie.value, {
+      httpOnly: true,
+      secure: true,
+      sameSite: "lax",
+      path: "/",
+    })
+  }
+
+  return response
 }
 
 export const config = {
