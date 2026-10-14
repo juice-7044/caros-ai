@@ -3328,4 +3328,5 @@ export function getIndustry(slug: string): IndustryContent | undefined {
 export const INDUSTRY_NAV: { name: string; href: string }[] = [
   ...INDUSTRY_SLUGS.map((slug) => ({ name: INDUSTRY_CONTENT[slug].name, href: `/industries/${slug}` })),
   { name: "Law Firms & Estate Planning", href: "/industries/law-firms" },
+  { name: "Car Dealerships", href: "/industries/car-dealerships" },
 ]
