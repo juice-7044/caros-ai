@@ -100,7 +100,7 @@ export function Hero() {
           >
             <div className="flex flex-col items-start gap-4 sm:flex-row lg:items-end lg:justify-end">
               <a
-                href="https://demo.getcaros.com/"
+                href="https://demo.getcaros.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex h-14 items-center gap-2 rounded-full bg-gold px-8 text-base font-semibold text-gold-foreground transition-all duration-300 hover:bg-gold/90"
