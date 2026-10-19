@@ -47,7 +47,8 @@
     "contact": "Contacto",
     "industries": "Industrias",
     "freeAudit": "Auditoría empresarial gratuita",
-    "affiliates": "Afiliados"
+    "affiliates": "Afiliados",
+    "insights": "Artículos en inglés"
   },
   "language": {
     "label": "Idioma"
@@ -526,7 +527,7 @@
     "section": { "eyebrow": "Aprende, mide, crece", "title": "Respuestas útiles para las preguntas de ingresos que importan." },
     "comingSoon": "Próximamente",
     "cards": {
-      "insights": { "title": "Información", "body": "Perspectivas prácticas sobre operaciones de ingresos, gestión de clientes potenciales, automatización, atribución de marketing, seguimiento de clientes y los sistemas que los conectan.", "cta": "Explorar información" },
+      "insights": { "title": "Artículos en inglés", "body": "Guías en inglés para responder a clientes potenciales, dar seguimiento y generar ingresos recurrentes.", "cta": "Leer los artículos en inglés" },
       "marketingRoi": { "title": "ROI de marketing", "body": "Descubre cómo tu inversión en marketing se conecta con clientes potenciales, oportunidades, clientes e ingresos para entender mejor qué hacen tus recursos de marketing.", "cta": "Explorar ROI de marketing" },
       "audit": { "title": "Auditoría empresarial gratuita", "body": "Obtén una imagen más clara de dónde pueden perderse ingresos en la gestión de clientes potenciales, el seguimiento, el marketing, el recorrido del cliente y el proceso de ingresos.", "cta": "Obtener mi auditoría empresarial gratuita" },
       "coming": { "title": "Próximamente habrá más recursos gratuitos", "body": "Estamos creando más herramientas, guías y recursos para ayudar a las empresas de servicios a comprender y mejorar sus operaciones de ingresos." },
