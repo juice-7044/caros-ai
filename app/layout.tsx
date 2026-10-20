@@ -267,6 +267,8 @@ fbq('track', 'PageView');`}
     if (!search) return;
     var links = document.querySelectorAll("a");
     links.forEach(function(link) {
+      // Insights defines its own CTA attribution; don't add UTMs to article links.
+      if (link.closest(".insights-shell")) return;
       var href = link.getAttribute("href");
       if (href && !href.startsWith("#") && !href.startsWith("javascript:") && !href.startsWith("tel:") && !href.startsWith("mailto:")) {
         var separator = href.indexOf("?") !== -1 ? "&" : "?";

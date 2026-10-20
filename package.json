@@ -6,7 +6,9 @@
     "build": "next build --webpack",
     "dev": "next dev",
     "lint": "eslint .",
-    "start": "next start"
+    "start": "next start",
+    "test:insights": "node --experimental-strip-types --test scripts/insights-publication.test.mjs",
+    "verify:insights": "node scripts/verify-insights.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -59,9 +61,11 @@
     "react-day-picker": "9.8.0",
     "react-dom": "19.2.0",
     "react-hook-form": "^7.60.0",
+    "react-markdown": "10.1.0",
     "react-native": "latest",
     "react-resizable-panels": "^2.1.7",
     "recharts": "2.15.4",
+    "remark-gfm": "4.0.1",
     "sonner": "^1.7.4",
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7",

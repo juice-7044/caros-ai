@@ -43,6 +43,7 @@ const columns = [
     titleKey: "resources",
     links: [
       { key: "freeResources", href: "/resources" },
+      { key: "insights", href: "/insights" },
       { key: "freeInsights", href: INSIGHTS_URL, external: true },
       { key: "marketingRoi", href: "/marketing-roi" },
       { key: "freeAudit", href: AUDIT_URL, external: true },
@@ -109,7 +110,7 @@ export function SiteFooter() {
                           {linkInner}
                         </a>
                       ) : (
-                        <Link href={link.href} className={linkClass}>
+                        <Link href={link.href} locale={link.href === "/insights" ? "en" : undefined} className={linkClass}>
                           {linkInner}
                         </Link>
                       )}

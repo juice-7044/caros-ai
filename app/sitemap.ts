@@ -1,5 +1,9 @@
 import type { MetadataRoute } from "next"
 import { INDUSTRY_SLUGS } from "@/lib/industries"
+import { insights, INSIGHTS_PATH } from "@/lib/insights"
+import { isArticlePublished } from "@/lib/insights-publication"
+
+export const dynamic = "force-dynamic"
 
 const SITE_URL = "https://getcaros.com"
 
@@ -31,10 +35,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const lastModified = new Date()
 
-  return routes.map((route) => ({
+  return [...routes.map((route) => ({
     url: `${SITE_URL}${route.path}`,
     lastModified,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
-  }))
+  })), {
+    url: `${SITE_URL}${INSIGHTS_PATH}`,
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }, ...insights.filter(article => article.staged && isArticlePublished(article)).map(article => ({
+    url: `${SITE_URL}${INSIGHTS_PATH}/${article.slug}`,
+    lastModified: new Date(article.datePublished!),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }))]
 }
