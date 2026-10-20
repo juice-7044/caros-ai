@@ -68,6 +68,7 @@ export const INDUSTRIES = [
   "Real Estate",
   "Events & Retreats",
   "Coaching & Professional Services",
+  "Religious Institutions",
 ]
 
 export const PILLARS = [
