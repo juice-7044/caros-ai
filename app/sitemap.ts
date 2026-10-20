@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
     })),
     { path: "/industries/law-firms", priority: 0.8, changeFrequency: "monthly" as const },
+    { path: "/industries/car-dealerships", priority: 0.8, changeFrequency: "monthly" as const },
   ]
 
   const routes = [
