@@ -78,6 +78,26 @@ export default function IndustriesPage() {
               </span>
             </Link>
           </Reveal>
+
+          <Reveal className="mt-6">
+            <Link
+              href="/industries/religious-institutions"
+              className="group flex flex-col gap-4 rounded-2xl border border-border bg-card p-8 transition-colors hover:border-gold sm:flex-row sm:items-center sm:justify-between lg:p-10"
+            >
+              <div>
+                <span className="eyebrow text-gold">Dedicated Solution</span>
+                <h3 className="mt-3 text-2xl font-extrabold tracking-tight">CAROS for Religious Institutions</h3>
+                <p className="mt-2 max-w-2xl leading-relaxed text-muted-foreground">
+                  Built for churches, parishes, synagogues, mosques, and ministries — from first-time guest follow-up
+                  to recurring giving, pledges, and facility bookings.
+                </p>
+              </div>
+              <span className="inline-flex items-center gap-2 whitespace-nowrap font-semibold text-gold">
+                Explore
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </span>
+            </Link>
+          </Reveal>
         </div>
       </section>
 

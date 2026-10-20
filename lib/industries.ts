@@ -258,6 +258,14 @@ type Bespoke = Omit<
   captureIntro?: string
   scalingTitle?: string
   scalingTitleSerif?: string
+  /* Optional full-section overrides for verticals where the field-service
+     builders don't fit at all (e.g. religious institutions). */
+  captureCapabilities?: Capability[]
+  experienceIntro?: string[]
+  experiencePoints?: string[]
+  pillars?: Pillar[]
+  scalingBody?: string[]
+  scalingPoints?: string[]
 }
 
 function make(t: Tokens, b: Bespoke): IndustryContent {
@@ -270,6 +278,12 @@ function make(t: Tokens, b: Bespoke): IndustryContent {
     captureIntro,
     scalingTitle,
     scalingTitleSerif,
+    captureCapabilities,
+    experienceIntro,
+    experiencePoints,
+    pillars,
+    scalingBody,
+    scalingPoints,
     ...rest
   } = b
   return {
@@ -281,14 +295,14 @@ function make(t: Tokens, b: Bespoke): IndustryContent {
     captureIntro:
       captureIntro ??
       `Most ${t.trade.toLowerCase()} revenue is won or lost in the first few minutes and the first few follow-ups. CAROS makes sure every ${t.callWord}, form, and referral is captured, answered fast, and moved toward a ${t.bookLabel.replace(/s$/, "")} — automatically.`,
-    captureCapabilities: buildCapture(t),
-    experienceIntro: exp.intro,
-    experiencePoints: exp.points,
-    pillars: buildPillars(t, acquisitionItems),
+    captureCapabilities: captureCapabilities ?? buildCapture(t),
+    experienceIntro: experienceIntro ?? exp.intro,
+    experiencePoints: experiencePoints ?? exp.points,
+    pillars: pillars ?? buildPillars(t, acquisitionItems),
     scalingTitle: scalingTitle ?? "Grow your revenue without growing",
     scalingTitleSerif: scalingTitleSerif ?? "the chaos.",
-    scalingBody: scaling.body,
-    scalingPoints: scaling.points,
+    scalingBody: scalingBody ?? scaling.body,
+    scalingPoints: scalingPoints ?? scaling.points,
   }
 }
 
@@ -3289,6 +3303,138 @@ const insuranceBrokerage = make(
 )
 
 /* ==========================================================================
+   RELIGIOUS INSTITUTIONS
+   ========================================================================== */
+
+const religiousInstitutions = make(
+  {
+    trade: "Religious Institutions", label: "Religious Institutions", slug: "religious-institutions", customers: "guests", customer: "guest",
+    job: "visit", jobs: "visits", estimate: "follow-up", estimates: "follow-ups",
+    tech: "staff member", techs: "staff and volunteers", site: "campus", callWord: "inquiry", bookLabel: "connected members",
+  },
+  {
+    heroEyebrow: "Industry Solution — Religious Institutions",
+    heroTitle: "Your Mission Deserves Giving You Can",
+    heroTitleSerif: "Count On.",
+    heroSub: "Churches, parishes, synagogues, mosques, and ministries lose more than attendance when a first-time guest never hears back. CAROS welcomes every visitor, follows up on every inquiry, protects recurring giving, and shows your leadership exactly what is sustaining the ministry.",
+    visualTheme: "discreet",
+    trustRow: ["Churches & Parishes", "Synagogues", "Mosques & Islamic Centers", "Multi-Site Ministries", "Faith-Based Schools & Nonprofits"],
+    metaTitle: "CAROS for Churches & Religious Institutions | Guest Follow-Up & Giving Growth",
+    metaDescription: "CAROS helps churches, synagogues, mosques, and ministries follow up with first-time guests, recover lapsed givers, book facility rentals, and see which outreach actually grows giving.",
+    keywords: ["church guest follow up", "first time visitor follow up system", "church giving growth", "recurring giving church", "lapsed donor recovery church", "church facility rental bookings", "church communication system", "church member retention", "capital campaign pledge follow up", "house of worship revenue operations", "ministry stewardship reporting"],
+    problemTitle: "Most congregations don't have an attendance problem.",
+    problemTitleSerif: "They have a follow-up problem.",
+    problemIntro: "People still walk through your doors, watch your livestream, and call your office. What breaks is everything after: the guest card nobody follows up on, the recurring gift that quietly stops, the wedding inquiry that hits voicemail. Each one is ministry and revenue walking out the back door.",
+    mattersWhen: [
+      { label: "Sunday 12:15 — The Guest Card in the Basket", detail: "A young family visits for the first time and fills out a card. It sits on a desk until Thursday. By then they've tried another church down the road. CAROS sends a warm welcome under your name that same afternoon and puts a real person on the follow-up." },
+      { label: "Tuesday 2:40 — The Wedding at Voicemail", detail: "A couple calls to ask about booking the sanctuary and fellowship hall. The office is part-time, the call rolls to voicemail, and they book a venue that answered. CAROS texts back in minutes, captures the date, and routes it to whoever manages facility bookings." },
+      { label: "March — The Giver Who Quietly Stopped", detail: "A family that gave every month for six years has an expired card. Nobody notices until year-end statements go out. CAROS flags the lapsed gift right away and sends a gentle, pre-approved note to update it." },
+      { label: "Week 6 — The Pledge Without a Reminder", detail: "Your capital campaign kickoff was a success. Then the pledges sit in a spreadsheet with no rhythm of reminders or thank-yous. CAROS keeps every pledge on a respectful schedule so commitment turns into received gifts." },
+    ],
+    problemClose: { text: "CAROS turns good intentions into", gold: "a dependable system for growth and giving." },
+    leaksIntro: "In houses of worship, the leaks are almost never about faith or effort. They come from small staffs, volunteer handoffs, and systems that depend on someone remembering.",
+    leaks: ["First-time guests receive no personal follow-up within 48 hours.", "Office calls go to voicemail during part-time hours.", "Recurring gifts lapse from expired cards and nobody notices.", "Facility rental and wedding inquiries wait days for an answer.", "Event and class registrations aren't followed up or reminded.", "Capital campaign pledges have no reminder or thank-you rhythm.", "Members drift away and no one reaches out until they're gone.", "Outreach spend is reported as attendance, not as connected, giving households."],
+    leaksClose: "A guest who never comes back isn't just one empty seat. It's a family, their friends, and years of giving and serving that went somewhere else.",
+    journeyIntro: "CAROS gives every person a clear next step, from the first visit to a connected, giving, serving member — while your clergy stay focused on people, not paperwork.",
+    journey: ["Online Search or First Visit", "Welcomed the Same Day", "Invited Back", "Connected to a Group", "Membership", "Recurring Giving Set Up", "Serving & Inviting Others"],
+    journeyEndLabel: "Congregation Journey: Connected Members & Sustainable Giving",
+    signatureEyebrow: "Recurring Giving & Stewardship",
+    signatureTitle: "The ministry you're called to do runs on",
+    signatureTitleSerif: "the giving you can predict.",
+    signatureBody: ["Holiday surges and year-end appeals don't pay staff salaries in July. Sustainable ministry is built on recurring givers, fulfilled pledges, and steady side revenue from facilities, schools, and events.", "CAROS protects each of those streams: catching lapsed gifts early, thanking givers on time, following up on pledges, and making sure every rental and registration inquiry gets an answer."],
+    signatureListLabel: "Where CAROS keeps ministry revenue moving",
+    signatureUseCases: ["First-time guest welcome", "Second-visit invitations", "Lapsed-giver alerts", "Expired-card recovery", "Recurring-giving invitations", "Pledge reminders & thank-yous", "Facility & wedding bookings", "Event & class registration follow-up", "School & daycare enrollment inquiries", "Inactive-member outreach", "Outreach source attribution"],
+    metrics: [
+      { value: "48 hrs", label: "Window to follow up with a first-time guest" },
+      { value: "$2,400", label: "Example annual giving / engaged household" },
+      { value: "$24,000", label: "Example 10-year giving from one family that stays" },
+      { value: "$1,500+", label: "Example value / booked wedding or facility rental" },
+      { value: "Same day", label: "Lapsed-gift detection" },
+      { value: "Mission", label: "Funded by follow-up, not just fundraising", highlight: true },
+    ],
+    questions: ["How many first-time guests came back for a second visit?", "Which outreach, events, or ads bring people who stay and give?", "Whose recurring gift lapsed this month, and why?", "How much of our capital campaign has actually been received?", "Which facility and wedding inquiries are still waiting on an answer?", "Which members have quietly stopped attending or giving?"],
+    recoveredText: "Guests, lapsed givers, pledges, and rental inquiries that would have gone quiet — welcomed, followed up, and turned into connected members and dependable giving. Figures above are example data shown for demonstration purposes.",
+    experienceTitle: "Technology that makes your congregation feel",
+    experienceTitleSerif: "known, not processed.",
+    experienceIntro: [
+      "People join a community where they feel seen. CAROS handles the timely welcomes, reminders, and organization that make your church feel attentive — so your clergy, staff, and volunteers can spend their time on people instead of spreadsheets.",
+      "CAROS never replaces pastoral care. It removes the busywork around it, and every message goes out in your voice, approved by your team, under your congregation's name.",
+    ],
+    experiencePoints: [
+      "Warm, timely welcomes that make first-time guests feel expected.",
+      "Every message sent under your congregation's name and approved by your staff.",
+      "Respectful giving and pledge reminders that never feel like a sales pitch.",
+      "Clear visibility on who needs a call, a visit, or a thank-you.",
+      "Urgent pastoral calls routed to a real person, not a queue.",
+    ],
+    pillars: [
+      {
+        label: "Guest Acquisition",
+        question: "Where are new people finding us?",
+        items: ["Website, livestream & social capture", "Guest cards & QR codes", "Event and outreach attribution", "Campus and ministry routing"],
+      },
+      {
+        label: "Connection Operations",
+        question: "What happens after they visit?",
+        items: ["Same-day guest welcome", "Second-visit & group invitations", "Class, event & rental booking", "Missed-call text back"],
+      },
+      {
+        label: "Member Care & Retention",
+        question: "Who's drifting away?",
+        items: ["Inactive-member outreach", "Milestone & anniversary touchpoints", "Volunteer follow-up", "Reviews & word-of-mouth invites"],
+      },
+      {
+        label: "Giving Intelligence",
+        question: "Is our outreach growing giving?",
+        items: ["Recurring & lapsed giving reports", "Pledge fulfillment tracking", "Facility & event revenue reporting", "Monthly stewardship briefing"],
+      },
+      {
+        label: "Integrations",
+        question: "How does it fit what we use?",
+        items: ["Phone, email & SMS", "Calendars & room scheduling", "Website & livestream sources", "Compatible giving & church management tools"],
+      },
+    ],
+    scalingTitle: "Grow your ministry without burning out",
+    scalingTitleSerif: "your staff.",
+    scalingBody: [
+      "Most congregations run on a few paid staff and a lot of generous volunteers. That works until growth arrives — then follow-up falls through the cracks, the office drowns in calls, and your most faithful people burn out.",
+      `CAROS is built on a simple principle: ${PRODUCT_TAGLINE} Every guest gets welcomed, every gift gets thanked, and every inquiry gets answered — without hiring an administrator for every new service time. When it is time to add staff, the numbers will tell you.`,
+    ],
+    scalingPoints: [
+      "Answer every call and inquiry without adding front-office hours.",
+      "Automation handles welcomes, reminders, and thank-yous.",
+      "Clergy and staff stay on the conversations that matter most.",
+      "Clear giving numbers show when the budget can support more staff.",
+    ],
+    faq: [
+      { q: "Who is CAROS for?", a: "Churches, parishes, synagogues, mosques, temples, multi-site ministries, and faith-based schools and nonprofits that want consistent guest follow-up, healthier recurring giving, and clear visibility into what sustains the ministry." },
+      { q: "Does CAROS replace our church management or online giving software?", a: "No. CAROS works around the church management, giving, and calendar tools you already use, adding the follow-up, communication, and reporting those systems often don't handle end to end." },
+      { q: "Will messages feel salesy or impersonal?", a: "No. Your team writes and approves every message, and everything goes out under your congregation's name and voice. Giving and pledge reminders are designed to be gentle, grateful, and easy to opt out of." },
+      { q: "Does CAROS replace pastoral care?", a: "Never. CAROS handles the reminders, routing, and organization so your clergy and care team know who needs attention. Urgent pastoral calls are routed to a real person on your team." },
+      { q: "How is member and giver information handled?", a: "Implementation is configured around your privacy policies and approved systems. Access is limited to the people your leadership authorizes." },
+      { q: "Can CAROS help with facility rentals, weddings, and events?", a: "Yes. Rental, wedding, event, class, and school enrollment inquiries are captured, answered quickly, and tracked to a booking, so that revenue stops waiting in a voicemail box." },
+      { q: "What does a Religious Institution Revenue Audit review?", a: "We review guest follow-up, call and inquiry response, recurring giving health, lapsed gifts, pledge fulfillment, facility and event bookings, and outreach attribution to show where ministry revenue is slipping away." },
+    ],
+    ctaHeadline: "Find the giving your ministry is quietly losing.",
+    ctaSub: "A free CAROS Revenue Audit shows where guest follow-up, lapsed gifts, pledges, and facility inquiries are slipping through the cracks — and what it would take to keep them.",
+    captureTitle: "Welcome every guest, and turn a first visit into a",
+    captureTitleSerif: "second one.",
+    captureIntro: "Whether someone finds you through a search, a livestream, a friend, or a Sunday service, the first 48 hours decide whether they come back. CAROS makes sure every guest, call, and inquiry is captured, welcomed, and given a clear next step — automatically.",
+    captureCapabilities: [
+      { title: "Every connection in one place", body: "Guest cards, website forms, texts, calls, livestream sign-ups, and event registrations all land in one inbox tagged to their source — no guest lost on a desk or in a volunteer's phone." },
+      { title: "Same-day guest welcome", body: "First-time guests get a warm, personal welcome by text and email the same day, in your voice, with an easy next step to come back." },
+      { title: "Missed-call text back", body: "When the office is closed or the line is busy, CAROS texts the caller back so the wedding inquiry, the new-family question, or the prayer request doesn't go unanswered." },
+      { title: "Human answering under your name", body: "Real people answer, help, and route callers under your congregation's name when your staff are in services, meetings, or visiting members." },
+      { title: "Facility & event follow-up", body: "Rental, wedding, event, and class inquiries are tracked and followed up until they're booked, so that revenue doesn't sit in a voicemail box." },
+      { title: "Online scheduling", body: "Guests and members can book a meeting with a pastor, a campus tour, or a class against real availability, with confirmations and reminders." },
+      { title: "Connection pipeline visibility", body: "See where every person stands — first visit, second visit, connected to a group, member, giver — at a glance, without digging through cards and spreadsheets." },
+      { title: "Outreach attribution", body: "Know which events, ads, and outreach efforts brought people who stayed, connected, and gave — not just who showed up once." },
+    ],
+    acquisitionItems: [],
+  },
+)
+
+/* ==========================================================================
    Registry
    ========================================================================== */
 
@@ -3316,6 +3462,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
   "medical-practices": medicalPractices,
   "financial-services": financialServices,
   "insurance-brokerage": insuranceBrokerage,
+  "religious-institutions": religiousInstitutions,
 }
 
 export const INDUSTRY_SLUGS = Object.keys(INDUSTRY_CONTENT)
