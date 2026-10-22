@@ -88,8 +88,48 @@ export default function IndustriesPage() {
                 <span className="eyebrow text-gold">Dedicated Solution</span>
                 <h3 className="mt-3 text-2xl font-extrabold tracking-tight">CAROS for Religious Institutions</h3>
                 <p className="mt-2 max-w-2xl leading-relaxed text-muted-foreground">
-                  Built for churches, parishes, synagogues, mosques, and ministries — from first-time guest follow-up
-                  to recurring giving, pledges, and facility bookings.
+                  Built for churches, parishes, synagogues, mosques, temples, and ministries — from visitor
+                  welcome and follow-up to events, volunteers, and community engagement.
+                </p>
+              </div>
+              <span className="inline-flex items-center gap-2 whitespace-nowrap font-semibold text-gold">
+                Explore
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </span>
+            </Link>
+          </Reveal>
+
+          <Reveal className="mt-6">
+            <Link
+              href="/industries/creators-influencers"
+              className="group flex flex-col gap-4 rounded-2xl border border-border bg-card p-8 transition-colors hover:border-gold sm:flex-row sm:items-center sm:justify-between lg:p-10"
+            >
+              <div>
+                <span className="eyebrow text-gold">Dedicated Solution</span>
+                <h3 className="mt-3 text-2xl font-extrabold tracking-tight">CAROS for Creators &amp; Influencers</h3>
+                <p className="mt-2 max-w-2xl leading-relaxed text-muted-foreground">
+                  Built for creators, influencers, podcasters, and personal brands — from audience capture and
+                  funnels to partnerships, courses, memberships, and revenue insights.
+                </p>
+              </div>
+              <span className="inline-flex items-center gap-2 whitespace-nowrap font-semibold text-gold">
+                Explore
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </span>
+            </Link>
+          </Reveal>
+
+          <Reveal className="mt-6">
+            <Link
+              href="/industries/nonprofits"
+              className="group flex flex-col gap-4 rounded-2xl border border-border bg-card p-8 transition-colors hover:border-gold sm:flex-row sm:items-center sm:justify-between lg:p-10"
+            >
+              <div>
+                <span className="eyebrow text-gold">Dedicated Solution</span>
+                <h3 className="mt-3 text-2xl font-extrabold tracking-tight">CAROS for Nonprofits</h3>
+                <p className="mt-2 max-w-2xl leading-relaxed text-muted-foreground">
+                  Built for nonprofits, charities, and community organizations — supporters, volunteers,
+                  fundraising workflows, programs, and outreach coordinated in one place.
                 </p>
               </div>
               <span className="inline-flex items-center gap-2 whitespace-nowrap font-semibold text-gold">

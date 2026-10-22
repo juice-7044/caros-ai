@@ -41,6 +41,29 @@ export function IndustryHero({ industry }: { industry: IndustryContent }) {
             visible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
           }`}
         >
+          {industry.heroCtas ? (
+            <>
+              <a
+                href={industry.heroCtas.primaryHref}
+                target={industry.heroCtas.primaryHref.startsWith("http") ? "_blank" : undefined}
+                rel={industry.heroCtas.primaryHref.startsWith("http") ? "noopener noreferrer" : undefined}
+                className="group inline-flex h-13 items-center justify-center gap-2 rounded-full bg-gold px-7 text-base font-semibold text-gold-foreground transition-all duration-300 hover:brightness-110"
+              >
+                {industry.heroCtas.primaryLabel}
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </a>
+              <a
+                href={industry.heroCtas.secondaryHref}
+                target={industry.heroCtas.secondaryHref.startsWith("http") ? "_blank" : undefined}
+                rel={industry.heroCtas.secondaryHref.startsWith("http") ? "noopener noreferrer" : undefined}
+                className="group inline-flex h-13 items-center justify-center gap-2 rounded-full border border-foreground/25 px-7 text-base font-semibold text-foreground transition-all duration-300 hover:border-foreground hover:bg-foreground hover:text-background"
+              >
+                {industry.heroCtas.secondaryLabel}
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </a>
+            </>
+          ) : (
+            <>
           <a
             href={AUDIT_URL}
             target="_blank"
@@ -66,6 +89,8 @@ export function IndustryHero({ industry }: { industry: IndustryContent }) {
             {AUDIT_LABEL}
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>
+            </>
+          )}
         </div>
 
         {/* Trust row */}
