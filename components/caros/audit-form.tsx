@@ -158,7 +158,6 @@ export function AuditForm() {
           id="consent"
           name="consent"
           type="checkbox"
-          required
           className="mt-0.5 h-5 w-5 shrink-0 cursor-pointer rounded border border-ink-border bg-ink accent-gold outline-none focus-visible:ring-2 focus-visible:ring-gold"
         />
         <span className="text-xs leading-relaxed text-ink-muted">
