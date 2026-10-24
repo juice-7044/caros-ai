@@ -161,16 +161,16 @@ export function AuditForm() {
           className="mt-0.5 h-5 w-5 shrink-0 cursor-pointer rounded border border-ink-border bg-ink accent-gold outline-none focus-visible:ring-2 focus-visible:ring-gold"
         />
         <span className="text-xs leading-relaxed text-ink-muted">
-          By checking this box, I agree to receive calls and text messages (including via automated technology) from
-          CAROS at the phone number provided about my Revenue Audit and related services. Consent is not a condition of
-          purchase. Message and data rates may apply. Message frequency varies. Reply STOP to opt out or HELP for help.
-          See our{" "}
-          <Link href="/privacy" className="font-medium text-gold underline-offset-4 hover:underline">
+          I consent to receive non-marketing text messages from CAROSAI{"  "}about my Revenue Audit inquiry,
+          appointment confirmations, appointment reminders, and audit follow-up at the phone number provided.
+          Message frequency may vary. Message and data rates may apply. Reply STOP to opt out or HELP for
+          assistance. Consent is not a condition of purchase. See our{" "}
+          <Link href="https://getcaros.com/privacy" className="font-medium text-gold underline-offset-4 hover:underline">
             Privacy Policy
           </Link>{" "}
           and{" "}
-          <Link href="/terms" className="font-medium text-gold underline-offset-4 hover:underline">
-            Terms
+          <Link href="https://getcaros.com/terms" className="font-medium text-gold underline-offset-4 hover:underline">
+            Terms &amp; Conditions
           </Link>
           .
         </span>
