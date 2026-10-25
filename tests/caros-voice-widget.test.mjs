@@ -16,6 +16,13 @@ test('open-panel orb is enlarged and the launcher has distinct Talk to us wordin
   assert.doesNotMatch(source, /<strong>Talk to CAROS<\/strong>/)
 })
 
+test('visitors can choose voice or website text chat without reintroducing a stock embed', () => {
+  const source = readFileSync(new URL('components/caros/chat-widget.tsx', root), 'utf8')
+  assert.match(source, /Text chat/)
+  assert.match(source, /ChatSessionController/)
+  assert.doesNotMatch(source, /retell-widget-v2\.js|SMS/)
+})
+
 test('CAROS launcher is raised on desktop, respects reduced motion and fits small screens', () => {
   const css = readFileSync(new URL('components/caros/chat-widget.module.css', root), 'utf8')
   assert.match(css, /4in/)
