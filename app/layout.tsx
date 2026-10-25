@@ -27,7 +27,7 @@ const jetbrainsMono = JetBrains_Mono({
 const SITE_URL = "https://getcaros.com"
 
 const SITE_DESCRIPTION =
-  "CAROS is the Customer Acquisition & Revenue Operating System for service businesses. Capture every lead, book more jobs with human answering, retain customers, and connect your marketing spend to the calls, jobs, and revenue it actually produces."
+  "CAROS is the Customer Acquisition & Revenue Operating System for relationship-driven businesses and organizations."
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -39,20 +39,20 @@ export const metadata: Metadata = {
   applicationName: "CAROS",
   generator: "v0.app",
   keywords: [
-    "local service business CRM",
-    "contractor lead management software",
+    "customer relationship management",
+    "lead and inquiry management software",
     "customer acquisition operating system",
-    "revenue operations for service businesses",
+    "revenue operations for businesses and organizations",
     "missed call text back",
-    "human answering service for contractors",
+    "human answering and inquiry follow-up",
     "marketing ROI attribution",
     "lead source attribution",
-    "roofing CRM",
-    "HVAC lead capture",
-    "plumbing business software",
+    "professional services operations",
+    "nonprofit relationship management",
+    "audience and community engagement",
     "booked revenue tracking",
-    "service business marketing software",
-    "field service automation",
+    "relationship-driven business growth",
+    "workflow automation",
   ],
   authors: [{ name: "CAROS" }],
   creator: "CAROS",
@@ -137,14 +137,14 @@ const structuredData = {
       audience: {
         "@type": "BusinessAudience",
         audienceType:
-          "Service businesses — roofing, HVAC, plumbing, electrical, cleaning, landscaping, and more",
+          "Relationship-driven businesses and organizations, including professional practices, healthcare, automotive, creators, nonprofits, religious institutions, and home services",
       },
       featureList: [
         "Customer Acquisition — lead capture from ads, forms, chat, SMS, and missed-call text back",
-        "Revenue Operations — CRM, human answering, booking, estimate follow-up, and invoicing",
+        "Revenue Operations — CRM, human answering, booking, proposal follow-up, and invoicing",
         "Customer Success — reviews, referrals, repeat-service reminders, and reactivation",
         "Business Intelligence — lead-source attribution, booked-revenue reporting, and marketing ROI",
-        "Platform & Integrations — phone, email, SMS, calendars, payments, and field service tools",
+        "Platform & Integrations — phone, email, SMS, calendars, payments, and connected operational tools",
       ],
       offers: {
         "@type": "Offer",

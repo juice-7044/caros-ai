@@ -45,8 +45,8 @@ export function Industries() {
       <div className="mx-auto mt-14 max-w-[1200px] px-6 lg:px-12">
         <Reveal delay={100}>
           <p className="max-w-2xl text-muted-foreground">
-            Own another type of business? CAROS selectively works with most referral-based small businesses.{" "}
-            <span className="font-medium text-foreground">Contact us to see if you&apos;re a fit.</span>
+            {t("fitBody")}{" "}
+            <span className="font-medium text-foreground">{t("fitCta")}</span>
           </p>
         </Reveal>
       </div>

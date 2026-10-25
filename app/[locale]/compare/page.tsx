@@ -51,9 +51,7 @@ export default function ComparePage() {
             <span className="font-serif font-normal italic text-gold-gradient">{t("titleAccent")}</span>
           </h1>
           <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground lg:text-xl">
-            There are excellent platforms helping home-service businesses answer calls, respond to leads and automate
-            follow-up. CAROS goes further by connecting those activities to a broader revenue operating system built
-            around visibility, action and human judgment.
+            {t("body")}
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
             <AuditButton label="Get My Free Revenue Audit" href={AUDIT_URL} external />

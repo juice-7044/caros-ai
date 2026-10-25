@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
+import { positioningSocialMetadata } from "@/lib/positioning-metadata"
 import { useTranslations } from "next-intl"
+import { getTranslations } from "next-intl/server"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { PageHero, Eyebrow } from "@/components/caros/ui-bits"
@@ -7,29 +9,18 @@ import { IndustriesGrid } from "@/components/caros/industries-grid"
 import { Reveal } from "@/components/caros/reveal"
 import { CtaBand } from "@/components/caros/cta-band"
 
-export const metadata: Metadata = {
-  title: "Industries",
-  description:
-    "CAROS is built for home-service businesses — roofing, HVAC, plumbing, electrical, cleaning, landscaping and more — where a missed call is a missed job.",
+export async function generateMetadata(
+  { params }: { params: Promise<{ locale: string }> },
+): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: "pages.industries" })
+  const description = t("metaDescription")
+  return { title: t("eyebrow"), description, ...positioningSocialMetadata(description, locale, `${t("eyebrow")} | CAROS`) }
 }
-
-const fits = [
-  {
-    title: "High-value jobs",
-    body: "When a single booked job is worth hundreds or thousands, one recovered lead pays for the whole system.",
-  },
-  {
-    title: "Phone-driven demand",
-    body: "Your customers still call. If that call goes unanswered, the job goes to whoever picks up next.",
-  },
-  {
-    title: "Repeatable service",
-    body: "Seasonal maintenance, repeat visits, and referrals mean one good customer is worth many jobs over time.",
-  },
-]
 
 export default function IndustriesPage() {
   const t = useTranslations("pages.industries")
+  const fits = t.raw("fitCards") as { title: string; body: string }[]
 
   return (
     <>
@@ -43,9 +34,9 @@ export default function IndustriesPage() {
       <section className="bg-background py-24 lg:py-32">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
           <Reveal>
-            <Eyebrow>Who It's For</Eyebrow>
+            <Eyebrow>{t("who")}</Eyebrow>
             <h2 className="mt-6 max-w-3xl text-balance text-[clamp(2rem,4vw,3.25rem)] font-extrabold leading-[1.02] tracking-tight">
-              If you run one of these, revenue is leaking somewhere right now.
+              {t("whoTitle")}
             </h2>
           </Reveal>
           <div className="mt-16">
@@ -53,7 +44,7 @@ export default function IndustriesPage() {
           </div>
           <Reveal className="mt-10">
             <p className="font-serif text-xl italic text-muted-foreground">
-              Don&apos;t see yours? If you sell high-value services locally and depend on calls, CAROS fits.
+              {t("otherFit")}
             </p>
           </Reveal>
 
@@ -144,9 +135,9 @@ export default function IndustriesPage() {
       <section className="bg-muted/40 py-24 lg:py-32">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
           <Reveal>
-            <Eyebrow>Why It Fits</Eyebrow>
+            <Eyebrow>{t("fits")}</Eyebrow>
             <h2 className="mt-6 max-w-3xl text-balance text-[clamp(2rem,4vw,3.25rem)] font-extrabold leading-[1.02] tracking-tight">
-              Three things these businesses have in common.
+              {t("fitsTitle")}
             </h2>
           </Reveal>
           <div className="mt-16 grid gap-8 md:grid-cols-3">
@@ -161,7 +152,7 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      <CtaBand headline="See what CAROS looks like for your trade." />
+      <CtaBand headline={t("cta")} />
     </>
   )
 }

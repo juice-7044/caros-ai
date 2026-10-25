@@ -8,7 +8,7 @@ export async function generateMetadata(): Promise<Metadata> { const t = await ge
 export default async function AffiliatesPage() {
   const t = await getTranslations("AffiliatesPage")
   const steps = ["apply", "approved", "refer"] as const
-  const fit = ["consultants", "marketers", "agencies", "b2b", "coaches", "leaders", "creators", "clients", "homeServices"] as const
+  const fit = ["consultants", "marketers", "agencies", "b2b", "coaches", "leaders", "creators", "clients", "industryNetworks"] as const
   return <main>
     <AffiliateHero
       eyebrow={t("hero.eyebrow")}

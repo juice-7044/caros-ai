@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { useTranslations } from "next-intl"
 import { Reveal } from "@/components/caros/reveal"
 import { Eyebrow, AuditButton } from "@/components/caros/ui-bits"
 import { Sunburst } from "@/components/caros/sunburst"
@@ -7,6 +8,7 @@ import { EMAIL, EMAIL_HREF } from "@/lib/site"
 /* ---------------- Hero ---------------- */
 
 export function DiagnosticHero() {
+  const t = useTranslations("pages.diagnostic")
   return (
     <section className="hero-gradient relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-30">
@@ -35,8 +37,7 @@ export function DiagnosticHero() {
           <span className="font-serif font-normal italic text-gold-gradient">you can&apos;t see.</span>
         </h1>
         <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground lg:text-xl">
-          Most home-service owners we speak with can&apos;t answer the questions on this page. If that&apos;s you, your
-          marketing is flying blind — and your revenue is leaking.
+          {t("heroBody")}
         </p>
         <div className="mt-10">
           <AuditButton label="Book Your Free Revenue Audit" className="h-16 px-10 text-lg" />

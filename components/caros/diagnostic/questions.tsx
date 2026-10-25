@@ -1,19 +1,10 @@
 "use client"
 
 import { useMemo, useState } from "react"
+import { useTranslations } from "next-intl"
 import { Eyebrow, AuditButton } from "@/components/caros/ui-bits"
 import { cn } from "@/lib/utils"
 
-const QUESTIONS = [
-  "Which marketing source produced your highest-value jobs this month?",
-  "How many leads called and never got an answer last week?",
-  "How many estimates were sent but never followed up?",
-  "How much revenue is sitting in 'pending' because a part is on order and nobody checked?",
-  "How many past customers have you paid Google to find again?",
-  "What is your average response time to a new lead?",
-  "Do you know your true marketing ROI by source — spend to invoiced revenue?",
-  "How many jobs closed this month without an attached paid invoice?",
-]
 
 type Answer = "yes" | "no" | "unsure"
 
@@ -27,6 +18,8 @@ const OPTIONS: { value: Answer; label: string }[] = [
 ]
 
 export function DiagnosticQuestions() {
+  const t = useTranslations("pages.diagnostic")
+  const questions = t.raw("questions") as string[]
   const [answers, setAnswers] = useState<Record<number, Answer>>({})
 
   const { answered, leaks } = useMemo(() => {
@@ -59,8 +52,8 @@ export function DiagnosticQuestions() {
         <div className="max-w-3xl">
           <Eyebrow>The Diagnostic</Eyebrow>
           <h2 className="mt-6 text-balance text-[clamp(2rem,4.5vw,3.5rem)] font-display leading-[1] tracking-tight">
-            Can you answer these questions{" "}
-            <span className="font-serif font-normal italic text-gold-gradient">about your business?</span>
+            {t("questionTitle")}{" "}
+            <span className="font-serif font-normal italic text-gold-gradient">{t("questionTitleAccent")}</span>
           </h2>
           <p className="mt-6 text-lg text-muted-foreground">
             Answer honestly. Every &ldquo;no&rdquo; or &ldquo;not sure&rdquo; is a place your revenue could be
@@ -69,7 +62,7 @@ export function DiagnosticQuestions() {
         </div>
 
         <div className="mt-14 grid gap-5 md:grid-cols-2">
-          {QUESTIONS.map((q, i) => {
+          {questions.map((q, i) => {
             const current = answers[i]
             const isLeak = current ? LEAK_ANSWERS.includes(current) : false
             return (

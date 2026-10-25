@@ -1,4 +1,13 @@
 {
+  "Metadata": {
+    "description": "CAROS is the Customer Acquisition & Revenue Operating System for relationship-driven businesses and organizations."
+  },
+  "PricingPositioning": {
+    "title": "Revenue operations built around how you work",
+    "subtitle": "CAROS combines systems, automation, revenue intelligence, marketing attribution, and support to help businesses and organizations capture opportunities, coordinate follow-up, and make better decisions about growth.",
+    "coreTitle": "One system. Built around how you work.",
+    "coreDescription": "A connected revenue operating system for managing inquiries, follow-up, relationships, and revenue in one place."
+  },
   "nav": {
     "home": "Home",
     "industries": "Industries",
@@ -370,12 +379,14 @@
       "eyebrow": "Do The Math",
       "headlinePrefix": "CAROS doesn't need to transform your entire business",
       "headlineAccent": "to pay for itself.",
-      "body": "If your average job is $12,000, the question isn't \"Do I want to spend $997?\" It's \"How many $12,000 jobs am I currently losing?\"",
+      "body": "For example, if a new engagement is worth $12,000, the question isn't just what a system costs. It's how many opportunities of that value you may be losing.",
       "calculateLoss": "Calculate Your Exact Loss"
     },
     "industries": {
       "eyebrow": "Who It's For",
-      "headline": "Built for service businesses."
+      "headline": "Built around the relationships that drive growth.",
+      "fitBody": "Don't see your industry? If your business or organization depends on inquiries, follow-up, and ongoing relationships, let's explore whether CAROS is a fit.",
+      "fitCta": "Contact us to explore the fit."
     },
     "pricingPreview": {
       "eyebrow": "One Price. One System."
@@ -446,14 +457,30 @@
     },
     "industries": {
       "eyebrow": "Industries",
-      "title": "Built for the businesses where",
-      "serifTitle": "a missed call is a missed job.",
-      "subtitle": "CAROS was designed for home-service businesses — the ones that live by the phone, follow-up, and reputation.",
+      "title": "Built around the relationships",
+      "serifTitle": "that drive growth.",
+      "subtitle": "CAROS is built for businesses and organizations where timely communication, consistent follow-up, and strong relationships drive growth.",
       "who": "Who It Is For",
-      "whoTitle": "If you run one of these, revenue is leaking somewhere right now.",
+      "whoTitle": "Different industries. A shared need to stay connected.",
       "fits": "Why It Fits",
-      "fitsTitle": "Three things these businesses have in common.",
-      "cta": "See what CAROS looks like for your trade."
+      "fitsTitle": "Three needs CAROS is designed to address.",
+      "cta": "See how CAROS could work for you.",
+      "metaDescription": "CAROS helps relationship-driven businesses and organizations connect inquiries, follow-up, operations, and revenue intelligence across industries.",
+      "otherFit": "Don't see your industry? If inquiries, follow-up, and ongoing relationships matter to your business or organization, let's explore whether CAROS is a fit.",
+      "fitCards": [
+        {
+          "title": "Opportunities worth following up",
+          "body": "A new inquiry, proposal, booking, or supporter relationship can lose momentum without a clear next step."
+        },
+        {
+          "title": "Communication that keeps moving",
+          "body": "Calls, forms, messages, and referrals need timely responses and a clear handoff to the right person."
+        },
+        {
+          "title": "Relationships that continue",
+          "body": "Repeat purchases, renewals, referrals, and ongoing participation depend on staying connected after the first interaction."
+        }
+      ]
     },
     "faq": {
       "eyebrow": "Works With Your Existing Ecosystem",
@@ -464,10 +491,27 @@
     "compare": {
       "eyebrow": "Compare CAROS",
       "title": "Revenue technology should do more than respond.",
-      "titleAccent": "Know what deserves attention next."
+      "titleAccent": "Know what deserves attention next.",
+      "body": "Some platforms focus on answering calls, responding to inquiries, or automating follow-up. CAROS connects those activities to acquisition, operations, and revenue intelligence for relationship-driven businesses and organizations."
     },
     "diagnostic": {
-      "breakEven": "The Break-Even Math"
+      "breakEven": "The Break-Even Math",
+      "metaDescription": "A short diagnostic for businesses and organizations. Explore unanswered inquiries, missed follow-up, stalled opportunities, and gaps in revenue visibility.",
+      "heroBody": "If you lead a business or organization, these questions can help you see where unanswered inquiries, inconsistent follow-up, or unclear reporting may be costing you opportunities.",
+      "opportunityExample": "For example, if a new client engagement is worth $12,000, consider what an unanswered inquiry or missed follow-up could cost.",
+      "opportunityExampleAccent": "Use your own numbers to assess the business case.",
+      "questionTitle": "Can you answer these questions",
+      "questionTitleAccent": "about your business or organization?",
+      "questions": [
+        "Which source produced your highest-value opportunities this month?",
+        "How many inquiries went unanswered last week?",
+        "How many proposals or requests are waiting for follow-up?",
+        "Which opportunities are stalled because nobody took the next step?",
+        "How many past customers or supporters could you reconnect with?",
+        "What is your average response time to a new inquiry?",
+        "Can you connect your marketing spend to revenue or other measurable outcomes?",
+        "How many completed engagements still have an outstanding payment or next step?"
+      ]
     }
   },
   "calculator": {
@@ -564,7 +608,7 @@
       "insights": { "title": "Insights", "body": "Practical perspectives on revenue operations, lead management, automation, marketing attribution, customer follow-up, and the systems that connect them.", "cta": "Explore Insights" },
       "marketingRoi": { "title": "Marketing ROI", "body": "See how your marketing investment connects to leads, opportunities, customers, and revenue so you can better understand what your marketing dollars are doing.", "cta": "Explore Marketing ROI" },
       "audit": { "title": "Free Business Audit", "body": "Get a clearer picture of where revenue may be leaking across your lead handling, follow-up, marketing, customer journey, and revenue process.", "cta": "Get My Free Business Audit" },
-      "coming": { "title": "More Free Resources Are Coming", "body": "We're building additional tools, guides, and resources to help service businesses better understand and improve their revenue operations." },
+      "coming": { "title": "More Free Resources Are Coming", "body": "We're building additional tools, guides, and resources to help businesses and organizations understand and improve their operations and revenue performance." },
       "revenueLeakage": { "title": "Revenue Leakage Calculator", "body": "Quantify monthly revenue at risk from missed calls, slow follow-up, lost leads, and poor attribution.", "cta": "Use Calculator" },
   "workflowCost": { "title": "Workflow Cost Tool", "body": "Calculate the hidden cost of manual workflows and administrative busywork across payroll, contractor hours, and management time.", "cta": "Calculate Workflow Cost" },
   "revenueReadiness": { "title": "Revenue Readiness Assessment", "body": "See how prepared your business is to capture, convert, and grow revenue across your customer acquisition process.", "cta": "Take the Assessment" },
@@ -582,11 +626,11 @@
     "optimize": { "tag": "Optimize", "title": "Weekly reporting identifies what's working and what's leaking.", "body": "We keep tightening the system so the next marketing dollar goes where it performs best." }
   },
   "AffiliatesPage": {
-    "meta": { "title": "CAROS Affiliate Program", "description": "Partner with CAROS to help service businesses build stronger revenue systems." },
+    "meta": { "title": "CAROS Affiliate Program", "description": "Partner with CAROS to help relationship-driven businesses and organizations build stronger operating systems." },
     "hero": { "eyebrow": "CAROS AFFILIATE PROGRAM", "title": "Partner With CAROS.", "serifTitle": "", "body": "Know business owners who could benefit from a stronger revenue operation? Apply to become a CAROS Affiliate and earn by introducing qualified businesses to a system designed to help them capture opportunities, convert more leads, understand their marketing performance, and grow revenue.", "cta": "Apply to Become an Affiliate", "micro": "Applications are reviewed by the CAROS team within 1–2 business days.", "visual": { "network": "Your Network", "owner": "Business Owner", "caros": "CAROS", "revenue": "Revenue", "connector": "An affiliate makes the connection. CAROS takes it from there." } },
     "process": { "eyebrow": "HOW IT WORKS", "title": "Build Relationships. Make Introductions. Let CAROS Take It From There.", "body": "CAROS affiliates introduce qualified business owners who may benefit from CAROS. Once the introduction is made, the CAROS team handles the consultation, qualification, onboarding, and ongoing client relationship. The affiliate's role is to create the connection, not become a CAROS salesperson or provide CAROS services.", "steps": { "apply": { "title": "Apply", "body": "Tell us about yourself, your network, and how you plan to introduce CAROS." }, "approved": { "title": "Get Approved", "body": "Our team reviews your application and determines whether the partnership is a good fit." }, "refer": { "title": "Start Referring", "body": "Approved affiliates receive their referral resources and tracking information so qualified introductions can be properly attributed." } } },
-    "fit": { "eyebrow": "THE RIGHT FIT", "title": "Is the CAROS Affiliate Program a Fit for You?", "body": "The program may be a strong fit if you have trusted relationships with business owners and regularly make professional introductions or recommendations.", "items": { "consultants": "Business consultants", "marketers": "Marketing professionals", "agencies": "Agency owners", "b2b": "B2B service providers", "coaches": "Coaches and advisors", "leaders": "Community and professional-network leaders", "creators": "Content creators with relevant business audiences", "clients": "Current CAROS clients and supporters", "homeServices": "Professionals with strong relationships in the home-services industry" }, "final": "You don't need a massive audience. A trusted relationship with the right business owner can be more valuable than thousands of followers." },
-    "form": { "eyebrow": "APPLY NOW", "title": "Tell us about yourself.", "firstName": "First Name", "lastName": "Last Name", "email": "Email Address", "phone": "Phone Number", "company": "Business or Company Name", "website": "Website, LinkedIn, or Social Profile", "websiteHelp": "Enter your business website, LinkedIn profile, or the social platform where you're most active. This helps us understand your professional presence.", "promo": "How do you plan to promote or refer CAROS?", "choose": "Select an option", "audience": "Tell us about your audience or professional network.", "audiencePlaceholder": "Who do you typically serve or influence? For example: small business owners, marketing agencies, service entrepreneurs, SaaS founders, home-service business owners, etc.", "motivation": "Why do you want to become a CAROS affiliate?", "motivationPlaceholder": "Tell us what draws you to the CAROS Affiliate Program and why you think you'd be a strong referral partner.", "estimate": "How many referrals do you estimate you could generate in the next 90 days?", "source": "How did you hear about the CAROS Affiliate Program?", "referredBy": "Who referred you?", "consent": "I agree that CAROS may contact me regarding my affiliate application and the CAROS Affiliate Program. I understand that submitting this application does not guarantee approval or enrollment.", "submit": "Submit My Application", "submitting": "Submitting Application...", "error": "We couldn't submit your application just yet. Your information is still here. Please try again in a moment." },
+    "fit": { "eyebrow": "THE RIGHT FIT", "title": "Is the CAROS Affiliate Program a Fit for You?", "body": "The program may be a strong fit if you have trusted relationships with business owners and regularly make professional introductions or recommendations.", "items": { "consultants": "Business consultants", "marketers": "Marketing professionals", "agencies": "Agency owners", "b2b": "B2B service providers", "coaches": "Coaches and advisors", "leaders": "Community and professional-network leaders", "creators": "Content creators with relevant business audiences", "clients": "Current CAROS clients and supporters", "industryNetworks": "Professionals with strong relationships across businesses, professional practices, and community organizations" }, "final": "You don't need a massive audience. A trusted relationship with the right business owner can be more valuable than thousands of followers." },
+    "form": { "eyebrow": "APPLY NOW", "title": "Tell us about yourself.", "firstName": "First Name", "lastName": "Last Name", "email": "Email Address", "phone": "Phone Number", "company": "Business or Company Name", "website": "Website, LinkedIn, or Social Profile", "websiteHelp": "Enter your business website, LinkedIn profile, or the social platform where you're most active. This helps us understand your professional presence.", "promo": "How do you plan to promote or refer CAROS?", "choose": "Select an option", "audience": "Tell us about your audience or professional network.", "audiencePlaceholder": "Who do you typically serve or influence? For example: business owners, professional practices, creators, nonprofit leaders, or community organizations.", "motivation": "Why do you want to become a CAROS affiliate?", "motivationPlaceholder": "Tell us what draws you to the CAROS Affiliate Program and why you think you'd be a strong referral partner.", "estimate": "How many referrals do you estimate you could generate in the next 90 days?", "source": "How did you hear about the CAROS Affiliate Program?", "referredBy": "Who referred you?", "consent": "I agree that CAROS may contact me regarding my affiliate application and the CAROS Affiliate Program. I understand that submitting this application does not guarantee approval or enrollment.", "submit": "Submit My Application", "submitting": "Submitting Application...", "error": "We couldn't submit your application just yet. Your information is still here. Please try again in a moment." },
     "sections": { "contact": "Contact Information", "professional": "Professional Context", "audience": "Your Audience", "experience": "Your Experience With CAROS", "why": "Why CAROS?", "referral": "Referral Potential", "found": "How You Found Us" },
     "success": { "title": "Application Received. Thank You.", "body": "We've received your affiliate application. Our team will review it within 1–2 business days. If we think you're a strong fit, someone from CAROS will contact you using the information you provided.", "second": "In the meantime, learn more about how CAROS helps independent businesses understand and improve the journey from marketing investment to revenue.", "button": "Explore CAROS" }
   }

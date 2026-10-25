@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
+import { positioningSocialMetadata } from "@/lib/positioning-metadata"
 import { useTranslations } from "next-intl"
+import { getTranslations } from "next-intl/server"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { INSIGHTS_URL } from "@/lib/site"
@@ -16,10 +18,14 @@ import {
   DiagnosticFinalCta,
 } from "@/components/caros/diagnostic/sections"
 
-export const metadata: Metadata = {
-  title: "The Revenue Leak Diagnostic",
-  description:
-    "A 2-minute self-diagnostic for home-service owners. Find out where your revenue is leaking — missed calls, slow lead response, un-followed estimates, and untracked marketing ROI — then book a free Revenue Audit.",
+export async function generateMetadata(
+  { params }: { params: Promise<{ locale: string }> },
+): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: "pages.diagnostic" })
+  const description = t("metaDescription")
+  const title = locale === "es" ? "Diagnóstico de ingresos" : "The Revenue Leak Diagnostic"
+  return { title, description, ...positioningSocialMetadata(description, locale, `${title} | CAROS`) }
 }
 
 export default function DiagnosticPage() {
@@ -49,8 +55,8 @@ export default function DiagnosticPage() {
           <Reveal delay={120} className="mt-10">
             <div className="rounded-2xl border border-gold/40 bg-gold/5 p-8 lg:p-10">
               <p className="text-balance text-xl font-bold leading-tight tracking-tight lg:text-2xl">
-                If your average roofing job is $12,000, the question isn&apos;t &ldquo;Do I want to spend $997?&rdquo;
-                It&apos;s <span className="text-gold-gradient">&ldquo;How many $12,000 jobs am I currently losing?&rdquo;</span>
+                {t("opportunityExample")}{" "}
+                <span className="text-gold-gradient">{t("opportunityExampleAccent")}</span>
               </p>
             </div>
           </Reveal>
