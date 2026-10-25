@@ -56,27 +56,27 @@ export default async function TermsPage() {
       toc={translateSpanishData(toc, locale, catalog)}
     >
       <LegalSection n={1} id="agreement" title={tr("Agreement to Terms")}>
-        <LegalP> {tr("Welcome to CAROS (“we,” “us,” or “our”). These Terms and Conditions of Use (“Terms”) govern your access to and use of the CAROS website located at getcaros.com (the “Website”), including any content, functionality, and services offered on or through the Website.")} </LegalP>
-        <LegalP> {tr("By accessing or using the Website, you accept and agree to be bound by these Terms and our Privacy Policy, incorporated herein by reference. If you do not agree to these Terms, you must not access or use the Website.")} </LegalP>
+        <LegalP>{tr("Welcome to CAROS (“we,” “us,” or “our”). These Terms and Conditions of Use (“Terms”) govern your access to and use of the CAROS website located at getcaros.com (the “Website”), including any content, functionality, and services offered on or through the Website.")}</LegalP>
+        <LegalP>{tr("By accessing or using the Website, you accept and agree to be bound by these Terms and our Privacy Policy, incorporated herein by reference. If you do not agree to these Terms, you must not access or use the Website.")}</LegalP>
       </LegalSection>
 
       <LegalSection n={2} id="changes" title={tr("Changes to Terms")}>
-        <LegalP> {tr("We may revise and update these Terms from time to time in our sole discretion. All changes are effective immediately when we post them. Your continued use of the Website following the posting of revised Terms means that you accept and agree to the changes.")} </LegalP>
+        <LegalP>{tr("We may revise and update these Terms from time to time in our sole discretion. All changes are effective immediately when we post them. Your continued use of the Website following the posting of revised Terms means that you accept and agree to the changes.")}</LegalP>
       </LegalSection>
 
       <LegalSection n={3} id="access" title={tr("Accessing the Website and Account Security")}>
-        <LegalP> {tr("We reserve the right to withdraw or amend the Website without notice. You are responsible for making all arrangements necessary for you to have access to the Website. To access certain features, you may be asked to provide registration details. It is a condition of your use that all information you provide is correct, current, and complete.")} </LegalP>
-        <LegalP> {tr("If you are provided with a user name, password, or other security information, you must treat such information as confidential. We have the right to disable any user identifier at any time for any or no reason, including if you have violated any provision of these Terms.")} </LegalP>
+        <LegalP>{tr("We reserve the right to withdraw or amend the Website without notice. You are responsible for making all arrangements necessary for you to have access to the Website. To access certain features, you may be asked to provide registration details. It is a condition of your use that all information you provide is correct, current, and complete.")}</LegalP>
+        <LegalP>{tr("If you are provided with a user name, password, or other security information, you must treat such information as confidential. We have the right to disable any user identifier at any time for any or no reason, including if you have violated any provision of these Terms.")}</LegalP>
       </LegalSection>
 
       <LegalSection n={4} id="ip" title={tr("Intellectual Property Rights")}>
-        <LegalP> {tr("The Website and its entire contents, features, and functionality are owned by CAROS, its licensors, or other providers and are protected by United States and international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.")} </LegalP>
-        <LegalP> {tr("The CAROS name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of CAROS or its affiliates. You must not use such marks without prior written permission.")} </LegalP>
-        <LegalP> {tr("You may print or download one copy of a reasonable number of pages of the Website for your own personal, non-commercial use. You must not modify copies of materials, use illustrations separately from accompanying text, delete proprietary rights notices, or use any part for commercial purposes without our express written consent.")} </LegalP>
+        <LegalP>{tr("The Website and its entire contents, features, and functionality are owned by CAROS, its licensors, or other providers and are protected by United States and international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.")}</LegalP>
+        <LegalP>{tr("The CAROS name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of CAROS or its affiliates. You must not use such marks without prior written permission.")}</LegalP>
+        <LegalP>{tr("You may print or download one copy of a reasonable number of pages of the Website for your own personal, non-commercial use. You must not modify copies of materials, use illustrations separately from accompanying text, delete proprietary rights notices, or use any part for commercial purposes without our express written consent.")}</LegalP>
       </LegalSection>
 
       <LegalSection n={5} id="acceptable-use" title={tr("Acceptable Use Policy")}>
-        <LegalP> {tr("You may use the Website only for lawful purposes and in accordance with these Terms. You agree not to use the Website:")} </LegalP>
+        <LegalP>{tr("You may use the Website only for lawful purposes and in accordance with these Terms. You agree not to use the Website:")}</LegalP>
         <LegalList
           items={[
             tr("In any way that violates any applicable federal, state, local, or international law or regulation, including laws regarding export of data or software."),
@@ -96,73 +96,73 @@ export default async function TermsPage() {
       </LegalSection>
 
       <LegalSection n={6} id="contributions" title={tr("User Contributions")}>
-        <LegalP> {tr("The Website may contain interactive features that allow users to submit, post, display, or transmit content (“User Contributions”). All User Contributions must comply with these Terms.")} </LegalP>
-        <LegalP> {tr("Any User Contribution you post will be considered non-confidential and non-proprietary. By providing any User Contribution, you grant us and our affiliates and service providers the right to use, reproduce, modify, perform, display, distribute, and disclose such material for any purpose.")} </LegalP>
-        <LegalP> {tr("You represent and warrant that you own or control all rights in and to the User Contributions and that they comply with these Terms. You are responsible for any User Contributions you submit.")} </LegalP>
+        <LegalP>{tr("The Website may contain interactive features that allow users to submit, post, display, or transmit content (“User Contributions”). All User Contributions must comply with these Terms.")}</LegalP>
+        <LegalP>{tr("Any User Contribution you post will be considered non-confidential and non-proprietary. By providing any User Contribution, you grant us and our affiliates and service providers the right to use, reproduce, modify, perform, display, distribute, and disclose such material for any purpose.")}</LegalP>
+        <LegalP>{tr("You represent and warrant that you own or control all rights in and to the User Contributions and that they comply with these Terms. You are responsible for any User Contributions you submit.")}</LegalP>
       </LegalSection>
 
       <LegalSection n={7} id="enforcement" title={tr("Monitoring and Enforcement")}>
-        <LegalP> {tr("We have the right to remove or refuse to post any User Contributions; take action against any User Contribution that violates these Terms or infringes any right; disclose your identity to third parties who claim material violates their rights; take appropriate legal action; and terminate or suspend your access for any violation.")} </LegalP>
-        <LegalP> {tr("Without limiting the foregoing, we have the right to fully cooperate with any law enforcement authorities or court order requesting or directing us to disclose the identity or other information of anyone posting materials on the Website.")} </LegalP>
+        <LegalP>{tr("We have the right to remove or refuse to post any User Contributions; take action against any User Contribution that violates these Terms or infringes any right; disclose your identity to third parties who claim material violates their rights; take appropriate legal action; and terminate or suspend your access for any violation.")}</LegalP>
+        <LegalP>{tr("Without limiting the foregoing, we have the right to fully cooperate with any law enforcement authorities or court order requesting or directing us to disclose the identity or other information of anyone posting materials on the Website.")}</LegalP>
       </LegalSection>
 
       <LegalSection n={8} id="reliance" title={tr("Reliance on Information Posted")}>
-        <LegalP> {tr("The information presented on or through the Website is made available solely for general information purposes. We do not warrant the accuracy, completeness, or usefulness of this information. Any reliance you place on such information is strictly at your own risk.")} </LegalP>
+        <LegalP>{tr("The information presented on or through the Website is made available solely for general information purposes. We do not warrant the accuracy, completeness, or usefulness of this information. Any reliance you place on such information is strictly at your own risk.")}</LegalP>
       </LegalSection>
 
       <LegalSection n={9} id="links" title={tr("Links from the Website")}>
-        <LegalP> {tr("If the Website contains links to other sites and resources provided by third parties, these links are provided for your convenience only. We have no control over the contents of those sites or resources and accept no responsibility for them or for any loss or damage that may arise from your use of them.")} </LegalP>
+        <LegalP>{tr("If the Website contains links to other sites and resources provided by third parties, these links are provided for your convenience only. We have no control over the contents of those sites or resources and accept no responsibility for them or for any loss or damage that may arise from your use of them.")}</LegalP>
       </LegalSection>
 
       <LegalSection n={10} id="services" title={tr("Services and Platform Access")}>
-        <LegalP> {tr("The CAROS Revenue Operating System (“Platform”) is a managed service provided to business clients under a separate Master Services Agreement. These Terms govern use of the public Website only. Access to and use of the Platform is governed by the executed Master Services Agreement between CAROS and the client.")} </LegalP>
-        <LegalP> {tr("CAROS provides a managed revenue-operations environment combining configured software, CRM and workflow infrastructure, automated communications, human answering, business intelligence, marketing attribution, customer reactivation, scheduling and estimate workflows, and selected integrations. CAROS may use third-party infrastructure and may offer optional advertising, SEO/GEO, custom integrations, AI-assisted functions, and other add-ons.")} </LegalP>
-        <LegalP> {tr("Unless expressly stated, CAROS does not provide accounting, tax, payroll, legal, regulatory-compliance, inventory, fleet-management, full field-service-management, professional valuation, investment advisory, business brokerage, or licensed professional services.")} </LegalP>
+        <LegalP>{tr("The CAROS Revenue Operating System (“Platform”) is a managed service provided to business clients under a separate Master Services Agreement. These Terms govern use of the public Website only. Access to and use of the Platform is governed by the executed Master Services Agreement between CAROS and the client.")}</LegalP>
+        <LegalP>{tr("CAROS provides a managed revenue-operations environment combining configured software, CRM and workflow infrastructure, automated communications, human answering, business intelligence, marketing attribution, customer reactivation, scheduling and estimate workflows, and selected integrations. CAROS may use third-party infrastructure and may offer optional advertising, SEO/GEO, custom integrations, AI-assisted functions, and other add-ons.")}</LegalP>
+        <LegalP>{tr("Unless expressly stated, CAROS does not provide accounting, tax, payroll, legal, regulatory-compliance, inventory, fleet-management, full field-service-management, professional valuation, investment advisory, business brokerage, or licensed professional services.")}</LegalP>
 
         <LegalSubheading>{tr("AI and Automated Communications")}</LegalSubheading>
-        <LegalP> {tr("The Platform may use artificial intelligence or machine-learning systems to assist with summarization, classification, routing, drafting, analysis, forecasting, conversational workflows, or other functions. AI output can be incomplete or inaccurate and should be reviewed where appropriate before reliance for material business decisions.")} </LegalP>
-        <LegalP> {tr("AI and business-intelligence outputs are informational and operational. They are not legal, tax, accounting, medical, investment, valuation, or other licensed professional advice. If call recording, transcription, or AI-generated/AI-voiced communications are enabled through the Platform, CAROS will configure notices, consent flows, scripts, and use restrictions as required by applicable law and the applicable Service Order. CAROS does not use AI to make automated decisions that produce legal or similarly significant effects on Website visitors without human review.")} </LegalP>
+        <LegalP>{tr("The Platform may use artificial intelligence or machine-learning systems to assist with summarization, classification, routing, drafting, analysis, forecasting, conversational workflows, or other functions. AI output can be incomplete or inaccurate and should be reviewed where appropriate before reliance for material business decisions.")}</LegalP>
+        <LegalP>{tr("AI and business-intelligence outputs are informational and operational. They are not legal, tax, accounting, medical, investment, valuation, or other licensed professional advice. If call recording, transcription, or AI-generated/AI-voiced communications are enabled through the Platform, CAROS will configure notices, consent flows, scripts, and use restrictions as required by applicable law and the applicable Service Order. CAROS does not use AI to make automated decisions that produce legal or similarly significant effects on Website visitors without human review.")}</LegalP>
 
         <LegalSubheading>{tr("Call Recording and Monitoring")}</LegalSubheading>
-        <LegalP> {tr("Where call recording or monitoring services are provided through the Platform, such recording is conducted in accordance with applicable law and the terms of the applicable Master Services Agreement. Client businesses using CAROS answering services are responsible for ensuring compliance with state and federal call-recording laws, including providing required notices to callers.")} </LegalP>
-        <LegalP> {tr("CAROS will configure recording notices and consent flows as required by applicable law and the applicable Service Order. Call recordings and transcripts, if enabled, are processed and stored in accordance with our Privacy Policy and Data Processing Addendum.")} </LegalP>
+        <LegalP>{tr("Where call recording or monitoring services are provided through the Platform, such recording is conducted in accordance with applicable law and the terms of the applicable Master Services Agreement. Client businesses using CAROS answering services are responsible for ensuring compliance with state and federal call-recording laws, including providing required notices to callers.")}</LegalP>
+        <LegalP>{tr("CAROS will configure recording notices and consent flows as required by applicable law and the applicable Service Order. Call recordings and transcripts, if enabled, are processed and stored in accordance with our Privacy Policy and Data Processing Addendum.")}</LegalP>
       </LegalSection>
 
       <LegalSection n={11} id="warranties" title={tr("Disclaimer of Warranties")}>
-        <LegalP> {tr("YOU UNDERSTAND AND AGREE THAT YOUR USE OF THE WEBSITE, ITS CONTENT, AND ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE IS AT YOUR OWN RISK. THE WEBSITE, ITS CONTENT, AND ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE ARE PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS, WITHOUT ANY WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.")} </LegalP>
-        <LegalP> {tr("NEITHER CAROS NOR ANY PERSON ASSOCIATED WITH CAROS MAKES ANY WARRANTY OR REPRESENTATION WITH RESPECT TO THE COMPLETENESS, SECURITY, RELIABILITY, QUALITY, ACCURACY, OR AVAILABILITY OF THE WEBSITE. CAROS HEREBY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT, AND FITNESS FOR A PARTICULAR PURPOSE.")} </LegalP>
+        <LegalP>{tr("YOU UNDERSTAND AND AGREE THAT YOUR USE OF THE WEBSITE, ITS CONTENT, AND ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE IS AT YOUR OWN RISK. THE WEBSITE, ITS CONTENT, AND ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE ARE PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS, WITHOUT ANY WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.")}</LegalP>
+        <LegalP>{tr("NEITHER CAROS NOR ANY PERSON ASSOCIATED WITH CAROS MAKES ANY WARRANTY OR REPRESENTATION WITH RESPECT TO THE COMPLETENESS, SECURITY, RELIABILITY, QUALITY, ACCURACY, OR AVAILABILITY OF THE WEBSITE. CAROS HEREBY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT, AND FITNESS FOR A PARTICULAR PURPOSE.")}</LegalP>
       </LegalSection>
 
       <LegalSection n={12} id="liability" title={tr("Limitation of Liability")}>
-        <LegalP> {tr("TO THE FULLEST EXTENT PROVIDED BY LAW, IN NO EVENT WILL CAROS, ITS AFFILIATES, OR THEIR LICENSORS, SERVICE PROVIDERS, EMPLOYEES, AGENTS, OFFICERS, OR DIRECTORS BE LIABLE FOR DAMAGES OF ANY KIND, UNDER ANY LEGAL THEORY, ARISING OUT OF OR IN CONNECTION WITH YOUR USE, OR INABILITY TO USE, THE WEBSITE, ANY WEBSITES LINKED TO IT, ANY CONTENT ON THE WEBSITE OR SUCH OTHER WEBSITES, INCLUDING ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES.")} </LegalP>
-        <LegalP> {tr("THE FOREGOING DOES NOT AFFECT ANY LIABILITY THAT CANNOT BE EXCLUDED OR LIMITED UNDER APPLICABLE LAW.")} </LegalP>
+        <LegalP>{tr("TO THE FULLEST EXTENT PROVIDED BY LAW, IN NO EVENT WILL CAROS, ITS AFFILIATES, OR THEIR LICENSORS, SERVICE PROVIDERS, EMPLOYEES, AGENTS, OFFICERS, OR DIRECTORS BE LIABLE FOR DAMAGES OF ANY KIND, UNDER ANY LEGAL THEORY, ARISING OUT OF OR IN CONNECTION WITH YOUR USE, OR INABILITY TO USE, THE WEBSITE, ANY WEBSITES LINKED TO IT, ANY CONTENT ON THE WEBSITE OR SUCH OTHER WEBSITES, INCLUDING ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES.")}</LegalP>
+        <LegalP>{tr("THE FOREGOING DOES NOT AFFECT ANY LIABILITY THAT CANNOT BE EXCLUDED OR LIMITED UNDER APPLICABLE LAW.")}</LegalP>
       </LegalSection>
 
       <LegalSection n={13} id="indemnification" title={tr("Indemnification")}>
-        <LegalP> {tr("You agree to defend, indemnify, and hold harmless CAROS, its affiliates, licensors, and service providers, and its and their respective officers, directors, employees, contractors, agents, licensors, suppliers, successors, and assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your violation of these Terms or your use of the Website.")} </LegalP>
+        <LegalP>{tr("You agree to defend, indemnify, and hold harmless CAROS, its affiliates, licensors, and service providers, and its and their respective officers, directors, employees, contractors, agents, licensors, suppliers, successors, and assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your violation of these Terms or your use of the Website.")}</LegalP>
       </LegalSection>
 
       <LegalSection n={14} id="governing-law" title={tr("Governing Law and Jurisdiction")}>
-        <LegalP> {tr("These Terms and any dispute or claim arising out of or related to them, their subject matter, or their formation shall be governed by and construed in accordance with the internal laws of the State of New York without giving effect to any choice or conflict of law provision or rule. Any legal suit, action, or proceeding arising out of, or related to, these Terms or the Website shall be instituted exclusively in the federal or state courts located in Suffolk County, New York. You waive any and all objections to the exercise of jurisdiction over you by such courts and to venue in such courts.")} </LegalP>
+        <LegalP>{tr("These Terms and any dispute or claim arising out of or related to them, their subject matter, or their formation shall be governed by and construed in accordance with the internal laws of the State of New York without giving effect to any choice or conflict of law provision or rule. Any legal suit, action, or proceeding arising out of, or related to, these Terms or the Website shall be instituted exclusively in the federal or state courts located in Suffolk County, New York. You waive any and all objections to the exercise of jurisdiction over you by such courts and to venue in such courts.")}</LegalP>
       </LegalSection>
 
       <LegalSection n={15} id="dispute" title={tr("Dispute Process")}>
-        <LegalP> {tr("Before filing suit, senior representatives of the Parties will attempt in good faith for at least thirty (30) days to resolve the dispute. If the dispute cannot be resolved through negotiation, either Party may pursue litigation in the courts identified above.")} </LegalP>
+        <LegalP>{tr("Before filing suit, senior representatives of the Parties will attempt in good faith for at least thirty (30) days to resolve the dispute. If the dispute cannot be resolved through negotiation, either Party may pursue litigation in the courts identified above.")}</LegalP>
       </LegalSection>
 
       <LegalSection n={16} id="waiver" title={tr("Waiver and Severability")}>
-        <LegalP> {tr("No waiver by CAROS of any term or condition set out in these Terms shall be deemed a further or continuing waiver of such term or condition or a waiver of any other term or condition. If any provision of these Terms is held by a court or other tribunal of competent jurisdiction to be invalid, illegal, or unenforceable for any reason, such provision shall be eliminated or limited to the minimum extent such that the remaining provisions of the Terms will continue in full force and effect.")} </LegalP>
+        <LegalP>{tr("No waiver by CAROS of any term or condition set out in these Terms shall be deemed a further or continuing waiver of such term or condition or a waiver of any other term or condition. If any provision of these Terms is held by a court or other tribunal of competent jurisdiction to be invalid, illegal, or unenforceable for any reason, such provision shall be eliminated or limited to the minimum extent such that the remaining provisions of the Terms will continue in full force and effect.")}</LegalP>
       </LegalSection>
 
       <LegalSection n={17} id="entire-agreement" title={tr("Entire Agreement")}>
-        <LegalP> {tr("These Terms and our Privacy Policy constitute the sole and entire agreement between you and CAROS regarding the Website and supersede all prior and contemporaneous understandings, agreements, representations, and warranties, both written and oral, regarding the Website.")} </LegalP>
+        <LegalP>{tr("These Terms and our Privacy Policy constitute the sole and entire agreement between you and CAROS regarding the Website and supersede all prior and contemporaneous understandings, agreements, representations, and warranties, both written and oral, regarding the Website.")}</LegalP>
       </LegalSection>
 
       <LegalSection n={18} id="contact" title={tr("Your Comments and Concerns")}>
-        <LegalP> {tr("The Website is operated by")} {COMPANY_NAME}{tr(". All feedback, comments, requests for technical support, and other communications relating to the Website should be directed to:")} </LegalP>
+        <LegalP>{tr("The Website is operated by")} {COMPANY_NAME}{tr(". All feedback, comments, requests for technical support, and other communications relating to the Website should be directed to:")}</LegalP>
         <div className="rounded-xl border border-border bg-card p-6">
           <p className="font-semibold text-foreground">{COMPANY_NAME}</p>
-          <p className="mt-3 text-muted-foreground"> {tr("Email:")}{" "}
+          <p className="mt-3 text-muted-foreground">{tr("Email:")}{" "}
             <Link href={COMPANY_EMAIL_HREF} className="font-medium text-gold underline-offset-4 hover:underline">
               {COMPANY_EMAIL}
             </Link>

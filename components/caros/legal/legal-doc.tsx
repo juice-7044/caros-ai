@@ -33,12 +33,12 @@ export async function LegalDoc({
 
       <section className="bg-background py-20 lg:py-28">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
-          <p className="font-mono text-xs uppercase tracking-[0.16em] text-muted-foreground"> {tr("Last updated:")} {lastUpdated}
+          <p className="font-mono text-xs uppercase tracking-[0.16em] text-muted-foreground">{tr("Last updated:")} {lastUpdated}
           </p>
 
           <div className="mt-4 rounded-xl border border-gold/30 bg-gold/[0.06] p-5">
             <p className="text-sm leading-relaxed text-muted-foreground">
-              <span className="font-semibold text-foreground">{tr("Please note:")}</span> {tr("This document is provided for general informational purposes and does not constitute legal advice. Laws vary by jurisdiction and may change over time.")} </p>
+              <span className="font-semibold text-foreground">{tr("Please note:")}</span> {tr("This document is provided for general informational purposes and does not constitute legal advice. Laws vary by jurisdiction and may change over time.")}</p>
           </div>
 
           <div className="mt-12 gap-12 lg:grid lg:grid-cols-[240px_minmax(0,1fr)]">

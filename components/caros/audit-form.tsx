@@ -81,9 +81,9 @@ export function AuditForm() {
         <span className="flex h-16 w-16 items-center justify-center rounded-full bg-gold/15 text-gold">
           <Check className="h-8 w-8" />
         </span>
-        <h2 className="mt-8 text-balance text-[clamp(1.75rem,3vw,2.5rem)] font-extrabold leading-tight tracking-tight text-ink-foreground"> {tr("Your Revenue Audit Review is booked.")} </h2>
-        <p className="mt-4 max-w-md text-pretty leading-relaxed text-ink-muted"> {tr("Taking you to our calendar to pick a time. If it doesn't open automatically,")}{" "}
-          <a href={BOOKING_URL} className="font-semibold text-gold underline-offset-4 hover:underline"> {tr("click here to book your review")} </a>
+        <h2 className="mt-8 text-balance text-[clamp(1.75rem,3vw,2.5rem)] font-extrabold leading-tight tracking-tight text-ink-foreground">{tr("Your Revenue Audit Review is booked.")}</h2>
+        <p className="mt-4 max-w-md text-pretty leading-relaxed text-ink-muted">{tr("Taking you to our calendar to pick a time. If it doesn't open automatically,")}{" "}
+          <a href={BOOKING_URL} className="font-semibold text-gold underline-offset-4 hover:underline">{tr("click here to book your review")}</a>
           .
         </p>
         <Sunburst className="mt-10 w-14 text-gold" />
@@ -109,7 +109,7 @@ export function AuditForm() {
         <div>
           <Label htmlFor="industry">{tr("Industry")}</Label>
           <select id="industry" name="industry" required defaultValue="" className={cn(fieldClass, "appearance-none")}>
-            <option value="" disabled> {tr("Select your trade")} </option>
+            <option value="" disabled>{tr("Select your trade")}</option>
             {INDUSTRIES.map((industry) => (
               <option key={industry} value={industry}>
                 {tr(industry)}
@@ -129,7 +129,7 @@ export function AuditForm() {
         <div className="sm:col-span-2">
           <Label htmlFor="revenue">{tr("Roughly, what does an average job bring in?")}</Label>
           <select id="revenue" name="revenue" defaultValue="" className={cn(fieldClass, "appearance-none")}>
-            <option value="" disabled> {tr("Select a range")} </option>
+            <option value="" disabled>{tr("Select a range")}</option>
             <option value="Under $500">{tr("Under $500")}</option>
             <option>$500 – $2,000</option>
             <option>$2,000 – $5,000</option>
@@ -156,10 +156,9 @@ export function AuditForm() {
           type="checkbox"
           className="mt-0.5 h-5 w-5 shrink-0 cursor-pointer rounded border border-ink-border bg-ink accent-gold outline-none focus-visible:ring-2 focus-visible:ring-gold"
         />
-        <span className="text-xs leading-relaxed text-ink-muted"> {tr("I consent to receive non-marketing text messages from CAROSAI")}{"  "}{tr("about my Revenue Audit inquiry, appointment confirmations, appointment reminders, and audit follow-up at the phone number provided. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out or HELP for assistance. Consent is not a condition of purchase. See our")}{" "}
-          <Link href={localeHref("https://getcaros.com/privacy", locale)} className="font-medium text-gold underline-offset-4 hover:underline"> {tr("Privacy Policy")} </Link>{" "} {tr("and")}{" "}
-          <Link href={localeHref("https://getcaros.com/terms", locale)} className="font-medium text-gold underline-offset-4 hover:underline"> {tr("Terms & Conditions")} </Link>
-          .
+        <span className="text-xs leading-relaxed text-ink-muted">{tr("I consent to receive non-marketing text messages from CAROSAI")}{" "}{tr("about my Revenue Audit inquiry, appointment confirmations, appointment reminders, and audit follow-up at the phone number provided. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out or HELP for assistance. Consent is not a condition of purchase. See our")}{" "}
+          <Link href={localeHref("https://getcaros.com/privacy", locale)} className="font-medium text-gold underline-offset-4 hover:underline">{tr("Privacy Policy")}</Link>{" "}{tr("and")}{" "}
+          <Link href={localeHref("https://getcaros.com/terms", locale)} className="font-medium text-gold underline-offset-4 hover:underline">{tr("Terms & Conditions")}</Link>.
         </span>
       </label>
 
@@ -181,7 +180,7 @@ export function AuditForm() {
           {tr(error)}
         </p>
       ) : (
-        <p className="mt-4 text-center text-sm text-ink-muted"> {tr("No cost. No obligation. Just a clear picture of where your revenue is going.")} </p>
+        <p className="mt-4 text-center text-sm text-ink-muted">{tr("No cost. No obligation. Just a clear picture of where your revenue is going.")}</p>
       )}
     </form>
   )

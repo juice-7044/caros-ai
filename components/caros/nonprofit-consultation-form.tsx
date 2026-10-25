@@ -76,8 +76,8 @@ export function NonprofitConsultationForm() {
         <span className="flex h-16 w-16 items-center justify-center rounded-full bg-gold/15 text-gold">
           <Check className="h-8 w-8" />
         </span>
-        <h2 className="mt-8 text-balance text-[clamp(1.75rem,3vw,2.5rem)] font-extrabold leading-tight tracking-tight text-ink-foreground"> {tr("Thank you — your request is in.")} </h2>
-        <p className="mt-4 max-w-md text-pretty leading-relaxed text-ink-muted"> {tr("A member of the CAROS team will reach out to learn about your organization and explore the right configuration and pricing structure for you.")} </p>
+        <h2 className="mt-8 text-balance text-[clamp(1.75rem,3vw,2.5rem)] font-extrabold leading-tight tracking-tight text-ink-foreground">{tr("Thank you — your request is in.")}</h2>
+        <p className="mt-4 max-w-md text-pretty leading-relaxed text-ink-muted">{tr("A member of the CAROS team will reach out to learn about your organization and explore the right configuration and pricing structure for you.")}</p>
       </div>
     )
   }
@@ -87,8 +87,8 @@ export function NonprofitConsultationForm() {
       <div className="flex items-center gap-4">
         <Sunburst className="h-8 w-8 shrink-0 text-gold" />
         <div>
-          <h3 className="text-2xl font-extrabold tracking-tight text-ink-foreground"> {tr("Talk to the CAROS team")} </h3>
-          <p className="mt-1 text-sm text-ink-muted"> {tr("Tell us about your organization and we'll be in touch within one business day.")} </p>
+          <h3 className="text-2xl font-extrabold tracking-tight text-ink-foreground">{tr("Talk to the CAROS team")}</h3>
+          <p className="mt-1 text-sm text-ink-muted">{tr("Tell us about your organization and we'll be in touch within one business day.")}</p>
         </div>
       </div>
 
@@ -112,7 +112,7 @@ export function NonprofitConsultationForm() {
         <div>
           <Label htmlFor="npc-org-type">{tr("Organization type *")}</Label>
           <select id="npc-org-type" name="organizationType" required className={cn(fieldClass, "appearance-none")} defaultValue="">
-            <option value="" disabled> {tr("Select one")} </option>
+            <option value="" disabled>{tr("Select one")}</option>
             <option value="Nonprofit / Charity">{tr("Nonprofit / Charity")}</option>
             <option value="Foundation">{tr("Foundation")}</option>
             <option value="Community Organization">{tr("Community Organization")}</option>
@@ -126,7 +126,7 @@ export function NonprofitConsultationForm() {
         <div>
           <Label htmlFor="npc-contact-pref">{tr("Contact preference *")}</Label>
           <select id="npc-contact-pref" name="contactPreference" required className={cn(fieldClass, "appearance-none")} defaultValue="">
-            <option value="" disabled> {tr("Select one")} </option>
+            <option value="" disabled>{tr("Select one")}</option>
             <option value="Email">{tr("Email")}</option>
             <option value="Phone call">{tr("Phone call")}</option>
             <option value="Text message">{tr("Text message")}</option>

@@ -73,7 +73,7 @@ export function LegalToc({ entries }: { entries: TocEntry[] }) {
           showTop ? "opacity-100" : "pointer-events-none opacity-0",
         )}
       >
-        <ArrowUp className="h-3.5 w-3.5" /> {tr("Back to top")} </button>
+        <ArrowUp className="h-3.5 w-3.5" /> {tr("Back to top")}</button>
     </nav>
   )
 }

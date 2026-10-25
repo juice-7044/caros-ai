@@ -86,10 +86,10 @@ export default async function RevenueAuditPage() {
           <div className="grid gap-16 lg:grid-cols-[1fr_1.15fr] lg:items-start">
             <Reveal>
               <Sunburst className="w-14 text-gold" />
-              <h1 className="mt-8 text-balance text-[clamp(2.25rem,4.5vw,3.5rem)] font-extrabold leading-[0.98] tracking-tight"> {tr("You've seen what the data says.")}{" "}
-                <span className="font-serif font-normal italic text-gold-gradient"> {tr("Let's talk about what it means.")} </span>
+              <h1 className="mt-8 text-balance text-[clamp(2.25rem,4.5vw,3.5rem)] font-extrabold leading-[0.98] tracking-tight">{tr("You've seen what the data says.")}{" "}
+                <span className="font-serif font-normal italic text-gold-gradient">{tr("Let's talk about what it means.")}</span>
               </h1>
-              <p className="mt-8 max-w-md text-pretty text-lg leading-relaxed text-ink-muted"> {tr("Bring your Revenue Audit and your knowledge of the business. We'll bring the questions, context, and revenue lens.")} </p>
+              <p className="mt-8 max-w-md text-pretty text-lg leading-relaxed text-ink-muted">{tr("Bring your Revenue Audit and your knowledge of the business. We'll bring the questions, context, and revenue lens.")}</p>
             </Reveal>
 
             <Reveal delay={120}>
@@ -106,16 +106,16 @@ export default async function RevenueAuditPage() {
           <Reveal className="flex flex-col items-center">
             <Sunburst className="w-14 text-gold" />
             <Eyebrow className="mt-8">{tr("CAROS Revenue Audit Review")}</Eyebrow>
-            <h1 className="mt-6 text-balance text-[clamp(2.5rem,5.5vw,4.25rem)] font-extrabold leading-[0.98] tracking-tight"> {tr("Your audit found the signals.")}{" "}
-              <span className="font-serif font-normal italic text-gold-gradient"> {tr("Now let's find the revenue behind them.")} </span>
+            <h1 className="mt-6 text-balance text-[clamp(2.5rem,5.5vw,4.25rem)] font-extrabold leading-[0.98] tracking-tight">{tr("Your audit found the signals.")}{" "}
+              <span className="font-serif font-normal italic text-gold-gradient">{tr("Now let's find the revenue behind them.")}</span>
             </h1>
-            <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-ink-muted"> {tr("Your CAROS Revenue Audit evaluates what we can verify from publicly available data. During your Revenue Audit Review, we'll walk through your results with you, add the business context the internet can't see, and identify where revenue may be getting lost, delayed, or left uncaptured.")} </p>
+            <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-ink-muted">{tr("Your CAROS Revenue Audit evaluates what we can verify from publicly available data. During your Revenue Audit Review, we'll walk through your results with you, add the business context the internet can't see, and identify where revenue may be getting lost, delayed, or left uncaptured.")}</p>
             <a
               href="#book"
               className="group mt-10 inline-flex h-16 items-center justify-center gap-2 rounded-full bg-gold px-10 text-lg font-semibold text-gold-foreground transition-all duration-300 hover:bg-gold/90"
-            > {tr("Book My Revenue Audit Review")} <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+            >{tr("Book My Revenue Audit Review")} <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
-            <p className="mt-5 text-sm text-ink-muted"> {tr("Come with questions. Leave with clarity on where to focus next.")} </p>
+            <p className="mt-5 text-sm text-ink-muted">{tr("Come with questions. Leave with clarity on where to focus next.")}</p>
           </Reveal>
         </div>
       </section>
@@ -124,11 +124,11 @@ export default async function RevenueAuditPage() {
       <section className="bg-background">
         <div className="mx-auto max-w-[820px] px-6 py-24 lg:px-12 lg:py-32">
           <Reveal>
-            <h2 className="text-balance text-[clamp(2rem,4vw,3rem)] font-extrabold leading-tight tracking-tight"> {tr("Your audit is the starting point.")} </h2>
+            <h2 className="text-balance text-[clamp(2rem,4vw,3rem)] font-extrabold leading-tight tracking-tight">{tr("Your audit is the starting point.")}</h2>
             <div className="mt-8 space-y-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-              <p> {tr("Public data can tell us a lot about how your business attracts, captures, converts, retains, and tracks revenue. But it can't tell us everything.")} </p>
-              <p> {tr("Your audit may identify missing signals, opportunities, or areas that cannot be verified publicly. Your Revenue Audit Review adds the operational context behind those findings.")} </p>
-              <p className="font-medium text-foreground"> {tr("This is where we connect what we can see from the outside with what is actually happening inside your business.")} </p>
+              <p>{tr("Public data can tell us a lot about how your business attracts, captures, converts, retains, and tracks revenue. But it can't tell us everything.")}</p>
+              <p>{tr("Your audit may identify missing signals, opportunities, or areas that cannot be verified publicly. Your Revenue Audit Review adds the operational context behind those findings.")}</p>
+              <p className="font-medium text-foreground">{tr("This is where we connect what we can see from the outside with what is actually happening inside your business.")}</p>
             </div>
           </Reveal>
         </div>
@@ -139,7 +139,7 @@ export default async function RevenueAuditPage() {
         <div className="mx-auto max-w-[1200px] px-6 py-24 lg:px-12 lg:py-32">
           <Reveal>
             <Eyebrow>{tr("What We'll Cover")}</Eyebrow>
-            <h2 className="mt-6 max-w-3xl text-balance text-[clamp(2rem,4vw,3rem)] font-extrabold leading-tight tracking-tight"> {tr("What we'll review together")} </h2>
+            <h2 className="mt-6 max-w-3xl text-balance text-[clamp(2rem,4vw,3rem)] font-extrabold leading-tight tracking-tight">{tr("What we'll review together")}</h2>
           </Reveal>
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {translateSpanishData(reviewCards, locale, catalog).map((card, i) => (
@@ -165,10 +165,10 @@ export default async function RevenueAuditPage() {
         <div className="pointer-events-none absolute inset-0 radial-glow opacity-40" />
         <div className="relative mx-auto max-w-[1000px] px-6 py-24 lg:px-12 lg:py-32">
           <Reveal>
-            <h2 className="max-w-3xl text-balance text-[clamp(2rem,4vw,3rem)] font-extrabold leading-tight tracking-tight"> {tr("The internet can't see inside your business.")}{" "}
+            <h2 className="max-w-3xl text-balance text-[clamp(2rem,4vw,3rem)] font-extrabold leading-tight tracking-tight">{tr("The internet can't see inside your business.")}{" "}
               <span className="font-serif font-normal italic text-gold-gradient">{tr("We can ask.")}</span>
             </h2>
-            <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-ink-muted"> {tr("Some of the most important revenue questions cannot be answered through a website, Google Business Profile, reviews, social media, or other public sources. During your review, we may ask about:")} </p>
+            <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-ink-muted">{tr("Some of the most important revenue questions cannot be answered through a website, Google Business Profile, reviews, social media, or other public sources. During your review, we may ask about:")}</p>
           </Reveal>
           <ul className="mt-12 grid gap-x-10 gap-y-5 sm:grid-cols-2">
             {translateSpanishData(questions, locale, catalog).map((q, i) => (
@@ -186,7 +186,7 @@ export default async function RevenueAuditPage() {
         <div className="mx-auto max-w-[1200px] px-6 py-24 lg:px-12 lg:py-32">
           <Reveal>
             <Eyebrow>{tr("The Takeaway")}</Eyebrow>
-            <h2 className="mt-6 max-w-3xl text-balance text-[clamp(2rem,4vw,3rem)] font-extrabold leading-tight tracking-tight"> {tr("What you'll leave with")} </h2>
+            <h2 className="mt-6 max-w-3xl text-balance text-[clamp(2rem,4vw,3rem)] font-extrabold leading-tight tracking-tight">{tr("What you'll leave with")}</h2>
           </Reveal>
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {translateSpanishData(outcomes, locale, catalog).map((item, i) => (
@@ -208,13 +208,13 @@ export default async function RevenueAuditPage() {
       <section className="border-t border-foreground/10 bg-background">
         <div className="mx-auto max-w-[820px] px-6 py-24 text-center lg:px-12 lg:py-32">
           <Reveal className="flex flex-col items-center">
-            <h2 className="text-balance text-[clamp(2rem,4vw,3rem)] font-extrabold leading-tight tracking-tight"> {tr("Is CAROS a fit?")}{" "}
+            <h2 className="text-balance text-[clamp(2rem,4vw,3rem)] font-extrabold leading-tight tracking-tight">{tr("Is CAROS a fit?")}{" "}
               <span className="font-serif font-normal italic text-gold-gradient">{tr("Maybe.")}</span>
             </h2>
             <div className="mt-8 space-y-6 text-pretty text-lg leading-relaxed text-muted-foreground">
               <p>{tr("The Revenue Audit Review is designed to understand your business before recommending anything.")}</p>
-              <p> {tr("If CAROS can meaningfully improve the way your business captures, converts, retains, or understands revenue, we'll show you where.")} </p>
-              <p className="font-medium text-foreground"> {tr("If there isn't a strong enough business case, we'll tell you that too.")} </p>
+              <p>{tr("If CAROS can meaningfully improve the way your business captures, converts, retains, or understands revenue, we'll show you where.")}</p>
+              <p className="font-medium text-foreground">{tr("If there isn't a strong enough business case, we'll tell you that too.")}</p>
             </div>
           </Reveal>
         </div>

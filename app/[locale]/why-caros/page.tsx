@@ -22,10 +22,12 @@ export async function generateMetadata(_props: unknown, parent: ResolvingMetadat
     alternates: { ...metadata.alternates, canonical, languages: { en: `https://getcaros.com/en${path}`, es: `https://getcaros.com/es${path}` } },
     openGraph: {
       ...metadata.openGraph,
+      type: "website",
+      siteName: "CAROS",
       title: metadata.openGraph?.title ?? title,
       description: metadata.openGraph?.description ?? description,
       url: canonical,
-      locale: locale === "es" ? "es_US" : "en_US",
+      locale: locale === "es" ? "es_419" : "en_US",
       images: inherited.openGraph?.images,
     },
     twitter: {

@@ -75,16 +75,16 @@ function ThankYouContent() {
     <div className="min-h-screen bg-ink text-ink-foreground">
       <main className="mx-auto flex w-full max-w-2xl flex-col px-6 py-12 sm:px-8 sm:py-16 lg:py-20">
         <header className="flex items-center justify-between">
-          <a href={localeHref("/", locale)} aria-label={tr("CAROS home")} className="font-display text-xl tracking-[0.2em] text-gold"> {tr("CAROS")} </a>
+          <a href={localeHref("/", locale)} aria-label={tr("CAROS home")} className="font-display text-xl tracking-[0.2em] text-gold">{tr("CAROS")}</a>
           <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-muted">{tr("Revenue system secured")}</span>
         </header>
 
         <section className="pt-20 sm:pt-28">
           <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-gold">
-            <ShieldCheck className="h-3.5 w-3.5" /> {tr("Payment confirmed")} </div>
-          <h1 className="mt-7 text-balance font-display text-5xl leading-[0.98] tracking-[-0.04em] sm:text-7xl"> {tr(name ? "You're in," : "You're in.")} {name && <span className="font-serif font-normal italic text-gold">{name}.</span>}
+            <ShieldCheck className="h-3.5 w-3.5" /> {tr("Payment confirmed")}</div>
+          <h1 className="mt-7 text-balance font-display text-5xl leading-[0.98] tracking-[-0.04em] sm:text-7xl">{tr(name ? "You're in," : "You're in.")} {name && <span className="font-serif font-normal italic text-gold">{name}.</span>}
           </h1>
-          <p className="mt-7 max-w-xl text-pretty text-lg leading-8 text-ink-muted sm:text-xl"> {tr("Your CAROS Revenue System is secured. Now we turn the attention you're already earning into a system that captures, books, and grows revenue.")} </p>
+          <p className="mt-7 max-w-xl text-pretty text-lg leading-8 text-ink-muted sm:text-xl">{tr("Your CAROS Revenue System is secured. Now we turn the attention you're already earning into a system that captures, books, and grows revenue.")}</p>
           <p className="mt-5 text-sm leading-6 text-ink-muted">{kickoff}</p>
         </section>
 
