@@ -5,6 +5,7 @@ import { usePathname } from "@/i18n/routing"
 import { SiteNav } from "@/components/caros/site-nav"
 import { SiteFooter } from "@/components/caros/site-footer"
 import { ChatWidget } from "@/components/caros/chat-widget"
+import { BackToTop } from "@/components/caros/back-to-top"
 
 export function RouteChrome({ children }: { children: ReactNode }) {
   const pathname = usePathname()
@@ -16,6 +17,7 @@ export function RouteChrome({ children }: { children: ReactNode }) {
       <main className="min-h-screen overflow-x-hidden">{children}</main>
       {!isThankYou && <SiteFooter />}
       {!isThankYou && <ChatWidget />}
+      <BackToTop />
     </>
   )
 }
