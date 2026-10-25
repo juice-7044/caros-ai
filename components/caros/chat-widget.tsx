@@ -48,11 +48,23 @@ export function ChatWidget() {
 
   useEffect(() => {
     let observer: MutationObserver | undefined
+    let target: HTMLElement | null = null
+    const onScroll = () => {
+      launcherHadFocusRef.current = document.activeElement === launcherRef.current
+      const dockBottom = target?.getBoundingClientRect().bottom
+      setScrolled(previous => dockBottom !== undefined && shouldCollapseLauncher(dockBottom, previous))
+    }
+    const resizeObserver = new ResizeObserver(onScroll)
     const updateDock = () => {
-      const target = pathname === '/' ? document.querySelector<HTMLElement>('[data-caros-chat-dock]') : null
+      target = pathname === '/' ? document.querySelector<HTMLElement>('[data-caros-chat-dock]') : null
       setDockTarget(target)
       setLauncherReady(pathname !== '/' || !!target)
-      if (target) observer?.disconnect()
+      if (target) {
+        observer?.disconnect()
+        resizeObserver.disconnect()
+        resizeObserver.observe(target.closest('section') ?? target)
+      }
+      onScroll()
     }
     updateDock()
     // A streamed homepage can mount its hero after the shared chrome.
@@ -60,13 +72,14 @@ export function ChatWidget() {
       observer = new MutationObserver(updateDock)
       observer.observe(document.body, { childList: true, subtree: true })
     }
-    const onScroll = () => {
-      launcherHadFocusRef.current = document.activeElement === launcherRef.current
-      setScrolled(previous => shouldCollapseLauncher(window.scrollY, previous))
-    }
-    onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
-    return () => { observer?.disconnect(); window.removeEventListener('scroll', onScroll) }
+    window.addEventListener('resize', onScroll)
+    return () => {
+      observer?.disconnect()
+      resizeObserver.disconnect()
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onScroll)
+    }
   }, [pathname])
 
   useEffect(() => {
@@ -122,6 +135,7 @@ export function ChatWidget() {
           <span><i className={busy ? styles.liveDot : styles.readyDot} />{active ? `Call in progress · ${time}` : connecting ? 'Connecting…' : chatSending ? 'CAROS is replying…' : 'Voice or text. Your choice.'}</span>
         </span>
         <ArrowUpRight size={17} className={styles.launcherArrow} aria-hidden="true" />
+        {compact && <span className={styles.compactLabel}>Talk to us</span>}
         {compact && (busy || chatSending) && <span className={styles.compactIndicator} aria-hidden="true" />}
       </button>
   )

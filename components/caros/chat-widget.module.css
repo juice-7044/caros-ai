@@ -43,6 +43,7 @@
 .launcherArrow { color: var(--voice-gold); flex-shrink: 0; }
 .launcherCompact { width: 76px; height: 76px; padding: 5px; gap: 0; justify-content: center; border-radius: 50%; animation: compact-enter .2s ease-out; }
 .launcherCompact .launcherCopy, .launcherCompact .launcherArrow { display: none; }
+.compactLabel { position: absolute; right: calc(100% + 10px); top: 50%; transform: translateY(-50%); padding: 9px 13px; border: 1px solid #c9a22766; border-radius: 999px; background: #10110f; color: var(--voice-text); font-size: 13px; font-weight: 600; white-space: nowrap; box-shadow: 0 4px 16px #0003; }
 .compactIndicator { position: absolute; right: 5px; bottom: 5px; width: 12px; height: 12px; border: 2px solid #10110f; border-radius: 50%; background: #b5da9f; box-shadow: 0 0 0 1px #b5da9f55; }
 .readyDot, .liveDot { display: inline-block; flex: 0 0 5px; width: 5px; height: 5px; border-radius: 50%; background: var(--voice-gold); }
 .liveDot { background: #b5da9f; box-shadow: 0 0 0 3px #b5da9f12; }
