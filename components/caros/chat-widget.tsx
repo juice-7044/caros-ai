@@ -6,7 +6,7 @@ import { useSpanish } from '@/lib/use-spanish'
 import { localeHref } from '@/lib/spanish'
 import spanish from '@/messages/full/shared.es.json'
 import { usePathname } from '@/i18n/routing'
-import { getLauncherLayout, shouldCollapseLauncher } from '@/lib/caros-widget-dock'
+import { getLauncherLayout, isFooterBarInView, shouldCollapseLauncher } from '@/lib/caros-widget-dock'
 import { Mic, MicOff, Phone, PhoneOff, ArrowUpRight, MessageCircle, Minus, Volume2, X } from 'lucide-react'
 import { ParticlesOrb } from '@/registry/orbe/particles-orb/particles-orb'
 import { CAROS_VOICE_CONFIG, VoiceSessionController } from '@/lib/caros-voice-session'
@@ -31,6 +31,7 @@ export function ChatWidget() {
   const [dockTarget, setDockTarget] = useState<HTMLElement | null>(null)
   const [launcherReady, setLauncherReady] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [footerInView, setFooterInView] = useState(false)
   const [controller] = useState(createController)
   const [chatController] = useState(() => new ChatSessionController())
   const call = useSyncExternalStore(controller.subscribe, controller.getSnapshot, controller.getServerSnapshot)
@@ -57,6 +58,8 @@ export function ChatWidget() {
       launcherHadFocusRef.current = document.activeElement === launcherRef.current
       const dockBottom = target?.getBoundingClientRect().bottom
       setScrolled(previous => dockBottom !== undefined && shouldCollapseLauncher(dockBottom, previous))
+      const footerBar = document.querySelector<HTMLElement>('[data-caros-footer-bar]')
+      setFooterInView(isFooterBarInView(footerBar ? footerBar.getBoundingClientRect().top : null, window.innerHeight))
     }
     const resizeObserver = new ResizeObserver(onScroll)
     const updateDock = () => {
@@ -145,7 +148,7 @@ export function ChatWidget() {
   )
 
   return (
-    <div className={styles.widget} data-caros-voice-widget data-phase={call.phase} data-mode={mode} data-layout={layout}>
+    <div className={styles.widget} data-caros-voice-widget data-phase={call.phase} data-mode={mode} data-layout={layout} data-footer-in-view={footerInView ? 'true' : undefined}>
       {launcherReady && (layout === 'docked' && dockTarget ? createPortal(launcher, dockTarget) : launcher)}
 
       {open && (

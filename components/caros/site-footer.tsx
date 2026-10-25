@@ -124,7 +124,7 @@ export function SiteFooter() {
           ))}
         </div>
 
-        <div className="mt-16 flex flex-col items-start gap-6 border-t border-foreground/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
+        <div data-caros-footer-bar className="mt-16 flex flex-col items-start gap-6 border-t border-foreground/10 pt-8 sm:flex-row sm:items-center sm:justify-between sm:pr-[110px] md:pr-[270px]">
           <div className="flex items-center gap-4">
             <Logo href={null} className="h-9" />
             <p className="text-xs text-muted-foreground">{tr("© 2026 CAROS. All rights reserved.")}</p>

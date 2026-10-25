@@ -35,3 +35,17 @@ test('collapse waits until visitors have scrolled past the dock, not just starte
   assert.equal(getLauncherLayout(true, true), 'floating')
   assert.equal(getLauncherLayout(false, false), 'floating')
 })
+
+test('floating widget never covers the footer social links', async () => {
+  const { isFooterBarInView } = await import('../lib/caros-widget-dock.ts')
+  assert.equal(isFooterBarInView(null, 860), false)
+  assert.equal(isFooterBarInView(900, 860), false)
+  assert.equal(isFooterBarInView(700, 860), true)
+  const footer = source('../components/caros/site-footer.tsx')
+  const widget = source('../components/caros/chat-widget.tsx')
+  const css = source('../components/caros/chat-widget.module.css')
+  // Bottom bar reserves space for the circle (sm) and circle + "Talk to us" pill (md+).
+  assert.match(footer, /data-caros-footer-bar className="[^"]*sm:pr-\[110px\] md:pr-\[270px\]/)
+  assert.match(widget, /\[data-caros-footer-bar\]/)
+  assert.match(css, /max-width: 767px\) \{ \.widget\[data-footer-in-view='true'\] \.compactLabel \{ display: none; \}/)
+})

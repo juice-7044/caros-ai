@@ -111,6 +111,8 @@
   .launcherCompact { width: 70px; height: 70px; padding: 2px; }
   .panel { top: auto; transform: none; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); width: 350px; max-height: calc(100dvh - 32px - env(safe-area-inset-bottom)); }
 }
+/* Small screens: the footer bar's social links sit beside the circle, so drop the text pill there. */
+@media (max-width: 767px) { .widget[data-footer-in-view='true'] .compactLabel { display: none; } }
 @media (max-height: 650px) { .body { padding-top: 17px; padding-bottom: 15px; } .orbStage { height: 224px; margin-top: 0; } .header { padding-top: 16px; padding-bottom: 14px; } }
 .channelChoices { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; }
 .channelChoices button { position: relative; display: grid; justify-items: start; gap: 6px; min-height: 96px; padding: 16px; border: 1px solid #c9a22766; border-radius: 12px; background: #c9a2270a; color: var(--voice-cream); text-align: left; }
