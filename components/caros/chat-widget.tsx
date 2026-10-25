@@ -64,7 +64,7 @@ export function ChatWidget() {
         ref={launcherRef}
         type="button"
         className={`${styles.launcher} ${open ? styles.launcherHidden : ''}`}
-        aria-label={active ? `Return to CAROS call, ${time}` : 'Talk to CAROS voice assistant'}
+        aria-label={active ? `Return to CAROS call, ${time}` : 'Talk to us — CAROS voice assistant'}
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => setOpen(true)}
@@ -73,7 +73,7 @@ export function ChatWidget() {
           <ParticlesOrb state={call.orbState} size={96} colorFrom={GOLD} colorTo={CHAMPAGNE} levelRef={controller.levelRef} label="" />
         </span>
         <span className={styles.launcherCopy}>
-          <strong>Talk to CAROS</strong>
+          <strong>Talk to us</strong>
           <span><i className={busy ? styles.liveDot : styles.readyDot} />{active ? `Call in progress · ${time}` : connecting ? 'Connecting…' : 'Your next stage starts here'}</span>
         </span>
         <ArrowUpRight size={17} className={styles.launcherArrow} aria-hidden="true" />
@@ -91,7 +91,7 @@ export function ChatWidget() {
             <p className={styles.intro}>Tell us where revenue gets stuck.<br />Let’s find the next move.</p>
             <div className={styles.orbStage}>
               <div className={styles.orbGuide} aria-hidden="true" />
-              <ParticlesOrb state={call.orbState} size={168} speed={0.85} colorFrom={GOLD} colorTo={CHAMPAGNE} levelRef={controller.levelRef} label="CAROS audio visualization" />
+              <ParticlesOrb state={call.orbState} size={240} speed={0.85} colorFrom={GOLD} colorTo={CHAMPAGNE} levelRef={controller.levelRef} label="CAROS audio visualization" />
               <span className={styles.orbCaption}>{active ? 'LIVE AUDIO' : connecting ? 'CONNECTING' : 'VOICE AI'}</span>
             </div>
             <p className={styles.status} role="status" aria-live="polite"><span className={active ? styles.liveDot : styles.readyDot} />{status}{active && <time className={styles.timer} aria-hidden="true">{time}</time>}</p>

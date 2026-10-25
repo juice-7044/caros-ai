@@ -9,6 +9,13 @@ test('custom CAROS widget replaces the stock Retell embed, rather than layering 
   assert.doesNotMatch(source, /retell-widget-v2\.js/, 'Stock widget must not run alongside the custom UI')
   assert.doesNotMatch(source, /getUserMedia|useAudioLevel/, 'Do not open a second microphone stream for decoration')
 })
+test('open-panel orb is enlarged and the launcher has distinct Talk to us wording', () => {
+  const source = readFileSync(new URL('components/caros/chat-widget.tsx', root), 'utf8')
+  assert.match(source, /size=\{240\}/, 'Opened orb should be larger than the original 168px')
+  assert.match(source, /<strong>Talk to us<\/strong>/)
+  assert.doesNotMatch(source, /<strong>Talk to CAROS<\/strong>/)
+})
+
 test('CAROS launcher is raised on desktop, respects reduced motion and fits small screens', () => {
   const css = readFileSync(new URL('components/caros/chat-widget.module.css', root), 'utf8')
   assert.match(css, /4in/)
