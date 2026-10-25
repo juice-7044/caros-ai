@@ -129,10 +129,14 @@ export class VoiceSessionController {
   }
 
   async resumeAudio() {
+    const session = this.session
+    const generation = this.generation
+    if (!session || this.snapshot.phase !== 'live') return
+    const current = () => this.session === session && this.generation === generation
     try {
-      await this.session?.startAudioPlayback()
-      this.update({ playbackBlocked: false })
-    } catch { this.update({ playbackBlocked: true }) }
+      await session.startAudioPlayback()
+      if (current()) this.update({ playbackBlocked: false })
+    } catch { if (current()) this.update({ playbackBlocked: true }) }
   }
 
   private release() {
