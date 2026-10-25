@@ -4,6 +4,9 @@ import { translateSpanishData } from "@/lib/spanish"
 import type { Metadata } from "next"
 import Script from "next/script"
 
+/** Affiliate lead attribution after purchase; owner-approved for English and Spanish only. */
+const AFFILIATE_TRACKING_LOCALES = new Set(["en", "es"])
+
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale()
   return translateSpanishData({
@@ -24,7 +27,7 @@ export default async function ThankYouLayout({
 
   return (
     <>
-      {locale === "ja" && (
+      {AFFILIATE_TRACKING_LOCALES.has(locale) && (
         <Script id="caros-affiliate-lead" strategy="beforeInteractive">
           {`(function() {
   var params = new URLSearchParams(window.location.search);
