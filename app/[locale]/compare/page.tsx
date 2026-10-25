@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const tr = spanishTranslator(locale, catalog)
   const title = tr("Compare CAROS | Revenue Operating System vs. Lead & Communication Tools")
   const description = tr("How CAROS compares to LeadTruffle, CHIIRP, Hatch, Podium and Netic. Lead response is part of CAROS — revenue operations is the bigger story. An honest look at scope, not a checkbox contest.")
-  return { title, description, alternates: { canonical: `/${locale}/compare` }, ...positioningSocialMetadata(description, locale, title) }
+  return { title, description, ...positioningSocialMetadata(description, locale, title) }
 }
 
 const FLOW_STEPS = [
@@ -173,7 +173,7 @@ export default function ComparePage() {
                 {tr("Good. Those systems can remain part of your operation. See how CAROS works with the tools you already use.")}
               </p>
               <div className="mt-8">
-                <AuditButton label={tr("Read the Existing Tools FAQ")} href={localeHref("/faq", locale)} variant="outline-light" />
+                <AuditButton label={tr("Read the Existing Tools FAQ")} href="/faq" variant="outline-light" />
               </div>
             </div>
           </Reveal>

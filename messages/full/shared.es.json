@@ -68,6 +68,7 @@
   "We could not access your microphone. Check that it is connected and not in use, then try again.": "No pudimos acceder al micrófono. Comprueba que esté conectado y que otra aplicación no lo esté usando; después, inténtalo de nuevo.",
   "Voice connection was not authorized. Please try again or contact CAROS using the website contact details.": "No se autorizó la conexión de voz. Inténtalo de nuevo o comunícate con CAROS mediante los datos de contacto del sitio.",
   "We could not connect to CAROS. Check your connection and try again.": "No pudimos conectar con CAROS. Revisa tu conexión e inténtalo de nuevo.",
+  "Stopped waiting for a reply. The message may already have reached CAROS. You can retry or start a new chat.": "Dejamos de esperar la respuesta. Es posible que tu mensaje ya haya llegado a CAROS. Puedes reintentar o iniciar un nuevo chat.",
   "Free Diagnostic": "Diagnóstico gratuito",
   "Language": "Idioma",
   "Select language": "Seleccionar idioma",

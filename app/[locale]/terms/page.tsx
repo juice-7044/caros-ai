@@ -19,7 +19,6 @@ export async function generateMetadata(): Promise<Metadata> {
   title: "Terms & Conditions",
   description:
     "The Terms and Conditions governing your access to and use of the CAROS website and services.",
-  alternates: { canonical: "/terms" },
 }, locale, catalog)
 }
 

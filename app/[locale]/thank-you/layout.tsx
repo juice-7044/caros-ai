@@ -9,7 +9,6 @@ export async function generateMetadata(): Promise<Metadata> {
   return translateSpanishData({
   title: "You're In — Your CAROS Revenue System Starts Here",
   description: "Your CAROS purchase is confirmed. Here's what happens next.",
-  alternates: { canonical: "/thank-you" },
   robots: { index: false, follow: true },
 }, locale, catalog)
 }

@@ -2,6 +2,7 @@ import {NextIntlClientProvider} from "next-intl"
 import type {Metadata} from "next"
 import {positioningSocialMetadata} from "@/lib/positioning-metadata"
 import {getMessages, getTranslations} from "next-intl/server"
+import {headers} from "next/headers"
 import {notFound} from "next/navigation"
 import {routing} from "@/i18n/routing"
 import {RouteChrome} from "@/components/caros/route-chrome"
@@ -15,8 +16,14 @@ export async function generateMetadata(
   if (!routing.locales.includes(locale as (typeof routing.locales)[number])) return {}
   const t = await getTranslations({locale, namespace: "Metadata"})
   const description = t("description")
+  const requested = (await headers()).get("x-caros-pathname") ?? `/${locale}`
+  const rest = requested.replace(/^\/(?:en|es)(?=\/|$)/, "").replace(/\/$/, "")
   return {
     description,
+    alternates: {
+      canonical: `/${locale}${rest}`,
+      languages: { en: `/en${rest}`, es: `/es${rest}`, "x-default": `/en${rest}` },
+    },
     ...(locale === "es" ? {
       title: { absolute: "CAROS — Primero los ingresos. Todo lo demás está a su servicio.", template: "%s | CAROS" },
       keywords: ["gestión de relaciones", "operaciones de ingresos", "captación de clientes", "seguimiento de consultas", "automatización de procesos", "atribución de marketing", "gestión de organizaciones", "inteligencia de ingresos"],

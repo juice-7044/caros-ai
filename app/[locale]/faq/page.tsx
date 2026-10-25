@@ -127,7 +127,7 @@ export default function FaqPage() {
             </h2>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
               <AuditButton label={tr("Get My Free Revenue Audit")} href={AUDIT_URL} external />
-              <AuditButton label={tr("See How CAROS Works")} href={localeHref("/how-it-works", locale)} variant="outline-light" />
+              <AuditButton label={tr("See How CAROS Works")} href="/how-it-works" variant="outline-light" />
             </div>
           </Reveal>
         </div>

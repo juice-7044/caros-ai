@@ -10,7 +10,6 @@ const englishMetadata: Metadata = {
   title: "CAROS for Car Dealerships | More Leads. More Test Drives. More Cars Sold.",
   description: "CAROS helps independent, used-car, franchise, and multi-location dealerships capture buyer interest, book test drives, follow up faster, and grow revenue.",
   keywords: ["car dealership lead follow up", "dealership test drive scheduling", "automotive revenue operations", "car dealer CRM automation"],
-  alternates: { canonical: `${SITE_URL}/industries/car-dealerships` },
   openGraph: { title: "CAROS for Car Dealerships", description: "Turn more buyer interest into conversations, test drives, sales opportunities, and long-term customer relationships.", url: `${SITE_URL}/industries/car-dealerships`, type: "website" },
 }
 

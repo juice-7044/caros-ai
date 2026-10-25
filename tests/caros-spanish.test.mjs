@@ -32,6 +32,23 @@ test('spanish industry module has every english industry with identical slugs', 
   assert.match(es, /const PRODUCT_TAGLINE = "IA donde/)
 })
 
+test('locale-aware Link components never receive localeHref (double /es/es prefix)', () => {
+  const root = new URL('../', import.meta.url)
+  const files = ['app/[locale]/compare/page.tsx', 'app/[locale]/faq/page.tsx', 'components/caros/why-caros-page.tsx']
+  for (const f of files) {
+    const s = readFileSync(new URL(f.replace('[','%5B').replace(']','%5D'), root), 'utf8')
+    assert.doesNotMatch(s, /AuditButton[^>]*href=\{localeHref/, f)
+  }
+})
+
+test('locale layout emits self canonical and en/es alternates', () => {
+  const s = readFileSync(new URL('../app/%5Blocale%5D/layout.tsx', import.meta.url), 'utf8')
+  assert.match(s, /canonical: `\/\$\{locale\}\$\{rest\}`/)
+  assert.match(s, /es: `\/es\$\{rest\}`/)
+  const root = readFileSync(new URL('../app/layout.tsx', import.meta.url), 'utf8')
+  assert.doesNotMatch(root, /canonical: "\/"/)
+})
+
 test('spanish catalogs are valid, non-empty, and not copies of the English source', () => {
   const dir = new URL('../messages/full/', import.meta.url)
   for (const file of readdirSync(dir).filter(f => f.endsWith('.es.json'))) {

@@ -13,7 +13,7 @@ import { AUDIT_URL } from "@/lib/site"
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale()
   const metadata = translateSpanishData({
-  title: "Free Resources | CAROS",
+  title: "Free Resources",
   description: "Free tools and insights to help you find more revenue, understand marketing ROI, and close gaps in your revenue process.",
 }, locale, spanishCatalog)
   return { ...metadata, ...positioningSocialMetadata(metadata.description, locale, metadata.title) }

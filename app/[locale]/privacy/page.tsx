@@ -19,7 +19,6 @@ export async function generateMetadata(): Promise<Metadata> {
   title: "Privacy Policy",
   description:
     "How CAROS collects, uses, maintains, protects, and discloses information from visitors and clients of our website and services.",
-  alternates: { canonical: "/privacy" },
 }, locale, catalog)
 }
 

@@ -36,7 +36,7 @@ test('social metadata retains branding and share images when localized', async (
     const social = positioningSocialMetadata(description, lang)
     assert.equal(social.openGraph.description, description)
     assert.equal(social.twitter.description, description)
-    assert.equal(social.openGraph.locale, lang === 'es' ? 'es_ES' : 'en_US')
+    assert.equal(social.openGraph.locale, lang === 'es' ? 'es_419' : 'en_US')
     assert.equal(social.openGraph.images[0].url, '/caros-logo.png')
     assert.equal(social.twitter.images[0], '/caros-logo.png')
   }

@@ -14,7 +14,7 @@ export function positioningSocialMetadata(
       url: 'https://getcaros.com',
       title: shareTitle,
       description,
-      locale: locale === 'es' ? 'es_ES' : 'en_US',
+      locale: locale === 'es' ? 'es_419' : 'en_US',
       images: [{ url: '/caros-logo.png', width: 1200, height: 800, alt: locale === 'es' ? 'CAROS — Sistema operativo de captación de clientes e ingresos' : 'CAROS — Customer Acquisition & Revenue Operating System' }],
     },
     twitter: { card: 'summary_large_image', title: shareTitle, description, images: ['/caros-logo.png'] },

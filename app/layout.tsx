@@ -66,9 +66,6 @@ export const metadata: Metadata = {
         "1a3e91f3-74db-43bf-b5f9-af754fc60527",
     },
   },
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     siteName: "CAROS",
