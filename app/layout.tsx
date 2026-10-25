@@ -253,12 +253,6 @@ fbq('track', 'PageView');`}
         {/* End Meta Pixel */}
         {children}
         <Analytics />
-        {/* CAROS external tracking */}
-        <Script
-          src="https://links.getcaros.com/js/external-tracking.js"
-          data-tracking-id="tk_12d930143d64417686edf3bdbf78f595"
-          strategy="afterInteractive"
-        />
         {/* UTM Forwarder Script */}
         <Script id="utm-forwarder" strategy="afterInteractive">
           {`(function() {

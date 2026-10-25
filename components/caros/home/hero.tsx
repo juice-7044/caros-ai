@@ -133,6 +133,8 @@ export function Hero() {
                 <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
               </a>
             </p>
+            {/* Reserve space when the same launcher becomes a floating circle on scroll. */}
+            <div data-caros-chat-dock className="mt-2 min-h-[76px] w-[262px] max-w-full" />
           </div>
         </div>
       </div>

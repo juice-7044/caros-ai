@@ -23,9 +23,10 @@ test('visitors can choose voice or website text chat without reintroducing a sto
   assert.doesNotMatch(source, /retell-widget-v2\.js|SMS/)
 })
 
-test('CAROS launcher is raised on desktop, respects reduced motion and fits small screens', () => {
+test('CAROS launcher collapses into a circle, respects reduced motion and fits small screens', () => {
   const css = readFileSync(new URL('components/caros/chat-widget.module.css', root), 'utf8')
-  assert.match(css, /4in/)
+  assert.match(css, /\.launcherCompact \{[^}]*border-radius: 50%/)
+  assert.doesNotMatch(css, /4in/)
   assert.match(css, /prefers-reduced-motion/)
   assert.match(css, /max-height:/)
   assert.match(css, /safe-area-inset/)

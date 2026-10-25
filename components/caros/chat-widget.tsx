@@ -1,6 +1,9 @@
 'use client'
 
 import { useEffect, useId, useRef, useState, useSyncExternalStore } from 'react'
+import { createPortal } from 'react-dom'
+import { usePathname } from '@/i18n/routing'
+import { getLauncherLayout, shouldCollapseLauncher } from '@/lib/caros-widget-dock'
 import { Mic, MicOff, Phone, PhoneOff, ArrowUpRight, MessageCircle, Minus, Volume2, X } from 'lucide-react'
 import { ParticlesOrb } from '@/registry/orbe/particles-orb/particles-orb'
 import { CAROS_VOICE_CONFIG, VoiceSessionController } from '@/lib/caros-voice-session'
@@ -20,6 +23,10 @@ function createController() {
 
 /** Owner-approved custom Retell UI. Never load the stock or GHL embeds alongside it. */
 export function ChatWidget() {
+  const pathname = usePathname()
+  const [dockTarget, setDockTarget] = useState<HTMLElement | null>(null)
+  const [launcherReady, setLauncherReady] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const [controller] = useState(createController)
   const [chatController] = useState(() => new ChatSessionController())
   const call = useSyncExternalStore(controller.subscribe, controller.getSnapshot, controller.getServerSnapshot)
@@ -28,6 +35,7 @@ export function ChatWidget() {
   const [mode, setMode] = useState<'choose' | 'voice' | 'chat'>('choose')
   const [elapsed, setElapsed] = useState(0)
   const launcherRef = useRef<HTMLButtonElement>(null)
+  const launcherHadFocusRef = useRef(false)
   const closeRef = useRef<HTMLButtonElement>(null)
   const hasOpenedRef = useRef(false)
   const panelId = useId()
@@ -35,6 +43,36 @@ export function ChatWidget() {
   const connecting = call.phase === 'connecting'
   const busy = active || connecting
   const chatSending = chat.phase === 'sending'
+  const layout = getLauncherLayout(!!dockTarget, scrolled)
+  const compact = layout === 'floating'
+
+  useEffect(() => {
+    let observer: MutationObserver | undefined
+    const updateDock = () => {
+      const target = pathname === '/' ? document.querySelector<HTMLElement>('[data-caros-chat-dock]') : null
+      setDockTarget(target)
+      setLauncherReady(pathname !== '/' || !!target)
+      if (target) observer?.disconnect()
+    }
+    updateDock()
+    // A streamed homepage can mount its hero after the shared chrome.
+    if (pathname === '/' && !document.querySelector('[data-caros-chat-dock]')) {
+      observer = new MutationObserver(updateDock)
+      observer.observe(document.body, { childList: true, subtree: true })
+    }
+    const onScroll = () => {
+      launcherHadFocusRef.current = document.activeElement === launcherRef.current
+      setScrolled(previous => shouldCollapseLauncher(window.scrollY, previous))
+    }
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => { observer?.disconnect(); window.removeEventListener('scroll', onScroll) }
+  }, [pathname])
+
+  useEffect(() => {
+    if (launcherHadFocusRef.current && !open) launcherRef.current?.focus({ preventScroll: true })
+    launcherHadFocusRef.current = false
+  }, [layout, dockTarget, open])
 
   useEffect(() => () => { controller.stop(); chatController.reset() }, [controller, chatController])
   useEffect(() => {
@@ -45,7 +83,7 @@ export function ChatWidget() {
   }, [active])
   useEffect(() => {
     if (!open) {
-      if (hasOpenedRef.current) launcherRef.current?.focus()
+      if (hasOpenedRef.current) launcherRef.current?.focus({ preventScroll: true })
       return
     }
     hasOpenedRef.current = true
@@ -64,13 +102,14 @@ export function ChatWidget() {
     : 'Ready when you are'
   const time = `${Math.floor(elapsed / 60)}:${String(elapsed % 60).padStart(2, '0')}`
 
-  return (
-    <div className={styles.widget} data-caros-voice-widget data-phase={call.phase} data-mode={mode}>
+  const launcher = (
       <button
         ref={launcherRef}
         type="button"
-        className={`${styles.launcher} ${open ? styles.launcherHidden : ''}`}
+        data-caros-chat-launcher
+        className={`${styles.launcher} ${compact ? styles.launcherCompact : ''} ${open ? styles.launcherHidden : ''}`}
         aria-label={active ? `Return to CAROS call, ${time}` : 'Talk to us — CAROS voice or text chat'}
+        title={active ? `Call in progress · ${time}` : chatSending ? 'CAROS is replying…' : 'Talk to us — voice or text chat'}
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => setOpen(true)}
@@ -83,7 +122,13 @@ export function ChatWidget() {
           <span><i className={busy ? styles.liveDot : styles.readyDot} />{active ? `Call in progress · ${time}` : connecting ? 'Connecting…' : chatSending ? 'CAROS is replying…' : 'Voice or text. Your choice.'}</span>
         </span>
         <ArrowUpRight size={17} className={styles.launcherArrow} aria-hidden="true" />
+        {compact && (busy || chatSending) && <span className={styles.compactIndicator} aria-hidden="true" />}
       </button>
+  )
+
+  return (
+    <div className={styles.widget} data-caros-voice-widget data-phase={call.phase} data-mode={mode} data-layout={layout}>
+      {launcherReady && (layout === 'docked' && dockTarget ? createPortal(launcher, dockTarget) : launcher)}
 
       {open && (
         <section id={panelId} className={styles.panel} role="dialog" aria-label="Talk to CAROS" data-testid="caros-voice-panel">
