@@ -9,12 +9,13 @@ const securityHeaders = [
     "base-uri 'self'",
     "object-src 'none'",
     "frame-ancestors 'self'",
-    "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://links.getcaros.com https://widget.trustpilot.com https://widgets.leadconnectorhq.com https://stcdn.leadconnectorhq.com https://services.leadconnectorhq.com",
-    "style-src 'self' 'unsafe-inline' https://stcdn.leadconnectorhq.com https://fonts.bunny.net",
+    "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://links.getcaros.com https://widget.trustpilot.com https://widgets.leadconnectorhq.com https://stcdn.leadconnectorhq.com https://services.leadconnectorhq.com https://dashboard.retellai.com",
+    "style-src 'self' 'unsafe-inline' https://stcdn.leadconnectorhq.com https://fonts.bunny.net https://fonts.googleapis.com",
     "font-src 'self' https://fonts.gstatic.com https://fonts.bunny.net data:",
     "img-src 'self' data: blob: https:",
-    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://links.getcaros.com https://backend.leadconnectorhq.com https://widgets.leadconnectorhq.com https://services.leadconnectorhq.com https://services.msgsndr.com",
+    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://links.getcaros.com https://backend.leadconnectorhq.com https://widgets.leadconnectorhq.com https://services.leadconnectorhq.com https://services.msgsndr.com https://api.retellai.com wss://api.retellai.com https://*.livekit.cloud wss://*.livekit.cloud",
     "frame-src 'self' https://www.googletagmanager.com https://widget.trustpilot.com",
+    "media-src 'self' blob:",
     "form-action 'self'",
     "upgrade-insecure-requests",
   ].join('; ') },
@@ -22,7 +23,7 @@ const securityHeaders = [
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains" },
   { key: "X-Frame-Options", value: "SAMEORIGIN" },
-  { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
+  { key: "Permissions-Policy", value: "camera=(), microphone=(self), geolocation=()" },
 ]
 
 const nextConfig = {
