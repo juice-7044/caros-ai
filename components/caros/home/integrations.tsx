@@ -1,9 +1,12 @@
+import spanishCatalog from "@/messages/full/home-general.es.json"
+import { useSpanish } from "@/lib/use-spanish"
 import { ArrowRight } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { Reveal } from "@/components/caros/reveal"
 import { Eyebrow } from "@/components/caros/ui-bits"
 
 export function Integrations() {
+  const { tr } = useSpanish(spanishCatalog)
   const t = useTranslations("HomePage.integrations")
   const existingTools = t.raw("existingTools") as string[]
 
@@ -16,12 +19,10 @@ export function Integrations() {
             {t("headline")}
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            Your business may already run on software you know and like. CAROS is designed to connect with and enhance
-            compatible tools in your existing ecosystem, not force unnecessary replacements.
+            {tr("Your business may already run on software you know and like. CAROS is designed to connect with and enhance compatible tools in your existing ecosystem, not force unnecessary replacements.")}
           </p>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-            Keep the tools that work. CAROS helps fill the gaps, connect the customer journey, add human and automation
-            support where needed, and bring revenue intelligence together in one operating system.
+            {tr("Keep the tools that work. CAROS helps fill the gaps, connect the customer journey, add human and automation support where needed, and bring revenue intelligence together in one operating system.")}
           </p>
         </Reveal>
 
@@ -61,7 +62,7 @@ export function Integrations() {
             <div className="flex flex-col items-center justify-center rounded-2xl border border-ink-border bg-ink p-8 text-center text-ink-foreground">
               <span className="font-display text-2xl tracking-tight lg:text-3xl">{t("oneView")}</span>
               <span className="mt-2 font-mono text-[11px] uppercase tracking-[0.14em] text-ink-muted">
-                Everything in one place
+                {tr("Everything in one place")}
               </span>
             </div>
           </div>

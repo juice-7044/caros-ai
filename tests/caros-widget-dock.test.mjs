@@ -15,7 +15,7 @@ test('one session owner portals only the launcher; panel stays outside the hero'
   assert.match(widget, /createPortal\(launcher, dockTarget\)/)
   assert.match(widget, /data-layout=/)
   assert.match(widget, /launcherCompact/)
-  assert.match(widget, /compact && <span className=\{styles\.compactLabel\}>Talk to us<\/span>/)
+  assert.match(widget, /compact && <span className=\{styles\.compactLabel\}>(?:Talk to us|\{tr\("Talk to us"\)\})<\/span>/)
   assert.match(widget, /target\?\.getBoundingClientRect\(\)\.bottom/)
   assert.doesNotMatch(widget, /shouldCollapseLauncher\(window\.scrollY/)
 })

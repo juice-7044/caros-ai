@@ -1,3 +1,5 @@
+import spanishCatalog from "@/messages/full/home-general.es.json"
+import { useSpanish } from "@/lib/use-spanish"
 import { Check } from "lucide-react"
 import { AuditButton } from "./ui-bits"
 import { cn } from "@/lib/utils"
@@ -24,6 +26,7 @@ export function PricingCard({
   ctaHref?: string
   ctaExternal?: boolean
 }) {
+  const { tr, localize } = useSpanish(spanishCatalog)
   return (
     <div
       className={cn(
@@ -33,31 +36,30 @@ export function PricingCard({
     >
       <div className="grid lg:grid-cols-2">
         <div className="border-b border-ink-border p-8 lg:border-b-0 lg:border-r lg:p-12">
-          <span className="eyebrow text-gold">Transparent Pricing</span>
+          <span className="eyebrow text-gold">{tr("Transparent Pricing")}</span>
           <div className="mt-6 flex items-end gap-2">
             <span className="text-[clamp(3rem,7vw,5rem)] font-extrabold leading-none text-gold-gradient">$997</span>
-            <span className="pb-2 text-xl text-ink-muted">/month</span>
+            <span className="pb-2 text-xl text-ink-muted">{tr("/month")}</span>
           </div>
           <p className="mt-4 text-lg text-ink-muted">
-            One revenue operating system built around your business.
+            {tr("One revenue operating system built around your business.")}
           </p>
 
           <div className="mt-8 rounded-xl border border-ink-border p-5">
-            <p className="text-sm uppercase tracking-[0.12em] text-ink-muted">Implementation</p>
-            <p className="mt-2 text-2xl font-bold">$2,500 one-time</p>
+            <p className="text-sm uppercase tracking-[0.12em] text-ink-muted">{tr("Implementation")}</p>
+            <p className="mt-2 text-2xl font-bold">{tr("$2,500 one-time")}</p>
             <p className="mt-2 text-sm leading-relaxed text-ink-muted">
-              Covers strategy, configuration, workflows, integrations, pipelines, automation, reporting, communication
-              setup, testing, and launch.
+              {tr("Covers strategy, configuration, workflows, integrations, pipelines, automation, reporting, communication setup, testing, and launch.")}
             </p>
           </div>
 
-          <AuditButton className="mt-8 w-full" label={ctaLabel} href={ctaHref} external={ctaExternal} />
+          <AuditButton className="mt-8 w-full" label={ctaLabel ? tr(ctaLabel) : undefined} href={ctaHref} external={ctaExternal} />
         </div>
 
         <div className="p-8 lg:p-12">
-          <p className="text-sm font-semibold uppercase tracking-[0.12em] text-ink-muted">What&apos;s included</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.12em] text-ink-muted">{tr("What's included")}</p>
           <ul className="mt-6 space-y-3">
-            {included.map((item) => (
+            {localize(included).map((item) => (
               <li key={item} className="flex items-start gap-3">
                 <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold/15 text-gold">
                   <Check className="h-3 w-3" />
@@ -67,8 +69,7 @@ export function PricingCard({
             ))}
           </ul>
           <p className="mt-8 border-t border-ink-border pt-6 text-sm leading-relaxed text-ink-muted">
-            No percentage of your revenue. No long implementation project. No pile of disconnected software to figure
-            out yourself.
+            {tr("No percentage of your revenue. No long implementation project. No pile of disconnected software to figure out yourself.")}
           </p>
         </div>
       </div>

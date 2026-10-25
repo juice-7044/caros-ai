@@ -1,8 +1,11 @@
+import spanishCatalog from "@/messages/full/home-general.es.json"
+import { useSpanish } from "@/lib/use-spanish"
 import { Check } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { Reveal } from "@/components/caros/reveal"
 
 export function HumanAnswering() {
+  const { tr } = useSpanish(spanishCatalog)
   const t = useTranslations("HomePage.humanAnswering")
   const checklist = t.raw("checklist") as string[]
 
@@ -15,9 +18,7 @@ export function HumanAnswering() {
             {t("headline")}
           </h2>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-ink-muted">
-            CAROS combines intelligent automation with real human support. Our operators answer under your business
-            name, helping you capture opportunities even when you&apos;re on a roof, under a sink, driving between jobs,
-            or simply trying to run your company.
+            {tr("CAROS combines intelligent automation with real human support. Our operators answer under your business name, helping you capture opportunities even when you're on a roof, under a sink, driving between jobs, or simply trying to run your company.")}
           </p>
           <p className="mt-8 border-l-2 border-gold pl-6 text-xl font-bold tracking-tight">
             {t("closing") }

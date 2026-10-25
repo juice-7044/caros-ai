@@ -1,5 +1,8 @@
 "use client"
 
+import spanishCatalog from "@/messages/full/home-general.es.json"
+import { useSpanish } from "@/lib/use-spanish"
+
 import { useEffect, useRef, useState } from "react"
 import { useTranslations } from "next-intl"
 import { Reveal } from "@/components/caros/reveal"
@@ -7,6 +10,7 @@ import { Eyebrow } from "@/components/caros/ui-bits"
 // Reveal is used for the left column; the terminal manages its own reveal.
 
 export function MoneyJourney() {
+  const { tr } = useSpanish(spanishCatalog)
   const t = useTranslations("HomePage.moneyJourney")
   const flow = t.raw("flow") as { label: string; detail: string }[]
   const [visibleCount, setVisibleCount] = useState(0)
@@ -45,16 +49,15 @@ export function MoneyJourney() {
 
       <div className="relative z-10 mx-auto grid max-w-[1200px] gap-14 px-6 lg:grid-cols-2 lg:items-center lg:px-12">
         <Reveal>
-          <Eyebrow>Follow Your Dollar</Eyebrow>
+          <Eyebrow>{tr("Follow Your Dollar")}</Eyebrow>
           <h2 className="mt-6 text-balance text-[clamp(2.25rem,5vw,4rem)] font-display leading-[0.98] tracking-tight">
-            From first click to repeat customer,{" "}
+            {tr("From first click to repeat customer,")}{" "}
             <span className="font-serif font-normal italic text-gold-gradient">
-              see and manage the entire revenue journey.
+              {tr("see and manage the entire revenue journey.")}
             </span>
           </h2>
           <p className="mt-6 max-w-md text-lg leading-relaxed text-ink-muted">
-            CAROS connects the money you put in to the revenue that comes out — and every step in between, tracked
-            back to the source that started it.
+            {tr("CAROS connects the money you put in to the revenue that comes out — and every step in between, tracked back to the source that started it.")}
           </p>
         </Reveal>
 
@@ -83,7 +86,7 @@ export function MoneyJourney() {
             ))}
             <div className="mt-4 flex items-center gap-2 border-t border-ink-border pt-4 text-xs text-ink-muted">
               <span className="h-2 w-2 rounded-full bg-gold" />
-              <span>attribution closed — full loop tracked</span>
+              <span>{tr("attribution closed — full loop tracked")}</span>
             </div>
           </div>
         </div>

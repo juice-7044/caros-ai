@@ -12,7 +12,7 @@ test('custom CAROS widget replaces the stock Retell embed, rather than layering 
 test('open-panel orb is enlarged and the launcher has distinct Talk to us wording', () => {
   const source = readFileSync(new URL('components/caros/chat-widget.tsx', root), 'utf8')
   assert.match(source, /size=\{240\}/, 'Opened orb should be larger than the original 168px')
-  assert.match(source, /<strong>Talk to us<\/strong>/)
+  assert.match(source, /<strong>(?:Talk to us|\{tr\("Talk to us"\)\})<\/strong>/)
   assert.doesNotMatch(source, /<strong>Talk to CAROS<\/strong>/)
 })
 

@@ -3,15 +3,19 @@ import { Reveal } from "@/components/caros/reveal"
 import { Eyebrow } from "@/components/caros/ui-bits"
 import { PRODUCT_TAGLINE } from "@/lib/site"
 import type { IndustryContent } from "@/lib/industries"
+import { useSpanish } from "@/lib/use-spanish"
+import catalog from "@/messages/full/industry-ui.es.json"
+
 
 /* Section 1 — The revenue problem */
 export function ProblemSection({ industry }: { industry: IndustryContent }) {
+  const { tr } = useSpanish(catalog)
   return (
     <section className="border-t border-border bg-background">
       <div className="mx-auto w-full max-w-[1400px] px-6 py-24 lg:px-12 lg:py-32">
         <div className="grid gap-16 lg:grid-cols-[1fr_1.1fr]">
           <div>
-            <Eyebrow>The Revenue Problem</Eyebrow>
+            <Eyebrow>{tr("The Revenue Problem")}</Eyebrow>
             <h2 className="mt-6 text-balance text-4xl font-extrabold leading-[1.1] tracking-tight lg:text-5xl">
               {industry.problemTitle}{" "}
               <span className="font-serif font-normal italic text-gold-gradient">{industry.problemTitleSerif}</span>
@@ -25,7 +29,7 @@ export function ProblemSection({ industry }: { industry: IndustryContent }) {
             {industry.mattersWhen.map((m, index) => (
               <article key={m.label} className="industry-story-card rounded-2xl border border-border bg-card p-6">
                 <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                  Case file {String(index + 1).padStart(2, "0")}
+                  {tr("Case file {number}", { number: String(index + 1).padStart(2, "0") })}
                 </p>
                 <h3 className="mt-3 text-lg font-semibold text-foreground">{m.label}</h3>
                 <p className="mt-3 leading-relaxed text-muted-foreground">{m.detail}</p>
@@ -47,11 +51,12 @@ export function ProblemSection({ industry }: { industry: IndustryContent }) {
 
 /* Section 2 — Revenue leaks */
 export function LeaksSection({ industry }: { industry: IndustryContent }) {
+  const { tr } = useSpanish(catalog)
   return (
     <section className="relative overflow-hidden bg-ink text-ink-foreground">
       <div className="pointer-events-none absolute inset-0 radial-glow" aria-hidden="true" />
       <div className="relative mx-auto w-full max-w-[1400px] px-6 py-24 lg:px-12 lg:py-32">
-        <Eyebrow tone="danger">Where Revenue Leaks</Eyebrow>
+        <Eyebrow tone="danger">{tr("Where Revenue Leaks")}</Eyebrow>
         <p className="mt-6 max-w-3xl text-pretty text-lg leading-relaxed text-ink-muted">{industry.leaksIntro}</p>
 
         <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-ink-border bg-ink-border sm:grid-cols-2">
@@ -73,11 +78,12 @@ export function LeaksSection({ industry }: { industry: IndustryContent }) {
 
 /* Section 3 — The revenue journey */
 export function JourneySection({ industry }: { industry: IndustryContent }) {
+  const { tr } = useSpanish(catalog)
   return (
     <section className="border-t border-border bg-background">
       <div className="mx-auto w-full max-w-[1400px] px-6 py-24 lg:px-12 lg:py-32">
         <div className="max-w-3xl">
-          <Eyebrow>The Revenue Journey</Eyebrow>
+          <Eyebrow>{tr("The Revenue Journey")}</Eyebrow>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">{industry.journeyIntro}</p>
         </div>
 
@@ -95,7 +101,7 @@ export function JourneySection({ industry }: { industry: IndustryContent }) {
         </div>
 
         <div className="mt-10 inline-flex items-center gap-3 rounded-full bg-gold px-6 py-3 text-gold-foreground">
-          <span className="font-mono text-[11px] uppercase tracking-[0.14em]">Outcome</span>
+          <span className="font-mono text-[11px] uppercase tracking-[0.14em]">{tr("Outcome")}</span>
           <span className="font-semibold">{industry.journeyEndLabel}</span>
         </div>
       </div>
@@ -119,11 +125,12 @@ function CapabilityGrid({ capabilities }: { capabilities: { title: string; body:
 
 /* Section 4 — Capture (built) */
 export function CaptureSection({ industry }: { industry: IndustryContent }) {
+  const { tr } = useSpanish(catalog)
   return (
     <section className="border-t border-border bg-secondary">
       <div className="mx-auto w-full max-w-[1400px] px-6 py-24 lg:px-12 lg:py-32">
         <div className="max-w-3xl">
-          <Eyebrow>Customer Acquisition</Eyebrow>
+          <Eyebrow>{tr("Customer Acquisition")}</Eyebrow>
           <h2 className="mt-6 text-balance text-4xl font-extrabold leading-[1.1] tracking-tight lg:text-5xl">
             {industry.captureTitle}{" "}
             <span className="font-serif font-normal italic text-gold-gradient">{industry.captureTitleSerif}</span>
@@ -176,15 +183,16 @@ export function SignatureSection({ industry }: { industry: IndustryContent }) {
 
 /* Section 6 — Revenue intelligence dashboard */
 export function IntelligenceSection({ industry }: { industry: IndustryContent }) {
+  const { tr } = useSpanish(catalog)
   return (
     <section className="relative overflow-hidden bg-ink text-ink-foreground">
       <div className="pointer-events-none absolute inset-0 bg-grid opacity-20" aria-hidden="true" />
       <div className="relative mx-auto w-full max-w-[1400px] px-6 py-24 lg:px-12 lg:py-32">
         <div className="max-w-3xl">
-          <Eyebrow>Revenue Intelligence</Eyebrow>
+          <Eyebrow>{tr("Revenue Intelligence")}</Eyebrow>
           <h2 className="mt-6 text-balance text-4xl font-extrabold leading-[1.1] tracking-tight lg:text-5xl">
-            Know exactly where your revenue{" "}
-            <span className="font-serif font-normal italic text-gold-gradient">comes from.</span>
+            {tr("Know exactly where your revenue")}{" "}
+            <span className="font-serif font-normal italic text-gold-gradient">{tr("comes from.")}</span>
           </h2>
         </div>
 
@@ -203,14 +211,14 @@ export function IntelligenceSection({ industry }: { industry: IndustryContent })
         </div>
 
         <div className="mt-8 rounded-2xl border border-gold/30 bg-gold/5 p-6">
-          <p className="text-sm font-semibold uppercase tracking-wider text-gold">Revenue Recovered by CAROS</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-gold">{tr("Revenue Recovered by CAROS")}</p>
           <p className="mt-3 max-w-3xl leading-relaxed text-ink-muted">{industry.recoveredText}</p>
         </div>
 
         {/* Questions answered */}
         <div className="mt-14">
           <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-ink-muted">
-            Questions CAROS answers for you
+            {tr("Questions CAROS answers for you")}
           </p>
           <div className="mt-6 grid gap-px overflow-hidden rounded-2xl border border-ink-border bg-ink-border sm:grid-cols-2">
             {industry.questions.map((q) => (
@@ -228,12 +236,13 @@ export function IntelligenceSection({ industry }: { industry: IndustryContent })
 
 /* Section 7 — Customer experience (built) */
 export function ExperienceSection({ industry }: { industry: IndustryContent }) {
+  const { tr } = useSpanish(catalog)
   return (
     <section className="border-t border-border bg-background">
       <div className="mx-auto w-full max-w-[1400px] px-6 py-24 lg:px-12 lg:py-32">
         <div className="grid gap-16 lg:grid-cols-[1fr_1fr]">
           <div>
-            <Eyebrow>Customer Experience</Eyebrow>
+            <Eyebrow>{tr("Customer Experience")}</Eyebrow>
             <h2 className="mt-6 text-balance text-4xl font-extrabold leading-[1.1] tracking-tight lg:text-5xl">
               {industry.experienceTitle}{" "}
               <span className="font-serif font-normal italic text-gold-gradient">
@@ -264,14 +273,15 @@ export function ExperienceSection({ industry }: { industry: IndustryContent }) {
 
 /* Section 8 — Operating system pillars */
 export function PillarsSection({ industry }: { industry: IndustryContent }) {
+  const { tr } = useSpanish(catalog)
   return (
     <section className="border-t border-border bg-secondary">
       <div className="mx-auto w-full max-w-[1400px] px-6 py-24 lg:px-12 lg:py-32">
         <div className="max-w-3xl">
-          <Eyebrow>One Connected System</Eyebrow>
+          <Eyebrow>{tr("One Connected System")}</Eyebrow>
           <h2 className="mt-6 text-balance text-4xl font-extrabold leading-[1.1] tracking-tight lg:text-5xl">
-            Everything working together, built{" "}
-            <span className="font-serif font-normal italic text-gold-gradient">around your business.</span>
+            {tr("Everything working together, built")}{" "}
+            <span className="font-serif font-normal italic text-gold-gradient">{tr("around your business.")}</span>
           </h2>
         </div>
 
@@ -298,12 +308,13 @@ export function PillarsSection({ industry }: { industry: IndustryContent }) {
 
 /* Section 9 — Scaling with less (carries the brand tagline) */
 export function ScalingSection({ industry }: { industry: IndustryContent }) {
+  const { tr } = useSpanish(catalog)
   return (
     <section className="relative overflow-hidden bg-ink text-ink-foreground">
       <div className="pointer-events-none absolute inset-0 radial-glow" aria-hidden="true" />
       <div className="relative mx-auto w-full max-w-[1000px] px-6 py-24 text-center lg:py-32">
         <Reveal className="flex flex-col items-center">
-          <Eyebrow tone="gold">Scale Without the Chaos</Eyebrow>
+          <Eyebrow tone="gold">{tr("Scale Without the Chaos")}</Eyebrow>
           <h2 className="mt-6 text-balance text-4xl font-extrabold leading-[1.1] tracking-tight lg:text-5xl">
             {industry.scalingTitle}{" "}
             <span className="font-serif font-normal italic text-gold-gradient">{industry.scalingTitleSerif}</span>
@@ -316,7 +327,7 @@ export function ScalingSection({ industry }: { industry: IndustryContent }) {
             ))}
           </div>
           <p className="mt-10 max-w-2xl text-balance font-serif text-2xl italic leading-snug text-gold-gradient">
-            {PRODUCT_TAGLINE}
+            {tr(PRODUCT_TAGLINE)}
           </p>
         </Reveal>
       </div>
@@ -326,13 +337,14 @@ export function ScalingSection({ industry }: { industry: IndustryContent }) {
 
 /* Section 10 — FAQ */
 export function FaqSection({ industry }: { industry: IndustryContent }) {
+  const { tr } = useSpanish(catalog)
   return (
     <section className="border-t border-border bg-background">
       <div className="mx-auto w-full max-w-[900px] px-6 py-24 lg:px-12 lg:py-32">
-        <Eyebrow>Common Questions</Eyebrow>
+        <Eyebrow>{tr("Common Questions")}</Eyebrow>
         <h2 className="mt-6 text-balance text-4xl font-extrabold leading-[1.1] tracking-tight lg:text-5xl">
-          {industry.name} questions, answered{" "}
-          <span className="font-serif font-normal italic text-gold-gradient">plainly.</span>
+          {tr("{industry} questions, answered", { industry: industry.name })}{" "}
+          <span className="font-serif font-normal italic text-gold-gradient">{tr("plainly.")}</span>
         </h2>
 
         <div className="mt-12 divide-y divide-border border-y border-border">

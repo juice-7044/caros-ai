@@ -1,3 +1,5 @@
+import spanishCatalog from "@/messages/full/home-general.es.json"
+import { useSpanish } from "@/lib/use-spanish"
 import Image from "next/image"
 import { Reveal } from "./reveal"
 
@@ -18,10 +20,11 @@ export const FOUNDERS = [
 ]
 
 export function Founders({ variant = "light" }: { variant?: "light" | "dark" }) {
+  const { localize } = useSpanish(spanishCatalog)
   const dark = variant === "dark"
   return (
     <div className="grid gap-8 md:grid-cols-2">
-      {FOUNDERS.map((f, i) => (
+      {localize(FOUNDERS).map((f, i) => (
         <Reveal
           key={f.name}
           delay={i * 90}

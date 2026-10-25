@@ -1,3 +1,7 @@
+import { positioningSocialMetadata } from "@/lib/positioning-metadata"
+import spanishCatalog from "@/messages/full/home-general.es.json"
+import { getLocale } from "next-intl/server"
+import { translateSpanishData } from "@/lib/spanish"
 import type { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
 import { ArrowRight, BookOpen, Calculator, Gauge, Sparkles } from "lucide-react"
@@ -6,9 +10,13 @@ import { PageHero, Eyebrow } from "@/components/caros/ui-bits"
 import { Reveal } from "@/components/caros/reveal"
 import { AUDIT_URL } from "@/lib/site"
 
-export const metadata: Metadata = {
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale()
+  const metadata = translateSpanishData({
   title: "Free Resources | CAROS",
   description: "Free tools and insights to help you find more revenue, understand marketing ROI, and close gaps in your revenue process.",
+}, locale, spanishCatalog)
+  return { ...metadata, ...positioningSocialMetadata(metadata.description, locale, metadata.title) }
 }
 
 export default async function ResourcesPage() {

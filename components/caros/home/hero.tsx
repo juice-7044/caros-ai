@@ -1,5 +1,9 @@
 "use client"
 
+import spanishCatalog from "@/messages/full/home-general.es.json"
+import { localeHref } from "@/lib/spanish"
+import { useSpanish } from "@/lib/use-spanish"
+
 import { useEffect, useState } from "react"
 import { useTranslations } from "next-intl"
 import { ArrowRight } from "lucide-react"
@@ -8,6 +12,7 @@ import { PRODUCT_TAGLINE } from "@/lib/site"
 import { AnimatedGlobe } from "@/components/caros/animated-globe"
 
 export function Hero() {
+  const { tr, locale } = useSpanish(spanishCatalog)
   const t = useTranslations("HomePage.hero")
   const stats = t.raw("stats") as { value: string; label: string; tag: string }[]
   const categories = t.raw("categories") as string[]
@@ -71,7 +76,7 @@ export function Hero() {
             visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
           }`}
         >
-          {PRODUCT_TAGLINE.split(". ")
+          {tr(PRODUCT_TAGLINE).split(". ")
             .filter(Boolean)
             .map((part, i, arr) => (
               <span key={part}>
@@ -109,7 +114,7 @@ export function Hero() {
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
               <Link
-                href="https://getcaros.com/en/revenue-audit"
+                href="/revenue-audit"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex h-14 items-center gap-2 rounded-full border border-foreground/20 px-8 text-base font-medium text-foreground transition-all duration-300 hover:bg-foreground/5"
@@ -124,7 +129,7 @@ export function Hero() {
             <p className="text-sm text-muted-foreground lg:text-right">
               {t("notReady")}{" "}
               <a
-                href="/resources"
+                href={localeHref("/resources", locale)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-1 font-semibold text-gold underline-offset-4 hover:underline"

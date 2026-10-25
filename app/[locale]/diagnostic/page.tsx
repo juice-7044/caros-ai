@@ -1,3 +1,6 @@
+
+import { useSpanish } from "@/lib/use-spanish"
+import catalog from "@/messages/full/product-pages.es.json"
 import type { Metadata } from "next"
 import { positioningSocialMetadata } from "@/lib/positioning-metadata"
 import { useTranslations } from "next-intl"
@@ -29,6 +32,8 @@ export async function generateMetadata(
 }
 
 export default function DiagnosticPage() {
+  const { tr } = useSpanish(catalog)
+
   const t = useTranslations("pages.diagnostic")
 
   return (
@@ -43,8 +48,8 @@ export default function DiagnosticPage() {
           <Reveal className="max-w-3xl">
             <Eyebrow>{t("breakEven")}</Eyebrow>
             <h2 className="mt-6 text-balance text-[clamp(2rem,4.5vw,3.5rem)] font-display leading-[1] tracking-tight">
-              You don&apos;t need to transform your business{" "}
-              <span className="font-serif font-normal italic text-gold-gradient">for CAROS to pay for itself.</span>
+              {tr("You don't need to transform your business")}{" "}
+              <span className="font-serif font-normal italic text-gold-gradient">{tr("for CAROS to pay for itself.")}</span>
             </h2>
           </Reveal>
 
@@ -65,13 +70,13 @@ export default function DiagnosticPage() {
           <Reveal delay={160} className="mt-10">
             <div className="flex flex-col items-start gap-8 rounded-2xl bg-ink px-8 py-12 text-ink-foreground lg:flex-row lg:items-center lg:justify-between lg:px-14">
               <div className="max-w-2xl">
-                <p className="font-mono text-xs uppercase tracking-[0.16em] text-gold">The Final Step</p>
+                <p className="font-mono text-xs uppercase tracking-[0.16em] text-gold">{tr("The Final Step")}</p>
                 <h3 className="mt-5 text-balance text-[clamp(1.75rem,3.5vw,2.75rem)] font-display leading-[1.02] tracking-tight">
-                  Want a complete business case with{" "}
-                  <span className="font-serif font-normal italic text-gold-gradient">your actual numbers?</span>
+                  {tr("Want a complete business case with")}{" "}
+                  <span className="font-serif font-normal italic text-gold-gradient">{tr("your actual numbers?")}</span>
                 </h3>
                 <p className="mt-5 text-pretty text-lg leading-relaxed text-ink-muted">
-                  See exactly how much revenue your business is leaking. In 60 seconds.
+                  {tr("See exactly how much revenue your business is leaking. In 60 seconds.")}
                 </p>
               </div>
               <a
@@ -80,7 +85,7 @@ export default function DiagnosticPage() {
                 rel="noopener noreferrer"
                 className="group inline-flex h-14 shrink-0 items-center gap-2 rounded-full bg-gold px-8 text-base font-semibold text-gold-foreground transition-all duration-300 hover:bg-gold/90"
               >
-                Free Business Insights
+                {tr("Free Business Insights")}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
             </div>

@@ -4,8 +4,13 @@ import { useEffect, useState } from "react"
 import { ArrowRight } from "lucide-react"
 import { AUDIT_URL, AUDIT_URL_LABEL, INSIGHTS_URL, INSIGHTS_LABEL, AUDIT_HREF, AUDIT_LABEL } from "@/lib/site"
 import type { IndustryContent } from "@/lib/industries"
+import { useSpanish } from "@/lib/use-spanish"
+import { localeHref } from "@/lib/spanish"
+import catalog from "@/messages/full/industry-ui.es.json"
+
 
 export function IndustryHero({ industry }: { industry: IndustryContent }) {
+  const { tr, locale } = useSpanish(catalog)
   const [visible, setVisible] = useState(false)
   useEffect(() => setVisible(true), [])
 
@@ -44,7 +49,7 @@ export function IndustryHero({ industry }: { industry: IndustryContent }) {
           {industry.heroCtas ? (
             <>
               <a
-                href={industry.heroCtas.primaryHref}
+                href={localeHref(industry.heroCtas.primaryHref, locale)}
                 target={industry.heroCtas.primaryHref.startsWith("http") ? "_blank" : undefined}
                 rel={industry.heroCtas.primaryHref.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="group inline-flex h-13 items-center justify-center gap-2 rounded-full bg-gold px-7 text-base font-semibold text-gold-foreground transition-all duration-300 hover:brightness-110"
@@ -53,7 +58,7 @@ export function IndustryHero({ industry }: { industry: IndustryContent }) {
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
               <a
-                href={industry.heroCtas.secondaryHref}
+                href={localeHref(industry.heroCtas.secondaryHref, locale)}
                 target={industry.heroCtas.secondaryHref.startsWith("http") ? "_blank" : undefined}
                 rel={industry.heroCtas.secondaryHref.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="group inline-flex h-13 items-center justify-center gap-2 rounded-full border border-foreground/25 px-7 text-base font-semibold text-foreground transition-all duration-300 hover:border-foreground hover:bg-foreground hover:text-background"
@@ -70,7 +75,7 @@ export function IndustryHero({ industry }: { industry: IndustryContent }) {
             rel="noopener noreferrer"
             className="group inline-flex h-13 items-center justify-center gap-2 rounded-full bg-gold px-7 text-base font-semibold text-gold-foreground transition-all duration-300 hover:brightness-110"
           >
-            {AUDIT_URL_LABEL}
+            {tr(AUDIT_URL_LABEL)}
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>
           <a
@@ -79,14 +84,14 @@ export function IndustryHero({ industry }: { industry: IndustryContent }) {
             rel="noopener noreferrer"
             className="group inline-flex h-13 items-center justify-center gap-2 rounded-full border border-foreground/25 px-7 text-base font-semibold text-foreground transition-all duration-300 hover:border-foreground hover:bg-foreground hover:text-background"
           >
-            {INSIGHTS_LABEL}
+            {tr(INSIGHTS_LABEL)}
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>
           <a
-            href={AUDIT_HREF}
+            href={localeHref(AUDIT_HREF, locale)}
             className="group inline-flex h-13 items-center justify-center gap-2 rounded-full border border-foreground/25 px-7 text-base font-semibold text-foreground transition-all duration-300 hover:border-foreground hover:bg-foreground hover:text-background"
           >
-            {AUDIT_LABEL}
+            {tr(AUDIT_LABEL)}
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>
             </>

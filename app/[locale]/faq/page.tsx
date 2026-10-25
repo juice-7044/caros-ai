@@ -1,3 +1,9 @@
+import { spanishTranslator } from "@/lib/spanish"
+import { positioningSocialMetadata } from "@/lib/positioning-metadata"
+
+import { useSpanish } from "@/lib/use-spanish"
+import { localeHref } from "@/lib/spanish"
+import catalog from "@/messages/full/product-pages.es.json"
 import type { Metadata } from "next"
 import { useTranslations } from "next-intl"
 import { Plus } from "lucide-react"
@@ -5,10 +11,12 @@ import { PageHero, AuditButton, Eyebrow } from "@/components/caros/ui-bits"
 import { Reveal } from "@/components/caros/reveal"
 import { AUDIT_URL } from "@/lib/site"
 
-export const metadata: Metadata = {
-  title: "Already Have Software? FAQ",
-  description:
-    "CAROS is the Revenue Operating System — designed to work alongside the tools you already run: ServiceTitan, Jobber, Housecall Pro, your CRM, lead sources, Google Business Profile, and more. See how CAROS connects and enhances your existing stack.",
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  const tr = spanishTranslator(locale, catalog)
+  const title = tr("Already Have Software? FAQ")
+  const description = tr("CAROS is the Revenue Operating System — designed to work alongside the tools you already run: ServiceTitan, Jobber, Housecall Pro, your CRM, lead sources, Google Business Profile, and more. See how CAROS connects and enhances your existing stack.")
+  return { title, description, ...positioningSocialMetadata(description, locale, title) }
 }
 
 const faqs: { q: string; a: React.ReactNode; highlight?: string }[] = [
@@ -60,6 +68,8 @@ const faqs: { q: string; a: React.ReactNode; highlight?: string }[] = [
 ]
 
 export default function FaqPage() {
+  const { tr, localize, locale } = useSpanish(catalog)
+
   const t = useTranslations("pages.faq")
 
   return (
@@ -74,20 +84,18 @@ export default function FaqPage() {
       <section className="border-t border-border bg-background">
         <div className="mx-auto w-full max-w-[900px] px-6 py-24 lg:px-12 lg:py-32">
           <Reveal>
-            <Eyebrow>The Revenue Operating System</Eyebrow>
+            <Eyebrow>{tr("The Revenue Operating System")}</Eyebrow>
             <h2 className="mt-6 text-balance text-4xl font-extrabold leading-[1.1] tracking-tight lg:text-5xl">
-              You don&apos;t need fewer tools. You need them{" "}
-              <span className="font-serif font-normal italic text-gold-gradient">working together.</span>
+              {tr("You don't need fewer tools. You need them")}{" "}
+              <span className="font-serif font-normal italic text-gold-gradient">{tr("working together.")}</span>
             </h2>
             <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-              CAROS is the layer that helps answer the questions your stack rarely does on its own: What needs
-              attention? Where is revenue being lost? Which opportunities should be prioritized? What changed? What
-              should happen next — and can it happen automatically?
+              {tr("CAROS is the layer that helps answer the questions your stack rarely does on its own: What needs attention? Where is revenue being lost? Which opportunities should be prioritized? What changed? What should happen next — and can it happen automatically?")}
             </p>
           </Reveal>
 
           <div className="mt-14 divide-y divide-border border-y border-border">
-            {faqs.map((item) => (
+            {localize(faqs).map((item) => (
               <details key={item.q} className="group py-6">
                 <summary className="flex cursor-pointer list-none items-start justify-between gap-6 text-lg font-semibold [&::-webkit-details-marker]:hidden">
                   <span className="text-balance">{item.q}</span>
@@ -112,14 +120,14 @@ export default function FaqPage() {
         <div className="mx-auto w-full max-w-[900px] px-6 py-24 text-center lg:py-32">
           <Reveal className="flex flex-col items-center">
             <h2 className="text-balance text-4xl font-extrabold leading-[1.1] tracking-tight lg:text-5xl">
-              Already invested in technology? Let&apos;s see whether it is{" "}
+              {tr("Already invested in technology? Let's see whether it is")}{" "}
               <span className="font-serif font-normal italic text-gold-gradient">
-                producing everything it should.
+                {tr("producing everything it should.")}
               </span>
             </h2>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <AuditButton label="Get My Free Revenue Audit" href={AUDIT_URL} external />
-              <AuditButton label="See How CAROS Works" href="/how-it-works" variant="outline-light" />
+              <AuditButton label={tr("Get My Free Revenue Audit")} href={AUDIT_URL} external />
+              <AuditButton label={tr("See How CAROS Works")} href={localeHref("/how-it-works", locale)} variant="outline-light" />
             </div>
           </Reveal>
         </div>

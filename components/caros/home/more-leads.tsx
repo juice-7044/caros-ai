@@ -1,3 +1,5 @@
+import spanishCatalog from "@/messages/full/home-general.es.json"
+import { useSpanish } from "@/lib/use-spanish"
 import { ArrowRight, X } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { Reveal } from "@/components/caros/reveal"
@@ -5,6 +7,7 @@ import { Eyebrow } from "@/components/caros/ui-bits"
 import { INSIGHTS_URL } from "@/lib/site"
 
 export function MoreLeads() {
+  const { tr } = useSpanish(spanishCatalog)
   const t = useTranslations("HomePage.moreLeads")
   const gaps = t.raw("gaps") as string[]
 
@@ -18,7 +21,7 @@ export function MoreLeads() {
             {t("headline")}
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-ink-muted">
-            A business can generate plenty of leads and still lose revenue.
+            {tr("A business can generate plenty of leads and still lose revenue.")}
           </p>
         </Reveal>
 
@@ -35,28 +38,24 @@ export function MoreLeads() {
 
         <Reveal delay={120}>
           <p className="mt-10 max-w-3xl text-lg leading-relaxed text-ink-muted">
-            CAROS looks across the entire operation to find those gaps and help the business capture more of the
-            revenue already within reach.
+            {tr("CAROS looks across the entire operation to find those gaps and help the business capture more of the revenue already within reach.")}
           </p>
           <p className="mt-8 max-w-3xl text-balance font-serif text-2xl italic leading-snug text-ink-foreground lg:text-3xl">
-            Before you spend another dollar generating demand, know what your business is doing with the demand it
-            already has.
+            {tr("Before you spend another dollar generating demand, know what your business is doing with the demand it already has.")}
           </p>
         </Reveal>
 
         <Reveal delay={140} className="mt-14">
           <div className="rounded-2xl border border-gold/30 bg-gold/[0.06] p-8 lg:p-10">
-            <p className="font-mono text-xs uppercase tracking-[0.14em] text-gold">Do More With Less</p>
+            <p className="font-mono text-xs uppercase tracking-[0.14em] text-gold">{tr("Do More With Less")}</p>
             <p className="mt-4 text-balance text-2xl font-display leading-[1.05] tracking-tight text-ink-foreground lg:text-3xl">
-              Grow your revenue without growing your payroll.
+              {tr("Grow your revenue without growing your payroll.")}
             </p>
             <p className="mt-5 max-w-3xl text-lg leading-relaxed text-ink-muted">
-              CAROS handles the repetitive, around-the-clock work — capturing leads, answering fast, following up on
-              estimates, and reactivating past customers — so your existing team does more without burning out. You add
-              staff because real growth demands it, not to patch the gaps in a leaky operation.
+              {tr("CAROS handles the repetitive, around-the-clock work — capturing leads, answering fast, following up on estimates, and reactivating past customers — so your existing team does more without burning out. You add staff because real growth demands it, not to patch the gaps in a leaky operation.")}
             </p>
             <p className="mt-5 max-w-3xl text-balance font-serif text-xl italic leading-snug text-ink-foreground lg:text-2xl">
-              Scale at the right time — not too early, not too late.
+              {tr("Scale at the right time — not too early, not too late.")}
             </p>
           </div>
         </Reveal>
@@ -68,7 +67,7 @@ export function MoreLeads() {
             rel="noopener noreferrer"
             className="group mt-10 inline-flex h-14 items-center gap-2 rounded-full bg-gold px-8 text-base font-semibold text-gold-foreground transition-all duration-300 hover:bg-gold/90"
           >
-            Free Business Insights
+            {tr("Free Business Insights")}
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>
         </Reveal>

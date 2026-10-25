@@ -1,6 +1,9 @@
 import type { Metadata } from "next"
+import { getLocale } from "next-intl/server"
+import { spanishTranslator } from "@/lib/spanish"
+import spanish from "@/messages/full/shared.es.json"
 import { notFound } from "next/navigation"
-import { getIndustry } from "@/lib/industries"
+import { getLocalizedIndustry } from "@/lib/localized-industry"
 import { IndustryHero } from "@/components/caros/industry/hero"
 import {
   ProblemSection,
@@ -22,14 +25,15 @@ import { NonprofitConsultationForm } from "@/components/caros/nonprofit-consulta
 const SITE_URL = "https://getcaros.com"
 
 export async function generateMetadata(): Promise<Metadata> {
-  const industry = getIndustry("nonprofits")
+  const locale = await getLocale()
+  const industry = getLocalizedIndustry("nonprofits", locale)
   if (!industry) return {}
-  const path = "/industries/nonprofits"
+  const path = `/${locale}/industries/nonprofits`
   return {
     title: industry.metaTitle,
     description: industry.metaDescription,
     keywords: industry.keywords,
-    alternates: { canonical: path },
+    alternates: { canonical: path, languages: { en: "/en/industries/nonprofits", es: "/es/industries/nonprofits" } },
     openGraph: {
       type: "website",
       url: `${SITE_URL}${path}`,
@@ -44,23 +48,25 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default function NonprofitsPage() {
-  const industry = getIndustry("nonprofits")
+export default async function NonprofitsPage() {
+  const locale = await getLocale()
+  const tr = spanishTranslator(locale, spanish)
+  const industry = getLocalizedIndustry("nonprofits", locale)
   if (!industry) notFound()
 
-  const path = `/industries/${industry.slug}`
+  const path = `/${locale}/industries/${industry.slug}`
   const url = `${SITE_URL}${path}`
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: `CAROS for ${industry.name}`,
-    serviceType: "Revenue operating system for nonprofit organizations",
+    name: locale === "es" ? `CAROS para ${industry.name}` : `CAROS for ${industry.name}`,
+    serviceType: locale === "es" ? "Sistema operativo de ingresos para organizaciones sin fines de lucro" : "Revenue operating system for nonprofit organizations",
     description: industry.metaDescription,
     url,
     provider: { "@type": "Organization", name: "CAROS", url: SITE_URL },
     areaServed: { "@type": "Country", name: "United States" },
-    audience: { "@type": "BusinessAudience", name: "Nonprofit organizations" },
+    audience: { "@type": "BusinessAudience", name: locale === "es" ? "Organizaciones sin fines de lucro" : "Nonprofit organizations" },
   }
 
   const faqJsonLd = {
@@ -77,8 +83,8 @@ export default function NonprofitsPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-      { "@type": "ListItem", position: 2, name: "Industries", item: `${SITE_URL}/industries` },
+      { "@type": "ListItem", position: 1, name: tr("Home"), item: `${SITE_URL}/${locale}` },
+      { "@type": "ListItem", position: 2, name: tr("Industries"), item: `${SITE_URL}/${locale}/industries` },
       { "@type": "ListItem", position: 3, name: industry.name, item: url },
     ],
   }
@@ -104,18 +110,13 @@ export default function NonprofitsPage() {
       <section id="nonprofit-consultation" className="bg-background py-24 lg:py-32">
         <div className="mx-auto max-w-[1100px] px-6 lg:px-12">
           <Reveal>
-            <Eyebrow>Pricing</Eyebrow>
+            <Eyebrow>{tr("Pricing")}</Eyebrow>
             <h2 className="mt-6 max-w-3xl text-balance text-[clamp(2rem,4vw,3.25rem)] font-extrabold leading-tight tracking-tight">
-              Solutions Built Around Your Mission and Your Organization.
-            </h2>
+              {tr("Solutions Built Around Your Mission and Your Organization.")}</h2>
             <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-              Every nonprofit operates differently. Connect with our team to explore the right CAROS
-              configuration and a pricing structure tailored to your organization&apos;s operational needs.
-            </p>
+              {tr("Every nonprofit operates differently. Connect with our team to explore the right CAROS configuration and a pricing structure tailored to your organization's operational needs.")}</p>
             <p className="mt-4 text-sm text-muted-foreground">
-              Nonprofit pricing is arranged through a consultation with our sales team — there is no
-              self-service pricing for nonprofit organizations.
-            </p>
+              {tr("Nonprofit pricing is arranged through a consultation with our sales team — there is no self-service pricing for nonprofit organizations.")}</p>
           </Reveal>
           <Reveal className="mt-12">
             <NonprofitConsultationForm />

@@ -1,4 +1,7 @@
-import Link from "next/link"
+import { Link } from "@/i18n/routing"
+import { useSpanish } from "@/lib/use-spanish"
+import { localeHref } from "@/lib/spanish"
+import spanish from "@/messages/full/shared.es.json"
 import { ArrowRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { AUDIT_HREF, AUDIT_LABEL } from "@/lib/site"
@@ -48,6 +51,7 @@ export function AuditButton({
   href?: string
   external?: boolean
 }) {
+  const { tr, locale } = useSpanish(spanish)
   const classes = cn(
     "group inline-flex h-14 items-center justify-center gap-2 rounded-full px-8 text-base font-semibold transition-all duration-300",
     variant === "gold" && "bg-gold text-gold-foreground hover:bg-gold/90",
@@ -59,14 +63,14 @@ export function AuditButton({
   )
   const inner = (
     <>
-      {label}
+      {tr(label)}
       <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
     </>
   )
 
   if (external) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
+      <a href={localeHref(href, locale)} target="_blank" rel="noopener noreferrer" className={classes}>
         {inner}
       </a>
     )

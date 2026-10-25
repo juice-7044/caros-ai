@@ -1,3 +1,8 @@
+import { positioningSocialMetadata } from "@/lib/positioning-metadata"
+import spanishCatalog from "@/messages/full/home-general.es.json"
+import { useSpanish } from "@/lib/use-spanish"
+import { getLocale } from "next-intl/server"
+import { translateSpanishData } from "@/lib/spanish"
 import type { Metadata } from "next"
 import { useTranslations } from "next-intl"
 import { PageHero, Eyebrow } from "@/components/caros/ui-bits"
@@ -6,10 +11,14 @@ import { PillarsGrid } from "@/components/caros/pillars-grid"
 import { Reveal } from "@/components/caros/reveal"
 import { CtaBand } from "@/components/caros/cta-band"
 
-export const metadata: Metadata = {
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale()
+  const metadata = translateSpanishData({
   title: "How It Works",
   description:
     "CAROS is built around your business in four moves: we audit your revenue process, build your system, launch it with you, and keep optimizing it every week.",
+}, locale, spanishCatalog)
+  return { ...metadata, ...positioningSocialMetadata(metadata.description, locale, metadata.title) }
 }
 
 const flow = [
@@ -32,6 +41,7 @@ const flow = [
 ]
 
 export default function HowItWorksPage() {
+  const { tr, localize } = useSpanish(spanishCatalog)
   const t = useTranslations("pages.how")
 
   return (
@@ -46,13 +56,13 @@ export default function HowItWorksPage() {
       <section className="bg-background py-24 lg:py-32">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
           <Reveal>
-            <Eyebrow>The Four Questions</Eyebrow>
+            <Eyebrow>{tr("The Four Questions")}</Eyebrow>
             <h2 className="mt-6 max-w-3xl text-balance text-[clamp(2rem,4vw,3.25rem)] font-extrabold leading-[1.02] tracking-tight">
-              Every business owner asks the same four questions. CAROS answers all of them.
+              {tr("Every business owner asks the same four questions. CAROS answers all of them.")}
             </h2>
           </Reveal>
           <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-border md:grid-cols-2">
-            {flow.map((item, i) => (
+            {localize(flow).map((item, i) => (
               <Reveal key={item.q} delay={i * 60} className="bg-card p-8 lg:p-10">
                 <p className="font-serif text-2xl italic text-foreground">{`"${item.q}"`}</p>
                 <p className="mt-4 leading-relaxed text-muted-foreground">{item.a}</p>
@@ -65,9 +75,9 @@ export default function HowItWorksPage() {
       <section className="bg-muted/40 py-24 lg:py-32">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
           <Reveal>
-            <Eyebrow>The Process</Eyebrow>
+            <Eyebrow>{tr("The Process")}</Eyebrow>
             <h2 className="mt-6 max-w-3xl text-balance text-[clamp(2rem,4vw,3.25rem)] font-extrabold leading-[1.02] tracking-tight">
-              From first call to fully running — in four moves.
+              {tr("From first call to fully running — in four moves.")}
             </h2>
           </Reveal>
           <div className="mt-16">
@@ -79,9 +89,9 @@ export default function HowItWorksPage() {
       <section className="bg-ink py-24 text-ink-foreground lg:py-32">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
           <Reveal>
-            <Eyebrow>The Five Pillars</Eyebrow>
+            <Eyebrow>{tr("The Five Pillars")}</Eyebrow>
             <h2 className="mt-6 max-w-3xl text-balance text-[clamp(2rem,4vw,3.25rem)] font-extrabold leading-[1.02] tracking-tight text-ink-foreground">
-              Underneath it all, five connected systems working as one.
+              {tr("Underneath it all, five connected systems working as one.")}
             </h2>
           </Reveal>
           <div className="mt-16">

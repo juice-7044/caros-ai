@@ -1,5 +1,8 @@
 "use client"
 
+import { useSpanish } from "@/lib/use-spanish"
+import catalog from "@/messages/full/product-pages.es.json"
+
 import { Fragment, useState } from "react"
 import { Check, X, Info } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -8,6 +11,8 @@ import { CAPABILITY_ROWS, COMPARISON_COLUMNS, type CompareColumn } from "@/lib/c
 const CAROS_COL: CompareColumn = "CAROS"
 
 function Mark({ on, caros }: { on: boolean; caros: boolean }) {
+  const { tr } = useSpanish(catalog)
+
   if (on) {
     return (
       <span
@@ -17,19 +22,21 @@ function Mark({ on, caros }: { on: boolean; caros: boolean }) {
         )}
       >
         <Check className="h-5 w-5" strokeWidth={2.5} aria-hidden="true" />
-        <span className="sr-only">Offered as a core capability</span>
+        <span className="sr-only">{tr("Offered as a core capability")}</span>
       </span>
     )
   }
   return (
     <span className="inline-flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground/45">
       <X className="h-5 w-5" strokeWidth={2} aria-hidden="true" />
-      <span className="sr-only">Not a core capability</span>
+      <span className="sr-only">{tr("Not a core capability")}</span>
     </span>
   )
 }
 
 export function ComparisonTable() {
+  const { tr, localize } = useSpanish(catalog)
+
   const [openRow, setOpenRow] = useState<number | null>(null)
 
   return (
@@ -42,7 +49,7 @@ export function ComparisonTable() {
                 scope="col"
                 className="sticky left-0 z-20 min-w-[240px] bg-card px-5 py-5 align-bottom text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground"
               >
-                Capability
+                {tr("Capability")}
               </th>
               {COMPARISON_COLUMNS.map((col) => {
                 const isCaros = col === CAROS_COL
@@ -58,7 +65,7 @@ export function ComparisonTable() {
                     <span className={cn("inline-flex flex-col items-center gap-1", isCaros && "text-gold")}>
                       {col}
                       {isCaros ? (
-                        <span className="eyebrow text-[0.6rem] text-gold/70">Revenue OS</span>
+                        <span className="eyebrow text-[0.6rem] text-gold/70">{tr("Revenue OS")}</span>
                       ) : null}
                     </span>
                   </th>
@@ -67,7 +74,7 @@ export function ComparisonTable() {
             </tr>
           </thead>
           <tbody>
-            {CAPABILITY_ROWS.map((row, i) => {
+            {localize(CAPABILITY_ROWS).map((row, i) => {
               const hasInfo = Boolean(row.explanation)
               const isOpen = openRow === i
               return (

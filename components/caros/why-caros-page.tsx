@@ -1,5 +1,8 @@
 "use client"
 
+import { useSpanish } from "@/lib/use-spanish"
+import catalog from "@/messages/full/specialist-pages.es.json"
+
 import { useEffect, useRef, useState } from "react"
 import type { LucideIcon } from "lucide-react"
 import {
@@ -74,8 +77,11 @@ const manualFlows: readonly (readonly [string, readonly string[]])[] = [
 ]
 
 function StackTiles() {
+  const { localize } = useSpanish(catalog)
+  const localizedStackTiles = localize(stackTiles)
+
   return <div className="grid grid-cols-2 gap-3 md:grid-cols-4 lg:grid-cols-6">
-    {stackTiles.map(([Icon, label], index) => <Reveal key={label} delay={(index % 6) * 35} className={`flex min-h-24 flex-col justify-between border border-border bg-background p-4 ${index % 5 === 0 ? "lg:col-span-2" : ""}`}><Icon className="size-5 text-gold" aria-hidden="true" /><span className="mt-5 text-sm font-semibold leading-snug">{label}</span></Reveal>)}
+    {localizedStackTiles.map(([Icon, label], index) => <Reveal key={label} delay={(index % 6) * 35} className={`flex min-h-24 flex-col justify-between border border-border bg-background p-4 ${index % 5 === 0 ? "lg:col-span-2" : ""}`}><Icon className="size-5 text-gold" aria-hidden="true" /><span className="mt-5 text-sm font-semibold leading-snug">{label}</span></Reveal>)}
   </div>
 }
 
@@ -113,6 +119,10 @@ const buildHelixPath = (phase: number, strand: number) => {
 }
 
 function ConnectionDiagram() {
+  const { tr, localize } = useSpanish(catalog)
+  const localizedNetworkDetails = localize(networkDetails)
+  const localizedCategories = localize(categories)
+
   const [active, setActive] = useState<number | null>(null)
   const [locked, setLocked] = useState(false)
   const [card, setCard] = useState<{ x: number; y: number } | null>(null)
@@ -123,10 +133,10 @@ function ConnectionDiagram() {
   const rungRefs = useRef<(SVGLineElement | null)[]>([])
   const pathARef = useRef<SVGPathElement | null>(null)
   const pathBRef = useRef<SVGPathElement | null>(null)
-  const posRef = useRef(networkDetails.map(() => ({ x: 50, y: 50 })))
+  const posRef = useRef(localizedNetworkDetails.map(() => ({ x: 50, y: 50 })))
   const activeRef = useRef<number | null>(null)
   const boostUntil = useRef(0)
-  const strandPhase = networkDetails.map((_, i) => (i % 2) * Math.PI)
+  const strandPhase = localizedNetworkDetails.map((_, i) => (i % 2) * Math.PI)
 
   useEffect(() => { activeRef.current = active }, [active])
   useEffect(() => {
@@ -152,7 +162,7 @@ function ConnectionDiagram() {
   useEffect(() => {
     if (!reduced) return
     const xs = [8, 24, 40, 60, 76, 92]
-    networkDetails.forEach((_, i) => {
+    localizedNetworkDetails.forEach((_, i) => {
       const node = nodeRefs.current[i]; if (!node) return
       const x = xs[i]
       const full = (x / 100) * HELIX_SPINS * Math.PI * 2 + strandPhase[i]
@@ -186,7 +196,7 @@ function ConnectionDiagram() {
         line.setAttribute("y1", String(50 + s)); line.setAttribute("y2", String(50 - s))
         const near = Math.abs(x - hl); line.setAttribute("opacity", String(0.06 + Math.max(0, 1 - near / 14) * 0.22))
       })
-      networkDetails.forEach((_, i) => {
+      localizedNetworkDetails.forEach((_, i) => {
         const node = nodeRefs.current[i]; if (!node) return
         if (activeRef.current === i) { node.style.transform = "translate(-50%,-50%) scale(1.32)"; node.style.opacity = "1"; node.style.zIndex = "60"; return }
         const p = ((nodePhase / nodeDurations[i]) + nodeOffsets[i]) % 1
@@ -261,18 +271,18 @@ function ConnectionDiagram() {
           style={{ background: "radial-gradient(circle at 38% 32%, #F4D03F, #D4AF37 45%, #B8860B 100%)", boxShadow: "0 0 50px 10px rgba(212,175,55,.55), 0 0 120px 30px rgba(212,175,55,.2)" }}
           onMouseEnter={() => { boostUntil.current = performance.now() + 2000 }}
         >
-          <span className="font-serif text-3xl font-bold italic text-white" style={{ textShadow: "0 1px 8px rgba(0,0,0,.45)" }}>CAROS</span>
-          <span className="mt-1 px-3 font-mono text-[9px] uppercase leading-tight tracking-[.18em] text-white/85">Revenue Operating System</span>
+          <span className="font-serif text-3xl font-bold italic text-white" style={{ textShadow: "0 1px 8px rgba(0,0,0,.45)" }}>{tr("CAROS")}</span>
+          <span className="mt-1 px-3 font-mono text-[9px] uppercase leading-tight tracking-[.18em] text-white/85">{tr("Revenue Operating System")}</span>
         </div>
 
         {/* traveling nodes */}
-        {networkDetails.map(([name], i) => {
-          const Icon = categories[i][0]
+        {localizedNetworkDetails.map(([name], i) => {
+          const Icon = localizedCategories[i][0]
           const isActive = active === i
           return <div key={i} ref={(el) => { nodeRefs.current[i] = el }} className="helix-node absolute left-1/2 top-1/2">
             <button
               type="button"
-              aria-label={`${name} — ${categories[i][1]}`}
+              aria-label={`${name} — ${localizedCategories[i][1]}`}
               aria-expanded={isActive}
               onMouseEnter={() => { if (!locked) activate(i) }}
               onMouseLeave={() => { if (!locked) { setActive(null); setCard(null) } }}
@@ -296,10 +306,10 @@ function ConnectionDiagram() {
           className="absolute z-[70] w-[280px] border border-gold/50 bg-ink/70 p-5 text-left text-ink-foreground shadow-[0_0_50px_rgba(212,175,55,.2)] backdrop-blur-xl"
           style={{ top: `${Math.min(Math.max(card.y, 20), 74)}%`, transform: "translateY(-50%)", ...(card.x < 50 ? { left: `calc(${card.x}% + 60px)` } : { right: `calc(${100 - card.x}% + 60px)` }) }}
         >
-          <p className="text-sm font-bold text-gold">{networkDetails[active][0]}</p>
-          <p className="mt-2 text-sm leading-relaxed text-ink-foreground/85">{networkDetails[active][1]}</p>
+          <p className="text-sm font-bold text-gold">{localizedNetworkDetails[active][0]}</p>
+          <p className="mt-2 text-sm leading-relaxed text-ink-foreground/85">{localizedNetworkDetails[active][1]}</p>
           <ul className="mt-3 space-y-1 border-t border-ink-foreground/15 pt-3 text-xs leading-relaxed text-ink-foreground/65">
-            {networkDetails[active][2].slice(0, 4).map((it) => <li key={it} className="flex items-center gap-2"><span className="size-1 rounded-full bg-gold" aria-hidden="true" />{it}</li>)}
+            {localizedNetworkDetails[active][2].slice(0, 4).map((it) => <li key={it} className="flex items-center gap-2"><span className="size-1 rounded-full bg-gold" aria-hidden="true" />{it}</li>)}
           </ul>
         </div>}
       </div>
@@ -311,8 +321,8 @@ function ConnectionDiagram() {
 
     {/* Mobile: planetary stack */}
     <div className="flex flex-col gap-3 sm:hidden">
-      <div className="mb-2 flex flex-col items-center"><div className="flex size-24 flex-col items-center justify-center rounded-full bg-gold text-center text-ink shadow-[0_0_40px_hsl(var(--gold)/.4)]"><span className="font-serif text-lg font-bold italic">CAROS</span><span className="mt-0.5 px-2 font-mono text-[7px] uppercase leading-tight tracking-[.14em] text-ink/80">Revenue OS</span></div></div>
-      {networkDetails.map(([name, sentence, items], i) => { const Icon = categories[i][0]; const open = active === i; return <button key={name} type="button" aria-expanded={open} onClick={() => setActive(open ? null : i)} className={`flex flex-col border p-4 text-left transition-colors ${open ? "border-gold bg-ink/80" : "border-ink-foreground/20 bg-ink/60"}`}>
+      <div className="mb-2 flex flex-col items-center"><div className="flex size-24 flex-col items-center justify-center rounded-full bg-gold text-center text-ink shadow-[0_0_40px_hsl(var(--gold)/.4)]"><span className="font-serif text-lg font-bold italic">{tr("CAROS")}</span><span className="mt-0.5 px-2 font-mono text-[7px] uppercase leading-tight tracking-[.14em] text-ink/80">{tr("Revenue OS")}</span></div></div>
+      {localizedNetworkDetails.map(([name, sentence, items], i) => { const Icon = localizedCategories[i][0]; const open = active === i; return <button key={name} type="button" aria-expanded={open} onClick={() => setActive(open ? null : i)} className={`flex flex-col border p-4 text-left transition-colors ${open ? "border-gold bg-ink/80" : "border-ink-foreground/20 bg-ink/60"}`}>
         <span className="flex items-center gap-3"><span className="flex size-9 items-center justify-center rounded-full text-ink" style={{ background: `radial-gradient(circle at 32% 28%, ${planetColors[i]}, hsl(var(--ink)) 130%)`, boxShadow: `0 0 14px ${planetColors[i]}80` }}><Icon className="size-4" aria-hidden="true" /></span><span className="text-sm font-bold text-ink-foreground">{name}</span></span>
         {open && <span className="mt-3 block border-t border-ink-foreground/15 pt-3 text-xs leading-relaxed text-ink-foreground/70"><strong className="block text-gold">{sentence}</strong><span className="mt-2 block">{items.join(" • ")}</span></span>}
       </button> })}
@@ -321,27 +331,34 @@ function ConnectionDiagram() {
 }
 
 export function WhyCarosPage() {
-  const [vertical, setVertical] = useState<(keyof typeof verticalData)>("Home Services")
-  const current = verticalData[vertical]
+  const { tr, localize } = useSpanish(catalog)
+  const localizedVerticalData = localize(verticalData)
+  const localizedCostCards = localize(costCards)
+  const localizedCategories = localize(categories)
+  const localizedManualFlows = localize(manualFlows)
+  const localizedLifecycle = localize(lifecycle)
+
+  const [vertical, setVertical] = useState<(keyof typeof localizedVerticalData)>("Home Services")
+  const current = localizedVerticalData[vertical]
 
   return <main>
-    <PageHero eyebrow="WHY CAROS" title="The system behind" serifTitle="the revenue." subtitle="Most businesses do not have one revenue system. They have software, vendors, employees, contractors, spreadsheets, and manual processes trying to work together. CAROS connects the work from first touch through repeat revenue." />
+    <PageHero eyebrow={tr("WHY CAROS")} title={tr("The system behind")} serifTitle={tr("the revenue.")} subtitle={tr("Most businesses do not have one revenue system. They have software, vendors, employees, contractors, spreadsheets, and manual processes trying to work together. CAROS connects the work from first touch through repeat revenue.")} />
 
-    <section className="bg-background px-6 py-24 lg:px-12 lg:py-32"><div className="mx-auto max-w-[1200px]"><Reveal><Eyebrow>THE FRAGMENTED STACK</Eyebrow><h2 className="mt-6 max-w-4xl text-balance text-[clamp(2.2rem,5vw,4.75rem)] font-extrabold leading-[.98] tracking-tight">You may already have all the pieces.<br /><span className="font-serif font-normal italic text-gold">They just don&apos;t work as one system.</span></h2></Reveal><div className="mt-14"><StackTiles /></div></div></section>
+    <section className="bg-background px-6 py-24 lg:px-12 lg:py-32"><div className="mx-auto max-w-[1200px]"><Reveal><Eyebrow>{tr("THE FRAGMENTED STACK")}</Eyebrow><h2 className="mt-6 max-w-4xl text-balance text-[clamp(2.2rem,5vw,4.75rem)] font-extrabold leading-[.98] tracking-tight">{tr("You may already have all the pieces.")}<br /><span className="font-serif font-normal italic text-gold">{tr("They just don't work as one system.")}</span></h2></Reveal><div className="mt-14"><StackTiles /></div></div></section>
 
-    <section className="bg-muted/40 px-6 py-24 lg:px-12 lg:py-32"><div className="mx-auto max-w-[1200px]"><Reveal><Eyebrow>THE REAL COST</Eyebrow><h2 className="mt-6 max-w-4xl text-balance text-[clamp(2.2rem,5vw,4.75rem)] font-extrabold leading-[.98] tracking-tight">You are already paying<br /><span className="font-serif font-normal italic text-gold">for the stack.</span></h2><p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">You may not pay for every function as a separate software subscription. Some of it lives in payroll, agencies, contractors, administrative time, or missed opportunities.</p></Reveal><div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-4">{costCards.map(([Icon, title, items]) => <Reveal key={title as string} className="border border-border bg-background p-6 lg:p-7"><Icon className="size-6 text-gold" aria-hidden="true" /><h3 className="mt-7 text-xl font-bold">{title}</h3><ul className="mt-5 flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">{(items as string[]).map(item => <li key={item}>{item}</li>)}</ul></Reveal>)}</div><p className="mx-auto mt-16 max-w-4xl text-center text-[clamp(1.7rem,3.5vw,3rem)] font-extrabold leading-tight">Different bills.<br />Different logins.<br />Different data.<br /><span className="font-serif font-normal italic text-gold">One customer journey.</span></p></div></section>
+    <section className="bg-muted/40 px-6 py-24 lg:px-12 lg:py-32"><div className="mx-auto max-w-[1200px]"><Reveal><Eyebrow>{tr("THE REAL COST")}</Eyebrow><h2 className="mt-6 max-w-4xl text-balance text-[clamp(2.2rem,5vw,4.75rem)] font-extrabold leading-[.98] tracking-tight">{tr("You are already paying")}<br /><span className="font-serif font-normal italic text-gold">{tr("for the stack.")}</span></h2><p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">{tr("You may not pay for every function as a separate software subscription. Some of it lives in payroll, agencies, contractors, administrative time, or missed opportunities.")}</p></Reveal><div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-4">{localizedCostCards.map(([Icon, title, items]) => <Reveal key={title as string} className="border border-border bg-background p-6 lg:p-7"><Icon className="size-6 text-gold" aria-hidden="true" /><h3 className="mt-7 text-xl font-bold">{title}</h3><ul className="mt-5 flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">{(items as string[]).map(item => <li key={tr(item)}>{tr(item)}</li>)}</ul></Reveal>)}</div><p className="mx-auto mt-16 max-w-4xl text-center text-[clamp(1.7rem,3.5vw,3rem)] font-extrabold leading-tight">{tr("Different bills.")}<br />{tr("Different logins.")}<br />{tr("Different data.")}<br /><span className="font-serif font-normal italic text-gold">{tr("One customer journey.")}</span></p></div></section>
 
-    <section className="bg-background px-6 py-24 lg:px-12 lg:py-32"><div className="mx-auto max-w-[1200px]"><Reveal><Eyebrow>THE REVENUE WORK</Eyebrow><h2 className="mt-6 max-w-4xl text-balance text-[clamp(2.2rem,5vw,4.75rem)] font-extrabold leading-[.98] tracking-tight">Six categories of work.<br /><span className="font-serif font-normal italic text-gold">One connected system.</span></h2></Reveal><div className="mt-14 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">{categories.map(([Icon, name, items]) => <Reveal key={name} className="bg-background p-7 lg:p-9"><Icon className="size-6 text-gold" aria-hidden="true" /><h3 className="mt-7 text-xl font-bold">{name}</h3><ul className="mt-5 flex flex-col gap-2 text-sm capitalize leading-relaxed text-muted-foreground">{items.map(item => <li key={item}>{item}</li>)}</ul></Reveal>)}</div></div></section>
+    <section className="bg-background px-6 py-24 lg:px-12 lg:py-32"><div className="mx-auto max-w-[1200px]"><Reveal><Eyebrow>{tr("THE REVENUE WORK")}</Eyebrow><h2 className="mt-6 max-w-4xl text-balance text-[clamp(2.2rem,5vw,4.75rem)] font-extrabold leading-[.98] tracking-tight">{tr("Six categories of work.")}<br /><span className="font-serif font-normal italic text-gold">{tr("One connected system.")}</span></h2></Reveal><div className="mt-14 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">{localizedCategories.map(([Icon, name, items]) => <Reveal key={name} className="bg-background p-7 lg:p-9"><Icon className="size-6 text-gold" aria-hidden="true" /><h3 className="mt-7 text-xl font-bold">{name}</h3><ul className="mt-5 flex flex-col gap-2 text-sm capitalize leading-relaxed text-muted-foreground">{items.map(item => <li key={tr(item)}>{tr(item)}</li>)}</ul></Reveal>)}</div></div></section>
 
-    <section className="bg-ink px-6 py-24 text-ink-foreground lg:px-12 lg:py-32"><div className="mx-auto max-w-[1200px]"><Reveal><Eyebrow>THE OPERATING SYSTEM</Eyebrow><h2 className="mt-6 max-w-3xl text-balance text-[clamp(2.2rem,5vw,4.75rem)] font-extrabold leading-[.98] tracking-tight">Not another tool.<br /><span className="font-serif font-normal italic text-gold">The connective tissue.</span></h2><p className="mt-8 max-w-2xl text-lg leading-relaxed text-ink-foreground/70">Revenue is the DNA of a business. CAROS connects the systems, people, conversations, workflows, and data that keep it moving.</p></Reveal><div className="mt-16 lg:mt-20"><ConnectionDiagram /></div></div></section>
+    <section className="bg-ink px-6 py-24 text-ink-foreground lg:px-12 lg:py-32"><div className="mx-auto max-w-[1200px]"><Reveal><Eyebrow>{tr("THE OPERATING SYSTEM")}</Eyebrow><h2 className="mt-6 max-w-3xl text-balance text-[clamp(2.2rem,5vw,4.75rem)] font-extrabold leading-[.98] tracking-tight">{tr("Not another tool.")}<br /><span className="font-serif font-normal italic text-gold">{tr("The connective tissue.")}</span></h2><p className="mt-8 max-w-2xl text-lg leading-relaxed text-ink-foreground/70">{tr("Revenue is the DNA of a business. CAROS connects the systems, people, conversations, workflows, and data that keep it moving.")}</p></Reveal><div className="mt-16 lg:mt-20"><ConnectionDiagram /></div></div></section>
 
-    <section className="bg-background px-6 py-24 lg:px-12 lg:py-32"><div className="mx-auto max-w-[1200px]"><Reveal><Eyebrow>NOT EVERYTHING HAS A LOGIN</Eyebrow><h2 className="mt-6 max-w-4xl text-balance text-[clamp(2.2rem,5vw,4.75rem)] font-extrabold leading-[.98] tracking-tight">Some of your most expensive systems<br /><span className="font-serif font-normal italic text-gold">are people doing things manually.</span></h2><p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground">If someone on your team is returning missed calls, copying information into spreadsheets, requesting reviews, sending reminders, checking multiple systems, following up with old leads, or building reports by hand, you are already paying for the process.</p></Reveal><div className="mt-14 grid gap-px overflow-hidden bg-border md:grid-cols-2 lg:grid-cols-4">{manualFlows.map(([title, items]) => <div key={title} className="bg-background p-7"><h3 className="font-mono text-xs font-bold uppercase tracking-[.18em] text-gold">{title}</h3><ul className="mt-6 flex flex-col gap-3 text-sm text-muted-foreground">{items.map(item => <li key={item} className="flex items-center gap-2"><ArrowRight className="size-3 text-gold" aria-hidden="true" />{item}</li>)}</ul></div>)}</div><p className="mx-auto mt-12 max-w-3xl text-center text-lg font-semibold leading-relaxed">CAROS automates, coordinates, or supports the work so your people can spend more time on the work that actually requires people.</p></div></section>
+    <section className="bg-background px-6 py-24 lg:px-12 lg:py-32"><div className="mx-auto max-w-[1200px]"><Reveal><Eyebrow>{tr("NOT EVERYTHING HAS A LOGIN")}</Eyebrow><h2 className="mt-6 max-w-4xl text-balance text-[clamp(2.2rem,5vw,4.75rem)] font-extrabold leading-[.98] tracking-tight">{tr("Some of your most expensive systems")}<br /><span className="font-serif font-normal italic text-gold">{tr("are people doing things manually.")}</span></h2><p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground">{tr("If someone on your team is returning missed calls, copying information into spreadsheets, requesting reviews, sending reminders, checking multiple systems, following up with old leads, or building reports by hand, you are already paying for the process.")}</p></Reveal><div className="mt-14 grid gap-px overflow-hidden bg-border md:grid-cols-2 lg:grid-cols-4">{localizedManualFlows.map(([title, items]) => <div key={title} className="bg-background p-7"><h3 className="font-mono text-xs font-bold uppercase tracking-[.18em] text-gold">{title}</h3><ul className="mt-6 flex flex-col gap-3 text-sm text-muted-foreground">{items.map(item => <li key={tr(item)} className="flex items-center gap-2"><ArrowRight className="size-3 text-gold" aria-hidden="true" />{tr(item)}</li>)}</ul></div>)}</div><p className="mx-auto mt-12 max-w-3xl text-center text-lg font-semibold leading-relaxed">{tr("CAROS automates, coordinates, or supports the work so your people can spend more time on the work that actually requires people.")}</p></div></section>
 
-    <section className="bg-muted/40 px-6 py-24 lg:px-12 lg:py-32"><div className="mx-auto max-w-[1200px]"><Reveal><Eyebrow>BUILT AROUND HOW YOU SELL</Eyebrow><h2 className="mt-6 max-w-4xl text-balance text-[clamp(2.2rem,5vw,4.75rem)] font-extrabold leading-[.98] tracking-tight">Different vertical.<br /><span className="font-serif font-normal italic text-gold">Same revenue loop.</span></h2></Reveal><div className="mt-14 flex flex-wrap gap-2">{verticals.map(item => <button type="button" key={item} onClick={() => setVertical(item)} className={`border px-4 py-2 text-sm transition-colors ${vertical === item ? "border-gold bg-ink text-ink-foreground" : "border-border bg-background text-muted-foreground hover:border-gold"}`}>{item}</button>)}</div><div className="mt-8 grid gap-6 border-t border-border pt-8 md:grid-cols-4">{lifecycle.map((label, i) => <div key={label}><span className="font-mono text-xs uppercase tracking-[.18em] text-gold">0{i + 1}</span><h3 className="mt-4 text-xl font-bold">{label}</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{current[i]}</p>{i < lifecycle.length - 1 && <ArrowRight className="mt-6 hidden size-4 text-gold md:block" aria-hidden="true" />}</div>)}</div></div></section>
+    <section className="bg-muted/40 px-6 py-24 lg:px-12 lg:py-32"><div className="mx-auto max-w-[1200px]"><Reveal><Eyebrow>{tr("BUILT AROUND HOW YOU SELL")}</Eyebrow><h2 className="mt-6 max-w-4xl text-balance text-[clamp(2.2rem,5vw,4.75rem)] font-extrabold leading-[.98] tracking-tight">{tr("Different vertical.")}<br /><span className="font-serif font-normal italic text-gold">{tr("Same revenue loop.")}</span></h2></Reveal><div className="mt-14 flex flex-wrap gap-2">{verticals.map(item => <button type="button" key={tr(item)} onClick={() => setVertical(item)} className={`border px-4 py-2 text-sm transition-colors ${vertical === item ? "border-gold bg-ink text-ink-foreground" : "border-border bg-background text-muted-foreground hover:border-gold"}`}>{tr(item)}</button>)}</div><div className="mt-8 grid gap-6 border-t border-border pt-8 md:grid-cols-4">{localizedLifecycle.map((label, i) => <div key={label}><span className="font-mono text-xs uppercase tracking-[.18em] text-gold">0{i + 1}</span><h3 className="mt-4 text-xl font-bold">{label}</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{current[i]}</p>{i < localizedLifecycle.length - 1 && <ArrowRight className="mt-6 hidden size-4 text-gold md:block" aria-hidden="true" />}</div>)}</div></div></section>
 
-    <section className="bg-background px-6 py-24 lg:px-12 lg:py-32"><div className="mx-auto max-w-[1000px] text-center"><Reveal><Eyebrow>THE COMPOUNDING EFFECT</Eyebrow><h2 className="mt-6 text-balance text-[clamp(2.2rem,5vw,4.75rem)] font-extrabold leading-[.98] tracking-tight">The system gets stronger<br /><span className="font-serif font-normal italic text-gold">every time it runs.</span></h2><div className="mx-auto mt-14 flex max-w-3xl flex-wrap items-center justify-center gap-3">{["Attention", "Trust", "Revenue", "Retention", "Referrals"].map((item, i, all) => <span key={item} className="flex items-center gap-3"><span className="border border-border px-4 py-3 text-sm font-semibold">{item}</span>{i < all.length - 1 && <ArrowRight className="size-4 text-gold" aria-hidden="true" />}</span>)}</div><p className="mx-auto mt-10 max-w-2xl text-lg leading-relaxed text-muted-foreground">Every interaction creates information the next interaction can use. More context improves follow-up. Better follow-up improves conversion. Better experiences create retention and referrals.</p><p className="mt-6 font-semibold">Every step makes the next one easier.</p></Reveal></div></section>
+    <section className="bg-background px-6 py-24 lg:px-12 lg:py-32"><div className="mx-auto max-w-[1000px] text-center"><Reveal><Eyebrow>{tr("THE COMPOUNDING EFFECT")}</Eyebrow><h2 className="mt-6 text-balance text-[clamp(2.2rem,5vw,4.75rem)] font-extrabold leading-[.98] tracking-tight">{tr("The system gets stronger")}<br /><span className="font-serif font-normal italic text-gold">{tr("every time it runs.")}</span></h2><div className="mx-auto mt-14 flex max-w-3xl flex-wrap items-center justify-center gap-3">{localize(["Attention", "Trust", "Revenue", "Retention", "Referrals"]).map((item, i, all) => <span key={tr(item)} className="flex items-center gap-3"><span className="border border-border px-4 py-3 text-sm font-semibold">{tr(item)}</span>{i < all.length - 1 && <ArrowRight className="size-4 text-gold" aria-hidden="true" />}</span>)}</div><p className="mx-auto mt-10 max-w-2xl text-lg leading-relaxed text-muted-foreground">{tr("Every interaction creates information the next interaction can use. More context improves follow-up. Better follow-up improves conversion. Better experiences create retention and referrals.")}</p><p className="mt-6 font-semibold">{tr("Every step makes the next one easier.")}</p></Reveal></div></section>
 
-    <section className="bg-ink px-6 py-24 text-ink-foreground lg:px-12 lg:py-32"><div className="mx-auto max-w-[900px]"><Reveal><Eyebrow>READY WHEN YOU ARE</Eyebrow><h2 className="mt-6 max-w-3xl text-balance text-[clamp(2.4rem,6vw,5.5rem)] font-extrabold leading-[.95] tracking-tight">Stop managing<br /><span className="font-serif font-normal italic text-gold">pieces.</span> Start running revenue.</h2><p className="mt-8 max-w-xl text-lg leading-relaxed text-ink-foreground/70">See where revenue is leaking, where your systems are disconnected, and what CAROS can help consolidate.</p><div className="mt-10"><AuditButton /></div></Reveal></div></section>
+    <section className="bg-ink px-6 py-24 text-ink-foreground lg:px-12 lg:py-32"><div className="mx-auto max-w-[900px]"><Reveal><Eyebrow>{tr("READY WHEN YOU ARE")}</Eyebrow><h2 className="mt-6 max-w-3xl text-balance text-[clamp(2.4rem,6vw,5.5rem)] font-extrabold leading-[.95] tracking-tight">{tr("Stop managing")}<br /><span className="font-serif font-normal italic text-gold">{tr("pieces.")}</span> {tr("Start running revenue.")}</h2><p className="mt-8 max-w-xl text-lg leading-relaxed text-ink-foreground/70">{tr("See where revenue is leaking, where your systems are disconnected, and what CAROS can help consolidate.")}</p><div className="mt-10"><AuditButton label={tr("Book A Business Review")} href="/revenue-audit" /></div></Reveal></div></section>
   </main>
 }
 

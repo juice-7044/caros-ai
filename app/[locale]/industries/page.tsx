@@ -1,3 +1,7 @@
+
+import { useSpanish } from "@/lib/use-spanish"
+import { localeHref } from "@/lib/spanish"
+import catalog from "@/messages/full/product-pages.es.json"
 import type { Metadata } from "next"
 import { positioningSocialMetadata } from "@/lib/positioning-metadata"
 import { useTranslations } from "next-intl"
@@ -19,6 +23,8 @@ export async function generateMetadata(
 }
 
 export default function IndustriesPage() {
+  const { tr, locale } = useSpanish(catalog)
+
   const t = useTranslations("pages.industries")
   const fits = t.raw("fitCards") as { title: string; body: string }[]
 
@@ -50,21 +56,20 @@ export default function IndustriesPage() {
 
           <Reveal className="mt-12">
             <Link
-              href="/industries/law-firms"
+              href={localeHref("/industries/law-firms", locale)}
               className="group flex flex-col gap-4 rounded-2xl border border-border bg-card p-8 transition-colors hover:border-gold sm:flex-row sm:items-center sm:justify-between lg:p-10"
             >
               <div>
-                <span className="eyebrow text-gold">Dedicated Solution</span>
+                <span className="eyebrow text-gold">{tr("Dedicated Solution")}</span>
                 <h3 className="mt-3 text-2xl font-extrabold tracking-tight">
-                  CAROS for Law Firms &amp; Estate Planning
+                  {tr("CAROS for Law Firms & Estate Planning")}
                 </h3>
                 <p className="mt-2 max-w-2xl leading-relaxed text-muted-foreground">
-                  A tailored approach for estate-planning and trusts-and-estates practices — from prospective-client
-                  intake through engagement and long-term relationships.
+                  {tr("A tailored approach for estate-planning and trusts-and-estates practices — from prospective-client intake through engagement and long-term relationships.")}
                 </p>
               </div>
               <span className="inline-flex items-center gap-2 whitespace-nowrap font-semibold text-gold">
-                Explore
+                {tr("Explore")}
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </span>
             </Link>
@@ -72,19 +77,18 @@ export default function IndustriesPage() {
 
           <Reveal className="mt-6">
             <Link
-              href="/industries/religious-institutions"
+              href={localeHref("/industries/religious-institutions", locale)}
               className="group flex flex-col gap-4 rounded-2xl border border-border bg-card p-8 transition-colors hover:border-gold sm:flex-row sm:items-center sm:justify-between lg:p-10"
             >
               <div>
-                <span className="eyebrow text-gold">Dedicated Solution</span>
-                <h3 className="mt-3 text-2xl font-extrabold tracking-tight">CAROS for Religious Institutions</h3>
+                <span className="eyebrow text-gold">{tr("Dedicated Solution")}</span>
+                <h3 className="mt-3 text-2xl font-extrabold tracking-tight">{tr("CAROS for Religious Institutions")}</h3>
                 <p className="mt-2 max-w-2xl leading-relaxed text-muted-foreground">
-                  Built for churches, parishes, synagogues, mosques, temples, and ministries — from visitor
-                  welcome and follow-up to events, volunteers, and community engagement.
+                  {tr("Built for churches, parishes, synagogues, mosques, temples, and ministries — from visitor welcome and follow-up to events, volunteers, and community engagement.")}
                 </p>
               </div>
               <span className="inline-flex items-center gap-2 whitespace-nowrap font-semibold text-gold">
-                Explore
+                {tr("Explore")}
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </span>
             </Link>
@@ -92,19 +96,18 @@ export default function IndustriesPage() {
 
           <Reveal className="mt-6">
             <Link
-              href="/industries/creators-influencers"
+              href={localeHref("/industries/creators-influencers", locale)}
               className="group flex flex-col gap-4 rounded-2xl border border-border bg-card p-8 transition-colors hover:border-gold sm:flex-row sm:items-center sm:justify-between lg:p-10"
             >
               <div>
-                <span className="eyebrow text-gold">Dedicated Solution</span>
-                <h3 className="mt-3 text-2xl font-extrabold tracking-tight">CAROS for Creators &amp; Influencers</h3>
+                <span className="eyebrow text-gold">{tr("Dedicated Solution")}</span>
+                <h3 className="mt-3 text-2xl font-extrabold tracking-tight">{tr("CAROS for Creators & Influencers")}</h3>
                 <p className="mt-2 max-w-2xl leading-relaxed text-muted-foreground">
-                  Built for creators, influencers, podcasters, and personal brands — from audience capture and
-                  funnels to partnerships, courses, memberships, and revenue insights.
+                  {tr("Built for creators, influencers, podcasters, and personal brands — from audience capture and funnels to partnerships, courses, memberships, and revenue insights.")}
                 </p>
               </div>
               <span className="inline-flex items-center gap-2 whitespace-nowrap font-semibold text-gold">
-                Explore
+                {tr("Explore")}
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </span>
             </Link>
@@ -112,19 +115,18 @@ export default function IndustriesPage() {
 
           <Reveal className="mt-6">
             <Link
-              href="/industries/nonprofits"
+              href={localeHref("/industries/nonprofits", locale)}
               className="group flex flex-col gap-4 rounded-2xl border border-border bg-card p-8 transition-colors hover:border-gold sm:flex-row sm:items-center sm:justify-between lg:p-10"
             >
               <div>
-                <span className="eyebrow text-gold">Dedicated Solution</span>
-                <h3 className="mt-3 text-2xl font-extrabold tracking-tight">CAROS for Nonprofits</h3>
+                <span className="eyebrow text-gold">{tr("Dedicated Solution")}</span>
+                <h3 className="mt-3 text-2xl font-extrabold tracking-tight">{tr("CAROS for Nonprofits")}</h3>
                 <p className="mt-2 max-w-2xl leading-relaxed text-muted-foreground">
-                  Built for nonprofits, charities, and community organizations — supporters, volunteers,
-                  fundraising workflows, programs, and outreach coordinated in one place.
+                  {tr("Built for nonprofits, charities, and community organizations — supporters, volunteers, fundraising workflows, programs, and outreach coordinated in one place.")}
                 </p>
               </div>
               <span className="inline-flex items-center gap-2 whitespace-nowrap font-semibold text-gold">
-                Explore
+                {tr("Explore")}
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </span>
             </Link>

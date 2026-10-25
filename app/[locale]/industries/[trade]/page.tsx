@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { getIndustry, INDUSTRY_SLUGS } from "@/lib/industries"
+import { INDUSTRY_SLUGS } from "@/lib/industries"
+import { getLocalizedIndustry } from "@/lib/localized-industry"
 import { IndustryHero } from "@/components/caros/industry/hero"
 import {
   ProblemSection,
@@ -25,18 +26,18 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ trade: string }>
+  params: Promise<{ trade: string; locale: string }>
 }): Promise<Metadata> {
-  const { trade } = await params
-  const industry = getIndustry(trade)
+  const { trade, locale } = await params
+  const industry = getLocalizedIndustry(trade, locale)
   if (!industry) return {}
-  const path = `/industries/${industry.slug}`
+  const path = `/${locale}/industries/${industry.slug}`
   const url = `${SITE_URL}${path}`
   return {
     title: industry.metaTitle,
     description: industry.metaDescription,
     keywords: industry.keywords,
-    alternates: { canonical: path },
+    alternates: { canonical: path, languages: { en: `/en/industries/${industry.slug}`, es: `/es/industries/${industry.slug}` } },
     openGraph: {
       type: "website",
       url,
@@ -51,24 +52,24 @@ export async function generateMetadata({
   }
 }
 
-export default async function IndustryPage({ params }: { params: Promise<{ trade: string }> }) {
-  const { trade } = await params
-  const industry = getIndustry(trade)
+export default async function IndustryPage({ params }: { params: Promise<{ trade: string; locale: string }> }) {
+  const { trade, locale } = await params
+  const industry = getLocalizedIndustry(trade, locale)
   if (!industry) notFound()
 
-  const path = `/industries/${industry.slug}`
+  const path = `/${locale}/industries/${industry.slug}`
   const url = `${SITE_URL}${path}`
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: `CAROS for ${industry.name}`,
-    serviceType: `Revenue operating system for ${industry.name.toLowerCase()} businesses`,
+    name: locale === "es" ? `CAROS para ${industry.name}` : `CAROS for ${industry.name}`,
+    serviceType: locale === "es" ? `Sistema operativo de ingresos para ${industry.name.toLowerCase()}` : `Revenue operating system for ${industry.name.toLowerCase()} businesses`,
     description: industry.metaDescription,
     url,
     provider: { "@type": "Organization", name: "CAROS", url: SITE_URL },
     areaServed: { "@type": "Country", name: "United States" },
-    audience: { "@type": "BusinessAudience", name: `${industry.name} businesses` },
+    audience: { "@type": "BusinessAudience", name: locale === "es" ? industry.name : `${industry.name} businesses` },
   }
 
   const faqJsonLd = {
@@ -85,8 +86,8 @@ export default async function IndustryPage({ params }: { params: Promise<{ trade
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-      { "@type": "ListItem", position: 2, name: "Industries", item: `${SITE_URL}/industries` },
+      { "@type": "ListItem", position: 1, name: locale === "es" ? "Inicio" : "Home", item: `${SITE_URL}/${locale}` },
+      { "@type": "ListItem", position: 2, name: locale === "es" ? "Sectores" : "Industries", item: `${SITE_URL}/${locale}/industries` },
       { "@type": "ListItem", position: 3, name: industry.name, item: url },
     ],
   }

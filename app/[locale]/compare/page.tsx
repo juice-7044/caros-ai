@@ -1,3 +1,9 @@
+import { spanishTranslator } from "@/lib/spanish"
+import { positioningSocialMetadata } from "@/lib/positioning-metadata"
+
+import { useSpanish } from "@/lib/use-spanish"
+import { localeHref } from "@/lib/spanish"
+import catalog from "@/messages/full/product-pages.es.json"
 import type { Metadata } from "next"
 import { useTranslations } from "next-intl"
 import { Check, X, ArrowDown } from "lucide-react"
@@ -6,11 +12,12 @@ import { Reveal } from "@/components/caros/reveal"
 import { ComparisonTable } from "@/components/caros/compare/comparison-table"
 import { AUDIT_URL, AUDIT_HREF } from "@/lib/site"
 
-export const metadata: Metadata = {
-  title: "Compare CAROS | Revenue Operating System vs. Lead & Communication Tools",
-  description:
-    "How CAROS compares to LeadTruffle, CHIIRP, Hatch, Podium and Netic. Lead response is part of CAROS — revenue operations is the bigger story. An honest look at scope, not a checkbox contest.",
-  alternates: { canonical: "/compare" },
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  const tr = spanishTranslator(locale, catalog)
+  const title = tr("Compare CAROS | Revenue Operating System vs. Lead & Communication Tools")
+  const description = tr("How CAROS compares to LeadTruffle, CHIIRP, Hatch, Podium and Netic. Lead response is part of CAROS — revenue operations is the bigger story. An honest look at scope, not a checkbox contest.")
+  return { title, description, alternates: { canonical: `/${locale}/compare` }, ...positioningSocialMetadata(description, locale, title) }
 }
 
 const FLOW_STEPS = [
@@ -22,6 +29,8 @@ const FLOW_STEPS = [
 ]
 
 export default function ComparePage() {
+  const { tr, localize, locale } = useSpanish(catalog)
+
   const t = useTranslations("pages.compare")
 
   return (
@@ -54,8 +63,8 @@ export default function ComparePage() {
             {t("body")}
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-            <AuditButton label="Get My Free Revenue Audit" href={AUDIT_URL} external />
-            <AuditButton label="Book a Demo" href={AUDIT_HREF} variant="outline-light" />
+            <AuditButton label={tr("Get My Free Revenue Audit")} href={AUDIT_URL} external />
+            <AuditButton label={tr("Book a Demo")} href={AUDIT_HREF} variant="outline-light" />
           </div>
         </div>
       </section>
@@ -65,8 +74,7 @@ export default function ComparePage() {
         <div className="mx-auto w-full max-w-[1200px] px-6 py-24 lg:px-12 lg:py-32">
           <Reveal>
             <p className="max-w-3xl text-pretty text-lg leading-relaxed text-muted-foreground">
-              Some of the platforms below are excellent at specific parts of the revenue lifecycle. We think that is a
-              good thing. This comparison is about scope, not pretending every product solves the same problem.
+              {tr("Some of the platforms below are excellent at specific parts of the revenue lifecycle. We think that is a good thing. This comparison is about scope, not pretending every product solves the same problem.")}
             </p>
           </Reveal>
 
@@ -76,13 +84,13 @@ export default function ComparePage() {
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gold/15 text-gold">
                 <Check className="h-5 w-5" strokeWidth={2.5} aria-hidden="true" />
               </span>
-              <span className="text-sm text-foreground">clearly offered as a core capability</span>
+              <span className="text-sm text-foreground">{tr("clearly offered as a core capability")}</span>
             </div>
             <div className="flex items-center gap-3">
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground/45">
                 <X className="h-5 w-5" strokeWidth={2} aria-hidden="true" />
               </span>
-              <span className="text-sm text-foreground">not currently positioned as a core capability</span>
+              <span className="text-sm text-foreground">{tr("not currently positioned as a core capability")}</span>
             </div>
           </Reveal>
 
@@ -92,9 +100,7 @@ export default function ComparePage() {
 
           <Reveal>
             <p className="mt-6 max-w-3xl text-pretty text-sm leading-relaxed text-muted-foreground">
-              Features and product offerings change. This comparison reflects publicly advertised core capabilities and
-              is intended to show each platform&apos;s primary scope rather than every possible configuration,
-              integration or add-on. Tap any capability marked with an info icon for a short explanation.
+              {tr("Features and product offerings change. This comparison reflects publicly advertised core capabilities and is intended to show each platform's primary scope rather than every possible configuration, integration or add-on. Tap any capability marked with an info icon for a short explanation.")}
             </p>
           </Reveal>
         </div>
@@ -104,20 +110,18 @@ export default function ComparePage() {
       <section className="border-t border-ink-border bg-ink text-ink-foreground">
         <div className="mx-auto w-full max-w-[1000px] px-6 py-24 lg:px-12 lg:py-32">
           <Reveal>
-            <Eyebrow tone="gold">The CAROS Difference</Eyebrow>
+            <Eyebrow tone="gold">{tr("The CAROS Difference")}</Eyebrow>
             <h2 className="mt-6 text-balance text-4xl font-extrabold leading-[1.1] tracking-tight lg:text-5xl">
-              The difference is what happens{" "}
-              <span className="font-serif font-normal italic text-gold-gradient">after the data appears.</span>
+              {tr("The difference is what happens")}{" "}
+              <span className="font-serif font-normal italic text-gold-gradient">{tr("after the data appears.")}</span>
             </h2>
             <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-ink-muted">
-              Many tools can collect information, trigger messages or automate individual parts of the customer journey.
-              CAROS is built around another question: what does the business need to do next to protect or create
-              revenue?
+              {tr("Many tools can collect information, trigger messages or automate individual parts of the customer journey. CAROS is built around another question: what does the business need to do next to protect or create revenue?")}
             </p>
           </Reveal>
 
           <div className="mt-14 flex flex-col items-center">
-            {FLOW_STEPS.map((step, i) => (
+            {localize(FLOW_STEPS).map((step, i) => (
               <Reveal key={step} className="flex w-full flex-col items-center">
                 <div
                   className={
@@ -141,23 +145,20 @@ export default function ComparePage() {
       <section className="border-t border-border bg-background">
         <div className="mx-auto w-full max-w-[1000px] px-6 py-24 lg:px-12 lg:py-32">
           <Reveal>
-            <Eyebrow>Automation + Judgment</Eyebrow>
+            <Eyebrow>{tr("Automation + Judgment")}</Eyebrow>
             <h2 className="mt-6 text-balance text-4xl font-extrabold leading-[1.1] tracking-tight lg:text-5xl">
-              Automation where it makes sense.{" "}
-              <span className="font-serif font-normal italic text-gold-gradient">Humans where they matter.</span>
+              {tr("Automation where it makes sense.")}{" "}
+              <span className="font-serif font-normal italic text-gold-gradient">{tr("Humans where they matter.")}</span>
             </h2>
             <div className="mt-8 max-w-2xl space-y-5 text-pretty text-lg leading-relaxed text-muted-foreground">
               <p>
-                CAROS does not assume every customer interaction, exception or revenue decision should be handed to AI.
-                Predictable workflows can be automated, while people handle relationships, judgment calls, escalations
-                and the complex situations that actually decide whether revenue is won or lost.
+                {tr("CAROS does not assume every customer interaction, exception or revenue decision should be handed to AI. Predictable workflows can be automated, while people handle relationships, judgment calls, escalations and the complex situations that actually decide whether revenue is won or lost.")}
               </p>
               <p>
-                That includes a client-branded human answering option — real people representing your business, backed
-                by CAROS workflows and technology — so the experience stays personal where it counts.
+                {tr("That includes a client-branded human answering option — real people representing your business, backed by CAROS workflows and technology — so the experience stays personal where it counts.")}
               </p>
               <p className="border-l-2 border-gold pl-5 font-serif text-xl italic leading-snug text-gold-gradient">
-                Technology should increase human capacity, not force every business into an AI-only customer experience.
+                {tr("Technology should increase human capacity, not force every business into an AI-only customer experience.")}
               </p>
             </div>
           </Reveal>
@@ -166,14 +167,13 @@ export default function ComparePage() {
           <Reveal className="mt-14">
             <div className="rounded-2xl border border-border bg-muted/40 p-8 lg:p-10">
               <h3 className="text-balance text-2xl font-bold tracking-tight">
-                Already using ServiceTitan, Jobber or Housecall Pro?
+                {tr("Already using ServiceTitan, Jobber or Housecall Pro?")}
               </h3>
               <p className="mt-4 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
-                Good. Those systems can remain part of your operation. See how CAROS works with the tools you already
-                use.
+                {tr("Good. Those systems can remain part of your operation. See how CAROS works with the tools you already use.")}
               </p>
               <div className="mt-8">
-                <AuditButton label="Read the Existing Tools FAQ" href="/faq" variant="outline-light" />
+                <AuditButton label={tr("Read the Existing Tools FAQ")} href={localeHref("/faq", locale)} variant="outline-light" />
               </div>
             </div>
           </Reveal>
@@ -185,16 +185,15 @@ export default function ComparePage() {
         <div className="mx-auto w-full max-w-[900px] px-6 py-24 text-center lg:py-32">
           <Reveal className="flex flex-col items-center">
             <h2 className="text-balance text-4xl font-extrabold leading-[1.1] tracking-tight lg:text-5xl">
-              Find out where your revenue is{" "}
-              <span className="font-serif font-normal italic text-gold-gradient">actually getting stuck.</span>
+              {tr("Find out where your revenue is")}{" "}
+              <span className="font-serif font-normal italic text-gold-gradient">{tr("actually getting stuck.")}</span>
             </h2>
             <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-              Start with the complimentary CAROS Revenue Audit and see the opportunities before deciding whether you
-              need another system.
+              {tr("Start with the complimentary CAROS Revenue Audit and see the opportunities before deciding whether you need another system.")}
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <AuditButton label="Get My Free Revenue Audit" href={AUDIT_URL} external />
-              <AuditButton label="Book a Demo" href={AUDIT_HREF} variant="outline-light" />
+              <AuditButton label={tr("Get My Free Revenue Audit")} href={AUDIT_URL} external />
+              <AuditButton label={tr("Book a Demo")} href={AUDIT_HREF} variant="outline-light" />
             </div>
           </Reveal>
         </div>

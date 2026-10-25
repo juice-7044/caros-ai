@@ -1,5 +1,8 @@
 "use client"
 
+import { useSpanish } from "@/lib/use-spanish"
+import catalog from "@/messages/full/product-pages.es.json"
+
 import { useMemo, useState } from "react"
 import { useTranslations } from "next-intl"
 import { Eyebrow, AuditButton } from "@/components/caros/ui-bits"
@@ -18,6 +21,8 @@ const OPTIONS: { value: Answer; label: string }[] = [
 ]
 
 export function DiagnosticQuestions() {
+  const { tr, localize } = useSpanish(catalog)
+
   const t = useTranslations("pages.diagnostic")
   const questions = t.raw("questions") as string[]
   const [answers, setAnswers] = useState<Record<number, Answer>>({})
@@ -33,31 +38,30 @@ export function DiagnosticQuestions() {
     if (leaks <= 2)
       return {
         tone: "calm" as const,
-        text: "You're doing better than most. But there's always a leak somewhere.",
+        text: tr("You're doing better than most. But there's always a leak somewhere."),
       }
     if (leaks <= 5)
       return {
         tone: "warn" as const,
-        text: "You're in the danger zone. Most owners we audit find $15K–$40K in monthly revenue at risk.",
+        text: tr("You're in the danger zone. Most owners we audit find $15K–$40K in monthly revenue at risk."),
       }
     return {
       tone: "alarm" as const,
-      text: "Your revenue is leaking badly. Let's find out exactly where.",
+      text: tr("Your revenue is leaking badly. Let's find out exactly where."),
     }
-  }, [answered, leaks])
+  }, [answered, leaks, tr])
 
   return (
     <section className="bg-background py-28 lg:py-40">
       <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
         <div className="max-w-3xl">
-          <Eyebrow>The Diagnostic</Eyebrow>
+          <Eyebrow>{tr("The Diagnostic")}</Eyebrow>
           <h2 className="mt-6 text-balance text-[clamp(2rem,4.5vw,3.5rem)] font-display leading-[1] tracking-tight">
             {t("questionTitle")}{" "}
             <span className="font-serif font-normal italic text-gold-gradient">{t("questionTitleAccent")}</span>
           </h2>
           <p className="mt-6 text-lg text-muted-foreground">
-            Answer honestly. Every &ldquo;no&rdquo; or &ldquo;not sure&rdquo; is a place your revenue could be
-            slipping through.
+            {tr("Answer honestly. Every “no” or “not sure” is a place your revenue could be slipping through.")}
           </p>
         </div>
 
@@ -79,8 +83,8 @@ export function DiagnosticQuestions() {
                   </span>
                   <p className="text-pretty text-lg font-semibold leading-snug text-foreground">{q}</p>
                 </div>
-                <div className="mt-6 flex gap-2" role="group" aria-label={`Answer for question ${i + 1}`}>
-                  {OPTIONS.map((opt) => {
+                <div className="mt-6 flex gap-2" role="group" aria-label={tr("Answer for question {number}", { number: i + 1 })}>
+                  {localize(OPTIONS).map((opt) => {
                     const selected = current === opt.value
                     return (
                       <button
@@ -122,14 +126,14 @@ export function DiagnosticQuestions() {
             <div className="max-w-2xl">
               <p className="eyebrow text-muted-foreground">
                 {answered === 0
-                  ? "Your result appears here"
-                  : `${leaks} potential ${leaks === 1 ? "leak" : "leaks"} · ${answered}/8 answered`}
+                  ? tr("Your result appears here")
+                  : tr(leaks === 1 ? "{leaks} potential leak · {answered}/8 answered" : "{leaks} potential leaks · {answered}/8 answered", { leaks, answered })}
               </p>
               <p className="mt-3 text-balance text-2xl font-bold leading-tight tracking-tight lg:text-3xl">
-                {result ? result.text : "Start answering above to see where your revenue may be leaking."}
+                {result ? result.text : tr("Start answering above to see where your revenue may be leaking.")}
               </p>
             </div>
-            <AuditButton className="shrink-0" label="Book Your Free Revenue Audit" />
+            <AuditButton className="shrink-0" label={tr("Book Your Free Revenue Audit")} />
           </div>
         </div>
       </div>

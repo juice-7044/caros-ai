@@ -24,7 +24,7 @@
     "menu": "Menú",
     "toggleMenu": "Alternar menú",
     "businessInsights": "Información empresarial",
-    "demo": "Demo",
+    "demo": "Demostración",
     "freeAudit": "Auditoría empresarial gratuita",
     "whyCaros": "Por qué CAROS",
     "affiliates": "Programa de afiliados"
@@ -132,7 +132,7 @@
           "value": "$750"
         },
         {
-          "label": "Sponsorship",
+          "label": "Patrocinios",
           "value": "$750"
         }
       ],
@@ -163,33 +163,33 @@
         {
           "title": "Pagaste por ese cliente potencial. No lo pierdas porque estabas ocupado.",
           "items": [
-            "Estimate follow-up",
-            "Missed-call text back",
-            "Appointment reminders",
-            "Lead nurturing",
-            "Reactivation campaigns"
+            "Seguimiento de presupuestos",
+            "Respuesta por SMS a llamadas perdidas",
+            "Recordatorios de citas",
+            "Seguimiento de clientes potenciales",
+            "Campañas de reactivación"
           ]
         },
         {
           "title": "Tu cliente más rentable puede ser uno que ya pagaste por adquirir.",
           "items": [
-            "Review requests",
-            "Referral campaigns",
-            "Repeat-service reminders",
-            "Dormant customer win-back",
-            "Membership fulfillment"
+            "Solicitudes de reseñas",
+            "Campañas de recomendaciones",
+            "Recordatorios de servicios recurrentes",
+            "Recuperación de clientes inactivos",
+            "Gestión de membresías"
           ]
         }
       ]
     },
     "humanAnswering": {
       "checklist": [
-        "Live human answering",
-        "Answered under your brand",
-        "Lead info captured into CAROS",
-        "Booking workflows",
-        "SMS follow-up",
-        "After-hours options"
+        "Atención humana en vivo",
+        "Atención bajo tu marca",
+        "Datos de clientes potenciales registrados en CAROS",
+        "Flujos de reserva de citas",
+        "Seguimiento por SMS",
+        "Opciones fuera del horario habitual"
       ],
       "closing": "Automatización cuando tiene sentido. Personas cuando importan.",
       "headline": "Tus clientes llamaron a un negocio. Permíteles hablar con una persona."
@@ -202,14 +202,14 @@
       "oneView": "Una vista de ingresos",
       "compatible": "Funciona con herramientas compatibles de tu ecosistema actual.",
       "existingTools": [
-        "Website",
-        "Phone",
+        "Sitio web",
+        "Teléfono",
         "CRM",
-        "Calendar",
-        "Scheduling",
-        "Advertising",
-        "Customer Communication",
-        "Other compatible systems"
+        "Calendario",
+        "Programación de citas",
+        "Publicidad",
+        "Comunicación con clientes",
+        "Otros sistemas compatibles"
       ]
     },
     "lifecycle": {
@@ -240,44 +240,44 @@
     "moneyJourney": {
       "flow": [
         {
-          "label": "Lead",
-          "detail": "google_ads / [your-industry]"
+          "label": "Cliente potencial",
+          "detail": "google_ads / [tu-sector]"
         },
         {
-          "label": "CAROS Responds",
-          "detail": "human operator + auto-SMS < 60s"
+          "label": "CAROS responde",
+          "detail": "operador humano + SMS automático < 60s"
         },
         {
-          "label": "Conversation",
-          "detail": "qualified, need + address captured"
+          "label": "Conversación",
+          "detail": "contacto calificado, necesidad y dirección registradas"
         },
         {
-          "label": "Appointment",
-          "detail": "booked Tue 9:00a"
+          "label": "Cita",
+          "detail": "reservada para el martes a las 9:00 a. m."
         },
         {
-          "label": "Estimate Follow-Up",
-          "detail": "3 nudges, e-sign sent"
+          "label": "Seguimiento del presupuesto",
+          "detail": "3 recordatorios, firma electrónica enviada"
         },
         {
-          "label": "Job Closes",
-          "detail": "$4,200 approved"
+          "label": "Trabajo confirmado",
+          "detail": "$4,200 aprobados"
         },
         {
-          "label": "Customer Nurtured",
-          "detail": "post-job check-in sequence"
+          "label": "Seguimiento del cliente",
+          "detail": "secuencia de seguimiento posterior al trabajo"
         },
         {
-          "label": "Review Requested",
-          "detail": "5★ Google review"
+          "label": "Reseña solicitada",
+          "detail": "reseña de 5★ en Google"
         },
         {
-          "label": "Customer Reactivated",
-          "detail": "gutter add-on, 4 mo later"
+          "label": "Cliente reactivado",
+          "detail": "servicio adicional de canaletas, 4 meses después"
         },
         {
           "label": "Ingresos atribuidos",
-          "detail": "→ google_ads / [your-industry]"
+          "detail": "→ google_ads / [tu-sector]"
         }
       ]
     },
@@ -428,9 +428,9 @@
       "story": "Nuestra historia",
       "storyTitle": "Todo comenzó con una pregunta sencilla y frustrante.",
       "beliefs": "Lo que creemos",
-      "beliefsTitle": "Three beliefs that shaped everything.",
+      "beliefsTitle": "Tres convicciones que dieron forma a todo.",
       "leadership": "Liderazgo",
-      "leadershipTitle": "The people behind the system."
+      "leadershipTitle": "Las personas detrás del sistema."
     },
     "marketing": {
       "eyebrow": "ROI de marketing",

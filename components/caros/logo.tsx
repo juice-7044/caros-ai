@@ -1,4 +1,4 @@
-import Link from "next/link"
+import { Link } from "@/i18n/routing"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 
@@ -28,7 +28,7 @@ export function Logo({
   if (href === null) return mark
 
   return (
-    <Link href={href} aria-label="CAROS home" className="inline-flex">
+    <Link href={href} aria-label="CAROS" className="inline-flex">
       {mark}
     </Link>
   )

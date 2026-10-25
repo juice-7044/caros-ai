@@ -17,6 +17,10 @@ export async function generateMetadata(
   const description = t("description")
   return {
     description,
+    ...(locale === "es" ? {
+      title: { absolute: "CAROS — Primero los ingresos. Todo lo demás está a su servicio.", template: "%s | CAROS" },
+      keywords: ["gestión de relaciones", "operaciones de ingresos", "captación de clientes", "seguimiento de consultas", "automatización de procesos", "atribución de marketing", "gestión de organizaciones", "inteligencia de ingresos"],
+    } : {}),
     ...positioningSocialMetadata(description, locale),
   }
 }

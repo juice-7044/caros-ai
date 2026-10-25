@@ -2,6 +2,9 @@
 
 import { useEffect, useState } from "react"
 import { useTranslations } from "next-intl"
+import { useSpanish } from "@/lib/use-spanish"
+import { localeHref } from "@/lib/spanish"
+import spanish from "@/messages/full/shared.es.json"
 import { Link, usePathname } from "@/i18n/routing"
 import { LanguageSwitcher } from "@/components/LanguageSwitcher"
 import { Menu, X, ChevronDown } from "lucide-react"
@@ -11,6 +14,7 @@ import { INDUSTRY_NAV } from "@/lib/industries"
 import { Logo } from "./logo"
 
 export function SiteNav() {
+  const { tr, locale } = useSpanish(spanish)
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const [industriesOpen, setIndustriesOpen] = useState(false)
@@ -114,7 +118,7 @@ export function SiteNav() {
                                   indActive && "bg-secondary text-foreground",
                                 )}
                               >
-                                {ind.name}
+                                {tr(ind.name)}
                               </Link>
                             )
                           })}
@@ -135,7 +139,7 @@ export function SiteNav() {
                 return (
                   <a
                     key={link.href}
-                    href={link.href}
+                    href={localeHref(link.href, locale)}
                     className="group relative text-sm text-foreground/70 transition-colors duration-300 hover:text-foreground"
                   >
                     {navLabels[link.href] ?? t(link.labelKey)}
@@ -225,7 +229,7 @@ export function SiteNav() {
                         onClick={() => setOpen(false)}
                         className="text-sm text-foreground/60 transition-colors hover:text-gold"
                       >
-                        {ind.name}
+                        {tr(ind.name)}
                       </Link>
                     ))}
                   </div>
@@ -236,7 +240,7 @@ export function SiteNav() {
               return (
                 <a
                   key={link.href}
-                  href={link.href}
+                  href={localeHref(link.href, locale)}
                   onClick={() => setOpen(false)}
                   className={cn(
                     "font-display text-4xl text-foreground transition-all duration-500 hover:text-gold",
@@ -272,10 +276,10 @@ export function SiteNav() {
             )}
             style={{ transitionDelay: open ? `${NAV_LINKS.length * 60}ms` : "0ms" }}
           >
-            {DIAGNOSTIC_LABEL}
+            {tr(DIAGNOSTIC_LABEL)}
           </Link>
           <div className="mt-4 border-t border-foreground/10 pt-5">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">Language</p>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">{tr("Language")}</p>
             <LanguageSwitcher mobile />
           </div>
         </div>

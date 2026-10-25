@@ -1,12 +1,15 @@
+import spanishCatalog from "@/messages/full/home-general.es.json"
+import { useSpanish } from "@/lib/use-spanish"
 import { useTranslations } from "next-intl"
 import { Reveal } from "@/components/caros/reveal"
 import { Eyebrow } from "@/components/caros/ui-bits"
 import { INDUSTRIES } from "@/lib/site"
 
 export function Industries() {
+  const { localize } = useSpanish(spanishCatalog)
   const t = useTranslations("HomePage.industries")
-  const rowA = [...INDUSTRIES, ...INDUSTRIES]
-  const rowB = [...INDUSTRIES.slice().reverse(), ...INDUSTRIES.slice().reverse()]
+  const rowA = [...localize(INDUSTRIES), ...localize(INDUSTRIES)]
+  const rowB = [...localize(INDUSTRIES).slice().reverse(), ...localize(INDUSTRIES).slice().reverse()]
 
   return (
     <section className="relative overflow-hidden bg-background py-28 lg:py-40">

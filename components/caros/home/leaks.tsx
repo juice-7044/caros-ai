@@ -1,8 +1,11 @@
+import spanishCatalog from "@/messages/full/home-general.es.json"
+import { useSpanish } from "@/lib/use-spanish"
 import { Reveal } from "@/components/caros/reveal"
 import { useTranslations } from "next-intl"
 import { Eyebrow } from "@/components/caros/ui-bits"
 
 export function Leaks() {
+  const { tr } = useSpanish(spanishCatalog)
   const t = useTranslations("HomePage.leaks")
   const spend = t.raw("spend") as { label: string; value: string }[]
   const questions = t.raw("questions") as string[]
@@ -20,7 +23,7 @@ export function Leaks() {
         <div className="mt-16 grid gap-6 lg:grid-cols-2">
           <Reveal className="rounded-2xl border border-border bg-card p-8 lg:p-10">
             <p className="text-4xl font-extrabold tracking-tight">$7,500</p>
-            <p className="mt-1 text-sm text-muted-foreground">spent on marketing last month</p>
+            <p className="mt-1 text-sm text-muted-foreground">{tr("spent on marketing last month")}</p>
             <ul className="mt-8 space-y-3">
               {spend.map((row) => (
                 <li key={row.label} className="flex items-center justify-between border-b border-border/70 pb-3 last:border-0">
@@ -33,10 +36,9 @@ export function Leaks() {
 
           <Reveal delay={80} className="flex flex-col justify-center rounded-2xl border border-border bg-foreground p-8 text-background lg:p-10">
             <p className="text-[clamp(3rem,8vw,5rem)] font-extrabold leading-none">86</p>
-            <p className="mt-2 text-lg text-background/70">leads generated</p>
+            <p className="mt-2 text-lg text-background/70">{tr("leads generated")}</p>
             <p className="mt-8 text-background/60">
-              That&apos;s the number every dashboard shows you. It&apos;s also where most owners stop knowing anything at
-              all.
+              {tr("That's the number every dashboard shows you. It's also where most owners stop knowing anything at all.")}
             </p>
           </Reveal>
         </div>
@@ -53,7 +55,7 @@ export function Leaks() {
 
         <Reveal delay={120}>
           <p className="mt-20 max-w-4xl text-balance text-[clamp(1.75rem,4vw,3rem)] font-extrabold leading-tight tracking-tight">
-            If you can&apos;t answer those questions, you don&apos;t actually know how your marketing is performing.
+            {tr("If you can't answer those questions, you don't actually know how your marketing is performing.")}
           </p>
         </Reveal>
       </div>

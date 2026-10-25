@@ -1,5 +1,8 @@
 "use client"
 
+import spanishCatalog from "@/messages/full/home-general.es.json"
+import { useSpanish } from "@/lib/use-spanish"
+
 import { useMemo, useState } from "react"
 import { useTranslations } from "next-intl"
 import { AuditButton } from "./ui-bits"
@@ -50,6 +53,7 @@ function Field({
 }
 
 export function RoiCalculator({ className }: { className?: string }) {
+  const { tr } = useSpanish(spanishCatalog)
   const t = useTranslations("calculator")
   const [jobValue, setJobValue] = useState(3200)
   const [missedCalls, setMissedCalls] = useState(24)
@@ -82,7 +86,7 @@ export function RoiCalculator({ className }: { className?: string }) {
           <p className="eyebrow text-ink-muted">{t("atRisk")}</p>
           <p className="mt-3 text-[clamp(2.5rem,6vw,4rem)] font-extrabold leading-none text-gold-gradient">
             {currency(atRisk)}
-            <span className="text-2xl text-ink-muted">/mo</span>
+            <span className="text-2xl text-ink-muted">{tr("/mo")}</span>
           </p>
           <p className="mt-4 text-sm leading-relaxed text-ink-muted">
             {t("atRiskDescription")}

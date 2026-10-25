@@ -1,3 +1,5 @@
+import spanishCatalog from "@/messages/full/home-general.es.json"
+import { useSpanish } from "@/lib/use-spanish"
 import { cn } from "@/lib/utils"
 
 type Row = {
@@ -18,13 +20,14 @@ const rows: Row[] = [
 ]
 
 export function AttributionTable({ className }: { className?: string }) {
+  const { tr, localize } = useSpanish(spanishCatalog)
   return (
     <div className={cn("overflow-hidden rounded-2xl border border-border bg-card", className)}>
       <div className="overflow-x-auto">
         <table className="w-full min-w-[640px] text-left">
           <thead>
             <tr className="border-b border-border">
-              {["Source", "Spend", "Leads", "Booked Jobs", "Revenue", "ROAS"].map((h, i) => (
+              {localize(["Source", "Spend", "Leads", "Booked Jobs", "Revenue", "ROAS"]).map((h, i) => (
                 <th
                   key={h}
                   className={cn(
@@ -38,7 +41,7 @@ export function AttributionTable({ className }: { className?: string }) {
             </tr>
           </thead>
           <tbody>
-            {rows.map((row) => (
+            {localize(rows).map((row) => (
               <tr
                 key={row.source}
                 className={cn(
@@ -51,7 +54,7 @@ export function AttributionTable({ className }: { className?: string }) {
                     {row.source}
                     {row.best ? (
                       <span className="rounded-full bg-gold/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gold">
-                        Best return
+                        {tr("Best return")}
                       </span>
                     ) : null}
                   </span>

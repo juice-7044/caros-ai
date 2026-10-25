@@ -2,10 +2,13 @@
 
 import { useEffect, useRef, useState, useSyncExternalStore, type FormEvent } from 'react'
 import { MessageCircle, RotateCcw, Send, Square } from 'lucide-react'
+import { useSpanish } from '@/lib/use-spanish'
+import spanish from '@/messages/full/shared.es.json'
 import { ChatSessionController } from '@/lib/caros-chat-session'
 import styles from './chat-widget.module.css'
 
 export function TextChat({ controller }: { controller: ChatSessionController }) {
+  const { tr } = useSpanish(spanish)
   const chat = useSyncExternalStore(controller.subscribe, controller.getSnapshot, controller.getServerSnapshot)
   const [draft, setDraft] = useState('')
   const inputRef = useRef<HTMLTextAreaElement>(null)
@@ -28,42 +31,42 @@ export function TextChat({ controller }: { controller: ChatSessionController }) 
   return (
     <div className={styles.textChat} data-testid="caros-text-chat">
       <div className={styles.chatToolbar}>
-        <span><MessageCircle size={13} aria-hidden="true" />Text chat · AI assistant</span>
-        <button type="button" className={styles.newChat} onClick={() => { controller.reset(); setDraft(''); inputRef.current?.focus() }} disabled={!chat.messages.length} aria-label="Start a new text conversation"><RotateCcw size={12} />New chat</button>
+        <span><MessageCircle size={13} aria-hidden="true" />{tr("Text chat · AI assistant")}</span>
+        <button type="button" className={styles.newChat} onClick={() => { controller.reset(); setDraft(''); inputRef.current?.focus() }} disabled={!chat.messages.length} aria-label={tr("Start a new text conversation")}><RotateCcw size={12} />{tr("New chat")}</button>
       </div>
-      <div ref={logRef} className={styles.chatLog} role="log" aria-label="Conversation history" aria-live="polite" aria-relevant="additions text" tabIndex={0}>
-        {!chat.messages.length && <div className={styles.chatEmpty}><MessageCircle size={25} aria-hidden="true" /><h3>Prefer to type?</h3><p>Ask about CAROS, your revenue challenges,<br />or where to focus next.</p><small>Your conversation starts when you send.</small></div>}
+      <div ref={logRef} className={styles.chatLog} role="log" aria-label={tr("Conversation history")} aria-live="polite" aria-relevant="additions text" tabIndex={0}>
+        {!chat.messages.length && <div className={styles.chatEmpty}><MessageCircle size={25} aria-hidden="true" /><h3>{tr("Prefer to type?")}</h3><p>{tr("Ask about CAROS, your revenue challenges,")}<br />{tr("or where to focus next.")}</p><small>{tr("Your conversation starts when you send.")}</small></div>}
         {chat.messages.map(message => (
           <div key={message.id} className={`${styles.message} ${message.role === 'user' ? styles.userMessage : styles.agentMessage}`} data-delivery={message.delivery}>
-            <span className={styles.messageAuthor}>{message.role === 'agent' ? 'CAROS AI' : 'You'}</span>
+            <span className={styles.messageAuthor}>{message.role === 'agent' ? 'CAROS AI' : tr("You")}</span>
             <p>{message.content}</p>
-            {message.delivery === 'failed' && <small>Reply not confirmed</small>}
+            {message.delivery === 'failed' && <small>{tr("Reply not confirmed")}</small>}
           </div>
         ))}
-        {sending && <p className={styles.replyStatus}>CAROS is replying…</p>}
-        {ended && <p className={styles.replyStatus}>This conversation has ended. Start a new chat to continue.</p>}
+        {sending && <p className={styles.replyStatus}>{tr("CAROS is replying…")}</p>}
+        {ended && <p className={styles.replyStatus}>{tr("This conversation has ended. Start a new chat to continue.")}</p>}
       </div>
-      {chat.error && <div className={styles.chatError} role="alert"><p>{chat.error}</p>{chat.phase === 'error' && <button type="button" className={styles.newChat} onClick={() => void controller.retry()}>Retry message</button>}</div>}
+      {chat.error && <div className={styles.chatError} role="alert"><p>{tr(chat.error)}</p>{chat.phase === 'error' && <button type="button" className={styles.newChat} onClick={() => void controller.retry()}>{tr("Retry message")}</button>}</div>}
       <form onSubmit={submit} className={styles.chatComposer}>
-        <label className={styles.srOnly} htmlFor="caros-chat-message">Your message to CAROS</label>
+        <label className={styles.srOnly} htmlFor="caros-chat-message">{tr("Your message to CAROS")}</label>
         <textarea
           ref={inputRef}
           id="caros-chat-message"
-          aria-label="Your message to CAROS"
+          aria-label={tr("Your message to CAROS")}
           value={draft}
           onChange={event => setDraft(event.target.value)}
           onKeyDown={event => {
             if (event.key === 'Enter' && !event.shiftKey && !event.nativeEvent.isComposing) submit(event)
           }}
-          placeholder={ended ? 'Start a new chat to continue' : 'Type your message…'}
+          placeholder={ended ? tr("Start a new chat to continue") : tr("Type your message…")}
           maxLength={2000}
           rows={2}
           disabled={ended}
         />
-        {sending ? <button type="button" className={styles.sendMessage} onClick={() => controller.cancel()} aria-label="Stop waiting for a reply"><Square size={16} /></button>
-          : <button type="submit" className={styles.sendMessage} disabled={!draft.trim() || ended} aria-label="Send message"><Send size={17} /></button>}
+        {sending ? <button type="button" className={styles.sendMessage} onClick={() => controller.cancel()} aria-label={tr("Stop waiting for a reply")}><Square size={16} /></button>
+          : <button type="submit" className={styles.sendMessage} disabled={!draft.trim() || ended} aria-label={tr("Send message")}><Send size={17} /></button>}
       </form>
-      <p className={styles.chatNote}>No microphone needed. Refreshing clears this chat view.</p>
+      <p className={styles.chatNote}>{tr("No microphone needed. Refreshing clears this chat view.")}</p>
     </div>
   )
 }

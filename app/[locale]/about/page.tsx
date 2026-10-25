@@ -1,3 +1,8 @@
+import { positioningSocialMetadata } from "@/lib/positioning-metadata"
+import spanishCatalog from "@/messages/full/home-general.es.json"
+import { useSpanish } from "@/lib/use-spanish"
+import { getLocale } from "next-intl/server"
+import { translateSpanishData } from "@/lib/spanish"
 import type { Metadata } from "next"
 import {useTranslations} from "next-intl"
 import Image from "next/image"
@@ -5,10 +10,14 @@ import { PageHero, Eyebrow } from "@/components/caros/ui-bits"
 import { Reveal } from "@/components/caros/reveal"
 import { CtaBand } from "@/components/caros/cta-band"
 
-export const metadata: Metadata = {
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale()
+  const metadata = translateSpanishData({
   title: "About",
   description:
     "CAROS was built to give local business owners the revenue clarity big companies take for granted — sophisticated technology with an extremely simple experience.",
+}, locale, spanishCatalog)
+  return { ...metadata, ...positioningSocialMetadata(metadata.description, locale, metadata.title) }
 }
 
 const beliefs = [
@@ -27,6 +36,7 @@ const beliefs = [
 ]
 
 export default function AboutPage() {
+  const { tr, localize } = useSpanish(spanishCatalog)
   const t = useTranslations("pages.about")
 
   return (
@@ -48,12 +58,10 @@ export default function AboutPage() {
               </h2>
               <div className="mt-6 space-y-5 text-lg leading-relaxed text-muted-foreground">
                 <p>
-                  &ldquo;Where are my customers actually coming from?&rdquo; Every owner we met was pouring money into
-                  marketing, answering services, and software — and none of it could tell them what was working.
+                  {tr("“Where are my customers actually coming from?” Every owner we met was pouring money into marketing, answering services, and software — and none of it could tell them what was working.")}
                 </p>
                 <p>
-                  So we built CAROS: one connected system that captures every lead, follows up on every opportunity,
-                  earns every review, and ties every dollar of spend back to booked revenue.
+                  {tr("So we built CAROS: one connected system that captures every lead, follows up on every opportunity, earns every review, and ties every dollar of spend back to booked revenue.")}
                 </p>
               </div>
             </Reveal>
@@ -63,7 +71,7 @@ export default function AboutPage() {
                 <div className="relative flex flex-col items-center justify-center py-8 text-center">
                   <Image src="/caros-logo.png" alt="CAROS" width={360} height={240} className="w-full max-w-xs" />
                   <p className="mt-8 font-serif text-2xl italic text-ink-foreground">
-                    Sophisticated technology. An extremely simple experience.
+                    {tr("Sophisticated technology. An extremely simple experience.")}
                   </p>
                 </div>
               </div>
@@ -77,11 +85,11 @@ export default function AboutPage() {
           <Reveal>
             <Eyebrow>{t("beliefs")}</Eyebrow>
             <h2 className="mt-6 max-w-3xl text-balance text-[clamp(2rem,4vw,3.25rem)] font-extrabold leading-[1.02] tracking-tight">
-              Three beliefs that shaped everything.
+              {tr("Three beliefs that shaped everything.")}
             </h2>
           </Reveal>
           <div className="mt-16 grid gap-8 md:grid-cols-3">
-            {beliefs.map((b, i) => (
+            {localize(beliefs).map((b, i) => (
               <Reveal key={b.title} delay={i * 80} className="border-t-2 border-gold pt-6">
                 <h3 className="font-serif text-2xl italic text-foreground">{b.title}</h3>
                 <p className="mt-4 leading-relaxed text-muted-foreground">{b.body}</p>

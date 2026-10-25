@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Archivo, Instrument_Serif, JetBrains_Mono } from "next/font/google"
 import Script from "next/script"
+import { getLocale, getTranslations } from "next-intl/server"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
@@ -161,13 +162,35 @@ const structuredData = {
   ],
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const locale = await getLocale()
+  const t = await getTranslations({ locale, namespace: "Metadata" })
+  const localizedStructuredData = locale === "es" ? {
+    ...structuredData,
+    "@graph": structuredData["@graph"].map(node => ({
+      ...node,
+      description: t("description"),
+      ...(node["@type"] === "Organization" ? { slogan: "Primero los ingresos. Todo lo demás está a su servicio." } : {}),
+      ...(node["@type"] === "WebSite" ? { inLanguage: "es" } : {}),
+      ...(node["@type"] === "SoftwareApplication" ? {
+        applicationSubCategory: "Sistema operativo de captación de clientes e ingresos",
+        audience: { "@type": "BusinessAudience", audienceType: "Empresas y organizaciones que crecen a través de las relaciones: servicios profesionales, salud, automoción, creadores, entidades sin fines de lucro, instituciones religiosas y servicios para el hogar" },
+        featureList: [
+          "Captación de clientes: anuncios, formularios, chat, SMS y respuesta a llamadas perdidas",
+          "Operaciones de ingresos: CRM, atención humana, reservas, seguimiento de propuestas y facturación",
+          "Éxito del cliente: reseñas, recomendaciones, recordatorios y reactivación",
+          "Inteligencia empresarial: atribución, informes de ingresos y retorno del marketing",
+          "Plataforma e integraciones: teléfono, correo, SMS, calendarios, pagos y herramientas operativas",
+        ],
+      } : {}),
+    })),
+  } : structuredData
   return (
-    <html lang="en" className="bg-background">
+    <html lang={locale} className="bg-background">
       <body
         className={`${archivo.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
@@ -216,7 +239,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localizedStructuredData) }}
         />
         {/* Google tag (gtag.js) */}
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-MT8HLMZL04" strategy="afterInteractive" />

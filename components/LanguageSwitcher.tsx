@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react"
 import { useParams } from "next/navigation"
+import { useSpanish } from "@/lib/use-spanish"
+import spanish from "@/messages/full/shared.es.json"
 import { ChevronDown } from "lucide-react"
 import { Link, usePathname } from "@/i18n/navigation"
 import { cn } from "@/lib/utils"
@@ -14,6 +16,7 @@ const locales = [
 type LocaleCode = (typeof locales)[number]["code"]
 
 export function LanguageSwitcher({ mobile = false }: { mobile?: boolean }) {
+  const { tr } = useSpanish(spanish)
   const pathname = usePathname() || "/"
   const params = useParams<{ locale?: string }>()
   const currentLocale = (params.locale ?? "en") as LocaleCode
@@ -57,7 +60,7 @@ export function LanguageSwitcher({ mobile = false }: { mobile?: boolean }) {
     <div ref={rootRef} className="relative">
       <button
         type="button"
-        aria-label="Select language"
+        aria-label={tr("Select language")}
         aria-expanded={open}
         aria-haspopup="listbox"
         onClick={() => setOpen((value) => !value)}
@@ -66,7 +69,7 @@ export function LanguageSwitcher({ mobile = false }: { mobile?: boolean }) {
         {current.short} <ChevronDown className="h-3.5 w-3.5" aria-hidden="true" />
       </button>
       {open && (
-        <div role="listbox" aria-label="Available languages" className="absolute right-0 z-50 mt-2 max-h-80 min-w-48 overflow-y-auto rounded-md border border-foreground/10 bg-background p-1 shadow-xl">
+        <div role="listbox" aria-label={tr("Available languages")} className="absolute right-0 z-50 mt-2 max-h-80 min-w-48 overflow-y-auto rounded-md border border-foreground/10 bg-background p-1 shadow-xl">
           {locales.map((locale) => (
             <Link
               key={locale.code}

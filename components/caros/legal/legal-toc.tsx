@@ -1,11 +1,15 @@
 "use client"
 
+import catalog from "@/messages/full/forms-legal.es.json"
+import { useSpanish } from "@/lib/use-spanish"
+
 import { useEffect, useState } from "react"
 import { ArrowUp } from "lucide-react"
 import { cn } from "@/lib/utils"
 import type { TocEntry } from "./legal-doc"
 
 export function LegalToc({ entries }: { entries: TocEntry[] }) {
+  const { tr } = useSpanish(catalog)
   const [activeId, setActiveId] = useState<string>(entries[0]?.id ?? "")
   const [showTop, setShowTop] = useState(false)
 
@@ -38,8 +42,8 @@ export function LegalToc({ entries }: { entries: TocEntry[] }) {
   }, [entries])
 
   return (
-    <nav aria-label="On this page" className="sticky top-28">
-      <p className="font-mono text-xs uppercase tracking-[0.16em] text-muted-foreground">On this page</p>
+    <nav aria-label={tr("On this page")} className="sticky top-28">
+      <p className="font-mono text-xs uppercase tracking-[0.16em] text-muted-foreground">{tr("On this page")}</p>
       <ul className="mt-4 space-y-1 border-l border-border">
         {entries.map((entry) => {
           const active = entry.id === activeId
@@ -69,9 +73,7 @@ export function LegalToc({ entries }: { entries: TocEntry[] }) {
           showTop ? "opacity-100" : "pointer-events-none opacity-0",
         )}
       >
-        <ArrowUp className="h-3.5 w-3.5" />
-        Back to top
-      </button>
+        <ArrowUp className="h-3.5 w-3.5" /> {tr("Back to top")} </button>
     </nav>
   )
 }

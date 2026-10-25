@@ -1,5 +1,8 @@
 "use client"
 
+import { useSpanish } from "@/lib/use-spanish"
+import catalog from "@/messages/full/product-pages.es.json"
+
 import { useMemo, useState } from "react"
 import { Eyebrow, AuditButton } from "@/components/caros/ui-bits"
 import { cn } from "@/lib/utils"
@@ -25,6 +28,7 @@ function Field({
   onChange: (n: number) => void
   step?: number
 }) {
+
   return (
     <label className="block">
       <span className="eyebrow text-muted-foreground">{label}</span>
@@ -46,6 +50,8 @@ function Field({
 }
 
 export function BreakEvenCalculator({ className }: { className?: string }) {
+  const { tr } = useSpanish(catalog)
+
   const [jobValue, setJobValue] = useState(12000)
   const [missedCalls, setMissedCalls] = useState(18)
   const [closeRate, setCloseRate] = useState(30)
@@ -67,29 +73,29 @@ export function BreakEvenCalculator({ className }: { className?: string }) {
       )}
     >
       <div className="space-y-6">
-        <Field label="Average Job Value" prefix="$" value={jobValue} onChange={setJobValue} step={500} />
-        <Field label="Missed Calls per Month" value={missedCalls} onChange={setMissedCalls} step={1} />
-        <Field label="Close Rate" suffix="%" value={closeRate} onChange={setCloseRate} step={1} />
+        <Field label={tr("Average Job Value")} prefix="$" value={jobValue} onChange={setJobValue} step={500} />
+        <Field label={tr("Missed Calls per Month")} value={missedCalls} onChange={setMissedCalls} step={1} />
+        <Field label={tr("Close Rate")} suffix="%" value={closeRate} onChange={setCloseRate} step={1} />
       </div>
 
       <div className="flex flex-col justify-between gap-8 rounded-xl bg-muted/60 p-6 lg:p-8">
         <div>
-          <p className="eyebrow text-muted-foreground">Estimated revenue currently at risk</p>
+          <p className="eyebrow text-muted-foreground">{tr("Estimated revenue currently at risk")}</p>
           <p className="mt-3 text-[clamp(2.5rem,6vw,4rem)] font-display leading-none text-gold-gradient">
             {currency(atRisk)}
-            <span className="text-2xl text-muted-foreground">/mo</span>
+            <span className="text-2xl text-muted-foreground">{tr("/mo")}</span>
           </p>
         </div>
 
         <div className="border-t border-border pt-6">
           <p className="text-lg leading-relaxed text-foreground">
-            Jobs CAROS needs to help you recover to cover its $997/month cost:{" "}
+            {tr("Jobs CAROS needs to help you recover to cover its $997/month cost:")}{" "}
             <span className="font-bold text-gold">
-              {jobsToCover} {jobsToCover === 1 ? "job" : "jobs"}
+              {jobsToCover} {tr(jobsToCover === 1 ? "job" : "jobs")}
             </span>
             .
           </p>
-          <AuditButton className="mt-6 w-full" label="See What CAROS Can Do For You" />
+          <AuditButton className="mt-6 w-full" label={tr("See What CAROS Can Do For You")} />
         </div>
       </div>
     </div>

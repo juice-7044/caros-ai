@@ -32,10 +32,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const lastModified = new Date()
 
-  return routes.map((route) => ({
-    url: `${SITE_URL}${route.path}`,
+  return routes.flatMap((route) => (["en", "es"] as const).map((locale) => ({
+    url: `${SITE_URL}/${locale}${route.path === "/" ? "" : route.path}`,
     lastModified,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
-  }))
+    alternates: { languages: {
+      en: `${SITE_URL}/en${route.path === "/" ? "" : route.path}`,
+      es: `${SITE_URL}/es${route.path === "/" ? "" : route.path}`,
+    } },
+  })))
 }

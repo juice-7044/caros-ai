@@ -1,4 +1,6 @@
 import { useTranslations } from "next-intl"
+import { useSpanish } from "@/lib/use-spanish"
+import spanish from "@/messages/full/shared.es.json"
 import { Link } from "@/i18n/routing"
 import { Linkedin, Facebook, Instagram, ArrowUpRight, MapPin, Phone } from "lucide-react"
 import {
@@ -54,6 +56,7 @@ const columns = [
 ]
 
 export function SiteFooter() {
+  const { tr } = useSpanish(spanish)
   const t = useTranslations("footer")
 
   return (
@@ -76,7 +79,7 @@ export function SiteFooter() {
               <p className="flex items-start gap-3 text-sm text-muted-foreground">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" aria-hidden="true" />
                 <span>
-                  <span className="sr-only">Headquarters: </span>
+                  <span className="sr-only">{tr("Headquarters:")}</span>
                   {COMPANY_ADDRESS}
                 </span>
               </p>
@@ -124,7 +127,7 @@ export function SiteFooter() {
         <div className="mt-16 flex flex-col items-start gap-6 border-t border-foreground/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-4">
             <Logo href={null} className="h-9" />
-            <p className="text-xs text-muted-foreground">© 2026 CAROS. All rights reserved.</p>
+            <p className="text-xs text-muted-foreground">{tr("© 2026 CAROS. All rights reserved.")}</p>
           </div>
           <div className="flex items-center gap-4">
             {SOCIAL_LINKS.map(({ Icon, href, label }) => (
@@ -134,7 +137,7 @@ export function SiteFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-9 w-9 items-center justify-center rounded-full border border-foreground/15 text-muted-foreground transition-colors hover:border-gold hover:text-gold"
-                aria-label={label}
+                aria-label={tr(label)}
               >
                 <Icon className="h-4 w-4" />
               </a>
