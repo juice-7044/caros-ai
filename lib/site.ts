@@ -38,8 +38,8 @@ export const COMPANY_NAME = "CAROSAi LLC"
 export const COMPANY_ADDRESS = "418 Broadway, Ste. N, Albany, NY 12207"
 export const COMPANY_EMAIL = "inquiries@getcarosai.com"
 export const COMPANY_EMAIL_HREF = "mailto:inquiries@getcarosai.com"
-export const COMPANY_PHONE = "+1 631-458-3332"
-export const COMPANY_PHONE_HREF = "tel:+16314583332"
+export const COMPANY_PHONE = "+1 (631) 906-7956"
+export const COMPANY_PHONE_HREF = "tel:+16319067956"
 
 // Pages that contain a lead form — the floating chat widget is suppressed here
 export const FORM_PATHS = ["/affiliates"]
