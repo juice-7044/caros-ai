@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl"
 import { useSpanish } from "@/lib/use-spanish"
 import spanish from "@/messages/full/shared.es.json"
 import { Link } from "@/i18n/routing"
-import { Linkedin, Facebook, Instagram, ArrowUpRight, MapPin, Phone } from "lucide-react"
+import { Linkedin, Facebook, Instagram, Youtube, ArrowUpRight, MapPin, Phone } from "lucide-react"
 import {
   AUDIT_HREF,
   INSIGHTS_URL,
@@ -17,6 +17,7 @@ const SOCIAL_LINKS = [
   { Icon: Facebook, href: "https://www.facebook.com/carosaillc", label: "CAROS on Facebook" },
   { Icon: Linkedin, href: "https://www.linkedin.com/company/carosai", label: "CAROS on LinkedIn" },
   { Icon: Instagram, href: "https://www.instagram.com/carosai", label: "CAROS on Instagram" },
+  { Icon: Youtube, href: "https://www.youtube.com/@CAROS-Ai", label: "CAROS on YouTube" },
 ]
 
 const columns = [
