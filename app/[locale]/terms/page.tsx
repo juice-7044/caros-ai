@@ -51,7 +51,7 @@ export default async function TermsPage() {
       eyebrow={tr("Legal")}
       title={tr("Terms and Conditions")}
       serifTitle={tr("of Use.")}
-      lastUpdated={tr("August 9, 2026")}
+      lastUpdated={tr("October 31, 2026")}
       intro={tr("These Terms govern your access to and use of the CAROS website and services. Please read them carefully before using the site.")}
       toc={translateSpanishData(toc, locale, catalog)}
     >
@@ -126,6 +126,11 @@ export default async function TermsPage() {
         <LegalSubheading>{tr("Call Recording and Monitoring")}</LegalSubheading>
         <LegalP>{tr("Where call recording or monitoring services are provided through the Platform, such recording is conducted in accordance with applicable law and the terms of the applicable Master Services Agreement. Client businesses using CAROS answering services are responsible for ensuring compliance with state and federal call-recording laws, including providing required notices to callers.")}</LegalP>
         <LegalP>{tr("CAROS will configure recording notices and consent flows as required by applicable law and the applicable Service Order. Call recordings and transcripts, if enabled, are processed and stored in accordance with our Privacy Policy and Data Processing Addendum.")}</LegalP>
+
+        <LegalSubheading>{tr("Payments and Refunds")}</LegalSubheading>
+        <LegalP>{tr("All payments made to CAROS are final and non-refundable. This applies to implementation fees, subscription fees, and fees for any other paid services. CAROS does not offer refunds, credits, or prorated adjustments for a partial billing period, unused services, cancellation, or any other reason, and all payments are non-refundable regardless of whether the service has been used.")}</LegalP>
+        <LegalP>{tr("Where CAROS and a client have entered into a separate Master Services Agreement or Service Order, the payment, billing, and refund terms of that executed agreement govern for that client. This section states CAROS's general policy for payments made through or in connection with the Website and CAROS services.")}</LegalP>
+        <LegalP>{tr("This section does not limit any right that cannot be waived or excluded under applicable law.")}</LegalP>
       </LegalSection>
 
       <LegalSection n={11} id="warranties" title={tr("Disclaimer of Warranties")}>
