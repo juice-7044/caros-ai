@@ -1,0 +1,1516 @@
+{
+ "widths": [
+  {
+   "tag": "en@360",
+   "vw": 360,
+   "content": [
+    [
+     "[data-story=\"hero\"] .home-container",
+     320
+    ],
+    [
+     "[data-story=\"band\"] .home-container",
+     320
+    ],
+    [
+     "[data-story=\"showcase\"] .home-container",
+     320
+    ],
+    [
+     "[data-story=\"software\"] .home-container",
+     320
+    ],
+    [
+     "#stack-calculator .home-container",
+     320
+    ],
+    [
+     "#unified-capabilities .home-container",
+     320
+    ]
+   ]
+  },
+  {
+   "tag": "en@390",
+   "vw": 390,
+   "content": [
+    [
+     "[data-story=\"hero\"] .home-container",
+     350
+    ],
+    [
+     "[data-story=\"band\"] .home-container",
+     350
+    ],
+    [
+     "[data-story=\"showcase\"] .home-container",
+     350
+    ],
+    [
+     "[data-story=\"software\"] .home-container",
+     350
+    ],
+    [
+     "#stack-calculator .home-container",
+     350
+    ],
+    [
+     "#unified-capabilities .home-container",
+     350
+    ]
+   ]
+  },
+  {
+   "tag": "en@768",
+   "vw": 768,
+   "content": [
+    [
+     "[data-story=\"hero\"] .home-container",
+     728
+    ],
+    [
+     "[data-story=\"band\"] .home-container",
+     728
+    ],
+    [
+     "[data-story=\"showcase\"] .home-container",
+     728
+    ],
+    [
+     "[data-story=\"software\"] .home-container",
+     728
+    ],
+    [
+     "#stack-calculator .home-container",
+     728
+    ],
+    [
+     "#unified-capabilities .home-container",
+     728
+    ]
+   ]
+  },
+  {
+   "tag": "en@1440",
+   "vw": 1440,
+   "content": [
+    [
+     "[data-story=\"hero\"] .home-container",
+     1284
+    ],
+    [
+     "[data-story=\"band\"] .home-container",
+     1284
+    ],
+    [
+     "[data-story=\"showcase\"] .home-container",
+     1284
+    ],
+    [
+     "[data-story=\"software\"] .home-container",
+     1284
+    ],
+    [
+     "#stack-calculator .home-container",
+     1284
+    ],
+    [
+     "#unified-capabilities .home-container",
+     1284
+    ]
+   ]
+  },
+  {
+   "tag": "en@1920",
+   "vw": 1920,
+   "content": [
+    [
+     "[data-story=\"hero\"] .home-container",
+     1713
+    ],
+    [
+     "[data-story=\"band\"] .home-container",
+     1713
+    ],
+    [
+     "[data-story=\"showcase\"] .home-container",
+     1713
+    ],
+    [
+     "[data-story=\"software\"] .home-container",
+     1713
+    ],
+    [
+     "#stack-calculator .home-container",
+     1713
+    ],
+    [
+     "#unified-capabilities .home-container",
+     1713
+    ]
+   ]
+  },
+  {
+   "tag": "en@2560",
+   "vw": 2560,
+   "content": [
+    [
+     "[data-story=\"hero\"] .home-container",
+     2310
+    ],
+    [
+     "[data-story=\"band\"] .home-container",
+     2310
+    ],
+    [
+     "[data-story=\"showcase\"] .home-container",
+     2310
+    ],
+    [
+     "[data-story=\"software\"] .home-container",
+     2310
+    ],
+    [
+     "#stack-calculator .home-container",
+     2310
+    ],
+    [
+     "#unified-capabilities .home-container",
+     2310
+    ]
+   ]
+  },
+  {
+   "tag": "es@360",
+   "vw": 360,
+   "content": [
+    [
+     "[data-story=\"hero\"] .home-container",
+     320
+    ],
+    [
+     "[data-story=\"band\"] .home-container",
+     320
+    ],
+    [
+     "[data-story=\"showcase\"] .home-container",
+     320
+    ],
+    [
+     "[data-story=\"software\"] .home-container",
+     320
+    ],
+    [
+     "#stack-calculator .home-container",
+     320
+    ],
+    [
+     "#unified-capabilities .home-container",
+     320
+    ]
+   ]
+  },
+  {
+   "tag": "es@390",
+   "vw": 390,
+   "content": [
+    [
+     "[data-story=\"hero\"] .home-container",
+     350
+    ],
+    [
+     "[data-story=\"band\"] .home-container",
+     350
+    ],
+    [
+     "[data-story=\"showcase\"] .home-container",
+     350
+    ],
+    [
+     "[data-story=\"software\"] .home-container",
+     350
+    ],
+    [
+     "#stack-calculator .home-container",
+     350
+    ],
+    [
+     "#unified-capabilities .home-container",
+     350
+    ]
+   ]
+  },
+  {
+   "tag": "es@768",
+   "vw": 768,
+   "content": [
+    [
+     "[data-story=\"hero\"] .home-container",
+     728
+    ],
+    [
+     "[data-story=\"band\"] .home-container",
+     728
+    ],
+    [
+     "[data-story=\"showcase\"] .home-container",
+     728
+    ],
+    [
+     "[data-story=\"software\"] .home-container",
+     728
+    ],
+    [
+     "#stack-calculator .home-container",
+     728
+    ],
+    [
+     "#unified-capabilities .home-container",
+     728
+    ]
+   ]
+  },
+  {
+   "tag": "es@1440",
+   "vw": 1440,
+   "content": [
+    [
+     "[data-story=\"hero\"] .home-container",
+     1284
+    ],
+    [
+     "[data-story=\"band\"] .home-container",
+     1284
+    ],
+    [
+     "[data-story=\"showcase\"] .home-container",
+     1284
+    ],
+    [
+     "[data-story=\"software\"] .home-container",
+     1284
+    ],
+    [
+     "#stack-calculator .home-container",
+     1284
+    ],
+    [
+     "#unified-capabilities .home-container",
+     1284
+    ]
+   ]
+  },
+  {
+   "tag": "es@1920",
+   "vw": 1920,
+   "content": [
+    [
+     "[data-story=\"hero\"] .home-container",
+     1713
+    ],
+    [
+     "[data-story=\"band\"] .home-container",
+     1713
+    ],
+    [
+     "[data-story=\"showcase\"] .home-container",
+     1713
+    ],
+    [
+     "[data-story=\"software\"] .home-container",
+     1713
+    ],
+    [
+     "#stack-calculator .home-container",
+     1713
+    ],
+    [
+     "#unified-capabilities .home-container",
+     1713
+    ]
+   ]
+  },
+  {
+   "tag": "es@2560",
+   "vw": 2560,
+   "content": [
+    [
+     "[data-story=\"hero\"] .home-container",
+     2310
+    ],
+    [
+     "[data-story=\"band\"] .home-container",
+     2310
+    ],
+    [
+     "[data-story=\"showcase\"] .home-container",
+     2310
+    ],
+    [
+     "[data-story=\"software\"] .home-container",
+     2310
+    ],
+    [
+     "#stack-calculator .home-container",
+     2310
+    ],
+    [
+     "#unified-capabilities .home-container",
+     2310
+    ]
+   ]
+  }
+ ],
+ "results": [
+  {
+   "name": "en@360 exactly one orb canvas, inside the hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@360 orb painted visible particles on first paint",
+   "pass": true,
+   "detail": "{\"ink\":3321,\"frame\":87,\"wrap\":{\"l\":36,\"r\":456,\"t\":190,\"b\":610},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "en@360 orb is decorative: aria-hidden, no pointer events, no horizontal overflow",
+   "pass": true,
+   "detail": "{\"ink\":3321,\"frame\":87,\"wrap\":{\"l\":36,\"r\":456,\"t\":190,\"b\":610},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "en@360 orb animates in normal motion (frame counter advances)",
+   "pass": true,
+   "detail": "{\"a\":87,\"b\":117}"
+  },
+  {
+   "name": "en@360 orb stops drawing once scrolled out of view",
+   "pass": true,
+   "detail": "{\"a\":131,\"b\":131}"
+  },
+  {
+   "name": "en@360 orb resumes when back on screen",
+   "pass": true,
+   "detail": "{\"a\":186,\"b\":210}"
+  },
+  {
+   "name": "en@360 headline hierarchy: display H1 with gold italic phrase, localized eyebrow",
+   "pass": true,
+   "detail": "{\"h1fs\":40,\"h1\":{\"l\":20,\"r\":340,\"b\":420.296875},\"pvBottom\":685.296875,\"growthBottom\":574.296875,\"orbLeft\":36,\"orbRight\":456,\"vh\":800,\"vw\":360,\"eyebrow\":\"Customer Acquisition & Revenue Operating System\",\"gold\":true}"
+  },
+  {
+   "name": "en@360 CAROS product statement is above the fold",
+   "pass": true,
+   "detail": "{\"h1fs\":40,\"h1\":{\"l\":20,\"r\":340,\"b\":420.296875},\"pvBottom\":685.296875,\"growthBottom\":574.296875,\"orbLeft\":36,\"orbRight\":456,\"vh\":800,\"vw\":360,\"eyebrow\":\"Customer Acquisition & Revenue Operating System\",\"gold\":true}"
+  },
+  {
+   "name": "en@360 orb stays within the viewport horizontally on large screens (art on the right)",
+   "pass": true,
+   "detail": "{\"h1fs\":40,\"h1\":{\"l\":20,\"r\":340,\"b\":420.296875},\"pvBottom\":685.296875,\"growthBottom\":574.296875,\"orbLeft\":36,\"orbRight\":456,\"vh\":800,\"vw\":360,\"eyebrow\":\"Customer Acquisition & Revenue Operating System\",\"gold\":true}"
+  },
+  {
+   "name": "en@360 homepage sections exist in the shared container",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",320],[\"[data-story=\\\"band\\\"] .home-container\",320],[\"[data-story=\\\"showcase\\\"] .home-container\",320],[\"[data-story=\\\"software\\\"] .home-container\",320],[\"#stack-calculator .home-container\",320],[\"#unified-capabilities .home-container\",320]]"
+  },
+  {
+   "name": "en@360 narrow screens keep sensible gutters",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",320],[\"[data-story=\\\"band\\\"] .home-container\",320],[\"[data-story=\\\"showcase\\\"] .home-container\",320],[\"[data-story=\\\"software\\\"] .home-container\",320],[\"#stack-calculator .home-container\",320],[\"#unified-capabilities .home-container\",320]]"
+  },
+  {
+   "name": "en@360 prose keeps a bounded line length (<= 760px)",
+   "pass": true,
+   "detail": "320"
+  },
+  {
+   "name": "en@360 showcase image scales with the wide container",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@360 narrative order preserved",
+   "pass": true,
+   "detail": "[236.296875,444.296875,594.296875,840,1030,1132.5,1580.34375,2769.96875,3250.96875,3406.96875,3721.703125,6376.375,7925.875]"
+  },
+  {
+   "name": "en@360 both story CTAs present after the reveal",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@360 calculator not nested in the orb hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@360 10 toggle syncs input and functions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@360 six hotspots",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@390 exactly one orb canvas, inside the hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@390 orb painted visible particles on first paint",
+   "pass": true,
+   "detail": "{\"ink\":3321,\"frame\":87,\"wrap\":{\"l\":66,\"r\":486,\"t\":212,\"b\":632},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "en@390 orb is decorative: aria-hidden, no pointer events, no horizontal overflow",
+   "pass": true,
+   "detail": "{\"ink\":3321,\"frame\":87,\"wrap\":{\"l\":66,\"r\":486,\"t\":212,\"b\":632},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "en@390 orb animates in normal motion (frame counter advances)",
+   "pass": true,
+   "detail": "{\"a\":88,\"b\":118}"
+  },
+  {
+   "name": "en@390 orb stops drawing once scrolled out of view",
+   "pass": true,
+   "detail": "{\"a\":131,\"b\":131}"
+  },
+  {
+   "name": "en@390 orb resumes when back on screen",
+   "pass": true,
+   "detail": "{\"a\":187,\"b\":211}"
+  },
+  {
+   "name": "en@390 headline hierarchy: display H1 with gold italic phrase, localized eyebrow",
+   "pass": true,
+   "detail": "{\"h1fs\":40,\"h1\":{\"l\":20,\"r\":370,\"b\":466.671875},\"pvBottom\":682.921875,\"growthBottom\":594.671875,\"orbLeft\":66,\"orbRight\":486,\"vh\":844,\"vw\":390,\"eyebrow\":\"Customer Acquisition & Revenue Operating System\",\"gold\":true}"
+  },
+  {
+   "name": "en@390 CAROS product statement is above the fold",
+   "pass": true,
+   "detail": "{\"h1fs\":40,\"h1\":{\"l\":20,\"r\":370,\"b\":466.671875},\"pvBottom\":682.921875,\"growthBottom\":594.671875,\"orbLeft\":66,\"orbRight\":486,\"vh\":844,\"vw\":390,\"eyebrow\":\"Customer Acquisition & Revenue Operating System\",\"gold\":true}"
+  },
+  {
+   "name": "en@390 orb stays within the viewport horizontally on large screens (art on the right)",
+   "pass": true,
+   "detail": "{\"h1fs\":40,\"h1\":{\"l\":20,\"r\":370,\"b\":466.671875},\"pvBottom\":682.921875,\"growthBottom\":594.671875,\"orbLeft\":66,\"orbRight\":486,\"vh\":844,\"vw\":390,\"eyebrow\":\"Customer Acquisition & Revenue Operating System\",\"gold\":true}"
+  },
+  {
+   "name": "en@390 homepage sections exist in the shared container",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",350],[\"[data-story=\\\"band\\\"] .home-container\",350],[\"[data-story=\\\"showcase\\\"] .home-container\",350],[\"[data-story=\\\"software\\\"] .home-container\",350],[\"#stack-calculator .home-container\",350],[\"#unified-capabilities .home-container\",350]]"
+  },
+  {
+   "name": "en@390 narrow screens keep sensible gutters",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",350],[\"[data-story=\\\"band\\\"] .home-container\",350],[\"[data-story=\\\"showcase\\\"] .home-container\",350],[\"[data-story=\\\"software\\\"] .home-container\",350],[\"#stack-calculator .home-container\",350],[\"#unified-capabilities .home-container\",350]]"
+  },
+  {
+   "name": "en@390 prose keeps a bounded line length (<= 760px)",
+   "pass": true,
+   "detail": "350"
+  },
+  {
+   "name": "en@390 showcase image scales with the wide container",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@390 narrative order preserved",
+   "pass": true,
+   "detail": "[282.671875,490.671875,614.671875,884,1074,1149,1577.34375,2724.96875,3158.03125,3314.03125,3642.703125,6268.125,7740.625]"
+  },
+  {
+   "name": "en@390 both story CTAs present after the reveal",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@390 calculator not nested in the orb hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@390 10 toggle syncs input and functions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@390 six hotspots",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@768 exactly one orb canvas, inside the hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@768 orb painted visible particles on first paint",
+   "pass": true,
+   "detail": "{\"ink\":3516,\"frame\":88,\"wrap\":{\"l\":272,\"r\":832,\"t\":168,\"b\":728},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "en@768 orb is decorative: aria-hidden, no pointer events, no horizontal overflow",
+   "pass": true,
+   "detail": "{\"ink\":3516,\"frame\":88,\"wrap\":{\"l\":272,\"r\":832,\"t\":168,\"b\":728},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "en@768 orb animates in normal motion (frame counter advances)",
+   "pass": true,
+   "detail": "{\"a\":88,\"b\":118}"
+  },
+  {
+   "name": "en@768 orb stops drawing once scrolled out of view",
+   "pass": true,
+   "detail": "{\"a\":132,\"b\":132}"
+  },
+  {
+   "name": "en@768 orb resumes when back on screen",
+   "pass": true,
+   "detail": "{\"a\":189,\"b\":213}"
+  },
+  {
+   "name": "en@768 headline hierarchy: display H1 with gold italic phrase, localized eyebrow",
+   "pass": true,
+   "detail": "{\"h1fs\":55.296,\"h1\":{\"l\":20,\"r\":642,\"b\":527.53125},\"pvBottom\":737.28125,\"growthBottom\":639.28125,\"orbLeft\":272,\"orbRight\":832,\"vh\":1024,\"vw\":768,\"eyebrow\":\"Customer Acquisition & Revenue Operating System\",\"gold\":true}"
+  },
+  {
+   "name": "en@768 CAROS product statement is above the fold",
+   "pass": true,
+   "detail": "{\"h1fs\":55.296,\"h1\":{\"l\":20,\"r\":642,\"b\":527.53125},\"pvBottom\":737.28125,\"growthBottom\":639.28125,\"orbLeft\":272,\"orbRight\":832,\"vh\":1024,\"vw\":768,\"eyebrow\":\"Customer Acquisition & Revenue Operating System\",\"gold\":true}"
+  },
+  {
+   "name": "en@768 orb stays within the viewport horizontally on large screens (art on the right)",
+   "pass": true,
+   "detail": "{\"h1fs\":55.296,\"h1\":{\"l\":20,\"r\":642,\"b\":527.53125},\"pvBottom\":737.28125,\"growthBottom\":639.28125,\"orbLeft\":272,\"orbRight\":832,\"vh\":1024,\"vw\":768,\"eyebrow\":\"Customer Acquisition & Revenue Operating System\",\"gold\":true}"
+  },
+  {
+   "name": "en@768 homepage sections exist in the shared container",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",728],[\"[data-story=\\\"band\\\"] .home-container\",728],[\"[data-story=\\\"showcase\\\"] .home-container\",728],[\"[data-story=\\\"software\\\"] .home-container\",728],[\"#stack-calculator .home-container\",728],[\"#unified-capabilities .home-container\",728]]"
+  },
+  {
+   "name": "en@768 narrow screens keep sensible gutters",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",728],[\"[data-story=\\\"band\\\"] .home-container\",728],[\"[data-story=\\\"showcase\\\"] .home-container\",728],[\"[data-story=\\\"software\\\"] .home-container\",728],[\"#stack-calculator .home-container\",728],[\"#unified-capabilities .home-container\",728]]"
+  },
+  {
+   "name": "en@768 prose keeps a bounded line length (<= 760px)",
+   "pass": true,
+   "detail": "549.78125"
+  },
+  {
+   "name": "en@768 showcase image scales with the wide container",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@768 narrative order preserved",
+   "pass": true,
+   "detail": "[273.21875,551.53125,659.28125,936,1078,1164,1420,2207.4375,2544.5,2700.5,3188.796875,4703.328125,5880.71875]"
+  },
+  {
+   "name": "en@768 both story CTAs present after the reveal",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@768 calculator not nested in the orb hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@768 10 toggle syncs input and functions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@768 six hotspots",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@1440 exactly one orb canvas, inside the hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@1440 orb painted visible particles on first paint",
+   "pass": true,
+   "detail": "{\"ink\":3549,\"frame\":88,\"wrap\":{\"l\":734.421875,\"r\":1425.609375,\"t\":102.40625,\"b\":793.59375},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "en@1440 orb is decorative: aria-hidden, no pointer events, no horizontal overflow",
+   "pass": true,
+   "detail": "{\"ink\":3549,\"frame\":88,\"wrap\":{\"l\":734.421875,\"r\":1425.609375,\"t\":102.40625,\"b\":793.59375},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "en@1440 orb animates in normal motion (frame counter advances)",
+   "pass": true,
+   "detail": "{\"a\":88,\"b\":119}"
+  },
+  {
+   "name": "en@1440 orb stops drawing once scrolled out of view",
+   "pass": true,
+   "detail": "{\"a\":133,\"b\":133}"
+  },
+  {
+   "name": "en@1440 orb resumes when back on screen",
+   "pass": true,
+   "detail": "{\"a\":191,\"b\":215}"
+  },
+  {
+   "name": "en@1440 headline hierarchy: display H1 with gold italic phrase, localized eyebrow",
+   "pass": true,
+   "detail": "{\"h1fs\":72,\"h1\":{\"l\":77.75,\"r\":874.125,\"b\":556.21875},\"pvBottom\":785.46875,\"growthBottom\":677.71875,\"orbLeft\":734.421875,\"orbRight\":1425.609375,\"vh\":900,\"vw\":1440,\"eyebrow\":\"Customer Acquisition & Revenue Operating System\",\"gold\":true}"
+  },
+  {
+   "name": "en@1440 CAROS product statement is above the fold",
+   "pass": true,
+   "detail": "{\"h1fs\":72,\"h1\":{\"l\":77.75,\"r\":874.125,\"b\":556.21875},\"pvBottom\":785.46875,\"growthBottom\":677.71875,\"orbLeft\":734.421875,\"orbRight\":1425.609375,\"vh\":900,\"vw\":1440,\"eyebrow\":\"Customer Acquisition & Revenue Operating System\",\"gold\":true}"
+  },
+  {
+   "name": "en@1440 orb stays within the viewport horizontally on large screens (art on the right)",
+   "pass": true,
+   "detail": "{\"h1fs\":72,\"h1\":{\"l\":77.75,\"r\":874.125,\"b\":556.21875},\"pvBottom\":785.46875,\"growthBottom\":677.71875,\"orbLeft\":734.421875,\"orbRight\":1425.609375,\"vh\":900,\"vw\":1440,\"eyebrow\":\"Customer Acquisition & Revenue Operating System\",\"gold\":true}"
+  },
+  {
+   "name": "en@1440 H1 text does not run under most of the orb (H1 right edge < 62% of viewport)",
+   "pass": true,
+   "detail": "{\"h1fs\":72,\"h1\":{\"l\":77.75,\"r\":874.125,\"b\":556.21875},\"pvBottom\":785.46875,\"growthBottom\":677.71875,\"orbLeft\":734.421875,\"orbRight\":1425.609375,\"vh\":900,\"vw\":1440,\"eyebrow\":\"Customer Acquisition & Revenue Operating System\",\"gold\":true}"
+  },
+  {
+   "name": "en@1440 homepage sections exist in the shared container",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",1284],[\"[data-story=\\\"band\\\"] .home-container\",1284],[\"[data-story=\\\"showcase\\\"] .home-container\",1284],[\"[data-story=\\\"software\\\"] .home-container\",1284],[\"#stack-calculator .home-container\",1284],[\"#unified-capabilities .home-container\",1284]]"
+  },
+  {
+   "name": "en@1440 content well beyond the old 1200px strip",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",1284],[\"[data-story=\\\"band\\\"] .home-container\",1284],[\"[data-story=\\\"showcase\\\"] .home-container\",1284],[\"[data-story=\\\"software\\\"] .home-container\",1284],[\"#stack-calculator .home-container\",1284],[\"#unified-capabilities .home-container\",1284]]"
+  },
+  {
+   "name": "en@1440 prose keeps a bounded line length (<= 760px)",
+   "pass": true,
+   "detail": "640"
+  },
+  {
+   "name": "en@1440 showcase image scales with the wide container",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@1440 narrative order preserved",
+   "pass": true,
+   "detail": "[225.03125,580.21875,697.71875,952,1094,1114,1438.8125,1983.359375,2175.359375,2347.359375,3094.21875,4315.90625,5351.703125]"
+  },
+  {
+   "name": "en@1440 both story CTAs present after the reveal",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@1440 calculator not nested in the orb hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@1440 10 toggle syncs input and functions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@1440 six hotspots",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@1920 exactly one orb canvas, inside the hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@1920 orb painted visible particles on first paint",
+   "pass": true,
+   "detail": "{\"ink\":3588,\"frame\":95,\"wrap\":{\"l\":1040.8125,\"r\":1900.8125,\"t\":26.65625,\"b\":886.65625},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "en@1920 orb is decorative: aria-hidden, no pointer events, no horizontal overflow",
+   "pass": true,
+   "detail": "{\"ink\":3588,\"frame\":95,\"wrap\":{\"l\":1040.8125,\"r\":1900.8125,\"t\":26.65625,\"b\":886.65625},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "en@1920 orb animates in normal motion (frame counter advances)",
+   "pass": true,
+   "detail": "{\"a\":97,\"b\":127}"
+  },
+  {
+   "name": "en@1920 orb stops drawing once scrolled out of view",
+   "pass": true,
+   "detail": "{\"a\":139,\"b\":139}"
+  },
+  {
+   "name": "en@1920 orb resumes when back on screen",
+   "pass": true,
+   "detail": "{\"a\":195,\"b\":219}"
+  },
+  {
+   "name": "en@1920 headline hierarchy: display H1 with gold italic phrase, localized eyebrow",
+   "pass": true,
+   "detail": "{\"h1fs\":96,\"h1\":{\"l\":103.671875,\"r\":1165.5,\"b\":620.0625},\"pvBottom\":849.3125,\"growthBottom\":741.5625,\"orbLeft\":1040.8125,\"orbRight\":1900.8125,\"vh\":1080,\"vw\":1920,\"eyebrow\":\"Customer Acquisition & Revenue Operating System\",\"gold\":true}"
+  },
+  {
+   "name": "en@1920 CAROS product statement is above the fold",
+   "pass": true,
+   "detail": "{\"h1fs\":96,\"h1\":{\"l\":103.671875,\"r\":1165.5,\"b\":620.0625},\"pvBottom\":849.3125,\"growthBottom\":741.5625,\"orbLeft\":1040.8125,\"orbRight\":1900.8125,\"vh\":1080,\"vw\":1920,\"eyebrow\":\"Customer Acquisition & Revenue Operating System\",\"gold\":true}"
+  },
+  {
+   "name": "en@1920 orb stays within the viewport horizontally on large screens (art on the right)",
+   "pass": true,
+   "detail": "{\"h1fs\":96,\"h1\":{\"l\":103.671875,\"r\":1165.5,\"b\":620.0625},\"pvBottom\":849.3125,\"growthBottom\":741.5625,\"orbLeft\":1040.8125,\"orbRight\":1900.8125,\"vh\":1080,\"vw\":1920,\"eyebrow\":\"Customer Acquisition & Revenue Operating System\",\"gold\":true}"
+  },
+  {
+   "name": "en@1920 H1 text does not run under most of the orb (H1 right edge < 62% of viewport)",
+   "pass": true,
+   "detail": "{\"h1fs\":96,\"h1\":{\"l\":103.671875,\"r\":1165.5,\"b\":620.0625},\"pvBottom\":849.3125,\"growthBottom\":741.5625,\"orbLeft\":1040.8125,\"orbRight\":1900.8125,\"vh\":1080,\"vw\":1920,\"eyebrow\":\"Customer Acquisition & Revenue Operating System\",\"gold\":true}"
+  },
+  {
+   "name": "en@1920 homepage sections exist in the shared container",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",1713],[\"[data-story=\\\"band\\\"] .home-container\",1713],[\"[data-story=\\\"showcase\\\"] .home-container\",1713],[\"[data-story=\\\"software\\\"] .home-container\",1713],[\"#stack-calculator .home-container\",1713],[\"#unified-capabilities .home-container\",1713]]"
+  },
+  {
+   "name": "en@1920 content uses 86-94% of viewport",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",1713],[\"[data-story=\\\"band\\\"] .home-container\",1713],[\"[data-story=\\\"showcase\\\"] .home-container\",1713],[\"[data-story=\\\"software\\\"] .home-container\",1713],[\"#stack-calculator .home-container\",1713],[\"#unified-capabilities .home-container\",1713]]"
+  },
+  {
+   "name": "en@1920 prose keeps a bounded line length (<= 760px)",
+   "pass": true,
+   "detail": "640"
+  },
+  {
+   "name": "en@1920 showcase image scales with the wide container",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@1920 narrative order preserved",
+   "pass": true,
+   "detail": "[178.5,644.0625,761.5625,969.3125,1111.3125,1131.3125,1383.3125,1908.609375,2100.609375,2272.609375,3218.390625,4416.078125,5432.375]"
+  },
+  {
+   "name": "en@1920 both story CTAs present after the reveal",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@1920 calculator not nested in the orb hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@1920 10 toggle syncs input and functions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@1920 six hotspots",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@2560 exactly one orb canvas, inside the hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@2560 orb painted visible particles on first paint",
+   "pass": true,
+   "detail": "{\"ink\":3640,\"frame\":101,\"wrap\":{\"l\":1674.40625,\"r\":2534.40625,\"t\":18,\"b\":878},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "en@2560 orb is decorative: aria-hidden, no pointer events, no horizontal overflow",
+   "pass": true,
+   "detail": "{\"ink\":3640,\"frame\":101,\"wrap\":{\"l\":1674.40625,\"r\":2534.40625,\"t\":18,\"b\":878},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "en@2560 orb animates in normal motion (frame counter advances)",
+   "pass": true,
+   "detail": "{\"a\":101,\"b\":131}"
+  },
+  {
+   "name": "en@2560 orb stops drawing once scrolled out of view",
+   "pass": true,
+   "detail": "{\"a\":145,\"b\":145}"
+  },
+  {
+   "name": "en@2560 orb resumes when back on screen",
+   "pass": true,
+   "detail": "{\"a\":204,\"b\":228}"
+  },
+  {
+   "name": "en@2560 headline hierarchy: display H1 with gold italic phrase, localized eyebrow",
+   "pass": true,
+   "detail": "{\"h1fs\":104,\"h1\":{\"l\":124.796875,\"r\":1557.234375,\"b\":570.015625},\"pvBottom\":799.265625,\"growthBottom\":691.515625,\"orbLeft\":1674.40625,\"orbRight\":2534.40625,\"vh\":1300,\"vw\":2560,\"eyebrow\":\"Customer Acquisition & Revenue Operating System\",\"gold\":true}"
+  },
+  {
+   "name": "en@2560 CAROS product statement is above the fold",
+   "pass": true,
+   "detail": "{\"h1fs\":104,\"h1\":{\"l\":124.796875,\"r\":1557.234375,\"b\":570.015625},\"pvBottom\":799.265625,\"growthBottom\":691.515625,\"orbLeft\":1674.40625,\"orbRight\":2534.40625,\"vh\":1300,\"vw\":2560,\"eyebrow\":\"Customer Acquisition & Revenue Operating System\",\"gold\":true}"
+  },
+  {
+   "name": "en@2560 orb stays within the viewport horizontally on large screens (art on the right)",
+   "pass": true,
+   "detail": "{\"h1fs\":104,\"h1\":{\"l\":124.796875,\"r\":1557.234375,\"b\":570.015625},\"pvBottom\":799.265625,\"growthBottom\":691.515625,\"orbLeft\":1674.40625,\"orbRight\":2534.40625,\"vh\":1300,\"vw\":2560,\"eyebrow\":\"Customer Acquisition & Revenue Operating System\",\"gold\":true}"
+  },
+  {
+   "name": "en@2560 H1 text does not run under most of the orb (H1 right edge < 62% of viewport)",
+   "pass": true,
+   "detail": "{\"h1fs\":104,\"h1\":{\"l\":124.796875,\"r\":1557.234375,\"b\":570.015625},\"pvBottom\":799.265625,\"growthBottom\":691.515625,\"orbLeft\":1674.40625,\"orbRight\":2534.40625,\"vh\":1300,\"vw\":2560,\"eyebrow\":\"Customer Acquisition & Revenue Operating System\",\"gold\":true}"
+  },
+  {
+   "name": "en@2560 homepage sections exist in the shared container",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",2310],[\"[data-story=\\\"band\\\"] .home-container\",2310],[\"[data-story=\\\"showcase\\\"] .home-container\",2310],[\"[data-story=\\\"software\\\"] .home-container\",2310],[\"#stack-calculator .home-container\",2310],[\"#unified-capabilities .home-container\",2310]]"
+  },
+  {
+   "name": "en@2560 content uses 86-94% of viewport",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",2310],[\"[data-story=\\\"band\\\"] .home-container\",2310],[\"[data-story=\\\"showcase\\\"] .home-container\",2310],[\"[data-story=\\\"software\\\"] .home-container\",2310],[\"#stack-calculator .home-container\",2310],[\"#unified-capabilities .home-container\",2310]]"
+  },
+  {
+   "name": "en@2560 prose keeps a bounded line length (<= 760px)",
+   "pass": true,
+   "detail": "640"
+  },
+  {
+   "name": "en@2560 showcase image scales with the wide container",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@2560 narrative order preserved",
+   "pass": true,
+   "detail": "[211.234375,594.015625,711.515625,952,1094,1114,1366,1868.546875,2060.546875,2232.546875,3456.0625,4653.75,5647.296875]"
+  },
+  {
+   "name": "en@2560 both story CTAs present after the reveal",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@2560 calculator not nested in the orb hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@2560 10 toggle syncs input and functions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@2560 six hotspots",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@360 exactly one orb canvas, inside the hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@360 orb painted visible particles on first paint",
+   "pass": true,
+   "detail": "{\"ink\":3396,\"frame\":84,\"wrap\":{\"l\":36,\"r\":456,\"t\":190,\"b\":610},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "es@360 orb is decorative: aria-hidden, no pointer events, no horizontal overflow",
+   "pass": true,
+   "detail": "{\"ink\":3396,\"frame\":84,\"wrap\":{\"l\":36,\"r\":456,\"t\":190,\"b\":610},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "es@360 orb animates in normal motion (frame counter advances)",
+   "pass": true,
+   "detail": "{\"a\":84,\"b\":114}"
+  },
+  {
+   "name": "es@360 orb stops drawing once scrolled out of view",
+   "pass": true,
+   "detail": "{\"a\":128,\"b\":128}"
+  },
+  {
+   "name": "es@360 orb resumes when back on screen",
+   "pass": true,
+   "detail": "{\"a\":183,\"b\":207}"
+  },
+  {
+   "name": "es@360 headline hierarchy: display H1 with gold italic phrase, localized eyebrow",
+   "pass": true,
+   "detail": "{\"h1fs\":40,\"h1\":{\"l\":20,\"r\":340,\"b\":456.296875},\"pvBottom\":695.296875,\"growthBottom\":584.296875,\"orbLeft\":36,\"orbRight\":456,\"vh\":800,\"vw\":360,\"eyebrow\":\"Sistema operativo de adquisición de clientes e ingresos\",\"gold\":true}"
+  },
+  {
+   "name": "es@360 CAROS product statement is above the fold",
+   "pass": true,
+   "detail": "{\"h1fs\":40,\"h1\":{\"l\":20,\"r\":340,\"b\":456.296875},\"pvBottom\":695.296875,\"growthBottom\":584.296875,\"orbLeft\":36,\"orbRight\":456,\"vh\":800,\"vw\":360,\"eyebrow\":\"Sistema operativo de adquisición de clientes e ingresos\",\"gold\":true}"
+  },
+  {
+   "name": "es@360 orb stays within the viewport horizontally on large screens (art on the right)",
+   "pass": true,
+   "detail": "{\"h1fs\":40,\"h1\":{\"l\":20,\"r\":340,\"b\":456.296875},\"pvBottom\":695.296875,\"growthBottom\":584.296875,\"orbLeft\":36,\"orbRight\":456,\"vh\":800,\"vw\":360,\"eyebrow\":\"Sistema operativo de adquisición de clientes e ingresos\",\"gold\":true}"
+  },
+  {
+   "name": "es@360 homepage sections exist in the shared container",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",320],[\"[data-story=\\\"band\\\"] .home-container\",320],[\"[data-story=\\\"showcase\\\"] .home-container\",320],[\"[data-story=\\\"software\\\"] .home-container\",320],[\"#stack-calculator .home-container\",320],[\"#unified-capabilities .home-container\",320]]"
+  },
+  {
+   "name": "es@360 narrow screens keep sensible gutters",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",320],[\"[data-story=\\\"band\\\"] .home-container\",320],[\"[data-story=\\\"showcase\\\"] .home-container\",320],[\"[data-story=\\\"software\\\"] .home-container\",320],[\"#stack-calculator .home-container\",320],[\"#unified-capabilities .home-container\",320]]"
+  },
+  {
+   "name": "es@360 prose keeps a bounded line length (<= 760px)",
+   "pass": true,
+   "detail": "320"
+  },
+  {
+   "name": "es@360 showcase image scales with the wide container",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@360 narrative order preserved",
+   "pass": true,
+   "detail": "[226.296875,480.296875,604.296875,840,1083.5,1186,1710.734375,3003.609375,3484.609375,3640.609375,3981.84375,6704.515625,8340.015625]"
+  },
+  {
+   "name": "es@360 both story CTAs present after the reveal",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@360 calculator not nested in the orb hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@360 10 toggle syncs input and functions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@360 six hotspots",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@390 exactly one orb canvas, inside the hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@390 orb painted visible particles on first paint",
+   "pass": true,
+   "detail": "{\"ink\":3402,\"frame\":91,\"wrap\":{\"l\":66,\"r\":486,\"t\":212,\"b\":632},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "es@390 orb is decorative: aria-hidden, no pointer events, no horizontal overflow",
+   "pass": true,
+   "detail": "{\"ink\":3402,\"frame\":91,\"wrap\":{\"l\":66,\"r\":486,\"t\":212,\"b\":632},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "es@390 orb animates in normal motion (frame counter advances)",
+   "pass": true,
+   "detail": "{\"a\":91,\"b\":122}"
+  },
+  {
+   "name": "es@390 orb stops drawing once scrolled out of view",
+   "pass": true,
+   "detail": "{\"a\":135,\"b\":135}"
+  },
+  {
+   "name": "es@390 orb resumes when back on screen",
+   "pass": true,
+   "detail": "{\"a\":191,\"b\":215}"
+  },
+  {
+   "name": "es@390 headline hierarchy: display H1 with gold italic phrase, localized eyebrow",
+   "pass": true,
+   "detail": "{\"h1fs\":40,\"h1\":{\"l\":20,\"r\":370,\"b\":478.296875},\"pvBottom\":717.296875,\"growthBottom\":606.296875,\"orbLeft\":66,\"orbRight\":486,\"vh\":844,\"vw\":390,\"eyebrow\":\"Sistema operativo de adquisición de clientes e ingresos\",\"gold\":true}"
+  },
+  {
+   "name": "es@390 CAROS product statement is above the fold",
+   "pass": true,
+   "detail": "{\"h1fs\":40,\"h1\":{\"l\":20,\"r\":370,\"b\":478.296875},\"pvBottom\":717.296875,\"growthBottom\":606.296875,\"orbLeft\":66,\"orbRight\":486,\"vh\":844,\"vw\":390,\"eyebrow\":\"Sistema operativo de adquisición de clientes e ingresos\",\"gold\":true}"
+  },
+  {
+   "name": "es@390 orb stays within the viewport horizontally on large screens (art on the right)",
+   "pass": true,
+   "detail": "{\"h1fs\":40,\"h1\":{\"l\":20,\"r\":370,\"b\":478.296875},\"pvBottom\":717.296875,\"growthBottom\":606.296875,\"orbLeft\":66,\"orbRight\":486,\"vh\":844,\"vw\":390,\"eyebrow\":\"Sistema operativo de adquisición de clientes e ingresos\",\"gold\":true}"
+  },
+  {
+   "name": "es@390 homepage sections exist in the shared container",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",350],[\"[data-story=\\\"band\\\"] .home-container\",350],[\"[data-story=\\\"showcase\\\"] .home-container\",350],[\"[data-story=\\\"software\\\"] .home-container\",350],[\"#stack-calculator .home-container\",350],[\"#unified-capabilities .home-container\",350]]"
+  },
+  {
+   "name": "es@390 narrow screens keep sensible gutters",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",350],[\"[data-story=\\\"band\\\"] .home-container\",350],[\"[data-story=\\\"showcase\\\"] .home-container\",350],[\"[data-story=\\\"software\\\"] .home-container\",350],[\"#stack-calculator .home-container\",350],[\"#unified-capabilities .home-container\",350]]"
+  },
+  {
+   "name": "es@390 prose keeps a bounded line length (<= 760px)",
+   "pass": true,
+   "detail": "350"
+  },
+  {
+   "name": "es@390 showcase image scales with the wide container",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@390 narrative order preserved",
+   "pass": true,
+   "detail": "[248.296875,502.296875,626.296875,884,1101.5,1204,1667.84375,2899.46875,3380.46875,3536.46875,3891.640625,6501.0625,8104.5625]"
+  },
+  {
+   "name": "es@390 both story CTAs present after the reveal",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@390 calculator not nested in the orb hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@390 10 toggle syncs input and functions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@390 six hotspots",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@768 exactly one orb canvas, inside the hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@768 orb painted visible particles on first paint",
+   "pass": true,
+   "detail": "{\"ink\":3499,\"frame\":91,\"wrap\":{\"l\":272,\"r\":832,\"t\":168,\"b\":728},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "es@768 orb is decorative: aria-hidden, no pointer events, no horizontal overflow",
+   "pass": true,
+   "detail": "{\"ink\":3499,\"frame\":91,\"wrap\":{\"l\":272,\"r\":832,\"t\":168,\"b\":728},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "es@768 orb animates in normal motion (frame counter advances)",
+   "pass": true,
+   "detail": "{\"a\":91,\"b\":121}"
+  },
+  {
+   "name": "es@768 orb stops drawing once scrolled out of view",
+   "pass": true,
+   "detail": "{\"a\":136,\"b\":136}"
+  },
+  {
+   "name": "es@768 orb resumes when back on screen",
+   "pass": true,
+   "detail": "{\"a\":187,\"b\":212}"
+  },
+  {
+   "name": "es@768 headline hierarchy: display H1 with gold italic phrase, localized eyebrow",
+   "pass": true,
+   "detail": "{\"h1fs\":55.296,\"h1\":{\"l\":20,\"r\":642,\"b\":527.53125},\"pvBottom\":737.28125,\"growthBottom\":639.28125,\"orbLeft\":272,\"orbRight\":832,\"vh\":1024,\"vw\":768,\"eyebrow\":\"Sistema operativo de adquisición de clientes e ingresos\",\"gold\":true}"
+  },
+  {
+   "name": "es@768 CAROS product statement is above the fold",
+   "pass": true,
+   "detail": "{\"h1fs\":55.296,\"h1\":{\"l\":20,\"r\":642,\"b\":527.53125},\"pvBottom\":737.28125,\"growthBottom\":639.28125,\"orbLeft\":272,\"orbRight\":832,\"vh\":1024,\"vw\":768,\"eyebrow\":\"Sistema operativo de adquisición de clientes e ingresos\",\"gold\":true}"
+  },
+  {
+   "name": "es@768 orb stays within the viewport horizontally on large screens (art on the right)",
+   "pass": true,
+   "detail": "{\"h1fs\":55.296,\"h1\":{\"l\":20,\"r\":642,\"b\":527.53125},\"pvBottom\":737.28125,\"growthBottom\":639.28125,\"orbLeft\":272,\"orbRight\":832,\"vh\":1024,\"vw\":768,\"eyebrow\":\"Sistema operativo de adquisición de clientes e ingresos\",\"gold\":true}"
+  },
+  {
+   "name": "es@768 homepage sections exist in the shared container",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",728],[\"[data-story=\\\"band\\\"] .home-container\",728],[\"[data-story=\\\"showcase\\\"] .home-container\",728],[\"[data-story=\\\"software\\\"] .home-container\",728],[\"#stack-calculator .home-container\",728],[\"#unified-capabilities .home-container\",728]]"
+  },
+  {
+   "name": "es@768 narrow screens keep sensible gutters",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",728],[\"[data-story=\\\"band\\\"] .home-container\",728],[\"[data-story=\\\"showcase\\\"] .home-container\",728],[\"[data-story=\\\"software\\\"] .home-container\",728],[\"#stack-calculator .home-container\",728],[\"#unified-capabilities .home-container\",728]]"
+  },
+  {
+   "name": "es@768 prose keeps a bounded line length (<= 760px)",
+   "pass": true,
+   "detail": "549.78125"
+  },
+  {
+   "name": "es@768 showcase image scales with the wide container",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@768 narrative order preserved",
+   "pass": true,
+   "detail": "[273.21875,551.53125,659.28125,936,1111,1197,1486.734375,2358.171875,2720.421875,2876.421875,3364.71875,4879.25,6072.640625]"
+  },
+  {
+   "name": "es@768 both story CTAs present after the reveal",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@768 calculator not nested in the orb hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@768 10 toggle syncs input and functions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@768 six hotspots",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@1440 exactly one orb canvas, inside the hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@1440 orb painted visible particles on first paint",
+   "pass": true,
+   "detail": "{\"ink\":3580,\"frame\":92,\"wrap\":{\"l\":734.421875,\"r\":1425.609375,\"t\":102.40625,\"b\":793.59375},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "es@1440 orb is decorative: aria-hidden, no pointer events, no horizontal overflow",
+   "pass": true,
+   "detail": "{\"ink\":3580,\"frame\":92,\"wrap\":{\"l\":734.421875,\"r\":1425.609375,\"t\":102.40625,\"b\":793.59375},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "es@1440 orb animates in normal motion (frame counter advances)",
+   "pass": true,
+   "detail": "{\"a\":92,\"b\":122}"
+  },
+  {
+   "name": "es@1440 orb stops drawing once scrolled out of view",
+   "pass": true,
+   "detail": "{\"a\":137,\"b\":137}"
+  },
+  {
+   "name": "es@1440 orb resumes when back on screen",
+   "pass": true,
+   "detail": "{\"a\":195,\"b\":219}"
+  },
+  {
+   "name": "es@1440 headline hierarchy: display H1 with gold italic phrase, localized eyebrow",
+   "pass": true,
+   "detail": "{\"h1fs\":72,\"h1\":{\"l\":77.75,\"r\":874.125,\"b\":556.21875},\"pvBottom\":785.46875,\"growthBottom\":677.71875,\"orbLeft\":734.421875,\"orbRight\":1425.609375,\"vh\":900,\"vw\":1440,\"eyebrow\":\"Sistema operativo de adquisición de clientes e ingresos\",\"gold\":true}"
+  },
+  {
+   "name": "es@1440 CAROS product statement is above the fold",
+   "pass": true,
+   "detail": "{\"h1fs\":72,\"h1\":{\"l\":77.75,\"r\":874.125,\"b\":556.21875},\"pvBottom\":785.46875,\"growthBottom\":677.71875,\"orbLeft\":734.421875,\"orbRight\":1425.609375,\"vh\":900,\"vw\":1440,\"eyebrow\":\"Sistema operativo de adquisición de clientes e ingresos\",\"gold\":true}"
+  },
+  {
+   "name": "es@1440 orb stays within the viewport horizontally on large screens (art on the right)",
+   "pass": true,
+   "detail": "{\"h1fs\":72,\"h1\":{\"l\":77.75,\"r\":874.125,\"b\":556.21875},\"pvBottom\":785.46875,\"growthBottom\":677.71875,\"orbLeft\":734.421875,\"orbRight\":1425.609375,\"vh\":900,\"vw\":1440,\"eyebrow\":\"Sistema operativo de adquisición de clientes e ingresos\",\"gold\":true}"
+  },
+  {
+   "name": "es@1440 H1 text does not run under most of the orb (H1 right edge < 62% of viewport)",
+   "pass": true,
+   "detail": "{\"h1fs\":72,\"h1\":{\"l\":77.75,\"r\":874.125,\"b\":556.21875},\"pvBottom\":785.46875,\"growthBottom\":677.71875,\"orbLeft\":734.421875,\"orbRight\":1425.609375,\"vh\":900,\"vw\":1440,\"eyebrow\":\"Sistema operativo de adquisición de clientes e ingresos\",\"gold\":true}"
+  },
+  {
+   "name": "es@1440 homepage sections exist in the shared container",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",1284],[\"[data-story=\\\"band\\\"] .home-container\",1284],[\"[data-story=\\\"showcase\\\"] .home-container\",1284],[\"[data-story=\\\"software\\\"] .home-container\",1284],[\"#stack-calculator .home-container\",1284],[\"#unified-capabilities .home-container\",1284]]"
+  },
+  {
+   "name": "es@1440 content well beyond the old 1200px strip",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",1284],[\"[data-story=\\\"band\\\"] .home-container\",1284],[\"[data-story=\\\"showcase\\\"] .home-container\",1284],[\"[data-story=\\\"software\\\"] .home-container\",1284],[\"#stack-calculator .home-container\",1284],[\"#unified-capabilities .home-container\",1284]]"
+  },
+  {
+   "name": "es@1440 prose keeps a bounded line length (<= 760px)",
+   "pass": true,
+   "detail": "640"
+  },
+  {
+   "name": "es@1440 showcase image scales with the wide container",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@1440 narrative order preserved",
+   "pass": true,
+   "detail": "[225.03125,580.21875,697.71875,952,1127,1147,1507,2074.296875,2266.296875,2438.296875,3185.15625,4382.84375,5459.640625]"
+  },
+  {
+   "name": "es@1440 both story CTAs present after the reveal",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@1440 calculator not nested in the orb hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@1440 10 toggle syncs input and functions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@1440 six hotspots",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@1920 exactly one orb canvas, inside the hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@1920 orb painted visible particles on first paint",
+   "pass": true,
+   "detail": "{\"ink\":3529,\"frame\":88,\"wrap\":{\"l\":1040.8125,\"r\":1900.8125,\"t\":26.65625,\"b\":886.65625},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "es@1920 orb is decorative: aria-hidden, no pointer events, no horizontal overflow",
+   "pass": true,
+   "detail": "{\"ink\":3529,\"frame\":88,\"wrap\":{\"l\":1040.8125,\"r\":1900.8125,\"t\":26.65625,\"b\":886.65625},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "es@1920 orb animates in normal motion (frame counter advances)",
+   "pass": true,
+   "detail": "{\"a\":88,\"b\":118}"
+  },
+  {
+   "name": "es@1920 orb stops drawing once scrolled out of view",
+   "pass": true,
+   "detail": "{\"a\":133,\"b\":133}"
+  },
+  {
+   "name": "es@1920 orb resumes when back on screen",
+   "pass": true,
+   "detail": "{\"a\":193,\"b\":217}"
+  },
+  {
+   "name": "es@1920 headline hierarchy: display H1 with gold italic phrase, localized eyebrow",
+   "pass": true,
+   "detail": "{\"h1fs\":96,\"h1\":{\"l\":103.671875,\"r\":1165.5,\"b\":620.0625},\"pvBottom\":849.3125,\"growthBottom\":741.5625,\"orbLeft\":1040.8125,\"orbRight\":1900.8125,\"vh\":1080,\"vw\":1920,\"eyebrow\":\"Sistema operativo de adquisición de clientes e ingresos\",\"gold\":true}"
+  },
+  {
+   "name": "es@1920 CAROS product statement is above the fold",
+   "pass": true,
+   "detail": "{\"h1fs\":96,\"h1\":{\"l\":103.671875,\"r\":1165.5,\"b\":620.0625},\"pvBottom\":849.3125,\"growthBottom\":741.5625,\"orbLeft\":1040.8125,\"orbRight\":1900.8125,\"vh\":1080,\"vw\":1920,\"eyebrow\":\"Sistema operativo de adquisición de clientes e ingresos\",\"gold\":true}"
+  },
+  {
+   "name": "es@1920 orb stays within the viewport horizontally on large screens (art on the right)",
+   "pass": true,
+   "detail": "{\"h1fs\":96,\"h1\":{\"l\":103.671875,\"r\":1165.5,\"b\":620.0625},\"pvBottom\":849.3125,\"growthBottom\":741.5625,\"orbLeft\":1040.8125,\"orbRight\":1900.8125,\"vh\":1080,\"vw\":1920,\"eyebrow\":\"Sistema operativo de adquisición de clientes e ingresos\",\"gold\":true}"
+  },
+  {
+   "name": "es@1920 H1 text does not run under most of the orb (H1 right edge < 62% of viewport)",
+   "pass": true,
+   "detail": "{\"h1fs\":96,\"h1\":{\"l\":103.671875,\"r\":1165.5,\"b\":620.0625},\"pvBottom\":849.3125,\"growthBottom\":741.5625,\"orbLeft\":1040.8125,\"orbRight\":1900.8125,\"vh\":1080,\"vw\":1920,\"eyebrow\":\"Sistema operativo de adquisición de clientes e ingresos\",\"gold\":true}"
+  },
+  {
+   "name": "es@1920 homepage sections exist in the shared container",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",1713],[\"[data-story=\\\"band\\\"] .home-container\",1713],[\"[data-story=\\\"showcase\\\"] .home-container\",1713],[\"[data-story=\\\"software\\\"] .home-container\",1713],[\"#stack-calculator .home-container\",1713],[\"#unified-capabilities .home-container\",1713]]"
+  },
+  {
+   "name": "es@1920 content uses 86-94% of viewport",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",1713],[\"[data-story=\\\"band\\\"] .home-container\",1713],[\"[data-story=\\\"showcase\\\"] .home-container\",1713],[\"[data-story=\\\"software\\\"] .home-container\",1713],[\"#stack-calculator .home-container\",1713],[\"#unified-capabilities .home-container\",1713]]"
+  },
+  {
+   "name": "es@1920 prose keeps a bounded line length (<= 760px)",
+   "pass": true,
+   "detail": "640"
+  },
+  {
+   "name": "es@1920 showcase image scales with the wide container",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@1920 narrative order preserved",
+   "pass": true,
+   "detail": "[178.5,644.0625,761.5625,969.3125,1144.3125,1164.3125,1469.625,2014.171875,2206.171875,2378.171875,3323.953125,4521.640625,5557.4375]"
+  },
+  {
+   "name": "es@1920 both story CTAs present after the reveal",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@1920 calculator not nested in the orb hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@1920 10 toggle syncs input and functions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@1920 six hotspots",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@2560 exactly one orb canvas, inside the hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@2560 orb painted visible particles on first paint",
+   "pass": true,
+   "detail": "{\"ink\":3545,\"frame\":96,\"wrap\":{\"l\":1674.40625,\"r\":2534.40625,\"t\":18,\"b\":878},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "es@2560 orb is decorative: aria-hidden, no pointer events, no horizontal overflow",
+   "pass": true,
+   "detail": "{\"ink\":3545,\"frame\":96,\"wrap\":{\"l\":1674.40625,\"r\":2534.40625,\"t\":18,\"b\":878},\"pe\":\"none\",\"aria\":\"true\",\"over\":0}"
+  },
+  {
+   "name": "es@2560 orb animates in normal motion (frame counter advances)",
+   "pass": true,
+   "detail": "{\"a\":97,\"b\":127}"
+  },
+  {
+   "name": "es@2560 orb stops drawing once scrolled out of view",
+   "pass": true,
+   "detail": "{\"a\":142,\"b\":142}"
+  },
+  {
+   "name": "es@2560 orb resumes when back on screen",
+   "pass": true,
+   "detail": "{\"a\":201,\"b\":225}"
+  },
+  {
+   "name": "es@2560 headline hierarchy: display H1 with gold italic phrase, localized eyebrow",
+   "pass": true,
+   "detail": "{\"h1fs\":104,\"h1\":{\"l\":124.796875,\"r\":1557.234375,\"b\":570.015625},\"pvBottom\":799.265625,\"growthBottom\":691.515625,\"orbLeft\":1674.40625,\"orbRight\":2534.40625,\"vh\":1300,\"vw\":2560,\"eyebrow\":\"Sistema operativo de adquisición de clientes e ingresos\",\"gold\":true}"
+  },
+  {
+   "name": "es@2560 CAROS product statement is above the fold",
+   "pass": true,
+   "detail": "{\"h1fs\":104,\"h1\":{\"l\":124.796875,\"r\":1557.234375,\"b\":570.015625},\"pvBottom\":799.265625,\"growthBottom\":691.515625,\"orbLeft\":1674.40625,\"orbRight\":2534.40625,\"vh\":1300,\"vw\":2560,\"eyebrow\":\"Sistema operativo de adquisición de clientes e ingresos\",\"gold\":true}"
+  },
+  {
+   "name": "es@2560 orb stays within the viewport horizontally on large screens (art on the right)",
+   "pass": true,
+   "detail": "{\"h1fs\":104,\"h1\":{\"l\":124.796875,\"r\":1557.234375,\"b\":570.015625},\"pvBottom\":799.265625,\"growthBottom\":691.515625,\"orbLeft\":1674.40625,\"orbRight\":2534.40625,\"vh\":1300,\"vw\":2560,\"eyebrow\":\"Sistema operativo de adquisición de clientes e ingresos\",\"gold\":true}"
+  },
+  {
+   "name": "es@2560 H1 text does not run under most of the orb (H1 right edge < 62% of viewport)",
+   "pass": true,
+   "detail": "{\"h1fs\":104,\"h1\":{\"l\":124.796875,\"r\":1557.234375,\"b\":570.015625},\"pvBottom\":799.265625,\"growthBottom\":691.515625,\"orbLeft\":1674.40625,\"orbRight\":2534.40625,\"vh\":1300,\"vw\":2560,\"eyebrow\":\"Sistema operativo de adquisición de clientes e ingresos\",\"gold\":true}"
+  },
+  {
+   "name": "es@2560 homepage sections exist in the shared container",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",2310],[\"[data-story=\\\"band\\\"] .home-container\",2310],[\"[data-story=\\\"showcase\\\"] .home-container\",2310],[\"[data-story=\\\"software\\\"] .home-container\",2310],[\"#stack-calculator .home-container\",2310],[\"#unified-capabilities .home-container\",2310]]"
+  },
+  {
+   "name": "es@2560 content uses 86-94% of viewport",
+   "pass": true,
+   "detail": "[[\"[data-story=\\\"hero\\\"] .home-container\",2310],[\"[data-story=\\\"band\\\"] .home-container\",2310],[\"[data-story=\\\"showcase\\\"] .home-container\",2310],[\"[data-story=\\\"software\\\"] .home-container\",2310],[\"#stack-calculator .home-container\",2310],[\"#unified-capabilities .home-container\",2310]]"
+  },
+  {
+   "name": "es@2560 prose keeps a bounded line length (<= 760px)",
+   "pass": true,
+   "detail": "640"
+  },
+  {
+   "name": "es@2560 showcase image scales with the wide container",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@2560 narrative order preserved",
+   "pass": true,
+   "detail": "[211.234375,594.015625,711.515625,952,1127,1147,1399,1901.546875,2093.546875,2265.546875,3489.0625,4686.75,5680.296875]"
+  },
+  {
+   "name": "es@2560 both story CTAs present after the reveal",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@2560 calculator not nested in the orb hero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@2560 10 toggle syncs input and functions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "es@2560 six hotspots",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@390 reduced motion: static orb painted once, no animation loop",
+   "pass": true,
+   "detail": "{\"ink\":2851,\"a\":1,\"b\":1}"
+  },
+  {
+   "name": "en@1440 reduced motion: static orb painted once, no animation loop",
+   "pass": true,
+   "detail": "{\"ink\":2839,\"a\":1,\"b\":1}"
+  },
+  {
+   "name": "es@390 reduced motion: static orb painted once, no animation loop",
+   "pass": true,
+   "detail": "{\"ink\":2851,\"a\":1,\"b\":1}"
+  },
+  {
+   "name": "es@1440 reduced motion: static orb painted once, no animation loop",
+   "pass": true,
+   "detail": "{\"ink\":2839,\"a\":1,\"b\":1}"
+  },
+  {
+   "name": "en@390 consent banner visible on first visit and no overflow",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@390 floating chat launcher present",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@1440 consent banner visible on first visit and no overflow",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "en@1440 floating chat launcher present",
+   "pass": true,
+   "detail": ""
+  }
+ ]
+}

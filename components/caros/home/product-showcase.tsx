@@ -43,7 +43,7 @@ export function ProductShowcase() {
           alt={t("alt")}
           width={IMG_W}
           height={IMG_H}
-          sizes="(min-width: 1280px) 1152px, 100vw"
+          sizes="(min-width: 1280px) 90vw, 100vw"
           quality={80}
           className="absolute left-0 top-0 h-auto w-full max-w-none"
         />

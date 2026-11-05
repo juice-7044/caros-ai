@@ -34,6 +34,9 @@ export function AnimatedGlobe() {
     window.addEventListener("resize", resize)
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    let running = false
+    let visible = true
+    let frames = 0
 
     const render = () => {
       const rect = canvas.getBoundingClientRect()
@@ -89,14 +92,50 @@ export function AnimatedGlobe() {
         ctx.fillText(point.char, point.x, point.y)
       })
 
-      if (!reduceMotion) time += 0.02
+      // Exposed for browser checks: proves the orb painted and, in normal motion, keeps advancing.
+      canvas.dataset.frame = String((frames += 1))
+
+      if (reduceMotion) {
+        running = false
+        return
+      }
+      time += 0.02
       frameRef.current = requestAnimationFrame(render)
     }
 
-    render()
+    const start = () => {
+      if (running) return
+      running = true
+      render()
+    }
+
+    // First frame always paints (static under reduced motion); the loop only runs while the orb is on screen and the tab is visible.
+    // Drawn from the first animation frame (not synchronously in the effect) so hydration and the consent banner/launcher stay unblocked.
+    running = !reduceMotion
+    frameRef.current = requestAnimationFrame(render)
+
+    const io = new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting
+      if (visible && !document.hidden && !reduceMotion) start()
+      else {
+        cancelAnimationFrame(frameRef.current)
+        running = false
+      }
+    })
+    io.observe(canvas)
+
+    const onVisibility = () => {
+      if (document.hidden) {
+        cancelAnimationFrame(frameRef.current)
+        running = false
+      } else if (visible && !reduceMotion) start()
+    }
+    document.addEventListener("visibilitychange", onVisibility)
 
     return () => {
       window.removeEventListener("resize", resize)
+      document.removeEventListener("visibilitychange", onVisibility)
+      io.disconnect()
       cancelAnimationFrame(frameRef.current)
     }
   }, [])

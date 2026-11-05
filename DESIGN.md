@@ -9,10 +9,16 @@
 - Icons: lucide-react only, 1.5–2px stroke, recognizable (Megaphone, Handshake, MessageSquare, RotateCcw, Workflow, LifeBuoy, Star, Users, Plus).
 
 ## Layout rules
-- One idea per section: eyebrow, one headline, at most two short sentences, one visual, one CTA. Max width 1200–1400px, section padding `py-20 lg:py-28`.
+- One idea per section: eyebrow, one headline, at most two short sentences, one visual, one CTA. Section padding `py-20 lg:py-28`.
 - Alternate light and `bg-ink` bands to pace the page. Generous whitespace; no decorative blobs, no stock gradients beyond the existing `radial-glow`.
 - Details live behind native `<details>` / accordions, never in long paragraphs.
 - Diagrams are SVG/CSS built from real labels (functions, lifecycle stages). They are explicitly *diagrams*, not product screens.
+
+## Homepage composition and container
+- **Container:** every homepage section (hero, story band, screenshot, software comparison, calculators, capabilities, challenges, lifecycle, product experience, ROI, final CTA) uses the shared `.home-container` in `app/globals.css`: `max-width: min(94vw, 2560px)`, fluid gutters `clamp(1.25rem, 2.4vw, 3rem)`. Content uses ~88–92% of the viewport at 1920/2560 and is capped at 2560px on ultrawide. Do not add per-section `max-w-[1200px]`/`max-w-6xl` outer strips.
+- Prose keeps its own line-length bound (`max-w-[60ch]`-ish); fill width with grids and composition, not by stretching paragraphs.
+- **Hero:** a real entrance. Eyebrow (`HomePage.hero.eyebrow`), large black display H1 with the gold italic second phrase, the growth sentence and the CAROS definition, over the original ASCII globe (`AnimatedGlobe`, right side, `aria-hidden`, pointer-events none) and faint grid. The globe lives only in the hero: pale and cropped on mobile, a full sphere from `lg`. It pauses offscreen/hidden tabs and draws one static frame under `prefers-reduced-motion`.
+- **Story band:** the traditional-hiring transition, cost question, calculator, roles/functions, convergence, CAROS reveal and both CTAs sit in one contiguous band directly under the hero (outside the orb section), followed by the real screenshot and software costs.
 
 ## Honesty rules
 - Never render invented product UI, metrics, testimonials or customer names. Calculators show the visitor's own inputs.

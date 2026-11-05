@@ -154,6 +154,17 @@
     transform: translateY(0);
   }
 
+  /* Shared homepage width: ~90% of the viewport up to 2560px, with gutters that scale instead of a fixed 1200px strip. */
+  .home-container {
+    width: 100%;
+    margin-inline: auto;
+    max-width: min(94vw, 2560px);
+    padding-inline: clamp(1.25rem, 2.4vw, 3rem);
+  }
+  @media (max-width: 1100px) {
+    .home-container { max-width: 100%; }
+  }
+
   .radial-glow {
     background: radial-gradient(60% 60% at 50% 40%, rgba(201, 162, 39, 0.18) 0%, rgba(201, 162, 39, 0) 70%);
   }

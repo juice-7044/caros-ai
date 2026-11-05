@@ -12,7 +12,7 @@ export function HumanAnswering() {
   return (
     <section className="relative overflow-hidden bg-ink py-28 text-ink-foreground lg:py-40">
       <div className="pointer-events-none absolute inset-0 radial-glow opacity-50" />
-      <div className="relative mx-auto grid max-w-[1200px] gap-14 px-6 lg:grid-cols-2 lg:items-center lg:px-12">
+      <div className="relative home-container grid gap-14 lg:grid-cols-2 lg:items-center">
         <Reveal>
           <h2 className="text-balance text-[clamp(2.25rem,5vw,4rem)] font-display leading-[0.98] tracking-tight">
             {t("headline")}

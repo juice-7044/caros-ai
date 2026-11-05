@@ -7,7 +7,7 @@ export function Retention() {
 
   return (
     <section className="bg-background py-28 lg:py-40">
-      <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
+      <div className="mx-auto home-container">
         <div className="relative grid gap-8 lg:grid-cols-2">
           {/* connective line */}
           <div className="pointer-events-none absolute left-1/2 top-1/2 hidden h-px w-16 -translate-x-1/2 -translate-y-1/2 bg-gold lg:block" />

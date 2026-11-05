@@ -55,8 +55,8 @@ export function SiteNav() {
         className={cn(
           "mx-auto transition-all duration-500",
           scrolled || open
-            ? "max-w-[1200px] rounded-2xl border border-foreground/10 bg-background/80 shadow-lg backdrop-blur-xl"
-            : "max-w-[1400px] border border-transparent bg-transparent",
+            ? "max-w-[1200px] xl:max-w-[min(92vw,1800px)] rounded-2xl border border-foreground/10 bg-background/80 shadow-lg backdrop-blur-xl"
+            : "max-w-[1400px] xl:max-w-[min(94vw,2560px)] border border-transparent bg-transparent",
         )}
       >
         <div

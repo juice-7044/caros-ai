@@ -17,7 +17,7 @@ export function View360() {
   return (
     <section className="relative overflow-hidden bg-ink py-28 text-ink-foreground lg:py-40">
       <div className="pointer-events-none absolute inset-0 radial-glow opacity-60" />
-      <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12">
+      <div className="relative mx-auto home-container">
         <Reveal className="max-w-3xl">
           <Eyebrow>{tr("Business Intelligence")}</Eyebrow>
           <h2 className="mt-6 text-balance text-[clamp(2.25rem,5vw,4rem)] font-display leading-[0.98] tracking-tight">

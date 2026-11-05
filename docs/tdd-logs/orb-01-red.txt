@@ -1,0 +1,519 @@
+✖ hero restores the original AnimatedGlobe + grid backdrop, once, outside the story (1.939333ms)
+✔ no AnimatedGlobe in any story subsection or other home component (6.24775ms)
+✖ globe stops animating offscreen and keeps the original implementation (0.706791ms)
+✖ page order: Hero, then a contiguous story band, then showcase (0.866375ms)
+✖ shared wide homepage container replaces 1200/6xl outer strips (1.208083ms)
+✔ hero keeps approved narrative copy and uses a localized eyebrow (5.559875ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 2
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 85.549083
+
+✖ failing tests:
+
+test at tests/caros-orb-hero.test.mjs:8:1
+✖ hero restores the original AnimatedGlobe + grid backdrop, once, outside the story (1.939333ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /import \{ AnimatedGlobe \} from "@\/components\/caros\/animated-globe"/. Input:
+  
+  'import { useTranslations } from "next-intl"\n' +
+    'import { HiringStory } from "./hiring-story"\n' +
+    '\n' +
+    '/** Growth -> rising demands -> staffing costs -> unified CAROS value, in one continuous story. */\n' +
+    'export function Hero() {\n' +
+    '  const h = useTranslations("Home.hero")\n' +
+    '\n' +
+    '  return (\n' +
+    '    <section data-story="root" className="hero-gradient relative overflow-hidden">\n' +
+    '      <div className="mx-auto w-full max-w-[1200px] px-5 pb-8 pt-24 sm:px-8 lg:px-12 lg:pb-10 lg:pt-28">\n' +
+    '        <h1 data-story="headline" className="max-w-4xl text-balance text-[clamp(1.9rem,4.2vw,3.5rem)] font-display leading-[1] tracking-tight">\n' +
+    '          {h("title")}{" "}\n' +
+    '          <span className="font-serif font-normal italic text-gold-gradient">{h("subtitle")}</span>\n' +
+    '        </h1>\n' +
+    '        <p data-story="growth" className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">{h("growthBody")}</p>\n' +
+    '        <p data-story="product-value" className="mt-3 max-w-2xl border-l-2 border-gold pl-4 text-sm font-medium leading-relaxed text-foreground sm:text-base">{h("productValue")}</p>\n' +
+    '        <div data-story="demands" className="mt-7 max-w-2xl border-t border-border/70 pt-5">\n' +
+    '          <p className="text-base font-semibold leading-relaxed sm:text-lg">{h("traditional")}</p>\n' +
+    '          <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{h("traditionalBody")}</p>\n' +
+    '        </div>\n' +
+    '        <HiringStory />\n' +
+    '      </div>\n' +
+    '    </section>\n' +
+    '  )\n' +
+    '}\n'
+  
+      at TestContext.<anonymous> (file:///Users/anns-macbook/Projects/caros-ai/tests/caros-orb-hero.test.mjs:10:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'import { useTranslations } from "next-intl"\nimport { HiringStory } from "./hiring-story"\n\n/** Growth -> rising demands -> staffing costs -> unified CAROS value, in one continuous story. */\nexport function Hero() {\n  const h = useTranslations("Home.hero")\n\n  return (\n    <section data-story="root" className="hero-gradient relative overflow-hidden">\n      <div className="mx-auto w-full max-w-[1200px] px-5 pb-8 pt-24 sm:px-8 lg:px-12 lg:pb-10 lg:pt-28">\n        <h1 data-story="headline" className="max-w-4xl text-balance text-[clamp(1.9rem,4.2vw,3.5rem)] font-display leading-[1] tracking-tight">\n          {h("title")}{" "}\n          <span className="font-serif font-normal italic text-gold-gradient">{h("subtitle")}</span>\n        </h1>\n        <p data-story="growth" className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">{h("growthBody")}</p>\n        <p data-story="product-value" className="mt-3 max-w-2xl border-l-2 border-gold pl-4 text-sm font-medium leading-relaxed text-foreground sm:text-base">{h("productValue")}</p>\n        <div data-story="demands" className="mt-7 max-w-2xl border-t border-border/70 pt-5">\n          <p className="text-base font-semibold leading-relaxed sm:text-lg">{h("traditional")}</p>\n          <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{h("traditionalBody")}</p>\n        </div>\n        <HiringStory />\n      </div>\n    </section>\n  )\n}\n',
+    expected: /import \{ AnimatedGlobe \} from "@\/components\/caros\/animated-globe"/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/caros-orb-hero.test.mjs:30:1
+✖ globe stops animating offscreen and keeps the original implementation (0.706791ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /IntersectionObserver/. Input:
+  
+  '"use client"\n' +
+    '\n' +
+    'import { useEffect, useRef } from "react"\n' +
+    '\n' +
+    '/**\n' +
+    ' * Rotating ASCII globe (from the Optimus template hero), retinted for the\n' +
+    ' * light CAROS hero: characters are drawn in near-black with a faint gold cast\n' +
+    ' * so the sphere reads as a premium, quiet background element.\n' +
+    ' */\n' +
+    'export function AnimatedGlobe() {\n' +
+    '  const canvasRef = useRef<HTMLCanvasElement>(null)\n' +
+    '  const frameRef = useRef(0)\n' +
+    '\n' +
+    '  useEffect(() => {\n' +
+    '    const canvas = canvasRef.current\n' +
+    '    if (!canvas) return\n' +
+    '\n' +
+    '    const ctx = canvas.getContext("2d")\n' +
+    '    if (!ctx) return\n' +
+    '\n' +
+    '    const chars = "░▒▓█▀▄▌▐│─┤├┴┬╭╮╰╯"\n' +
+    '    let time = 0\n' +
+    '\n' +
+    '    const resize = () => {\n' +
+    '      const dpr = window.devicePixelRatio || 1\n' +
+    '      const rect = canvas.getBoundingClientRect()\n' +
+    '      canvas.width = rect.width * dpr\n' +
+    '      canvas.height = rect.height * dpr\n' +
+    '      ctx.setTransform(1, 0, 0, 1, 0, 0)\n' +
+    '      ctx.scale(dpr, dpr)\n' +
+    '    }\n' +
+    '\n' +
+    '    resize()\n' +
+    '    window.addEventListener("resize", resize)\n' +
+    '\n' +
+    '    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches\n' +
+    '\n' +
+    '    const render = () => {\n' +
+    '      const rect = canvas.getBoundingClientRect()\n' +
+    '      ctx.clearRect(0, 0, rect.width, rect.height)\n' +
+    '\n' +
+    '      const centerX = rect.width / 2\n' +
+    '      const centerY = rect.height / 2\n' +
+    '      const radius = Math.min(rect.width, rect.height) * 0.525\n' +
+    '\n' +
+    '      ctx.font = "12px monospace"\n' +
+    '      ctx.textAlign = "center"\n' +
+    '      ctx.textBaseline = "middle"\n' +
+    '\n' +
+    '      const points: { x: number; y: number; z: number; char: string }[] = []\n' +
+    '\n' +
+    '      for (let phi = 0; phi < Math.PI * 2; phi += 0.15) {\n' +
+    '        for (let theta = 0; theta < Math.PI; theta += 0.15) {\n' +
+    '          const x = Math.sin(theta) * Math.cos(phi + time * 0.5)\n' +
+    '          const y = Math.sin(theta) * Math.sin(phi + time * 0.5)\n' +
+    '          const z = Math.cos(theta)\n' +
+    '\n' +
+    '          const rotY = time * 0.3\n' +
+    '          const newX = x * Math.cos(rotY) - z * Math.sin(rotY)\n' +
+    '          const newZ = x * Math.sin(rotY) + z * Math.cos(rotY)\n' +
+    '\n' +
+    '          const rotX = time * 0.2\n' +
+    '          const newY = y * Math.cos(rotX) - newZ * Math.sin(rotX)\n' +
+    '          const finalZ = y * Math.sin(rotX) + newZ * Math.cos(rotX)\n' +
+    '\n' +
+    '          const depth = (finalZ + 1) / 2\n' +
+    '          const charIndex = Math.floor(depth * (chars.length - 1))\n' +
+    '\n' +
+    '          points.push({\n' +
+    '            x: centerX + newX * radius,\n' +
+    '            y: centerY + newY * radius,\n' +
+    '            z: finalZ,\n' +
+    '            char: chars[charIndex],\n' +
+    '          })\n' +
+    '        }\n' +
+    '      }\n' +
+    '\n' +
+    '      points.sort((a, b) => a.z - b.z)\n' +
+    '\n' +
+    '      points.forEach((point) => {\n' +
+    '        const depth = (point.z + 1) / 2\n' +
+    '        const alpha = 0.14 + depth * 0.5\n' +
+    '        // Front-facing points pick up a subtle gold cast.\n' +
+    '        if (depth > 0.6) {\n' +
+    '          ctx.fillStyle = `rgba(201, 162, 39, ${alpha})`\n' +
+    '        } else {\n' +
+    '          ctx.fillStyle = `rgba(10, 10, 10, ${alpha * 0.7})`\n' +
+    '        }\n' +
+    '        ctx.fillText(point.char, point.x, point.y)\n' +
+    '      })\n' +
+    '\n' +
+    '      if (!reduceMotion) time += 0.02\n' +
+    '      frameRef.current = requestAnimationFrame(render)\n' +
+    '    }\n' +
+    '\n' +
+    '    render()\n' +
+    '\n' +
+    '    return () => {\n' +
+    '      window.removeEventListener("resize", resize)\n' +
+    '      cancelAnimationFrame(frameRef.current)\n' +
+    '    }\n' +
+    '  }, [])\n' +
+    '\n' +
+    '  return <canvas ref={canvasRef} className="h-full w-full" style={{ display: "block" }} />\n' +
+    '}\n'
+  
+      at TestContext.<anonymous> (file:///Users/anns-macbook/Projects/caros-ai/tests/caros-orb-hero.test.mjs:32:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '"use client"\n\nimport { useEffect, useRef } from "react"\n\n/**\n * Rotating ASCII globe (from the Optimus template hero), retinted for the\n * light CAROS hero: characters are drawn in near-black with a faint gold cast\n * so the sphere reads as a premium, quiet background element.\n */\nexport function AnimatedGlobe() {\n  const canvasRef = useRef<HTMLCanvasElement>(null)\n  const frameRef = useRef(0)\n\n  useEffect(() => {\n    const canvas = canvasRef.current\n    if (!canvas) return\n\n    const ctx = canvas.getContext("2d")\n    if (!ctx) return\n\n    const chars = "░▒▓█▀▄▌▐│─┤├┴┬╭╮╰╯"\n    let time = 0\n\n    const resize = () => {\n      const dpr = window.devicePixelRatio || 1\n      const rect = canvas.getBoundingClientRect()\n      canvas.width = rect.width * dpr\n      canvas.height = rect.height * dpr\n      ctx.setTransform(1, 0, 0, 1, 0, 0)\n      ctx.scale(dpr, dpr)\n    }\n\n    resize()\n    window.addEventListener("resize", resize)\n\n    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches\n\n    const render = () => {\n      const rect = canvas.getBoundingClientRect()\n      ctx.clearRect(0, 0, rect.width, rect.height)\n\n      const centerX = rect.width / 2\n      const centerY = rect.height / 2\n      const radius = Math.min(rect.width, rect.height) * 0.525\n\n      ctx.font = "12px monospace"\n      ctx.textAlign = "center"\n      ctx.textBaseline = "middle"\n\n      const points: { x: number; y: number; z: number; char: string }[] = []\n\n      for (let phi = 0; phi < Math.PI * 2; phi += 0.15) {\n        for (let theta = 0; theta < Math.PI; theta += 0.15) {\n          const x = Math.sin(theta) * Math.cos(phi + time * 0.5)\n          const y = Math.sin(theta) * Math.sin(phi + time * 0.5)\n          const z = Math.cos(theta)\n\n          const rotY = time * 0.3\n          const newX = x * Math.cos(rotY) - z * Math.sin(rotY)\n          const newZ = x * Math.sin(rotY) + z * Math.cos(rotY)\n\n          const rotX = time * 0.2\n          const newY = y * Math.cos(rotX) - newZ * Math.sin(rotX)\n          const finalZ = y * Math.sin(rotX) + newZ * Math.cos(rotX)\n\n          const depth = (finalZ + 1) / 2\n          const charIndex = Math.floor(depth * (chars.length - 1))\n\n          points.push({\n            x: centerX + newX * radius,\n            y: centerY + newY * radius,\n            z: finalZ,\n            char: chars[charIndex],\n          })\n        }\n      }\n\n      points.sort((a, b) => a.z - b.z)\n\n      points.forEach((point) => {\n        const depth = (point.z + 1) / 2\n        const alpha = 0.14 + depth * 0.5\n        // Front-facing points pick up a subtle gold cast.\n        if (depth > 0.6) {\n          ctx.fillStyle = `rgba(201, 162, 39, ${alpha})`\n        } else {\n          ctx.fillStyle = `rgba(10, 10, 10, ${alpha * 0.7})`\n        }\n        ctx.fillText(point.char, point.x, point.y)\n      })\n\n      if (!reduceMotion) time += 0.02\n      frameRef.current = requestAnimationFrame(render)\n    }\n\n    render()\n\n    return () => {\n      window.removeEventListener("resize", resize)\n      cancelAnimationFrame(frameRef.current)\n    }\n  }, [])\n\n  return <canvas ref={canvasRef} className="h-full w-full" style={{ display: "block" }} />\n}\n',
+    expected: /IntersectionObserver/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/caros-orb-hero.test.mjs:39:1
+✖ page order: Hero, then a contiguous story band, then showcase (0.866375ms)
+  AssertionError [ERR_ASSERTION]: missing <HiringStory
+      at TestContext.<anonymous> (file:///Users/anns-macbook/Projects/caros-ai/tests/caros-orb-hero.test.mjs:43:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/caros-orb-hero.test.mjs:47:1
+✖ shared wide homepage container replaces 1200/6xl outer strips (1.208083ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /\.home-container\s*\{/. Input:
+  
+  "@import 'tailwindcss';\n" +
+    '\n' +
+    '@custom-variant dark (&:is(.dark *));\n' +
+    '\n' +
+    ':root {\n' +
+    '  /* Base = paper (light) */\n' +
+    '  --background: #ffffff;\n' +
+    '  --foreground: #0a0a0a;\n' +
+    '\n' +
+    '  --card: #ffffff;\n' +
+    '  --card-foreground: #0a0a0a;\n' +
+    '\n' +
+    '  --muted: #f4f4f5;\n' +
+    '  --muted-foreground: #6b7280;\n' +
+    '\n' +
+    '  --border: #e5e7eb;\n' +
+    '  --input: #e5e7eb;\n' +
+    '  --ring: #c9a227;\n' +
+    '\n' +
+    '  /* Ink = near-black dark sections */\n' +
+    '  --ink: #0a0a0a;\n' +
+    '  --ink-foreground: #f5f5f4;\n' +
+    '  --ink-muted: #a1a1aa;\n' +
+    '  --ink-border: #26262a;\n' +
+    '\n' +
+    '  /* Gold accent */\n' +
+    '  --gold: #c9a227;\n' +
+    '  --gold-foreground: #0a0a0a;\n' +
+    '\n' +
+    '  /* Signals */\n' +
+    '  --danger: #c2410c;\n' +
+    '\n' +
+    '  --radius: 0.5rem;\n' +
+    '}\n' +
+    '\n' +
+    '@theme inline {\n' +
+    "  --font-sans: var(--font-archivo), 'Archivo', system-ui, sans-serif;\n" +
+    "  --font-serif: var(--font-instrument-serif), 'Instrument Serif', Georgia, serif;\n" +
+    "  --font-mono: var(--font-jetbrains-mono), 'JetBrains Mono', ui-monospace, monospace;\n" +
+    '\n' +
+    '  --color-background: var(--background);\n' +
+    '  --color-foreground: var(--foreground);\n' +
+    '  --color-card: var(--card);\n' +
+    '  --color-card-foreground: var(--card-foreground);\n' +
+    '  --color-muted: var(--muted);\n' +
+    '  --color-muted-foreground: var(--muted-foreground);\n' +
+    '  --color-border: var(--border);\n' +
+    '  --color-input: var(--input);\n' +
+    '  --color-ring: var(--ring);\n' +
+    '\n' +
+    '  --color-ink: var(--ink);\n' +
+    '  --color-ink-foreground: var(--ink-foreground);\n' +
+    '  --color-ink-muted: var(--ink-muted);\n' +
+    '  --color-ink-border: var(--ink-border);\n' +
+    '\n' +
+    '  --color-gold: var(--gold);\n' +
+    '  --color-gold-foreground: var(--gold-foreground);\n' +
+    '\n' +
+    '  --color-danger: var(--danger);\n' +
+    '\n' +
+    '  --radius-sm: calc(var(--radius) - 4px);\n' +
+    '  --radius-md: calc(var(--radius) - 2px);\n' +
+    '  --radius-lg: var(--radius);\n' +
+    '  --radius-xl: calc(var(--radius) + 4px);\n' +
+    '}\n' +
+    '\n' +
+    '@layer base {\n' +
+    '  * {\n' +
+    '    @apply border-border;\n' +
+    '  }\n' +
+    '  body {\n' +
+    '    @apply bg-background text-foreground;\n' +
+    '  }\n' +
+    '  html {\n' +
+    '    scroll-behavior: smooth;\n' +
+    '  }\n' +
+    '}\n' +
+    '\n' +
+    '@layer components {\n' +
+    '  .industry-theme-shell { isolation: isolate; }\n' +
+    '  .industry-hero .industry-texture { opacity: 0.42; }\n' +
+    '  .industry-hero.theme-clinical .industry-texture {\n' +
+    '    background-image: linear-gradient(90deg, transparent 0 49%, rgba(201, 162, 39, 0.08) 50%, transparent 51%), linear-gradient(0deg, transparent 0 49%, rgba(201, 162, 39, 0.08) 50%, transparent 51%);\n' +
+    '    background-size: 28px 28px;\n' +
+    '  }\n' +
+    '  .industry-hero.theme-competitive .industry-texture {\n' +
+    '    background-image: repeating-linear-gradient(135deg, transparent 0 18px, rgba(194, 65, 12, 0.11) 19px 20px, transparent 21px 38px);\n' +
+    '  }\n' +
+    '  .industry-hero.theme-luxury .industry-texture {\n' +
+    '    background-image: radial-gradient(circle at 18% 22%, rgba(201, 162, 39, 0.14) 0 1px, transparent 1.5px), radial-gradient(circle at 74% 68%, rgba(201, 162, 39, 0.1) 0 1px, transparent 1.5px);\n' +
+    '    background-size: 34px 34px, 46px 46px;\n' +
+    '  }\n' +
+    '  .industry-hero.theme-discreet .industry-texture {\n' +
+    '    background-image: linear-gradient(115deg, transparent 0 48%, rgba(201, 162, 39, 0.09) 49%, transparent 50%);\n' +
+    '    background-size: 72px 72px;\n' +
+    '  }\n' +
+    '  .industry-story-card { transition: transform 220ms ease, border-color 220ms ease; }\n' +
+    '  .industry-story-card:hover { transform: translateY(-2px); border-color: rgba(201, 162, 39, 0.55); }\n' +
+    '}\n' +
+    '\n' +
+    '@layer utilities {\n' +
+    '  .font-serif {\n' +
+    '    font-family: var(--font-serif);\n' +
+    '  }\n' +
+    '\n' +
+    '  /* Eyebrow label */\n' +
+    '  .eyebrow {\n' +
+    '    text-transform: uppercase;\n' +
+    '    letter-spacing: 0.18em;\n' +
+    '    font-weight: 600;\n' +
+    '    font-size: 0.75rem;\n' +
+    '  }\n' +
+    '\n' +
+    '  /* Gold gradient text to echo the metallic logo */\n' +
+    '  .text-gold-gradient {\n' +
+    '    background: linear-gradient(180deg, #e7cf7a 0%, #c9a227 55%, #a9821a 100%);\n' +
+    '    -webkit-background-clip: text;\n' +
+    '    background-clip: text;\n' +
+    '    -webkit-text-fill-color: transparent;\n' +
+    '    color: transparent;\n' +
+    "    /* background-clip:text paints the gradient only inside each line fragment's\n" +
+    '       box. When a gold phrase WRAPS across lines (e.g. "Everything Else Serves\n' +
+    '       It."), the default box-decoration-break: slice paints the whole run as one\n' +
+    '       sliced box, so descenders on non-final lines (the "g"/"y" in "Everything")\n' +
+    '       and italic overhangs get clipped at the line boundary — and padding only\n' +
+    "       reaches the run's very start/end, never the middle lines. box-decoration-break:\n" +
+    '       clone gives EVERY wrapped line fragment its own padded paint box, so each\n' +
+    "       line's descenders and italic edges get gradient fill. The per-side padding\n" +
+    '       (extra at the bottom for deep italic descenders, sides for glyph overhang)\n' +
+    '       plus matching negative margin keeps inline layout unchanged. */\n' +
+    '    -webkit-box-decoration-break: clone;\n' +
+    '    box-decoration-break: clone;\n' +
+    '    line-height: 1.15 !important;\n' +
+    '    padding: 0.05em 0.16em 0.18em !important;\n' +
+    '    margin: 0 -0.16em -0.12em !important;\n' +
+    '  }\n' +
+    '\n' +
+    "  /* Give gradient headings enough leading that a wrapped line's descenders don't\n" +
+    "     collide with the next line's ascenders. Applied ONLY to headings that contain\n" +
+    '     gradient text; every other heading keeps its original tight display leading. */\n' +
+    '  :is(h1, h2, h3, h4):has(.text-gold-gradient) {\n' +
+    '    line-height: 1.15 !important;\n' +
+    '  }\n' +
+    '\n' +
+    '  /* Scroll reveal */\n' +
+    '  .reveal {\n' +
+    '    opacity: 0;\n' +
+    '    transform: translateY(24px);\n' +
+    '    transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);\n' +
+    '    will-change: opacity, transform;\n' +
+    '  }\n' +
+    '  .reveal.is-visible {\n' +
+    '    opacity: 1;\n' +
+    '    transform: translateY(0);\n' +
+    '  }\n' +
+    '\n' +
+    '  .radial-glow {\n' +
+    '    background: radial-gradient(60% 60% at 50% 40%, rgba(201, 162, 39, 0.18) 0%, rgba(201, 162, 39, 0) 70%);\n' +
+    '  }\n' +
+    '\n' +
+    '  /* Editorial display helper: heavy sans, tight tracking (template headline language) */\n' +
+    '  .font-display {\n' +
+    '    font-family: var(--font-sans);\n' +
+    '    font-weight: 800;\n' +
+    '    letter-spacing: -0.02em;\n' +
+    '  }\n' +
+    '\n' +
+    '  /* Hero light gradient background (template) */\n' +
+    '  .hero-gradient {\n' +
+    '    background:\n' +
+    '      radial-gradient(60% 50% at 78% 30%, rgba(201, 162, 39, 0.1) 0%, rgba(201, 162, 39, 0) 60%),\n' +
+    '      linear-gradient(180deg, #ffffff 0%, #fafaf7 55%, #f4f4f2 100%);\n' +
+    '  }\n' +
+    '\n' +
+    '  /* Rotating word char entrance */\n' +
+    '  .animate-char-in {\n' +
+    '    opacity: 0;\n' +
+    '    filter: blur(8px);\n' +
+    '    animation: charIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;\n' +
+    '  }\n' +
+    '  @keyframes charIn {\n' +
+    '    to {\n' +
+    '      opacity: 1;\n' +
+    '      filter: blur(0);\n' +
+    '    }\n' +
+    '  }\n' +
+    '\n' +
+    '  /* Marquee for stats row */\n' +
+    '  .marquee {\n' +
+    '    animation: marquee 32s linear infinite;\n' +
+    '  }\n' +
+    '  @keyframes marquee {\n' +
+    '    from {\n' +
+    '      transform: translateX(0);\n' +
+    '    }\n' +
+    '    to {\n' +
+    '      transform: translateX(-50%);\n' +
+    '    }\n' +
+    '  }\n' +
+    '\n' +
+    '  /* Logo strip scroll for industries */\n' +
+    '  .marquee-slow {\n' +
+    '    animation: marquee 40s linear infinite;\n' +
+    '  }\n' +
+    '\n' +
+    '  /* Progress bar for active step */\n' +
+    '  @keyframes progress {\n' +
+    '    from {\n' +
+    '      width: 0%;\n' +
+    '    }\n' +
+    '    to {\n' +
+    '      width: 100%;\n' +
+    '    }\n' +
+    '  }\n' +
+    '\n' +
+    '  /* Code line + char reveal (money journey / terminal) */\n' +
+    '  .code-line-reveal {\n' +
+    '    opacity: 0;\n' +
+    '    transform: translateX(-8px);\n' +
+    '    animation: lineReveal 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;\n' +
+    '  }\n' +
+    '  @keyframes lineReveal {\n' +
+    '    to {\n' +
+    '      opacity: 1;\n' +
+    '      transform: translateX(0);\n' +
+    '    }\n' +
+    '  }\n' +
+    '\n' +
+    '  /* Premium gold glow pulse for emphasized words (missed calls / missed jobs) */\n' +
+    '  .word-glow {\n' +
+    '    position: relative;\n' +
+    '    color: var(--gold);\n' +
+    '    font-style: italic;\n' +
+    '    font-family: var(--font-serif);\n' +
+    '    animation: wordGlow 3.2s ease-in-out infinite;\n' +
+    '  }\n' +
+    '  @keyframes wordGlow {\n' +
+    '    0%,\n' +
+    '    100% {\n' +
+    '      text-shadow: 0 0 0 rgba(201, 162, 39, 0);\n' +
+    '      opacity: 0.92;\n' +
+    '    }\n' +
+    '    50% {\n' +
+    '      text-shadow: 0 0 22px rgba(201, 162, 39, 0.55);\n' +
+    '      opacity: 1;\n' +
+    '    }\n' +
+    '  }\n' +
+    '\n' +
+    '  @media (prefers-reduced-motion: reduce) {\n' +
+    '    .animate-char-in,\n' +
+    '    .marquee,\n' +
+    '    .marquee-slow,\n' +
+    '    .word-glow,\n' +
+    '    .code-line-reveal {\n' +
+    '      animation: none;\n' +
+    '    }\n' +
+    '    .animate-char-in {\n' +
+    '      opacity: 1;\n' +
+    '      filter: none;\n' +
+    '    }\n' +
+    '  }\n' +
+    '}\n' +
+    '\n' +
+    '/* Home lifecycle: one step glows at a time (6 steps x 1.6s). Disabled for reduced motion; the diagram stays fully readable. */\n' +
+    '@keyframes lifecycle-glow {\n' +
+    '  0%, 16% { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }\n' +
+    '  17%, 100% { border-color: var(--ink-border); box-shadow: none; }\n' +
+    '}\n' +
+    '@media (prefers-reduced-motion: no-preference) {\n' +
+    '  .lifecycle-step {\n' +
+    '    animation: lifecycle-glow 9.6s linear infinite;\n' +
+    '    animation-delay: calc(var(--i, 0) * 1.6s);\n' +
+    '  }\n' +
+    '}\n' +
+    '\n' +
+    '/* While the consent banner is visible, lift the floating chat/voice launcher above it so neither covers the other. */\n' +
+    'html[data-caros-consent-open] [data-caros-voice-widget] { bottom: calc(var(--caros-consent-offset, 0px) + 32px); }\n' +
+    '\n' +
+    '/* Command Center hotspot markers: a soft pulse ring, disabled for reduced motion. */\n' +
+    '.caros-hotspot-dot { position: relative; }\n' +
+    '.caros-hotspot-dot::after { content: ""; position: absolute; inset: -2px; border-radius: 9999px; border: 2px solid currentColor; color: rgb(201 162 39 / 0.7); animation: caros-hotspot-pulse 2.4s ease-out infinite; pointer-events: none; }\n' +
+    '@keyframes caros-hotspot-pulse { 0% { transform: scale(1); opacity: 0.9; } 100% { transform: scale(2.1); opacity: 0; } }\n' +
+    '@media (prefers-reduced-motion: reduce) { .caros-hotspot-dot::after { animation: none; opacity: 0; } .caros-hotspot-dot { transition: none; } }\n' +
+    '\n' +
+    '/* Hiring story: tokens -> lines -> CAROS wordmark -> dashboard. The drawn state is the default (reduced motion stays static);\n' +
+    '   motion exists only under no-preference and starts when the visual enters the viewport (data-play). Opacity/stroke only: no layout shift. */\n' +
+    '.converge-line { stroke-dasharray: 1; stroke-dashoffset: 0; }\n' +
+    '@media (prefers-reduced-motion: no-preference) {\n' +
+    '  .converge[data-play="false"] .converge-token,\n' +
+    '  .converge[data-play="false"] .converge-wordmark,\n' +
+    '  .converge[data-play="false"] .converge-dashboard { opacity: 0; }\n' +
+    '  .converge[data-play="false"] .converge-line { stroke-dashoffset: 1; }\n' +
+    '  .converge[data-play="false"] .converge-seg { opacity: 0; }\n' +
+    '  .converge[data-play="true"] .converge-token { animation: converge-in 0.5s ease-out both; animation-delay: calc(var(--i) * 70ms); }\n' +
+    '  .converge[data-play="true"] .converge-line { animation: converge-draw 0.9s ease-in-out both; animation-delay: calc(var(--i) * 70ms + 350ms); }\n' +
+    '  .converge[data-play="true"] .converge-wordmark { animation: converge-pop 0.6s ease-out both; animation-delay: 1.5s; }\n' +
+    '  .converge[data-play="true"] .converge-dashboard { animati'... 559 more characters
+  
+      at TestContext.<anonymous> (file:///Users/anns-macbook/Projects/caros-ai/tests/caros-orb-hero.test.mjs:49:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: `@import 'tailwindcss';\n\n@custom-variant dark (&:is(.dark *));\n\n:root {\n  /* Base = paper (light) */\n  --background: #ffffff;\n  --foreground: #0a0a0a;\n\n  --card: #ffffff;\n  --card-foreground: #0a0a0a;\n\n  --muted: #f4f4f5;\n  --muted-foreground: #6b7280;\n\n  --border: #e5e7eb;\n  --input: #e5e7eb;\n  --ring: #c9a227;\n\n  /* Ink = near-black dark sections */\n  --ink: #0a0a0a;\n  --ink-foreground: #f5f5f4;\n  --ink-muted: #a1a1aa;\n  --ink-border: #26262a;\n\n  /* Gold accent */\n  --gold: #c9a227;\n  --gold-foreground: #0a0a0a;\n\n  /* Signals */\n  --danger: #c2410c;\n\n  --radius: 0.5rem;\n}\n\n@theme inline {\n  --font-sans: var(--font-archivo), 'Archivo', system-ui, sans-serif;\n  --font-serif: var(--font-instrument-serif), 'Instrument Serif', Georgia, serif;\n  --font-mono: var(--font-jetbrains-mono), 'JetBrains Mono', ui-monospace, monospace;\n\n  --color-background: var(--background);\n  --color-foreground: var(--foreground);\n  --color-card: var(--card);\n  --color-card-foreground: var(--card-foreground);\n  --color-muted: var(--muted);\n  --color-muted-foreground: var(--muted-foreground);\n  --color-border: var(--border);\n  --color-input: var(--input);\n  --color-ring: var(--ring);\n\n  --color-ink: var(--ink);\n  --color-ink-foreground: var(--ink-foreground);\n  --color-ink-muted: var(--ink-muted);\n  --color-ink-border: var(--ink-border);\n\n  --color-gold: var(--gold);\n  --color-gold-foreground: var(--gold-foreground);\n\n  --color-danger: var(--danger);\n\n  --radius-sm: calc(var(--radius) - 4px);\n  --radius-md: calc(var(--radius) - 2px);\n  --radius-lg: var(--radius);\n  --radius-xl: calc(var(--radius) + 4px);\n}\n\n@layer base {\n  * {\n    @apply border-border;\n  }\n  body {\n    @apply bg-background text-foreground;\n  }\n  html {\n    scroll-behavior: smooth;\n  }\n}\n\n@layer components {\n  .industry-theme-shell { isolation: isolate; }\n  .industry-hero .industry-texture { opacity: 0.42; }\n  .industry-hero.theme-clinical .industry-texture {\n    background-image: linear-gradient(90deg, transparent 0 49%, rgba(201, 162, 39, 0.08) 50%, transparent 51%), linear-gradient(0deg, transparent 0 49%, rgba(201, 162, 39, 0.08) 50%, transparent 51%);\n    background-size: 28px 28px;\n  }\n  .industry-hero.theme-competitive .industry-texture {\n    background-image: repeating-linear-gradient(135deg, transparent 0 18px, rgba(194, 65, 12, 0.11) 19px 20px, transparent 21px 38px);\n  }\n  .industry-hero.theme-luxury .industry-texture {\n    background-image: radial-gradient(circle at 18% 22%, rgba(201, 162, 39, 0.14) 0 1px, transparent 1.5px), radial-gradient(circle at 74% 68%, rgba(201, 162, 39, 0.1) 0 1px, transparent 1.5px);\n    background-size: 34px 34px, 46px 46px;\n  }\n  .industry-hero.theme-discreet .industry-texture {\n    background-image: linear-gradient(115deg, transparent 0 48%, rgba(201, 162, 39, 0.09) 49%, transparent 50%);\n    background-size: 72px 72px;\n  }\n  .industry-story-card { transition: transform 220ms ease, border-color 220ms ease; }\n  .industry-story-card:hover { transform: translateY(-2px); border-color: rgba(201, 162, 39, 0.55); }\n}\n\n@layer utilities {\n  .font-serif {\n    font-family: var(--font-serif);\n  }\n\n  /* Eyebrow label */\n  .eyebrow {\n    text-transform: uppercase;\n    letter-spacing: 0.18em;\n    font-weight: 600;\n    font-size: 0.75rem;\n  }\n\n  /* Gold gradient text to echo the metallic logo */\n  .text-gold-gradient {\n    background: linear-gradient(180deg, #e7cf7a 0%, #c9a227 55%, #a9821a 100%);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n    color: transparent;\n    /* background-clip:text paints the gradient only inside each line fragment's\n       box. When a gold phrase WRAPS across lines (e.g. "Everything Else Serves\n       It."), the default box-decoration-break: slice paints the whole run as one\n       sliced box, so descenders on non-final lines (the "g"/"y" in "Everything")\n       and italic overhangs get clipped at the line boundary — and padding only\n       reaches the run's very start/end, never the middle lines. box-decoration-break:\n       clone gives EVERY wrapped line fragment its own padded paint box, so each\n       line's descenders and italic edges get gradient fill. The per-side padding\n       (extra at the bottom for deep italic descenders, sides for glyph overhang)\n       plus matching negative margin keeps inline layout unchanged. */\n    -webkit-box-decoration-break: clone;\n    box-decoration-break: clone;\n    line-height: 1.15 !important;\n    padding: 0.05em 0.16em 0.18em !important;\n    margin: 0 -0.16em -0.12em !important;\n  }\n\n  /* Give gradient headings enough leading that a wrapped line's descenders don't\n     collide with the next line's ascenders. Applied ONLY to headings that contain\n     gradient text; every other heading keeps its original tight display leading. */\n  :is(h1, h2, h3, h4):has(.text-gold-gradient) {\n    line-height: 1.15 !important;\n  }\n\n  /* Scroll reveal */\n  .reveal {\n    opacity: 0;\n    transform: translateY(24px);\n    transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);\n    will-change: opacity, transform;\n  }\n  .reveal.is-visible {\n    opacity: 1;\n    transform: translateY(0);\n  }\n\n  .radial-glow {\n    background: radial-gradient(60% 60% at 50% 40%, rgba(201, 162, 39, 0.18) 0%, rgba(201, 162, 39, 0) 70%);\n  }\n\n  /* Editorial display helper: heavy sans, tight tracking (template headline language) */\n  .font-display {\n    font-family: var(--font-sans);\n    font-weight: 800;\n    letter-spacing: -0.02em;\n  }\n\n  /* Hero light gradient background (template) */\n  .hero-gradient {\n    background:\n      radial-gradient(60% 50% at 78% 30%, rgba(201, 162, 39, 0.1) 0%, rgba(201, 162, 39, 0) 60%),\n      linear-gradient(180deg, #ffffff 0%, #fafaf7 55%, #f4f4f2 100%);\n  }\n\n  /* Rotating word char entrance */\n  .animate-char-in {\n    opacity: 0;\n    filter: blur(8px);\n    animation: charIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;\n  }\n  @keyframes charIn {\n    to {\n      opacity: 1;\n      filter: blur(0);\n    }\n  }\n\n  /* Marquee for stats row */\n  .marquee {\n    animation: marquee 32s linear infinite;\n  }\n  @keyframes marquee {\n    from {\n      transform: translateX(0);\n    }\n    to {\n      transform: translateX(-50%);\n    }\n  }\n\n  /* Logo strip scroll for industries */\n  .marquee-slow {\n    animation: marquee 40s linear infinite;\n  }\n\n  /* Progress bar for active step */\n  @keyframes progress {\n    from {\n      width: 0%;\n    }\n    to {\n      width: 100%;\n    }\n  }\n\n  /* Code line + char reveal (money journey / terminal) */\n  .code-line-reveal {\n    opacity: 0;\n    transform: translateX(-8px);\n    animation: lineReveal 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;\n  }\n  @keyframes lineReveal {\n    to {\n      opacity: 1;\n      transform: translateX(0);\n    }\n  }\n\n  /* Premium gold glow pulse for emphasized words (missed calls / missed jobs) */\n  .word-glow {\n    position: relative;\n    color: var(--gold);\n    font-style: italic;\n    font-family: var(--font-serif);\n    animation: wordGlow 3.2s ease-in-out infinite;\n  }\n  @keyframes wordGlow {\n    0%,\n    100% {\n      text-shadow: 0 0 0 rgba(201, 162, 39, 0);\n      opacity: 0.92;\n    }\n    50% {\n      text-shadow: 0 0 22px rgba(201, 162, 39, 0.55);\n      opacity: 1;\n    }\n  }\n\n  @media (prefers-reduced-motion: reduce) {\n    .animate-char-in,\n    .marquee,\n    .marquee-slow,\n    .word-glow,\n    .code-line-reveal {\n      animation: none;\n    }\n    .animate-char-in {\n      opacity: 1;\n      filter: none;\n    }\n  }\n}\n\n/* Home lifecycle: one step glows at a time (6 steps x 1.6s). Disabled for reduced motion; the diagram stays fully readable. */\n@keyframes lifecycle-glow {\n  0%, 16% { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }\n  17%, 100% { border-color: var(--ink-border); box-shadow: none; }\n}\n@media (prefers-reduced-motion: no-preference) {\n  .lifecycle-step {\n    animation: lifecycle-glow 9.6s linear infinite;\n    animation-delay: calc(var(--i, 0) * 1.6s);\n  }\n}\n\n/* While the consent banner is visible, lift the floating chat/voice launcher above it so neither covers the other. */\nhtml[data-caros-consent-open] [data-caros-voice-widget] { bottom: calc(var(--caros-consent-offset, 0px) + 32px); }\n\n/* Command Center hotspot markers: a soft pulse ring, disabled for reduced motion. */\n.caros-hotspot-dot { position: relative; }\n.caros-hotspot-dot::after { content: ""; position: absolute; inset: -2px; border-radius: 9999px; border: 2px solid currentColor; color: rgb(201 162 39 / 0.7); animation: caros-hotspot-pulse 2.4s ease-out infinite; pointer-events: none; }\n@keyframes caros-hotspot-pulse { 0% { transform: scale(1); opacity: 0.9; } 100% { transform: scale(2.1); opacity: 0; } }\n@media (prefers-reduced-motion: reduce) { .caros-hotspot-dot::after { animation: none; opacity: 0; } .caros-hotspot-dot { transition: none; } }\n\n/* Hiring story: tokens -> lines -> CAROS wordmark -> dashboard. The drawn state is the default (reduced motion stays static);\n   motion exists only under no-preference and starts when the visual enters the viewport (data-play). Opacity/stroke only: no layout shift. */\n.converge-line { stroke-dasharray: 1; stroke-dashoffset: 0; }\n@media (prefers-reduced-motion: no-preference) {\n  .converge[data-play="false"] .converge-token,\n  .converge[data-play="false"] .converge-wordmark,\n  .converge[data-play="false"] .converge-dashboard { opacity: 0; }\n  .converge[data-play="false"] .converge-line { stroke-dashoffset: 1; }\n  .converge[data-play="false"] .converge-seg { opacity: 0; }\n  .converge[data-play="true"] .converge-token { animation: converge-in 0.5s ease-out both; animation-delay: calc(var(--i) * 70ms); }\n  .converge[data-play="true"] .converge-line { animation: converge-draw 0.9s ease-in-out both; animation-delay: calc(var(--i) * 70ms + 350ms); }\n  .converge[data-play="true"] .converge-wordmark { animation: converge-pop 0.6s ease-out both; animation-delay: 1.5s; }\n  .converge[data-play="true"] .converge-dashboard { animati`... 559 more characters,
+    expected: /\.home-container\s*\{/,
+    operator: 'match',
+    diff: 'simple'
+  }
