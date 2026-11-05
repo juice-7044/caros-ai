@@ -115,7 +115,15 @@
    "pass": true
   },
   {
-   "name": "showcase unavailable notice shown (no screenshot asset) and no broken img",
+   "name": "showcase image loaded (naturalWidth>0)",
+   "pass": true
+  },
+  {
+   "name": "six hotspot buttons with aria-labels",
+   "pass": true
+  },
+  {
+   "name": "hotspot open shows detail and fires showcase_interaction hotspot",
    "pass": true
   },
   {

@@ -33,8 +33,10 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  // Optimizer on (AVIF/WebP) for the Command Center screenshot; it is the only next/image user.
   images: {
-    unoptimized: true,
+    formats: ["image/avif", "image/webp"],
+    deviceSizes: [360, 480, 640, 768, 1024, 1280, 1600, 1920],
   },
 }
 

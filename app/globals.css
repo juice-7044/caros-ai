@@ -272,3 +272,12 @@
     animation-delay: calc(var(--i, 0) * 1.6s);
   }
 }
+
+/* While the consent banner is visible, lift the floating chat/voice launcher above it so neither covers the other. */
+html[data-caros-consent-open] [data-caros-voice-widget] { bottom: calc(var(--caros-consent-offset, 0px) + 32px); }
+
+/* Command Center hotspot markers: a soft pulse ring, disabled for reduced motion. */
+.caros-hotspot-dot { position: relative; }
+.caros-hotspot-dot::after { content: ""; position: absolute; inset: -2px; border-radius: 9999px; border: 2px solid currentColor; color: rgb(201 162 39 / 0.7); animation: caros-hotspot-pulse 2.4s ease-out infinite; pointer-events: none; }
+@keyframes caros-hotspot-pulse { 0% { transform: scale(1); opacity: 0.9; } 100% { transform: scale(2.1); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .caros-hotspot-dot::after { animation: none; opacity: 0; } .caros-hotspot-dot { transition: none; } }

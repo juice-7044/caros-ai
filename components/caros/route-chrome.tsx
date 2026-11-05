@@ -6,6 +6,7 @@ import { SiteNav } from "@/components/caros/site-nav"
 import { SiteFooter } from "@/components/caros/site-footer"
 import { ChatWidget } from "@/components/caros/chat-widget"
 import { BackToTop } from "@/components/caros/back-to-top"
+import { ConsentBanner } from "@/components/caros/consent-banner"
 
 export function RouteChrome({ children }: { children: ReactNode }) {
   const pathname = usePathname()
@@ -18,6 +19,7 @@ export function RouteChrome({ children }: { children: ReactNode }) {
       {!isThankYou && <SiteFooter />}
       {!isThankYou && <ChatWidget />}
       <BackToTop />
+      <ConsentBanner />
     </>
   )
 }

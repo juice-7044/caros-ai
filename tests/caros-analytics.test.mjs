@@ -2,7 +2,7 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import { trackEvent } from '../lib/analytics.ts'
 
-const env = (extra = {}) => ({ dataLayer: [], navigator: {}, ...extra })
+const env = (extra = {}) => ({ dataLayer: [], navigator: {}, consent: { analytics: true }, ...extra })
 
 test('trackEvent pushes a namespaced event to dataLayer', () => {
   const e = env()

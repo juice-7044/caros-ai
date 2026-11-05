@@ -1,0 +1,23 @@
+(node:33341) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/anns-macbook/Projects/caros-ai/lib/consent.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/anns-macbook/Projects/caros-ai/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ default state denies analytics and marketing and needs a prompt (1.394209ms)
+✔ accept all grants analytics and marketing (0.092875ms)
+✔ reject non-essential denies both, with the same shape and recorded choice as accept (0.067292ms)
+✔ customize records exactly the toggles chosen (0.068083ms)
+✔ Global Privacy Control denies marketing by default and cannot be overridden by accept all (0.075375ms)
+✔ record persists and round-trips; wrong version, junk or missing data means no choice (0.129875ms)
+✔ Google Consent Mode v2 mapping (0.090167ms)
+✔ our analytics helper requires analytics consent, in addition to DNT/GPC (2.377833ms)
+✔ layout: consent default is set before GTM and gtag load; Meta Pixel is not initialised unconditionally (0.912834ms)
+✔ meta pixel loader only runs after marketing consent (0.281292ms)
+✔ footer has a persistent Cookie settings control (0.091125ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 107.727833

@@ -22,7 +22,7 @@ const ICONS: Record<string, LucideIcon> = {
 
 type Capability = { id: string; title: string; summary: string; detail: string; status: "live" | "partial" }
 
-/** `showcase` is the server-rendered ProductShowcase, passed in so this client component stays light. */
+/** `showcase` is the ProductShowcase element, passed in as a prop. */
 export function UnifiedSystem({ showcase }: { showcase: ReactNode }) {
   const t = useTranslations("Home.unified")
   const capabilities = t.raw("capabilities") as Capability[]

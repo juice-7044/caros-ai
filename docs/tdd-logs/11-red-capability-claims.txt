@@ -1,0 +1,36 @@
+✔ home copy has the brief structure in both languages (4.778125ms)
+✔ privacy statement and brand tagline are exact and localized (2.451917ms)
+✖ capability copy carries the capability claims confirmed by the product owner (2026-11-05) (0.826541ms)
+✔ calculator copy states exclusions, estimates and no guaranteed savings (0.251167ms)
+✔ spanish home copy is translated, not an English copy (0.657458ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 4
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 78.174084
+
+✖ failing tests:
+
+test at tests/caros-home-content.test.mjs:29:1
+✖ capability copy carries the capability claims confirmed by the product owner (2026-11-05) (0.826541ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Google, Yelp, Facebook/. Input:
+  
+  'Monitor and reply to Google and Facebook reviews, and send review requests. Yelp and website review monitoring are not yet available.'
+  
+      at TestContext.<anonymous> (file:///Users/anns-macbook/Projects/caros-ai/tests/caros-home-content.test.mjs:35:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Monitor and reply to Google and Facebook reviews, and send review requests. Yelp and website review monitoring are not yet available.',
+    expected: /Google, Yelp, Facebook/,
+    operator: 'match',
+    diff: 'simple'
+  }

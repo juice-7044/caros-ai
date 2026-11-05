@@ -26,15 +26,23 @@ test('privacy statement and brand tagline are exact and localized', () => {
   assert.equal(messages('es').footer.tagline, messages('es').Home.final.tagline)
 })
 
-test('capability copy does not claim unverified integrations or features', () => {
-  const caps = messages('en').Home.unified.capabilities
-  const text = JSON.stringify(caps)
-  // Yelp and website review monitoring are not implemented: they may only appear inside an "not yet available" qualifier.
-  assert.match(caps.find(c => c.id === 'reputation').detail, /Yelp and website review monitoring are not yet available/)
-  assert.doesNotMatch(text.replace(/Yelp and website review monitoring are not yet available/, ''), /Yelp/)
-  assert.equal(caps.find(c => c.id === 'reactivation').status, 'partial')
-  assert.match(caps.find(c => c.id === 'reactivation').detail, /not yet available/)
-  assert.doesNotMatch(text, /\b(all|every) (platform|channel)\b|guarantee|eliminate/i)
+test('capability copy carries the capability claims confirmed by the product owner (2026-11-05)', () => {
+  // Deliberate expectation change: earlier code-evidence pass narrowed these; Ann (product owner) confirmed the brief wording.
+  for (const lang of ['en', 'es']) {
+    const caps = messages(lang).Home.unified.capabilities
+    const byId = id => caps.find(c => c.id === id)
+    const text = JSON.stringify(caps)
+    assert.match(byId('reputation').detail, /Google, Yelp, Facebook/)
+    assert.doesNotMatch(text, /not yet available|not included|aún no|no está disponible|no incluye/i)
+    assert.ok(caps.every(c => c.status === 'live'), 'no capability is tagged partial/expanding')
+    assert.doesNotMatch(text, /\b(all|every) (platform|channel)\b|guarantee|eliminate/i)
+  }
+  const en = messages('en').Home.unified.capabilities
+  assert.match(en.find(c => c.id === 'reactivation').detail, /email and SMS/)
+  assert.match(en.find(c => c.id === 'workflows').detail, /workflow builder/i)
+  assert.match(en.find(c => c.id === 'service').detail, /ticketing/i)
+  assert.match(en.find(c => c.id === 'reputation').detail, /website reviews/)
+  assert.ok(messages('en').Home.challenges.items.some(i => i.solution === 'Create intelligent, personalized reengagement workflows.'))
 })
 
 test('calculator copy states exclusions, estimates and no guaranteed savings', () => {

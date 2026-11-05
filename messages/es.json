@@ -29,7 +29,28 @@
     "whyCaros": "Por qué CAROS",
     "affiliates": "Programa de afiliados"
   },
+  "Consent": {
+    "title": "Tus opciones de privacidad",
+    "body": "Usamos cookies esenciales para que el sitio funcione. Con tu permiso, también usamos cookies de analítica y de marketing para entender cómo se usa el sitio y medir nuestros anuncios. Puedes cambiar tu elección en cualquier momento.",
+    "acceptAll": "Aceptar todo",
+    "reject": "Rechazar no esenciales",
+    "customize": "Personalizar",
+    "customTitle": "Preferencias de cookies",
+    "essential": "Esenciales",
+    "essentialDesc": "Necesarias para que el sitio funcione, incluidos el idioma, la seguridad y la atribución de afiliados. Siempre activas.",
+    "analytics": "Analítica",
+    "analyticsDesc": "Nos ayuda a entender cómo usan el sitio los visitantes.",
+    "marketing": "Marketing",
+    "marketingDesc": "Nos permite medir y mejorar nuestra publicidad (por ejemplo, Meta).",
+    "save": "Guardar elecciones",
+    "on": "Activadas",
+    "off": "Desactivadas",
+    "gpc": "Tu navegador envía una señal Global Privacy Control, por lo que las cookies de marketing permanecen desactivadas.",
+    "privacyLink": "Detalles de cookies en nuestra Política de privacidad",
+    "close": "Cerrar"
+  },
   "footer": {
+    "cookieSettings": "Configuración de cookies",
     "product": "Producto",
     "company": "Empresa",
     "resources": "RECURSOS GRATUITOS",
@@ -92,20 +113,45 @@
         { "id": "marketing", "title": "Marketing y redes sociales", "summary": "Campañas, interacción con la audiencia y coordinación de marketing.", "detail": "Redacta, aprueba y programa publicaciones en las cuentas sociales conectadas y coordina campañas desde el mismo espacio de trabajo. Las publicaciones se envían a través de las cuentas que conectes.", "status": "live" },
         { "id": "sales", "title": "Ventas", "summary": "Prospectos, embudos, oportunidades y flujos de conversión.", "detail": "Sigue contactos y oportunidades por etapa del embudo, ve el valor del embudo abierto y detecta prospectos que esperan demasiado una respuesta.", "status": "live" },
         { "id": "outreach", "title": "Contacto y comunicación con clientes", "summary": "Teléfono, correo, SMS y otros canales compatibles.", "detail": "Llamadas, mensajes de texto y correos en una sola bandeja, con chat y voz en tu sitio web. Los canales dependen de lo que conectes.", "status": "live" },
-        { "id": "reactivation", "title": "Reactivación de clientes", "summary": "Oportunidades de recuperación y seguimiento personalizado.", "detail": "Ve oportunidades perdidas o abandonadas recientemente que merecen una segunda conversación y haz un seguimiento personal. Las campañas automáticas de reactivación aún no están disponibles.", "status": "partial" },
-        { "id": "workflows", "title": "Flujos de trabajo y automatización", "summary": "Procesos conectados, tareas automatizadas y coordinación.", "detail": "Los flujos estándar de CAROS se configuran contigo durante la implementación y se pueden inscribir contactos en flujos publicados. Crear flujos nuevos dentro del panel aún no está disponible.", "status": "partial" },
-        { "id": "service", "title": "Servicio y éxito del cliente", "summary": "Historial de relación, coordinación del servicio y retención.", "detail": "Un registro por cliente con conversaciones, notas de llamadas y seguimientos. No incluye un sistema de tickets dedicado.", "status": "partial" },
-        { "id": "reputation", "title": "Gestión de la reputación", "summary": "Monitoreo de reseñas, respuestas y solicitudes de reseñas.", "detail": "Monitorea y responde reseñas de Google y Facebook, y envía solicitudes de reseñas. El monitoreo de Yelp y de reseñas del sitio web aún no está disponible.", "status": "partial" },
+        { "id": "reactivation", "title": "Reactivación de clientes", "summary": "Campañas de reactivación, seguimiento personalizado y negocio recurrente.", "detail": "Lanza campañas de reactivación por correo y SMS, envía seguimiento personalizado y detecta oportunidades de negocio recurrente entre clientes anteriores y oportunidades perdidas o inactivas.", "status": "live" },
+        { "id": "workflows", "title": "Flujos de trabajo y automatización", "summary": "Procesos conectados, tareas automatizadas y coordinación.", "detail": "Usa el creador de flujos de trabajo para crear flujos operativos dinámicos: tareas automatizadas, programación, coordinación y ejecución operativa.", "status": "live" },
+        { "id": "service", "title": "Servicio y éxito del cliente", "summary": "Soporte, gestión de relaciones, coordinación del servicio y retención.", "detail": "Tickets y soporte al cliente, con un registro por cliente que reúne conversaciones, notas de llamadas y seguimientos, para coordinar servicio y retención.", "status": "live" },
+        { "id": "reputation", "title": "Gestión de la reputación", "summary": "Monitoreo de reseñas, respuestas y flujos de reputación.", "detail": "Reseñas de Google, Yelp, Facebook y del sitio web, con monitoreo, respuesta y flujos de reputación compatibles.", "status": "live" },
         { "id": "community", "title": "Creación de comunidad", "summary": "Relaciones, participación y lealtad.", "detail": "Comunidades de miembros con debates, cursos, seminarios web y membresías de pago.", "status": "live" },
         { "id": "more", "title": "Y más", "summary": "Más capacidades en todo el ecosistema CAROS.", "detail": "Recepcionista con IA, informes y resúmenes diarios, facturación y firma electrónica, además de integraciones con las herramientas que ya usas.", "status": "live" }
       ]
     },
     "showcase": {
-      "alt": "Panel Centro de Comando de CAROS",
-      "caption": "El Centro de Comando de CAROS",
-      "unavailableTitle": "Ve el panel real en la demostración en vivo",
-      "unavailableBody": "Todavía no hay una captura del producto disponible en esta página. La demostración en vivo muestra el espacio de trabajo real de CAROS.",
-      "cta": "Ver CAROS en acción"
+      "alt": "Espacio de trabajo de demostración del Centro de Comando de CAROS: una navegación superior con Clientes, Ventas, Bandeja, Marketing, Operaciones, Automatizaciones e Informes, un gráfico de nuevos negocios con una tasa de cierre simulada, tarjetas de embudo, oportunidades, citas e ingresos ganados, y un panel Ask CAROS. Todos los valores son datos de demostración simulados.",
+      "caption": "Centro de Comando de CAROS · espacio de demostración con datos simulados",
+      "hotspotsLabel": "Explora el Centro de Comando",
+      "hotspotsHint": "Selecciona un marcador para ver qué muestra esa zona.",
+      "hotspots": {
+        "nav": {
+          "label": "Navegación del espacio de trabajo conectado",
+          "text": "Clientes, Ventas, Bandeja, Marketing, Operaciones, Automatizaciones e Informes están en una sola navegación: un espacio de trabajo conectado en lugar de herramientas separadas."
+        },
+        "deals": {
+          "label": "Gráfico de nuevos negocios",
+          "text": "Nuevos negocios de los últimos 7 días, graficados en el Centro de Comando para ver la actividad de ventas de un vistazo."
+        },
+        "winrate": {
+          "label": "Tasa de cierre",
+          "text": "Un indicador de tasa de cierre junto a clientes nuevos e ingresos ganados, en la misma pantalla que el resto de tu operación."
+        },
+        "pipeline": {
+          "label": "Embudo y oportunidades",
+          "text": "Valor del embudo abierto y oportunidades abiertas, en tarjetas de resumen que enlazan con Ventas."
+        },
+        "appointments": {
+          "label": "Citas",
+          "text": "Totales de citas, con el calendario a un clic."
+        },
+        "ask": {
+          "label": "Ask CAROS",
+          "text": "Hazle preguntas a CAROS sobre tu negocio en lenguaje natural, por ejemplo qué estimaciones necesitan seguimiento."
+        }
+      }
     },
     "disconnected": {
       "eyebrow": "El costo del software desconectado",
@@ -154,7 +200,7 @@
         { "problem": "¿Demasiadas oportunidades perdidas?", "solution": "Capta consultas y respalda un seguimiento oportuno y constante." },
         { "problem": "¿Clientes que se pierden en el camino?", "solution": "Conecta comunicaciones e información de clientes en los canales compatibles." },
         { "problem": "¿Cuesta crecer sin contratar?", "solution": "Ayuda a tu equipo actual a manejar más actividad con mejor coordinación y automatización." },
-        { "problem": "¿Te cuesta reactivar a clientes anteriores?", "solution": "Detecta oportunidades perdidas y personaliza tu seguimiento de recuperación." },
+        { "problem": "¿Te cuesta reactivar a clientes anteriores?", "solution": "Crea flujos de reactivación inteligentes y personalizados." },
         { "problem": "¿Experiencias de cliente inconsistentes?", "solution": "Coordina servicio, comunicación, seguimiento y éxito del cliente." },
         { "problem": "¿Sin una visión clara del desempeño del negocio?", "solution": "Reúne la información operativa y de ingresos para decidir mejor." }
       ]

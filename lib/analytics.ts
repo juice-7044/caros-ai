@@ -1,6 +1,8 @@
 export type AnalyticsEnv = {
   dataLayer?: Array<Record<string, unknown>>
   navigator?: { doNotTrack?: string | null; globalPrivacyControl?: boolean }
+  /** Current consent choices; absent means the visitor has not consented. */
+  consent?: { analytics: boolean } | null
 }
 
 /** Metadata keys that may leave the browser. Anything else (names, emails, salaries, totals) is dropped. */
@@ -17,8 +19,9 @@ function clean(props: Record<string, unknown>) {
   return out
 }
 
-/** No consent banner exists on the site, so honour the browser-level opt-outs. */
+/** Needs analytics consent and honours the browser-level opt-outs (DNT, GPC). */
 export function trackingAllowed(env: AnalyticsEnv) {
+  if (env.consent?.analytics !== true) return false
   const nav = env.navigator
   return !(nav?.doNotTrack === '1' || nav?.globalPrivacyControl === true)
 }

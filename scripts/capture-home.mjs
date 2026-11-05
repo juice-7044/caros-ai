@@ -3,11 +3,18 @@ import { writeFileSync, mkdirSync } from 'node:fs'
 const [base = 'http://localhost:3101', out = 'docs/screenshots'] = process.argv.slice(2)
 const { chromium } = await import(process.env.PLAYWRIGHT_CORE ?? 'playwright-core')
 mkdirSync(out, { recursive: true })
-const browser = await chromium.launch()
+const browser = await chromium.launch(process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {})
 const report = { widths: [], checks: [] }
+// Analytics now requires consent: run with analytics granted (marketing denied) unless a check says otherwise.
+const consentCookie = { name: 'caros_consent', value: encodeURIComponent(JSON.stringify({ v: 1, ts: 1, analytics: true, marketing: false })), url: base }
+async function newPage(opts, withConsent = true) {
+  const ctx = await browser.newContext(opts)
+  if (withConsent) await ctx.addCookies([consentCookie])
+  return ctx.newPage()
+}
 for (const locale of ['en', 'es']) {
   for (const width of [360, 390, 768, 1440]) {
-    const page = await browser.newPage({ viewport: { width, height: width >= 1440 ? 900 : 800 } })
+    const page = await newPage({ viewport: { width, height: width >= 1440 ? 900 : 800 } })
     await page.goto(`${base}/${locale}`, { waitUntil: 'networkidle' })
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
     const aboveFold = await page.evaluate(() => {
@@ -16,6 +23,11 @@ for (const locale of ['en', 'es']) {
       return { hiringHeadline: vis('5'), cta: [...document.querySelectorAll('a')].some(a => a.href.startsWith('https://demo.getcaros.com') && a.getBoundingClientRect().top < vh) }
     })
     await page.screenshot({ path: `${out}/home-${locale}-${width}-fold.png` })
+    const first = await newPage({ viewport: { width, height: width >= 1440 ? 900 : 800 } }, false)
+    await first.goto(`${base}/${locale}`, { waitUntil: 'networkidle' })
+    await first.waitForSelector('[data-caros-consent]')
+    await first.screenshot({ path: `${out}/home-${locale}-${width}-fold-consent.png` })
+    await first.close()
     // Scroll through so Reveal (IntersectionObserver) sections are visible in the full-page capture.
     await page.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 300) { window.scrollTo(0, y); await new Promise(r => setTimeout(r, 180)) } window.scrollTo(0, 0) })
     await page.waitForTimeout(600)
@@ -26,7 +38,7 @@ for (const locale of ['en', 'es']) {
 }
 
 // Interaction + analytics checks (English desktop).
-const page = await browser.newPage({ viewport: { width: 1440, height: 900 } })
+const page = await newPage({ viewport: { width: 1440, height: 900 } })
 await page.goto(`${base}/en`, { waitUntil: 'networkidle' })
 const text = sel => page.locator(sel).first().innerText()
 const chk = (name, pass, detail) => report.checks.push({ name, pass: !!pass, detail })
@@ -53,7 +65,12 @@ const cap = page.locator('#unified-capabilities')
 await cap.locator('details').first().locator('summary').click()
 chk('capability expands', await cap.locator('details').first().evaluate(d => d.open))
 chk('nine capability cards', (await cap.locator('details').count()) === 9)
-chk('showcase unavailable notice shown (no screenshot asset) and no broken img', (await page.locator('[data-screenshot-unavailable]').count()) + (await cap.locator('img[alt="CAROS Command Center dashboard"]').count()) === 1 && (await page.evaluate(() => [...document.images].every(i => i.complete && i.naturalWidth > 0 || !i.src))))
+const shot = cap.locator('img[alt^="CAROS Command Center demo workspace"], img[alt^="Espacio de trabajo de demostración"]')
+await shot.first().scrollIntoViewIfNeeded(); await page.waitForTimeout(500)
+chk('showcase image loaded (naturalWidth>0)', await shot.first().evaluate(i => i.complete && i.naturalWidth > 0))
+chk('six hotspot buttons with aria-labels', (await cap.locator('[role=group] button[aria-label]').count()) === 6)
+await cap.locator('[role=group] button').nth(1).click()
+chk('hotspot open shows detail and fires showcase_interaction hotspot', (await cap.locator('[aria-live=polite]').innerText()).includes('New deals') && await page.evaluate(() => window.dataLayer.some(e => e.event === 'caros_showcase_interaction' && e.action === 'hotspot' && e.item === 'deals')))
 await page.locator('a', { hasText: 'Explore What CAROS Can Do' }).first().click()
 await page.waitForTimeout(500)
 chk('secondary CTA scrolls to capabilities', await page.evaluate(() => location.hash === '#unified-capabilities'))
@@ -66,18 +83,17 @@ chk('scroll depths reached', [25, 50, 75, 100].every(d => events.some(e => e.eve
 await page.close()
 
 // Do-Not-Track: no events.
-const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, extraHTTPHeaders: { DNT: '1' } })
-const dnt = await ctx.newPage()
+const dnt = await newPage({ viewport: { width: 1440, height: 900 }, extraHTTPHeaders: { DNT: '1' } })
 await dnt.addInitScript(() => Object.defineProperty(navigator, 'doNotTrack', { get: () => '1' }))
 await dnt.goto(`${base}/en`, { waitUntil: 'networkidle' })
 await dnt.mouse.wheel(0, 3000); await dnt.waitForTimeout(300)
 chk('DNT=1 emits no caros_ events', (await dnt.evaluate(() => (window.dataLayer || []).filter(e => String(e.event).startsWith('caros_')).length)) === 0)
 
 // Reduced motion: lifecycle animation off.
-const rm = await browser.newPage({ viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' })
+const rm = await newPage({ viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' })
 await rm.goto(`${base}/en`, { waitUntil: 'networkidle' })
 chk('reduced motion disables lifecycle animation', (await rm.locator('.lifecycle-step').first().evaluate(e => getComputedStyle(e).animationName)) === 'none')
-const nm = await browser.newPage({ viewport: { width: 1440, height: 900 } })
+const nm = await newPage({ viewport: { width: 1440, height: 900 } })
 await nm.goto(`${base}/en`, { waitUntil: 'networkidle' })
 chk('normal motion animates lifecycle', (await nm.locator('.lifecycle-step').first().evaluate(e => getComputedStyle(e).animationName)) === 'lifecycle-glow')
 await browser.close()

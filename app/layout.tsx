@@ -191,17 +191,17 @@ export default async function RootLayout({
       <body
         className={`${archivo.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-TMDX7LW7"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-            title="Google Tag Manager"
-          />
-        </noscript>
-        {/* End Google Tag Manager (noscript) */}
+        {/*
+          Consent Mode v2: defaults are denied and must be set before GTM / gtag load. A stored choice (first-party
+          cookie caros_consent, version 1) is replayed as an update immediately. The GTM <noscript> iframe and the
+          Meta Pixel <noscript> image were removed because they cannot honor consent. The Meta Pixel is loaded
+          lazily by lib/consent-client.ts only after marketing consent.
+        */}
+        <Script id="caros-consent-default" strategy="beforeInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});
+try{var m=document.cookie.match(/(?:^|; )caros_consent=([^;]*)/);if(m){var c=JSON.parse(decodeURIComponent(m[1]));if(c&&c.v===1&&typeof c.analytics==='boolean'&&typeof c.marketing==='boolean'){var a=c.analytics?'granted':'denied',d=c.marketing?'granted':'denied';gtag('consent','update',{ad_storage:d,ad_user_data:d,ad_personalization:d,analytics_storage:a});}}}catch(e){}`}
+        </Script>
         <Script id="caros-affiliate-manager" strategy="beforeInteractive">
           {`(function() {
   var t = document.createElement("script");
@@ -248,29 +248,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             gtag('config', 'G-MT8HLMZL04');
           `}
         </Script>
-        {/* Meta Pixel */}
-        <Script id="meta-pixel" strategy="afterInteractive">
-          {`!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1646397766883866');
-fbq('track', 'PageView');`}
-        </Script>
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=1646397766883866&ev=PageView&noscript=1"
-            alt=""
-          />
-        </noscript>
-        {/* End Meta Pixel */}
         {children}
         <Analytics />
         {/* UTM Forwarder Script */}
