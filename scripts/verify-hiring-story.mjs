@@ -30,7 +30,7 @@ for (const locale of LOCALES) {
     const tag = `${locale}@${width}`
     const page = await open(locale, width)
     // 1. DOM / visual order
-    const order = ['headline', 'calculator', 'positions', 'reveal', 'cta', 'showcase', 'software'].map(k => [k, S(k)])
+    const order = ['headline', 'growth', 'product-value', 'demands', 'cost-question', 'calculator', 'positions', 'reveal', 'cta', 'showcase', 'software'].map(k => [k, S(k)])
     order.push(['stack', '#stack-calculator'], ['capabilities', '#unified-capabilities'])
     const tops = []
     for (const [k, sel] of order) tops.push([k, await top(page, sel)])
@@ -38,10 +38,11 @@ for (const locale of LOCALES) {
     chk(`${tag} story blocks are in strict vertical order`, tops.every(([, t], i) => i === 0 || t > tops[i - 1][1]), JSON.stringify(tops))
     const preCalc = await page.evaluate(() => {
       const calc = document.querySelector('[data-story="calculator"]').getBoundingClientRect().top + scrollY
-      return [...document.querySelectorAll('main a, main p, main button, section a, section p')].filter(e => !e.closest('[data-story="calculator"]') && !e.closest('[data-story="headline"]') && e.getBoundingClientRect().top + scrollY < calc).map(e => e.tagName + ':' + e.textContent.trim().slice(0, 40))
+      return [...document.querySelectorAll('main a, main button')].filter(e => !e.closest('[data-story="calculator"]') && e.getBoundingClientRect().top + scrollY < calc).map(e => e.tagName + ':' + e.textContent.trim().slice(0, 40))
     })
-    chk(`${tag} nothing but the headline precedes the calculator`, preCalc.length === 0, JSON.stringify(preCalc))
-    chk(`${tag} calculator starts in the first viewport`, (await page.locator(S('calculator')).boundingBox()).y < (width >= 1440 ? 900 : 800) * 0.8)
+    chk(`${tag} growth introduction precedes cost without distracting links or buttons`, preCalc.length === 0, JSON.stringify(preCalc))
+    const valueBox = await page.locator(S('product-value')).boundingBox()
+    chk(`${tag} CAROS value statement is above the fold`, valueBox.y + valueBox.height < (width >= 1440 ? 900 : 800))
     const demoLinks = await page.evaluate(() => [...document.querySelectorAll('a[href^="https://demo.getcaros.com"]')].filter(a => !a.closest('header, nav')).map(a => ({ y: a.getBoundingClientRect().top + scrollY, inStory: !!a.closest('[data-story="cta"]') })))
     const revealTop = tops.find(([k]) => k === 'reveal')[1]
     chk(`${tag} primary demo CTA exists after the value reveal and before the screenshot`, demoLinks.some(l => l.inStory && l.y > revealTop) && demoLinks.filter(l => l.y < revealTop).length === 0, JSON.stringify(demoLinks))

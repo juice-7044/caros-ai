@@ -1,0 +1,44 @@
+(node:56408) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/anns-macbook/Projects/caros-ai/lib/hiring-story.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/anns-macbook/Projects/caros-ai/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ story mode follows the headcount: ten at 10 or more, otherwise the five-role view, custom counts flagged (92.829208ms)
+✔ toggle choices map to the shared headcount string (0.171625ms)
+✔ story headcount parsing matches the calculator (same cap and coercion as hiringCost) (1.971625ms)
+✖ story copy: exact headlines, five positions, ten functions, in EN and ES (3.168875ms)
+✔ story copy makes no guaranteed-savings, replacement or elimination claims and states disclaimers (2.180583ms)
+✔ hero has no free-resources link or chat dock; story precedes showcase, comparison, calculator, capabilities (1.047458ms)
+✔ the floating contact launcher does not wait for a hero dock (0.438292ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 6
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 193.162875
+
+✖ failing tests:
+
+test at tests/caros-hiring-story.test.mjs:38:1
+✖ story copy: exact headlines, five positions, ten functions, in EN and ES (3.168875ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'What Would It Cost You to Hire 5 More Employees?'
+  - 'Your Business Is Growing.'
+  
+      at TestContext.<anonymous> (file:///Users/anns-macbook/Projects/caros-ai/tests/caros-hiring-story.test.mjs:40:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'What Would It Cost You to Hire 5 More Employees?',
+    expected: 'Your Business Is Growing.',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

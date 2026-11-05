@@ -1,0 +1,16 @@
+FAIL en@390 all story blocks exist [["headline",96],["growth",null],["product-value",null],["demands",null],["cost-question",null],["calculator",255.8125],["positions",684.15625],["reveal",1874.96875],["cta",2375.53125],["showcase",2531.53125],["software",2863.921875],["stack",5577.171875],["capabilities",7074.671875]]
+FAIL en@390 story blocks are in strict vertical order [["headline",96],["growth",null],["product-value",null],["demands",null],["cost-question",null],["calculator",255.8125],["positions",684.15625],["reveal",1874.96875],["cta",2375.53125],["showcase",2531.53125],["software",2863.921875],["stack",5577.171875],["capabilities",7074.671875]]
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.boundingBox: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('[data-story="product-value"]')
+
+    at /Users/anns-macbook/Projects/caros-ai/scripts/verify-hiring-story.mjs:44:61 {
+  log: [ `  - waiting for locator('[data-story="product-value"]')` ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.22.1

@@ -37,12 +37,23 @@ test('story headcount parsing matches the calculator (same cap and coercion as h
 
 test('story copy: exact headlines, five positions, ten functions, in EN and ES', () => {
   const en = messages('en').Home
-  assert.equal(en.hero.title, 'What Would It Cost You to Hire 5 More Employees?')
-  assert.equal(en.hero.subtitle, 'What About 10?')
-  assert.equal(en.story.rolesTitle, 'But What Are You Actually Hiring Those Employees to Do?')
-  assert.equal(en.story.revealTitle, 'What If Your Existing Team Could Manage More of That Work From One Place?')
+  assert.equal(en.hero.title, 'Your Business Is Growing.')
+  assert.equal(en.hero.subtitle, 'Your Operations Should Grow With It.')
+  assert.match(en.hero.growthBody, /customers.*communication.*responsibilities.*expectations/i)
+  assert.match(en.hero.productValue, /one.*dashboard.*Revenue Operating System/i)
+  assert.equal(en.hero.traditional, 'Traditionally, keeping up with growth means hiring more people.')
+  assert.match(en.hero.traditionalBody, /marketing.*sales.*customer communication.*operations.*customer success/i)
+  assert.equal(en.story.costQuestion, 'So, what would it cost you to hire five more employees? What about ten?')
+  assert.equal(en.story.rolesTitle, 'Here’s the work behind that number.')
+  assert.equal(en.story.revealTitle, 'What if you could scale the work without scaling your headcount at the same rate?')
   assert.equal(en.story.functionsTitle, 'Ten Business Functions. One Connected Operating System.')
-  assert.equal(en.disconnected.title, 'And What About All the Software Those Employees Need?')
+  assert.equal(en.disconnected.title, 'And hiring more people isn’t the only expense that comes with growth.')
+  assert.match(en.disconnected.bridge, /different software systems your business relies on/i)
+  for (const lang of ['en', 'es']) {
+    const m = messages(lang).Home
+    for (const k of ['growthBody', 'productValue', 'traditional', 'traditionalBody']) assert.ok(m.hero[k])
+    assert.ok(m.story.costQuestion && m.disconnected.bridge)
+  }
   assert.equal(en.story.emphasis, 'ONE DASHBOARD. ONE UNIFIED REVENUE OPERATING SYSTEM.')
   assert.equal(en.story.roles[0].title, 'Marketing & Social Media Coordinator')
   assert.equal(en.story.roles[4].title, 'Customer Success & Reputation Coordinator')

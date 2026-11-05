@@ -59,6 +59,7 @@ export function HiringStory() {
 
   return (
     <div data-story-mode={view.mode}>
+      <h2 data-story="cost-question" className="mt-5 max-w-3xl text-balance text-xl font-display leading-snug sm:text-2xl">{s("costQuestion")}</h2>
       <HiringCalculator employees={employees} salary={salary} mode={view.mode} onEmployees={setEmployees} onSalary={setSalary} onMode={setMode} />
 
       <div data-story="positions" className="mt-8">

@@ -83,7 +83,17 @@
     "label": "Idioma"
   },
   "Home": {
-    "hero": { "title": "¿Cuánto te costaría contratar 5 empleados más?", "subtitle": "¿Y 10?", "primaryCta": "Ver CAROS en acción", "secondaryCta": "Explorar lo que CAROS puede hacer", "demoNote": "Abre la demostración en vivo en una pestaña nueva." },
+    "hero": {
+      "title": "Tu negocio está creciendo.",
+      "subtitle": "Tus operaciones deberían crecer con él.",
+      "primaryCta": "Ver CAROS en acción",
+      "secondaryCta": "Explorar lo que CAROS puede hacer",
+      "demoNote": "Abre la demostración en vivo en una pestaña nueva.",
+      "growthBody": "Crecer trae más clientes, comunicaciones, responsabilidades y expectativas. ¿Cómo mantienes una atención cercana cuando tu equipo tiene cada vez más que hacer?",
+      "productValue": "CAROS conecta el trabajo que impulsa tus ingresos en un solo panel y un Sistema Operativo de Ingresos unificado, para que tu equipo pueda hacer más, en conjunto.",
+      "traditional": "Tradicionalmente, seguir el ritmo del crecimiento significa contratar a más personas.",
+      "traditionalBody": "Más apoyo para marketing, ventas, comunicación con clientes, operaciones y éxito del cliente. Esa capacidad tiene un costo."
+    },
     "hiring": {
       "title": "Costo anual ilustrativo de contratación",
       "employees": "Empleados",
@@ -95,15 +105,35 @@
     },
     "story": {
       "toggleLabel": "Comparar 5 o 10 empleados",
-      "rolesTitle": "Pero, ¿para qué estarías contratando realmente a esos empleados?",
-      "rolesIntro": "Para hacer crecer tu negocio necesitas más que personas. Necesitas las funciones correctas trabajando juntas.",
+      "rolesTitle": "Este es el trabajo detrás de esa cifra.",
+      "rolesIntro": "Cinco ejemplos de las responsabilidades que necesita cubrir un negocio en crecimiento.",
       "rolesLabel": "Cinco puestos ilustrativos",
       "roles": [
-        { "id": "marketing", "title": "Coordinador de Marketing y Redes Sociales", "text": "Gestiona campañas, interacción en redes sociales, actividad de marketing y oportunidades entrantes." },
-        { "id": "sales", "title": "Coordinador de Ventas y Seguimiento de Prospectos", "text": "Organiza prospectos, da seguimiento a oportunidades, califica consultas y mantiene las ventas en movimiento." },
-        { "id": "outreach", "title": "Especialista en Comunicación y Contacto con Clientes", "text": "Gestiona llamadas, correo, SMS, coordinación de citas y seguimiento a clientes." },
-        { "id": "operations", "title": "Coordinador de Operaciones y Flujos de Trabajo", "text": "Coordina tareas diarias, agenda, traspasos, recordatorios y procesos administrativos." },
-        { "id": "success", "title": "Coordinador de Éxito del Cliente y Reputación", "text": "Gestiona la relación continua con clientes, el seguimiento del servicio, reseñas, retención y satisfacción." }
+        {
+          "id": "marketing",
+          "title": "Coordinador de Marketing y Redes Sociales",
+          "text": "Gestiona campañas, interacción en redes sociales, actividad de marketing y oportunidades entrantes."
+        },
+        {
+          "id": "sales",
+          "title": "Coordinador de Ventas y Seguimiento de Prospectos",
+          "text": "Organiza prospectos, da seguimiento a oportunidades, califica consultas y mantiene las ventas en movimiento."
+        },
+        {
+          "id": "outreach",
+          "title": "Especialista en Comunicación y Contacto con Clientes",
+          "text": "Gestiona llamadas, correo, SMS, coordinación de citas y seguimiento a clientes."
+        },
+        {
+          "id": "operations",
+          "title": "Coordinador de Operaciones y Flujos de Trabajo",
+          "text": "Coordina tareas diarias, agenda, traspasos, recordatorios y procesos administrativos."
+        },
+        {
+          "id": "success",
+          "title": "Coordinador de Éxito del Cliente y Reputación",
+          "text": "Gestiona la relación continua con clientes, el seguimiento del servicio, reseñas, retención y satisfacción."
+        }
       ],
       "rolesDisclaimer": "Estos puestos son ejemplos ilustrativos, no recomendaciones obligatorias de personal.",
       "salaryDisclaimer": "Los salarios ilustran costos de contratación hipotéticos, no ahorros garantizados por usar CAROS.",
@@ -113,26 +143,67 @@
       "functionsHint": "Toca una función para ver el trabajo que CAROS puede apoyar.",
       "functionsLabel": "Diez funciones del negocio",
       "functions": [
-        { "id": "marketing", "title": "Marketing y Redes Sociales", "text": "Redacta, aprueba y programa publicaciones y coordina campañas desde el mismo espacio de trabajo." },
-        { "id": "leads", "title": "Captación y Calificación de Prospectos", "text": "Recibe consultas de tus canales conectados y ve cuáles necesitan atención primero." },
-        { "id": "pipeline", "title": "Gestión del Embudo de Ventas", "text": "Da seguimiento a contactos y oportunidades por etapa para que las ventas sigan avanzando." },
-        { "id": "outreach", "title": "Contacto y Comunicación con Clientes", "text": "Atiende llamadas, mensajes de texto y correos en una sola bandeja, según los canales que conectes." },
-        { "id": "scheduling", "title": "Agenda y Coordinación de Citas", "text": "Mantén citas, recordatorios y seguimientos organizados en un solo lugar." },
-        { "id": "reactivation", "title": "Reactivación de Clientes", "text": "Ejecuta campañas de reenganche por correo y SMS y detecta oportunidades de negocio repetido." },
-        { "id": "operations", "title": "Operaciones Dinámicas y Automatización de Flujos", "text": "Usa el constructor de flujos para tareas automatizadas, agenda y coordinación." },
-        { "id": "service", "title": "Servicio y Éxito del Cliente", "text": "Reúne tickets, conversaciones y seguimientos de cada cliente en un solo lugar." },
-        { "id": "reputation", "title": "Gestión de Reputación", "text": "Supervisa y responde reseñas de Google, Yelp, Facebook y de tu sitio web con flujos compatibles." },
-        { "id": "community", "title": "Creación de Comunidad", "text": "Crea comunidades, cursos, seminarios web y membresías junto al resto de tu operación." }
+        {
+          "id": "marketing",
+          "title": "Marketing y Redes Sociales",
+          "text": "Redacta, aprueba y programa publicaciones y coordina campañas desde el mismo espacio de trabajo."
+        },
+        {
+          "id": "leads",
+          "title": "Captación y Calificación de Prospectos",
+          "text": "Recibe consultas de tus canales conectados y ve cuáles necesitan atención primero."
+        },
+        {
+          "id": "pipeline",
+          "title": "Gestión del Embudo de Ventas",
+          "text": "Da seguimiento a contactos y oportunidades por etapa para que las ventas sigan avanzando."
+        },
+        {
+          "id": "outreach",
+          "title": "Contacto y Comunicación con Clientes",
+          "text": "Atiende llamadas, mensajes de texto y correos en una sola bandeja, según los canales que conectes."
+        },
+        {
+          "id": "scheduling",
+          "title": "Agenda y Coordinación de Citas",
+          "text": "Mantén citas, recordatorios y seguimientos organizados en un solo lugar."
+        },
+        {
+          "id": "reactivation",
+          "title": "Reactivación de Clientes",
+          "text": "Ejecuta campañas de reenganche por correo y SMS y detecta oportunidades de negocio repetido."
+        },
+        {
+          "id": "operations",
+          "title": "Operaciones Dinámicas y Automatización de Flujos",
+          "text": "Usa el constructor de flujos para tareas automatizadas, agenda y coordinación."
+        },
+        {
+          "id": "service",
+          "title": "Servicio y Éxito del Cliente",
+          "text": "Reúne tickets, conversaciones y seguimientos de cada cliente en un solo lugar."
+        },
+        {
+          "id": "reputation",
+          "title": "Gestión de Reputación",
+          "text": "Supervisa y responde reseñas de Google, Yelp, Facebook y de tu sitio web con flujos compatibles."
+        },
+        {
+          "id": "community",
+          "title": "Creación de Comunidad",
+          "text": "Crea comunidades, cursos, seminarios web y membresías junto al resto de tu operación."
+        }
       ],
       "functionsDisclaimer": "Diez funciones del negocio no significan diez empleados, y CAROS no reemplaza a diez trabajadores de tiempo completo.",
       "convergeLabel": "Diagrama: los puestos o funciones de arriba convergen en el panel de CAROS",
       "convergeDashboard": "Un solo panel",
-      "revealTitle": "¿Y si tu equipo actual pudiera manejar más de ese trabajo desde un solo lugar?",
-      "revealBody": "CAROS reúne las herramientas y los flujos que respaldan estas funciones en un panel cohesivo y un Sistema Operativo de Ingresos unificado.",
-      "revealAreas": "Marketing y Redes Sociales. Ventas. Contacto y Comunicación con Clientes. Reactivación de Clientes. Automatización Operativa. Servicio y Éxito del Cliente. Gestión de Reputación. Creación de Comunidad. Y más.",
-      "revealClose": "Un sistema conectado que ayuda a tu equipo a lograr más sin contratar para cada nueva responsabilidad.",
+      "revealTitle": "¿Y si pudieras ampliar el trabajo que realizas sin aumentar tu personal al mismo ritmo?",
+      "revealBody": "CAROS reúne las funciones del negocio que impulsan los ingresos en un solo panel y un Sistema Operativo de Ingresos unificado.",
+      "revealAreas": "Marketing, ventas, comunicación con clientes, operaciones y éxito del cliente: conectados, no dispersos.",
+      "revealClose": "Tu equipo mantiene el control, con flujos de trabajo coordinados y automatización que le ayudan a gestionar más.",
       "emphasis": "UN SOLO PANEL. UN SOLO SISTEMA OPERATIVO DE INGRESOS UNIFICADO.",
-      "tagline": "CAROS. Hacemos lo más, para que puedas hacer más con menos."
+      "tagline": "CAROS. Hacemos lo más, para que puedas hacer más con menos.",
+      "costQuestion": "Entonces, ¿cuánto te costaría contratar cinco empleados más? ¿Y diez?"
     },
     "unified": {
       "eyebrow": "El panel de CAROS",
@@ -186,21 +257,57 @@
     },
     "disconnected": {
       "eyebrow": "El costo del software desconectado",
-      "title": "¿Y qué hay de todo el software que esos empleados necesitan?",
-      "body": "Una recepcionista con IA. Un sistema telefónico. Un CRM. Marketing por correo. Campañas de SMS. Herramientas de redes sociales. Software de agenda. Atención al cliente. Gestión de reseñas.",
-      "questions": ["¿Cuántas suscripciones?", "¿Cuántos accesos?", "¿Cuántos sistemas que aprender?", "¿Cuántas integraciones que mantener?", "¿Y cuánto tiempo se pierde pasando de uno a otro?"],
+      "title": "Y contratar a más personas no es el único gasto que llega con el crecimiento.",
+      "body": "Telefonía, CRM, campañas de correo y SMS, agenda, redes sociales y reseñas. Cada herramienta añade algo más que gestionar.",
+      "questions": [
+        "¿Cuántas suscripciones?",
+        "¿Cuántos accesos?",
+        "¿Cuántos sistemas que aprender?",
+        "¿Cuántas integraciones que mantener?",
+        "¿Y cuánto tiempo se pierde pasando de uno a otro?"
+      ],
       "valueReveal": "CAROS reúne tus funciones generadoras de ingresos en un entorno operativo conectado, reduciendo la complejidad de manejar herramientas separadas y flujos desconectados.",
-      "economic": "Aumentar la plantilla es costoso. Manejar tecnología fragmentada añade aún más complejidad. CAROS ayuda a las empresas a abordar ambas cosas.",
+      "economic": "Crecer añade trabajo. Las herramientas desconectadas añaden fricción. Un entorno operativo conectado ayuda a tu equipo a gestionar ambas cosas.",
       "leftTitle": "El negocio desconectado",
       "rightTitle": "Un panel. Un solo acceso. Un Sistema Operativo de Ingresos conectado.",
-      "tiles": ["Recepcionista con IA", "Teléfono comercial", "CRM y embudo", "Marketing por correo", "Campañas de SMS", "Redes sociales", "Agenda", "Servicio al cliente", "Gestión de reseñas", "Automatización de flujos"],
-      "problems": ["Múltiples suscripciones", "Múltiples accesos", "Múltiples paneles", "Múltiples curvas de aprendizaje", "Información de clientes desconectada", "Funciones duplicadas", "Más integración y mantenimiento", "Tiempo perdido"],
-      "benefits": ["Visibilidad centralizada", "Información de clientes conectada", "Flujos de trabajo unificados", "Comunicaciones coordinadas", "Menos cambio entre herramientas", "Menos duplicación", "Flujos de equipo más simples", "Experiencias de cliente más consistentes"],
+      "tiles": [
+        "Recepcionista con IA",
+        "Teléfono comercial",
+        "CRM y embudo",
+        "Marketing por correo",
+        "Campañas de SMS",
+        "Redes sociales",
+        "Agenda",
+        "Servicio al cliente",
+        "Gestión de reseñas",
+        "Automatización de flujos"
+      ],
+      "problems": [
+        "Múltiples suscripciones",
+        "Múltiples accesos",
+        "Múltiples paneles",
+        "Múltiples curvas de aprendizaje",
+        "Información de clientes desconectada",
+        "Funciones duplicadas",
+        "Más integración y mantenimiento",
+        "Tiempo perdido"
+      ],
+      "benefits": [
+        "Visibilidad centralizada",
+        "Información de clientes conectada",
+        "Flujos de trabajo unificados",
+        "Comunicaciones coordinadas",
+        "Menos cambio entre herramientas",
+        "Menos duplicación",
+        "Flujos de equipo más simples",
+        "Experiencias de cliente más consistentes"
+      ],
       "diagramLabelLeft": "Diagrama: herramientas separadas, conexiones fragmentadas",
       "diagramLabelRight": "Diagrama: las mismas funciones fluyendo hacia un solo panel de CAROS",
       "hub": "CAROS",
       "caveat": "CAROS no reemplaza todas las plataformas especializadas. Donde aún se necesiten integraciones, CAROS ayuda a coordinarlas en una sola experiencia.",
-      "cta": "Mira qué puedes consolidar con CAROS"
+      "cta": "Mira qué puedes consolidar con CAROS",
+      "bridge": "¿Qué pasa con todos los sistemas de software de los que depende tu negocio?"
     },
     "stack": {
       "eyebrow": "Calculadora del costo de tu conjunto de herramientas",
