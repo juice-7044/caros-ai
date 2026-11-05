@@ -135,3 +135,11 @@ Only the homepage was reduced; supporting pages were not trimmed (see limitation
 - Spanish uses informal "tú" to match the existing Spanish catalogs. Needs a native-speaker pass.
 - No accessibility tooling (axe/Lighthouse) was run; only structural care (labels, aria-live, native controls, reduced motion). Performance not measured; new client JS is limited to the two calculators, card tracking and the scroll listener.
 - Live forms were not submitted; the audit API was not called.
+
+## Round 3 — owner decisions (2026-11-05)
+
+- **Affiliate tracking removed** (Ann): the root-layout affiliate manager (`links.getcaros.com/js/am.js`, `affiliateManager.init`) and the thank-you `trackLead` script are deleted. The cookie banner and privacy section no longer list affiliate attribution as essential. The affiliate program page, application form and `/api/affiliate-application` are unchanged. Affiliate referrals will not be attributed until tracking is reinstated under consent.
+- **CSP:** added `https://connect.facebook.net` to `script-src` and `https://www.facebook.com https://connect.facebook.net` to `connect-src` so the consent-gated Meta Pixel can load and report (live site was blocking it before this change).
+- **Spanish native review deferred** by Ann; publishing without it.
+- **Yelp / website-review monitoring:** claim kept per Ann; product implementation tracked separately in the ask-caros app.
+- Tests: `tests/caros-tracking.test.mjs` rewritten deliberately (red/green logs in `docs/tdd-logs/round3-*.txt`); `tests/caros-affiliate-thank-you.test.mjs` deleted since the behaviour it protected was removed on purpose.

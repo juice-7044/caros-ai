@@ -202,24 +202,6 @@ export default async function RootLayout({
 gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});
 try{var m=document.cookie.match(/(?:^|; )caros_consent=([^;]*)/);if(m){var c=JSON.parse(decodeURIComponent(m[1]));if(c&&c.v===1&&typeof c.analytics==='boolean'&&typeof c.marketing==='boolean'){var a=c.analytics?'granted':'denied',d=c.marketing?'granted':'denied';gtag('consent','update',{ad_storage:d,ad_user_data:d,ad_personalization:d,analytics_storage:a});}}}catch(e){}`}
         </Script>
-        <Script id="caros-affiliate-manager" strategy="beforeInteractive">
-          {`(function() {
-  var t = document.createElement("script");
-  t.type = "text/javascript";
-  t.async = true;
-  t.src = "https://links.getcaros.com/js/am.js";
-  t.onload = t.onreadystatechange = function() {
-    var state = this.readyState;
-    if (!state || state === "complete" || state === "loaded") {
-      try {
-        affiliateManager.init("ZdY2U5V9iKnh7Y7IUj1e", "https://backend.leadconnectorhq.com", ".getcaros.com");
-      } catch (_) {}
-    }
-  };
-  var first = document.getElementsByTagName("script")[0];
-  first.parentNode.insertBefore(t, first);
-})();`}
-        </Script>
         <Script
           id="google-tag-manager"
           strategy="beforeInteractive"
