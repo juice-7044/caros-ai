@@ -260,3 +260,15 @@
     }
   }
 }
+
+/* Home lifecycle: one step glows at a time (6 steps x 1.6s). Disabled for reduced motion; the diagram stays fully readable. */
+@keyframes lifecycle-glow {
+  0%, 16% { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
+  17%, 100% { border-color: var(--ink-border); box-shadow: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .lifecycle-step {
+    animation: lifecycle-glow 9.6s linear infinite;
+    animation-delay: calc(var(--i, 0) * 1.6s);
+  }
+}

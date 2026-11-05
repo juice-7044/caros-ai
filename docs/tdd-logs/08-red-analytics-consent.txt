@@ -1,0 +1,4 @@
+✖ trackEvent sends nothing when Do Not Track or Global Privacy Control is on (0.729417ms)
+ℹ pass 2
+ℹ fail 1
+✖ failing tests:

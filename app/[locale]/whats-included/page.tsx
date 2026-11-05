@@ -36,8 +36,8 @@ export default function WhatsIncludedPage() {
     <>
       <PageHero
         eyebrow={tr("What's Included")}
-        title={tr("Six tools, one notebook, and a prayer —")}
-        serifTitle={tr("replaced by one system.")}
+        title={tr("Fewer tools to juggle —")}
+        serifTitle={tr("one connected system.")}
         subtitle={tr("CAROS connects customer acquisition, revenue operations, customer success, business intelligence, and the compatible tools you already use into one revenue operating system built around your business.")}
       />
 
@@ -59,12 +59,12 @@ export default function WhatsIncludedPage() {
         <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
           <div className="grid gap-16 lg:grid-cols-[1fr_1.1fr] lg:items-center">
             <Reveal>
-              <Eyebrow>{tr("What It Replaces")}</Eyebrow>
+              <Eyebrow>{tr("What It Can Consolidate")}</Eyebrow>
               <h2 className="mt-6 text-balance text-[clamp(2rem,4vw,3rem)] font-extrabold leading-[1.02] tracking-tight">
                 {tr("One login instead of a drawer full of them.")}
               </h2>
               <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-                {tr("Most owners don't have a software problem. They have a disconnection problem — six tools that don't talk to each other, and the gaps between them are where revenue leaks.")}
+                {tr("Most owners don't have a software problem. They have a disconnection problem. CAROS does not replace every specialized platform; where integrations remain necessary, it helps coordinate them.")}
               </p>
             </Reveal>
             <Reveal delay={80}>
@@ -74,7 +74,7 @@ export default function WhatsIncludedPage() {
                     key={item}
                     className="flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4 text-foreground/90"
                   >
-                    <span className="font-serif text-lg italic text-gold line-through decoration-gold/50">
+                    <span className="font-serif text-lg italic text-gold">
                       {item}
                     </span>
                   </li>

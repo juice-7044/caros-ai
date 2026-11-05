@@ -1,0 +1,5 @@
+    throw new ERR_MODULE_NOT_FOUND(
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/Users/anns-macbook/Projects/caros-ai/lib/home-calculators.ts' imported from /Users/anns-macbook/Projects/caros-ai/tests/caros-home-calculators.test.mjs
+  code: 'ERR_MODULE_NOT_FOUND',
+✖ tests/caros-home-calculators.test.mjs (51.776459ms)
+ℹ pass 0

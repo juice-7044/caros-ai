@@ -4,7 +4,8 @@ import catalog from "@/messages/full/forms-legal.es.json"
 import { useSpanish } from "@/lib/use-spanish"
 import { localeHref } from "@/lib/spanish"
 
-import { useState, type FormEvent } from "react"
+import { useRef, useState, type FormEvent } from "react"
+import { track } from "@/lib/analytics-client"
 import Link from "next/link"
 import { ArrowRight, Check, Loader2 } from "lucide-react"
 import { INDUSTRIES, BOOKING_URL } from "@/lib/site"
@@ -27,6 +28,13 @@ export function AuditForm() {
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const started = useRef(false)
+  // Analytics carry no form values: only that the audit was started / completed.
+  const markStarted = () => {
+    if (started.current) return
+    started.current = true
+    track("audit_start", { location: "revenue_audit_form" })
+  }
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -65,6 +73,7 @@ export function AuditForm() {
         return
       }
 
+      track("audit_complete", { location: "revenue_audit_form" })
       setSubmitted(true)
       // Redirect to the booking calendar to schedule the audit
       window.location.href = BOOKING_URL
@@ -92,7 +101,7 @@ export function AuditForm() {
   }
 
   return (
-    <form onInvalid={(event) => { if (!es) return; const field = event.target as HTMLInputElement; field.setCustomValidity(tr(field.validity.typeMismatch ? (field.type === "email" ? "Please enter a valid email address." : "Please enter a valid URL.") : field.type === "checkbox" ? "Please check this box to continue." : field.tagName === "SELECT" ? "Please select an option." : "Please complete this field.")) }} onInput={(event) => (event.target as HTMLInputElement).setCustomValidity("")} onSubmit={handleSubmit} className="rounded-2xl border border-ink-border bg-ink/60 p-8 lg:p-12">
+    <form onInvalid={(event) => { if (!es) return; const field = event.target as HTMLInputElement; field.setCustomValidity(tr(field.validity.typeMismatch ? (field.type === "email" ? "Please enter a valid email address." : "Please enter a valid URL.") : field.type === "checkbox" ? "Please check this box to continue." : field.tagName === "SELECT" ? "Please select an option." : "Please complete this field.")) }} onInput={(event) => (event.target as HTMLInputElement).setCustomValidity("")} onSubmit={handleSubmit} onFocusCapture={markStarted} className="rounded-2xl border border-ink-border bg-ink/60 p-8 lg:p-12">
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
           <Label htmlFor="firstName">{tr("First name")}</Label>

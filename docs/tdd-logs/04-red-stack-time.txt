@@ -1,0 +1,6 @@
+✖ stack: time cost multiplies employees once, 52 weeks and hourly cost; platform count is not a multiplier (0.701542ms)
+ℹ pass 3
+ℹ fail 1
+✖ failing tests:
+✖ stack: time cost multiplies employees once, 52 weeks and hourly cost; platform count is not a multiplier (0.701542ms)
+  + actual - expected

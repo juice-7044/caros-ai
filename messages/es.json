@@ -1,6 +1,6 @@
 {
   "Metadata": {
-    "description": "CAROS es el Sistema Operativo de Captación de Clientes e Ingresos para empresas y organizaciones que crecen a través de las relaciones."
+    "description": "CAROS es el Sistema Operativo de Ingresos unificado para empresas y organizaciones que crecen a través de las relaciones: un solo panel para todo lo que impulsa los ingresos."
   },
   "PricingPositioning": {
     "title": "Operaciones de ingresos adaptadas a tu forma de trabajar",
@@ -50,7 +50,7 @@
     "marketingRoi": "ROI de marketing",
     "privacy": "Privacidad",
     "terms": "Términos",
-    "tagline": "Infraestructura de ingresos para la próxima etapa de crecimiento.",
+    "tagline": "CAROS. Hacemos lo más, para que puedas hacer más con menos.",
     "headquarters": "Sede central",
     "rights": "Todos los derechos reservados.",
     "contact": "Contacto",
@@ -60,6 +60,148 @@
   },
   "language": {
     "label": "Idioma"
+  },
+  "Home": {
+    "hero": {
+      "eyebrow": "Haz crecer tu negocio. No tus gastos fijos.",
+      "title": "¿Cuánto te costaría contratar 5 empleados más?",
+      "subtitle": "¿Y 10?",
+      "transition": "Ahora imagina crecer sin contratar a alguien para cada tarea nueva.",
+      "value": "CAROS es un único Sistema Operativo de Ingresos con un panel cohesivo, para todo lo que impulsa los ingresos de tu negocio.",
+      "systemChip": "Un solo Sistema Operativo de Ingresos · Un solo panel",
+      "primaryCta": "Ver CAROS en acción",
+      "secondaryCta": "Explorar lo que CAROS puede hacer",
+      "demoNote": "Abre la demostración en vivo en una pestaña nueva."
+    },
+    "hiring": {
+      "title": "Costo anual ilustrativo de contratación",
+      "employees": "Empleados",
+      "salary": "Salario promedio (por empleado)",
+      "perYear": "por año",
+      "presets": "Ejemplos rápidos",
+      "preset": "{count} empleados",
+      "exclusions": "Solo ilustrativo. No incluye beneficios, impuestos sobre la nómina, reclutamiento, incorporación ni otros gastos de empleo."
+    },
+    "unified": {
+      "eyebrow": "El panel de CAROS",
+      "title": "Un panel. Un sistema unificado. Toda tu operación de ingresos.",
+      "body": "Deja de saltar entre plataformas desconectadas. CAROS reúne las funciones que impulsan tus ingresos en un sistema operativo conectado.",
+      "details": "Detalles",
+      "expanding": "En expansión",
+      "capabilities": [
+        { "id": "marketing", "title": "Marketing y redes sociales", "summary": "Campañas, interacción con la audiencia y coordinación de marketing.", "detail": "Redacta, aprueba y programa publicaciones en las cuentas sociales conectadas y coordina campañas desde el mismo espacio de trabajo. Las publicaciones se envían a través de las cuentas que conectes.", "status": "live" },
+        { "id": "sales", "title": "Ventas", "summary": "Prospectos, embudos, oportunidades y flujos de conversión.", "detail": "Sigue contactos y oportunidades por etapa del embudo, ve el valor del embudo abierto y detecta prospectos que esperan demasiado una respuesta.", "status": "live" },
+        { "id": "outreach", "title": "Contacto y comunicación con clientes", "summary": "Teléfono, correo, SMS y otros canales compatibles.", "detail": "Llamadas, mensajes de texto y correos en una sola bandeja, con chat y voz en tu sitio web. Los canales dependen de lo que conectes.", "status": "live" },
+        { "id": "reactivation", "title": "Reactivación de clientes", "summary": "Oportunidades de recuperación y seguimiento personalizado.", "detail": "Ve oportunidades perdidas o abandonadas recientemente que merecen una segunda conversación y haz un seguimiento personal. Las campañas automáticas de reactivación aún no están disponibles.", "status": "partial" },
+        { "id": "workflows", "title": "Flujos de trabajo y automatización", "summary": "Procesos conectados, tareas automatizadas y coordinación.", "detail": "Los flujos estándar de CAROS se configuran contigo durante la implementación y se pueden inscribir contactos en flujos publicados. Crear flujos nuevos dentro del panel aún no está disponible.", "status": "partial" },
+        { "id": "service", "title": "Servicio y éxito del cliente", "summary": "Historial de relación, coordinación del servicio y retención.", "detail": "Un registro por cliente con conversaciones, notas de llamadas y seguimientos. No incluye un sistema de tickets dedicado.", "status": "partial" },
+        { "id": "reputation", "title": "Gestión de la reputación", "summary": "Monitoreo de reseñas, respuestas y solicitudes de reseñas.", "detail": "Monitorea y responde reseñas de Google y Facebook, y envía solicitudes de reseñas. El monitoreo de Yelp y de reseñas del sitio web aún no está disponible.", "status": "partial" },
+        { "id": "community", "title": "Creación de comunidad", "summary": "Relaciones, participación y lealtad.", "detail": "Comunidades de miembros con debates, cursos, seminarios web y membresías de pago.", "status": "live" },
+        { "id": "more", "title": "Y más", "summary": "Más capacidades en todo el ecosistema CAROS.", "detail": "Recepcionista con IA, informes y resúmenes diarios, facturación y firma electrónica, además de integraciones con las herramientas que ya usas.", "status": "live" }
+      ]
+    },
+    "showcase": {
+      "alt": "Panel Centro de Comando de CAROS",
+      "caption": "El Centro de Comando de CAROS",
+      "unavailableTitle": "Ve el panel real en la demostración en vivo",
+      "unavailableBody": "Todavía no hay una captura del producto disponible en esta página. La demostración en vivo muestra el espacio de trabajo real de CAROS.",
+      "cta": "Ver CAROS en acción"
+    },
+    "disconnected": {
+      "eyebrow": "El costo del software desconectado",
+      "title": "¿Cuánto te está costando realmente tu conjunto de herramientas desconectadas?",
+      "body": "Una recepcionista con IA. Un sistema telefónico. Correo, SMS, CRM, agenda, redes sociales, reseñas. ¿Cuántas suscripciones, accesos y curvas de aprendizaje son, y cuánta información se pierde entre ellos?",
+      "leftTitle": "El negocio desconectado",
+      "rightTitle": "Un panel. Un solo acceso. Un Sistema Operativo de Ingresos conectado.",
+      "tiles": ["Recepcionista con IA", "Teléfono comercial", "CRM y embudo", "Marketing por correo", "Campañas de SMS", "Redes sociales", "Agenda", "Servicio al cliente", "Gestión de reseñas", "Automatización de flujos"],
+      "problems": ["Múltiples suscripciones", "Múltiples accesos", "Múltiples paneles", "Múltiples curvas de aprendizaje", "Información de clientes desconectada", "Funciones duplicadas", "Más integración y mantenimiento", "Tiempo perdido"],
+      "benefits": ["Visibilidad centralizada", "Información de clientes conectada", "Flujos de trabajo unificados", "Comunicaciones coordinadas", "Menos cambio entre herramientas", "Menos duplicación", "Flujos de equipo más simples", "Experiencias de cliente más consistentes"],
+      "diagramLabelLeft": "Diagrama: herramientas separadas, conexiones fragmentadas",
+      "diagramLabelRight": "Diagrama: las mismas funciones fluyendo hacia un solo panel de CAROS",
+      "hub": "CAROS",
+      "caveat": "CAROS no reemplaza todas las plataformas especializadas. Donde aún se necesiten integraciones, CAROS ayuda a coordinarlas en una sola experiencia.",
+      "cta": "Mira qué puedes consolidar con CAROS"
+    },
+    "stack": {
+      "eyebrow": "Calculadora del costo de tu conjunto de herramientas",
+      "title": "¿Cuánto te cuesta tu software en suscripciones y en tiempo?",
+      "subscriptions": "Suscripciones de software",
+      "avgMonthly": "Costo mensual promedio por suscripción",
+      "platforms": "Plataformas / accesos distintos",
+      "platformsHint": "Solo como contexto. No se usa en el cálculo.",
+      "employees": "Empleados que usan estos sistemas",
+      "hours": "Horas por semana que cada empleado dedica a cambiar entre sistemas",
+      "hourly": "Costo laboral promedio por hora",
+      "resultTitle": "Tu conjunto de herramientas puede costar más que tus suscripciones.",
+      "annualSoftware": "Gasto anual en software",
+      "annualSoftwareNote": "Suscripciones × costo mensual × 12",
+      "annualTime": "Costo anual estimado del tiempo",
+      "annualTimeNote": "Empleados × horas semanales de cada uno × 52 × costo por hora. Es una estimación, no un ahorro auditado.",
+      "combined": "Costo anual combinado estimado",
+      "breakdown": "Desglose",
+      "software": "Software",
+      "time": "Tiempo (estimación)",
+      "supporting": "Explora cómo consolidar flujos de trabajo y conectar tus operaciones con CAROS podría reducir la complejidad y ayudar a tu equipo a trabajar con más eficiencia.",
+      "disclaimer": "No es una cifra de ahorro ni de retorno de inversión. CAROS puede integrarse con algunos servicios de terceros o depender de ellos, por lo que no todo este gasto es aprovechable.",
+      "cta": "Explora tu oportunidad con CAROS"
+    },
+    "challenges": {
+      "eyebrow": "Del desafío a la capacidad",
+      "title": "Cada problema, junto con lo que CAROS hace al respecto.",
+      "items": [
+        { "problem": "¿Demasiadas herramientas?", "solution": "Reúne tus operaciones de ingresos en un entorno conectado." },
+        { "problem": "¿Demasiado trabajo administrativo?", "solution": "Automatiza tareas repetitivas y coordina los flujos operativos." },
+        { "problem": "¿Demasiadas oportunidades perdidas?", "solution": "Capta consultas y respalda un seguimiento oportuno y constante." },
+        { "problem": "¿Clientes que se pierden en el camino?", "solution": "Conecta comunicaciones e información de clientes en los canales compatibles." },
+        { "problem": "¿Cuesta crecer sin contratar?", "solution": "Ayuda a tu equipo actual a manejar más actividad con mejor coordinación y automatización." },
+        { "problem": "¿Te cuesta reactivar a clientes anteriores?", "solution": "Detecta oportunidades perdidas y personaliza tu seguimiento de recuperación." },
+        { "problem": "¿Experiencias de cliente inconsistentes?", "solution": "Coordina servicio, comunicación, seguimiento y éxito del cliente." },
+        { "problem": "¿Sin una visión clara del desempeño del negocio?", "solution": "Reúne la información operativa y de ingresos para decidir mejor." }
+      ]
+    },
+    "lifecycle": {
+      "eyebrow": "Cómo funciona en conjunto",
+      "title": "Todo está conectado. Porque tu negocio debería estarlo.",
+      "body": "Un solo sistema operativo coordina marketing, ventas, comunicación, operaciones, servicio, reputación y comunidad.",
+      "diagramLabel": "Ciclo de vida del cliente: atraer, involucrar, convertir, atender, retener, reactivar",
+      "modes": { "ai": "Con IA", "human": "Con apoyo humano", "auto": "Automatizado" },
+      "steps": [
+        { "name": "Atraer", "functions": "Marketing y redes", "mode": "ai" },
+        { "name": "Involucrar", "functions": "Comunicación", "mode": "ai" },
+        { "name": "Convertir", "functions": "Ventas", "mode": "human" },
+        { "name": "Atender", "functions": "Operaciones y servicio", "mode": "auto" },
+        { "name": "Retener", "functions": "Reputación y comunidad", "mode": "human" },
+        { "name": "Reactivar", "functions": "Seguimiento de recuperación", "mode": "human" }
+      ],
+      "footnote": "Un sistema operativo integral, no un conjunto de herramientas de IA desconectadas."
+    },
+    "experience": {
+      "eyebrow": "Experiencia del producto",
+      "title": "Vive CAROS, no solo leas sobre él.",
+      "body": "Explora la demostración en vivo o habla con CAROS por chat o por voz.",
+      "demoTitle": "Demostración en vivo",
+      "demoBody": "Recorre un espacio de trabajo de demostración con datos de ejemplo.",
+      "demoCta": "Ver CAROS en acción",
+      "integrationsTitle": "Funciona con tus herramientas actuales",
+      "integrationsBody": "Teléfono, correo, SMS, calendarios, pagos y otras integraciones compatibles. La disponibilidad depende de tu configuración.",
+      "industriesCta": "Ver industrias"
+    },
+    "opportunity": {
+      "eyebrow": "Oportunidad de ingresos",
+      "title": "Encuentra los ingresos que se esconden en tu seguimiento.",
+      "toggle": "Calculadora de oportunidad de ingresos",
+      "toggleHint": "Estima los ingresos en riesgo por llamadas perdidas",
+      "auditCta": "Reserva una revisión de tu negocio",
+      "moreTools": "Más calculadoras gratuitas"
+    },
+    "final": {
+      "title": "Un panel. Un sistema unificado. Todo lo que impulsa los ingresos.",
+      "sub": "Descubre cómo CAROS puede respaldar tu negocio.",
+      "primary": "Ver CAROS en acción",
+      "secondary": "Reserva una revisión de tu negocio",
+      "tagline": "CAROS. Hacemos lo más, para que puedas hacer más con menos.",
+      "privacy": "No vendemos datos de clientes ni de empresas, ni usamos la información propietaria de un cliente para entrenar el sistema de otro."
+    }
   },
   "HomePage": {
     "hero": {
@@ -447,7 +589,7 @@
       "eyebrow": "Cómo funciona",
       "title": "Un sistema creado alrededor de",
       "serifTitle": "la forma en que ya trabajas.",
-      "subtitle": "CAROS es un sistema operativo de ingresos que diseñamos, construimos y ejecutamos alrededor de tu negocio.",
+      "subtitle": "CAROS es un único Sistema Operativo de Ingresos, con un solo panel, que diseñamos, construimos y ejecutamos alrededor de tu negocio.",
       "questions": "Las cuatro preguntas",
       "questionsTitle": "Todos los propietarios de negocios se hacen las mismas cuatro preguntas.",
       "process": "El proceso",
@@ -492,7 +634,7 @@
       "eyebrow": "Compara CAROS",
       "title": "La tecnología de ingresos debe hacer más que responder.",
       "titleAccent": "Debe saber qué merece atención.",
-      "body": "Algunas plataformas se centran en atender llamadas, responder consultas o automatizar el seguimiento. CAROS conecta esas actividades con la captación, las operaciones y la información sobre ingresos para empresas y organizaciones que crecen a través de las relaciones."
+      "body": "Algunas plataformas se centran en atender llamadas, responder consultas o automatizar el seguimiento. CAROS no es solo una recepcionista con IA, un CRM, una plataforma de correo, un chatbot ni un sistema telefónico. Es el entorno operativo que los conecta, para empresas y organizaciones que crecen a través de las relaciones."
     },
     "diagnostic": {
       "breakEven": "Las cuentas del punto de equilibrio",

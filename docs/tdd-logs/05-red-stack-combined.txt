@@ -1,0 +1,6 @@
+✖ stack: combined total, breakdown shares, and defensive inputs (0.537625ms)
+ℹ pass 4
+ℹ fail 1
+✖ failing tests:
+✖ stack: combined total, breakdown shares, and defensive inputs (0.537625ms)
+  + actual - expected

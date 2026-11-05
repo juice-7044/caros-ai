@@ -33,7 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: industry.metaTitle,
     description: industry.metaDescription,
     keywords: industry.keywords,
-    alternates: { canonical: path, languages: { en: "/en/industries/nonprofits", es: "/es/industries/nonprofits" } },
+    alternates: { canonical: path, languages: { en: "/en/industries/nonprofits", es: "/es/industries/nonprofits", "x-default": "/en/industries/nonprofits" } },
     openGraph: {
       type: "website",
       url: `${SITE_URL}${path}`,

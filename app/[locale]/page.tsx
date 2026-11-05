@@ -1,53 +1,45 @@
+import { getTranslations } from "next-intl/server"
 import { Hero } from "@/components/caros/home/hero"
-import { RevenueFirst } from "@/components/caros/home/revenue-first"
-import { Leaks } from "@/components/caros/home/leaks"
-import { Pivot } from "@/components/caros/home/pivot"
-import { MoreLeads } from "@/components/caros/home/more-leads"
-import { EnterCaros } from "@/components/caros/home/enter-caros"
-import { Integrations } from "@/components/caros/home/integrations"
-import { MoneyJourney } from "@/components/caros/home/money-journey"
-import { HumanAnswering } from "@/components/caros/home/human-answering"
-import { Retention } from "@/components/caros/home/retention"
-import { Lifecycle } from "@/components/caros/home/lifecycle"
-import { View360 } from "@/components/caros/home/view-360"
-import { Process } from "@/components/caros/home/process"
+import { UnifiedSystem } from "@/components/caros/home/unified-system"
+import { ProductShowcase } from "@/components/caros/home/product-showcase"
+import { DisconnectedCost } from "@/components/caros/home/disconnected-cost"
+import { StackCalculator } from "@/components/caros/home/stack-calculator"
+import { ChallengePairs } from "@/components/caros/home/challenge-pairs"
+import { LifecycleFlow } from "@/components/caros/home/lifecycle-flow"
+import { ProductExperience } from "@/components/caros/home/product-experience"
 import { Roi } from "@/components/caros/home/roi"
-import { Industries } from "@/components/caros/home/industries"
+import { HomeAnalytics } from "@/components/caros/home/home-analytics"
 import { CtaBand } from "@/components/caros/cta-band"
 import { TrustpilotWidgetLoader } from "@/components/TrustpilotWidgetLoader"
+import { DEMO_URL } from "@/lib/home-nav"
 
-export default function HomePage() {
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: "Home.final" })
   return (
     <>
+      <HomeAnalytics />
+      {/* 1 Cost of scaling + unified RevOS */}
       <Hero />
-      {/* Revenue-first positioning + lifecycle visual */}
-      <RevenueFirst />
-      {/* Section 2 — Pain points */}
-      <Leaks />
-      <Pivot />
-      {/* More leads aren't always the answer */}
-      <MoreLeads />
-      {/* Section 3 — Five pillars */}
-      <EnterCaros />
-      {/* Section 4 — Money journey (terminal) */}
-      <MoneyJourney />
-      {/* Section 5 — Human answering */}
-      <HumanAnswering />
-      <Retention />
-      {/* Full revenue lifecycle — marketing spend + database as an asset */}
-      <Lifecycle />
-      {/* Works with compatible tools in your existing ecosystem */}
-      <Integrations />
-      {/* Section 6 — Business intelligence dashboard */}
-      <View360 />
-      {/* Section 7 — How it works */}
-      <Process />
-      {/* Section 8 — ROI calculator */}
+      {/* 2 One dashboard, nine capabilities */}
+      <UnifiedSystem showcase={<ProductShowcase />} />
+      {/* 3 Cost of disconnected software */}
+      <DisconnectedCost />
+      {/* 4 Tech stack cost calculator */}
+      <StackCalculator />
+      {/* 5 Challenge / capability pairs */}
+      <ChallengePairs />
+      {/* 6 Connected customer lifecycle */}
+      <LifecycleFlow />
+      {/* 7 Product experience */}
+      <ProductExperience />
+      {/* 8 Revenue opportunity calculator + audit */}
       <Roi />
-      {/* Section 10 — Industries (scrolling) */}
-      <Industries />
-      {/* Section 11 — Final CTA */}
-      <CtaBand />
+      {/* 9 Final CTA */}
+      <CtaBand headline={t("title")} sub={t("sub")} ctaLabel={t("primary")} ctaHref={DEMO_URL} trackDemo="final_cta">
+        <p className="mt-10 font-serif text-xl italic text-gold">{t("tagline")}</p>
+        <p className="mt-3 max-w-xl text-xs leading-relaxed text-ink-muted">{t("privacy")}</p>
+      </CtaBand>
       <section className="border-t border-border/60 bg-background px-6 py-10 sm:px-8">
         <div className="mx-auto max-w-6xl">
           {/* TrustBox widget - Review Collector */}
@@ -56,6 +48,5 @@ export default function HomePage() {
         </div>
       </section>
     </>
-
   )
 }

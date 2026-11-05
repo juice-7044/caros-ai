@@ -6,7 +6,7 @@ export function positioningSocialMetadata(
   locale: string,
   title?: string,
 ): Pick<Metadata, 'openGraph' | 'twitter'> {
-  const shareTitle = title ?? (locale === 'es' ? 'CAROS — Primero los ingresos. Todo lo demás está a su servicio.' : 'CAROS — Revenue First. Everything Else Serves It.')
+  const shareTitle = title ?? (locale === 'es' ? 'CAROS — Un panel. Un sistema operativo de ingresos unificado.' : 'CAROS — One Dashboard. One Unified Revenue Operating System.')
   return {
     openGraph: {
       type: 'website',

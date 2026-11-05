@@ -1,0 +1,7 @@
+✖ hiring cost clamps zero, empty, negative, non-finite and extreme inputs (1.655292ms)
+ℹ pass 1
+ℹ fail 1
+✖ failing tests:
+✖ hiring cost clamps zero, empty, negative, non-finite and extreme inputs (1.655292ms)
+    actual: NaN,
+    expected: 0,

@@ -1,0 +1,6 @@
+✖ hero CTAs: demo link goes to demo.getcaros.com, secondary scrolls to the capabilities section (0.852167ms)
+✖ homepage follows the nine-section sequence (1.314667ms)
+✖ product screenshot is only referenced behind an existence check; no other dashboard image is used (0.665791ms)
+ℹ pass 0
+ℹ fail 3
+✖ failing tests:

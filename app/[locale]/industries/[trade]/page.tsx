@@ -37,7 +37,7 @@ export async function generateMetadata({
     title: industry.metaTitle,
     description: industry.metaDescription,
     keywords: industry.keywords,
-    alternates: { canonical: path, languages: { en: `/en/industries/${industry.slug}`, es: `/es/industries/${industry.slug}` } },
+    alternates: { canonical: path, languages: { en: `/en/industries/${industry.slug}`, es: `/es/industries/${industry.slug}`, "x-default": `/en/industries/${industry.slug}` } },
     openGraph: {
       type: "website",
       url,

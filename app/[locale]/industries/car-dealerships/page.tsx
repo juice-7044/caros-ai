@@ -23,7 +23,7 @@ export async function generateMetadata(_props: unknown, parent: ResolvingMetadat
   const description = metadata.description ?? undefined
   return {
     ...metadata,
-    alternates: { ...metadata.alternates, canonical, languages: { en: `https://getcaros.com/en${path}`, es: `https://getcaros.com/es${path}` } },
+    alternates: { ...metadata.alternates, canonical, languages: { en: `https://getcaros.com/en${path}`, es: `https://getcaros.com/es${path}`, "x-default": `https://getcaros.com/en${path}` } },
     openGraph: {
       ...metadata.openGraph,
       title: metadata.openGraph?.title ?? title,

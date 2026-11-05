@@ -28,12 +28,12 @@ const jetbrainsMono = JetBrains_Mono({
 const SITE_URL = "https://getcaros.com"
 
 const SITE_DESCRIPTION =
-  "CAROS is the Customer Acquisition & Revenue Operating System for relationship-driven businesses and organizations."
+  "CAROS is the unified Revenue Operating System for relationship-driven businesses and organizations: one dashboard for everything that drives revenue."
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "CAROS — Revenue First. Everything Else Serves It.",
+    default: "CAROS — One Dashboard. One Unified Revenue Operating System.",
     template: "%s | CAROS",
   },
   description: SITE_DESCRIPTION,
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "CAROS",
     url: SITE_URL,
-    title: "CAROS — Revenue First. Everything Else Serves It.",
+    title: "CAROS — One Dashboard. One Unified Revenue Operating System.",
     description: SITE_DESCRIPTION,
     locale: "en_US",
     images: [
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CAROS — Revenue First. Everything Else Serves It.",
+    title: "CAROS — One Dashboard. One Unified Revenue Operating System.",
     description: SITE_DESCRIPTION,
     images: ["/caros-logo.png"],
   },
@@ -112,7 +112,7 @@ const structuredData = {
       logo: `${SITE_URL}/caros-logo.png`,
       description: SITE_DESCRIPTION,
       email: "inquiries@getcarosai.com",
-      slogan: "Revenue First. Everything Else Serves It.",
+      slogan: "One Dashboard. One Unified System. Everything That Drives Revenue.",
     },
     {
       "@type": "WebSite",
@@ -171,7 +171,7 @@ export default async function RootLayout({
     "@graph": structuredData["@graph"].map(node => ({
       ...node,
       description: t("description"),
-      ...(node["@type"] === "Organization" ? { slogan: "Primero los ingresos. Todo lo demás está a su servicio." } : {}),
+      ...(node["@type"] === "Organization" ? { slogan: "Un panel. Un sistema unificado. Todo lo que impulsa los ingresos." } : {}),
       ...(node["@type"] === "WebSite" ? { inLanguage: "es" } : {}),
       ...(node["@type"] === "SoftwareApplication" ? {
         applicationSubCategory: "Sistema operativo de captación de clientes e ingresos",
