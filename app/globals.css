@@ -281,3 +281,22 @@ html[data-caros-consent-open] [data-caros-voice-widget] { bottom: calc(var(--car
 .caros-hotspot-dot::after { content: ""; position: absolute; inset: -2px; border-radius: 9999px; border: 2px solid currentColor; color: rgb(201 162 39 / 0.7); animation: caros-hotspot-pulse 2.4s ease-out infinite; pointer-events: none; }
 @keyframes caros-hotspot-pulse { 0% { transform: scale(1); opacity: 0.9; } 100% { transform: scale(2.1); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .caros-hotspot-dot::after { animation: none; opacity: 0; } .caros-hotspot-dot { transition: none; } }
+
+/* Hiring story: tokens -> lines -> CAROS wordmark -> dashboard. The drawn state is the default (reduced motion stays static);
+   motion exists only under no-preference and starts when the visual enters the viewport (data-play). Opacity/stroke only: no layout shift. */
+.converge-line { stroke-dasharray: 1; stroke-dashoffset: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .converge[data-play="false"] .converge-token,
+  .converge[data-play="false"] .converge-wordmark,
+  .converge[data-play="false"] .converge-dashboard { opacity: 0; }
+  .converge[data-play="false"] .converge-line { stroke-dashoffset: 1; }
+  .converge[data-play="false"] .converge-seg { opacity: 0; }
+  .converge[data-play="true"] .converge-token { animation: converge-in 0.5s ease-out both; animation-delay: calc(var(--i) * 70ms); }
+  .converge[data-play="true"] .converge-line { animation: converge-draw 0.9s ease-in-out both; animation-delay: calc(var(--i) * 70ms + 350ms); }
+  .converge[data-play="true"] .converge-wordmark { animation: converge-pop 0.6s ease-out both; animation-delay: 1.5s; }
+  .converge[data-play="true"] .converge-dashboard { animation: converge-in 0.6s ease-out both; animation-delay: 1.9s; }
+  .converge[data-play="true"] .converge-seg { animation: converge-in 0.4s ease-out both; animation-delay: calc(2.2s + var(--i) * 60ms); }
+}
+@keyframes converge-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes converge-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+@keyframes converge-pop { 0% { opacity: 0; transform: scale(0.8); } 70% { opacity: 1; transform: scale(1.06); } 100% { opacity: 1; transform: scale(1); } }

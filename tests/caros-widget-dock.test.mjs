@@ -4,10 +4,11 @@ import { readFileSync } from 'node:fs'
 
 const source = path => readFileSync(new URL(path, import.meta.url), 'utf8')
 
-test('homepage provides a stable dock after the CTA helper links', () => {
+test('homepage hero no longer reserves a chat dock; the launcher floats without waiting for one', () => {
+  // Deliberate change (hiring story correction): hero talk-to-us dock removed, floating contact kept.
   const hero = source('../components/caros/home/hero.tsx')
-  assert.ok(hero.indexOf('data-caros-chat-dock') > hero.indexOf('t("freeAuditCta")'))
-  assert.match(hero, /min-h-\[76px\]/)
+  assert.doesNotMatch(hero, /data-caros-chat-dock/)
+  assert.match(source('../components/caros/chat-widget.tsx'), /setLauncherReady\(true\)/)
 })
 
 test('one session owner portals only the launcher; panel stays outside the hero', () => {

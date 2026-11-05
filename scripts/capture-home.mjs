@@ -1,7 +1,8 @@
 // node scripts/capture-home.mjs <baseUrl> <outDir>: responsive screenshots + interaction/analytics checks on the homepage.
 import { writeFileSync, mkdirSync } from 'node:fs'
 const [base = 'http://localhost:3101', out = 'docs/screenshots'] = process.argv.slice(2)
-const { chromium } = await import(process.env.PLAYWRIGHT_CORE ?? 'playwright-core')
+const pw = await import(process.env.PLAYWRIGHT_CORE ?? 'playwright-core')
+const chromium = pw.chromium ?? pw.default.chromium
 mkdirSync(out, { recursive: true })
 const browser = await chromium.launch(process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {})
 const report = { widths: [], checks: [] }
@@ -65,16 +66,21 @@ const cap = page.locator('#unified-capabilities')
 await cap.locator('details').first().locator('summary').click()
 chk('capability expands', await cap.locator('details').first().evaluate(d => d.open))
 chk('nine capability cards', (await cap.locator('details').count()) === 9)
-const shot = cap.locator('img[alt^="CAROS Command Center demo workspace"], img[alt^="Espacio de trabajo de demostración"]')
+// The screenshot now sits right after the hiring story (full width), not inside #unified-capabilities.
+const showcase = page.locator('[data-story=showcase]')
+const shot = showcase.locator('img')
 await shot.first().scrollIntoViewIfNeeded(); await page.waitForTimeout(500)
 chk('showcase image loaded (naturalWidth>0)', await shot.first().evaluate(i => i.complete && i.naturalWidth > 0))
-chk('six hotspot buttons with aria-labels', (await cap.locator('[role=group] button[aria-label]').count()) === 6)
-await cap.locator('[role=group] button').nth(1).click()
-chk('hotspot open shows detail and fires showcase_interaction hotspot', (await cap.locator('[aria-live=polite]').innerText()).includes('New deals') && await page.evaluate(() => window.dataLayer.some(e => e.event === 'caros_showcase_interaction' && e.action === 'hotspot' && e.item === 'deals')))
+chk('six hotspot buttons with aria-labels', (await showcase.locator('[role=group] button[aria-label]').count()) === 6)
+await showcase.locator('[role=group] button').nth(1).click()
+chk('hotspot open shows detail and fires showcase_interaction hotspot', (await showcase.locator('[aria-live=polite]').innerText()).includes('New deals') && await page.evaluate(() => window.dataLayer.some(e => e.event === 'caros_showcase_interaction' && e.action === 'hotspot' && e.item === 'deals')))
 await page.locator('a', { hasText: 'Explore What CAROS Can Do' }).first().click()
 await page.waitForTimeout(500)
 chk('secondary CTA scrolls to capabilities', await page.evaluate(() => location.hash === '#unified-capabilities'))
-await page.mouse.wheel(0, 20000); await page.waitForTimeout(400)
+// Step down in screen-sized jumps so every milestone is crossed (a single wheel event can be swallowed by the in-flight smooth anchor scroll).
+for (let i = 0; i < 40; i++) { await page.mouse.wheel(0, 900); await page.waitForTimeout(120) }
+await page.waitForFunction(() => window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2, null, { timeout: 15000 }).catch(() => {})
+await page.waitForTimeout(400)
 const events = await page.evaluate(() => window.dataLayer.filter(e => String(e.event).startsWith('caros_')))
 const names = [...new Set(events.map(e => e.event))]
 chk('events fired', ['caros_home_engagement', 'caros_scroll_depth', 'caros_employee_calc_interaction', 'caros_stack_calc_interaction', 'caros_showcase_interaction', 'caros_hero_cta_click'].every(n => names.includes(n)), names.join(','))

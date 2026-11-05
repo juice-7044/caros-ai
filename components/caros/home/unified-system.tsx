@@ -2,7 +2,6 @@
 
 import { useTranslations } from "next-intl"
 import { ChevronDown, Handshake, LifeBuoy, Megaphone, MessagesSquare, Plus, RefreshCcw, Star, Users, Workflow, type LucideIcon } from "lucide-react"
-import type { ReactNode } from "react"
 import { CAPABILITIES_ID } from "@/lib/home-nav"
 import { track } from "@/lib/analytics-client"
 import { Reveal } from "@/components/caros/reveal"
@@ -22,8 +21,7 @@ const ICONS: Record<string, LucideIcon> = {
 
 type Capability = { id: string; title: string; summary: string; detail: string; status: "live" | "partial" }
 
-/** `showcase` is the ProductShowcase element, passed in as a prop. */
-export function UnifiedSystem({ showcase }: { showcase: ReactNode }) {
+export function UnifiedSystem() {
   const t = useTranslations("Home.unified")
   const capabilities = t.raw("capabilities") as Capability[]
 
@@ -35,8 +33,6 @@ export function UnifiedSystem({ showcase }: { showcase: ReactNode }) {
           <h2 className="mt-5 text-balance text-[clamp(2rem,4.4vw,3.5rem)] font-display leading-[1] tracking-tight">{t("title")}</h2>
           <p className="mt-5 text-lg leading-relaxed text-muted-foreground">{t("body")}</p>
         </Reveal>
-
-        <Reveal delay={80} className="mt-10">{showcase}</Reveal>
 
         <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {capabilities.map((c) => {

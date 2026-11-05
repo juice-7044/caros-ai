@@ -1,0 +1,31 @@
+# Hiring narrative correction (branch `fix/hiring-story-live-baseline`)
+
+Built fresh from live main `54dbd8f`. The unpublished Vercel/v0 edit (`origin/v0/hiring-cost-narrative`) was ignored entirely. Nothing pushed, deployed or merged. Brief: `~/.hermes/composer-pastes/pasted_content_2026-11-05_19-43-08-400_7c7a46.txt`.
+
+## What changed
+- **Order (DOM = mobile = desktop):** hiring headline -> compact calculator -> five roles OR ten functions -> convergence visual -> value reveal + brand tagline -> primary CTA "See CAROS in Action" (+ secondary "Explore What CAROS Can Do") -> full-width real screenshot (`public/caros-command-center.png`, simulated-data caption kept) -> software transition (`DisconnectedCost`) -> `StackCalculator` -> nine capabilities (`#unified-capabilities`, moved below the stack calculator, no duplicate list between story and software) -> unchanged remaining sections.
+- **One shared state** (`components/caros/home/hiring-story.tsx`): headcount + salary. The 5/10 buttons write 5 or 10 into the headcount; the view is derived from it (`lib/hiring-story.ts`): >=10 shows the ten-function view, anything else (including empty/invalid) the five-role view. Custom counts (not 5 or 10) show an explicit note ("these are illustrative, not N positions"), and neither button is pressed. No independent toggle exists.
+- **Ten functions:** all ten are buttons (`aria-expanded`/`aria-controls`), tap, Enter and Space; each has a one-sentence description. Disclaimers: ten functions are not ten employees, CAROS does not replace ten full-time workers; salary figures are hypothetical hiring costs, not guaranteed savings; positions are illustrative examples.
+- **Convergence animation** (`hiring-converge.tsx`, CSS in `globals.css`): tokens -> lines draw into the CAROS wordmark -> "One dashboard" bar. Starts when it enters the viewport (IntersectionObserver), restarts when the mode changes. The drawn state is the default; motion exists only under `prefers-reduced-motion: no-preference`, so reduced motion is fully static. Opacity/stroke only, same dimensions in both modes (no layout shift).
+- **Removed from hero:** free-resources link, "talk to us" dock (`data-caros-chat-dock`), eyebrow, transition/value/chip paragraphs, and the CTAs before the calculator. The floating launcher no longer waits for a dock (`chat-widget.tsx`: `setLauncherReady(true)`, MutationObserver removed); it floats from first paint and opens the panel.
+- **Software transition:** "And What About All the Software Those Employees Need?", the nine software items, five questions, value reveal and the combined-economics statement, EN + ES. Existing comparison diagram, caveat ("does not replace every specialized platform") and stack calculator untouched. Owner-confirmed capability copy (email/SMS campaigns, workflow builder, ticketing, Yelp/website reviews) is unchanged.
+- Analytics: CTA events now report `location: story_reveal`; function expand/collapse uses `showcase_interaction` with `item: function_<id>` (allowlisted keys only). Consent / Meta Pixel gating, affiliate removal, pricing, legal, ask-caros: not touched.
+
+## Deliberate test-expectation changes
+- `tests/caros-home-navigation.test.mjs`: CTA assertions read `hiring-story.tsx` (CTAs moved after the reveal); section order is now Hero, ProductShowcase, DisconnectedCost, StackCalculator, UnifiedSystem, ...
+- `tests/caros-widget-dock.test.mjs`: first test now asserts the hero has no dock and the launcher is ready without one.
+- `scripts/capture-home.mjs`: showcase checks target `[data-story=showcase]`; scroll-depth step made robust; playwright-core CJS import fix.
+
+## TDD record (`docs/tdd-logs/`)
+- `story-01-red-unit.txt`: 6 new tests, all red (module/copy/structure missing). `story-02-green-unit.txt`: green after implementation (some assertions were tightened afterward: a lookbehind for negated claims such as "does not replace", and wording regexes; the product copy was not changed to satisfy them).
+- Browser behaviour is covered by `scripts/verify-hiring-story.mjs` (real Chromium, DOM state not source regex). Honest gap: I did not run it red against the old build; the first run against the new build exposed test-script bugs (a never-resolving `getAnimations().finished` on infinite animations, nav links counted as pre-reveal CTAs, NBSP in es-419 currency) plus a missing `data-story="software"` hook, all fixed. Final: `story-05-browser-full.txt` **204/204**.
+
+## Verification (final code, production build, `next start -p 3101`)
+- `node --test tests/*.test.mjs`: 76 pass, 0 fail (`full-suite.txt`).
+- `npx tsc --noEmit -p .`: clean. `node scripts/validate-locales.mjs`: schemas match, 0 suspicious duplicates. `npm run build`: ok (run once, not concurrently).
+- `verify-hiring-story.mjs` EN/ES x 360/390/768/1440: strict vertical order of headline < calculator < positions < reveal < CTA < showcase < software < stack < capabilities; nothing but the headline precedes the calculator; no hero free-resources link or dock; demo CTA only after the reveal; one screenshot, full width; default 5/$250,000; 10 -> $500,000 + ten functions + aria-pressed; salary edit; custom 7 (five roles + note), custom 12 (ten functions + note), empty ($0, no NaN); all ten expand by click, Enter/Space; no overflow/overlap/clipping/off-screen in the story; convergence runs (5 or 10 lines, wordmark, dashboard), replays on mode change without shift, lines end at the wordmark; reduced motion: zero running animations, lines drawn; first-visit consent banner visible; floating contact launcher present/in viewport and opens the chat panel at 360/390/768/1440.
+- `capture-home.mjs`: 20/20 (output to /tmp so baseline screenshots were not overwritten).
+- Screenshots: `docs/screenshots/hiring-story-{en,es}-{360,390,768,1440}[-ten].png` (hero -> screenshot, fresh state; `-ten` has all functions open) and EN `-consent.png` first-visit captures. Pre-existing `home-*-full.png` untouched/uncommitted.
+
+## Gaps
+- Spanish copy not native-reviewed (deferred by owner). No axe/Lighthouse/perf measurement. `scripts/verify-consent.mjs` not rerun (consent code untouched; banner presence checked in the new script). While the consent banner is open on first mobile paint the floating launcher is lifted above it by existing logic; the screenshots `-consent.png` show that state.

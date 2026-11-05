@@ -19,14 +19,20 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   return (
     <>
       <HomeAnalytics />
-      {/* 1 Cost of scaling + unified RevOS */}
+      {/* 1 Hiring story: cost -> responsibilities -> CAROS reveal -> demo CTA */}
       <Hero />
-      {/* 2 One dashboard, nine capabilities */}
-      <UnifiedSystem showcase={<ProductShowcase />} />
-      {/* 3 Cost of disconnected software */}
+      {/* 2 Real Command Center screenshot, full width */}
+      <section data-story="showcase" className="bg-background pb-10 pt-2">
+        <div className="mx-auto max-w-[1300px] px-4 sm:px-6 lg:px-8">
+          <ProductShowcase />
+        </div>
+      </section>
+      {/* 3 Software transition: disconnected tools */}
       <DisconnectedCost />
       {/* 4 Tech stack cost calculator */}
       <StackCalculator />
+      {/* 5 Nine capabilities (#unified-capabilities) */}
+      <UnifiedSystem />
       {/* 5 Challenge / capability pairs */}
       <ChallengePairs />
       {/* 6 Connected customer lifecycle */}

@@ -1,0 +1,1022 @@
+[
+ {
+  "name": "en@360 all story blocks exist",
+  "pass": true,
+  "detail": "[[\"headline\",96],[\"calculator\",255.8125],[\"positions\",703.65625],[\"reveal\",1936.46875],[\"cta\",2459.78125],[\"showcase\",2615.78125],[\"software\",2934.234375],[\"stack\",5725.984375],[\"capabilities\",7295.484375]]"
+ },
+ {
+  "name": "en@360 story blocks are in strict vertical order",
+  "pass": true,
+  "detail": "[[\"headline\",96],[\"calculator\",255.8125],[\"positions\",703.65625],[\"reveal\",1936.46875],[\"cta\",2459.78125],[\"showcase\",2615.78125],[\"software\",2934.234375],[\"stack\",5725.984375],[\"capabilities\",7295.484375]]"
+ },
+ {
+  "name": "en@360 nothing but the headline precedes the calculator",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "en@360 calculator starts in the first viewport",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@360 primary demo CTA exists after the value reveal and before the screenshot",
+  "pass": true,
+  "detail": "[{\"y\":2459.78125,\"inStory\":true},{\"y\":12834.984375,\"inStory\":false},{\"y\":14618.921875,\"inStory\":false}]"
+ },
+ {
+  "name": "en@360 secondary CTA after reveal",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@360 no free-resources link or chat dock in hero",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@360 exactly one command-center screenshot",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@360 showcase spans the viewport width",
+  "pass": true,
+  "detail": "326"
+ },
+ {
+  "name": "en@360 default is 5 / $250,000 / five roles",
+  "pass": true,
+  "detail": "{\"count\":\"5\",\"result\":\"$250,000per year\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"true\",\"false\"]}"
+ },
+ {
+  "name": "en@360 toggle 10 syncs input, $500,000, ten functions, aria-pressed",
+  "pass": true,
+  "detail": "{\"count\":\"10\",\"result\":\"$500,000per year\",\"roles\":0,\"fns\":10,\"mode\":\"ten\",\"pressed\":[\"false\",\"true\"]}"
+ },
+ {
+  "name": "en@360 salary edit updates the result",
+  "pass": true,
+  "detail": "$600,000per year"
+ },
+ {
+  "name": "en@360 custom 7 shows the five-role view with a custom note",
+  "pass": true,
+  "detail": "{\"count\":\"7\",\"result\":\"$420,000per year\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "en@360 custom 12 shows the ten-function view with a custom note",
+  "pass": true,
+  "detail": "{\"count\":\"12\",\"result\":\"$720,000per year\",\"roles\":0,\"fns\":10,\"mode\":\"ten\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "en@360 empty headcount: $0, no NaN, five-role view",
+  "pass": true,
+  "detail": "{\"count\":\"\",\"result\":\"$0per year\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "en@360 toggle back to 5 restores five roles",
+  "pass": true,
+  "detail": "{\"count\":\"5\",\"result\":\"$300,000per year\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"true\",\"false\"]}"
+ },
+ {
+  "name": "en@360 five roles show all five titles and descriptions",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@360 all ten functions expand on click and show a description",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@360 Enter toggles a function closed",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@360 Space toggles a function open",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@360 no horizontal overflow, overlap, clipping or off-screen content",
+  "pass": true,
+  "detail": "{\"overlaps\":[],\"clipped\":[],\"offscreen\":[],\"overflow\":0}"
+ },
+ {
+  "name": "en@360 convergence plays on entering view: 5 tokens, 5 lines, wordmark, dashboard, running animations",
+  "pass": true,
+  "detail": "{\"n\":17,\"lines\":5,\"tokens\":5,\"wordmark\":true,\"dash\":true}"
+ },
+ {
+  "name": "en@360 mode change replays animation with 10 lines and no layout shift of the visual",
+  "pass": true,
+  "detail": "{\"a10\":{\"n\":32,\"lines\":10},\"before\":184.5,\"after\":184.5}"
+ },
+ {
+  "name": "en@360 lines span the row of tokens and end at the wordmark",
+  "pass": true,
+  "detail": "{\"wordmarkTop\":1581.21875,\"bottoms\":[1581,1581,1581,1581,1581,1581,1581,1581,1581,1581],\"maxEnd\":1581.21875,\"spread\":288}"
+ },
+ {
+  "name": "en@390 all story blocks exist",
+  "pass": true,
+  "detail": "[[\"headline\",96],[\"calculator\",255.8125],[\"positions\",684.15625],[\"reveal\",1874.96875],[\"cta\",2375.53125],[\"showcase\",2531.53125],[\"software\",2863.921875],[\"stack\",5577.171875],[\"capabilities\",7074.671875]]"
+ },
+ {
+  "name": "en@390 story blocks are in strict vertical order",
+  "pass": true,
+  "detail": "[[\"headline\",96],[\"calculator\",255.8125],[\"positions\",684.15625],[\"reveal\",1874.96875],[\"cta\",2375.53125],[\"showcase\",2531.53125],[\"software\",2863.921875],[\"stack\",5577.171875],[\"capabilities\",7074.671875]]"
+ },
+ {
+  "name": "en@390 nothing but the headline precedes the calculator",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "en@390 calculator starts in the first viewport",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@390 primary demo CTA exists after the value reveal and before the screenshot",
+  "pass": true,
+  "detail": "[{\"y\":2375.53125,\"inStory\":true},{\"y\":12419.921875,\"inStory\":false},{\"y\":14203.859375,\"inStory\":false}]"
+ },
+ {
+  "name": "en@390 secondary CTA after reveal",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@390 no free-resources link or chat dock in hero",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@390 exactly one command-center screenshot",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@390 showcase spans the viewport width",
+  "pass": true,
+  "detail": "356"
+ },
+ {
+  "name": "en@390 default is 5 / $250,000 / five roles",
+  "pass": true,
+  "detail": "{\"count\":\"5\",\"result\":\"$250,000per year\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"true\",\"false\"]}"
+ },
+ {
+  "name": "en@390 toggle 10 syncs input, $500,000, ten functions, aria-pressed",
+  "pass": true,
+  "detail": "{\"count\":\"10\",\"result\":\"$500,000per year\",\"roles\":0,\"fns\":10,\"mode\":\"ten\",\"pressed\":[\"false\",\"true\"]}"
+ },
+ {
+  "name": "en@390 salary edit updates the result",
+  "pass": true,
+  "detail": "$600,000per year"
+ },
+ {
+  "name": "en@390 custom 7 shows the five-role view with a custom note",
+  "pass": true,
+  "detail": "{\"count\":\"7\",\"result\":\"$420,000per year\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "en@390 custom 12 shows the ten-function view with a custom note",
+  "pass": true,
+  "detail": "{\"count\":\"12\",\"result\":\"$720,000per year\",\"roles\":0,\"fns\":10,\"mode\":\"ten\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "en@390 empty headcount: $0, no NaN, five-role view",
+  "pass": true,
+  "detail": "{\"count\":\"\",\"result\":\"$0per year\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "en@390 toggle back to 5 restores five roles",
+  "pass": true,
+  "detail": "{\"count\":\"5\",\"result\":\"$300,000per year\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"true\",\"false\"]}"
+ },
+ {
+  "name": "en@390 five roles show all five titles and descriptions",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@390 all ten functions expand on click and show a description",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@390 Enter toggles a function closed",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@390 Space toggles a function open",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@390 no horizontal overflow, overlap, clipping or off-screen content",
+  "pass": true,
+  "detail": "{\"overlaps\":[],\"clipped\":[],\"offscreen\":[],\"overflow\":0}"
+ },
+ {
+  "name": "en@390 convergence plays on entering view: 5 tokens, 5 lines, wordmark, dashboard, running animations",
+  "pass": true,
+  "detail": "{\"n\":17,\"lines\":5,\"tokens\":5,\"wordmark\":true,\"dash\":true}"
+ },
+ {
+  "name": "en@390 mode change replays animation with 10 lines and no layout shift of the visual",
+  "pass": true,
+  "detail": "{\"a10\":{\"n\":32,\"lines\":10},\"before\":184.5,\"after\":184.5}"
+ },
+ {
+  "name": "en@390 lines span the row of tokens and end at the wordmark",
+  "pass": true,
+  "detail": "{\"wordmarkTop\":1517.03125,\"bottoms\":[1517,1517,1517,1517,1517,1517,1517,1517,1517,1517],\"maxEnd\":1517.03125,\"spread\":315}"
+ },
+ {
+  "name": "en@768 all story blocks exist",
+  "pass": true,
+  "detail": "[[\"headline\",96],[\"calculator\",190.15625],[\"positions\",446.15625],[\"reveal\",1244.84375],[\"cta\",1552.71875],[\"showcase\",1640.71875],[\"software\",2125.3125],[\"stack\",3680.65625],[\"capabilities\",4858.046875]]"
+ },
+ {
+  "name": "en@768 story blocks are in strict vertical order",
+  "pass": true,
+  "detail": "[[\"headline\",96],[\"calculator\",190.15625],[\"positions\",446.15625],[\"reveal\",1244.84375],[\"cta\",1552.71875],[\"showcase\",1640.71875],[\"software\",2125.3125],[\"stack\",3680.65625],[\"capabilities\",4858.046875]]"
+ },
+ {
+  "name": "en@768 nothing but the headline precedes the calculator",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "en@768 calculator starts in the first viewport",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@768 primary demo CTA exists after the value reveal and before the screenshot",
+  "pass": true,
+  "detail": "[{\"y\":1552.71875,\"inStory\":true},{\"y\":8186.125,\"inStory\":false},{\"y\":9543.15625,\"inStory\":false}]"
+ },
+ {
+  "name": "en@768 secondary CTA after reveal",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@768 no free-resources link or chat dock in hero",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@768 exactly one command-center screenshot",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@768 showcase spans the viewport width",
+  "pass": true,
+  "detail": "718"
+ },
+ {
+  "name": "en@768 default is 5 / $250,000 / five roles",
+  "pass": true,
+  "detail": "{\"count\":\"5\",\"result\":\"$250,000per year\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"true\",\"false\"]}"
+ },
+ {
+  "name": "en@768 toggle 10 syncs input, $500,000, ten functions, aria-pressed",
+  "pass": true,
+  "detail": "{\"count\":\"10\",\"result\":\"$500,000per year\",\"roles\":0,\"fns\":10,\"mode\":\"ten\",\"pressed\":[\"false\",\"true\"]}"
+ },
+ {
+  "name": "en@768 salary edit updates the result",
+  "pass": true,
+  "detail": "$600,000per year"
+ },
+ {
+  "name": "en@768 custom 7 shows the five-role view with a custom note",
+  "pass": true,
+  "detail": "{\"count\":\"7\",\"result\":\"$420,000per year\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "en@768 custom 12 shows the ten-function view with a custom note",
+  "pass": true,
+  "detail": "{\"count\":\"12\",\"result\":\"$720,000per year\",\"roles\":0,\"fns\":10,\"mode\":\"ten\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "en@768 empty headcount: $0, no NaN, five-role view",
+  "pass": true,
+  "detail": "{\"count\":\"\",\"result\":\"$0per year\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "en@768 toggle back to 5 restores five roles",
+  "pass": true,
+  "detail": "{\"count\":\"5\",\"result\":\"$300,000per year\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"true\",\"false\"]}"
+ },
+ {
+  "name": "en@768 five roles show all five titles and descriptions",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@768 all ten functions expand on click and show a description",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@768 Enter toggles a function closed",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@768 Space toggles a function open",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@768 no horizontal overflow, overlap, clipping or off-screen content",
+  "pass": true,
+  "detail": "{\"overlaps\":[],\"clipped\":[],\"offscreen\":[],\"overflow\":0}"
+ },
+ {
+  "name": "en@768 convergence plays on entering view: 5 tokens, 5 lines, wordmark, dashboard, running animations",
+  "pass": true,
+  "detail": "{\"n\":17,\"lines\":5,\"tokens\":5,\"wordmark\":true,\"dash\":true}"
+ },
+ {
+  "name": "en@768 mode change replays animation with 10 lines and no layout shift of the visual",
+  "pass": true,
+  "detail": "{\"a10\":{\"n\":32,\"lines\":10},\"before\":192.5,\"after\":192.5}"
+ },
+ {
+  "name": "en@768 lines span the row of tokens and end at the wordmark",
+  "pass": true,
+  "detail": "{\"wordmarkTop\":953.34375,\"bottoms\":[953,953,953,953,953,953,953,953,953,953],\"maxEnd\":953.34375,\"spread\":633.5999908447266}"
+ },
+ {
+  "name": "en@1440 all story blocks exist",
+  "pass": true,
+  "detail": "[[\"headline\",112],[\"calculator\",260.78125],[\"positions\",512.78125],[\"reveal\",1072.078125],[\"cta\",1379.171875],[\"showcase\",1475.171875],[\"software\",2199.5],[\"stack\",3556],[\"capabilities\",4632.796875]]"
+ },
+ {
+  "name": "en@1440 story blocks are in strict vertical order",
+  "pass": true,
+  "detail": "[[\"headline\",112],[\"calculator\",260.78125],[\"positions\",512.78125],[\"reveal\",1072.078125],[\"cta\",1379.171875],[\"showcase\",1475.171875],[\"software\",2199.5],[\"stack\",3556],[\"capabilities\",4632.796875]]"
+ },
+ {
+  "name": "en@1440 nothing but the headline precedes the calculator",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "en@1440 calculator starts in the first viewport",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@1440 primary demo CTA exists after the value reveal and before the screenshot",
+  "pass": true,
+  "detail": "[{\"y\":1379.171875,\"inStory\":true},{\"y\":7811.296875,\"inStory\":false},{\"y\":9240.40625,\"inStory\":false}]"
+ },
+ {
+  "name": "en@1440 secondary CTA after reveal",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@1440 no free-resources link or chat dock in hero",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@1440 exactly one command-center screenshot",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@1440 showcase is full width (>=1100px)",
+  "pass": true,
+  "detail": "1234"
+ },
+ {
+  "name": "en@1440 default is 5 / $250,000 / five roles",
+  "pass": true,
+  "detail": "{\"count\":\"5\",\"result\":\"$250,000per year\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"true\",\"false\"]}"
+ },
+ {
+  "name": "en@1440 toggle 10 syncs input, $500,000, ten functions, aria-pressed",
+  "pass": true,
+  "detail": "{\"count\":\"10\",\"result\":\"$500,000per year\",\"roles\":0,\"fns\":10,\"mode\":\"ten\",\"pressed\":[\"false\",\"true\"]}"
+ },
+ {
+  "name": "en@1440 salary edit updates the result",
+  "pass": true,
+  "detail": "$600,000per year"
+ },
+ {
+  "name": "en@1440 custom 7 shows the five-role view with a custom note",
+  "pass": true,
+  "detail": "{\"count\":\"7\",\"result\":\"$420,000per year\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "en@1440 custom 12 shows the ten-function view with a custom note",
+  "pass": true,
+  "detail": "{\"count\":\"12\",\"result\":\"$720,000per year\",\"roles\":0,\"fns\":10,\"mode\":\"ten\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "en@1440 empty headcount: $0, no NaN, five-role view",
+  "pass": true,
+  "detail": "{\"count\":\"\",\"result\":\"$0per year\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "en@1440 toggle back to 5 restores five roles",
+  "pass": true,
+  "detail": "{\"count\":\"5\",\"result\":\"$300,000per year\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"true\",\"false\"]}"
+ },
+ {
+  "name": "en@1440 five roles show all five titles and descriptions",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@1440 all ten functions expand on click and show a description",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@1440 Enter toggles a function closed",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@1440 Space toggles a function open",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "en@1440 no horizontal overflow, overlap, clipping or off-screen content",
+  "pass": true,
+  "detail": "{\"overlaps\":[],\"clipped\":[],\"offscreen\":[],\"overflow\":0}"
+ },
+ {
+  "name": "en@1440 convergence plays on entering view: 5 tokens, 5 lines, wordmark, dashboard, running animations",
+  "pass": true,
+  "detail": "{\"n\":17,\"lines\":5,\"tokens\":5,\"wordmark\":true,\"dash\":true}"
+ },
+ {
+  "name": "en@1440 mode change replays animation with 10 lines and no layout shift of the visual",
+  "pass": true,
+  "detail": "{\"a10\":{\"n\":32,\"lines\":10},\"before\":192.5,\"after\":192.5}"
+ },
+ {
+  "name": "en@1440 lines span the row of tokens and end at the wordmark",
+  "pass": true,
+  "detail": "{\"wordmarkTop\":768.828125,\"bottoms\":[769,769,769,769,769,769,769,769,769,769],\"maxEnd\":768.828125,\"spread\":691.1999816894531}"
+ },
+ {
+  "name": "es@360 all story blocks exist",
+  "pass": true,
+  "detail": "[[\"headline\",96],[\"calculator\",255.8125],[\"positions\",780.546875],[\"reveal\",2116.609375],[\"cta\",2665.109375],[\"showcase\",2821.109375],[\"software\",3166.0625],[\"stack\",6039.0625],[\"capabilities\",7714.5625]]"
+ },
+ {
+  "name": "es@360 story blocks are in strict vertical order",
+  "pass": true,
+  "detail": "[[\"headline\",96],[\"calculator\",255.8125],[\"positions\",780.546875],[\"reveal\",2116.609375],[\"cta\",2665.109375],[\"showcase\",2821.109375],[\"software\",3166.0625],[\"stack\",6039.0625],[\"capabilities\",7714.5625]]"
+ },
+ {
+  "name": "es@360 nothing but the headline precedes the calculator",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "es@360 calculator starts in the first viewport",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@360 primary demo CTA exists after the value reveal and before the screenshot",
+  "pass": true,
+  "detail": "[{\"y\":2665.109375,\"inStory\":true},{\"y\":13290.0625,\"inStory\":false},{\"y\":15168,\"inStory\":false}]"
+ },
+ {
+  "name": "es@360 secondary CTA after reveal",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@360 no free-resources link or chat dock in hero",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@360 exactly one command-center screenshot",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@360 showcase spans the viewport width",
+  "pass": true,
+  "detail": "326"
+ },
+ {
+  "name": "es@360 default is 5 / $250,000 / five roles",
+  "pass": true,
+  "detail": "{\"count\":\"5\",\"result\":\"USD 250,000por año\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"true\",\"false\"]}"
+ },
+ {
+  "name": "es@360 toggle 10 syncs input, $500,000, ten functions, aria-pressed",
+  "pass": true,
+  "detail": "{\"count\":\"10\",\"result\":\"USD 500,000por año\",\"roles\":0,\"fns\":10,\"mode\":\"ten\",\"pressed\":[\"false\",\"true\"]}"
+ },
+ {
+  "name": "es@360 salary edit updates the result",
+  "pass": true,
+  "detail": "USD 600,000por año"
+ },
+ {
+  "name": "es@360 custom 7 shows the five-role view with a custom note",
+  "pass": true,
+  "detail": "{\"count\":\"7\",\"result\":\"USD 420,000por año\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "es@360 custom 12 shows the ten-function view with a custom note",
+  "pass": true,
+  "detail": "{\"count\":\"12\",\"result\":\"USD 720,000por año\",\"roles\":0,\"fns\":10,\"mode\":\"ten\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "es@360 empty headcount: $0, no NaN, five-role view",
+  "pass": true,
+  "detail": "{\"count\":\"\",\"result\":\"USD 0por año\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "es@360 toggle back to 5 restores five roles",
+  "pass": true,
+  "detail": "{\"count\":\"5\",\"result\":\"USD 300,000por año\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"true\",\"false\"]}"
+ },
+ {
+  "name": "es@360 five roles show all five titles and descriptions",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@360 all ten functions expand on click and show a description",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@360 Enter toggles a function closed",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@360 Space toggles a function open",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@360 no horizontal overflow, overlap, clipping or off-screen content",
+  "pass": true,
+  "detail": "{\"overlaps\":[],\"clipped\":[],\"offscreen\":[],\"overflow\":0}"
+ },
+ {
+  "name": "es@360 convergence plays on entering view: 5 tokens, 5 lines, wordmark, dashboard, running animations",
+  "pass": true,
+  "detail": "{\"n\":17,\"lines\":5,\"tokens\":5,\"wordmark\":true,\"dash\":true}"
+ },
+ {
+  "name": "es@360 mode change replays animation with 10 lines and no layout shift of the visual",
+  "pass": true,
+  "detail": "{\"a10\":{\"n\":32,\"lines\":10},\"before\":184.5,\"after\":184.5}"
+ },
+ {
+  "name": "es@360 lines span the row of tokens and end at the wordmark",
+  "pass": true,
+  "detail": "{\"wordmarkTop\":1655.109375,\"bottoms\":[1655,1655,1655,1655,1655,1655,1655,1655,1655,1655],\"maxEnd\":1655.109375,\"spread\":288}"
+ },
+ {
+  "name": "es@390 all story blocks exist",
+  "pass": true,
+  "detail": "[[\"headline\",96],[\"calculator\",220.859375],[\"positions\",684.703125],[\"reveal\",1959.515625],[\"cta\",2434.078125],[\"showcase\",2590.078125],[\"software\",2948.96875],[\"stack\",5699.46875],[\"capabilities\",7318.96875]]"
+ },
+ {
+  "name": "es@390 story blocks are in strict vertical order",
+  "pass": true,
+  "detail": "[[\"headline\",96],[\"calculator\",220.859375],[\"positions\",684.703125],[\"reveal\",1959.515625],[\"cta\",2434.078125],[\"showcase\",2590.078125],[\"software\",2948.96875],[\"stack\",5699.46875],[\"capabilities\",7318.96875]]"
+ },
+ {
+  "name": "es@390 nothing but the headline precedes the calculator",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "es@390 calculator starts in the first viewport",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@390 primary demo CTA exists after the value reveal and before the screenshot",
+  "pass": true,
+  "detail": "[{\"y\":2434.078125,\"inStory\":true},{\"y\":12598.96875,\"inStory\":false},{\"y\":14414.90625,\"inStory\":false}]"
+ },
+ {
+  "name": "es@390 secondary CTA after reveal",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@390 no free-resources link or chat dock in hero",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@390 exactly one command-center screenshot",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@390 showcase spans the viewport width",
+  "pass": true,
+  "detail": "356"
+ },
+ {
+  "name": "es@390 default is 5 / $250,000 / five roles",
+  "pass": true,
+  "detail": "{\"count\":\"5\",\"result\":\"USD 250,000por año\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"true\",\"false\"]}"
+ },
+ {
+  "name": "es@390 toggle 10 syncs input, $500,000, ten functions, aria-pressed",
+  "pass": true,
+  "detail": "{\"count\":\"10\",\"result\":\"USD 500,000por año\",\"roles\":0,\"fns\":10,\"mode\":\"ten\",\"pressed\":[\"false\",\"true\"]}"
+ },
+ {
+  "name": "es@390 salary edit updates the result",
+  "pass": true,
+  "detail": "USD 600,000por año"
+ },
+ {
+  "name": "es@390 custom 7 shows the five-role view with a custom note",
+  "pass": true,
+  "detail": "{\"count\":\"7\",\"result\":\"USD 420,000por año\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "es@390 custom 12 shows the ten-function view with a custom note",
+  "pass": true,
+  "detail": "{\"count\":\"12\",\"result\":\"USD 720,000por año\",\"roles\":0,\"fns\":10,\"mode\":\"ten\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "es@390 empty headcount: $0, no NaN, five-role view",
+  "pass": true,
+  "detail": "{\"count\":\"\",\"result\":\"USD 0por año\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "es@390 toggle back to 5 restores five roles",
+  "pass": true,
+  "detail": "{\"count\":\"5\",\"result\":\"USD 300,000por año\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"true\",\"false\"]}"
+ },
+ {
+  "name": "es@390 five roles show all five titles and descriptions",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@390 all ten functions expand on click and show a description",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@390 Enter toggles a function closed",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@390 Space toggles a function open",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@390 no horizontal overflow, overlap, clipping or off-screen content",
+  "pass": true,
+  "detail": "{\"overlaps\":[],\"clipped\":[],\"offscreen\":[],\"overflow\":0}"
+ },
+ {
+  "name": "es@390 convergence plays on entering view: 5 tokens, 5 lines, wordmark, dashboard, running animations",
+  "pass": true,
+  "detail": "{\"n\":17,\"lines\":5,\"tokens\":5,\"wordmark\":true,\"dash\":true}"
+ },
+ {
+  "name": "es@390 mode change replays animation with 10 lines and no layout shift of the visual",
+  "pass": true,
+  "detail": "{\"a10\":{\"n\":32,\"lines\":10},\"before\":184.5,\"after\":184.5}"
+ },
+ {
+  "name": "es@390 lines span the row of tokens and end at the wordmark",
+  "pass": true,
+  "detail": "{\"wordmarkTop\":1561.765625,\"bottoms\":[1562,1562,1562,1562,1562,1562,1562,1562,1562,1562],\"maxEnd\":1561.765625,\"spread\":315}"
+ },
+ {
+  "name": "es@768 all story blocks exist",
+  "pass": true,
+  "detail": "[[\"headline\",96],[\"calculator\",190.15625],[\"positions\",479.890625],[\"reveal\",1394.515625],[\"cta\",1702.390625],[\"showcase\",1790.390625],[\"software\",2274.984375],[\"stack\",3859.578125],[\"capabilities\",5052.96875]]"
+ },
+ {
+  "name": "es@768 story blocks are in strict vertical order",
+  "pass": true,
+  "detail": "[[\"headline\",96],[\"calculator\",190.15625],[\"positions\",479.890625],[\"reveal\",1394.515625],[\"cta\",1702.390625],[\"showcase\",1790.390625],[\"software\",2274.984375],[\"stack\",3859.578125],[\"capabilities\",5052.96875]]"
+ },
+ {
+  "name": "es@768 nothing but the headline precedes the calculator",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "es@768 calculator starts in the first viewport",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@768 primary demo CTA exists after the value reveal and before the screenshot",
+  "pass": true,
+  "detail": "[{\"y\":1702.390625,\"inStory\":true},{\"y\":8378.546875,\"inStory\":false},{\"y\":9725.609375,\"inStory\":false}]"
+ },
+ {
+  "name": "es@768 secondary CTA after reveal",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@768 no free-resources link or chat dock in hero",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@768 exactly one command-center screenshot",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@768 showcase spans the viewport width",
+  "pass": true,
+  "detail": "718"
+ },
+ {
+  "name": "es@768 default is 5 / $250,000 / five roles",
+  "pass": true,
+  "detail": "{\"count\":\"5\",\"result\":\"USD 250,000por año\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"true\",\"false\"]}"
+ },
+ {
+  "name": "es@768 toggle 10 syncs input, $500,000, ten functions, aria-pressed",
+  "pass": true,
+  "detail": "{\"count\":\"10\",\"result\":\"USD 500,000por año\",\"roles\":0,\"fns\":10,\"mode\":\"ten\",\"pressed\":[\"false\",\"true\"]}"
+ },
+ {
+  "name": "es@768 salary edit updates the result",
+  "pass": true,
+  "detail": "USD 600,000por año"
+ },
+ {
+  "name": "es@768 custom 7 shows the five-role view with a custom note",
+  "pass": true,
+  "detail": "{\"count\":\"7\",\"result\":\"USD 420,000por año\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "es@768 custom 12 shows the ten-function view with a custom note",
+  "pass": true,
+  "detail": "{\"count\":\"12\",\"result\":\"USD 720,000por año\",\"roles\":0,\"fns\":10,\"mode\":\"ten\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "es@768 empty headcount: $0, no NaN, five-role view",
+  "pass": true,
+  "detail": "{\"count\":\"\",\"result\":\"USD 0por año\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "es@768 toggle back to 5 restores five roles",
+  "pass": true,
+  "detail": "{\"count\":\"5\",\"result\":\"USD 300,000por año\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"true\",\"false\"]}"
+ },
+ {
+  "name": "es@768 five roles show all five titles and descriptions",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@768 all ten functions expand on click and show a description",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@768 Enter toggles a function closed",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@768 Space toggles a function open",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@768 no horizontal overflow, overlap, clipping or off-screen content",
+  "pass": true,
+  "detail": "{\"overlaps\":[],\"clipped\":[],\"offscreen\":[],\"overflow\":0}"
+ },
+ {
+  "name": "es@768 convergence plays on entering view: 5 tokens, 5 lines, wordmark, dashboard, running animations",
+  "pass": true,
+  "detail": "{\"n\":17,\"lines\":5,\"tokens\":5,\"wordmark\":true,\"dash\":true}"
+ },
+ {
+  "name": "es@768 mode change replays animation with 10 lines and no layout shift of the visual",
+  "pass": true,
+  "detail": "{\"a10\":{\"n\":32,\"lines\":10},\"before\":192.5,\"after\":192.5}"
+ },
+ {
+  "name": "es@768 lines span the row of tokens and end at the wordmark",
+  "pass": true,
+  "detail": "{\"wordmarkTop\":1012.265625,\"bottoms\":[1012,1012,1012,1012,1012,1012,1012,1012,1012,1012],\"maxEnd\":1012.265625,\"spread\":633.5999908447266}"
+ },
+ {
+  "name": "es@1440 all story blocks exist",
+  "pass": true,
+  "detail": "[[\"headline\",112],[\"calculator\",260.78125],[\"positions\",512.78125],[\"reveal\",1132.625],[\"cta\",1439.71875],[\"showcase\",1535.71875],[\"software\",2260.046875],[\"stack\",3659.796875],[\"capabilities\",4759.34375]]"
+ },
+ {
+  "name": "es@1440 story blocks are in strict vertical order",
+  "pass": true,
+  "detail": "[[\"headline\",112],[\"calculator\",260.78125],[\"positions\",512.78125],[\"reveal\",1132.625],[\"cta\",1439.71875],[\"showcase\",1535.71875],[\"software\",2260.046875],[\"stack\",3659.796875],[\"capabilities\",4759.34375]]"
+ },
+ {
+  "name": "es@1440 nothing but the headline precedes the calculator",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "es@1440 calculator starts in the first viewport",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@1440 primary demo CTA exists after the value reveal and before the screenshot",
+  "pass": true,
+  "detail": "[{\"y\":1439.71875,\"inStory\":true},{\"y\":8004.59375,\"inStory\":false},{\"y\":9465.703125,\"inStory\":false}]"
+ },
+ {
+  "name": "es@1440 secondary CTA after reveal",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@1440 no free-resources link or chat dock in hero",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@1440 exactly one command-center screenshot",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@1440 showcase is full width (>=1100px)",
+  "pass": true,
+  "detail": "1234"
+ },
+ {
+  "name": "es@1440 default is 5 / $250,000 / five roles",
+  "pass": true,
+  "detail": "{\"count\":\"5\",\"result\":\"USD 250,000por año\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"true\",\"false\"]}"
+ },
+ {
+  "name": "es@1440 toggle 10 syncs input, $500,000, ten functions, aria-pressed",
+  "pass": true,
+  "detail": "{\"count\":\"10\",\"result\":\"USD 500,000por año\",\"roles\":0,\"fns\":10,\"mode\":\"ten\",\"pressed\":[\"false\",\"true\"]}"
+ },
+ {
+  "name": "es@1440 salary edit updates the result",
+  "pass": true,
+  "detail": "USD 600,000por año"
+ },
+ {
+  "name": "es@1440 custom 7 shows the five-role view with a custom note",
+  "pass": true,
+  "detail": "{\"count\":\"7\",\"result\":\"USD 420,000por año\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "es@1440 custom 12 shows the ten-function view with a custom note",
+  "pass": true,
+  "detail": "{\"count\":\"12\",\"result\":\"USD 720,000por año\",\"roles\":0,\"fns\":10,\"mode\":\"ten\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "es@1440 empty headcount: $0, no NaN, five-role view",
+  "pass": true,
+  "detail": "{\"count\":\"\",\"result\":\"USD 0por año\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"false\",\"false\"]}"
+ },
+ {
+  "name": "es@1440 toggle back to 5 restores five roles",
+  "pass": true,
+  "detail": "{\"count\":\"5\",\"result\":\"USD 300,000por año\",\"roles\":5,\"fns\":0,\"mode\":\"five\",\"pressed\":[\"true\",\"false\"]}"
+ },
+ {
+  "name": "es@1440 five roles show all five titles and descriptions",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@1440 all ten functions expand on click and show a description",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@1440 Enter toggles a function closed",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@1440 Space toggles a function open",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "es@1440 no horizontal overflow, overlap, clipping or off-screen content",
+  "pass": true,
+  "detail": "{\"overlaps\":[],\"clipped\":[],\"offscreen\":[],\"overflow\":0}"
+ },
+ {
+  "name": "es@1440 convergence plays on entering view: 5 tokens, 5 lines, wordmark, dashboard, running animations",
+  "pass": true,
+  "detail": "{\"n\":17,\"lines\":5,\"tokens\":5,\"wordmark\":true,\"dash\":true}"
+ },
+ {
+  "name": "es@1440 mode change replays animation with 10 lines and no layout shift of the visual",
+  "pass": true,
+  "detail": "{\"a10\":{\"n\":32,\"lines\":10},\"before\":192.5,\"after\":192.5}"
+ },
+ {
+  "name": "es@1440 lines span the row of tokens and end at the wordmark",
+  "pass": true,
+  "detail": "{\"wordmarkTop\":745.625,\"bottoms\":[746,746,746,746,746,746,746,746,746,746],\"maxEnd\":745.625,\"spread\":691.1999816894531}"
+ },
+ {
+  "name": "en reduced motion: no running animations, lines fully drawn, tokens visible",
+  "pass": true,
+  "detail": "{\"n\":0,\"drawn\":true,\"tokensVisible\":true}"
+ },
+ {
+  "name": "es reduced motion: no running animations, lines fully drawn, tokens visible",
+  "pass": true,
+  "detail": "{\"n\":0,\"drawn\":true,\"tokensVisible\":true}"
+ },
+ {
+  "name": "first visit @360: consent banner shown",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "first visit @360: floating contact launcher present, in viewport and not covered by a story control",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "first visit @390: consent banner shown",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "first visit @390: floating contact launcher present, in viewport and not covered by a story control",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "first visit @768: consent banner shown",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "first visit @768: floating contact launcher present, in viewport and not covered by a story control",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "first visit @1440: consent banner shown",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "first visit @1440: floating contact launcher present, in viewport and not covered by a story control",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "returning visitor: contact launcher floats at top of page (no hero dock needed)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "contact launcher opens the chat panel",
+  "pass": true,
+  "detail": ""
+ }
+]

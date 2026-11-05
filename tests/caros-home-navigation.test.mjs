@@ -8,15 +8,16 @@ test('hero CTAs: demo link goes to demo.getcaros.com, secondary scrolls to the c
   const { DEMO_URL, CAPABILITIES_ID } = await import('../lib/home-nav.ts')
   assert.equal(DEMO_URL, 'https://demo.getcaros.com')
   assert.equal(CAPABILITIES_ID, 'unified-capabilities')
-  const hero = read('components/caros/home/hero.tsx')
-  assert.match(hero, /href=\{DEMO_URL\}/)
-  assert.match(hero, /href=\{`#\$\{CAPABILITIES_ID\}`\}/)
+  // Moved from hero.tsx to hiring-story.tsx: the CTAs now follow the value reveal (hiring story correction).
+  const story = read('components/caros/home/hiring-story.tsx')
+  assert.match(story, /href=\{DEMO_URL\}/)
+  assert.match(story, /href=\{`#\$\{CAPABILITIES_ID\}`\}/)
   assert.match(read('components/caros/home/unified-system.tsx'), /id=\{CAPABILITIES_ID\}/)
 })
 
-test('homepage follows the nine-section sequence', () => {
+test('homepage follows the section sequence (story, screenshot, software comparison, stack calculator, capabilities, ...)', () => {
   const page = read('app/[locale]/page.tsx')
-  const order = ['<Hero', '<UnifiedSystem', '<DisconnectedCost', '<StackCalculator', '<ChallengePairs', '<LifecycleFlow', '<ProductExperience', '<Roi', '<CtaBand']
+  const order = ['<Hero', '<ProductShowcase', '<DisconnectedCost', '<StackCalculator', '<UnifiedSystem', '<ChallengePairs', '<LifecycleFlow', '<ProductExperience', '<Roi', '<CtaBand']
   const at = order.map(s => page.indexOf(s))
   assert.ok(at.every(i => i >= 0), `missing: ${order.filter((s, i) => at[i] < 0)}`)
   assert.deepEqual([...at].sort((a, b) => a - b), at)

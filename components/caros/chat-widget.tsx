@@ -52,7 +52,6 @@ export function ChatWidget() {
   const compact = layout === 'floating'
 
   useEffect(() => {
-    let observer: MutationObserver | undefined
     let target: HTMLElement | null = null
     const onScroll = () => {
       launcherHadFocusRef.current = document.activeElement === launcherRef.current
@@ -65,24 +64,17 @@ export function ChatWidget() {
     const updateDock = () => {
       target = pathname === '/' ? document.querySelector<HTMLElement>('[data-caros-chat-dock]') : null
       setDockTarget(target)
-      setLauncherReady(pathname !== '/' || !!target)
+      setLauncherReady(true)
       if (target) {
-        observer?.disconnect()
         resizeObserver.disconnect()
         resizeObserver.observe(target.closest('section') ?? target)
       }
       onScroll()
     }
     updateDock()
-    // A streamed homepage can mount its hero after the shared chrome.
-    if (pathname === '/' && !document.querySelector('[data-caros-chat-dock]')) {
-      observer = new MutationObserver(updateDock)
-      observer.observe(document.body, { childList: true, subtree: true })
-    }
     window.addEventListener('scroll', onScroll, { passive: true })
     window.addEventListener('resize', onScroll)
     return () => {
-      observer?.disconnect()
       resizeObserver.disconnect()
       window.removeEventListener('scroll', onScroll)
       window.removeEventListener('resize', onScroll)

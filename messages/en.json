@@ -83,17 +83,7 @@
     "label": "Language"
   },
   "Home": {
-    "hero": {
-      "eyebrow": "Grow your business. Not your overhead.",
-      "title": "What would it cost you to hire 5 more employees?",
-      "subtitle": "What about 10?",
-      "transition": "Now imagine scaling without hiring for every new task.",
-      "value": "CAROS is one unified Revenue Operating System with one cohesive dashboard, for everything that drives revenue in your business.",
-      "systemChip": "One unified Revenue Operating System · One dashboard",
-      "primaryCta": "See CAROS in Action",
-      "secondaryCta": "Explore What CAROS Can Do",
-      "demoNote": "Opens the live demo in a new tab."
-    },
+    "hero": { "title": "What Would It Cost You to Hire 5 More Employees?", "subtitle": "What About 10?", "primaryCta": "See CAROS in Action", "secondaryCta": "Explore What CAROS Can Do", "demoNote": "Opens the live demo in a new tab." },
     "hiring": {
       "title": "Illustrative annual hiring cost",
       "employees": "Employees",
@@ -102,6 +92,47 @@
       "presets": "Quick examples",
       "preset": "{count} employees",
       "exclusions": "Illustrative only. Excludes benefits, payroll taxes, recruiting, onboarding, and other employment expenses."
+    },
+    "story": {
+      "toggleLabel": "Compare 5 or 10 employees",
+      "rolesTitle": "But What Are You Actually Hiring Those Employees to Do?",
+      "rolesIntro": "To grow your business, you need more than people. You need the right functions working together.",
+      "rolesLabel": "Five illustrative positions",
+      "roles": [
+        { "id": "marketing", "title": "Marketing & Social Media Coordinator", "text": "Managing campaigns, social engagement, marketing activity, and incoming opportunities." },
+        { "id": "sales", "title": "Sales & Lead Follow-Up Coordinator", "text": "Organizing prospects, tracking opportunities, qualifying inquiries, and keeping deals moving." },
+        { "id": "outreach", "title": "Customer Outreach & Communications Specialist", "text": "Managing calls, email, SMS, appointment coordination, and customer follow-up." },
+        { "id": "operations", "title": "Operations & Workflow Coordinator", "text": "Coordinating daily tasks, scheduling, handoffs, reminders, and administrative processes." },
+        { "id": "success", "title": "Customer Success & Reputation Coordinator", "text": "Managing ongoing customer relationships, service follow-up, reviews, retention, and satisfaction." }
+      ],
+      "rolesDisclaimer": "These positions are illustrative examples, not mandatory staffing recommendations.",
+      "salaryDisclaimer": "Salary figures illustrate hypothetical hiring costs, not guaranteed savings from using CAROS.",
+      "customFive": "Your headcount is {count}. These five positions are illustrative examples, not a one-to-one mapping.",
+      "customTen": "Your headcount is {count}. These ten functions are illustrative, not {count} positions.",
+      "functionsTitle": "Ten Business Functions. One Connected Operating System.",
+      "functionsHint": "Tap a function to see the work CAROS can support.",
+      "functionsLabel": "Ten business functions",
+      "functions": [
+        { "id": "marketing", "title": "Marketing & Social Media", "text": "Draft, approve and schedule social posts and coordinate campaigns from the same workspace." },
+        { "id": "leads", "title": "Lead Capture & Qualification", "text": "Capture incoming inquiries across your connected channels and see which ones need attention first." },
+        { "id": "pipeline", "title": "Sales Pipeline Management", "text": "Track contacts and opportunities by stage so deals keep moving." },
+        { "id": "outreach", "title": "Customer Outreach & Communication", "text": "Handle calls, texts and email conversations in one inbox, depending on the channels you connect." },
+        { "id": "scheduling", "title": "Scheduling & Appointment Coordination", "text": "Keep appointments, reminders and follow-ups organized in one place." },
+        { "id": "reactivation", "title": "Customer Reactivation", "text": "Run reengagement email and SMS campaigns and surface repeat-business opportunities." },
+        { "id": "operations", "title": "Dynamic Operations & Workflow Automation", "text": "Use the workflow builder for automated tasks, scheduling and coordination." },
+        { "id": "service", "title": "Customer Service & Customer Success", "text": "Keep tickets, conversations and follow-ups together for each customer." },
+        { "id": "reputation", "title": "Reputation Management", "text": "Monitor and respond to Google, Yelp, Facebook and website reviews with supported workflows." },
+        { "id": "community", "title": "Community Building", "text": "Build communities, courses, webinars and memberships alongside the rest of your operation." }
+      ],
+      "functionsDisclaimer": "Ten business functions do not mean ten employees, and CAROS does not replace ten full-time workers.",
+      "convergeLabel": "Diagram: the positions or functions above flowing into the CAROS dashboard",
+      "convergeDashboard": "One dashboard",
+      "revealTitle": "What If Your Existing Team Could Manage More of That Work From One Place?",
+      "revealBody": "CAROS brings the tools and workflows supporting these functions together in one cohesive dashboard and unified Revenue Operating System.",
+      "revealAreas": "Marketing & Social Media. Sales. Customer Outreach & Communication. Customer Reactivation. Operational Automation. Customer Service & Success. Reputation Management. Community Building. And more.",
+      "revealClose": "One connected system helping your team accomplish more without hiring for every new responsibility.",
+      "emphasis": "ONE DASHBOARD. ONE UNIFIED REVENUE OPERATING SYSTEM.",
+      "tagline": "CAROS. We do the most, so you can do more with less."
     },
     "unified": {
       "eyebrow": "The CAROS dashboard",
@@ -155,8 +186,11 @@
     },
     "disconnected": {
       "eyebrow": "The cost of disconnected software",
-      "title": "How much is your disconnected tech stack really costing you?",
-      "body": "An AI receptionist. A phone system. Email, SMS, CRM, scheduling, social, reviews. How many subscriptions, logins and learning curves is that, and how much gets lost between them?",
+      "title": "And What About All the Software Those Employees Need?",
+      "body": "An AI receptionist. A phone system. A CRM. Email marketing. SMS campaigns. Social media tools. Scheduling software. Customer support. Review management.",
+      "questions": ["How many subscriptions?", "How many logins?", "How many systems to learn?", "How many integrations to maintain?", "And how much time is wasted moving between them?"],
+      "valueReveal": "CAROS brings your revenue-generating functions into one connected operating environment, reducing the complexity of managing separate tools and disconnected workflows.",
+      "economic": "Growing headcount is expensive. Managing fragmented technology adds even more complexity. CAROS helps businesses address both.",
       "leftTitle": "The disconnected business",
       "rightTitle": "One dashboard. One login experience. One connected Revenue Operating System.",
       "tiles": ["AI receptionist", "Business phone", "CRM & pipeline", "Email marketing", "SMS campaigns", "Social media", "Scheduling", "Customer service", "Review management", "Workflow automation"],
