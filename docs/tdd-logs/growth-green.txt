@@ -1,0 +1,124 @@
+(node:56446) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/anns-macbook/Projects/caros-ai/lib/analytics.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/anns-macbook/Projects/caros-ai/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ trackEvent pushes a namespaced event to dataLayer (1.167208ms)
+✔ trackEvent drops personal and financial values, keeps only allowlisted primitive metadata (0.365708ms)
+✔ trackEvent sends nothing when Do Not Track or Global Privacy Control is on (0.108666ms)
+✔ scroll depth reports each milestone once as the page is scrolled (0.32475ms)
+✔ revenue audit form reports start and completion without altering its payload (1.603916ms)
+(node:56447) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/anns-macbook/Projects/caros-ai/lib/caros-chat-session.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/anns-macbook/Projects/caros-ai/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ chat is lazy and uses the supplied chat-only key and agent, without the voice version (44.304875ms)
+✔ subsequent messages reuse the session; tool internals are never displayed (0.584708ms)
+✔ double sends are blocked and reset invalidates stale responses (0.228541ms)
+✔ authorization errors are actionable; retries do not duplicate the user bubble (1.113541ms)
+✔ blank and oversized input never creates a chat; malformed responses fail safely (0.938167ms)
+✔ ended chats expose no tool messages and require a new conversation (1.08425ms)
+(node:56448) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/anns-macbook/Projects/caros-ai/lib/consent.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/anns-macbook/Projects/caros-ai/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ default state denies analytics and marketing and needs a prompt (2.582917ms)
+✔ accept all grants analytics and marketing (0.19575ms)
+✔ reject non-essential denies both, with the same shape and recorded choice as accept (0.111ms)
+✔ customize records exactly the toggles chosen (0.108333ms)
+✔ Global Privacy Control denies marketing by default and cannot be overridden by accept all (0.311584ms)
+✔ record persists and round-trips; wrong version, junk or missing data means no choice (0.424167ms)
+✔ Google Consent Mode v2 mapping (0.206375ms)
+✔ our analytics helper requires analytics consent, in addition to DNT/GPC (5.938ms)
+✔ layout: consent default is set before GTM and gtag load; Meta Pixel is not initialised unconditionally (1.553167ms)
+✔ meta pixel loader only runs after marketing consent (0.497458ms)
+✔ footer has a persistent Cookie settings control (0.577084ms)
+(node:56449) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/anns-macbook/Projects/caros-ai/lib/hiring-story.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/anns-macbook/Projects/caros-ai/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ story mode follows the headcount: ten at 10 or more, otherwise the five-role view, custom counts flagged (70.077084ms)
+✔ toggle choices map to the shared headcount string (0.162792ms)
+✔ story headcount parsing matches the calculator (same cap and coercion as hiringCost) (3.0325ms)
+✔ story copy: exact headlines, five positions, ten functions, in EN and ES (5.20125ms)
+✔ story copy makes no guaranteed-savings, replacement or elimination claims and states disclaimers (2.674375ms)
+✔ hero has no free-resources link or chat dock; story precedes showcase, comparison, calculator, capabilities (0.618917ms)
+✔ the floating contact launcher does not wait for a hero dock (0.487958ms)
+(node:56450) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/anns-macbook/Projects/caros-ai/lib/home-calculators.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/anns-macbook/Projects/caros-ai/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ hiring cost is employees x salary: defaults 5 and 10 at $50,000 (1.426417ms)
+✔ hiring cost clamps zero, empty, negative, non-finite and extreme inputs (0.331292ms)
+✔ stack: annual software spend = subscriptions x average monthly cost x 12 (0.255917ms)
+✔ stack: time cost multiplies employees once, 52 weeks and hourly cost; platform count is not a multiplier (0.208083ms)
+✔ stack: combined total, breakdown shares, and defensive inputs (1.335ms)
+✔ home copy has the brief structure in both languages (12.626459ms)
+✔ privacy statement and brand tagline are exact and localized (6.999084ms)
+✔ capability copy carries the capability claims confirmed by the product owner (2026-11-05) (7.592667ms)
+✔ calculator copy states exclusions, estimates and no guaranteed savings (2.640167ms)
+✔ spanish home copy is translated, not an English copy (4.406084ms)
+(node:56452) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/anns-macbook/Projects/caros-ai/lib/home-nav.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/anns-macbook/Projects/caros-ai/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ hero CTAs: demo link goes to demo.getcaros.com, secondary scrolls to the capabilities section (68.510041ms)
+✔ homepage follows the section sequence (story, screenshot, software comparison, stack calculator, capabilities, ...) (5.068209ms)
+✔ product showcase uses the supplied real screenshot via next/image with accessible, percent-positioned hotspots (3.626959ms)
+(node:56453) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/anns-macbook/Projects/caros-ai/lib/positioning-metadata.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/anns-macbook/Projects/caros-ai/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ approved core positioning and broader audience are present in both languages (5.855875ms)
+✔ general metadata and pages no longer define CAROS as a home-service product (2.429792ms)
+✔ social metadata retains branding and share images when localized (49.44675ms)
+✔ dedicated industry messages, pricing and consent integrations remain available (1.915458ms)
+(node:56454) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/anns-macbook/Projects/caros-ai/lib/spanish.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/anns-macbook/Projects/caros-ai/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ spanish translator falls back to English and interpolates tokens (0.614167ms)
+✔ data translation changes values only, never keys or slugs (0.500583ms)
+✔ localeHref keeps visitors in their language for same-site pages only (0.446625ms)
+✔ spanish industry module has every english industry with identical slugs (3.165292ms)
+✔ locale-aware Link components never receive localeHref (double /es/es prefix) (1.187292ms)
+✔ locale layout emits self canonical and en/es alternates (0.209333ms)
+✔ spanish catalogs are valid, non-empty, and not copies of the English source (3.785041ms)
+✔ spanish audit consent keeps STOP/HELP, optional checkbox and policy links (0.7995ms)
+✔ terms page states the no-refund policy in the Services and Platform section (1.486209ms)
+✔ terms keeps its 18 numbered sections and anchors unchanged (2.924041ms)
+✔ spanish catalog translates every refund clause and the subheading (1.383375ms)
+✔ GHL external website tracking is removed and form APIs are preserved (1.239ms)
+✔ affiliate tracking is removed from the site (owner decision 2026-11-05) (2.618084ms)
+✔ CSP allows the consent-gated Meta Pixel to load and report (0.339958ms)
+(node:56457) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/anns-macbook/Projects/caros-ai/lib/caros-voice-session.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/anns-macbook/Projects/caros-ai/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ does not auto-start; explicit start uses the exact public agent/version without transcripts (0.716167ms)
+✔ duplicate start is blocked and real status/audio callbacks drive the orb (0.234792ms)
+✔ mute and unmute use the same SDK session; ending disconnects and ignores stale hooks (0.402375ms)
+✔ permission denial is actionable, releases the session, and survives a late end event (0.210875ms)
+✔ cancelling while the SDK is loading prevents creation of a late call (0.114458ms)
+✔ audio level is finite, bounded and calculated from incoming samples only (1.050084ms)
+✔ stale playback recovery success cannot alter a later call (0.734292ms)
+✔ stale playback recovery rejection cannot alter a later call (0.254417ms)
+✔ custom CAROS widget replaces the stock Retell embed, rather than layering over it (1.418834ms)
+✔ open-panel orb is enlarged and the launcher has distinct Talk to us wording (1.0305ms)
+✔ visitors can choose voice or website text chat without reintroducing a stock embed (0.537875ms)
+✔ CAROS launcher collapses into a circle, respects reduced motion and fits small screens (0.5105ms)
+(node:56459) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/anns-macbook/Projects/caros-ai/lib/caros-widget-dock.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/anns-macbook/Projects/caros-ai/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ homepage hero no longer reserves a chat dock; the launcher floats without waiting for one (0.8655ms)
+✔ one session owner portals only the launcher; panel stays outside the hero (0.798625ms)
+✔ collapse waits until visitors have scrolled past the dock, not just started scrolling (24.744417ms)
+✔ floating widget never covers the footer social links (0.475083ms)
+ℹ tests 76
+ℹ suites 0
+ℹ pass 76
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 368.155333

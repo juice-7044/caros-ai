@@ -3,7 +3,6 @@ import { ArrowRight, Bot, CalendarCheck, Headset, Mail, MessageSquare, Phone, Sh
 import type { LucideIcon } from "lucide-react"
 import { STACK_CALC_ID } from "@/lib/home-nav"
 import { Reveal } from "@/components/caros/reveal"
-import { Eyebrow } from "@/components/caros/ui-bits"
 
 // Same ten functions, same order as messages Home.disconnected.tiles
 const TILE_ICONS: LucideIcon[] = [Bot, Phone, Users, Mail, MessageSquare, Share2, CalendarCheck, Headset, Star, Workflow]
@@ -50,9 +49,9 @@ export function DisconnectedCost() {
     <section data-story="software" className="bg-ink py-14 text-ink-foreground lg:py-20">
       <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
         <Reveal className="max-w-3xl">
-          <Eyebrow>{t("eyebrow")}</Eyebrow>
-          <h2 className="mt-5 text-balance text-[clamp(2rem,4.4vw,3.5rem)] font-extrabold leading-[1] tracking-tight">{t("title")}</h2>
-          <p className="mt-5 text-lg leading-relaxed text-ink-muted">{t("body")}</p>
+          <p className="max-w-3xl text-base leading-relaxed text-ink-muted">{t("title")}</p>
+          <h2 className="mt-2 max-w-3xl text-balance text-[clamp(1.5rem,3vw,2.25rem)] font-display leading-[1.1] tracking-tight">{t("bridge")}</h2>
+          <p className="mt-3 text-base leading-relaxed text-ink-muted">{t("body")}</p>
           <ul className="mt-5 flex flex-wrap gap-2">
             {questions.map((q) => (
               <li key={q} className="rounded-full border border-ink-border px-4 py-1.5 text-sm text-ink-foreground">{q}</li>
