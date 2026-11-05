@@ -44,17 +44,23 @@ export function DisconnectedCost() {
   const tiles = t.raw("tiles") as string[]
   const problems = t.raw("problems") as string[]
   const benefits = t.raw("benefits") as string[]
+  const questions = t.raw("questions") as string[]
 
   return (
-    <section className="bg-ink py-20 text-ink-foreground lg:py-28">
+    <section data-story="software" className="bg-ink py-14 text-ink-foreground lg:py-20">
       <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
         <Reveal className="max-w-3xl">
           <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2 className="mt-5 text-balance text-[clamp(2rem,4.4vw,3.5rem)] font-extrabold leading-[1] tracking-tight">{t("title")}</h2>
           <p className="mt-5 text-lg leading-relaxed text-ink-muted">{t("body")}</p>
+          <ul className="mt-5 flex flex-wrap gap-2">
+            {questions.map((q) => (
+              <li key={q} className="rounded-full border border-ink-border px-4 py-1.5 text-sm text-ink-foreground">{q}</li>
+            ))}
+          </ul>
         </Reveal>
 
-        <Reveal delay={80} className="mt-12 grid gap-6 lg:grid-cols-2">
+        <Reveal delay={80} className="mt-8 grid gap-6 lg:grid-cols-2">
           <div className="rounded-2xl border border-ink-border p-6 text-ink-muted">
             <p className="font-semibold text-ink-foreground">{t("leftTitle")}</p>
             <Diagram labels={tiles} hub="" connected={false} ariaLabel={t("diagramLabelLeft")} />
@@ -75,6 +81,10 @@ export function DisconnectedCost() {
           </div>
         </Reveal>
 
+        <div className="mt-8 max-w-3xl border-l-2 border-gold pl-5">
+          <p className="text-lg leading-relaxed text-ink-foreground">{t("valueReveal")}</p>
+          <p className="mt-3 font-serif text-xl italic text-gold">{t("economic")}</p>
+        </div>
         <p className="mt-6 max-w-3xl text-sm text-ink-muted">{t("caveat")}</p>
         <a href={`#${STACK_CALC_ID}`} className="group mt-8 inline-flex h-14 items-center gap-2 rounded-full bg-gold px-8 text-base font-semibold text-gold-foreground hover:bg-gold/90">
           {t("cta")}

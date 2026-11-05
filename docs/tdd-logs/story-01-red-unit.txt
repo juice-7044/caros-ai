@@ -1,0 +1,376 @@
+✖ story mode follows the headcount: ten at 10 or more, otherwise the five-role view, custom counts flagged (0.73575ms)
+✖ toggle choices map to the shared headcount string (0.902542ms)
+✖ story copy: exact headlines, five positions, ten functions, in EN and ES (3.349958ms)
+✖ story copy makes no guaranteed-savings, replacement or elimination claims and states disclaimers (1.640916ms)
+✖ hero has no free-resources link or chat dock; story precedes showcase, comparison, calculator, capabilities (0.6405ms)
+✖ the floating contact launcher does not wait for a hero dock (1.618875ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 0
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 81.388125
+
+✖ failing tests:
+
+test at tests/caros-hiring-story.test.mjs:8:1
+✖ story mode follows the headcount: ten at 10 or more, otherwise the five-role view, custom counts flagged (0.73575ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/Users/anns-macbook/Projects/caros-ai/lib/hiring-story.ts' imported from /Users/anns-macbook/Projects/caros-ai/tests/caros-hiring-story.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:272:11)
+      at moduleResolve (node:internal/modules/esm/resolve:879:10)
+      at defaultResolve (node:internal/modules/esm/resolve:1006:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:705:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:725:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:763:56)
+      at #resolve (node:internal/modules/esm/loader:687:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:607:35)
+      at node:internal/modules/esm/loader:636:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:370:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///Users/anns-macbook/Projects/caros-ai/lib/hiring-story.ts'
+  }
+
+test at tests/caros-hiring-story.test.mjs:22:1
+✖ toggle choices map to the shared headcount string (0.902542ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/Users/anns-macbook/Projects/caros-ai/lib/hiring-story.ts' imported from /Users/anns-macbook/Projects/caros-ai/tests/caros-hiring-story.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:272:11)
+      at moduleResolve (node:internal/modules/esm/resolve:879:10)
+      at defaultResolve (node:internal/modules/esm/resolve:1006:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:705:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:725:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:763:56)
+      at #resolve (node:internal/modules/esm/loader:687:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:607:35)
+      at node:internal/modules/esm/loader:636:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:370:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///Users/anns-macbook/Projects/caros-ai/lib/hiring-story.ts'
+  }
+
+test at tests/caros-hiring-story.test.mjs:29:1
+✖ story copy: exact headlines, five positions, ten functions, in EN and ES (3.349958ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'What would it cost you to hire 5 more employees?'
+  - 'What Would It Cost You to Hire 5 More Employees?'
+  
+      at TestContext.<anonymous> (file:///Users/anns-macbook/Projects/caros-ai/tests/caros-hiring-story.test.mjs:31:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'What would it cost you to hire 5 more employees?',
+    expected: 'What Would It Cost You to Hire 5 More Employees?',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/caros-hiring-story.test.mjs:49:1
+✖ story copy makes no guaranteed-savings, replacement or elimination claims and states disclaimers (1.640916ms)
+  AssertionError [ERR_ASSERTION]: The input was expected to not match the regular expression /guarantee|garantiz|eliminat|elimina |replaces? (your|every|all)|reemplaza/i. Input:
+  
+  '[null,{"eyebrow":"The cost of disconnected software","title":"How much is your disconnected tech stack really costing you?","body":"An AI receptionist. A phone system. Email, SMS, CRM, scheduling, social, reviews. How many subscriptions, logins and learning curves is that, and how much gets lost between them?","leftTitle":"The disconnected business","rightTitle":"One dashboard. One login experience. One connected Revenue Operating System.","tiles":["AI receptionist","Business phone","CRM & pipeline","Email marketing","SMS campaigns","Social media","Scheduling","Customer service","Review management","Workflow automation"],"problems":["Multiple subscriptions","Multiple logins","Multiple dashboards","Multiple learning curves","Disconnected customer information","Overlapping functionality","More integration and maintenance","Lost time"],"benefits":["Centralized visibility","Connected customer information","Unified workflows","Coordinated communications","Less tool switching","Reduced duplication","Simpler team workflows","More consistent customer experiences"],"diagramLabelLeft":"Diagram: separate tools, fragmented connections","diagramLabelRight":"Diagram: the same functions flowing into one CAROS dashboard","hub":"CAROS","caveat":"CAROS does not replace every specialized platform. Where integrations are still needed, CAROS helps coordinate them in one experience.","cta":"See What You Can Consolidate With CAROS"},{"eyebrow":"Grow your business. Not your overhead.","title":"What would it cost you to hire 5 more employees?","subtitle":"What about 10?","transition":"Now imagine scaling without hiring for every new task.","value":"CAROS is one unified Revenue Operating System with one cohesive dashboard, for everything that drives revenue in your business.","systemChip":"One unified Revenue Operating System · One dashboard","primaryCta":"See CAROS in Action","secondaryCta":"Explore What CAROS Can Do","demoNote":"Opens the live demo in a new tab."}]'
+  
+      at TestContext.<anonymous> (file:///Users/anns-macbook/Projects/caros-ai/tests/caros-hiring-story.test.mjs:53:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '[null,{"eyebrow":"The cost of disconnected software","title":"How much is your disconnected tech stack really costing you?","body":"An AI receptionist. A phone system. Email, SMS, CRM, scheduling, social, reviews. How many subscriptions, logins and learning curves is that, and how much gets lost between them?","leftTitle":"The disconnected business","rightTitle":"One dashboard. One login experience. One connected Revenue Operating System.","tiles":["AI receptionist","Business phone","CRM & pipeline","Email marketing","SMS campaigns","Social media","Scheduling","Customer service","Review management","Workflow automation"],"problems":["Multiple subscriptions","Multiple logins","Multiple dashboards","Multiple learning curves","Disconnected customer information","Overlapping functionality","More integration and maintenance","Lost time"],"benefits":["Centralized visibility","Connected customer information","Unified workflows","Coordinated communications","Less tool switching","Reduced duplication","Simpler team workflows","More consistent customer experiences"],"diagramLabelLeft":"Diagram: separate tools, fragmented connections","diagramLabelRight":"Diagram: the same functions flowing into one CAROS dashboard","hub":"CAROS","caveat":"CAROS does not replace every specialized platform. Where integrations are still needed, CAROS helps coordinate them in one experience.","cta":"See What You Can Consolidate With CAROS"},{"eyebrow":"Grow your business. Not your overhead.","title":"What would it cost you to hire 5 more employees?","subtitle":"What about 10?","transition":"Now imagine scaling without hiring for every new task.","value":"CAROS is one unified Revenue Operating System with one cohesive dashboard, for everything that drives revenue in your business.","systemChip":"One unified Revenue Operating System · One dashboard","primaryCta":"See CAROS in Action","secondaryCta":"Explore What CAROS Can Do","demoNote":"Opens the live demo in a new tab."}]',
+    expected: /guarantee|garantiz|eliminat|elimina |replaces? (your|every|all)|reemplaza/i,
+    operator: 'doesNotMatch',
+    diff: 'simple'
+  }
+
+test at tests/caros-hiring-story.test.mjs:61:1
+✖ hero has no free-resources link or chat dock; story precedes showcase, comparison, calculator, capabilities (0.6405ms)
+  AssertionError [ERR_ASSERTION]: The input was expected to not match the regular expression /freeAuditCta|data-caros-chat-dock/. Input:
+  
+  'import { useTranslations } from "next-intl"\n' +
+    'import { ArrowRight } from "lucide-react"\n' +
+    'import { Link } from "@/i18n/navigation"\n' +
+    'import { CAPABILITIES_ID, DEMO_URL } from "@/lib/home-nav"\n' +
+    'import { HiringCalculator } from "./hiring-calculator"\n' +
+    'import { TrackedLink } from "./tracked-link"\n' +
+    '\n' +
+    'export function Hero() {\n' +
+    '  const h = useTranslations("Home.hero")\n' +
+    '  const t = useTranslations("HomePage.hero")\n' +
+    '\n' +
+    '  return (\n' +
+    '    <section className="hero-gradient relative overflow-hidden">\n' +
+    '      <div className="mx-auto grid w-full max-w-[1300px] gap-10 px-6 pb-14 pt-28 lg:grid-cols-[1.25fr_1fr] lg:items-center lg:gap-16 lg:px-12 lg:pb-16 lg:pt-32">\n' +
+    '        <div>\n' +
+    '          <span className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">\n' +
+    '            <span className="h-px w-8 bg-gold/60" />\n' +
+    '            {h("eyebrow")}\n' +
+    '          </span>\n' +
+    '          <h1 className="mt-5 text-balance text-[clamp(2.1rem,4.6vw,4rem)] font-display leading-[0.98] tracking-tight">\n' +
+    '            {h("title")}{" "}\n' +
+    '            <span className="font-serif font-normal italic text-gold-gradient">{h("subtitle")}</span>\n' +
+    '          </h1>\n' +
+    '          <p className="mt-6 font-serif text-xl italic leading-snug text-foreground text-balance lg:text-2xl">\n' +
+    '            {h("transition")}\n' +
+    '          </p>\n' +
+    '          <p className="mt-4 inline-flex rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em]">\n' +
+    '            {h("systemChip")}\n' +
+    '          </p>\n' +
+    '          <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground lg:text-lg">{h("value")}</p>\n' +
+    '          <div className="mt-7 flex flex-col items-start gap-3 sm:flex-row">\n' +
+    '            <TrackedLink\n' +
+    '              href={DEMO_URL}\n' +
+    '              external\n' +
+    '              events={[["hero_cta_click", { cta: "see_caros_in_action", location: "hero" }], ["demo_click", { location: "hero" }]]}\n' +
+    '              className="group inline-flex h-14 items-center gap-2 rounded-full bg-gold px-8 text-base font-semibold text-gold-foreground transition-all duration-300 hover:bg-gold/90"\n' +
+    '            >\n' +
+    '              {h("primaryCta")}\n' +
+    '              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />\n' +
+    '            </TrackedLink>\n' +
+    '            <TrackedLink\n' +
+    '              href={`#${CAPABILITIES_ID}`}\n' +
+    '              events={[["hero_cta_click", { cta: "explore_capabilities", location: "hero" }]]}\n' +
+    '              className="group inline-flex h-14 items-center gap-2 rounded-full border border-foreground/20 px-8 text-base font-medium text-foreground transition-all duration-300 hover:bg-foreground/5"\n' +
+    '            >\n' +
+    '              {h("secondaryCta")}\n' +
+    '              <ArrowRight className="h-4 w-4 rotate-90" />\n' +
+    '            </TrackedLink>\n' +
+    '          </div>\n' +
+    '          <p className="mt-3 text-sm text-muted-foreground">\n' +
+    '            {t("notReady")}{" "}\n' +
+    '            <Link href="/resources" className="font-semibold text-gold underline-offset-4 hover:underline">\n' +
+    '              {t("freeAuditCta")}\n' +
+    '            </Link>\n' +
+    '          </p>\n' +
+    '          {/* Reserve space when the same launcher becomes a floating circle on scroll. */}\n' +
+    '          <div data-caros-chat-dock className="mt-3 min-h-[76px] w-[262px] max-w-full" />\n' +
+    '        </div>\n' +
+    '        <HiringCalculator />\n' +
+    '      </div>\n' +
+    '    </section>\n' +
+    '  )\n' +
+    '}\n'
+  
+      at TestContext.<anonymous> (file:///Users/anns-macbook/Projects/caros-ai/tests/caros-hiring-story.test.mjs:63:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'import { useTranslations } from "next-intl"\nimport { ArrowRight } from "lucide-react"\nimport { Link } from "@/i18n/navigation"\nimport { CAPABILITIES_ID, DEMO_URL } from "@/lib/home-nav"\nimport { HiringCalculator } from "./hiring-calculator"\nimport { TrackedLink } from "./tracked-link"\n\nexport function Hero() {\n  const h = useTranslations("Home.hero")\n  const t = useTranslations("HomePage.hero")\n\n  return (\n    <section className="hero-gradient relative overflow-hidden">\n      <div className="mx-auto grid w-full max-w-[1300px] gap-10 px-6 pb-14 pt-28 lg:grid-cols-[1.25fr_1fr] lg:items-center lg:gap-16 lg:px-12 lg:pb-16 lg:pt-32">\n        <div>\n          <span className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">\n            <span className="h-px w-8 bg-gold/60" />\n            {h("eyebrow")}\n          </span>\n          <h1 className="mt-5 text-balance text-[clamp(2.1rem,4.6vw,4rem)] font-display leading-[0.98] tracking-tight">\n            {h("title")}{" "}\n            <span className="font-serif font-normal italic text-gold-gradient">{h("subtitle")}</span>\n          </h1>\n          <p className="mt-6 font-serif text-xl italic leading-snug text-foreground text-balance lg:text-2xl">\n            {h("transition")}\n          </p>\n          <p className="mt-4 inline-flex rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em]">\n            {h("systemChip")}\n          </p>\n          <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground lg:text-lg">{h("value")}</p>\n          <div className="mt-7 flex flex-col items-start gap-3 sm:flex-row">\n            <TrackedLink\n              href={DEMO_URL}\n              external\n              events={[["hero_cta_click", { cta: "see_caros_in_action", location: "hero" }], ["demo_click", { location: "hero" }]]}\n              className="group inline-flex h-14 items-center gap-2 rounded-full bg-gold px-8 text-base font-semibold text-gold-foreground transition-all duration-300 hover:bg-gold/90"\n            >\n              {h("primaryCta")}\n              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />\n            </TrackedLink>\n            <TrackedLink\n              href={`#${CAPABILITIES_ID}`}\n              events={[["hero_cta_click", { cta: "explore_capabilities", location: "hero" }]]}\n              className="group inline-flex h-14 items-center gap-2 rounded-full border border-foreground/20 px-8 text-base font-medium text-foreground transition-all duration-300 hover:bg-foreground/5"\n            >\n              {h("secondaryCta")}\n              <ArrowRight className="h-4 w-4 rotate-90" />\n            </TrackedLink>\n          </div>\n          <p className="mt-3 text-sm text-muted-foreground">\n            {t("notReady")}{" "}\n            <Link href="/resources" className="font-semibold text-gold underline-offset-4 hover:underline">\n              {t("freeAuditCta")}\n            </Link>\n          </p>\n          {/* Reserve space when the same launcher becomes a floating circle on scroll. */}\n          <div data-caros-chat-dock className="mt-3 min-h-[76px] w-[262px] max-w-full" />\n        </div>\n        <HiringCalculator />\n      </div>\n    </section>\n  )\n}\n',
+    expected: /freeAuditCta|data-caros-chat-dock/,
+    operator: 'doesNotMatch',
+    diff: 'simple'
+  }
+
+test at tests/caros-hiring-story.test.mjs:72:1
+✖ the floating contact launcher does not wait for a hero dock (1.618875ms)
+  AssertionError [ERR_ASSERTION]: The input was expected to not match the regular expression /setLauncherReady\(pathname !== '\/' \|\| !!target\)/. Input:
+  
+  "'use client'\n" +
+    '\n' +
+    "import { useEffect, useId, useRef, useState, useSyncExternalStore } from 'react'\n" +
+    "import { createPortal } from 'react-dom'\n" +
+    "import { useSpanish } from '@/lib/use-spanish'\n" +
+    "import { localeHref } from '@/lib/spanish'\n" +
+    "import spanish from '@/messages/full/shared.es.json'\n" +
+    "import { usePathname } from '@/i18n/routing'\n" +
+    "import { getLauncherLayout, isFooterBarInView, shouldCollapseLauncher } from '@/lib/caros-widget-dock'\n" +
+    "import { Mic, MicOff, Phone, PhoneOff, ArrowUpRight, MessageCircle, Minus, Volume2, X } from 'lucide-react'\n" +
+    "import { ParticlesOrb } from '@/registry/orbe/particles-orb/particles-orb'\n" +
+    "import { CAROS_VOICE_CONFIG, VoiceSessionController } from '@/lib/caros-voice-session'\n" +
+    "import { ChatSessionController } from '@/lib/caros-chat-session'\n" +
+    "import { TextChat } from './text-chat'\n" +
+    "import styles from './chat-widget.module.css'\n" +
+    '\n' +
+    "const GOLD = '#C9A227'\n" +
+    "const CHAMPAGNE = '#FFF0BA'\n" +
+    '\n' +
+    'function createController() {\n' +
+    '  return new VoiceSessionController(async () => {\n' +
+    "    const { RetellClient } = await import('retell-client-js-sdk')\n" +
+    '    return new RetellClient({ key: CAROS_VOICE_CONFIG.publicKey })\n' +
+    '  })\n' +
+    '}\n' +
+    '\n' +
+    '/** Owner-approved custom Retell UI. Never load the stock or GHL embeds alongside it. */\n' +
+    'export function ChatWidget() {\n' +
+    '  const { tr, locale } = useSpanish(spanish)\n' +
+    '  const pathname = usePathname()\n' +
+    '  const [dockTarget, setDockTarget] = useState<HTMLElement | null>(null)\n' +
+    '  const [launcherReady, setLauncherReady] = useState(false)\n' +
+    '  const [scrolled, setScrolled] = useState(false)\n' +
+    '  const [footerInView, setFooterInView] = useState(false)\n' +
+    '  const [controller] = useState(createController)\n' +
+    '  const [chatController] = useState(() => new ChatSessionController())\n' +
+    '  const call = useSyncExternalStore(controller.subscribe, controller.getSnapshot, controller.getServerSnapshot)\n' +
+    '  const chat = useSyncExternalStore(chatController.subscribe, chatController.getSnapshot, chatController.getServerSnapshot)\n' +
+    '  const [open, setOpen] = useState(false)\n' +
+    "  const [mode, setMode] = useState<'choose' | 'voice' | 'chat'>('choose')\n" +
+    '  const [elapsed, setElapsed] = useState(0)\n' +
+    '  const launcherRef = useRef<HTMLButtonElement>(null)\n' +
+    '  const launcherHadFocusRef = useRef(false)\n' +
+    '  const closeRef = useRef<HTMLButtonElement>(null)\n' +
+    '  const hasOpenedRef = useRef(false)\n' +
+    '  const panelId = useId()\n' +
+    "  const active = call.phase === 'live'\n" +
+    "  const connecting = call.phase === 'connecting'\n" +
+    '  const busy = active || connecting\n' +
+    "  const chatSending = chat.phase === 'sending'\n" +
+    '  const layout = getLauncherLayout(!!dockTarget, scrolled)\n' +
+    "  const compact = layout === 'floating'\n" +
+    '\n' +
+    '  useEffect(() => {\n' +
+    '    let observer: MutationObserver | undefined\n' +
+    '    let target: HTMLElement | null = null\n' +
+    '    const onScroll = () => {\n' +
+    '      launcherHadFocusRef.current = document.activeElement === launcherRef.current\n' +
+    '      const dockBottom = target?.getBoundingClientRect().bottom\n' +
+    '      setScrolled(previous => dockBottom !== undefined && shouldCollapseLauncher(dockBottom, previous))\n' +
+    "      const footerBar = document.querySelector<HTMLElement>('[data-caros-footer-bar]')\n" +
+    '      setFooterInView(isFooterBarInView(footerBar ? footerBar.getBoundingClientRect().top : null, window.innerHeight))\n' +
+    '    }\n' +
+    '    const resizeObserver = new ResizeObserver(onScroll)\n' +
+    '    const updateDock = () => {\n' +
+    "      target = pathname === '/' ? document.querySelector<HTMLElement>('[data-caros-chat-dock]') : null\n" +
+    '      setDockTarget(target)\n' +
+    "      setLauncherReady(pathname !== '/' || !!target)\n" +
+    '      if (target) {\n' +
+    '        observer?.disconnect()\n' +
+    '        resizeObserver.disconnect()\n' +
+    "        resizeObserver.observe(target.closest('section') ?? target)\n" +
+    '      }\n' +
+    '      onScroll()\n' +
+    '    }\n' +
+    '    updateDock()\n' +
+    '    // A streamed homepage can mount its hero after the shared chrome.\n' +
+    "    if (pathname === '/' && !document.querySelector('[data-caros-chat-dock]')) {\n" +
+    '      observer = new MutationObserver(updateDock)\n' +
+    '      observer.observe(document.body, { childList: true, subtree: true })\n' +
+    '    }\n' +
+    "    window.addEventListener('scroll', onScroll, { passive: true })\n" +
+    "    window.addEventListener('resize', onScroll)\n" +
+    '    return () => {\n' +
+    '      observer?.disconnect()\n' +
+    '      resizeObserver.disconnect()\n' +
+    "      window.removeEventListener('scroll', onScroll)\n" +
+    "      window.removeEventListener('resize', onScroll)\n" +
+    '    }\n' +
+    '  }, [pathname])\n' +
+    '\n' +
+    '  useEffect(() => {\n' +
+    '    if (launcherHadFocusRef.current && !open) launcherRef.current?.focus({ preventScroll: true })\n' +
+    '    launcherHadFocusRef.current = false\n' +
+    '  }, [layout, dockTarget, open])\n' +
+    '\n' +
+    '  useEffect(() => () => { controller.stop(); chatController.reset() }, [controller, chatController])\n' +
+    '  useEffect(() => {\n' +
+    '    if (!active) { setElapsed(0); return }\n' +
+    '    const started = Date.now()\n' +
+    '    const id = window.setInterval(() => setElapsed(Math.floor((Date.now() - started) / 1000)), 1000)\n' +
+    '    return () => window.clearInterval(id)\n' +
+    '  }, [active])\n' +
+    '  useEffect(() => {\n' +
+    '    if (!open) {\n' +
+    '      if (hasOpenedRef.current) launcherRef.current?.focus({ preventScroll: true })\n' +
+    '      return\n' +
+    '    }\n' +
+    '    hasOpenedRef.current = true\n' +
+    '    closeRef.current?.focus()\n' +
+    '    const onKey = (event: KeyboardEvent) => {\n' +
+    "      if (event.key === 'Escape') setOpen(false)\n" +
+    '    }\n' +
+    "    document.addEventListener('keydown', onKey)\n" +
+    "    return () => document.removeEventListener('keydown', onKey)\n" +
+    '  }, [open])\n' +
+    '\n' +
+    '  const close = () => setOpen(false)\n' +
+    `  const status = call.phase === 'error' ? tr("Connection unavailable")\n` +
+    '    : connecting ? tr("Connecting to CAROS")\n' +
+    '    : active ? call.muted ? tr("Connected · microphone muted") : tr("Connected · microphone on")\n' +
+    '    : tr("Ready when you are")\n' +
+    "  const time = `${Math.floor(elapsed / 60)}:${String(elapsed % 60).padStart(2, '0')}`\n" +
+    '\n' +
+    '  const launcher = (\n' +
+    '      <button\n' +
+    '        ref={launcherRef}\n' +
+    '        type="button"\n' +
+    '        data-caros-chat-launcher\n' +
+    "        className={`${styles.launcher} ${compact ? styles.launcherCompact : ''} ${open ? styles.launcherHidden : ''}`}\n" +
+    `        aria-label={active ? tr('Return to CAROS call, {time}', { time }) : tr("Talk to us — CAROS voice or text chat")}\n` +
+    `        title={active ? tr('Call in progress · {time}', { time }) : chatSending ? tr("CAROS is replying…") : tr("Talk to us — voice or text chat")}\n` +
+    '        aria-expanded={open}\n' +
+    '        aria-controls={panelId}\n' +
+    '        onClick={() => setOpen(true)}\n' +
+    '      >\n' +
+    '        <span className={styles.launcherOrb} aria-hidden="true">\n' +
+    '          <ParticlesOrb state={call.orbState} size={96} colorFrom={GOLD} colorTo={CHAMPAGNE} levelRef={controller.levelRef} label="" />\n' +
+    '        </span>\n' +
+    '        <span className={styles.launcherCopy}>\n' +
+    '          <strong>{tr("Talk to us")}</strong>\n' +
+    `          <span><i className={busy ? styles.liveDot : styles.readyDot} />{active ? tr('Call in progress · {time}', { time }) : connecting ? tr("Connecting…") : chatSending ? tr("CAROS is replying…") : tr("Voice or text. Your choice.")}</span>\n` +
+    '        </span>\n' +
+    '        <ArrowUpRight size={17} className={styles.launcherArrow} aria-hidden="true" />\n' +
+    '        {compact && <span className={styles.compactLabel}>{tr("Talk to us")}</span>}\n' +
+    '        {compact && (busy || chatSending) && <span className={styles.compactIndicator} aria-hidden="true" />}\n' +
+    '      </button>\n' +
+    '  )\n' +
+    '\n' +
+    '  return (\n' +
+    "    <div className={styles.widget} data-caros-voice-widget data-phase={call.phase} data-mode={mode} data-layout={layout} data-footer-in-view={footerInView ? 'true' : undefined}>\n" +
+    "      {launcherReady && (layout === 'docked' && dockTarget ? createPortal(launcher, dockTarget) : launcher)}\n" +
+    '\n' +
+    '      {open && (\n' +
+    '        <section id={panelId} className={styles.panel} role="dialog" aria-label={tr("Talk to CAROS")} data-testid="caros-voice-panel">\n' +
+    '          <header className={styles.header}>\n' +
+    '            <div className={styles.brand}><span className={styles.sunburst} aria-hidden="true">✳</span><span>CAROS<span className={styles.ai}>AI</span><small>{tr("REVENUE INFRASTRUCTURE")}</small></span></div>\n' +
+    '            <button ref={closeRef} type="button" className={styles.iconButton} onClick={close} aria-label={busy ? tr("Minimize call panel") : tr("Close conversation panel")}>{busy ? <Minus size={18} /> : <X size={18} />}</button>\n' +
+    '          </header>\n' +
+    '          <div className={styles.body}>\n' +
+    '            <div className={styles.eyebrow}><span /> {tr("A REAL CONVERSATION. A CLEARER PICTURE.")}</div>\n' +
+    '            <h2>{tr("Talk to CAROS")}<span>.</span></h2>\n' +
+    '            <p className={styles.intro}>{tr("Tell us where revenue gets stuck.")}<br />{tr("Let’s find the next move.")}</p>\n' +
+    `            {mode !== 'choose' && <div className={styles.channelTabs} role="group" aria-label={tr("Conversation channel")}>\n` +
+    `              <button type="button" aria-pressed={mode === 'voice'} disabled={chatSending} onClick={() => setMode('voice')}><Phone size={14} />{tr("Voice")}</button>\n` +
+    `              <button type="button" aria-pressed={mode === 'chat'} disabled={busy} onClick={() => setMode('chat')}><MessageCircle size={14} />{tr("Text chat")}</button>\n` +
+    '            </div>}\n' +
+    "            {mode === 'chat' ? <TextChat controller={chatController} /> : <>\n" +
+    '              <div className={styles.orbStage}>\n' +
+    '                <div className={styles.orbGuide} aria-hidden="true" />\n' +
+    '                <ParticlesOrb state={call.orbState} size={240} speed={0.85} colorFrom={GOLD} colorTo={CHAMPAGNE} levelRef={controller.levelRef} label={tr("CAROS audio visualization")} />\n' +
+    `                <span className={styles.orbCaption}>{active ? tr("LIVE AUDIO") : connecting ? tr("CONNECTING") : mode === 'choose' ? tr("YOUR NEXT MOVE") : tr("VOICE AI")}</span>\n` +
+    '              </div>\n' +
+    "              {mode === 'choose' ? <>\n" +
+    '                <div className={styles.channelChoices} role="group" aria-label={tr("Choose how to talk to CAROS")}>\n' +
+    `                  <button type="button" onClick={() => setMode('voice')}><Phone size={19} /><strong>{tr("Voice")}</strong><span>{tr("Talk it through")}</span><ArrowUpRight size={14} /></button>\n` +
+    `                  <button type="button" onClick={() => setMode('chat')}><MessageCircle size={19} /><strong>{tr("Text chat")}</strong><span>{tr("Type your question")}</span><ArrowUpRight size={14} /></button>\n` +
+    '                </div>\n' +
+    '     '... 2153 more characters
+  
+      at TestContext.<anonymous> (file:///Users/anns-macbook/Projects/caros-ai/tests/caros-hiring-story.test.mjs:74:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '\'use client\'\n\nimport { useEffect, useId, useRef, useState, useSyncExternalStore } from \'react\'\nimport { createPortal } from \'react-dom\'\nimport { useSpanish } from \'@/lib/use-spanish\'\nimport { localeHref } from \'@/lib/spanish\'\nimport spanish from \'@/messages/full/shared.es.json\'\nimport { usePathname } from \'@/i18n/routing\'\nimport { getLauncherLayout, isFooterBarInView, shouldCollapseLauncher } from \'@/lib/caros-widget-dock\'\nimport { Mic, MicOff, Phone, PhoneOff, ArrowUpRight, MessageCircle, Minus, Volume2, X } from \'lucide-react\'\nimport { ParticlesOrb } from \'@/registry/orbe/particles-orb/particles-orb\'\nimport { CAROS_VOICE_CONFIG, VoiceSessionController } from \'@/lib/caros-voice-session\'\nimport { ChatSessionController } from \'@/lib/caros-chat-session\'\nimport { TextChat } from \'./text-chat\'\nimport styles from \'./chat-widget.module.css\'\n\nconst GOLD = \'#C9A227\'\nconst CHAMPAGNE = \'#FFF0BA\'\n\nfunction createController() {\n  return new VoiceSessionController(async () => {\n    const { RetellClient } = await import(\'retell-client-js-sdk\')\n    return new RetellClient({ key: CAROS_VOICE_CONFIG.publicKey })\n  })\n}\n\n/** Owner-approved custom Retell UI. Never load the stock or GHL embeds alongside it. */\nexport function ChatWidget() {\n  const { tr, locale } = useSpanish(spanish)\n  const pathname = usePathname()\n  const [dockTarget, setDockTarget] = useState<HTMLElement | null>(null)\n  const [launcherReady, setLauncherReady] = useState(false)\n  const [scrolled, setScrolled] = useState(false)\n  const [footerInView, setFooterInView] = useState(false)\n  const [controller] = useState(createController)\n  const [chatController] = useState(() => new ChatSessionController())\n  const call = useSyncExternalStore(controller.subscribe, controller.getSnapshot, controller.getServerSnapshot)\n  const chat = useSyncExternalStore(chatController.subscribe, chatController.getSnapshot, chatController.getServerSnapshot)\n  const [open, setOpen] = useState(false)\n  const [mode, setMode] = useState<\'choose\' | \'voice\' | \'chat\'>(\'choose\')\n  const [elapsed, setElapsed] = useState(0)\n  const launcherRef = useRef<HTMLButtonElement>(null)\n  const launcherHadFocusRef = useRef(false)\n  const closeRef = useRef<HTMLButtonElement>(null)\n  const hasOpenedRef = useRef(false)\n  const panelId = useId()\n  const active = call.phase === \'live\'\n  const connecting = call.phase === \'connecting\'\n  const busy = active || connecting\n  const chatSending = chat.phase === \'sending\'\n  const layout = getLauncherLayout(!!dockTarget, scrolled)\n  const compact = layout === \'floating\'\n\n  useEffect(() => {\n    let observer: MutationObserver | undefined\n    let target: HTMLElement | null = null\n    const onScroll = () => {\n      launcherHadFocusRef.current = document.activeElement === launcherRef.current\n      const dockBottom = target?.getBoundingClientRect().bottom\n      setScrolled(previous => dockBottom !== undefined && shouldCollapseLauncher(dockBottom, previous))\n      const footerBar = document.querySelector<HTMLElement>(\'[data-caros-footer-bar]\')\n      setFooterInView(isFooterBarInView(footerBar ? footerBar.getBoundingClientRect().top : null, window.innerHeight))\n    }\n    const resizeObserver = new ResizeObserver(onScroll)\n    const updateDock = () => {\n      target = pathname === \'/\' ? document.querySelector<HTMLElement>(\'[data-caros-chat-dock]\') : null\n      setDockTarget(target)\n      setLauncherReady(pathname !== \'/\' || !!target)\n      if (target) {\n        observer?.disconnect()\n        resizeObserver.disconnect()\n        resizeObserver.observe(target.closest(\'section\') ?? target)\n      }\n      onScroll()\n    }\n    updateDock()\n    // A streamed homepage can mount its hero after the shared chrome.\n    if (pathname === \'/\' && !document.querySelector(\'[data-caros-chat-dock]\')) {\n      observer = new MutationObserver(updateDock)\n      observer.observe(document.body, { childList: true, subtree: true })\n    }\n    window.addEventListener(\'scroll\', onScroll, { passive: true })\n    window.addEventListener(\'resize\', onScroll)\n    return () => {\n      observer?.disconnect()\n      resizeObserver.disconnect()\n      window.removeEventListener(\'scroll\', onScroll)\n      window.removeEventListener(\'resize\', onScroll)\n    }\n  }, [pathname])\n\n  useEffect(() => {\n    if (launcherHadFocusRef.current && !open) launcherRef.current?.focus({ preventScroll: true })\n    launcherHadFocusRef.current = false\n  }, [layout, dockTarget, open])\n\n  useEffect(() => () => { controller.stop(); chatController.reset() }, [controller, chatController])\n  useEffect(() => {\n    if (!active) { setElapsed(0); return }\n    const started = Date.now()\n    const id = window.setInterval(() => setElapsed(Math.floor((Date.now() - started) / 1000)), 1000)\n    return () => window.clearInterval(id)\n  }, [active])\n  useEffect(() => {\n    if (!open) {\n      if (hasOpenedRef.current) launcherRef.current?.focus({ preventScroll: true })\n      return\n    }\n    hasOpenedRef.current = true\n    closeRef.current?.focus()\n    const onKey = (event: KeyboardEvent) => {\n      if (event.key === \'Escape\') setOpen(false)\n    }\n    document.addEventListener(\'keydown\', onKey)\n    return () => document.removeEventListener(\'keydown\', onKey)\n  }, [open])\n\n  const close = () => setOpen(false)\n  const status = call.phase === \'error\' ? tr("Connection unavailable")\n    : connecting ? tr("Connecting to CAROS")\n    : active ? call.muted ? tr("Connected · microphone muted") : tr("Connected · microphone on")\n    : tr("Ready when you are")\n  const time = `${Math.floor(elapsed / 60)}:${String(elapsed % 60).padStart(2, \'0\')}`\n\n  const launcher = (\n      <button\n        ref={launcherRef}\n        type="button"\n        data-caros-chat-launcher\n        className={`${styles.launcher} ${compact ? styles.launcherCompact : \'\'} ${open ? styles.launcherHidden : \'\'}`}\n        aria-label={active ? tr(\'Return to CAROS call, {time}\', { time }) : tr("Talk to us — CAROS voice or text chat")}\n        title={active ? tr(\'Call in progress · {time}\', { time }) : chatSending ? tr("CAROS is replying…") : tr("Talk to us — voice or text chat")}\n        aria-expanded={open}\n        aria-controls={panelId}\n        onClick={() => setOpen(true)}\n      >\n        <span className={styles.launcherOrb} aria-hidden="true">\n          <ParticlesOrb state={call.orbState} size={96} colorFrom={GOLD} colorTo={CHAMPAGNE} levelRef={controller.levelRef} label="" />\n        </span>\n        <span className={styles.launcherCopy}>\n          <strong>{tr("Talk to us")}</strong>\n          <span><i className={busy ? styles.liveDot : styles.readyDot} />{active ? tr(\'Call in progress · {time}\', { time }) : connecting ? tr("Connecting…") : chatSending ? tr("CAROS is replying…") : tr("Voice or text. Your choice.")}</span>\n        </span>\n        <ArrowUpRight size={17} className={styles.launcherArrow} aria-hidden="true" />\n        {compact && <span className={styles.compactLabel}>{tr("Talk to us")}</span>}\n        {compact && (busy || chatSending) && <span className={styles.compactIndicator} aria-hidden="true" />}\n      </button>\n  )\n\n  return (\n    <div className={styles.widget} data-caros-voice-widget data-phase={call.phase} data-mode={mode} data-layout={layout} data-footer-in-view={footerInView ? \'true\' : undefined}>\n      {launcherReady && (layout === \'docked\' && dockTarget ? createPortal(launcher, dockTarget) : launcher)}\n\n      {open && (\n        <section id={panelId} className={styles.panel} role="dialog" aria-label={tr("Talk to CAROS")} data-testid="caros-voice-panel">\n          <header className={styles.header}>\n            <div className={styles.brand}><span className={styles.sunburst} aria-hidden="true">✳</span><span>CAROS<span className={styles.ai}>AI</span><small>{tr("REVENUE INFRASTRUCTURE")}</small></span></div>\n            <button ref={closeRef} type="button" className={styles.iconButton} onClick={close} aria-label={busy ? tr("Minimize call panel") : tr("Close conversation panel")}>{busy ? <Minus size={18} /> : <X size={18} />}</button>\n          </header>\n          <div className={styles.body}>\n            <div className={styles.eyebrow}><span /> {tr("A REAL CONVERSATION. A CLEARER PICTURE.")}</div>\n            <h2>{tr("Talk to CAROS")}<span>.</span></h2>\n            <p className={styles.intro}>{tr("Tell us where revenue gets stuck.")}<br />{tr("Let’s find the next move.")}</p>\n            {mode !== \'choose\' && <div className={styles.channelTabs} role="group" aria-label={tr("Conversation channel")}>\n              <button type="button" aria-pressed={mode === \'voice\'} disabled={chatSending} onClick={() => setMode(\'voice\')}><Phone size={14} />{tr("Voice")}</button>\n              <button type="button" aria-pressed={mode === \'chat\'} disabled={busy} onClick={() => setMode(\'chat\')}><MessageCircle size={14} />{tr("Text chat")}</button>\n            </div>}\n            {mode === \'chat\' ? <TextChat controller={chatController} /> : <>\n              <div className={styles.orbStage}>\n                <div className={styles.orbGuide} aria-hidden="true" />\n                <ParticlesOrb state={call.orbState} size={240} speed={0.85} colorFrom={GOLD} colorTo={CHAMPAGNE} levelRef={controller.levelRef} label={tr("CAROS audio visualization")} />\n                <span className={styles.orbCaption}>{active ? tr("LIVE AUDIO") : connecting ? tr("CONNECTING") : mode === \'choose\' ? tr("YOUR NEXT MOVE") : tr("VOICE AI")}</span>\n              </div>\n              {mode === \'choose\' ? <>\n                <div className={styles.channelChoices} role="group" aria-label={tr("Choose how to talk to CAROS")}>\n                  <button type="button" onClick={() => setMode(\'voice\')}><Phone size={19} /><strong>{tr("Voice")}</strong><span>{tr("Talk it through")}</span><ArrowUpRight size={14} /></button>\n                  <button type="button" onClick={() => setMode(\'chat\')}><MessageCircle size={19} /><strong>{tr("Text chat")}</strong><span>{tr("Type your question")}</span><ArrowUpRight size={14} /></button>\n                </div>\n     '... 2153 more characters,
+    expected: /setLauncherReady\(pathname !== '\/' \|\| !!target\)/,
+    operator: 'doesNotMatch',
+    diff: 'simple'
+  }
