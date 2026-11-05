@@ -11,7 +11,7 @@ export function ProductExperience() {
   const tools = useTranslations("HomePage.integrations").raw("existingTools") as string[]
   return (
     <section className="bg-background py-20 lg:py-28">
-      <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
+      <div className="mx-auto home-container">
         <Reveal className="max-w-3xl">
           <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2 className="mt-5 text-balance text-[clamp(2rem,4.4vw,3.5rem)] font-display leading-[1] tracking-tight">{t("title")}</h2>

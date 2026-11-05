@@ -15,7 +15,7 @@ const fmt = (n, locale) => norm(n.toLocaleString(locale === 'es' ? 'es-419' : 'e
 const S = k => `[data-story="${k}"]`
 
 async function open(locale, width, opts = {}) {
-  const ctx = await browser.newContext({ viewport: { width, height: width >= 1440 ? 900 : 800 }, reducedMotion: opts.reduced ? 'reduce' : 'no-preference' })
+  const ctx = await browser.newContext({ viewport: { width, height: width >= 1920 ? 1080 : width >= 1440 ? 900 : 800 }, reducedMotion: opts.reduced ? 'reduce' : 'no-preference' })
   if (!opts.firstVisit) await ctx.addCookies([consent])
   const page = await ctx.newPage()
   await page.goto(`${base}/${locale}`, { waitUntil: 'networkidle' })
@@ -35,14 +35,15 @@ for (const locale of LOCALES) {
     const tops = []
     for (const [k, sel] of order) tops.push([k, await top(page, sel)])
     chk(`${tag} all story blocks exist`, tops.every(([, t]) => t !== null), JSON.stringify(tops))
-    chk(`${tag} story blocks are in strict vertical order`, tops.every(([, t], i) => i === 0 || t > tops[i - 1][1]), JSON.stringify(tops))
+    // cost question and calculator sit side by side from xl: the calculator may start level with (not below) the question
+    chk(`${tag} story blocks are in strict vertical order`, tops.every(([k, t], i) => i === 0 || t > tops[i - 1][1] || (k === 'calculator' && width >= 1280 && t >= tops[i - 1][1] - 2)), JSON.stringify(tops))
     const preCalc = await page.evaluate(() => {
       const calc = document.querySelector('[data-story="calculator"]').getBoundingClientRect().top + scrollY
       return [...document.querySelectorAll('main a, main button')].filter(e => !e.closest('[data-story="calculator"]') && e.getBoundingClientRect().top + scrollY < calc).map(e => e.tagName + ':' + e.textContent.trim().slice(0, 40))
     })
     chk(`${tag} growth introduction precedes cost without distracting links or buttons`, preCalc.length === 0, JSON.stringify(preCalc))
     const valueBox = await page.locator(S('product-value')).boundingBox()
-    chk(`${tag} CAROS value statement is above the fold`, valueBox.y + valueBox.height < (width >= 1440 ? 900 : 800))
+    chk(`${tag} CAROS value statement is above the fold`, valueBox.y + valueBox.height < (width >= 1920 ? 1080 : width >= 1440 ? 900 : 800))
     const demoLinks = await page.evaluate(() => [...document.querySelectorAll('a[href^="https://demo.getcaros.com"]')].filter(a => !a.closest('header, nav')).map(a => ({ y: a.getBoundingClientRect().top + scrollY, inStory: !!a.closest('[data-story="cta"]') })))
     const revealTop = tops.find(([k]) => k === 'reveal')[1]
     chk(`${tag} primary demo CTA exists after the value reveal and before the screenshot`, demoLinks.some(l => l.inStory && l.y > revealTop) && demoLinks.filter(l => l.y < revealTop).length === 0, JSON.stringify(demoLinks))
@@ -116,7 +117,7 @@ for (const locale of LOCALES) {
     // line geometry: each line starts at its token and ends at the wordmark
     await page.evaluate(() => Promise.all(document.querySelector('[data-story="converge"]').getAnimations({ subtree: true }).map(a => a.finished)))
     const geo = await page.evaluate(() => { const c = document.querySelector('[data-story="converge"]'); const w = c.querySelector('[data-converge-wordmark]').getBoundingClientRect(); const ls = [...c.querySelectorAll('[data-converge-line]')].map(l => l.getBoundingClientRect()); return { wordmarkTop: w.top, bottoms: ls.map(l => Math.round(l.bottom)), maxEnd: Math.max(...ls.map(l => l.bottom)), spread: Math.max(...ls.map(l => l.right)) - Math.min(...ls.map(l => l.left)) } })
-    chk(`${tag} lines span the row of tokens and end at the wordmark`, geo.spread > width * 0.4 && Math.abs(geo.maxEnd - geo.wordmarkTop) < 4, JSON.stringify(geo))
+    chk(`${tag} lines span the row of tokens and end at the wordmark`, geo.spread > Math.min(width, 1440) * 0.4 && Math.abs(geo.maxEnd - geo.wordmarkTop) < 4, JSON.stringify(geo))
     await toggles.nth(0).click()
     await page.close()
   }

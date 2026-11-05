@@ -1,0 +1,10 @@
+verify-hiring-story.mjs against first orb build (9 failures of 300):
+en@1920 CAROS value statement is above the fold | 
+en@1920 lines span the row of tokens and end at the wordmark | {"wordmarkTop":752.609375,"bottoms":[753,753,753,753,753,753,753,753,753,753],"maxEnd":752.609375,"spread":691.199951171875}
+en@2560 CAROS value statement is above the fold | 
+en@2560 lines span the row of tokens and end at the wordmark | {"wordmarkTop":762.796875,"bottoms":[763,763,763,763,763,763,763,763,763,763],"maxEnd":762.796875,"spread":691.199951171875}
+es@360 no horizontal overflow, overlap, clipping or off-screen content | {"overlaps":[],"clipped":[],"offscreen":["Explorar lo que CAROS puede ha"],"overflow":0}
+es@1920 CAROS value statement is above the fold | 
+es@1920 lines span the row of tokens and end at the wordmark | {"wordmarkTop":727.421875,"bottoms":[727,727,727,727,727,727,727,727,727,727],"maxEnd":727.421875,"spread":691.199951171875}
+es@2560 CAROS value statement is above the fold | 
+es@2560 lines span the row of tokens and end at the wordmark | {"wordmarkTop":762.796875,"bottoms":[763,763,763,763,763,763,763,763,763,763],"maxEnd":762.796875,"spread":691.199951171875}

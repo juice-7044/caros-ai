@@ -47,7 +47,7 @@ export function DisconnectedCost() {
 
   return (
     <section data-story="software" className="bg-ink py-14 text-ink-foreground lg:py-20">
-      <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
+      <div className="mx-auto home-container">
         <Reveal className="max-w-3xl">
           <p className="max-w-3xl text-base leading-relaxed text-ink-muted">{t("title")}</p>
           <h2 className="mt-2 max-w-3xl text-balance text-[clamp(1.5rem,3vw,2.25rem)] font-display leading-[1.1] tracking-tight">{t("bridge")}</h2>

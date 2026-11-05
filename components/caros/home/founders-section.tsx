@@ -7,7 +7,7 @@ export function FoundersSection() {
   const { tr } = useSpanish(spanishCatalog)
   return (
     <section className="bg-background py-28 lg:py-40">
-      <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
+      <div className="mx-auto home-container">
         <Reveal className="max-w-4xl">
           <h2 className="text-balance text-[clamp(2rem,4.5vw,3.5rem)] font-extrabold leading-[1] tracking-tight">
             {tr("Small businesses shouldn't need an enterprise-sized team to build an")}{" "}

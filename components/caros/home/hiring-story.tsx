@@ -59,8 +59,10 @@ export function HiringStory() {
 
   return (
     <div data-story-mode={view.mode}>
-      <h2 data-story="cost-question" className="mt-5 max-w-3xl text-balance text-xl font-display leading-snug sm:text-2xl">{s("costQuestion")}</h2>
-      <HiringCalculator employees={employees} salary={salary} mode={view.mode} onEmployees={setEmployees} onSalary={setSalary} onMode={setMode} />
+      <div className="mt-6 xl:grid xl:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] xl:items-start xl:gap-14">
+        <h2 data-story="cost-question" className="max-w-3xl text-balance font-display text-xl leading-snug sm:text-2xl xl:text-[clamp(1.75rem,2.4vw,3rem)] xl:leading-[1.1]">{s("costQuestion")}</h2>
+        <HiringCalculator employees={employees} salary={salary} mode={view.mode} onEmployees={setEmployees} onSalary={setSalary} onMode={setMode} />
+      </div>
 
       <div data-story="positions" className="mt-8">
         <h2 className="text-balance text-[clamp(1.5rem,3vw,2.25rem)] font-display leading-[1.05] tracking-tight">
@@ -96,21 +98,23 @@ export function HiringStory() {
         <HiringConverge mode={view.mode} tokens={tokens} />
       </div>
 
-      <div data-story="reveal" className="mt-6 max-w-3xl">
-        <h2 className="text-balance text-[clamp(1.5rem,3vw,2.25rem)] font-display leading-[1.05] tracking-tight">{s("revealTitle")}</h2>
-        <p className="mt-2 text-base leading-relaxed text-muted-foreground">{s("revealBody")}</p>
+      <div className="mt-8 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-x-16 xl:gap-x-24">
+      <div data-story="reveal" className="max-w-3xl lg:max-w-none">
+        <h2 className="max-w-[22ch] text-balance font-display text-[clamp(1.5rem,3vw,3.25rem)] leading-[1.05] tracking-tight lg:max-w-[20ch]">{s("revealTitle")}</h2>
+        <p className="mt-3 font-mono text-xs uppercase tracking-[0.14em] text-gold">{s("emphasis")}</p>
+        <p className="mt-2 font-serif text-xl italic text-foreground lg:text-2xl">{s("tagline")}</p>
+      </div>
+      <div className="mt-3 max-w-[60ch] lg:mt-0">
+        <p className="text-base leading-relaxed text-muted-foreground lg:text-lg">{s("revealBody")}</p>
         <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s("revealAreas")}</p>
         <p className="mt-2 text-base leading-relaxed">{s("revealClose")}</p>
-        <p className="mt-3 font-mono text-xs uppercase tracking-[0.14em] text-gold">{s("emphasis")}</p>
-        <p className="mt-2 font-serif text-xl italic text-foreground">{s("tagline")}</p>
-      </div>
 
-      <div data-story="cta" className="mt-5 flex flex-col items-start gap-3 sm:flex-row">
+      <div data-story="cta" className="mt-5 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap">
         <TrackedLink
           href={DEMO_URL}
           external
           events={[["hero_cta_click", { cta: "see_caros_in_action", location: "story_reveal" }], ["demo_click", { location: "story_reveal" }]]}
-          className="group inline-flex h-14 items-center gap-2 rounded-full bg-gold px-8 text-base font-semibold text-gold-foreground transition-all duration-300 hover:bg-gold/90"
+          className="group inline-flex h-14 items-center gap-2 sm:whitespace-nowrap rounded-full bg-gold px-8 text-base font-semibold text-gold-foreground transition-all duration-300 hover:bg-gold/90"
         >
           {h("primaryCta")}
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -118,11 +122,13 @@ export function HiringStory() {
         <TrackedLink
           href={`#${CAPABILITIES_ID}`}
           events={[["hero_cta_click", { cta: "explore_capabilities", location: "story_reveal" }]]}
-          className="group inline-flex h-14 items-center gap-2 rounded-full border border-foreground/20 px-8 text-base font-medium text-foreground transition-all duration-300 hover:bg-foreground/5"
+          className="group inline-flex h-14 items-center gap-2 sm:whitespace-nowrap rounded-full border border-foreground/20 px-8 text-base font-medium text-foreground transition-all duration-300 hover:bg-foreground/5"
         >
           {h("secondaryCta")}
           <ArrowRight className="h-4 w-4 rotate-90" />
         </TrackedLink>
+      </div>
+      </div>
       </div>
     </div>
   )

@@ -47,7 +47,7 @@ export function MoneyJourney() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto grid max-w-[1200px] gap-14 px-6 lg:grid-cols-2 lg:items-center lg:px-12">
+      <div className="relative z-10 home-container grid gap-14 lg:grid-cols-2 lg:items-center">
         <Reveal>
           <Eyebrow>{tr("Follow Your Dollar")}</Eyebrow>
           <h2 className="mt-6 text-balance text-[clamp(2.25rem,5vw,4rem)] font-display leading-[0.98] tracking-tight">

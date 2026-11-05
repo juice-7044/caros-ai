@@ -8,7 +8,7 @@ export function Attribution() {
 
   return (
     <section className="bg-background py-28 lg:py-40">
-      <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
+      <div className="mx-auto home-container">
         <Reveal className="max-w-4xl">
           <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2 className="mt-6 text-balance text-[clamp(2rem,4.5vw,3.5rem)] font-extrabold leading-[1] tracking-tight">

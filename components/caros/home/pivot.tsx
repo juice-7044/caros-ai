@@ -10,7 +10,7 @@ export function Pivot() {
 
   return (
     <section className="bg-background py-28 lg:py-40">
-      <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
+      <div className="mx-auto home-container">
         <Reveal>
           <h2 className="max-w-3xl text-balance text-[clamp(2.25rem,5vw,4rem)] font-extrabold leading-[0.98] tracking-tight">
             {t("headline")}

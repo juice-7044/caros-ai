@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server"
-import { Hero } from "@/components/caros/home/hero"
+import { Hero, StoryTransition } from "@/components/caros/home/hero"
+import { HiringStory } from "@/components/caros/home/hiring-story"
 import { UnifiedSystem } from "@/components/caros/home/unified-system"
 import { ProductShowcase } from "@/components/caros/home/product-showcase"
 import { DisconnectedCost } from "@/components/caros/home/disconnected-cost"
@@ -20,10 +21,18 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     <>
       <HomeAnalytics />
       {/* 1 Hiring story: cost -> responsibilities -> CAROS reveal -> demo CTA */}
-      <Hero />
+      <div data-story="root">
+        <Hero />
+        <section data-story="band" className="bg-background pb-8 pt-10 lg:pb-12 lg:pt-14">
+          <div className="home-container">
+            <StoryTransition />
+            <HiringStory />
+          </div>
+        </section>
+      </div>
       {/* 2 Real Command Center screenshot, full width */}
       <section data-story="showcase" className="bg-background pb-10 pt-2">
-        <div className="mx-auto max-w-[1300px] px-4 sm:px-6 lg:px-8">
+        <div className="home-container">
           <ProductShowcase />
         </div>
       </section>
@@ -47,7 +56,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <p className="mt-3 max-w-xl text-xs leading-relaxed text-ink-muted">{t("privacy")}</p>
       </CtaBand>
       <section className="border-t border-border/60 bg-background px-6 py-10 sm:px-8">
-        <div className="mx-auto max-w-6xl">
+        <div className="home-container">
           {/* TrustBox widget - Review Collector */}
           <TrustpilotWidgetLoader />
           {/* End TrustBox widget */}

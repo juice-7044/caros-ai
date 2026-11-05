@@ -32,7 +32,7 @@ export function CtaBand({
   return (
     <section className="relative overflow-hidden bg-ink text-ink-foreground">
       <div className="pointer-events-none absolute inset-0 radial-glow" />
-      <div className="mx-auto flex max-w-[1000px] flex-col items-center px-6 py-28 text-center lg:py-40">
+      <div className="home-container flex flex-col items-center py-28 text-center lg:py-40">
         <Reveal className="flex flex-col items-center">
           <Sunburst className="w-16 text-gold" />
           <h2 className="mt-8 text-balance text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold leading-[0.95] tracking-tight">

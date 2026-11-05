@@ -1,0 +1,53 @@
+PASS EN banner shows on first visit 
+PASS EN consent default denied precedes GTM ["default",{"ad_storage":"denied","ad_user_data":"denied","ad_personalization":"denied","analytics_storage":"denied","functionality_storage":"granted","secu
+PASS EN no facebook request before choice 
+PASS EN banner hides after Reject 
+PASS EN Reject: no facebook.net / facebook tr requests 
+PASS EN Reject: no google-analytics collect with analytics_storage granted ["G100"]
+PASS EN Reject: no caros_ dataLayer events 
+PASS EN choice stored in first-party cookie with version+timestamp {"v":1,"ts":1793922418692,"analytics":false,"marketing":false}
+PASS EN choice persists across reload (no banner) 
+PASS EN reload after Reject still no facebook 
+PASS EN footer Cookie settings reopens banner 
+PASS EN focus moved into dialog heading on reopen 
+PASS EN Escape closes reopened dialog and returns focus to footer button 
+PASS EN Accept: consent update grants analytics+ad storage [{"ad_storage":"granted","ad_user_data":"granted","ad_personalization":"granted","analytics_storage":"granted","functionality_storage":"grant
+PASS EN Accept: caros_ analytics events flow 
+PASS EN Accept: Meta Pixel load attempted https://connect.facebook.net/en_US/fbevents.js (failed: )
+PASS EN Accept persists across reload (no banner, granted replayed before GTM) 
+PASS EN Customize analytics-only stored {"v":1,"ts":1793922429475,"analytics":true,"marketing":false}
+PASS EN Customize analytics-only: no facebook 
+PASS ES banner shows on first visit 
+PASS ES consent default denied precedes GTM ["default",{"ad_storage":"denied","ad_user_data":"denied","ad_personalization":"denied","analytics_storage":"denied","functionality_storage":"granted","secu
+PASS ES no facebook request before choice 
+PASS ES banner hides after Reject 
+PASS ES Reject: no facebook.net / facebook tr requests 
+PASS ES Reject: no google-analytics collect with analytics_storage granted ["G100"]
+PASS ES Reject: no caros_ dataLayer events 
+PASS ES choice stored in first-party cookie with version+timestamp {"v":1,"ts":1793922431834,"analytics":false,"marketing":false}
+PASS ES choice persists across reload (no banner) 
+PASS ES reload after Reject still no facebook 
+PASS ES footer Cookie settings reopens banner 
+PASS ES focus moved into dialog heading on reopen 
+PASS ES Escape closes reopened dialog and returns focus to footer button 
+PASS ES Accept: consent update grants analytics+ad storage [{"ad_storage":"granted","ad_user_data":"granted","ad_personalization":"granted","analytics_storage":"granted","functionality_storage":"grant
+PASS ES Accept: caros_ analytics events flow 
+PASS ES Accept: Meta Pixel load attempted https://connect.facebook.net/en_US/fbevents.js (failed: )
+PASS ES Accept persists across reload (no banner, granted replayed before GTM) 
+PASS ES Customize analytics-only stored {"v":1,"ts":1793922441183,"analytics":true,"marketing":false}
+PASS ES Customize analytics-only: no facebook 
+PASS GPC: Accept all keeps marketing denied {"v":1,"ts":1793922443615,"analytics":true,"marketing":false}
+PASS GPC: no facebook requests 
+PASS 360px: no horizontal overflow with banner {"overflow":0,"overlap":false,"cls":0.012335069444444444,"banner":[0,518,360,282],"launcher":[274,416,70,70]}
+PASS 360px: floating chat launcher is lifted above banner (no overlap, in viewport) {"layout":"floating","overlap":false,"inViewport":true,"banner":[0,518,360,282],"launcher":[274,416,70,70]}
+FAIL 360px: banner causes no layout shift (CLS < 0.01) 0.012335069444444444
+PASS 390px: no horizontal overflow with banner {"overflow":0,"overlap":false,"cls":0,"banner":[0,537,390,263],"launcher":[304,435,70,70]}
+PASS 390px: floating chat launcher is lifted above banner (no overlap, in viewport) {"layout":"floating","overlap":false,"inViewport":true,"banner":[0,537,390,263],"launcher":[304,435,70,70]}
+PASS 390px: banner causes no layout shift (CLS < 0.01) 0
+PASS 768px: no horizontal overflow with banner {"overflow":0,"overlap":false,"cls":0,"banner":[336,562,416,222],"launcher":[668,470,76,76]}
+PASS 768px: floating chat launcher is lifted above banner (no overlap, in viewport) {"layout":"floating","overlap":false,"inViewport":true,"banner":[336,562,416,222],"launcher":[668,470,76,76]}
+PASS 768px: banner causes no layout shift (CLS < 0.01) 0
+PASS 1440px: no horizontal overflow with banner {"overflow":0,"overlap":false,"cls":0,"banner":[1008,662,416,222],"launcher":[1340,570,76,76]}
+PASS 1440px: floating chat launcher is lifted above banner (no overlap, in viewport) {"layout":"floating","overlap":false,"inViewport":true,"banner":[1008,662,416,222],"launcher":[1340,570,76,76]}
+PASS 1440px: banner causes no layout shift (CLS < 0.01) 0
+failed: 1 of 52
