@@ -1,7 +1,6 @@
 import { getTranslations } from "next-intl/server"
 import { Hero } from "@/components/caros/home/hero"
 import { UnifiedSystem } from "@/components/caros/home/unified-system"
-import { ProductShowcase } from "@/components/caros/home/product-showcase"
 import { DisconnectedCost } from "@/components/caros/home/disconnected-cost"
 import { StackCalculator } from "@/components/caros/home/stack-calculator"
 import { ChallengePairs } from "@/components/caros/home/challenge-pairs"
@@ -22,7 +21,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       {/* 1 Cost of scaling + unified RevOS */}
       <Hero />
       {/* 2 One dashboard, nine capabilities */}
-      <UnifiedSystem showcase={<ProductShowcase />} />
+      <UnifiedSystem showcase={null} />
       {/* 3 Cost of disconnected software */}
       <DisconnectedCost />
       {/* 4 Tech stack cost calculator */}
