@@ -28,12 +28,12 @@ const jetbrainsMono = JetBrains_Mono({
 const SITE_URL = "https://getcaros.com"
 
 const SITE_DESCRIPTION =
-  "CAROS is the Customer Acquisition & Revenue Operating System for relationship-driven businesses and organizations."
+  "CAROS is the unified Revenue Operating System for relationship-driven businesses and organizations: one dashboard for everything that drives revenue."
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "CAROS — Revenue First. Everything Else Serves It.",
+    default: "CAROS — One Dashboard. One Unified Revenue Operating System.",
     template: "%s | CAROS",
   },
   description: SITE_DESCRIPTION,
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "CAROS",
     url: SITE_URL,
-    title: "CAROS — Revenue First. Everything Else Serves It.",
+    title: "CAROS — One Dashboard. One Unified Revenue Operating System.",
     description: SITE_DESCRIPTION,
     locale: "en_US",
     images: [
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CAROS — Revenue First. Everything Else Serves It.",
+    title: "CAROS — One Dashboard. One Unified Revenue Operating System.",
     description: SITE_DESCRIPTION,
     images: ["/caros-logo.png"],
   },
@@ -112,7 +112,7 @@ const structuredData = {
       logo: `${SITE_URL}/caros-logo.png`,
       description: SITE_DESCRIPTION,
       email: "inquiries@getcarosai.com",
-      slogan: "Revenue First. Everything Else Serves It.",
+      slogan: "One Dashboard. One Unified System. Everything That Drives Revenue.",
     },
     {
       "@type": "WebSite",
@@ -171,7 +171,7 @@ export default async function RootLayout({
     "@graph": structuredData["@graph"].map(node => ({
       ...node,
       description: t("description"),
-      ...(node["@type"] === "Organization" ? { slogan: "Primero los ingresos. Todo lo demás está a su servicio." } : {}),
+      ...(node["@type"] === "Organization" ? { slogan: "Un panel. Un sistema unificado. Todo lo que impulsa los ingresos." } : {}),
       ...(node["@type"] === "WebSite" ? { inLanguage: "es" } : {}),
       ...(node["@type"] === "SoftwareApplication" ? {
         applicationSubCategory: "Sistema operativo de captación de clientes e ingresos",
@@ -191,34 +191,16 @@ export default async function RootLayout({
       <body
         className={`${archivo.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-TMDX7LW7"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-            title="Google Tag Manager"
-          />
-        </noscript>
-        {/* End Google Tag Manager (noscript) */}
-        <Script id="caros-affiliate-manager" strategy="beforeInteractive">
-          {`(function() {
-  var t = document.createElement("script");
-  t.type = "text/javascript";
-  t.async = true;
-  t.src = "https://links.getcaros.com/js/am.js";
-  t.onload = t.onreadystatechange = function() {
-    var state = this.readyState;
-    if (!state || state === "complete" || state === "loaded") {
-      try {
-        affiliateManager.init("ZdY2U5V9iKnh7Y7IUj1e", "https://backend.leadconnectorhq.com", ".getcaros.com");
-      } catch (_) {}
-    }
-  };
-  var first = document.getElementsByTagName("script")[0];
-  first.parentNode.insertBefore(t, first);
-})();`}
+        {/*
+          Consent Mode v2: defaults are denied and must be set before GTM / gtag load. A stored choice (first-party
+          cookie caros_consent, version 1) is replayed as an update immediately. The GTM <noscript> iframe and the
+          Meta Pixel <noscript> image were removed because they cannot honor consent. The Meta Pixel is loaded
+          lazily by lib/consent-client.ts only after marketing consent.
+        */}
+        <Script id="caros-consent-default" strategy="beforeInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});
+try{var m=document.cookie.match(/(?:^|; )caros_consent=([^;]*)/);if(m){var c=JSON.parse(decodeURIComponent(m[1]));if(c&&c.v===1&&typeof c.analytics==='boolean'&&typeof c.marketing==='boolean'){var a=c.analytics?'granted':'denied',d=c.marketing?'granted':'denied';gtag('consent','update',{ad_storage:d,ad_user_data:d,ad_personalization:d,analytics_storage:a});}}}catch(e){}`}
         </Script>
         <Script
           id="google-tag-manager"
@@ -248,29 +230,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             gtag('config', 'G-MT8HLMZL04');
           `}
         </Script>
-        {/* Meta Pixel */}
-        <Script id="meta-pixel" strategy="afterInteractive">
-          {`!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1646397766883866');
-fbq('track', 'PageView');`}
-        </Script>
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=1646397766883866&ev=PageView&noscript=1"
-            alt=""
-          />
-        </noscript>
-        {/* End Meta Pixel */}
         {children}
         <Analytics />
         {/* UTM Forwarder Script */}

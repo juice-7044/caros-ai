@@ -1,6 +1,6 @@
 {
   "Metadata": {
-    "description": "CAROS is the Customer Acquisition & Revenue Operating System for relationship-driven businesses and organizations."
+    "description": "CAROS is the unified Revenue Operating System for relationship-driven businesses and organizations: one dashboard for everything that drives revenue."
   },
   "PricingPositioning": {
     "title": "Revenue operations built around how you work",
@@ -29,7 +29,28 @@
     "whyCaros": "Why CAROS",
     "affiliates": "Affiliates"
   },
+  "Consent": {
+    "title": "Your privacy choices",
+    "body": "We use essential cookies to run this site. With your permission we also use analytics and marketing cookies to understand how the site is used and to measure our ads. You can change your choice at any time.",
+    "acceptAll": "Accept all",
+    "reject": "Reject non-essential",
+    "customize": "Customize",
+    "customTitle": "Cookie preferences",
+    "essential": "Essential",
+    "essentialDesc": "Needed for the site to work, including language and security. Always on.",
+    "analytics": "Analytics",
+    "analyticsDesc": "Helps us understand how visitors use the site.",
+    "marketing": "Marketing",
+    "marketingDesc": "Lets us measure and improve our advertising (for example Meta).",
+    "save": "Save choices",
+    "on": "On",
+    "off": "Off",
+    "gpc": "Your browser sends a Global Privacy Control signal, so marketing cookies stay off.",
+    "privacyLink": "Cookie details in our Privacy Policy",
+    "close": "Close"
+  },
   "footer": {
+    "cookieSettings": "Cookie settings",
     "product": "Product",
     "company": "Company",
     "resources": "FREE Resources",
@@ -50,7 +71,7 @@
     "marketingRoi": "Marketing ROI",
     "privacy": "Privacy",
     "terms": "Terms",
-    "tagline": "Revenue infrastructure for the next stage of growth.",
+    "tagline": "CAROS. We do the most, so you can do more with less.",
     "headquarters": "Headquarters",
     "rights": "All rights reserved.",
     "contact": "Contact",
@@ -60,6 +81,173 @@
   },
   "language": {
     "label": "Language"
+  },
+  "Home": {
+    "hero": {
+      "eyebrow": "Grow your business. Not your overhead.",
+      "title": "What would it cost you to hire 5 more employees?",
+      "subtitle": "What about 10?",
+      "transition": "Now imagine scaling without hiring for every new task.",
+      "value": "CAROS is one unified Revenue Operating System with one cohesive dashboard, for everything that drives revenue in your business.",
+      "systemChip": "One unified Revenue Operating System · One dashboard",
+      "primaryCta": "See CAROS in Action",
+      "secondaryCta": "Explore What CAROS Can Do",
+      "demoNote": "Opens the live demo in a new tab."
+    },
+    "hiring": {
+      "title": "Illustrative annual hiring cost",
+      "employees": "Employees",
+      "salary": "Average salary (per employee)",
+      "perYear": "per year",
+      "presets": "Quick examples",
+      "preset": "{count} employees",
+      "exclusions": "Illustrative only. Excludes benefits, payroll taxes, recruiting, onboarding, and other employment expenses."
+    },
+    "unified": {
+      "eyebrow": "The CAROS dashboard",
+      "title": "One dashboard. One unified system. Your entire revenue operation.",
+      "body": "Stop jumping between disconnected platforms. CAROS brings the functions that drive revenue into one connected operating system.",
+      "details": "Details",
+      "expanding": "Expanding",
+      "capabilities": [
+        { "id": "marketing", "title": "Marketing & Social Media", "summary": "Campaigns, audience engagement and marketing coordination.", "detail": "Draft, approve and schedule posts to connected social accounts and coordinate campaigns from the same workspace. Posting runs through the accounts you connect.", "status": "live" },
+        { "id": "sales", "title": "Sales", "summary": "Leads, pipelines, opportunities and conversion workflows.", "detail": "Track contacts and opportunities by pipeline stage, see open pipeline value, and flag leads that are waiting too long for a response.", "status": "live" },
+        { "id": "outreach", "title": "Customer Outreach & Communication", "summary": "Phone, email, SMS and other supported channels.", "detail": "Calls, texts and email conversations in one inbox, with website chat and voice. Channels depend on what you connect.", "status": "live" },
+        { "id": "reactivation", "title": "Customer Reactivation", "summary": "Reengagement campaigns, personalized follow-up and repeat business.", "detail": "Run reengagement email and SMS campaigns, send personalized follow-up, and surface repeat-business opportunities from past customers and lost or dormant opportunities.", "status": "live" },
+        { "id": "workflows", "title": "Workflows & Automation", "summary": "Connected processes, automated tasks and coordination.", "detail": "Use the workflow builder to create dynamic operational workflows: automated tasks, scheduling, coordination and operational execution.", "status": "live" },
+        { "id": "service", "title": "Customer Service & Success", "summary": "Support, relationship management, service coordination and retention.", "detail": "Ticketing and customer support, with one record per customer holding conversations, call notes and follow-ups, so service and retention stay coordinated.", "status": "live" },
+        { "id": "reputation", "title": "Reputation Management", "summary": "Review monitoring, responses and reputation workflows.", "detail": "Google, Yelp, Facebook and website reviews, with supported monitoring, response and reputation workflows.", "status": "live" },
+        { "id": "community", "title": "Community Building", "summary": "Relationships, engagement and loyalty.", "detail": "Member communities with discussions, courses, webinars and paid memberships.", "status": "live" },
+        { "id": "more", "title": "And More", "summary": "Additional capabilities across the CAROS ecosystem.", "detail": "AI receptionist, reporting and daily briefs, invoicing and e-signature, plus integrations with tools you already use.", "status": "live" }
+      ]
+    },
+    "showcase": {
+      "alt": "CAROS Command Center demo workspace: a top navigation for Customers, Sales, Inbox, Marketing, Operations, Automations and Reports, a New deals chart with a simulated win rate, pipeline, opportunities, appointments and won revenue cards, and an Ask CAROS panel. All values are simulated demo data.",
+      "caption": "CAROS Command Center · demo workspace with simulated data",
+      "hotspotsLabel": "Explore the Command Center",
+      "hotspotsHint": "Select a marker to see what that area shows.",
+      "hotspots": {
+        "nav": {
+          "label": "Connected workspace navigation",
+          "text": "Customers, Sales, Inbox, Marketing, Operations, Automations and Reports sit in one navigation: one connected workspace instead of separate tools."
+        },
+        "deals": {
+          "label": "New deals chart",
+          "text": "New deals for the last 7 days, charted in the Command Center so sales activity is visible at a glance."
+        },
+        "winrate": {
+          "label": "Win rate",
+          "text": "A win-rate gauge alongside new customers and won revenue, on the same screen as the rest of your operation."
+        },
+        "pipeline": {
+          "label": "Pipeline and opportunities",
+          "text": "Open pipeline value and open opportunities, shown as live summary cards that link into Sales."
+        },
+        "appointments": {
+          "label": "Appointments",
+          "text": "Appointment totals, with a calendar one click away."
+        },
+        "ask": {
+          "label": "Ask CAROS",
+          "text": "Ask CAROS questions about your business in plain language, for example which estimates need follow-up."
+        }
+      }
+    },
+    "disconnected": {
+      "eyebrow": "The cost of disconnected software",
+      "title": "How much is your disconnected tech stack really costing you?",
+      "body": "An AI receptionist. A phone system. Email, SMS, CRM, scheduling, social, reviews. How many subscriptions, logins and learning curves is that, and how much gets lost between them?",
+      "leftTitle": "The disconnected business",
+      "rightTitle": "One dashboard. One login experience. One connected Revenue Operating System.",
+      "tiles": ["AI receptionist", "Business phone", "CRM & pipeline", "Email marketing", "SMS campaigns", "Social media", "Scheduling", "Customer service", "Review management", "Workflow automation"],
+      "problems": ["Multiple subscriptions", "Multiple logins", "Multiple dashboards", "Multiple learning curves", "Disconnected customer information", "Overlapping functionality", "More integration and maintenance", "Lost time"],
+      "benefits": ["Centralized visibility", "Connected customer information", "Unified workflows", "Coordinated communications", "Less tool switching", "Reduced duplication", "Simpler team workflows", "More consistent customer experiences"],
+      "diagramLabelLeft": "Diagram: separate tools, fragmented connections",
+      "diagramLabelRight": "Diagram: the same functions flowing into one CAROS dashboard",
+      "hub": "CAROS",
+      "caveat": "CAROS does not replace every specialized platform. Where integrations are still needed, CAROS helps coordinate them in one experience.",
+      "cta": "See What You Can Consolidate With CAROS"
+    },
+    "stack": {
+      "eyebrow": "Tech stack cost calculator",
+      "title": "What is your software stack costing you in subscriptions and time?",
+      "subscriptions": "Software subscriptions",
+      "avgMonthly": "Average monthly cost per subscription",
+      "platforms": "Separate platforms / logins",
+      "platformsHint": "For context only. Not used in the math.",
+      "employees": "Employees using these systems",
+      "hours": "Hours per week each employee spends switching between systems",
+      "hourly": "Average hourly labor cost",
+      "resultTitle": "Your tech stack may be costing more than your subscriptions.",
+      "annualSoftware": "Annual software spend",
+      "annualSoftwareNote": "Subscriptions × monthly cost × 12",
+      "annualTime": "Estimated annual time cost",
+      "annualTimeNote": "Employees × weekly hours each × 52 × hourly cost. An estimate, not audited savings.",
+      "combined": "Estimated combined annual cost",
+      "breakdown": "Breakdown",
+      "software": "Software",
+      "time": "Time (estimate)",
+      "supporting": "Explore how consolidating workflows and connecting your operations through CAROS could reduce complexity and help your team work more efficiently.",
+      "disclaimer": "Not a savings or ROI figure. CAROS may integrate with, or depend on, some third-party services, so not all of this spend is addressable.",
+      "cta": "Explore Your CAROS Opportunity"
+    },
+    "challenges": {
+      "eyebrow": "Challenge to capability",
+      "title": "Every problem, paired with what CAROS does about it.",
+      "items": [
+        { "problem": "Too many tools?", "solution": "Bring your revenue operations into one connected environment." },
+        { "problem": "Too much administrative work?", "solution": "Automate repetitive tasks and coordinate operational workflows." },
+        { "problem": "Too many missed opportunities?", "solution": "Capture inquiries and support timely, consistent follow-up." },
+        { "problem": "Customers falling through the cracks?", "solution": "Connect communications and customer information across supported channels." },
+        { "problem": "Difficulty growing without hiring?", "solution": "Help your existing team manage more activity through better coordination and automation." },
+        { "problem": "Struggling to reactivate past customers?", "solution": "Create intelligent, personalized reengagement workflows." },
+        { "problem": "Inconsistent customer experiences?", "solution": "Coordinate service, communication, follow-up and customer success." },
+        { "problem": "No clear picture of business performance?", "solution": "Bring operational and revenue information together for better decisions." }
+      ]
+    },
+    "lifecycle": {
+      "eyebrow": "How it works together",
+      "title": "Everything is connected. Because your business should be.",
+      "body": "One operating system coordinates marketing, sales, communication, operations, service, reputation and community.",
+      "diagramLabel": "Customer lifecycle: attract, engage, convert, serve, retain, reactivate",
+      "modes": { "ai": "AI-powered", "human": "Human-assisted", "auto": "Automated" },
+      "steps": [
+        { "name": "Attract", "functions": "Marketing & social", "mode": "ai" },
+        { "name": "Engage", "functions": "Communication", "mode": "ai" },
+        { "name": "Convert", "functions": "Sales", "mode": "human" },
+        { "name": "Serve", "functions": "Operations & service", "mode": "auto" },
+        { "name": "Retain", "functions": "Reputation & community", "mode": "human" },
+        { "name": "Reactivate", "functions": "Win-back follow-up", "mode": "human" }
+      ],
+      "footnote": "A comprehensive operating system, not a collection of disconnected AI tools."
+    },
+    "experience": {
+      "eyebrow": "Product experience",
+      "title": "Experience CAROS, don't just read about it.",
+      "body": "Explore the live demo, or talk to CAROS by chat or voice.",
+      "demoTitle": "Live demo",
+      "demoBody": "Click through a demo workspace with sample data.",
+      "demoCta": "See CAROS in Action",
+      "integrationsTitle": "Works with your existing tools",
+      "integrationsBody": "Phone, email, SMS, calendars, payments and other supported integrations. Availability depends on your setup.",
+      "industriesCta": "Browse industries"
+    },
+    "opportunity": {
+      "eyebrow": "Revenue opportunity",
+      "title": "Find the revenue hiding in your follow-up.",
+      "toggle": "Revenue opportunity calculator",
+      "toggleHint": "Estimate revenue at risk from missed calls",
+      "auditCta": "Book a Business Review",
+      "moreTools": "More free calculators"
+    },
+    "final": {
+      "title": "One dashboard. One unified system. Everything that drives revenue.",
+      "sub": "See how CAROS can support your business.",
+      "primary": "See CAROS in Action",
+      "secondary": "Book a Business Review",
+      "tagline": "CAROS. We do the most, so you can do more with less.",
+      "privacy": "We do not sell customer or business data or use one customer's proprietary information to train another customer's system."
+    }
   },
   "HomePage": {
     "hero": {
@@ -447,7 +635,7 @@
       "eyebrow": "How It Works",
       "title": "One system, built around",
       "serifTitle": "how you already work.",
-      "subtitle": "CAROS is a revenue operating system we design, build, and run around your business.",
+      "subtitle": "CAROS is one unified Revenue Operating System, with one dashboard, that we design, build, and run around your business.",
       "questions": "The Four Questions",
       "questionsTitle": "Every business owner asks the same four questions.",
       "process": "The Process",
@@ -492,7 +680,7 @@
       "eyebrow": "Compare CAROS",
       "title": "Revenue technology should do more than respond.",
       "titleAccent": "Know what deserves attention next.",
-      "body": "Some platforms focus on answering calls, responding to inquiries, or automating follow-up. CAROS connects those activities to acquisition, operations, and revenue intelligence for relationship-driven businesses and organizations."
+      "body": "Some platforms focus on answering calls, responding to inquiries, or automating follow-up. CAROS is not simply an AI receptionist, CRM, email platform, chatbot or phone system. It is the operating environment that connects them for relationship-driven businesses and organizations."
     },
     "diagnostic": {
       "breakEven": "The Break-Even Math",

@@ -12,6 +12,7 @@ import {
   COMPANY_PHONE_HREF,
 } from "@/lib/site"
 import { Logo } from "./logo"
+import { CookieSettingsButton } from "./cookie-settings-button"
 
 const SOCIAL_LINKS = [
   { Icon: Facebook, href: "https://www.facebook.com/carosaillc", label: "CAROS on Facebook" },
@@ -129,6 +130,7 @@ export function SiteFooter() {
           <div className="flex items-center gap-4">
             <Logo href={null} className="h-9" />
             <p className="text-xs text-muted-foreground">{tr("© 2026 CAROS. All rights reserved.")}</p>
+            <CookieSettingsButton className="text-xs text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground" />
           </div>
           <div className="flex items-center gap-4">
             {SOCIAL_LINKS.map(({ Icon, href, label }) => (

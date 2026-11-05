@@ -226,6 +226,9 @@ export default async function PrivacyPage() {
 
         <LegalSubheading>{tr("9.4 Do Not Track")}</LegalSubheading>
         <LegalP>{tr("We do not currently respond to “Do Not Track” signals from web browsers.")}</LegalP>
+
+        <LegalSubheading>{tr("9.5 Cookie Settings")}</LegalSubheading>
+        <LegalP>{tr("When you first visit the Website, a banner lets you accept all, reject non-essential, or customize cookies. Analytics and marketing cookies and similar technologies (including Google Analytics, Google Tag Manager and the Meta Pixel) stay off until you permit them. Essential cookies, which include your language and security settings and your saved cookie choice, are always on. If your browser sends a Global Privacy Control signal, marketing cookies stay off. Your choice is stored in a first-party cookie for up to 180 days. You can change it at any time using the “Cookie settings” link in the footer of every page.")}</LegalP>
       </LegalSection>
 
       <LegalSection n={10} id="children" title={tr("Children's Privacy")}>

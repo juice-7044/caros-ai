@@ -25,7 +25,7 @@ export async function generateMetadata(
       languages: { en: `/en${rest}`, es: `/es${rest}`, "x-default": `/en${rest}` },
     },
     ...(locale === "es" ? {
-      title: { absolute: "CAROS — Primero los ingresos. Todo lo demás está a su servicio.", template: "%s | CAROS" },
+      title: { absolute: "CAROS — Un panel. Un sistema operativo de ingresos unificado.", template: "%s | CAROS" },
       keywords: ["gestión de relaciones", "operaciones de ingresos", "captación de clientes", "seguimiento de consultas", "automatización de procesos", "atribución de marketing", "gestión de organizaciones", "inteligencia de ingresos"],
     } : {}),
     ...positioningSocialMetadata(description, locale),

@@ -1,0 +1,350 @@
+✔ GHL external website tracking is removed and form APIs are preserved (4.223834ms)
+✖ affiliate tracking is removed from the site (owner decision 2026-11-05) (4.860042ms)
+✖ CSP allows the consent-gated Meta Pixel to load and report (0.985958ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 1
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 103.965292
+
+✖ failing tests:
+
+test at tests/caros-tracking.test.mjs:12:1
+✖ affiliate tracking is removed from the site (owner decision 2026-11-05) (4.860042ms)
+  AssertionError [ERR_ASSERTION]: The input was expected to not match the regular expression /caros-affiliate-manager|affiliateManager|am\.js/. Input:
+  
+  'import type React from "react"\n' +
+    'import type { Metadata } from "next"\n' +
+    'import { Archivo, Instrument_Serif, JetBrains_Mono } from "next/font/google"\n' +
+    'import Script from "next/script"\n' +
+    'import { getLocale, getTranslations } from "next-intl/server"\n' +
+    'import { Analytics } from "@vercel/analytics/next"\n' +
+    'import "./globals.css"\n' +
+    '\n' +
+    'const archivo = Archivo({\n' +
+    '  subsets: ["latin"],\n' +
+    '  variable: "--font-archivo",\n' +
+    '  weight: ["400", "500", "600", "700", "800", "900"],\n' +
+    '})\n' +
+    '\n' +
+    'const instrumentSerif = Instrument_Serif({\n' +
+    '  subsets: ["latin"],\n' +
+    '  weight: "400",\n' +
+    '  style: ["normal", "italic"],\n' +
+    '  variable: "--font-instrument-serif",\n' +
+    '})\n' +
+    '\n' +
+    'const jetbrainsMono = JetBrains_Mono({\n' +
+    '  subsets: ["latin"],\n' +
+    '  variable: "--font-jetbrains-mono",\n' +
+    '  weight: ["400", "500"],\n' +
+    '})\n' +
+    '\n' +
+    'const SITE_URL = "https://getcaros.com"\n' +
+    '\n' +
+    'const SITE_DESCRIPTION =\n' +
+    '  "CAROS is the unified Revenue Operating System for relationship-driven businesses and organizations: one dashboard for everything that drives revenue."\n' +
+    '\n' +
+    'export const metadata: Metadata = {\n' +
+    '  metadataBase: new URL(SITE_URL),\n' +
+    '  title: {\n' +
+    '    default: "CAROS — One Dashboard. One Unified Revenue Operating System.",\n' +
+    '    template: "%s | CAROS",\n' +
+    '  },\n' +
+    '  description: SITE_DESCRIPTION,\n' +
+    '  applicationName: "CAROS",\n' +
+    '  generator: "v0.app",\n' +
+    '  keywords: [\n' +
+    '    "customer relationship management",\n' +
+    '    "lead and inquiry management software",\n' +
+    '    "customer acquisition operating system",\n' +
+    '    "revenue operations for businesses and organizations",\n' +
+    '    "missed call text back",\n' +
+    '    "human answering and inquiry follow-up",\n' +
+    '    "marketing ROI attribution",\n' +
+    '    "lead source attribution",\n' +
+    '    "professional services operations",\n' +
+    '    "nonprofit relationship management",\n' +
+    '    "audience and community engagement",\n' +
+    '    "booked revenue tracking",\n' +
+    '    "relationship-driven business growth",\n' +
+    '    "workflow automation",\n' +
+    '  ],\n' +
+    '  authors: [{ name: "CAROS" }],\n' +
+    '  creator: "CAROS",\n' +
+    '  publisher: "CAROS",\n' +
+    '  category: "business software",\n' +
+    '  verification: {\n' +
+    '    google: "WnrwYXGpNMHxkukHn7M7HmszR0rQmpBr25XJfOATsAc",\n' +
+    '    other: {\n' +
+    '      "trustpilot-one-time-domain-verification-id":\n' +
+    '        "1a3e91f3-74db-43bf-b5f9-af754fc60527",\n' +
+    '    },\n' +
+    '  },\n' +
+    '  openGraph: {\n' +
+    '    type: "website",\n' +
+    '    siteName: "CAROS",\n' +
+    '    url: SITE_URL,\n' +
+    '    title: "CAROS — One Dashboard. One Unified Revenue Operating System.",\n' +
+    '    description: SITE_DESCRIPTION,\n' +
+    '    locale: "en_US",\n' +
+    '    images: [\n' +
+    '      {\n' +
+    '        url: "/caros-logo.png",\n' +
+    '        width: 1200,\n' +
+    '        height: 800,\n' +
+    '        alt: "CAROS — Customer Acquisition & Revenue Operating System",\n' +
+    '      },\n' +
+    '    ],\n' +
+    '  },\n' +
+    '  twitter: {\n' +
+    '    card: "summary_large_image",\n' +
+    '    title: "CAROS — One Dashboard. One Unified Revenue Operating System.",\n' +
+    '    description: SITE_DESCRIPTION,\n' +
+    '    images: ["/caros-logo.png"],\n' +
+    '  },\n' +
+    '  robots: {\n' +
+    '    index: true,\n' +
+    '    follow: true,\n' +
+    '    googleBot: {\n' +
+    '      index: true,\n' +
+    '      follow: true,\n' +
+    '      "max-image-preview": "large",\n' +
+    '      "max-snippet": -1,\n' +
+    '      "max-video-preview": -1,\n' +
+    '    },\n' +
+    '  },\n' +
+    '}\n' +
+    '\n' +
+    'const structuredData = {\n' +
+    '  "@context": "https://schema.org",\n' +
+    '  "@graph": [\n' +
+    '    {\n' +
+    '      "@type": "Organization",\n' +
+    '      "@id": `${SITE_URL}/#organization`,\n' +
+    '      name: "CAROS",\n' +
+    '      url: SITE_URL,\n' +
+    '      logo: `${SITE_URL}/caros-logo.png`,\n' +
+    '      description: SITE_DESCRIPTION,\n' +
+    '      email: "inquiries@getcarosai.com",\n' +
+    '      slogan: "One Dashboard. One Unified System. Everything That Drives Revenue.",\n' +
+    '    },\n' +
+    '    {\n' +
+    '      "@type": "WebSite",\n' +
+    '      "@id": `${SITE_URL}/#website`,\n' +
+    '      url: SITE_URL,\n' +
+    '      name: "CAROS",\n' +
+    '      description: SITE_DESCRIPTION,\n' +
+    '      publisher: { "@id": `${SITE_URL}/#organization` },\n' +
+    '      inLanguage: "en-US",\n' +
+    '    },\n' +
+    '    {\n' +
+    '      "@type": "SoftwareApplication",\n' +
+    '      name: "CAROS",\n' +
+    '      applicationCategory: "BusinessApplication",\n' +
+    '      applicationSubCategory: "Customer Acquisition & Revenue Operating System",\n' +
+    '      operatingSystem: "Web",\n' +
+    '      url: SITE_URL,\n' +
+    '      description: SITE_DESCRIPTION,\n' +
+    '      publisher: { "@id": `${SITE_URL}/#organization` },\n' +
+    '      audience: {\n' +
+    '        "@type": "BusinessAudience",\n' +
+    '        audienceType:\n' +
+    '          "Relationship-driven businesses and organizations, including professional practices, healthcare, automotive, creators, nonprofits, religious institutions, and home services",\n' +
+    '      },\n' +
+    '      featureList: [\n' +
+    '        "Customer Acquisition — lead capture from ads, forms, chat, SMS, and missed-call text back",\n' +
+    '        "Revenue Operations — CRM, human answering, booking, proposal follow-up, and invoicing",\n' +
+    '        "Customer Success — reviews, referrals, repeat-service reminders, and reactivation",\n' +
+    '        "Business Intelligence — lead-source attribution, booked-revenue reporting, and marketing ROI",\n' +
+    '        "Platform & Integrations — phone, email, SMS, calendars, payments, and connected operational tools",\n' +
+    '      ],\n' +
+    '      offers: {\n' +
+    '        "@type": "Offer",\n' +
+    '        price: "997",\n' +
+    '        priceCurrency: "USD",\n' +
+    '        priceSpecification: {\n' +
+    '          "@type": "UnitPriceSpecification",\n' +
+    '          price: "997",\n' +
+    '          priceCurrency: "USD",\n' +
+    '          unitText: "MONTH",\n' +
+    '        },\n' +
+    '      },\n' +
+    '    },\n' +
+    '  ],\n' +
+    '}\n' +
+    '\n' +
+    'export default async function RootLayout({\n' +
+    '  children,\n' +
+    '}: Readonly<{\n' +
+    '  children: React.ReactNode\n' +
+    '}>) {\n' +
+    '  const locale = await getLocale()\n' +
+    '  const t = await getTranslations({ locale, namespace: "Metadata" })\n' +
+    '  const localizedStructuredData = locale === "es" ? {\n' +
+    '    ...structuredData,\n' +
+    '    "@graph": structuredData["@graph"].map(node => ({\n' +
+    '      ...node,\n' +
+    '      description: t("description"),\n' +
+    '      ...(node["@type"] === "Organization" ? { slogan: "Un panel. Un sistema unificado. Todo lo que impulsa los ingresos." } : {}),\n' +
+    '      ...(node["@type"] === "WebSite" ? { inLanguage: "es" } : {}),\n' +
+    '      ...(node["@type"] === "SoftwareApplication" ? {\n' +
+    '        applicationSubCategory: "Sistema operativo de captación de clientes e ingresos",\n' +
+    '        audience: { "@type": "BusinessAudience", audienceType: "Empresas y organizaciones que crecen a través de las relaciones: servicios profesionales, salud, automoción, creadores, entidades sin fines de lucro, instituciones religiosas y servicios para el hogar" },\n' +
+    '        featureList: [\n' +
+    '          "Captación de clientes: anuncios, formularios, chat, SMS y respuesta a llamadas perdidas",\n' +
+    '          "Operaciones de ingresos: CRM, atención humana, reservas, seguimiento de propuestas y facturación",\n' +
+    '          "Éxito del cliente: reseñas, recomendaciones, recordatorios y reactivación",\n' +
+    '          "Inteligencia empresarial: atribución, informes de ingresos y retorno del marketing",\n' +
+    '          "Plataforma e integraciones: teléfono, correo, SMS, calendarios, pagos y herramientas operativas",\n' +
+    '        ],\n' +
+    '      } : {}),\n' +
+    '    })),\n' +
+    '  } : structuredData\n' +
+    '  return (\n' +
+    '    <html lang={locale} className="bg-background">\n' +
+    '      <body\n' +
+    '        className={`${archivo.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} font-sans antialiased`}\n' +
+    '      >\n' +
+    '        {/*\n' +
+    '          Consent Mode v2: defaults are denied and must be set before GTM / gtag load. A stored choice (first-party\n' +
+    '          cookie caros_consent, version 1) is replayed as an update immediately. The GTM <noscript> iframe and the\n' +
+    '          Meta Pixel <noscript> image were removed because they cannot honor consent. The Meta Pixel is loaded\n' +
+    '          lazily by lib/consent-client.ts only after marketing consent.\n' +
+    '        */}\n' +
+    '        <Script id="caros-consent-default" strategy="beforeInteractive">\n' +
+    '          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}\n' +
+    "gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});\n" +
+    "try{var m=document.cookie.match(/(?:^|; )caros_consent=([^;]*)/);if(m){var c=JSON.parse(decodeURIComponent(m[1]));if(c&&c.v===1&&typeof c.analytics==='boolean'&&typeof c.marketing==='boolean'){var a=c.analytics?'granted':'denied',d=c.marketing?'granted':'denied';gtag('consent','update',{ad_storage:d,ad_user_data:d,ad_personalization:d,analytics_storage:a});}}}catch(e){}`}\n" +
+    '        </Script>\n' +
+    '        <Script id="caros-affiliate-manager" strategy="beforeInteractive">\n' +
+    '          {`(function() {\n' +
+    '  var t = document.createElement("script");\n' +
+    '  t.type = "text/javascript";\n' +
+    '  t.async = true;\n' +
+    '  t.src = "https://links.getcaros.com/js/am.js";\n' +
+    '  t.onload = t.onreadystatechange = function() {\n' +
+    '    var state = this.readyState;\n' +
+    '    if (!state || state === "complete" || state === "loaded") {\n' +
+    '      try {\n' +
+    '        affiliateManager.init("ZdY2U5V9iKnh7Y7IUj1e", "https://backend.leadconnectorhq.com", ".getcaros.com");\n' +
+    '      } catch (_) {}\n' +
+    '    }\n' +
+    '  };\n' +
+    '  var first = document.getElementsByTagName("script")[0];\n' +
+    '  first.parentNode.insertBefore(t, first);\n' +
+    '})();`}\n' +
+    '        </Script>\n' +
+    '        <Script\n' +
+    '          id="google-tag-manager"\n' +
+    '          strategy="beforeInteractive"\n' +
+    '        >\n' +
+    "          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n" +
+    "new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n" +
+    "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n" +
+    "'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n" +
+    "})(window,document,'script','dataLayer','GTM-TMDX7LW7');`}\n" +
+    '        </Script>\n' +
+    '        <Script\n' +
+    '          src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"\n' +
+    '          strategy="afterInteractive"\n' +
+    '        />\n' +
+    '        <script\n' +
+    '          type="application/ld+json"\n' +
+    '          dangerouslySetInnerHTML={{ __html: JSON.stringify(localizedStructuredData) }}\n' +
+    '        />\n' +
+    '        {/* Google tag (gtag.js) */}\n' +
+    '        <Script src="https://www.googletagmanager.com/gtag/js?id=G-MT8HLMZL04" strategy="afterInteractive" />\n' +
+    '        <Script id="google-analytics" strategy="afterInteractive">\n' +
+    '          {`\n' +
+    '            window.dataLayer = window.dataLayer || [];\n' +
+    '            function gtag(){dataLayer.push(arguments);}\n' +
+    "            gtag('js', new Date());\n" +
+    "            gtag('config', 'G-MT8HLMZL04');\n" +
+    '          `}\n' +
+    '        </Script>\n' +
+    '        {children}\n' +
+    '        <Analytics />\n' +
+    '        {/* UTM Forwarder Script */}\n' +
+    '        <Script id="utm-forwarder" strategy="af'... 798 more characters
+  
+      at TestContext.<anonymous> (file:///Users/anns-macbook/Projects/caros-ai/tests/caros-tracking.test.mjs:13:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'import type React from "react"\nimport type { Metadata } from "next"\nimport { Archivo, Instrument_Serif, JetBrains_Mono } from "next/font/google"\nimport Script from "next/script"\nimport { getLocale, getTranslations } from "next-intl/server"\nimport { Analytics } from "@vercel/analytics/next"\nimport "./globals.css"\n\nconst archivo = Archivo({\n  subsets: ["latin"],\n  variable: "--font-archivo",\n  weight: ["400", "500", "600", "700", "800", "900"],\n})\n\nconst instrumentSerif = Instrument_Serif({\n  subsets: ["latin"],\n  weight: "400",\n  style: ["normal", "italic"],\n  variable: "--font-instrument-serif",\n})\n\nconst jetbrainsMono = JetBrains_Mono({\n  subsets: ["latin"],\n  variable: "--font-jetbrains-mono",\n  weight: ["400", "500"],\n})\n\nconst SITE_URL = "https://getcaros.com"\n\nconst SITE_DESCRIPTION =\n  "CAROS is the unified Revenue Operating System for relationship-driven businesses and organizations: one dashboard for everything that drives revenue."\n\nexport const metadata: Metadata = {\n  metadataBase: new URL(SITE_URL),\n  title: {\n    default: "CAROS — One Dashboard. One Unified Revenue Operating System.",\n    template: "%s | CAROS",\n  },\n  description: SITE_DESCRIPTION,\n  applicationName: "CAROS",\n  generator: "v0.app",\n  keywords: [\n    "customer relationship management",\n    "lead and inquiry management software",\n    "customer acquisition operating system",\n    "revenue operations for businesses and organizations",\n    "missed call text back",\n    "human answering and inquiry follow-up",\n    "marketing ROI attribution",\n    "lead source attribution",\n    "professional services operations",\n    "nonprofit relationship management",\n    "audience and community engagement",\n    "booked revenue tracking",\n    "relationship-driven business growth",\n    "workflow automation",\n  ],\n  authors: [{ name: "CAROS" }],\n  creator: "CAROS",\n  publisher: "CAROS",\n  category: "business software",\n  verification: {\n    google: "WnrwYXGpNMHxkukHn7M7HmszR0rQmpBr25XJfOATsAc",\n    other: {\n      "trustpilot-one-time-domain-verification-id":\n        "1a3e91f3-74db-43bf-b5f9-af754fc60527",\n    },\n  },\n  openGraph: {\n    type: "website",\n    siteName: "CAROS",\n    url: SITE_URL,\n    title: "CAROS — One Dashboard. One Unified Revenue Operating System.",\n    description: SITE_DESCRIPTION,\n    locale: "en_US",\n    images: [\n      {\n        url: "/caros-logo.png",\n        width: 1200,\n        height: 800,\n        alt: "CAROS — Customer Acquisition & Revenue Operating System",\n      },\n    ],\n  },\n  twitter: {\n    card: "summary_large_image",\n    title: "CAROS — One Dashboard. One Unified Revenue Operating System.",\n    description: SITE_DESCRIPTION,\n    images: ["/caros-logo.png"],\n  },\n  robots: {\n    index: true,\n    follow: true,\n    googleBot: {\n      index: true,\n      follow: true,\n      "max-image-preview": "large",\n      "max-snippet": -1,\n      "max-video-preview": -1,\n    },\n  },\n}\n\nconst structuredData = {\n  "@context": "https://schema.org",\n  "@graph": [\n    {\n      "@type": "Organization",\n      "@id": `${SITE_URL}/#organization`,\n      name: "CAROS",\n      url: SITE_URL,\n      logo: `${SITE_URL}/caros-logo.png`,\n      description: SITE_DESCRIPTION,\n      email: "inquiries@getcarosai.com",\n      slogan: "One Dashboard. One Unified System. Everything That Drives Revenue.",\n    },\n    {\n      "@type": "WebSite",\n      "@id": `${SITE_URL}/#website`,\n      url: SITE_URL,\n      name: "CAROS",\n      description: SITE_DESCRIPTION,\n      publisher: { "@id": `${SITE_URL}/#organization` },\n      inLanguage: "en-US",\n    },\n    {\n      "@type": "SoftwareApplication",\n      name: "CAROS",\n      applicationCategory: "BusinessApplication",\n      applicationSubCategory: "Customer Acquisition & Revenue Operating System",\n      operatingSystem: "Web",\n      url: SITE_URL,\n      description: SITE_DESCRIPTION,\n      publisher: { "@id": `${SITE_URL}/#organization` },\n      audience: {\n        "@type": "BusinessAudience",\n        audienceType:\n          "Relationship-driven businesses and organizations, including professional practices, healthcare, automotive, creators, nonprofits, religious institutions, and home services",\n      },\n      featureList: [\n        "Customer Acquisition — lead capture from ads, forms, chat, SMS, and missed-call text back",\n        "Revenue Operations — CRM, human answering, booking, proposal follow-up, and invoicing",\n        "Customer Success — reviews, referrals, repeat-service reminders, and reactivation",\n        "Business Intelligence — lead-source attribution, booked-revenue reporting, and marketing ROI",\n        "Platform & Integrations — phone, email, SMS, calendars, payments, and connected operational tools",\n      ],\n      offers: {\n        "@type": "Offer",\n        price: "997",\n        priceCurrency: "USD",\n        priceSpecification: {\n          "@type": "UnitPriceSpecification",\n          price: "997",\n          priceCurrency: "USD",\n          unitText: "MONTH",\n        },\n      },\n    },\n  ],\n}\n\nexport default async function RootLayout({\n  children,\n}: Readonly<{\n  children: React.ReactNode\n}>) {\n  const locale = await getLocale()\n  const t = await getTranslations({ locale, namespace: "Metadata" })\n  const localizedStructuredData = locale === "es" ? {\n    ...structuredData,\n    "@graph": structuredData["@graph"].map(node => ({\n      ...node,\n      description: t("description"),\n      ...(node["@type"] === "Organization" ? { slogan: "Un panel. Un sistema unificado. Todo lo que impulsa los ingresos." } : {}),\n      ...(node["@type"] === "WebSite" ? { inLanguage: "es" } : {}),\n      ...(node["@type"] === "SoftwareApplication" ? {\n        applicationSubCategory: "Sistema operativo de captación de clientes e ingresos",\n        audience: { "@type": "BusinessAudience", audienceType: "Empresas y organizaciones que crecen a través de las relaciones: servicios profesionales, salud, automoción, creadores, entidades sin fines de lucro, instituciones religiosas y servicios para el hogar" },\n        featureList: [\n          "Captación de clientes: anuncios, formularios, chat, SMS y respuesta a llamadas perdidas",\n          "Operaciones de ingresos: CRM, atención humana, reservas, seguimiento de propuestas y facturación",\n          "Éxito del cliente: reseñas, recomendaciones, recordatorios y reactivación",\n          "Inteligencia empresarial: atribución, informes de ingresos y retorno del marketing",\n          "Plataforma e integraciones: teléfono, correo, SMS, calendarios, pagos y herramientas operativas",\n        ],\n      } : {}),\n    })),\n  } : structuredData\n  return (\n    <html lang={locale} className="bg-background">\n      <body\n        className={`${archivo.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} font-sans antialiased`}\n      >\n        {/*\n          Consent Mode v2: defaults are denied and must be set before GTM / gtag load. A stored choice (first-party\n          cookie caros_consent, version 1) is replayed as an update immediately. The GTM <noscript> iframe and the\n          Meta Pixel <noscript> image were removed because they cannot honor consent. The Meta Pixel is loaded\n          lazily by lib/consent-client.ts only after marketing consent.\n        */}\n        <Script id="caros-consent-default" strategy="beforeInteractive">\n          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}\ngtag(\'consent\',\'default\',{ad_storage:\'denied\',ad_user_data:\'denied\',ad_personalization:\'denied\',analytics_storage:\'denied\',functionality_storage:\'granted\',security_storage:\'granted\',wait_for_update:500});\ntry{var m=document.cookie.match(/(?:^|; )caros_consent=([^;]*)/);if(m){var c=JSON.parse(decodeURIComponent(m[1]));if(c&&c.v===1&&typeof c.analytics===\'boolean\'&&typeof c.marketing===\'boolean\'){var a=c.analytics?\'granted\':\'denied\',d=c.marketing?\'granted\':\'denied\';gtag(\'consent\',\'update\',{ad_storage:d,ad_user_data:d,ad_personalization:d,analytics_storage:a});}}}catch(e){}`}\n        </Script>\n        <Script id="caros-affiliate-manager" strategy="beforeInteractive">\n          {`(function() {\n  var t = document.createElement("script");\n  t.type = "text/javascript";\n  t.async = true;\n  t.src = "https://links.getcaros.com/js/am.js";\n  t.onload = t.onreadystatechange = function() {\n    var state = this.readyState;\n    if (!state || state === "complete" || state === "loaded") {\n      try {\n        affiliateManager.init("ZdY2U5V9iKnh7Y7IUj1e", "https://backend.leadconnectorhq.com", ".getcaros.com");\n      } catch (_) {}\n    }\n  };\n  var first = document.getElementsByTagName("script")[0];\n  first.parentNode.insertBefore(t, first);\n})();`}\n        </Script>\n        <Script\n          id="google-tag-manager"\n          strategy="beforeInteractive"\n        >\n          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({\'gtm.start\':\nnew Date().getTime(),event:\'gtm.js\'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!=\'dataLayer\'?\'&l=\'+l:\'\';j.async=true;j.src=\n\'https://www.googletagmanager.com/gtm.js?id=\'+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,\'script\',\'dataLayer\',\'GTM-TMDX7LW7\');`}\n        </Script>\n        <Script\n          src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"\n          strategy="afterInteractive"\n        />\n        <script\n          type="application/ld+json"\n          dangerouslySetInnerHTML={{ __html: JSON.stringify(localizedStructuredData) }}\n        />\n        {/* Google tag (gtag.js) */}\n        <Script src="https://www.googletagmanager.com/gtag/js?id=G-MT8HLMZL04" strategy="afterInteractive" />\n        <Script id="google-analytics" strategy="afterInteractive">\n          {`\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag(\'js\', new Date());\n            gtag(\'config\', \'G-MT8HLMZL04\');\n          `}\n        </Script>\n        {children}\n        <Analytics />\n        {/* UTM Forwarder Script */}\n        <Script id="utm-forwarder" strategy="af'... 798 more characters,
+    expected: /caros-affiliate-manager|affiliateManager|am\.js/,
+    operator: 'doesNotMatch',
+    diff: 'simple'
+  }
+
+test at tests/caros-tracking.test.mjs:20:1
+✖ CSP allows the consent-gated Meta Pixel to load and report (0.985958ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /script-src[^"]*https:\/\/connect\.facebook\.net/. Input:
+  
+  'import createNextIntlPlugin from "next-intl/plugin"\n' +
+    '\n' +
+    'const withNextIntl = createNextIntlPlugin("./i18n/request.ts")\n' +
+    '\n' +
+    "/** @type {import('next').NextConfig} */\n" +
+    'const securityHeaders = [\n' +
+    '  { key: "Content-Security-Policy", value: [\n' +
+    `    "default-src 'self'",\n` +
+    `    "base-uri 'self'",\n` +
+    `    "object-src 'none'",\n` +
+    `    "frame-ancestors 'self'",\n` +
+    `    "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://links.getcaros.com https://widget.trustpilot.com https://widgets.leadconnectorhq.com https://stcdn.leadconnectorhq.com https://services.leadconnectorhq.com https://dashboard.retellai.com",\n` +
+    `    "style-src 'self' 'unsafe-inline' https://stcdn.leadconnectorhq.com https://fonts.bunny.net https://fonts.googleapis.com",\n` +
+    `    "font-src 'self' https://fonts.gstatic.com https://fonts.bunny.net data:",\n` +
+    `    "img-src 'self' data: blob: https:",\n` +
+    `    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://links.getcaros.com https://backend.leadconnectorhq.com https://widgets.leadconnectorhq.com https://services.leadconnectorhq.com https://services.msgsndr.com https://api.retellai.com wss://api.retellai.com https://*.livekit.cloud wss://*.livekit.cloud",\n` +
+    `    "frame-src 'self' https://www.googletagmanager.com https://widget.trustpilot.com",\n` +
+    `    "media-src 'self' blob:",\n` +
+    `    "form-action 'self'",\n` +
+    '    "upgrade-insecure-requests",\n' +
+    "  ].join('; ') },\n" +
+    '  { key: "X-Content-Type-Options", value: "nosniff" },\n' +
+    '  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },\n' +
+    '  { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains" },\n' +
+    '  { key: "X-Frame-Options", value: "SAMEORIGIN" },\n' +
+    '  { key: "Permissions-Policy", value: "camera=(), microphone=(self), geolocation=()" },\n' +
+    ']\n' +
+    '\n' +
+    'const nextConfig = {\n' +
+    '  async headers() {\n' +
+    '    return [{ source: "/(.*)", headers: securityHeaders }]\n' +
+    '  },\n' +
+    '  typescript: {\n' +
+    '    ignoreBuildErrors: true,\n' +
+    '  },\n' +
+    '  // Optimizer on (AVIF/WebP) for the Command Center screenshot; it is the only next/image user.\n' +
+    '  images: {\n' +
+    '    formats: ["image/avif", "image/webp"],\n' +
+    '    deviceSizes: [360, 480, 640, 768, 1024, 1280, 1600, 1920],\n' +
+    '  },\n' +
+    '}\n' +
+    '\n' +
+    'export default withNextIntl(nextConfig)\n'
+  
+      at TestContext.<anonymous> (file:///Users/anns-macbook/Projects/caros-ai/tests/caros-tracking.test.mjs:22:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: `import createNextIntlPlugin from "next-intl/plugin"\n\nconst withNextIntl = createNextIntlPlugin("./i18n/request.ts")\n\n/** @type {import('next').NextConfig} */\nconst securityHeaders = [\n  { key: "Content-Security-Policy", value: [\n    "default-src 'self'",\n    "base-uri 'self'",\n    "object-src 'none'",\n    "frame-ancestors 'self'",\n    "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://links.getcaros.com https://widget.trustpilot.com https://widgets.leadconnectorhq.com https://stcdn.leadconnectorhq.com https://services.leadconnectorhq.com https://dashboard.retellai.com",\n    "style-src 'self' 'unsafe-inline' https://stcdn.leadconnectorhq.com https://fonts.bunny.net https://fonts.googleapis.com",\n    "font-src 'self' https://fonts.gstatic.com https://fonts.bunny.net data:",\n    "img-src 'self' data: blob: https:",\n    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://links.getcaros.com https://backend.leadconnectorhq.com https://widgets.leadconnectorhq.com https://services.leadconnectorhq.com https://services.msgsndr.com https://api.retellai.com wss://api.retellai.com https://*.livekit.cloud wss://*.livekit.cloud",\n    "frame-src 'self' https://www.googletagmanager.com https://widget.trustpilot.com",\n    "media-src 'self' blob:",\n    "form-action 'self'",\n    "upgrade-insecure-requests",\n  ].join('; ') },\n  { key: "X-Content-Type-Options", value: "nosniff" },\n  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },\n  { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains" },\n  { key: "X-Frame-Options", value: "SAMEORIGIN" },\n  { key: "Permissions-Policy", value: "camera=(), microphone=(self), geolocation=()" },\n]\n\nconst nextConfig = {\n  async headers() {\n    return [{ source: "/(.*)", headers: securityHeaders }]\n  },\n  typescript: {\n    ignoreBuildErrors: true,\n  },\n  // Optimizer on (AVIF/WebP) for the Command Center screenshot; it is the only next/image user.\n  images: {\n    formats: ["image/avif", "image/webp"],\n    deviceSizes: [360, 480, 640, 768, 1024, 1280, 1600, 1920],\n  },\n}\n\nexport default withNextIntl(nextConfig)\n`,
+    expected: /script-src[^"]*https:\/\/connect\.facebook\.net/,
+    operator: 'match',
+    diff: 'simple'
+  }

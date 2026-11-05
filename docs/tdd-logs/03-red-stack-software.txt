@@ -1,0 +1,5 @@
+✖ stack: annual software spend = subscriptions x average monthly cost x 12 (0.120666ms)
+ℹ pass 2
+ℹ fail 1
+✖ failing tests:
+✖ stack: annual software spend = subscriptions x average monthly cost x 12 (0.120666ms)

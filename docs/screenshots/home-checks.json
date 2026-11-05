@@ -1,0 +1,160 @@
+{
+ "widths": [
+  {
+   "locale": "en",
+   "width": 360,
+   "horizontalOverflowPx": 0,
+   "aboveFold": {
+    "hiringHeadline": true,
+    "cta": true
+   }
+  },
+  {
+   "locale": "en",
+   "width": 390,
+   "horizontalOverflowPx": 0,
+   "aboveFold": {
+    "hiringHeadline": true,
+    "cta": true
+   }
+  },
+  {
+   "locale": "en",
+   "width": 768,
+   "horizontalOverflowPx": 0,
+   "aboveFold": {
+    "hiringHeadline": true,
+    "cta": true
+   }
+  },
+  {
+   "locale": "en",
+   "width": 1440,
+   "horizontalOverflowPx": 0,
+   "aboveFold": {
+    "hiringHeadline": true,
+    "cta": true
+   }
+  },
+  {
+   "locale": "es",
+   "width": 360,
+   "horizontalOverflowPx": 0,
+   "aboveFold": {
+    "hiringHeadline": true,
+    "cta": true
+   }
+  },
+  {
+   "locale": "es",
+   "width": 390,
+   "horizontalOverflowPx": 0,
+   "aboveFold": {
+    "hiringHeadline": true,
+    "cta": true
+   }
+  },
+  {
+   "locale": "es",
+   "width": 768,
+   "horizontalOverflowPx": 0,
+   "aboveFold": {
+    "hiringHeadline": true,
+    "cta": true
+   }
+  },
+  {
+   "locale": "es",
+   "width": 1440,
+   "horizontalOverflowPx": 0,
+   "aboveFold": {
+    "hiringHeadline": true,
+    "cta": true
+   }
+  }
+ ],
+ "checks": [
+  {
+   "name": "hiring default 5 x $50,000 = $250,000",
+   "pass": true
+  },
+  {
+   "name": "hiring preset 10 = $500,000",
+   "pass": true
+  },
+  {
+   "name": "hiring 10 x $60,000 = $600,000",
+   "pass": true
+  },
+  {
+   "name": "hiring empty employees = $0 (no NaN)",
+   "pass": true
+  },
+  {
+   "name": "hiring exclusions note visible",
+   "pass": true
+  },
+  {
+   "name": "stack default combined = $25,200",
+   "pass": true
+  },
+  {
+   "name": "platform count does not change total",
+   "pass": true
+  },
+  {
+   "name": "doubling employees doubles time cost once ($31,200)",
+   "pass": true
+  },
+  {
+   "name": "capability expands",
+   "pass": true
+  },
+  {
+   "name": "nine capability cards",
+   "pass": true
+  },
+  {
+   "name": "showcase image loaded (naturalWidth>0)",
+   "pass": true
+  },
+  {
+   "name": "six hotspot buttons with aria-labels",
+   "pass": true
+  },
+  {
+   "name": "hotspot open shows detail and fires showcase_interaction hotspot",
+   "pass": true
+  },
+  {
+   "name": "secondary CTA scrolls to capabilities",
+   "pass": true
+  },
+  {
+   "name": "events fired",
+   "pass": true,
+   "detail": "caros_home_engagement,caros_employee_calc_interaction,caros_stack_calc_interaction,caros_scroll_depth,caros_showcase_interaction,caros_hero_cta_click"
+  },
+  {
+   "name": "no event payload has pii/financial keys",
+   "pass": true
+  },
+  {
+   "name": "scroll depths reached",
+   "pass": true,
+   "detail": "[25,50,75,100]"
+  },
+  {
+   "name": "DNT=1 emits no caros_ events",
+   "pass": true
+  },
+  {
+   "name": "reduced motion disables lifecycle animation",
+   "pass": true
+  },
+  {
+   "name": "normal motion animates lifecycle",
+   "pass": true
+  }
+ ]
+}

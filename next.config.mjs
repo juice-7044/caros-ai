@@ -9,11 +9,11 @@ const securityHeaders = [
     "base-uri 'self'",
     "object-src 'none'",
     "frame-ancestors 'self'",
-    "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://links.getcaros.com https://widget.trustpilot.com https://widgets.leadconnectorhq.com https://stcdn.leadconnectorhq.com https://services.leadconnectorhq.com https://dashboard.retellai.com",
+    "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://links.getcaros.com https://widget.trustpilot.com https://widgets.leadconnectorhq.com https://stcdn.leadconnectorhq.com https://services.leadconnectorhq.com https://dashboard.retellai.com https://connect.facebook.net",
     "style-src 'self' 'unsafe-inline' https://stcdn.leadconnectorhq.com https://fonts.bunny.net https://fonts.googleapis.com",
     "font-src 'self' https://fonts.gstatic.com https://fonts.bunny.net data:",
     "img-src 'self' data: blob: https:",
-    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://links.getcaros.com https://backend.leadconnectorhq.com https://widgets.leadconnectorhq.com https://services.leadconnectorhq.com https://services.msgsndr.com https://api.retellai.com wss://api.retellai.com https://*.livekit.cloud wss://*.livekit.cloud",
+    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://links.getcaros.com https://backend.leadconnectorhq.com https://widgets.leadconnectorhq.com https://services.leadconnectorhq.com https://services.msgsndr.com https://api.retellai.com wss://api.retellai.com https://*.livekit.cloud wss://*.livekit.cloud https://www.facebook.com https://connect.facebook.net",
     "frame-src 'self' https://www.googletagmanager.com https://widget.trustpilot.com",
     "media-src 'self' blob:",
     "form-action 'self'",
@@ -33,8 +33,10 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  // Optimizer on (AVIF/WebP) for the Command Center screenshot; it is the only next/image user.
   images: {
-    unoptimized: true,
+    formats: ["image/avif", "image/webp"],
+    deviceSizes: [360, 480, 640, 768, 1024, 1280, 1600, 1920],
   },
 }
 

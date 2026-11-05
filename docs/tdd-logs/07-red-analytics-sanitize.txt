@@ -1,0 +1,4 @@
+✖ trackEvent drops personal and financial values, keeps only allowlisted primitive metadata (1.10575ms)
+ℹ pass 1
+ℹ fail 1
+✖ failing tests:

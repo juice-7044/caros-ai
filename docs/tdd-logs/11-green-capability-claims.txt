@@ -1,0 +1,13 @@
+✔ home copy has the brief structure in both languages (4.529875ms)
+✔ privacy statement and brand tagline are exact and localized (1.792125ms)
+✔ capability copy carries the capability claims confirmed by the product owner (2026-11-05) (2.59825ms)
+✔ calculator copy states exclusions, estimates and no guaranteed savings (0.27825ms)
+✔ spanish home copy is translated, not an English copy (0.517708ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 70.106917
