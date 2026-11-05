@@ -1,6 +1,7 @@
 // node scripts/verify-consent.mjs <baseUrl>: real-browser consent checks (banner, reject/accept network behaviour, persistence, footer reopen, layout).
 const [base = 'http://localhost:3101'] = process.argv.slice(2)
-const { chromium } = await import(process.env.PLAYWRIGHT_CORE ?? 'playwright-core')
+const pw = await import(process.env.PLAYWRIGHT_CORE ?? 'playwright-core')
+const chromium = pw.chromium ?? pw.default.chromium
 const browser = await chromium.launch(process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {})
 const checks = []
 const chk = (name, pass, detail = '') => { checks.push({ name, pass: !!pass, detail }); console.log(pass ? 'PASS' : 'FAIL', name, detail) }
