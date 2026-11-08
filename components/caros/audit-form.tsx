@@ -8,7 +8,7 @@ import { useRef, useState, type FormEvent } from "react"
 import { track } from "@/lib/analytics-client"
 import Link from "next/link"
 import { ArrowRight, Check, Loader2 } from "lucide-react"
-import { INDUSTRIES, BOOKING_URL } from "@/lib/site"
+import { INDUSTRIES, BOOKING_URL, bookingUrlFor } from "@/lib/site"
 import { sendLead } from "@/lib/caros-leads"
 import { Sunburst } from "./sunburst"
 import { cn } from "@/lib/utils"
@@ -71,8 +71,8 @@ export function AuditForm() {
 
       track("audit_complete", { location: "revenue_audit_form" })
       setSubmitted(true)
-      // Redirect to the booking calendar to schedule the audit
-      window.location.href = BOOKING_URL
+      // On to the CAROS Cal.com to pick a time, name and email already filled in
+      window.location.href = bookingUrlFor({ name: `${get("firstName")} ${get("lastName")}`, email: get("email") })
     } catch {
       setError(tr("Something went wrong. Please try again or call us directly."))
       setSubmitting(false)

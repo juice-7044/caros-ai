@@ -3625,7 +3625,7 @@ const creatorsInfluencers = make(
     ],
     ctaHeadline: "See what your audience is worth — as a business.",
     ctaSub: "A free CAROS Revenue Audit shows where followers, offers, and partnerships are slipping through the cracks — and what it would take to turn attention into owned revenue.",
-    heroCtas: { primaryLabel: "See CAROS in Action", primaryHref: "https://free-revenue-audit.getcarosai.com", secondaryLabel: "Book a Demo", secondaryHref: "https://links.getcaros.com/widget/booking/9gAyyAFYYodUmthJicbD" },
+    heroCtas: { primaryLabel: "See CAROS in Action", primaryHref: "https://free-revenue-audit.getcarosai.com", secondaryLabel: "Book a Demo", secondaryHref: "https://cal.com/caros-xpisne/discovery-call" },
     acquisitionItems: ["Social & video platform capture", "Landing pages & lead magnets", "Podcast & collaboration sources", "Referral & share attribution"],
   },
 )
@@ -3793,7 +3793,7 @@ const nonprofits = make(
     ],
     ctaHeadline: "See what coordinated operations could return to your mission.",
     ctaSub: "Connect with our team to explore the right CAROS configuration for your organization — and a pricing structure built around your operational needs.",
-    heroCtas: { primaryLabel: "Talk to Sales", primaryHref: "/industries/nonprofits#nonprofit-consultation", secondaryLabel: "Request a Demo", secondaryHref: "https://links.getcaros.com/widget/booking/9gAyyAFYYodUmthJicbD" },
+    heroCtas: { primaryLabel: "Talk to Sales", primaryHref: "/industries/nonprofits#nonprofit-consultation", secondaryLabel: "Request a Demo", secondaryHref: "https://cal.com/caros-xpisne/discovery-call" },
     salesLedPricing: true,
     acquisitionItems: ["Website & form capture", "Event & community outreach", "Referral & partner sources", "Social & campaign attribution"],
   },

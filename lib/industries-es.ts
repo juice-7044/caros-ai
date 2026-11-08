@@ -3625,7 +3625,7 @@ const creatorsInfluencers = make(
     ],
     ctaHeadline: "Descubre cuánto vale tu audiencia como negocio.",
     ctaSub: "Una auditoría de ingresos CAROS gratuita muestra dónde se están perdiendo seguidores, ofertas y alianzas, y qué haría falta para convertir la atención en ingresos propios.",
-    heroCtas: { primaryLabel: "Ve CAROS en acción", primaryHref: "https://free-revenue-audit.getcarosai.com", secondaryLabel: "Agenda una demostración", secondaryHref: "https://links.getcaros.com/widget/booking/9gAyyAFYYodUmthJicbD" },
+    heroCtas: { primaryLabel: "Ve CAROS en acción", primaryHref: "https://free-revenue-audit.getcarosai.com", secondaryLabel: "Agenda una demostración", secondaryHref: "https://cal.com/caros-xpisne/discovery-call" },
     acquisitionItems: ["Captación desde redes sociales y plataformas de video", "Páginas de destino y recursos de captación", "Fuentes de pódcast y colaboraciones", "Atribución de recomendaciones y contenido compartido"],
   },
 )
@@ -3793,7 +3793,7 @@ const nonprofits = make(
     ],
     ctaHeadline: "Descubre lo que unas operaciones coordinadas podrían devolverle a tu misión.",
     ctaSub: "Contacta a nuestro equipo para explorar la configuración de CAROS adecuada para tu organización y una estructura de precios basada en tus necesidades operativas.",
-    heroCtas: { primaryLabel: "Habla con ventas", primaryHref: "/industries/nonprofits#nonprofit-consultation", secondaryLabel: "Solicita una demostración", secondaryHref: "https://links.getcaros.com/widget/booking/9gAyyAFYYodUmthJicbD" },
+    heroCtas: { primaryLabel: "Habla con ventas", primaryHref: "/industries/nonprofits#nonprofit-consultation", secondaryLabel: "Solicita una demostración", secondaryHref: "https://cal.com/caros-xpisne/discovery-call" },
     salesLedPricing: true,
     acquisitionItems: ["Captación desde el sitio web y formularios", "Eventos y acercamiento comunitario", "Fuentes de recomendaciones y socios", "Atribución de redes sociales y campañas"],
   },
