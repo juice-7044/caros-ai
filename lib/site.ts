@@ -24,8 +24,25 @@ export const INSIGHTS_LABEL = "Free Business Insights"
 export const AUDIT_URL = "https://free-revenue-audit.getcarosai.com"
 export const AUDIT_URL_LABEL = "Generate My Free Business Audit"
 
-// GoHighLevel booking calendar (post-submission redirect) — Revenue Audits calendar
-export const BOOKING_URL = "https://links.getcaros.com/widget/booking/9gAyyAFYYodUmthJicbD"
+// Revenue Audit Review booking (Ann, 8 Nov 2026: off GHL). The CAROS account's own Cal.com event (30 min, Location
+// "Link meeting"), owned by the Cal.com user connected to CAROS, so every booking lands in the CAROS calendar with its
+// own CAROS room and waiting room.
+export const BOOKING_URL = "https://cal.com/caros-xpisne/revenue-audit"
+// "Book a Demo" / "Talk to sales" buttons: the Discovery Call (45 min, "Get to know CAROS and see if we are a fit").
+export const DISCOVERY_URL = "https://cal.com/caros-xpisne/discovery-call"
+// The client kickoff call after payment (45 min, same Cal.com account).
+export const KICKOFF_URL = "https://cal.com/caros-xpisne/caros-kickoff-call"
+// Live clients' check-ins (15 min, same Cal.com account).
+export const CHECKIN_URL = "https://cal.com/caros-xpisne/client-check-in"
+
+// The booking page with the visitor's name and email already filled in (Cal.com prefill parameters), so someone who
+// just sent the Revenue Audit form doesn't type them twice.
+export function bookingUrlFor(person: { name?: string; email?: string }, base: string = BOOKING_URL): string {
+  const url = new URL(base)
+  if (person.name?.trim()) url.searchParams.set("name", person.name.trim())
+  if (person.email?.trim()) url.searchParams.set("email", person.email.trim())
+  return url.toString()
+}
 
 export const DIAGNOSTIC_HREF = "/diagnostic"
 export const DIAGNOSTIC_LABEL = "Free Diagnostic"
