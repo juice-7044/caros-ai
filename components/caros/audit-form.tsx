@@ -9,6 +9,7 @@ import { track } from "@/lib/analytics-client"
 import Link from "next/link"
 import { ArrowRight, Check, Loader2 } from "lucide-react"
 import { INDUSTRIES, BOOKING_URL } from "@/lib/site"
+import { sendLead } from "@/lib/caros-leads"
 import { Sunburst } from "./sunburst"
 import { cn } from "@/lib/utils"
 
@@ -43,32 +44,27 @@ export function AuditForm() {
     setSubmitting(true)
 
     const formData = new FormData(e.currentTarget)
-    const payload = {
-      firstName: String(formData.get("firstName") ?? ""),
-      lastName: String(formData.get("lastName") ?? ""),
-      businessName: String(formData.get("business") ?? ""),
-      industry: String(formData.get("industry") ?? ""),
-      email: String(formData.get("email") ?? ""),
-      phone: String(formData.get("phone") ?? ""),
-      averageJobValue: String(formData.get("revenue") ?? ""),
-      knownLeaks: String(formData.get("notes") ?? ""),
-      smsConsent: formData.get("consent") === "on",
-    }
-
+    const get = (key: string) => String(formData.get(key) ?? "").trim()
+    const smsConsent = formData.get("consent") === "on"
     try {
-      const res = await fetch("/api/revenue-audit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+      const sent = await sendLead("audit", {
+        name: `${get("firstName")} ${get("lastName")}`.trim(),
+        email: get("email"),
+        phone: get("phone"),
+        company: get("business"),
+        industry: get("industry"),
+        consent: smsConsent
+          ? `Opted in to calls/SMS on the getcaros.com Revenue Audit form (${new Date().toISOString()})`
+          : "No SMS opt-in",
+        details: {
+          "Average job value": get("revenue"),
+          "Known leaks": get("notes"),
+          Language: locale,
+        },
       })
 
-      const data = await res.json().catch(() => ({}))
-
-      if (!res.ok) {
-        console.error("[v0] Revenue audit submission failed:", res.status, data)
-        const message =
-          data?.error || data?.ghlResponse || tr("Something went wrong. Please try again or call us directly.")
-        setError(!es && typeof message === "string" ? message : tr("Something went wrong. Please try again or call us directly."))
+      if (!sent.ok) {
+        setError(!es ? sent.error : tr("Something went wrong. Please try again or call us directly."))
         setSubmitting(false)
         return
       }
@@ -77,8 +73,7 @@ export function AuditForm() {
       setSubmitted(true)
       // Redirect to the booking calendar to schedule the audit
       window.location.href = BOOKING_URL
-    } catch (err) {
-      console.error("[v0] Revenue audit network error:", err)
+    } catch {
       setError(tr("Something went wrong. Please try again or call us directly."))
       setSubmitting(false)
     }

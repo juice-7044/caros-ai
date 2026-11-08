@@ -5,6 +5,7 @@ import { useSpanish } from "@/lib/use-spanish"
 import { localeHref } from "@/lib/spanish"
 
 import { useState } from "react"
+import { sendLead } from "@/lib/caros-leads"
 import english from "@/messages/en.json"
 import { useTranslations } from "next-intl"
 
@@ -24,9 +25,25 @@ export function AffiliateApplicationForm() {
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault(); setError(""); setStatus("loading")
     try {
-      const response = await fetch("/api/affiliate-application", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form) })
-      const data = await response.json().catch(() => ({}))
-      if (!response.ok) { setError(es ? t("form.error") : data.error || t("form.error")); setStatus("error"); return }
+      const sent = await sendLead("affiliate", {
+        name: `${form.first_name} ${form.last_name}`.trim(),
+        email: form.email,
+        phone: form.phone,
+        company: form.company_name,
+        site: form.website_or_linkedin_url,
+        consent: form.consent ? `Agreed to be contacted about the CAROS affiliate program (${new Date().toISOString()})` : "",
+        details: {
+          "How they will promote CAROS": form.affiliate_promo_method,
+          "Audience": form.affiliate_audience_description,
+          "Familiarity with CAROS": form.affiliate_caros_familiarity,
+          "Why they want to join": form.affiliate_motivation,
+          "Referrals per month (estimate)": form.affiliate_referral_estimate,
+          "How they found the program": form.affiliate_program_source,
+          "Referred by": form.affiliate_referred_by,
+          Language: locale,
+        },
+      })
+      if (!sent.ok) { setError(es ? t("form.error") : sent.error || t("form.error")); setStatus("error"); return }
       setStatus("success")
     } catch {
       setError(t("form.error")); setStatus("error")

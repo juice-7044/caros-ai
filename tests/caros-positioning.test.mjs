@@ -47,5 +47,5 @@ test('dedicated industry messages, pricing and consent integrations remain avail
   assert.match(source('lib/industries.ts'), /CAROS for HVAC Contractors/)
   assert.match(source('app/[locale]/pricing/page.tsx'), /\$997\/month/)
   assert.match(source('app/[locale]/pricing/page.tsx'), /There is no self-service pricing for nonprofit organizations/)
-  assert.match(source('app/api/revenue-audit/route.ts'), /services\.leadconnectorhq\.com/)
+  assert.match(source('lib/caros-leads.ts'), /ask\.getcaros\.com\/api\/forms/)
 })
