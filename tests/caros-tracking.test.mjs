@@ -1,12 +1,15 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { readFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 
 const source = path => readFileSync(new URL(path, import.meta.url), 'utf8')
-test('GHL external website tracking is removed and form APIs are preserved', () => {
+test('GHL external website tracking is removed and website forms post to CAROS, never GHL', () => {
   const layout = source('../app/layout.tsx')
   assert.doesNotMatch(layout, /external-tracking\.js|data-tracking-id|tk_12d930143d64417686edf3bdbf78f595/)
-  assert.match(source('../app/api/revenue-audit/route.ts'), /services\.leadconnectorhq\.com\/contacts\//)
+  assert.match(source('../lib/caros-leads.ts'), /https:\/\/ask\.getcaros\.com\/api\/forms\/[A-Za-z0-9_-]{43}/)
+  for (const f of ['revenue-audit', 'affiliate-application', 'nonprofit-consultation']) {
+    assert.equal(existsSync(new URL(`../app/api/${f}/route.ts`, import.meta.url)), false, `${f} GHL relay is removed`)
+  }
 })
 
 test('affiliate tracking is removed from the site (owner decision 2026-11-05)', () => {

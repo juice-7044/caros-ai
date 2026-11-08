@@ -4,6 +4,7 @@ import catalog from "@/messages/full/forms-legal.es.json"
 import { useSpanish } from "@/lib/use-spanish"
 
 import { useState, type FormEvent } from "react"
+import { sendLead } from "@/lib/caros-leads"
 import { ArrowRight, Check } from "lucide-react"
 import { Sunburst } from "./sunburst"
 import { cn } from "@/lib/utils"
@@ -20,7 +21,7 @@ function Label({ children, htmlFor }: { children: React.ReactNode; htmlFor: stri
 }
 
 export function NonprofitConsultationForm() {
-  const { tr, es } = useSpanish(catalog)
+  const { tr, locale, es } = useSpanish(catalog)
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -32,39 +33,30 @@ export function NonprofitConsultationForm() {
     setSubmitting(true)
 
     const formData = new FormData(e.currentTarget)
-    const payload = {
-      firstName: String(formData.get("contactName") ?? "").trim().split(/\s+/)[0] || "",
-      lastName: String(formData.get("contactName") ?? "").trim().split(/\s+/).slice(1).join(" "),
-      businessName: String(formData.get("organizationName") ?? ""),
-      email: String(formData.get("email") ?? ""),
-      website: String(formData.get("website") ?? ""),
-      organizationType: String(formData.get("organizationType") ?? ""),
-      challenges: String(formData.get("challenges") ?? ""),
-      requestedCapabilities: String(formData.get("capabilities") ?? ""),
-      contactPreference: String(formData.get("contactPreference") ?? ""),
-      source: "nonprofit-consultation",
-    }
-
+    const get = (key: string) => String(formData.get(key) ?? "").trim()
     try {
-      const res = await fetch("/api/nonprofit-consultation", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+      const sent = await sendLead("nonprofit", {
+        name: get("contactName"),
+        email: get("email"),
+        company: get("organizationName"),
+        site: get("website"),
+        industry: get("organizationType"),
+        consent: get("contactPreference") ? `Contact preference: ${get("contactPreference")}` : "",
+        details: {
+          "Challenges": get("challenges"),
+          "Capabilities requested": get("capabilities"),
+          Language: locale,
+        },
       })
 
-      const data = await res.json().catch(() => ({}))
-
-      if (!res.ok) {
-        const message =
-          data?.error || tr("Something went wrong. Please try again or email us directly at inquiries@getcarosai.com.")
-        setError(!es && typeof message === "string" ? message : tr("Something went wrong. Please try again."))
+      if (!sent.ok) {
+        setError(!es ? sent.error : tr("Something went wrong. Please try again."))
         setSubmitting(false)
         return
       }
 
       setSubmitted(true)
-    } catch (err) {
-      console.error("[nonprofit-consultation] network error:", err)
+    } catch {
       setError(tr("Something went wrong. Please try again or email us directly at inquiries@getcarosai.com."))
       setSubmitting(false)
     }
