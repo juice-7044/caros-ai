@@ -4,11 +4,12 @@ import { getLocale } from "next-intl/server"
 import { translateSpanishData } from "@/lib/spanish"
 import type { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
-import { ArrowRight, BookOpen, Calculator, Gauge, Sparkles } from "lucide-react"
+import { ArrowRight, BookOpen, Calculator, Download, Gauge, Sparkles } from "lucide-react"
 import { Link } from "@/i18n/routing"
 import { PageHero, Eyebrow } from "@/components/caros/ui-bits"
 import { Reveal } from "@/components/caros/reveal"
 import { AUDIT_URL } from "@/lib/site"
+import { LEAD_MAGNETS } from "@/lib/lead-magnets"
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale()
@@ -43,6 +44,23 @@ export default async function ResourcesPage() {
           <Reveal><Eyebrow>{t("section.eyebrow")}</Eyebrow><h2 className="mt-6 max-w-3xl text-balance text-[clamp(2rem,4vw,3.25rem)] font-extrabold leading-[1.02] tracking-tight">{t("section.title")}</h2></Reveal>
           <div className="mt-12 grid gap-5 md:grid-cols-2">
             {resources.map((resource, i) => { const Icon = resource.icon; const className = `group flex h-full flex-col border p-7 transition-all duration-300 ${resource.gold ? "border-gold bg-gold/5" : "border-border bg-card hover:border-gold"}`; const content = <><div className="flex items-start justify-between"><Icon className="size-7 text-gold" aria-hidden="true" />{resource.soon && <span className="rounded-full border border-gold/40 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-gold">{t("comingSoon")}</span>}</div><h3 className="mt-10 text-2xl font-bold tracking-tight">{resource.title}</h3><p className="mt-4 flex-1 leading-relaxed text-muted-foreground">{resource.body}</p><span className={`mt-8 inline-flex items-center gap-2 font-semibold ${resource.gold ? "text-gold" : "text-foreground"}`}>{resource.cta}{!resource.soon && <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />}</span></>; return <Reveal key={resource.title} delay={i * 70}>{resource.soon ? <div className={className}>{content}</div> : resource.external ? <a className={className} href={resource.href} target="_blank" rel="noopener noreferrer">{content}</a> : <Link className={className} href={resource.href}>{content}</Link>}</Reveal> })}
+          </div>
+        </div>
+      </section>
+      {/* Free industry guides (CAROS lead magnets, lib/lead-magnets.ts; English only for now) */}
+      <section className="border-t border-border bg-muted/30 py-24 lg:py-32">
+        <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
+          <Reveal><Eyebrow>Free industry guides</Eyebrow><h2 className="mt-6 max-w-3xl text-balance text-[clamp(2rem,4vw,3.25rem)] font-extrabold leading-[1.02] tracking-tight">Practical playbooks you can run this week.</h2></Reveal>
+          <div className="mt-12 grid gap-5 md:grid-cols-2">
+            {LEAD_MAGNETS.map((m) => (
+              <a key={m.slug} href={`/en/free/${m.slug}`} className="group flex h-full flex-col border border-border bg-card p-7 transition-all duration-300 hover:border-gold">
+                <Download className="h-6 w-6 text-gold" />
+                <p className="mt-5 text-xs font-semibold uppercase tracking-widest text-muted-foreground">{m.trade}</p>
+                <h3 className="mt-2 text-xl font-bold">{m.formTitle.replace(/^Get the free /, "")}</h3>
+                <p className="mt-3 flex-1 text-muted-foreground">{m.intro}</p>
+                <span className="mt-6 inline-flex items-center gap-2 font-semibold text-foreground group-hover:text-gold">Get the free guide <ArrowRight className="h-4 w-4" /></span>
+              </a>
+            ))}
           </div>
         </div>
       </section>

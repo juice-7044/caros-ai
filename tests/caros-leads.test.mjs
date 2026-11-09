@@ -7,8 +7,8 @@ const source = path => readFileSync(new URL(path, import.meta.url), 'utf8')
 
 test('each website form has its own CAROS form address', () => {
   const urls = Object.values(CAROS_FORMS)
-  assert.equal(urls.length, 3)
-  assert.equal(new Set(urls).size, 3)
+  assert.equal(urls.length, 7, 'audit, affiliate, nonprofit and the four lead magnets')
+  assert.equal(new Set(urls).size, 7)
   for (const u of urls) assert.match(u, /^https:\/\/ask\.getcaros\.com\/api\/forms\/[A-Za-z0-9_-]{43}$/)
 })
 
