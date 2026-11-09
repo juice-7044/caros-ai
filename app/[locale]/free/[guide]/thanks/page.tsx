@@ -25,21 +25,21 @@ export default async function LeadMagnetThanks({ params }: Params) {
   const audit = `${BOOKING_URL}?utm_source=getcaros&utm_medium=lead_magnet&utm_campaign=leadmagnet_${m.key}`
   return (
     <main className="bg-background">
-      <section className="mx-auto max-w-3xl px-6 py-16 text-center lg:py-24">
+      <section className="mx-auto max-w-3xl px-6 py-16 lg:py-24">
         <Eyebrow>{m.thanksEyebrow}</Eyebrow>
-        <h1 className="mt-4 text-balance text-4xl font-black tracking-tight text-foreground sm:text-5xl">{m.thanksTitle}</h1>
+        <h1 className="mt-4 text-balance font-display text-4xl leading-[1.05] tracking-tight text-foreground sm:text-5xl">{m.thanksTitle}</h1>
         <p className="mt-5 text-lg text-muted-foreground">{m.thanksBody}</p>
         <a href={m.pdf} download className="mt-8 inline-flex h-12 items-center gap-2 rounded-lg bg-gold px-8 font-bold text-ink hover:opacity-90">
           <Download className="h-4 w-4" /> Download the PDF
         </a>
       </section>
-      <section className="border-t border-border bg-muted/30">
-        <div className="mx-auto max-w-3xl px-6 py-16 text-center">
+      <section className="bg-ink text-ink-foreground">
+        <div className="mx-auto max-w-3xl px-6 py-16">
           <Eyebrow>Your next step</Eyebrow>
-          <h2 className="mt-3 text-3xl font-black tracking-tight text-foreground">{m.nextTitle}</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">{m.nextBody}</p>
-          <p className="mx-auto mt-3 max-w-2xl text-sm text-muted-foreground">{m.nextNote}</p>
-          <a href={audit} className="mt-8 inline-flex h-12 items-center gap-2 rounded-lg bg-ink px-8 font-bold text-ink-foreground hover:opacity-90">
+          <h2 className="mt-3 font-display text-3xl tracking-tight sm:text-4xl">{m.nextTitle}</h2>
+          <p className="mt-4 max-w-2xl text-ink-foreground/85">{m.nextBody}</p>
+          <p className="mt-3 max-w-2xl text-xs text-ink-foreground/60">{m.nextNote}</p>
+          <a href={audit} className="mt-8 inline-flex h-12 items-center gap-2 rounded-lg bg-gold px-8 font-bold text-ink hover:opacity-90">
             <CalendarCheck className="h-4 w-4" /> Book the Free Business Audit
           </a>
         </div>
