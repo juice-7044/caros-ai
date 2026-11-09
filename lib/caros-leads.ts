@@ -8,6 +8,14 @@ export const CAROS_FORMS = {
   audit: "https://ask.getcaros.com/api/forms/STXwJ6GJRXmSPQMOKgOwJsUlEC80c0J_nmQhpRR2yDo",
   affiliate: "https://ask.getcaros.com/api/forms/pK8nEKA1SAKvOSxu5-VYbjiJFthG5UPMnd-iFy4xBb8",
   nonprofit: "https://ask.getcaros.com/api/forms/Gu-PQsaxRDuQLv2sMMdZVyXgKqeuzU8BsvL-IgwTzw4",
+  // "Lead magnet: HVAC" (its guide and follow-up emails come from CAROS)
+  magnet_hvac: "https://ask.getcaros.com/api/forms/SUi4BUehRSydpzbzWO1NOZ1jxlmQoEZukwCrGsN-0FQ",
+  // "Lead magnet: Plumbing" (its guide and follow-up emails come from CAROS)
+  magnet_plumbing: "https://ask.getcaros.com/api/forms/N6GTMEp3S_-Sd2bhFyDO51aWeRNnLU8So32bzmop2Xc",
+  // "Lead magnet: Real Estate" (its guide and follow-up emails come from CAROS)
+  magnet_real_estate: "https://ask.getcaros.com/api/forms/u0FnboVUR3KYFlyDYEJuyKsbJW1XX0totnPCX53i3y4",
+  // "Lead magnet: Roofing" (its guide and follow-up emails come from CAROS)
+  magnet_roofing: "https://ask.getcaros.com/api/forms/g8KBDGRVQX-fc_8_y33raIu51ZKIYUsvgQ2IzQjlFKc",
 } as const
 export type CarosForm = keyof typeof CAROS_FORMS
 

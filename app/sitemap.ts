@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next"
 import { INDUSTRY_SLUGS } from "@/lib/industries"
+import { LEAD_MAGNETS } from "@/lib/lead-magnets"
 
 const SITE_URL = "https://getcaros.com"
 
@@ -25,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/compare", priority: 0.7, changeFrequency: "monthly" as const },
     { path: "/faq", priority: 0.6, changeFrequency: "monthly" as const },
     { path: "/resources", priority: 0.6, changeFrequency: "monthly" as const },
+    ...LEAD_MAGNETS.map((m) => ({ path: `/free/${m.slug}`, priority: 0.7, changeFrequency: "monthly" as const })),
     { path: "/affiliates", priority: 0.5, changeFrequency: "monthly" as const },
     { path: "/pricing", priority: 0.9, changeFrequency: "monthly" as const },
     { path: "/about", priority: 0.6, changeFrequency: "monthly" as const },
