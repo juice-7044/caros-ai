@@ -60,7 +60,7 @@ test('spanish catalogs are valid, non-empty, and not copies of the English sourc
   }
 })
 
-test('spanish audit consent keeps STOP/HELP, optional checkbox and policy links', () => {
+test('Spanish catalog retains legal translations but native audit explains approved English SMS copy', () => {
   const catalog = JSON.parse(readFileSync(new URL('../messages/full/forms-legal.es.json', import.meta.url), 'utf8'))
   const consent = Object.values(catalog).filter(v => /mensajes de texto|STOP/i.test(v)).join(' ')
   assert.match(consent, /mensajes de texto/i)
@@ -69,5 +69,8 @@ test('spanish audit consent keeps STOP/HELP, optional checkbox and policy links'
   assert.match(consent, /HELP/)
   assert.match(consent, /no (es|constituye) (una )?condici[oó]n/i)
   const form = readFileSync(new URL('../components/caros/audit-form.tsx', import.meta.url), 'utf8')
-  assert.doesNotMatch(form, /required[^\n]*consent|consent[^\n]*required(?!=\{false\})/i)
+  assert.match(form, /El consentimiento para SMS se muestra en inglés con el texto aprobado\./)
+  assert.match(form, /REVENUE_AUDIT.wording/)
+  const checkbox = form.match(/<input id="audit-sms_consent"[\s\S]*?\/>/)[0]
+  assert.doesNotMatch(checkbox, /required|defaultChecked|checked=/)
 })

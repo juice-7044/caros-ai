@@ -40,8 +40,12 @@ test('sendLead posts JSON to the form and reports CAROS problems in plain words'
   assert.equal(down.ok, false)
 })
 
-test('the three website forms use sendLead and no GHL address remains in them', () => {
-  for (const f of ['audit-form', 'affiliate-application-form', 'nonprofit-consultation-form']) {
+test('other website forms retain sendLead while audit uses the native contract', () => {
+  const audit = source('../components/caros/audit-form.tsx')
+  assert.match(audit, /await submitRevenueAudit\(data\)/)
+  assert.match(source('../lib/revenue-audit-form.ts'), /fetcher\(REVENUE_AUDIT.endpoint/)
+  assert.doesNotMatch(audit, /sendLead|\/api\/revenue-audit|leadconnectorhq|msgsndr/)
+  for (const f of ['affiliate-application-form', 'nonprofit-consultation-form']) {
     const s = source(`../components/caros/${f}.tsx`)
     assert.match(s, /sendLead\(/)
     assert.doesNotMatch(s, /leadconnectorhq|msgsndr|\/api\/(revenue-audit|affiliate-application|nonprofit-consultation)/)
