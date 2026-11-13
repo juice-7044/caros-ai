@@ -15,15 +15,15 @@ test('booking goes to the CAROS Cal.com, never the GHL widget', () => {
   }
 })
 
-test('the audit form sends people to the Revenue Audit calendar with their name and email filled in', () => {
+test('booking helper preserves prefill but native audit never redirects or claims a booking', () => {
   const u = new URL(bookingUrlFor({ name: ' Jo Smith ', email: 'jo@x.com' }))
   assert.equal(u.origin + u.pathname, BOOKING_URL)
   assert.equal(u.searchParams.get('name'), 'Jo Smith')
   assert.equal(u.searchParams.get('email'), 'jo@x.com')
   assert.equal(bookingUrlFor({}), BOOKING_URL)
   const form = source('../components/caros/audit-form.tsx')
-  assert.match(form, /window\.location\.href = bookingUrlFor\(/)
-  assert.ok(form.indexOf('window.location.href = bookingUrlFor(') > form.indexOf('if (!sent.ok)'))
+  assert.doesNotMatch(form, /window\.location|bookingUrlFor|Review is booked/)
+  assert.match(form, /Thanks! We got it and someone from CAROS will be in touch\./)
 })
 
 test('demo buttons go to the Discovery Call', () => {

@@ -46,8 +46,8 @@ test('revenue audit form reports start and completion without altering its paylo
   assert.match(form, /track\("audit_start"/)
   assert.match(form, /track\("audit_complete"/)
   // completion is reported only after a successful response
-  assert.ok(form.indexOf('track("audit_complete"') > form.indexOf('if (!sent.ok)'))
-  assert.ok(form.indexOf('if (!sent.ok)') > 0)
-  assert.match(form, /const smsConsent = formData\.get\("consent"\) === "on"/)
+  assert.ok(form.indexOf('track("audit_complete"') > form.indexOf('await submitRevenueAudit(data)'))
+  assert.ok(form.indexOf('await submitRevenueAudit(data)') > 0)
+  assert.match(form, /new FormData\(event.currentTarget\)/)
   assert.doesNotMatch(form, /track\([^)]*(email|phone|firstName)/)
 })
