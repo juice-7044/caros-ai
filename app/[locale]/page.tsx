@@ -12,6 +12,7 @@ import { Roi } from "@/components/caros/home/roi"
 import { HomeAnalytics } from "@/components/caros/home/home-analytics"
 import { CtaBand } from "@/components/caros/cta-band"
 import { TrustpilotWidgetLoader } from "@/components/TrustpilotWidgetLoader"
+import { Industries } from "@/components/caros/home/industries"
 import { DEMO_URL } from "@/lib/home-nav"
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
@@ -48,6 +49,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <LifecycleFlow />
       {/* 7 Product experience */}
       <ProductExperience />
+      <Industries />
       {/* 8 Revenue opportunity calculator + audit */}
       <Roi />
       {/* 9 Final CTA */}

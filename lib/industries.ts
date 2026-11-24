@@ -3840,6 +3840,7 @@ export function getIndustry(slug: string): IndustryContent | undefined {
 
 /** Nav / grid ordering matches the marketing list; law-firms is appended. */
 export const INDUSTRY_NAV: { name: string; href: string }[] = [
+  { name: "Startups & Founders", href: "/industries/startups" },
   ...INDUSTRY_SLUGS.map((slug) => ({ name: INDUSTRY_CONTENT[slug].name, href: `/industries/${slug}` })),
   { name: "Law Firms & Estate Planning", href: "/industries/law-firms" },
   { name: "Car Dealerships", href: "/industries/car-dealerships" },

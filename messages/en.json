@@ -1,4 +1,147 @@
 {
+  "Startups": {
+    "metaTitle": "CAROS for Startups & Founders",
+    "metaDescription": "Connected marketing, sales, communication, operations, and customer success for early-stage startups, stealth founders, and small teams.",
+    "home": "Home",
+    "industries": "Industries",
+    "audience": "Startups & Founders",
+    "heroTitle": "Build Your Startup.",
+    "heroAccent": "Keep Your Revenue Operations Moving.",
+    "heroBody": "When you’re building a company, every conversation, customer, and hour matters. CAROS connects marketing, sales, communication, operations, and customer success so your team can move from first interest to lasting customer relationships with less administrative work.",
+    "tags": [
+      "Early Stage",
+      "Stealth",
+      "Small Teams",
+      "Bootstrapped",
+      "Funded"
+    ],
+    "demo": "See CAROS in Action",
+    "review": "Book A Business Review",
+    "stagesTitle": "Support for the Stage You’re In",
+    "problemsTitle": "When the Founder Is Also the Sales Team, Marketing Team, and Operations Team",
+    "journeyTitle": "From First Conversation to Repeatable Revenue",
+    "journeyNote": "An illustrative journey, not a fixed funnel. Connected communication, scheduling, pipeline tracking, follow-up, workflows, and customer support help coordinate each step. Your stages, channels, and automations are configured during setup.",
+    "scenariosTitle": "What If Your Startup Had CAROS?",
+    "scenarioNote": "Illustrative scenarios, not customer results. Each depends on agreed setup, enabled workflows, connected channels, and the permissions and consent needed for outreach.",
+    "scenarioEnd": "What if you had CAROS? You’d already be able to do this and more, for one flat monthly fee.",
+    "reportingTitle": "Know What Needs Your Attention",
+    "questions": [
+      "Which opportunities need follow-up?",
+      "Where are prospects getting stuck?",
+      "Which sources are producing customers, where attribution is available?",
+      "What needs to happen after a customer signs?",
+      "Which customer relationships need attention?"
+    ],
+    "reportingNote": "Pipeline, task, and customer activity help answer these questions. Source attribution depends on captured source data and connected systems; it is not a complete record of every influence on a sale.",
+    "faqTitle": "Questions from Founders",
+    "closingTitle": "Build a process your team can grow with.",
+    "closingBody": "Start with your current stage, customer journey, and next operational bottleneck. Explore the right CAROS setup for one flat monthly fee.",
+    "stages": [
+      {
+        "title": "Early-Stage Startups",
+        "body": "Organize inquiries, schedule discovery conversations, track opportunities, and follow up. Coordinate first-customer onboarding with configured tasks and communication.",
+        "line": "Turn early interest into a process you can build on."
+      },
+      {
+        "title": "Stealth Startups",
+        "body": "Manage approved contacts, coordinate private discovery conversations, and prepare launch communications for audiences you choose. Your team decides who to contact and when.",
+        "line": "Keep your relationships organized while you build toward launch."
+      },
+      {
+        "title": "Small Startup Teams",
+        "body": "Bring customer context, clear ownership, coordinated handoffs, and automated reminders together. See the work without relying on the founder to remember every next step.",
+        "line": "Give a lean team more room to execute."
+      }
+    ],
+    "problems": [
+      {
+        "title": "Prospects and introductions scattered across inboxes and spreadsheets.",
+        "body": "CRM contacts, notes, and opportunity pipelines keep relationship context together."
+      },
+      {
+        "title": "Follow-up delayed by product development and delivery.",
+        "body": "Configured follow-up workflows and reminders help keep the next conversation moving through connected channels."
+      },
+      {
+        "title": "Too many subscriptions and disconnected workflows.",
+        "body": "Bring communication, CRM, scheduling, and workflows into a connected operating environment. Review supported integrations during setup."
+      },
+      {
+        "title": "Early customers receiving inconsistent onboarding.",
+        "body": "Use configured onboarding workflows to coordinate tasks, reminders, and customer communication after the handoff."
+      },
+      {
+        "title": "Unclear ownership of the next action.",
+        "body": "Assigned tasks, due dates, and opportunity ownership help make the next action visible."
+      },
+      {
+        "title": "Limited visibility into which activities create paying customers.",
+        "body": "Pipeline and revenue activity reporting connects the information you capture, with source attribution where data is available."
+      }
+    ],
+    "journey": [
+      {
+        "title": "Inquiry",
+        "body": "Capture interest through a configured form or connected communication channel."
+      },
+      {
+        "title": "Discovery",
+        "body": "Organize contacts, notes, scheduling, and the next conversation."
+      },
+      {
+        "title": "Qualified Opportunity",
+        "body": "Track stage, ownership, and follow-up in your pipeline."
+      },
+      {
+        "title": "Customer",
+        "body": "Record the customer win and coordinate the sales handoff."
+      },
+      {
+        "title": "Onboarding",
+        "body": "Run configured tasks, reminders, and customer communication."
+      },
+      {
+        "title": "Retention and Expansion",
+        "body": "Coordinate support tickets, customer follow-ups, and relevant outreach through enabled workflows."
+      }
+    ],
+    "scenarios": [
+      {
+        "title": "An inquiry while you build.",
+        "body": "An early-stage founder is focused on product development when a prospect submits a configured inquiry form. The inquiry is captured, the approved response workflow runs through an enabled channel, and a task tracks the next action."
+      },
+      {
+        "title": "Selected conversations before launch.",
+        "body": "A stealth team chooses prospective customers for discovery. Contacts, scheduling, notes, and follow-up stay organized. The team controls its selected audience and outreach; this is not a special confidentiality or NDA feature."
+      },
+      {
+        "title": "A customer win with a clear handoff.",
+        "body": "A small startup wins a customer. With the handoff trigger and workflow configured, the sale starts onboarding tasks, reminders, and customer communication instead of leaving the founder to coordinate each step manually."
+      }
+    ],
+    "faq": [
+      {
+        "title": "Can CAROS support a startup before it has a large customer base?",
+        "body": "Yes. Start with contacts, inquiries, discovery scheduling, and a clear pipeline. The business review helps determine the right scope for your stage, for one flat monthly fee."
+      },
+      {
+        "title": "How can a stealth startup use CAROS?",
+        "body": "Organize approved contacts, discovery notes, scheduling, and follow-up for audiences your team selects. CAROS does not provide special stealth confidentiality or NDA enforcement."
+      },
+      {
+        "title": "Can CAROS work alongside our existing tools?",
+        "body": "Supported integrations can connect existing channels and systems. We review compatibility, required connections, and what should stay in your current tools during setup; not every tool is supported."
+      },
+      {
+        "title": "How does CAROS help a small team manage more work?",
+        "body": "Shared customer context, assigned tasks, reminders, pipelines, and configured workflows reduce manual coordination. Capacity depends on the process and setup; staffing and revenue outcomes vary."
+      },
+      {
+        "title": "How do we determine the right setup for our stage?",
+        "body": "Book a business review to discuss your customer journey, existing tools, ownership, and immediate priorities. Agree on the workflow scope, channels, and commercial terms before implementation."
+      }
+    ]
+  },
   "Metadata": {
     "description": "CAROS is the unified Revenue Operating System for relationship-driven businesses and organizations: one dashboard for everything that drives revenue."
   },
@@ -788,14 +931,14 @@
       "eyebrow": "Industries",
       "title": "Built around the relationships",
       "serifTitle": "that drive growth.",
-      "subtitle": "CAROS is built for businesses and organizations where timely communication, consistent follow-up, and strong relationships drive growth.",
+      "subtitle": "CAROS helps early-stage startups and established businesses connect communication, follow-up, operations, and customer relationships as they grow.",
       "who": "Who It Is For",
       "whoTitle": "Different industries. A shared need to stay connected.",
       "fits": "Why It Fits",
       "fitsTitle": "Three needs CAROS is designed to address.",
-      "cta": "See how CAROS could work for you.",
-      "metaDescription": "CAROS helps relationship-driven businesses and organizations connect inquiries, follow-up, operations, and revenue intelligence across industries.",
-      "otherFit": "Don't see your industry? If inquiries, follow-up, and ongoing relationships matter to your business or organization, let's explore whether CAROS is a fit.",
+      "cta": "From first customers to established operations, explore CAROS.",
+      "metaDescription": "CAROS connects inquiries, follow-up, operations, and revenue intelligence for early-stage startups, established businesses, and organizations across industries.",
+      "otherFit": "From early-stage startups to established businesses and organizations, if inquiries, follow-up, and ongoing relationships matter, let’s explore whether CAROS is a fit.",
       "fitCards": [
         {
           "title": "Opportunities worth following up",

@@ -115,6 +115,7 @@ export function SiteNav() {
                                 href={ind.href}
                                 className={cn(
                                   "rounded-lg px-3 py-2.5 text-sm text-foreground/70 transition-colors duration-200 hover:bg-secondary hover:text-foreground",
+                                  ind.href === "/industries/startups" && "min-h-11 flex items-center",
                                   indActive && "bg-secondary text-foreground",
                                 )}
                               >
@@ -227,7 +228,7 @@ export function SiteNav() {
                         key={ind.href}
                         href={ind.href}
                         onClick={() => setOpen(false)}
-                        className="text-sm text-foreground/60 transition-colors hover:text-gold"
+                        className={cn("text-sm text-foreground/60 transition-colors hover:text-gold", ind.href === "/industries/startups" && "min-h-11 flex items-center")}
                       >
                         {tr(ind.name)}
                       </Link>

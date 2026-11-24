@@ -62,6 +62,7 @@ export const COMPANY_PHONE_HREF = "tel:+16319067956"
 export const FORM_PATHS = ["/affiliates"]
 
 export const INDUSTRIES = [
+  "Startups & Founders",
   "Roofing",
   "HVAC",
   "Plumbing",
