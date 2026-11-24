@@ -1,0 +1,118 @@
+✖ published configuration amounts and immutable feature lists have one source (1.806584ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 193.540917
+
+✖ failing tests:
+
+test at tests/pricing3d.test.mjs:5:1
+✖ published configuration amounts and immutable feature lists have one source (1.806584ms)
+  AssertionError [ERR_ASSERTION]: pricing SSOT must exist
+      at TestContext.<anonymous> (file:///Users/anns-macbook/Projects/caros-ai/tests/pricing3d.test.mjs:6:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+(node:40920) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/anns-macbook/Projects/caros-ai/lib/pricing.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/anns-macbook/Projects/caros-ai/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✖ pricing route supplies SSR terms and lazy accessible exploration independent of price (5.24675ms)
+✔ published configuration amounts and immutable feature lists have one source (102.719875ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 1
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 259.987791
+
+✖ failing tests:
+
+test at tests/pricing3d.test.mjs:5:1
+✖ pricing route supplies SSR terms and lazy accessible exploration independent of price (5.24675ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /PricingStudio/. Input:
+  
+  'import { spanishTranslator } from "@/lib/spanish"\n' +
+    'import { positioningSocialMetadata } from "@/lib/positioning-metadata"\n' +
+    '\n' +
+    'import { useSpanish } from "@/lib/use-spanish"\n' +
+    'import { localeHref } from "@/lib/spanish"\n' +
+    'import catalog from "@/messages/full/product-pages.es.json"\n' +
+    'import type { Metadata } from "next"\n' +
+    'import { useTranslations } from "next-intl"\n' +
+    'import { PageHero, Eyebrow } from "@/components/caros/ui-bits"\n' +
+    'import { Reveal } from "@/components/caros/reveal"\n' +
+    'import { CtaBand } from "@/components/caros/cta-band"\n' +
+    'import { Check, ArrowUpRight, ArrowRight } from "lucide-react"\n' +
+    '\n' +
+    'export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {\n' +
+    '  const { locale } = await params\n' +
+    '  const tr = spanishTranslator(locale, catalog)\n' +
+    '  const title = tr("Pricing")\n' +
+    '  const description = tr("Clear CAROS pricing for standard, medical, and finance revenue operations configurations.")\n' +
+    '  return { title, description, ...positioningSocialMetadata(description, locale, title) }\n' +
+    '}\n' +
+    '\n' +
+    'const standardFeatures = ["Revenue operating system", "Marketing attribution", "Lead and opportunity management", "Client communication workflows", "Automation and follow-up", "Revenue intelligence and reporting"]\n' +
+    'const medicalFeatures = ["HIPAA-focused revenue operations environment", "Business Associate Agreement (BAA) support", "Encryption for protected health information", "Access controls and user permissions", "Audit logging", "Multi-factor authentication enforcement", "HIPAA-focused CRM and communication workflows", "Medical-specific revenue operations and automation", "Marketing attribution and revenue intelligence configured with healthcare data-handling requirements in mind"]\n' +
+    'const financeFeatures = ["CAROS Revenue Operating System", "Marketing attribution", "Revenue intelligence and reporting", "Lead and opportunity management", "Client communication workflows", "Automated follow-up", "Pipeline management", "Communications capture and archiving infrastructure", "Global Relay or Smarsh integration, based on client requirements", "Configuration for supported communication channels established during implementation", "CAROS-managed compliance technology infrastructure as applicable to the selected configuration"]\n' +
+    '\n' +
+    'function FeatureList({ items, featured = false }: { items: string[]; featured?: boolean }) {\n' +
+    '  const { localize } = useSpanish(catalog)\n' +
+    '\n' +
+    '  return <ul className={`flex flex-col gap-3 text-sm leading-relaxed ${featured ? "text-ink-foreground" : "text-foreground"}`}>{localize(items).map((item) => <li key={item} className="flex items-start gap-3"><Check className="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true" /><span>{item}</span></li>)}</ul>\n' +
+    '}\n' +
+    '\n' +
+    'function PriceCard({ kicker, title, implementation, monthly, description, features, featured = false }: { kicker: string; title: string; implementation: string; monthly: string; description: string; features: string[]; featured?: boolean }) {\n' +
+    '  const { tr, locale } = useSpanish(catalog)\n' +
+    '\n' +
+    '  return <article className={`flex min-h-full flex-col rounded-2xl border p-7 ${featured ? "border-gold bg-ink text-ink-foreground shadow-[0_0_50px_hsl(var(--gold)/.14)]" : "border-border bg-card"}`}>\n' +
+    '    <span className={`text-sm font-semibold uppercase tracking-[0.16em] ${featured ? "text-gold" : "text-foreground"}`}>{kicker}</span>\n' +
+    '    <h3 className={`mt-3 text-2xl font-extrabold ${featured ? "text-ink-foreground" : "text-foreground"}`}>{title}</h3>\n' +
+    '    <p className={`mt-4 text-sm leading-relaxed ${featured ? "text-ink-foreground" : "text-foreground"}`}>{description}</p>\n' +
+    '    <div className={`mt-8 flex flex-col gap-2 border-y py-5 ${featured ? "border-ink-border" : "border-border"}`}><span className={`text-sm font-semibold uppercase tracking-[0.14em] ${featured ? "text-ink-foreground" : "text-muted-foreground"}`}>{tr("Implementation")}</span><strong className={`text-3xl ${featured ? "text-gold" : "text-foreground"}`}>{implementation}</strong><span className={`text-sm font-semibold uppercase tracking-[0.14em] ${featured ? "text-ink-foreground" : "text-muted-foreground"}`}>{tr("Monthly service")}</span><strong className={`text-3xl ${featured ? "text-ink-foreground" : "text-foreground"}`}>{monthly}</strong></div>\n' +
+    '    <div className="mt-7"><FeatureList items={features} featured={featured} /></div>\n' +
+    '    <a href={localeHref("/revenue-audit", locale)} target="_blank" rel="noopener noreferrer" className={`mt-8 inline-flex h-12 items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold ${featured ? "bg-gold text-gold-foreground hover:bg-gold/90" : "border border-gold text-gold hover:bg-gold/10"}`}>{tr("Book a Demo")} <ArrowUpRight className="size-4" aria-hidden="true" /></a>\n' +
+    '  </article>\n' +
+    '}\n' +
+    '\n' +
+    'export default function PricingPage() {\n' +
+    '  const { tr, locale } = useSpanish(catalog)\n' +
+    '\n' +
+    '  const t = useTranslations("PricingPositioning")\n' +
+    '  return <>\n' +
+    '    <PageHero eyebrow={tr("Pricing")} title={t("title")} serifTitle="" subtitle={t("subtitle")} />\n' +
+    '\n' +
+    `    <section className="bg-muted/40 py-24 lg:py-32"><div className="mx-auto max-w-[1100px] px-6 lg:px-12"><Reveal><Eyebrow>{tr("Clear Pricing. No Guessing Games.")}</Eyebrow><h2 className="mt-6 max-w-3xl text-balance text-[clamp(2rem,4vw,3.5rem)] font-extrabold leading-tight">{tr("Know the investment before you book a conversation.")}</h2><div className="mt-8 grid gap-5 text-muted-foreground md:grid-cols-3"><p>{tr("You shouldn't have to sit through three sales calls just to find out what a revenue system costs. CAROS publishes our starting prices so you can understand the investment upfront.")}</p><p>{tr("When pricing varies based on team size, communication channels, integrations, compliance infrastructure, or implementation complexity, we'll tell you why.")}</p><p>{tr("We'll clearly identify what's included in your CAROS implementation and monthly service before you sign.")}</p></div><p className="mt-10 max-w-3xl border-t border-border pt-6 text-lg leading-relaxed text-foreground">{tr("No mystery quote. No surprise stack of software bills. Just a clear picture of what you're investing in and what CAROS is responsible for delivering.")}</p></Reveal></div></section>\n` +
+    '\n' +
+    '    <section className="bg-background py-24 lg:py-32"><div className="mx-auto max-w-[1200px] px-6 lg:px-12"><Reveal><Eyebrow>{tr("Core Configuration")}</Eyebrow><h2 className="mt-6 text-balance text-[clamp(2rem,4vw,3.5rem)] font-extrabold">{t("coreTitle")}</h2></Reveal><div className="mt-14 grid gap-6 lg:grid-cols-2"><PriceCard kicker={tr("CORE REVENUE OPERATIONS")} title={tr("CAROS Core")} implementation={tr("$2,500 one-time")} monthly={tr("$997/month")} description={t("coreDescription")} features={standardFeatures} featured /><PriceCard kicker={tr("HEALTHCARE")} title={tr("CAROS Medical")} implementation={tr("$7,499 one-time")} monthly={tr("$2,999/month")} description={tr("CAROS Medical is deployed in a HIPAA-focused environment with technical and administrative safeguards for workflows involving protected health information (PHI).")} features={medicalFeatures} /></div></div></section>\n' +
+    '\n' +
+    `    <section className="bg-muted/40 py-24 text-foreground lg:py-32"><div className="mx-auto max-w-[1100px] px-6 lg:px-12"><Reveal><Eyebrow>{tr("Nonprofits")}</Eyebrow><h2 className="mt-6 max-w-3xl text-balance text-[clamp(2rem,4vw,3.5rem)] font-extrabold leading-tight">{tr("Solutions Built Around Your Mission and Your Organization.")}</h2><p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">{tr("Every nonprofit operates differently. Nonprofit pricing is customized and arranged through a consultation with our sales team — based on your organization's operational needs. There is no self-service pricing for nonprofit organizations.")}</p><p className="mt-6 max-w-3xl text-muted-foreground">{tr("If your organization is a nonprofit, charity, foundation, or other mission-driven organization, connect with our team instead of purchasing online. We'll explore the right CAROS configuration and a pricing structure tailored to you.")}</p><div className="mt-8 flex flex-wrap gap-4"><a href={localeHref("/industries/nonprofits#nonprofit-consultation", locale)} className="group inline-flex h-13 items-center justify-center gap-2 rounded-full bg-gold px-7 font-semibold text-gold-foreground transition-all duration-300 hover:brightness-110">{tr("Talk to Sales")}<ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></a><a href={localeHref("/industries/nonprofits", locale)} className="group inline-flex h-13 items-center justify-center gap-2 rounded-full border border-border px-7 font-semibold text-foreground transition-all duration-300 hover:border-gold hover:text-gold">{tr("Request a Demo")}<ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></a></div></Reveal></div></section>\n` +
+    `    <section className="bg-ink py-24 text-ink-foreground lg:py-32"><div className="mx-auto max-w-[1200px] px-6 lg:px-12"><Reveal><Eyebrow>{tr("CAROS Finance")}</Eyebrow><h2 className="mt-6 max-w-3xl text-balance text-[clamp(2rem,4vw,3.5rem)] font-extrabold">{tr("Managed revenue operations for regulated financial-services environments.")}</h2><p className="mt-6 max-w-3xl text-lg leading-relaxed text-ink-muted">{tr("CAROS Finance combines revenue operations with communications capture and archiving infrastructure designed for regulated financial-services environments. CAROS configures and manages the appropriate supported solution based on your firm's requirements.")}</p><p className="mt-6 inline-block border border-gold/50 px-4 py-3 text-sm font-semibold text-gold">{tr("Communications Compliance & Archiving Included")}</p></Reveal><div className="mt-14 grid gap-5 lg:grid-cols-3"><PriceCard kicker={tr("CAROS FINANCE")} title={tr("Up to 10 Seats")} implementation={tr("$5,997 implementation")} monthly={tr("Starting at $3,997/month")} description={tr("A managed CAROS Finance configuration for firms with up to 10 users.")} features={[...financeFeatures, "Up `... 3160 more characters
+  
+      at TestContext.<anonymous> (file:///Users/anns-macbook/Projects/caros-ai/tests/pricing3d.test.mjs:7:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'import { spanishTranslator } from "@/lib/spanish"\nimport { positioningSocialMetadata } from "@/lib/positioning-metadata"\n\nimport { useSpanish } from "@/lib/use-spanish"\nimport { localeHref } from "@/lib/spanish"\nimport catalog from "@/messages/full/product-pages.es.json"\nimport type { Metadata } from "next"\nimport { useTranslations } from "next-intl"\nimport { PageHero, Eyebrow } from "@/components/caros/ui-bits"\nimport { Reveal } from "@/components/caros/reveal"\nimport { CtaBand } from "@/components/caros/cta-band"\nimport { Check, ArrowUpRight, ArrowRight } from "lucide-react"\n\nexport async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {\n  const { locale } = await params\n  const tr = spanishTranslator(locale, catalog)\n  const title = tr("Pricing")\n  const description = tr("Clear CAROS pricing for standard, medical, and finance revenue operations configurations.")\n  return { title, description, ...positioningSocialMetadata(description, locale, title) }\n}\n\nconst standardFeatures = ["Revenue operating system", "Marketing attribution", "Lead and opportunity management", "Client communication workflows", "Automation and follow-up", "Revenue intelligence and reporting"]\nconst medicalFeatures = ["HIPAA-focused revenue operations environment", "Business Associate Agreement (BAA) support", "Encryption for protected health information", "Access controls and user permissions", "Audit logging", "Multi-factor authentication enforcement", "HIPAA-focused CRM and communication workflows", "Medical-specific revenue operations and automation", "Marketing attribution and revenue intelligence configured with healthcare data-handling requirements in mind"]\nconst financeFeatures = ["CAROS Revenue Operating System", "Marketing attribution", "Revenue intelligence and reporting", "Lead and opportunity management", "Client communication workflows", "Automated follow-up", "Pipeline management", "Communications capture and archiving infrastructure", "Global Relay or Smarsh integration, based on client requirements", "Configuration for supported communication channels established during implementation", "CAROS-managed compliance technology infrastructure as applicable to the selected configuration"]\n\nfunction FeatureList({ items, featured = false }: { items: string[]; featured?: boolean }) {\n  const { localize } = useSpanish(catalog)\n\n  return <ul className={`flex flex-col gap-3 text-sm leading-relaxed ${featured ? "text-ink-foreground" : "text-foreground"}`}>{localize(items).map((item) => <li key={item} className="flex items-start gap-3"><Check className="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true" /><span>{item}</span></li>)}</ul>\n}\n\nfunction PriceCard({ kicker, title, implementation, monthly, description, features, featured = false }: { kicker: string; title: string; implementation: string; monthly: string; description: string; features: string[]; featured?: boolean }) {\n  const { tr, locale } = useSpanish(catalog)\n\n  return <article className={`flex min-h-full flex-col rounded-2xl border p-7 ${featured ? "border-gold bg-ink text-ink-foreground shadow-[0_0_50px_hsl(var(--gold)/.14)]" : "border-border bg-card"}`}>\n    <span className={`text-sm font-semibold uppercase tracking-[0.16em] ${featured ? "text-gold" : "text-foreground"}`}>{kicker}</span>\n    <h3 className={`mt-3 text-2xl font-extrabold ${featured ? "text-ink-foreground" : "text-foreground"}`}>{title}</h3>\n    <p className={`mt-4 text-sm leading-relaxed ${featured ? "text-ink-foreground" : "text-foreground"}`}>{description}</p>\n    <div className={`mt-8 flex flex-col gap-2 border-y py-5 ${featured ? "border-ink-border" : "border-border"}`}><span className={`text-sm font-semibold uppercase tracking-[0.14em] ${featured ? "text-ink-foreground" : "text-muted-foreground"}`}>{tr("Implementation")}</span><strong className={`text-3xl ${featured ? "text-gold" : "text-foreground"}`}>{implementation}</strong><span className={`text-sm font-semibold uppercase tracking-[0.14em] ${featured ? "text-ink-foreground" : "text-muted-foreground"}`}>{tr("Monthly service")}</span><strong className={`text-3xl ${featured ? "text-ink-foreground" : "text-foreground"}`}>{monthly}</strong></div>\n    <div className="mt-7"><FeatureList items={features} featured={featured} /></div>\n    <a href={localeHref("/revenue-audit", locale)} target="_blank" rel="noopener noreferrer" className={`mt-8 inline-flex h-12 items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold ${featured ? "bg-gold text-gold-foreground hover:bg-gold/90" : "border border-gold text-gold hover:bg-gold/10"}`}>{tr("Book a Demo")} <ArrowUpRight className="size-4" aria-hidden="true" /></a>\n  </article>\n}\n\nexport default function PricingPage() {\n  const { tr, locale } = useSpanish(catalog)\n\n  const t = useTranslations("PricingPositioning")\n  return <>\n    <PageHero eyebrow={tr("Pricing")} title={t("title")} serifTitle="" subtitle={t("subtitle")} />\n\n    <section className="bg-muted/40 py-24 lg:py-32"><div className="mx-auto max-w-[1100px] px-6 lg:px-12"><Reveal><Eyebrow>{tr("Clear Pricing. No Guessing Games.")}</Eyebrow><h2 className="mt-6 max-w-3xl text-balance text-[clamp(2rem,4vw,3.5rem)] font-extrabold leading-tight">{tr("Know the investment before you book a conversation.")}</h2><div className="mt-8 grid gap-5 text-muted-foreground md:grid-cols-3"><p>{tr("You shouldn\'t have to sit through three sales calls just to find out what a revenue system costs. CAROS publishes our starting prices so you can understand the investment upfront.")}</p><p>{tr("When pricing varies based on team size, communication channels, integrations, compliance infrastructure, or implementation complexity, we\'ll tell you why.")}</p><p>{tr("We\'ll clearly identify what\'s included in your CAROS implementation and monthly service before you sign.")}</p></div><p className="mt-10 max-w-3xl border-t border-border pt-6 text-lg leading-relaxed text-foreground">{tr("No mystery quote. No surprise stack of software bills. Just a clear picture of what you\'re investing in and what CAROS is responsible for delivering.")}</p></Reveal></div></section>\n\n    <section className="bg-background py-24 lg:py-32"><div className="mx-auto max-w-[1200px] px-6 lg:px-12"><Reveal><Eyebrow>{tr("Core Configuration")}</Eyebrow><h2 className="mt-6 text-balance text-[clamp(2rem,4vw,3.5rem)] font-extrabold">{t("coreTitle")}</h2></Reveal><div className="mt-14 grid gap-6 lg:grid-cols-2"><PriceCard kicker={tr("CORE REVENUE OPERATIONS")} title={tr("CAROS Core")} implementation={tr("$2,500 one-time")} monthly={tr("$997/month")} description={t("coreDescription")} features={standardFeatures} featured /><PriceCard kicker={tr("HEALTHCARE")} title={tr("CAROS Medical")} implementation={tr("$7,499 one-time")} monthly={tr("$2,999/month")} description={tr("CAROS Medical is deployed in a HIPAA-focused environment with technical and administrative safeguards for workflows involving protected health information (PHI).")} features={medicalFeatures} /></div></div></section>\n\n    <section className="bg-muted/40 py-24 text-foreground lg:py-32"><div className="mx-auto max-w-[1100px] px-6 lg:px-12"><Reveal><Eyebrow>{tr("Nonprofits")}</Eyebrow><h2 className="mt-6 max-w-3xl text-balance text-[clamp(2rem,4vw,3.5rem)] font-extrabold leading-tight">{tr("Solutions Built Around Your Mission and Your Organization.")}</h2><p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">{tr("Every nonprofit operates differently. Nonprofit pricing is customized and arranged through a consultation with our sales team — based on your organization\'s operational needs. There is no self-service pricing for nonprofit organizations.")}</p><p className="mt-6 max-w-3xl text-muted-foreground">{tr("If your organization is a nonprofit, charity, foundation, or other mission-driven organization, connect with our team instead of purchasing online. We\'ll explore the right CAROS configuration and a pricing structure tailored to you.")}</p><div className="mt-8 flex flex-wrap gap-4"><a href={localeHref("/industries/nonprofits#nonprofit-consultation", locale)} className="group inline-flex h-13 items-center justify-center gap-2 rounded-full bg-gold px-7 font-semibold text-gold-foreground transition-all duration-300 hover:brightness-110">{tr("Talk to Sales")}<ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></a><a href={localeHref("/industries/nonprofits", locale)} className="group inline-flex h-13 items-center justify-center gap-2 rounded-full border border-border px-7 font-semibold text-foreground transition-all duration-300 hover:border-gold hover:text-gold">{tr("Request a Demo")}<ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></a></div></Reveal></div></section>\n    <section className="bg-ink py-24 text-ink-foreground lg:py-32"><div className="mx-auto max-w-[1200px] px-6 lg:px-12"><Reveal><Eyebrow>{tr("CAROS Finance")}</Eyebrow><h2 className="mt-6 max-w-3xl text-balance text-[clamp(2rem,4vw,3.5rem)] font-extrabold">{tr("Managed revenue operations for regulated financial-services environments.")}</h2><p className="mt-6 max-w-3xl text-lg leading-relaxed text-ink-muted">{tr("CAROS Finance combines revenue operations with communications capture and archiving infrastructure designed for regulated financial-services environments. CAROS configures and manages the appropriate supported solution based on your firm\'s requirements.")}</p><p className="mt-6 inline-block border border-gold/50 px-4 py-3 text-sm font-semibold text-gold">{tr("Communications Compliance & Archiving Included")}</p></Reveal><div className="mt-14 grid gap-5 lg:grid-cols-3"><PriceCard kicker={tr("CAROS FINANCE")} title={tr("Up to 10 Seats")} implementation={tr("$5,997 implementation")} monthly={tr("Starting at $3,997/month")} description={tr("A managed CAROS Finance configuration for firms with up to 10 users.")} features={[...financeFeatures, "Up '... 3160 more characters,
+    expected: /PricingStudio/,
+    operator: 'match',
+    diff: 'simple'
+  }

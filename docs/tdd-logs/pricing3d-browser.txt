@@ -1,0 +1,15 @@
+node:internal/modules/run_main:111
+    triggerUncaughtException(
+    ^
+
+page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "http://localhost:3105/en/pricing", waiting until "load"
+
+    at /Users/anns-macbook/Projects/caros-ai/scripts/verify-pricing3d.mjs:34:182 {
+  log: [
+    '  - navigating to "http://localhost:3105/en/pricing", waiting until "load"'
+  ]
+}
+
+Node.js v26.12.1
