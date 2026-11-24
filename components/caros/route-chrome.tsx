@@ -8,7 +8,7 @@ import { ChatWidget } from "@/components/caros/chat-widget"
 import { BackToTop } from "@/components/caros/back-to-top"
 import { ConsentBanner } from "@/components/caros/consent-banner"
 
-export function RouteChrome({ children }: { children: ReactNode }) {
+export function RouteChrome({ children, reviewOnly = false }: { children: ReactNode; reviewOnly?: boolean }) {
   const pathname = usePathname()
   const isThankYou = pathname === "/thank-you"
 
@@ -17,7 +17,7 @@ export function RouteChrome({ children }: { children: ReactNode }) {
       {!isThankYou && <SiteNav />}
       <main className="min-h-screen overflow-x-hidden">{children}</main>
       {!isThankYou && <SiteFooter />}
-      {!isThankYou && <ChatWidget />}
+      {!isThankYou && !reviewOnly && <ChatWidget />}
       <BackToTop />
       <ConsentBanner />
     </>

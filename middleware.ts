@@ -1,6 +1,7 @@
 import createMiddleware from "next-intl/middleware"
 import {NextRequest, NextResponse} from "next/server"
 import {routing} from "@/i18n/routing"
+import {pricingReviewMode} from "@/lib/pricing-review"
 
 const intlMiddleware = createMiddleware(routing)
 
@@ -10,6 +11,11 @@ const intlMiddleware = createMiddleware(routing)
 // locale-less address. Making the same redirect permanent (308) tells Google the /en/... address is the one to keep, and
 // the duplicates should fold in as pages are recrawled. Nothing changes for a visitor: a browser follows both.
 export default function middleware(request: NextRequest) {
+  const reviewOnly = pricingReviewMode(process.env)
+  if (reviewOnly && !["GET", "HEAD", "OPTIONS"].includes(request.method)) {
+    return NextResponse.json({ok:false,error:"Review preview: submissions are disabled."}, {status:405,headers:{"Cache-Control":"no-store"}})
+  }
+  if (request.nextUrl.pathname.startsWith("/api/")) return NextResponse.next()
   // Lets the locale layout emit a self-referencing canonical + hreflang for every page.
   request.headers.set("x-caros-pathname", request.nextUrl.pathname)
   const response = intlMiddleware(request)
@@ -30,11 +36,13 @@ export default function middleware(request: NextRequest) {
       path: "/",
     })
   }
+  if (reviewOnly) out.headers.set("X-Robots-Tag", "noindex, nofollow")
   return out
 }
 
 export const config = {
   matcher: [
+    "/api/:path*",
     "/((?!api|_next|_vercel|.*\\..*).*)",
   ],
 }

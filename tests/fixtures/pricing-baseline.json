@@ -1,0 +1,47 @@
+{
+  "standardFeatures": [
+    "Revenue operating system",
+    "Marketing attribution",
+    "Lead and opportunity management",
+    "Client communication workflows",
+    "Automation and follow-up",
+    "Revenue intelligence and reporting"
+  ],
+  "medicalFeatures": [
+    "HIPAA-focused revenue operations environment",
+    "Business Associate Agreement (BAA) support",
+    "Encryption for protected health information",
+    "Access controls and user permissions",
+    "Audit logging",
+    "Multi-factor authentication enforcement",
+    "HIPAA-focused CRM and communication workflows",
+    "Medical-specific revenue operations and automation",
+    "Marketing attribution and revenue intelligence configured with healthcare data-handling requirements in mind"
+  ],
+  "financeFeatures": [
+    "CAROS Revenue Operating System",
+    "Marketing attribution",
+    "Revenue intelligence and reporting",
+    "Lead and opportunity management",
+    "Client communication workflows",
+    "Automated follow-up",
+    "Pipeline management",
+    "Communications capture and archiving infrastructure",
+    "Global Relay or Smarsh integration, based on client requirements",
+    "Configuration for supported communication channels established during implementation",
+    "CAROS-managed compliance technology infrastructure as applicable to the selected configuration"
+  ],
+  "terms": [
+    "You shouldn't have to sit through three sales calls just to find out what a revenue system costs. CAROS publishes our starting prices so you can understand the investment upfront.",
+    "When pricing varies based on team size, communication channels, integrations, compliance infrastructure, or implementation complexity, we'll tell you why.",
+    "We'll clearly identify what's included in your CAROS implementation and monthly service before you sign.",
+    "No mystery quote. No surprise stack of software bills. Just a clear picture of what you're investing in and what CAROS is responsible for delivering.",
+    "CAROS Medical is deployed in a HIPAA-focused environment with technical and administrative safeguards for workflows involving protected health information (PHI).",
+    "Every nonprofit operates differently. Nonprofit pricing is customized and arranged through a consultation with our sales team — based on your organization's operational needs. There is no self-service pricing for nonprofit organizations.",
+    "If your organization is a nonprofit, charity, foundation, or other mission-driven organization, connect with our team instead of purchasing online. We'll explore the right CAROS configuration and a pricing structure tailored to you.",
+    "CAROS Finance combines revenue operations with communications capture and archiving infrastructure designed for regulated financial-services environments. CAROS configures and manages the appropriate supported solution based on your firm's requirements.",
+    "For larger financial-services organizations with more complex user, communications, archival, supervision, integration, data-retention, or regulatory requirements.",
+    "Finance pricing is based on firm size, required communication channels, archival requirements, integrations, and implementation complexity. Additional users, data sources, communication channels, or specialized requirements may require a custom configuration. Final pricing and included services are confirmed before implementation begins.",
+    "Compliance Notice: CAROS can be configured with industry-specific safeguards and communications compliance technologies for regulated organizations. Regulatory requirements vary by organization, activity, jurisdiction, communications channels, and use case. Clients remain responsible for their organization's policies, procedures, supervision, regulatory obligations, and appropriate use of CAROS and integrated third-party services."
+  ]
+}

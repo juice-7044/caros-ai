@@ -36,3 +36,27 @@
 
 ## Analytics
 - Events are pushed to `window.dataLayer` through `lib/analytics.ts` only. Names are stable English identifiers. Payloads never carry personal information or entered financial values (only bucketed/boolean metadata). Nothing is sent when Do Not Track or Global Privacy Control is on.
+
+
+## Pricing-only studio preview (homepage tokens unchanged)
+```yaml
+pricingStudio:
+  ink: "#0b0c0d"
+  surface: "#121416"
+  champagne: "#dfc58b"
+  text: "#f5f0e6"
+  muted: "#b7b4ac"
+  line: "#383833"
+  container: "min(94vw, 2320px)"
+  stageHeight: "clamp(330px, 47vw, 660px)"
+  heading: "clamp(3.4rem, 7.2vw, 8.8rem)"
+```
+Directions considered: a conventional price-card wall (clear, but loses connected value);
+a hardware-style observatory (precise, but overly technical); a gold sculpture studio
+(selected: one connected object, an editorial heading, and a visible commercial rail).
+The stage is an illustration, not product UI evidence. Keep all capability explanations
+and prices in HTML. Capabilities are included, not add-ons. Dark studio transitions to
+an ivory calculator workbench; every original commercial qualification remains in
+native, server-rendered details. Mobile ordering: heading, live price, then sculpture.
+Do not hide conversion behind animation. Static actual CAROS logo is the low-power
+and no-JS default; no invented C mark, horse, customer badges, or performance figures.

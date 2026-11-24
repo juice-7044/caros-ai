@@ -6,6 +6,8 @@ import {headers} from "next/headers"
 import {notFound} from "next/navigation"
 import {routing} from "@/i18n/routing"
 import {RouteChrome} from "@/components/caros/route-chrome"
+import {PreviewSafety} from "@/components/caros/preview-safety"
+import {pricingReviewMode} from "@/lib/pricing-review"
 
 const RTL_LOCALES = new Set(["ar"])
 
@@ -49,7 +51,8 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
       <div dir={RTL_LOCALES.has(locale) ? "rtl" : "ltr"} lang={locale} data-locale={locale}>
-        <RouteChrome>{children}</RouteChrome>
+        {pricingReviewMode(process.env) && <PreviewSafety locale={locale} />}
+        <RouteChrome reviewOnly={pricingReviewMode(process.env)}>{children}</RouteChrome>
       </div>
     </NextIntlClientProvider>
   )

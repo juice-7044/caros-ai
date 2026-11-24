@@ -45,7 +45,8 @@ test('social metadata retains branding and share images when localized', async (
 test('dedicated industry messages, pricing and consent integrations remain available', () => {
   assert.match(source('lib/industries.ts'), /CAROS for Home Services/)
   assert.match(source('lib/industries.ts'), /CAROS for HVAC Contractors/)
-  assert.match(source('app/[locale]/pricing/page.tsx'), /\$997\/month/)
-  assert.match(source('app/[locale]/pricing/page.tsx'), /There is no self-service pricing for nonprofit organizations/)
+  // Pricing literals moved to the immutable SSOT; preserve the same commercial assertion.
+  assert.match(source('lib/pricing.ts'), /\$997\/month/)
+  assert.match(source('components/caros/pricing-terms.tsx'), /There is no self-service pricing for nonprofit organizations/)
   assert.match(source('lib/caros-leads.ts'), /ask\.getcaros\.com\/api\/forms/)
 })

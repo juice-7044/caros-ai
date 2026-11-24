@@ -1,3 +1,4 @@
+import { PRICING } from "@/lib/pricing"
 import spanishCatalog from "@/messages/full/home-general.es.json"
 import { useSpanish } from "@/lib/use-spanish"
 import { Check } from "lucide-react"
@@ -38,7 +39,7 @@ export function PricingCard({
         <div className="border-b border-ink-border p-8 lg:border-b-0 lg:border-r lg:p-12">
           <span className="eyebrow text-gold">{tr("Transparent Pricing")}</span>
           <div className="mt-6 flex items-end gap-2">
-            <span className="text-[clamp(3rem,7vw,5rem)] font-extrabold leading-none text-gold-gradient">$997</span>
+            <span className="text-[clamp(3rem,7vw,5rem)] font-extrabold leading-none text-gold-gradient">{PRICING.core.monthlyLabel.split("/")[0]}</span>
             <span className="pb-2 text-xl text-ink-muted">{tr("/month")}</span>
           </div>
           <p className="mt-4 text-lg text-ink-muted">
@@ -47,7 +48,7 @@ export function PricingCard({
 
           <div className="mt-8 rounded-xl border border-ink-border p-5">
             <p className="text-sm uppercase tracking-[0.12em] text-ink-muted">{tr("Implementation")}</p>
-            <p className="mt-2 text-2xl font-bold">{tr("$2,500 one-time")}</p>
+            <p className="mt-2 text-2xl font-bold">{tr(PRICING.core.implementationLabel)}</p>
             <p className="mt-2 text-sm leading-relaxed text-ink-muted">
               {tr("Covers strategy, configuration, workflows, integrations, pipelines, automation, reporting, communication setup, testing, and launch.")}
             </p>
