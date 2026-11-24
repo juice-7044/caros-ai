@@ -1,4 +1,147 @@
 {
+  "Startups": {
+    "metaTitle": "CAROS para startups y fundadores",
+    "metaDescription": "Marketing, ventas, comunicación, operaciones y éxito del cliente conectados para startups en etapa inicial, equipos en modo reservado y equipos pequeños.",
+    "home": "Inicio",
+    "industries": "Sectores",
+    "audience": "Startups y fundadores",
+    "heroTitle": "Construye tu startup.",
+    "heroAccent": "Mantén en marcha tus operaciones de ingresos.",
+    "heroBody": "Cuando estás construyendo una empresa, cada conversación, cliente y hora cuenta. CAROS conecta marketing, ventas, comunicación, operaciones y éxito del cliente para que tu equipo avance desde el primer interés hasta relaciones duraderas con menos trabajo administrativo.",
+    "tags": [
+      "Etapa inicial",
+      "Modo reservado",
+      "Equipos pequeños",
+      "Con recursos propios",
+      "Con financiamiento"
+    ],
+    "demo": "Ver CAROS en acción",
+    "review": "Agendar una evaluación de mi negocio",
+    "stagesTitle": "Apoyo para la etapa en la que estás",
+    "problemsTitle": "Cuando quien funda también se encarga de ventas, marketing y operaciones",
+    "journeyTitle": "De la primera conversación a ingresos recurrentes",
+    "journeyNote": "Un recorrido ilustrativo, no un embudo fijo. La comunicación, las agendas, el seguimiento de oportunidades, los flujos de trabajo y la atención al cliente conectados ayudan a coordinar cada paso. Las etapas, los canales y las automatizaciones se configuran durante la implementación.",
+    "scenariosTitle": "¿Y si tu startup tuviera CAROS?",
+    "scenarioNote": "Escenarios ilustrativos, no resultados de clientes. Cada uno depende de la configuración acordada, los flujos habilitados, los canales conectados y los permisos y consentimientos necesarios para contactar a las personas.",
+    "scenarioEnd": "¿Y si tuvieras CAROS? Ya podrías hacer esto y más, por una tarifa mensual fija.",
+    "reportingTitle": "Identifica qué necesita tu atención",
+    "questions": [
+      "¿Qué oportunidades necesitan seguimiento?",
+      "¿En qué punto se estancan los prospectos?",
+      "¿Qué fuentes generan clientes, cuando hay datos de atribución disponibles?",
+      "¿Qué debe pasar después de que un cliente firma?",
+      "¿Qué relaciones con clientes necesitan atención?"
+    ],
+    "reportingNote": "La actividad de oportunidades, tareas y clientes ayuda a responder estas preguntas. La atribución depende de los datos de origen registrados y de los sistemas conectados; no representa todas las influencias que llevan a una venta.",
+    "faqTitle": "Preguntas de fundadores",
+    "closingTitle": "Crea un proceso con el que tu equipo pueda crecer.",
+    "closingBody": "Parte de tu etapa actual, del recorrido de tus clientes y del próximo obstáculo operativo. Explora la configuración adecuada de CAROS por una tarifa mensual fija.",
+    "stages": [
+      {
+        "title": "Startups en etapa inicial",
+        "body": "Organiza consultas, agenda conversaciones de descubrimiento, registra oportunidades y da seguimiento. Coordina la incorporación de tus primeros clientes con tareas y comunicación configuradas.",
+        "line": "Convierte el interés inicial en un proceso sobre el que puedas construir."
+      },
+      {
+        "title": "Startups en modo reservado",
+        "body": "Gestiona contactos aprobados, coordina conversaciones privadas de descubrimiento y prepara comunicaciones de lanzamiento para las audiencias que elijas. Tu equipo decide a quién contactar y cuándo.",
+        "line": "Mantén organizadas tus relaciones mientras preparas el lanzamiento."
+      },
+      {
+        "title": "Equipos pequeños de startups",
+        "body": "Reúne el contexto de los clientes, responsables definidos, traspasos coordinados y recordatorios automáticos. Visualiza el trabajo sin depender de que quien funda recuerde cada siguiente paso.",
+        "line": "Dale a un equipo pequeño más espacio para ejecutar."
+      }
+    ],
+    "problems": [
+      {
+        "title": "Prospectos y presentaciones dispersos entre bandejas de entrada y hojas de cálculo.",
+        "body": "Los contactos, las notas y los embudos de oportunidades del CRM reúnen el contexto de cada relación."
+      },
+      {
+        "title": "Seguimiento que se retrasa por el desarrollo y la entrega del producto.",
+        "body": "Los flujos de seguimiento y los recordatorios configurados ayudan a mantener activa la próxima conversación mediante canales conectados."
+      },
+      {
+        "title": "Demasiadas suscripciones y flujos desconectados.",
+        "body": "Reúne comunicación, CRM, agendas y flujos de trabajo en un entorno operativo conectado. Revisa las integraciones compatibles durante la implementación."
+      },
+      {
+        "title": "Incorporación inconsistente para los primeros clientes.",
+        "body": "Usa flujos de incorporación configurados para coordinar tareas, recordatorios y comunicación después del traspaso."
+      },
+      {
+        "title": "No está claro quién se encarga de la siguiente acción.",
+        "body": "Las tareas asignadas, las fechas de vencimiento y los responsables de oportunidades hacen visible el siguiente paso."
+      },
+      {
+        "title": "Poca visibilidad sobre qué actividades generan clientes de pago.",
+        "body": "Los reportes de oportunidades y actividad de ingresos conectan la información registrada, con atribución de origen cuando hay datos disponibles."
+      }
+    ],
+    "journey": [
+      {
+        "title": "Consulta",
+        "body": "Captura el interés mediante un formulario configurado o un canal de comunicación conectado."
+      },
+      {
+        "title": "Descubrimiento",
+        "body": "Organiza contactos, notas, agendas y la próxima conversación."
+      },
+      {
+        "title": "Oportunidad calificada",
+        "body": "Registra la etapa, el responsable y el seguimiento en tu embudo."
+      },
+      {
+        "title": "Cliente",
+        "body": "Registra la venta y coordina el traspaso desde ventas."
+      },
+      {
+        "title": "Incorporación",
+        "body": "Ejecuta tareas, recordatorios y comunicación con el cliente según la configuración."
+      },
+      {
+        "title": "Retención y expansión",
+        "body": "Coordina tickets de soporte, seguimiento a clientes y comunicaciones pertinentes mediante flujos habilitados."
+      }
+    ],
+    "scenarios": [
+      {
+        "title": "Una consulta mientras construyes.",
+        "body": "Una persona fundadora está concentrada en desarrollar el producto cuando un prospecto envía un formulario configurado. La consulta queda registrada, se ejecuta el flujo de respuesta aprobado mediante un canal habilitado y una tarea registra la siguiente acción."
+      },
+      {
+        "title": "Conversaciones seleccionadas antes del lanzamiento.",
+        "body": "Un equipo en modo reservado elige posibles clientes para conversaciones de descubrimiento. Los contactos, las agendas, las notas y el seguimiento permanecen organizados. El equipo controla su audiencia y sus comunicaciones; no se trata de una función especial de confidencialidad ni de acuerdos de no divulgación."
+      },
+      {
+        "title": "Una venta con un traspaso claro.",
+        "body": "Una startup pequeña consigue un cliente. Con el disparador de traspaso y el flujo configurados, la venta inicia tareas de incorporación, recordatorios y comunicación con el cliente, sin dejar cada paso a la coordinación manual de quien funda."
+      }
+    ],
+    "faq": [
+      {
+        "title": "¿Puede CAROS apoyar a una startup que todavía no tiene muchos clientes?",
+        "body": "Sí. Empieza con contactos, consultas, agendas de descubrimiento y un embudo claro. La evaluación de tu negocio ayuda a definir el alcance adecuado para tu etapa, por una tarifa mensual fija."
+      },
+      {
+        "title": "¿Cómo puede usar CAROS una startup en modo reservado?",
+        "body": "Organiza contactos aprobados, notas de descubrimiento, agendas y seguimiento para las audiencias que tu equipo seleccione. CAROS no ofrece funciones especiales de confidencialidad ni de cumplimiento de acuerdos de no divulgación."
+      },
+      {
+        "title": "¿Puede CAROS trabajar junto con nuestras herramientas actuales?",
+        "body": "Las integraciones compatibles pueden conectar canales y sistemas existentes. Durante la implementación revisamos la compatibilidad, las conexiones necesarias y qué debe permanecer en tus herramientas actuales; no todas las herramientas son compatibles."
+      },
+      {
+        "title": "¿Cómo ayuda CAROS a un equipo pequeño a gestionar más trabajo?",
+        "body": "El contexto compartido de clientes, las tareas asignadas, los recordatorios, los embudos y los flujos configurados reducen la coordinación manual. La capacidad depende del proceso y la configuración, no de un resultado garantizado de personal o ingresos."
+      },
+      {
+        "title": "¿Cómo definimos la configuración adecuada para nuestra etapa?",
+        "body": "Agenda una evaluación de tu negocio para revisar el recorrido de tus clientes, las herramientas actuales, los responsables y las prioridades inmediatas. Acuerda el alcance de los flujos, los canales y las condiciones comerciales antes de la implementación."
+      }
+    ]
+  },
   "Metadata": {
     "description": "CAROS es el Sistema Operativo de Ingresos unificado para empresas y organizaciones que crecen a través de las relaciones: un solo panel para todo lo que impulsa los ingresos."
   },
@@ -788,14 +931,14 @@
       "eyebrow": "Industrias",
       "title": "Las relaciones que impulsan",
       "serifTitle": "el crecimiento, en el centro.",
-      "subtitle": "CAROS está diseñado para empresas y organizaciones donde la comunicación oportuna, el seguimiento constante y las relaciones sólidas impulsan el crecimiento.",
+      "subtitle": "CAROS ayuda a startups en etapa inicial y empresas establecidas a conectar comunicación, seguimiento, operaciones y relaciones con clientes mientras crecen.",
       "who": "Para quién es",
       "whoTitle": "Distintos sectores. La misma necesidad de mantener el contacto.",
       "fits": "Por qué encaja",
       "fitsTitle": "Tres necesidades que CAROS ayuda a atender.",
-      "cta": "Descubre cómo podría funcionar CAROS para ti.",
-      "metaDescription": "CAROS ayuda a empresas y organizaciones de distintos sectores a conectar consultas, seguimiento, operaciones e información sobre sus ingresos.",
-      "otherFit": "¿No ves tu sector? Si las consultas, el seguimiento y las relaciones continuas son importantes para tu empresa u organización, exploremos si CAROS encaja contigo.",
+      "cta": "Desde los primeros clientes hasta operaciones consolidadas, explora CAROS.",
+      "metaDescription": "CAROS conecta consultas, seguimiento, operaciones e inteligencia de ingresos para startups en etapa inicial, empresas establecidas y organizaciones de distintos sectores.",
+      "otherFit": "Desde startups en etapa inicial hasta empresas establecidas y organizaciones, si las consultas, el seguimiento y las relaciones continuas importan, exploremos si CAROS es adecuado para ti.",
       "fitCards": [
         {
           "title": "Oportunidades que merecen seguimiento",

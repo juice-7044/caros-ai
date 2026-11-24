@@ -6,6 +6,7 @@ const SITE_URL = "https://getcaros.com"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const industryRoutes = [
+    { path: "/industries/startups", priority: 0.8, changeFrequency: "monthly" as const },
     ...INDUSTRY_SLUGS.map((slug) => ({
       path: `/industries/${slug}`,
       priority: 0.8,

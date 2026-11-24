@@ -1,0 +1,688 @@
+[
+  {
+    "path": "/en",
+    "status": 200,
+    "canonical": "https://getcaros.com/en",
+    "title": "CAROS — One Dashboard. One Unified Revenue Operating System.",
+    "missingMessages": false
+  },
+  {
+    "path": "/es",
+    "status": 200,
+    "canonical": "https://getcaros.com/es",
+    "title": "CAROS — Un panel. Un sistema operativo de ingresos unificado.",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/how-it-works",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/how-it-works",
+    "title": "How It Works | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/how-it-works",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/how-it-works",
+    "title": "Cómo funciona | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/whats-included",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/whats-included",
+    "title": "What&#x27;s Included | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/whats-included",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/whats-included",
+    "title": "Qué incluye | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/marketing-roi",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/marketing-roi",
+    "title": "Marketing ROI | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/marketing-roi",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/marketing-roi",
+    "title": "ROI de marketing | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries",
+    "title": "Industries | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries",
+    "title": "Industrias | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/startups",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/startups",
+    "title": "CAROS for Startups &amp; Founders | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/startups",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/startups",
+    "title": "CAROS para startups y fundadores | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/coaching-professional-services",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/coaching-professional-services",
+    "title": "CAROS for Coaching &amp; Professional Services | Turn Expertise Into Revenue | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/coaching-professional-services",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/coaching-professional-services",
+    "title": "CAROS para coaching y servicios profesionales | Convierte tu experiencia en ingresos | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/home-services",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/home-services",
+    "title": "CAROS for Home Services | Capture Every Call &amp; Book More Jobs | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/home-services",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/home-services",
+    "title": "CAROS para servicios del hogar | Capta cada llamada y agenda más trabajos | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/roofing",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/roofing",
+    "title": "CAROS for Roofing Companies | Capture Storm Calls &amp; Follow Up Estimates | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/roofing",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/roofing",
+    "title": "CAROS para empresas de techado | Atiende llamadas por tormentas y da seguimiento a presupuestos | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/hvac",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/hvac",
+    "title": "CAROS for HVAC Contractors | Capture Calls &amp; Grow Maintenance Plans | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/hvac",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/hvac",
+    "title": "CAROS para contratistas de climatización | Atiende llamadas y amplía tus planes de mantenimiento | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/plumbing",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/plumbing",
+    "title": "CAROS for Plumbing Companies | Capture Emergency Calls &amp; Book More Jobs | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/plumbing",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/plumbing",
+    "title": "CAROS para empresas de plomería | Atiende llamadas de emergencia y agenda más trabajos | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/electrical",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/electrical",
+    "title": "CAROS for Electrical Contractors | Capture Calls &amp; Follow Up Quotes | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/electrical",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/electrical",
+    "title": "CAROS para contratistas eléctricos | Atiende llamadas y da seguimiento a cotizaciones | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/cleaning",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/cleaning",
+    "title": "CAROS for Cleaning Companies | Book More Cleans &amp; Grow Recurring Clients | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/cleaning",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/cleaning",
+    "title": "CAROS para empresas de limpieza | Agenda más limpiezas y consigue más clientes recurrentes | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/landscaping",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/landscaping",
+    "title": "CAROS for Landscaping Companies | Capture Spring Leads &amp; Lock In Contracts | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/landscaping",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/landscaping",
+    "title": "CAROS para empresas de paisajismo | Capta clientes en primavera y asegura contratos | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/painting",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/painting",
+    "title": "CAROS for Painting Companies | Book More Estimates &amp; Close More Quotes | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/painting",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/painting",
+    "title": "CAROS para empresas de pintura | Agenda más presupuestos y cierra más cotizaciones | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/pest-control",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/pest-control",
+    "title": "CAROS for Pest Control | Book Services &amp; Grow Recurring Routes | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/pest-control",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/pest-control",
+    "title": "CAROS para control de plagas | Agenda servicios y amplía tus rutas recurrentes | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/pressure-washing",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/pressure-washing",
+    "title": "CAROS for Pressure Washing | Quote Fast, Follow Up, Repeat | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/pressure-washing",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/pressure-washing",
+    "title": "CAROS para lavado a presión | Cotiza rápido, da seguimiento y consigue nuevas contrataciones | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/handyman",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/handyman",
+    "title": "CAROS for Handyman Businesses | Book More Jobs &amp; Repeat Customers | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/handyman",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/handyman",
+    "title": "CAROS para negocios de reparaciones del hogar | Agenda más trabajos y fideliza clientes | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/flooring",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/flooring",
+    "title": "CAROS for Flooring Companies | Book Estimates &amp; Close More Projects | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/flooring",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/flooring",
+    "title": "CAROS para empresas de pisos | Agenda presupuestos y cierra más proyectos | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/general-contracting",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/general-contracting",
+    "title": "CAROS for General Contractors | Manage Bids &amp; Win More Projects | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/general-contracting",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/general-contracting",
+    "title": "CAROS para contratistas generales | Gestiona propuestas y gana más proyectos | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/pool-services",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/pool-services",
+    "title": "CAROS for Pool Services | Capture Seasonal Calls &amp; Grow Recurring Routes | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/pool-services",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/pool-services",
+    "title": "CAROS para servicios de piscinas | Capta llamadas de temporada y amplía tus rutas recurrentes | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/events-retreats",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/events-retreats",
+    "title": "CAROS for Events &amp; Retreats | Capture Inquiries &amp; Fill Your Calendar | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/events-retreats",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/events-retreats",
+    "title": "CAROS para eventos y retiros | Capta consultas y llena tu calendario | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/party-event-rentals",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/party-event-rentals",
+    "title": "CAROS for Party &amp; Event Rentals | Capture Requests &amp; Book More Orders | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/party-event-rentals",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/party-event-rentals",
+    "title": "CAROS para alquileres de fiestas y eventos | Capta solicitudes y consigue más pedidos | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/real-estate",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/real-estate",
+    "title": "CAROS for Real Estate | Speed-to-Lead &amp; Long-Term Client Nurture | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/real-estate",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/real-estate",
+    "title": "CAROS para bienes raíces | Respuesta rápida y seguimiento de clientes a largo plazo | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/travel-agents",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/travel-agents",
+    "title": "CAROS for Travel Agents | Capture Inquiries &amp; Book More Trips | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/travel-agents",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/travel-agents",
+    "title": "CAROS para agentes de viajes | Capta consultas y reserva más viajes | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/wellness-spas",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/wellness-spas",
+    "title": "CAROS for Spas &amp; Wellness | Booking Recovery &amp; Membership Retention | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/wellness-spas",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/wellness-spas",
+    "title": "CAROS para spas y bienestar | Recuperación de reservas y retención de miembros | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/medical-practices",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/medical-practices",
+    "title": "CAROS for Medical Practices | Patient Acquisition &amp; Retention | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/medical-practices",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/medical-practices",
+    "title": "CAROS para consultorios médicos | Captación y retención de pacientes | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/financial-services",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/financial-services",
+    "title": "CAROS for Financial Advisors | Prospect Qualification &amp; Onboarding | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/financial-services",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/financial-services",
+    "title": "CAROS para asesores financieros | Calificación e incorporación de clientes potenciales | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/insurance-brokerage",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/insurance-brokerage",
+    "title": "CAROS for Insurance Brokers | Quote Follow-Up &amp; Renewals | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/insurance-brokerage",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/insurance-brokerage",
+    "title": "CAROS para corredores de seguros | Seguimiento de cotizaciones y renovaciones | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/religious-institutions",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/religious-institutions",
+    "title": "CAROS for Religious Institutions | Community Engagement &amp; Communication | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/religious-institutions",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/religious-institutions",
+    "title": "CAROS para instituciones religiosas | Participación y comunicación comunitaria | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/creators-influencers",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/creators-influencers",
+    "title": "CAROS for Creators &amp; Influencers | Own Your Audience, Build the Business | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/creators-influencers",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/creators-influencers",
+    "title": "CAROS para creadores e influencers | Controla tu audiencia, construye tu negocio | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/nonprofits",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/nonprofits",
+    "title": "CAROS for Nonprofits | Supporter, Volunteer &amp; Program Operations in One Place | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/nonprofits",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/nonprofits",
+    "title": "CAROS para organizaciones sin fines de lucro | Gestión de colaboradores, voluntarios y programas en un solo lugar | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/law-firms",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/law-firms",
+    "title": "CAROS for Law Firms &amp; Estate Planning Practices | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/law-firms",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/law-firms",
+    "title": "CAROS para firmas legales y prácticas de planificación patrimonial | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/industries/car-dealerships",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/industries/car-dealerships",
+    "title": "CAROS for Car Dealerships | More Leads. More Test Drives. More Cars Sold. | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/industries/car-dealerships",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/industries/car-dealerships",
+    "title": "CAROS para concesionarios de autos | Más prospectos. Más pruebas de manejo. Más autos vendidos. | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/why-caros",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/why-caros",
+    "title": "Why CAROS | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/why-caros",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/why-caros",
+    "title": "Por qué CAROS | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/compare",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/compare",
+    "title": "Compare CAROS | Revenue Operating System vs. Lead &amp; Communication Tools | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/compare",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/compare",
+    "title": "Compara CAROS | Sistema operativo de ingresos frente a herramientas de prospectos y comunicación | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/faq",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/faq",
+    "title": "Already Have Software? FAQ | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/faq",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/faq",
+    "title": "¿Ya tienes software? Preguntas frecuentes | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/resources",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/resources",
+    "title": "Free Resources | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/resources",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/resources",
+    "title": "Recursos gratuitos | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/free/hvac-maintenance-agreements",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/free/hvac-maintenance-agreements",
+    "title": "Maintenance Agreement Machine (free HVAC guide) | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/free/hvac-maintenance-agreements",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/free/hvac-maintenance-agreements",
+    "title": "Maintenance Agreement Machine (free HVAC guide) | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/free/plumbing-after-hours-revenue",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/free/plumbing-after-hours-revenue",
+    "title": "After-Hours Revenue Calculator Worksheet (free Plumbing guide) | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/free/plumbing-after-hours-revenue",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/free/plumbing-after-hours-revenue",
+    "title": "After-Hours Revenue Calculator Worksheet (free Plumbing guide) | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/free/real-estate-5-minute-rule",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/free/real-estate-5-minute-rule",
+    "title": "5-Minute Rule Playbook (free Real Estate guide) | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/free/real-estate-5-minute-rule",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/free/real-estate-5-minute-rule",
+    "title": "5-Minute Rule Playbook (free Real Estate guide) | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/free/roofing-storm-surge",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/free/roofing-storm-surge",
+    "title": "Storm Surge Playbook (free Roofing guide) | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/free/roofing-storm-surge",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/free/roofing-storm-surge",
+    "title": "Storm Surge Playbook (free Roofing guide) | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/affiliates",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/affiliates",
+    "title": "CAROS Affiliate Program | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/affiliates",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/affiliates",
+    "title": "Programa de afiliados de CAROS | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/pricing",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/pricing",
+    "title": "Pricing | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/pricing",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/pricing",
+    "title": "Precios | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/about",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/about",
+    "title": "About | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/about",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/about",
+    "title": "Acerca de nosotros | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/diagnostic",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/diagnostic",
+    "title": "The Revenue Leak Diagnostic | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/diagnostic",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/diagnostic",
+    "title": "Diagnóstico de ingresos | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/revenue-audit",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/revenue-audit",
+    "title": "Revenue Audit Review | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/revenue-audit",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/revenue-audit",
+    "title": "Revisión de tu Auditoría de Ingresos | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/privacy",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/privacy",
+    "title": "Privacy Policy | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/privacy",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/privacy",
+    "title": "Política de privacidad | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/en/terms",
+    "status": 200,
+    "canonical": "https://getcaros.com/en/terms",
+    "title": "Terms &amp; Conditions | CAROS",
+    "missingMessages": false
+  },
+  {
+    "path": "/es/terms",
+    "status": 200,
+    "canonical": "https://getcaros.com/es/terms",
+    "title": "Términos y condiciones | CAROS",
+    "missingMessages": false
+  }
+]

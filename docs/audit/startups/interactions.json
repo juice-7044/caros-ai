@@ -1,0 +1,30 @@
+{
+  "interactions": [
+    {
+      "locale": "en",
+      "width": 390,
+      "nav": true,
+      "languageSwitch": "http://localhost:3101/es/industries/startups"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "nav": true,
+      "languageSwitch": "http://localhost:3101/es/industries/startups"
+    },
+    {
+      "locale": "es",
+      "width": 390,
+      "nav": true,
+      "languageSwitch": "http://localhost:3101/en/industries/startups"
+    },
+    {
+      "locale": "es",
+      "width": 1440,
+      "nav": true,
+      "languageSwitch": "http://localhost:3101/en/industries/startups"
+    }
+  ],
+  "sitemapCount": 98,
+  "sitemapUnique": 98
+}

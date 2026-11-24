@@ -5,8 +5,8 @@ const source = p => readFileSync(new URL('../' + p, import.meta.url), 'utf8')
 const messages = lang => JSON.parse(source(`messages/${lang}.json`))
 
 test('approved core positioning and broader audience are present in both languages', () => {
-  assert.equal(messages('en').pages.industries.subtitle, 'CAROS is built for businesses and organizations where timely communication, consistent follow-up, and strong relationships drive growth.')
-  assert.match(messages('es').pages.industries.subtitle, /empresas y organizaciones/)
+  assert.equal(messages('en').pages.industries.subtitle, 'CAROS helps early-stage startups and established businesses connect communication, follow-up, operations, and customer relationships as they grow.')
+  assert.match(messages('es').pages.industries.subtitle, /startups en etapa inicial y empresas establecidas/)
   assert.match(messages('en').HomePage.industries.headline, /relationships that drive growth/)
   assert.match(messages('es').HomePage.industries.fitBody, /organización/)
   for (const lang of ['en','es']) {
